@@ -1,5 +1,5 @@
-**3.Mapping reads onto a reference genome**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mapping reads onto a reference genome
+*************************************
 
 After raw data QC and preprocessing, the next step is to map exome
 sequencing data to the reference genome with high efficiency and

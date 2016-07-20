@@ -1,5 +1,5 @@
 Differential gene expression analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************************
 
 The final step is to identify genes whose patterns of expression differ
 according to different experimental conditions. In this tutorial, we are

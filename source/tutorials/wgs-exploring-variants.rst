@@ -1,5 +1,5 @@
 Variant calling
-~~~~~~~~~~~~~~~
+***************
 
 Experimental biases could lead to errors in variant calling mimicking
 true genetic variants. Variant calling on multiple samples helps

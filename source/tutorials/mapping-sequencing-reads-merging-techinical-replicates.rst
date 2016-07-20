@@ -1,5 +1,5 @@
-**4. Bisulfite Sequencing Mapping of the preprocessed reads onto a reference genome**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bisulfite Sequencing Mapping of the preprocessed reads onto a reference genome
+******************************************************************************
 
 **Following the preprocessing, our data is of improved quality and we
 can move on to the next step — **\ alignment\ ** of trimmed reads onto

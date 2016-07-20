@@ -1,5 +1,5 @@
-**7. Methylation ratio analysis**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Methylation ratio analysis
+**************************
 
 When sequencing reads for both murine phenotypes are mapped onto
 reference genome with high enough quality, we can move on to the very

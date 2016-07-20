@@ -1,5 +1,5 @@
-**GO-based enrichment analysis**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GO-based enrichment analysis
+****************************
 
 To further characterise the biological processes that might be affected
 in trisomic samples, we performed `the downstream gene ontology (GO)

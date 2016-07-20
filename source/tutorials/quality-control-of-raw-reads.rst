@@ -1,5 +1,5 @@
-**1. Quality control of raw reads**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quality control of raw reads
+****************************
 
 Low-quality reads, PCR primers, adaptors, duplicates and other
 contaminants, that can be found in raw sequencing data, may compromise

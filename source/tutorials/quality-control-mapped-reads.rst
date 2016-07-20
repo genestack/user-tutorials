@@ -1,5 +1,5 @@
-**6. Quality control of mapped reads**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quality control of mapped reads
+*******************************
 
 Before proceeding to the next analysis step we would recommend you to
 check the quality of mapped reads because the reads might look alright

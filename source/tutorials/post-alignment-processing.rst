@@ -1,5 +1,5 @@
-**6. Post-alignment processing**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-alignment processing
+*************************
 
 After mapping reads to the reference genome, it's recommended to remove
 duplicates before variant calling, with the purpose of eliminating

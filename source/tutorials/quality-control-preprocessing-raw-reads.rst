@@ -1,5 +1,5 @@
-2. Quality control of bisulfite sequencing reads
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quality control of bisulfite sequencing reads
+*********************************************
 
 Quality control of raw reads is an essential step in our pipeline to
 ensure that the data is of high quality and is suitable for further

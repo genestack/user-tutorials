@@ -1,5 +1,5 @@
 Preprocessing of the raw reads
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+******************************
 
 Often overlooked, preprocessing of raw data is essential due to the fact
 that it improves the original data quality, and consequently, the

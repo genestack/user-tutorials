@@ -1,5 +1,5 @@
-**Mapping RNA-seq reads onto a reference genome**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mapping RNA-seq reads onto a reference genome
+*********************************************
 
 When all files were created, you can run the whole analysis here,
 choosing Expression Navigator for genes. But first, let’s align RNA-seq

@@ -1,5 +1,5 @@
-**Calculate read coverage for genes**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Calculate read coverage for genes
+*********************************
 
 After mapping, we can count reads mapped to annotated features (genes,
 exons, etc) running\ ** **\ Quantify Raw Coverage in Genes app:
