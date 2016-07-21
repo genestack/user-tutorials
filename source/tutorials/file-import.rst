@@ -8,9 +8,9 @@ Importing data onto the Genestack Platform
 We’ve talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data onto the platform. On the
 `Welcome
-Page  <https://platform.genestack.org/endpoint/application/run/genestack/welcome>`__\ you
-can find an “\ `Import
-data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__\ ”
+Page  <https://platform.genestack.org/endpoint/application/run/genestack/welcome>`__ you
+can find an “ `Import
+data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ ”
 option,  and an "Import" button can be found in the File Manager.
 
 .. raw:: html
@@ -35,7 +35,7 @@ Once you click it, this will take you to the `Raw File
 uploader <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__
 page. There are various options of importing your data. You can drag and
 drop or select files from your computer, import data from URL or use
-previous uploads. |Zrzut ekranu 2015-11-03 o 11.32.40|\ After data is
+previous uploads. |Zrzut ekranu 2015-11-03 o 11.32.40| After data is
 uploaded and imported, the platform automatically recognizes file
 formats and transforms them into biological data types e.g. raw reads,
 mapped reads, reference genomes and so on. This means you won’t have to

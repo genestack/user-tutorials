@@ -13,7 +13,7 @@ also find it in the tutorial folder. Rather than viewing its provenance
 like we did before, let’s see if we can reuse the provenance. To do
 this, select the file, go to "Manage" and "Create new Data Flow".
 |create new data flow| In the next screen you will see the data flow we
-have previously created. |run data flow|\ The data flow editor has one
+have previously created. |run data flow| The data flow editor has one
 core goal: to help you create more files using this diagram. To do this
 you will need to make some decisions for boxes in the diagram via
 the Action menu. If you want to select different files, go to "Choose

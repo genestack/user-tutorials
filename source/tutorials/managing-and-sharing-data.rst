@@ -5,7 +5,7 @@ Managing and sharing data
 
    <div class="readoffline-embed">
 
-To share data, we use \ **groups**. Managing groups is similar to
+To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your e-mail address in the upper right corner
 and select "Manage groups" from the administration menu. |manage groups|
 Any user can create a group. You can think of a group as a shared
@@ -24,17 +24,21 @@ in File Manager, and the moment you add a user to a group they’ll see
 the group’s folder in their File Manager. |shared with me folder| Group
 folders are the same as all other folders in the system: you can add and
 remove files to group folders just like to any other regular folder.
-There is an important point to note though: \ ***adding a file to a
+There is an important point to note though:  ***adding a file to a
 group folder is not the same as sharing it with the group***. To share
 one or more files with a group, you need to select them in File
 Manager (sharing functionality is also available in other places in
 Genestack Platform) and click "Share".  A window will open where you
 will need to select with which group you want to share the selected
-files. |share data| After you select the group and click \ *Share*,
+files. |share data| After you select the group and click  *Share*,
 you’ll need to confirm that you want to share these files by entering
 your password (the system will remember this authorisation for the next
 five minutes) and then you’ll have the option, which you do not have to
-take, to also add them to the group folder: |link shared files| If you
+take, to also add them to the group folder:
+
+|link shared files|
+
+ If you
 choose to link the shared files, then all group members will see the
 files you shared at the top level of the group folder. If you choose not
 to link them into the group folder, do not worry – the files are still

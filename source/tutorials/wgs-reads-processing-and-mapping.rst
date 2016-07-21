@@ -6,7 +6,7 @@ that it improves the original data quality, and consequently, the
 results of the downstream analysis. To prepare raw reads for variant
 calling and annotation we will run several preprocessing apps: Trim
 Adaptors and Contaminants, Trim Low Quality Bases and Filter by Quality
-Score.   Firstly let's explore the parameters of the \ *Trim Adaptors
+Score.   Firstly let's explore the parameters of the  *Trim Adaptors
 and Contaminants* app. Look at the corresponding step in the data flow
 and click on "edit file list".  A dialog box lists the outputs of Trim
 Adaptors and Contaminants.  Right click on the file name and choose the
@@ -17,13 +17,17 @@ of the experiment trimmed and filtered reads with
 reads with a high quality score and a minimum length of 36 bp after
 trimming were kept. We will apply default parameters ejecting reads
 below a length of 15 bp. You can change the minimum length of trimmed
-sequence on the app page |Screenshot 2015-12-24 15.42.34| The next read
+sequence on the app page
+
+|Screenshot 2015-12-24 15.42.34|
+
+ The next read
 preprocessing procedure we plan to do is removing bases of low quality
 with *Trim Low Quality Bases* app based on seqtk 1.0 tool. It removes
 nucleotides of a low quality from the raw data according to phred33
 score that encodes the probability that the base is called
 incorrectly. Currently, this app does not support any changeable command
-line options.   We will finalize the data preprocessing by \ *filtering
+line options.   We will finalize the data preprocessing by  *filtering
 of trimmed reads by quality score*. The app filters out reads from input
 file according to the set value of Phred33 quality score. As usual, you
 can change the default parameters on the app page. We will eliminate all
@@ -108,7 +112,7 @@ reports <https://platform.genestack.org/endpoint/application/run/genestack/fileb
 for both mapped reads files in Multiple QC Report app. Use the drop-down
 menu "Select QC keys to display" and "Select metainfo to display" to
 specify which QC-metrics and sample associated information you wish to
-see on the plot. |Mapped ReadsQC|\ According to the QC check, both
+see on the plot. |Mapped ReadsQC| According to the QC check, both
 technical replicates from our experiment are concordant with all reads
 being mapped and 95% of the reads are mapped properly. To obtain more
 detailed statistics explore individual QC report in Mapped Reads QC

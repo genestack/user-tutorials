@@ -20,13 +20,13 @@ universal method than WES.  
   This tutorial will guide you through the genetic variants discovery
 workflow on Genestack. We will analyse a dataset by Dogan *et
 al.* including high coverage (x35) WGS data from a Turkish
-individual. The experiment can be found in \ `Public
-Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__\  —
+individual. The experiment can be found in  `Public
+Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__  —
 regularly updated collection of freely accessible experiments imported
 from SRA, ENA, GEO, ArrayExpress. Genestack enables you to work on
 public and private data seamlessly. Import your own sequencing data,
-mapped reads or genetic variants data with our \ `data
-importer <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__\ .
+mapped reads or genetic variants data with our  `data
+importer <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ .
   The genetic variants analysis pipeline includes the following steps:
 
 #. `Quality control of raw

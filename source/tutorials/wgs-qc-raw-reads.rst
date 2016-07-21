@@ -15,7 +15,7 @@ Then, from the list of suggested variants choose "Raw Reads Quality
 Control" to open it in Data Flow Runner app. |DF list| The app page
 presents the quality control part of the pipeline in a graphical form.
 To generate QC-reports click on the "Run Data Flow" button and then on
-"Start initialization now". |FastQCReport\_DF|\ |Start initializ\_DF| If
+"Start initialization now". |FastQCReport_DF| |Start initializ_DF| If
 you don't want to generate QC-reports now, click "Delay initialization
 till later" button. When you ready to start the analysis,  you can go
 back to the Data Flow Runner page, click "2 files" link and select
@@ -30,7 +30,7 @@ Manager.  Alternatively, go to "Created files" folder and look
 for a folder containing the files created for "Raw Reads Quality
 Control" data flow.   To describe raw reads quality control statistics
 we will use the reports from our tutorial folder previously prepared by
-our team.   To start with, we will open both of them in \ `Multiple QC
+our team.   To start with, we will open both of them in  `Multiple QC
 Report <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF1001533&action=viewFile>`__ app
 that interactively represents QC statistics for several raw assays at
 once. |Screenshot 2016-02-19 20.53.39|   You can select samples of
@@ -42,7 +42,7 @@ count, GC content, number of reads, and number of distinct reads. Using
 the Multiple QC Report app you can sort assays using QC-keys mentioned
 above and metainfo-keys, such as "method" or "organism". Now when we
 have the general impression of quality of raw reads we can go deeper and
-get a more detailed statistics using \ `FastQC
+get a more detailed statistics using  `FastQC
 report <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF971377&action=viewFile>`__
 for each individual sequencing run.   FastQC report contains several
 quality control metrics outlined below:  
@@ -52,7 +52,7 @@ quality control metrics outlined below:  
 
  
 
--  *Sequence length distribution* describing\ * *\ the distribution of
+-  *Sequence length distribution* describing * * the distribution of
    fragment sizes in the analysed sequencing assay;
 
  
@@ -88,24 +88,28 @@ quality control metrics outlined below:  
    biological significance or indicate contamination of the library. 
 
 Table located on the left side of the page informs us which reports
-raise concerns or report failures. In this case it is the \ *Per base
-sequence content*, \ *Sequence duplication
-levels *\ and \ *Overrepresented sequences* metrics.   Raw data for both
-sequencing runs failed the \ *per base sequence content *\ metric.
+raise concerns or report failures. In this case it is the  *Per base
+sequence content*,  *Sequence duplication
+levels * and  *Overrepresented sequences* metrics.   Raw data for both
+sequencing runs failed the  *per base sequence content * metric.
 Ideally, in a random library we would see four parallel lines
 representing the relative base composition. Fluctuations at the
 beginning of reads in the tested sample may be caused by adapter
 sequences or other contaminations of the library. |Per base sequence
-content (Run1)| The warning reported for the \ *sequence
-duplication *\ metric for the first sequencing run indicates that the
+content (Run1)| The warning reported for the  *sequence
+duplication * metric for the first sequencing run indicates that the
 number of non-unique sequences in the assay has reached more than 20% of
 the total. The average duplication levels for read mates are 1.50x and
-1.48x. \ *Sequence duplication* plot represents the relative number of
-sequences having different duplication levels, and for \ WGS
+1.48x.  *Sequence duplication* plot represents the relative number of
+sequences having different duplication levels, and for  WGS
 experiments, generally characterised by even coverage, this graph should
 quickly drop to zero. Duplicates could correspond to PCR amplification
 bias generated during library preparation or reading the same
-sequence several times.    |Seq duplication run1|\ Lastly, according to
+sequence several times.   
+
+|Seq duplication run1|
+
+ Lastly, according to
 the reports, the first sequencing run compared to the second one
 contains some over-represented sequences — sequences that are highly
 duplicated in a sample. In total, the app identified 1,052,139
@@ -128,12 +132,12 @@ preprocessing to the genetic variants annotation and filtering.
    :width: 600px
    :height: 307px
    :target: https://genestack.com/wp-content/uploads/2015/11/DF-list.png
-.. |FastQCReport\_DF| image:: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
+.. |FastQCReport_DF| image:: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
    :class: aligncenter wp-image-4264 size-full
    :width: 310px
    :height: 367px
    :target: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
-.. |Start initializ\_DF| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initializ_DF.png
+.. |Start initializ_DF| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initializ_DF.png
    :class: aligncenter wp-image-4267 size-full
    :width: 547px
    :height: 261px

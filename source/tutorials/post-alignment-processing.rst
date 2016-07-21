@@ -5,7 +5,7 @@ After mapping reads to the reference genome, it's recommended to remove
 duplicates before variant calling, with the purpose of eliminating
 PCR-introduced bias due to uneven amplification of DNA fragments. That's
 why we run "Remove Duplicated Mapped Reads" app:
-|WES\_remove\_duplicates| Preprocessed mapped reads are stored
+|WES_remove_duplicates| Preprocessed mapped reads are stored
 in `Filtered mapped reads for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1>`__ folder.
 
@@ -20,7 +20,7 @@ The app automatically scans every position along the genome, computes
 all the possible genotypes from the aligned reads, and calculates the
 probability that each of these genotypes is truly present in your
 sample. Then genotype likelihoods are used to call the SNVs and indels. 
-|WES\_variant\_calling| We run Variant Calling with default
+|WES_variant_calling| We run Variant Calling with default
 parameters, identifying multi-allelic SNPs and indels, excluding
 non-variant sites and not considering anomalous read pairs. Maximum read
 depth per position was set as 250 and minimum number of gapped reads for
@@ -28,7 +28,7 @@ an indel candidate is 1. Base alignment quality (BAQ) recalculation is
 turned on by default. It helps to rule out false positive SNP calls due
 to alignment artefacts near small indels. For more information about the
 app and its options, click on the app name and then on “About
-application”. When files will be complete, you can analyse \ `variants
+application”. When files will be complete, you can analyse  `variants
 in Genome
 Browser <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999281&action=viewFile>`__:
 
@@ -44,15 +44,15 @@ Browser <https://platform.genestack.org/endpoint/application/run/genestack/genom
 
    <div class="column">
 
-|WES\_variants\_GB| Genome Browser application allows you investigate
+|WES_variants_GB| Genome Browser application allows you investigate
 the variants interactively: how many mutations are in this particular
 gene or region, review some information about detected variants such
 as average mapping quality and raw read depth and compare variants
 enrichment between samples. Analysing variants in Genome Browser, you
 can notice a large amount of both exome WES–specific and WGS-specific
 SNVs. We identified variants for each sample separately and put
-them in \ `Variants for Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1>`__\  folder.
+them in  `Variants for Clark et al
+(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1>`__  folder.
 
 .. raw:: html
 
@@ -66,17 +66,17 @@ them in \ `Variants for Clark et al
 
    </div>
 
-.. |WES\_remove\_duplicates| image:: https://genestack.com/wp-content/uploads/2016/01/WES_remove_duplicates.png
+.. |WES_remove_duplicates| image:: https://genestack.com/wp-content/uploads/2016/01/WES_remove_duplicates.png
    :class: aligncenter wp-image-4462
    :width: 600px
    :height: 232px
    :target: https://genestack.com/wp-content/uploads/2016/01/WES_remove_duplicates.png
-.. |WES\_variant\_calling| image:: https://genestack.com/wp-content/uploads/2016/01/WES_variant_calling.png
+.. |WES_variant_calling| image:: https://genestack.com/wp-content/uploads/2016/01/WES_variant_calling.png
    :class: aligncenter wp-image-4463
    :width: 600px
    :height: 647px
    :target: https://genestack.com/wp-content/uploads/2016/01/WES_variant_calling.png
-.. |WES\_variants\_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_variants_GB-1024x428.png
+.. |WES_variants_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_variants_GB-1024x428.png
    :class: aligncenter wp-image-3865 size-large
    :width: 604px
    :height: 252px
