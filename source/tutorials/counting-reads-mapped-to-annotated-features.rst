@@ -10,7 +10,7 @@ control ones.
 
 Open Expression Navigator file, re-group samples and start the analysis:
 
-.. FIXME: video here!
+.. youtube:: yNvAI5WjBjU
 
 We prepared two Differential Expression Statistics files (considering the DE
 genes reported by both packages) and stored them in `Differential gene

@@ -31,6 +31,7 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     'sphinx.ext.intersphinx',
+    'sphinxcontrib.youtube'
 ]
 
 intersphinx_mapping = {'python': ('http://docs.python.org/2.7', None)}
