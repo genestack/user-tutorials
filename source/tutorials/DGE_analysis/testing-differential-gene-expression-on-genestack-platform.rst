@@ -59,6 +59,10 @@ Analysis <https://platform.genestack.org/endpoint/application/run/genestack/data
 flow. But before let's check the quality of raw reads to decide whether
 we should improve it or not.
 
-.. |Zrzut ekranu 2015-10-21 o 16.01.36| image:: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3uoajkhcNsnjSfflkjh5sq
+.. |Zrzut ekranu 2015-10-21 o 16.01.36| image:: images/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
+   :class: aligncenter wp-image-3563 size-large
+   :width: 604px
+   :height: 64px
+   :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3uoajkhcNsnjSfflkjh5sq
 .. |DGE_file_manager_red_arrow| image:: images/DGE_file_manager_red_arrow.png
 .. |DGE_metainfo| image:: images/DGE_metainfo.png
