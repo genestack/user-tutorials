@@ -38,13 +38,13 @@ merge parents:
 
 |Screenshot 2016-01-11 12.49.07|
 
- Merge parents option
+Merge parents option
 allows to focus on the main steps of the pipeline by merging of files
 from each step into one group:
 
 |Screenshot 2016-01-11 12.55.56|
 
- To run
+To run
 the pipeline click on the "Run Data Flow" button at the bottom of the
 data flow. After that you will be suggested to either start the
 computation now or delay it till later:
@@ -62,7 +62,7 @@ the app that created this file:
 
 |Edit File List BWA|
 
- Data Flow Runner
+Data Flow Runner
 allows you to start initialization up to any step of the pipeline. We
 recommend  you check the mapping quality after removing the duplicates
 from mapped reads to assure that they could be further used in variant
@@ -75,71 +75,23 @@ folder.  
 
 |Start initial|
 
- Note that there is a data flow file including
+Note that there is a data flow file including
 all the mentioned preprocess and analysis steps previously prepared by
 Genestack team. This data flow is called `WGS data
 analysis <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1018398&action=viewFile>`__ and you
 can find in our tutorial folder.   Now let's talk about each of the
 analysis steps we included in the pipeline in greater detail.
 
-.. |Trim adaptors and contaminants| image:: https://genestack.com/wp-content/uploads/2015/12/Trim-adaptors-and-contaminants.png
-   :class: aligncenter wp-image-4324
-   :width: 600px
-   :height: 310px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Trim-adaptors-and-contaminants.png
-.. |Trim A & C (2)| image:: https://genestack.com/wp-content/uploads/2015/12/Trim-A-C-2.png
-   :class: aligncenter wp-image-4325
-   :width: 600px
-   :height: 274px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Trim-A-C-2.png
-.. |Screenshot 2016-01-10 22.33.45| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-10-22.33.45.png
-   :class: aligncenter wp-image-4431 size-full
-   :width: 415px
-   :height: 468px
-   :target: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-10-22.33.45.png
-.. |Add step| image:: https://genestack.com/wp-content/uploads/2015/12/Add-step.png
-   :class: aligncenter wp-image-4329
-   :width: 600px
-   :height: 306px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Add-step.png
-.. |Data Flow on the CLA page| image:: https://genestack.com/wp-content/uploads/2015/12/Data-Flow-on-the-CLA-page.png
-   :class: aligncenter wp-image-4330
-   :width: 600px
-   :height: 116px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Data-Flow-on-the-CLA-page.png
-.. |Create new data flow| image:: https://genestack.com/wp-content/uploads/2015/12/Create-new-data-flow.png
-   :class: aligncenter wp-image-4331
-   :width: 600px
-   :height: 258px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Create-new-data-flow.png
-.. |Screenshot 2016-01-11 12.34.09| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.34.09.png
-   :class: wp-image-4434 size-full aligncenter
-   :width: 558px
-   :height: 729px
-   :target: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.34.09.png
-.. |Screenshot 2016-01-11 12.49.07| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.49.07.png
-   :class: aligncenter wp-image-4436 size-full
-   :width: 529px
-   :height: 226px
-.. |Screenshot 2016-01-11 12.55.56| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.55.56-e1452507717712.png
-   :class: wp-image-4438 size-full aligncenter
-   :width: 268px
-   :height: 635px
-   :target: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.55.56-e1452507717712.png
-.. |Screenshot 2015-12-23 18.32.32| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-23-18.32.32.png
-   :class: size-full wp-image-4348 aligncenter
-   :width: 549px
-   :height: 257px
-.. |Screenshot 2015-12-24 15.28.14| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-24-15.28.14.png
-   :class: size-full wp-image-4354 aligncenter
-   :width: 418px
-   :height: 275px
-.. |Edit File List BWA| image:: https://genestack.com/wp-content/uploads/2016/01/Edit-File-List-BWA.png
-   :class: aligncenter wp-image-4473 size-full
-   :width: 424px
-   :height: 225px
-.. |Start initial| image:: https://genestack.com/wp-content/uploads/2015/11/Start-initial-e1452508766428.png
-   :class: wp-image-3963 size-full aligncenter
-   :width: 385px
-   :height: 449px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Start-initial.png
+.. |Trim adaptors and contaminants| image:: images/Trim-adaptors-and-contaminants.png
+.. |Trim A & C (2)| image:: images/Trim-A-C-2.png
+.. |Screenshot 2016-01-10 22.33.45| image:: images/Screenshot-2016-01-10-22.33.45.png
+.. |Add step| image:: images/Add-step.png
+.. |Data Flow on the CLA page| image:: images/Data-Flow-on-the-CLA-page.png
+.. |Create new data flow| image:: images/Create-new-data-flow.png
+.. |Screenshot 2016-01-11 12.34.09| image:: images/Screenshot-2016-01-11-12.34.09.png
+.. |Screenshot 2016-01-11 12.55.56| image:: images/Screenshot-2016-01-11-12.55.56-e1452507717712.png
+.. |Screenshot 2016-01-11 12.49.07| image:: images/Screenshot-2016-01-11-12.55.56-e1452507717712.png
+.. |Screenshot 2015-12-23 18.32.32| image:: images/Screenshot-2015-12-23-18.32.32.png
+.. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png
+.. |Edit File List BWA| image:: images/Edit-File-List-BWA.png
+.. |Start initial| image:: images/Start-initial.png

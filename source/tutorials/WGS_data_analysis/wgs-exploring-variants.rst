@@ -41,13 +41,20 @@ downstream, splice site, or intergenic regions. It also determines
 effects genetic variants have on genes, such as amino acid replacement
 or frame shifts. The app page will give you more information about it.
 Remember, if you have some files uninitialized, you can run the
-analysis on the Effect Prediction page or Data Flow Runner page. |start
-init| Explore annotated variants in Genome Browser and Variant Explorer
+analysis on the Effect Prediction page or Data Flow Runner page.
+
+|start init|
+
+Explore annotated variants in Genome Browser and Variant Explorer
 apps. Let's open generated ` report
 file <https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF973651&action=viewFile>`__ containing
 some information about identified variants from our tutorial
 folder. Right click on the genetic variants file name and go to "View
-Report". |Screenshot 2015-11-23 11.14.46| First of all, the report
+Report".
+
+|Screenshot 2015-11-23 11.14.46|
+
+First of all, the report
 summary contains some basic information about the analysed file.
 |Summary| In general 4,389,254 mutations were found in our assay with
 one change every 7,014 bases. The most common variants are SNPs that
@@ -66,7 +73,7 @@ InDels (341,382 insertions and 372,258 deletions) ranging from −52 bp to
 
 |Indel length dostributions|
 
- Additionally, we
+Additionally, we
 performed filtering by effect to find out InDel distribution throughout
 different genomic locations.  From identified InDels 258680 and 263835
 were in an intergenic and intronic region, respectively. We also found
@@ -179,96 +186,24 @@ Visit our website to check out more
 questions or suggestions, please leave them below or `email
 us <mailto:contact@genestack.com>`__.  
 
-.. |VarCalling_options| image:: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
-   :class: alignleft wp-image-3958
-   :width: 600px
-   :height: 401px
-   :target: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
-.. |GB_variants| image:: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
-   :class: size-full wp-image-4070 aligncenter
-   :width: 553px
-   :height: 375px
-   :target: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
-.. |Screenshot 2016-01-14 13.50.17| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-14-13.50.17.png
-   :class: alignleft wp-image-4512
-   :width: 600px
-   :height: 162px
-.. |start init| image:: https://genestack.com/wp-content/uploads/2015/11/start-init.png
-   :class: size-full wp-image-3962 aligncenter
-   :width: 472px
-   :height: 502px
-.. |Screenshot 2015-11-23 11.14.46| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
-   :class: size-full wp-image-3973 aligncenter
-   :width: 585px
-   :height: 291px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
-.. |Summary| image:: https://genestack.com/wp-content/uploads/2015/12/Summary.png
-   :class: aligncenter wp-image-4141
-   :width: 600px
-   :height: 379px
-.. |Screenshot 2016-03-14 12.24.19| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-12.24.19.png
-   :class: size-full wp-image-4852 aligncenter
-   :width: 262px
-   :height: 184px
-.. |Indel length dostributions| image:: https://genestack.com/wp-content/uploads/2015/12/Indel-length-dostributions.png
-   :class: aligncenter wp-image-4253
-   :width: 600px
-   :height: 225px
-.. |Quality| image:: https://genestack.com/wp-content/uploads/2015/11/Quality.png
-   :class: alignleft wp-image-3970
-   :width: 600px
-   :height: 202px
-.. |coverage| image:: https://genestack.com/wp-content/uploads/2016/01/coverage-.png
-   :class: alignleft wp-image-4572
-   :width: 600px
-   :height: 191px
-.. |Effects by impact| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-impact.png
-   :class: size-full wp-image-3966 aligncenter
-   :width: 356px
-   :height: 118px
-.. |Effects by type and region (table)| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-type-and-region-table.png
-   :class: aligncenter wp-image-3968
-   :width: 600px
-   :height: 391px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Effects-by-type-and-region-table.png
-.. |Effects by region| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-region.png
-   :class: aligncenter wp-image-4013
-   :width: 600px
-   :height: 231px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Effects-by-region.png
-.. |Base changes| image:: https://genestack.com/wp-content/uploads/2015/11/Base-changes.png
-   :class: size-full wp-image-3974 aligncenter
-   :width: 300px
-   :height: 120px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Base-changes.png
-.. |Ts:Tv| image:: https://genestack.com/wp-content/uploads/2015/11/TsTv.png
-   :class: size-full wp-image-3975 aligncenter
-   :width: 203px
-   :height: 89px
-.. |Codon changes| image:: https://genestack.com/wp-content/uploads/2015/11/Codon-changes.png
-   :class: size-full wp-image-3981 aligncenter
-   :width: 574px
-   :height: 324px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Codon-changes.png
-.. |AA chages| image:: https://genestack.com/wp-content/uploads/2015/11/AA-chages.png
-   :class: aligncenter wp-image-3980
-   :width: 600px
-   :height: 304px
-   :target: https://genestack.com/wp-content/uploads/2015/11/AA-chages.png
-.. |Table Viewer| image:: https://genestack.com/wp-content/uploads/2015/12/Table-Viewer.png
-   :class: wp-image-4078 alignnone
-   :width: 600px
-   :height: 248px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Table-Viewer.png
-.. |Screenshot 2016-04-24 14.05.22| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.05.22.png
-   :class: wp-image-4904 aligncenter
-   :width: 600px
-   :height: 135px
-.. |Screenshot 2016-04-24 14.10.20| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.10.20.png
-   :class: wp-image-4905 aligncenter
-   :width: 600px
-   :height: 128px
-.. |Screenshot 2016-03-14 18.25.42| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-18.25.42-1024x154.png
-   :class: wp-image-4854 size-large aligncenter
-   :width: 604px
-   :height: 91px
+.. |VarCalling_options| image:: images/VarCalling_options.png
+.. |GB_variants| image:: images/GB_variants.png
+.. |start init| image:: images/start-init.png
+.. |Screenshot 2015-11-23 11.14.46| image:: images/Screenshot-2015-11-23-11.14.46.png
+.. |Screenshot 2016-01-14 13.50.17| image:: images/Screenshot-2015-11-23-11.14.46.png
+.. |Summary| image:: images/Summary.png
+.. |Screenshot 2016-03-14 12.24.19| image:: images/Screenshot-2016-03-14-12.24.19.png
+.. |Indel length dostributions| image:: images/Indel-length-dostributions.png
+.. |Quality| image:: images/Quality.png
+.. |coverage| image:: images/coverage-.png
+.. |Effects by impact| image:: images/Effects-by-impact.png
+.. |Effects by type and region (table)| image:: images/Effects-by-type-and-region-table.png
+.. |Effects by region| image:: images/Effects-by-region.png
+.. |Base changes| image:: images/Base-changes.png
+.. |Ts:Tv| image:: images/TsTv.png
+.. |Codon changes| image:: images/Codon-changes.png
+.. |AA chages| image:: images/AA-chages.png
+.. |Table Viewer| image:: images/Table-Viewer.png
+.. |Screenshot 2016-04-24 14.05.22| image:: images/Screenshot-2016-04-24-14.05.22.png
+.. |Screenshot 2016-04-24 14.10.20| image:: images/Screenshot-2016-04-24-14.10.20.png
+.. |Screenshot 2016-03-14 18.25.42| image:: images/Screenshot-2016-03-14-18.25.42-1024x154.png

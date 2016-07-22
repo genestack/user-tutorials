@@ -132,48 +132,12 @@ interactively analyse and compare mapping statistics between samples:
 sample, almost all of the reads is mapped properly and there is a small
 percentage of partially or improperly mapped reads.
 
-.. |WES_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_GB-1024x468.png
-   :class: aligncenter wp-image-3853 size-large
-   :width: 604px
-   :height: 276px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_GB.png
-.. |WES_coverage_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1-1024x267.png
-   :class: aligncenter wp-image-3862 size-large
-   :width: 604px
-   :height: 157px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1.png
-.. |WES_target| image:: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
-   :class: aligncenter wp-image-3841
-   :width: 600px
-   :height: 245px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
-.. |WES_paper_target_enrichment| image:: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
-   :class: aligncenter wp-image-3859 size-full
-   :width: 513px
-   :height: 215px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
-.. |WES_diff_annotations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
-   :class: aligncenter size-full wp-image-3806
-   :width: 434px
-   :height: 203px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
-.. |WES_exome| image:: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
-   :class: aligncenter wp-image-3846
-   :width: 600px
-   :height: 243px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
-.. |WES_chr_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
-   :class: aligncenter wp-image-3847
-   :width: 600px
-   :height: 410px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
-.. |WES_ins_dist| image:: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
-   :class: aligncenter wp-image-3848
-   :width: 600px
-   :height: 397px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
-.. |WES_mult_mapped_reads_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_mult_mapped_reads_1.png
-   :class: aligncenter wp-image-3851
-   :width: 600px
-   :height: 365px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_mult_mapped_reads_1.png
+.. |WES_GB| image:: images/WES_GB.png
+.. |WES_coverage_1| image:: images/WES_coverage_1.png
+.. |WES_target| image:: images/WES_target.png
+.. |WES_paper_target_enrichment| image:: images/WES_paper_target_enrichment.png
+.. |WES_diff_annotations| image:: images/WES_diff_annotations.png
+.. |WES_exome| image:: images/WES_exome.png
+.. |WES_chr_coverage| image:: images/WES_chr_coverage.png
+.. |WES_ins_dist| image:: images/WES_ins_dist.png
+.. |WES_mult_mapped_reads_1| image:: images/WES_mult_mapped_reads_1.png

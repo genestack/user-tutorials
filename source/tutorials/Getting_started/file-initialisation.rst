@@ -78,7 +78,7 @@ reads displays a menu:
 
 |dropdown menu raw sequencing reads|
 
- You can
+You can
 view and edit file metadata via the  **Edit Metainfo**, which appears
 under the  **Manage** submenu. |edit metainfo2| You can open the
 metainfo viewer on any file in the system by clicking on the eye icon.
@@ -112,52 +112,13 @@ to collect assays with common metadata into experimental subgroups,
 e.g., technical replicates, biological samples undergoing the same
 treatment, and so forth.
 
-.. |trim low quality bases app| image:: https://genestack.com/wp-content/uploads/2015/12/trim-low-quality-bases-app.png
-   :class: alignnone wp-image-4298
-   :width: 600px
-   :height: 283px
-   :target: https://genestack.com/wp-content/uploads/2015/12/trim-low-quality-bases-app.png
-.. |trim low quality bases start initialization| image:: https://genestack.com/wp-content/uploads/2015/12/trim-low-quality-bases-start-initialization.png
-   :class: alignnone size-full wp-image-4299
-   :width: 663px
-   :height: 411px
-.. |spliced mapping mouse genome| image:: https://genestack.com/wp-content/uploads/2015/12/spliced-mapping-mouse.png
-   :class: alignnone wp-image-4296
-   :width: 600px
-   :height: 272px
-   :target: https://genestack.com/wp-content/uploads/2015/12/spliced-mapping-mouse.png
-.. |file provenence| image:: https://genestack.com/wp-content/uploads/2015/12/file-provenence.png
-   :class: alignnone wp-image-4283
-   :width: 600px
-   :height: 318px
-   :target: https://genestack.com/wp-content/uploads/2015/12/file-provenence.png
-.. |file provenance| image:: https://genestack.com/wp-content/uploads/2015/12/file-provenance.png
-   :class: alignnone wp-image-4282
-   :width: 600px
-   :height: 752px
-   :target: https://genestack.com/wp-content/uploads/2015/12/file-provenance.png
-.. |running an app on multiple files| image:: https://genestack.com/wp-content/uploads/2016/01/running-an-app-on-multiple-files-1024x525.png
-   :class: alignnone size-large wp-image-4405
-   :width: 604px
-   :height: 310px
-   :target: https://genestack.com/wp-content/uploads/2016/01/running-an-app-on-multiple-files.png
-.. |app page 100 files| image:: https://genestack.com/wp-content/uploads/2016/01/app-page-100-files.png
-   :class: alignnone wp-image-4406
-   :width: 600px
-   :height: 319px
-   :target: https://genestack.com/wp-content/uploads/2016/01/app-page-100-files.png
-.. |dropdown menu raw sequencing reads| image:: https://genestack.com/wp-content/uploads/2015/12/dropdown-menu.png
-   :class: alignnone size-full wp-image-4280
-   :width: 605px
-   :height: 431px
-   :target: https://genestack.com/wp-content/uploads/2015/12/dropdown-menu.png
-.. |edit metainfo2| image:: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo2.png
-   :class: alignnone wp-image-4316
-   :width: 600px
-   :height: 215px
-   :target: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo2.png
-.. |edit metainfo| image:: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo-300x201.png
-   :class: alignnone wp-image-4315 size-medium
-   :width: 300px
-   :height: 201px
-   :target: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo.png
+.. |trim low quality bases app| image:: images/trim-low-quality-bases-app.png
+.. |spliced mapping mouse genome| image:: images/spliced-mapping-mouse.png
+.. |trim low quality bases start initialization| image:: images/spliced-mapping-mouse.png
+.. |file provenence| image:: images/file-provenence.png
+.. |file provenance| image:: images/file-provenance.png
+.. |running an app on multiple files| image:: images/running-an-app-on-multiple-files.png
+.. |app page 100 files| image:: images/app-page-100-files.png
+.. |dropdown menu raw sequencing reads| image:: images/dropdown-menu.png
+.. |edit metainfo2| image:: images/edit-metainfo2.png
+.. |edit metainfo| image:: images/edit-metainfo.png

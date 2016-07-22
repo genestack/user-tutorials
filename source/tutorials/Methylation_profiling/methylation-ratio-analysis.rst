@@ -28,8 +28,4 @@ The folder `Methylation Ratios for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968759&action=viewFile>`__
 contains all the resulting files of methylation ratios estimation.
 
-.. |DF methylation analysis| image:: https://genestack.com/wp-content/uploads/2015/12/DF-methylation-analysis.png
-   :class: size-full wp-image-4208 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/DF-methylation-analysis.png
+.. |DF methylation analysis| image:: images/DF-methylation-analysis.png

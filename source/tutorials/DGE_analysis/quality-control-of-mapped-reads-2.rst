@@ -10,8 +10,4 @@ overlap with. We calculated read coverage in all samples and collected
 resulting files in `Raw gene counts for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967836&action=viewFile>`__ folder.
 
-.. |DGE_quantify_genes| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_quantify_genes.png
-   :class: aligncenter size-full wp-image-2907
-   :width: 404px
-   :height: 617px
-   :target: https://genestack.com/wp-content/uploads/2015/07/DGE_quantify_genes.png
+.. |DGE_quantify_genes| image:: images/DGE_quantify_genes.png

@@ -6,7 +6,8 @@ according to different experimental conditions. In this tutorial, we are
 looking for variation in gene expression for trisomic samples compared to the
 control ones.
 
-|DGE_DGE|
+.. here's one way of inserting an image
+.. image:: images/DGE_DGE.png
 
 Open Expression Navigator file, re-group samples and start the analysis:
 
@@ -29,6 +30,9 @@ description and location:
 
 .. _Hibaoui-folder:
     https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967842&action=viewFile
+
+.. here's another way of inserting an image (via substitution, see end of
+.. document
 
 |DGE_DGE_table|
 
@@ -65,8 +69,6 @@ If you move cursor to the top right corner of the graph, 3 icons will appear:
 #. Camera icon lets you save the displayed graph locally. Add labels to the
    graph and change its appearance by modifying the parameters on display when
    you right-click the graph area.
-
-.. |DGE_DGE| image:: images/DGE_DGE.png
 
 .. |DGE_DGE_table| image:: images/DGE_DGE_table.png
 

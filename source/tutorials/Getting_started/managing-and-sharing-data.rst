@@ -90,56 +90,14 @@ place.
 
    </div>
 
-.. |manage groups| image:: https://genestack.com/wp-content/uploads/2015/12/manage-groups.png
-   :class: size-full wp-image-4318 aligncenter
-   :width: 401px
-   :height: 186px
-   :target: https://genestack.com/wp-content/uploads/2015/12/manage-groups.png
-.. |create new group| image:: https://genestack.com/wp-content/uploads/2015/12/create-new-group.png
-   :class: alignnone size-full wp-image-4312
-   :width: 430px
-   :height: 202px
-   :target: https://genestack.com/wp-content/uploads/2015/12/create-new-group.png
-.. |my new group members| image:: https://genestack.com/wp-content/uploads/2015/12/my-new-group-members-1024x359.png
-   :class: alignnone size-large wp-image-4319
-   :width: 604px
-   :height: 212px
-   :target: https://genestack.com/wp-content/uploads/2015/12/my-new-group-members.png
-.. |add user to the group| image:: https://genestack.com/wp-content/uploads/2015/12/add-user-to-the-group1.png
-   :class: alignnone size-full wp-image-4327
-   :width: 476px
-   :height: 221px
-   :target: https://genestack.com/wp-content/uploads/2015/12/add-user-to-the-group1.png
-.. |Zrzut ekranu 2015-11-03 o 12.48.41| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-12.48.41-e1446556223167.png
-   :class: alignnone wp-image-3661 size-full
-   :width: 600px
-   :height: 294px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-12.48.41.png
-.. |shared with me folder| image:: https://genestack.com/wp-content/uploads/2015/12/shared-with-me.png
-   :class: alignnone size-full wp-image-4322
-   :width: 563px
-   :height: 357px
-   :target: https://genestack.com/wp-content/uploads/2015/12/shared-with-me.png
-.. |share data| image:: https://genestack.com/wp-content/uploads/2015/12/share.png
-   :class: alignnone wp-image-4321
-   :width: 600px
-   :height: 215px
-   :target: https://genestack.com/wp-content/uploads/2015/12/share.png
-.. |link shared files| image:: https://genestack.com/wp-content/uploads/2015/12/link-shared-files.png
-   :class: alignnone size-full wp-image-4317
-   :width: 422px
-   :height: 304px
-   :target: https://genestack.com/wp-content/uploads/2015/12/link-shared-files.png
-.. |manage-groups-invite| image:: https://genestack.com/wp-content/uploads/2014/03/manage-groups-invite.png
-   :class: aligncenter
-   :width: 450px
-   :height: 211px
-   :target: /wp-content/uploads/2014/03/manage-groups-invite.png
-.. |incoming-invitation| image:: https://genestack.com/wp-content/uploads/2014/03/incoming-invitation.png
-   :class: aligncenter
-   :width: 450px
-   :target: /wp-content/uploads/2014/03/incoming-invitation.png
-.. |cross-org-group| image:: https://genestack.com/wp-content/uploads/2014/03/cross-org-group.png
-   :class: aligncenter
-   :width: 450px
-   :target: https://genestack.com/wp-content/uploads/2014/03/cross-org-group.png
+.. |manage groups| image:: images/manage-groups.png
+.. |create new group| image:: images/create-new-group.png
+.. |my new group members| image:: images/my-new-group-members.png
+.. |add user to the group| image:: images/add-user-to-the-group1.png
+.. |Zrzut ekranu 2015-11-03 o 12.48.41| image:: images/Zrzut-ekranu-2015-11-03-o-12.48.41.png
+.. |shared with me folder| image:: images/shared-with-me.png
+.. |share data| image:: images/share.png
+.. |link shared files| image:: images/link-shared-files.png
+.. |manage-groups-invite| image:: images/manage-groups-invite.png
+.. |incoming-invitation| image:: images/incoming-invitation.png
+.. |cross-org-group| image:: images/cross-org-group.png

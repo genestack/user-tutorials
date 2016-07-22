@@ -7,7 +7,7 @@ the reference genome.**
 
 |df bisulfte seq mapping|
 
- We run Bisulfite
+We run Bisulfite
 Sequencing Mapping with default parameters. Click on the app name to
 move to its page where you can change the parameters of alignment and
 learn more about the app clicking on the "about". |BSMAP| In
@@ -47,18 +47,6 @@ opening the `Merged mapped reads for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile>`__ folder.
  
 
-.. |df bisulfte seq mapping| image:: https://genestack.com/wp-content/uploads/2015/12/df-bisulfte-seq-mapping-.png
-   :class: size-full wp-image-4202 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/df-bisulfte-seq-mapping-.png
-.. |BSMAP| image:: https://genestack.com/wp-content/uploads/2015/11/BSMAP.png
-   :class: aligncenter wp-image-3825
-   :width: 600px
-   :height: 347px
-   :target: https://genestack.com/wp-content/uploads/2015/11/BSMAP.png
-.. |df merge mapped reads| image:: https://genestack.com/wp-content/uploads/2015/12/df-merge-mapped-reads.png
-   :class: size-full wp-image-4203 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/df-merge-mapped-reads.png
+.. |df bisulfte seq mapping| image:: images/df-bisulfte-seq-mapping-.png
+.. |BSMAP| image:: images/BSMAP.png
+.. |df merge mapped reads| image:: images/df-merge-mapped-reads.png

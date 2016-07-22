@@ -90,7 +90,7 @@ same area several times.**
 
 |fastqc sequence duplication levels|
 
- The
+The
 application also detects **Overrepresented sequences**  that may
 correspond to primer or adapter contamination.  **Indeed, in our case
 two over-represented sequences were found in our assay.** **Here they
@@ -98,7 +98,7 @@ are:**
 
 |FastQC (overrepresented sequences)|
 
- These contaminants can
+These contaminants can
 strongly influence the results of analysis and should be trimmed.
 
 **3. Preprocessing of raw reads: trimming adaptors, contaminants and low quality bases.**
@@ -132,99 +132,37 @@ of raw sequencing data. Based on the QC statistics we highly recommend
 you to  **remove adapters and contaminants**, **trim low quality
 bases** and **remove duplicates**. And we also remove duplicates
 during Methylation Ratio Analysis, but you can also use a separate
-preprocess application  **Remove** ** Duplicated Reads** . Firstly,
+preprocess application  **Remove Duplicated Reads** . Firstly,
 we can easily remove the found overrepresented sequences from WGBS data
 using  **Trim adapters and contaminants** app: |DF trim adaptors and
 contaminants| **Later, to avoid mismatches in read mapping, we
-should **** ****** remove low quality bases **** from the sequencing
-reads **. **Trim low quality bases** application allows you to get rid
+should remove low quality bases from the sequencing
+reads**. **Trim low quality bases** application allows you to get rid
 of nucleotide bases with a low phred33 quality which corresponds to an
-error threshold equal to 1%.**
+error threshold equal to 1%.
 
 |df trim low quality bases|
 
- All
+All
 preprocessed files are freely accessible in the folders `Trim adaptors
 for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968745&action=viewFile>`__ and `Trim
 low quality bases for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile>`__.
 
-.. |choose DF| image:: https://genestack.com/wp-content/uploads/2015/11/choose-DF.png
-   :class: aligncenter wp-image-3819
-   :width: 600px
-   :height: 335px
-   :target: https://genestack.com/wp-content/uploads/2015/11/choose-DF.png
-.. |DF_FastQC| image:: https://genestack.com/wp-content/uploads/2015/12/DF_FastQC.png
-   :class: size-full wp-image-4162 aligncenter
-   :width: 314px
-   :height: 378px
-   :target: https://genestack.com/wp-content/uploads/2015/12/DF_FastQC.png
-.. |Start initialization| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initialization.png
-   :class: wp-image-4163 aligncenter
-   :width: 544px
-   :height: 263px
-.. |View Resuts| image:: https://genestack.com/wp-content/uploads/2015/12/View-Resuts.png
-   :class: size-full wp-image-4167 aligncenter
-   :width: 414px
-   :height: 201px
-   :target: https://genestack.com/wp-content/uploads/2015/12/View-Resuts.png
-.. |FastQC_3| image:: https://genestack.com/wp-content/uploads/2015/08/FastQC_3.png
-   :class: size-full wp-image-2999 aligncenter
-   :width: 367px
-   :height: 473px
-   :target: https://genestack.com/wp-content/uploads/2015/08/FastQC_3.png
-.. |Multiple QC plot for RawReads| image:: https://genestack.com/wp-content/uploads/2015/09/Multiple-QC-plot-for-RawReads.png
-   :class: aligncenter wp-image-3076
-   :width: 600px
-   :height: 428px
-   :target: https://genestack.com/wp-content/uploads/2015/09/Multiple-QC-plot-for-RawReads.png
-.. |Per sequence GC content| image:: https://genestack.com/wp-content/uploads/2015/12/Per-sequence-GC-content1.png
-   :class: alignnone size-full wp-image-4199
-   :width: 619px
-   :height: 448px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Per-sequence-GC-content1.png
-.. |per base sequence quality| image:: https://genestack.com/wp-content/uploads/2015/12/per-base-sequence-quality-1.png
-   :class: alignnone wp-image-4198
-   :width: 600px
-   :height: 290px
-   :target: https://genestack.com/wp-content/uploads/2015/12/per-base-sequence-quality-1.png
-.. |fastqc per sequence quality scores| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-sequence-quality-scores.png
-   :class: alignnone size-full wp-image-4196
-   :width: 625px
-   :height: 455px
-   :target: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-sequence-quality-scores.png
-.. |fastqc per base seq content| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-base-seq-content.png
-   :class: alignnone wp-image-4195
-   :width: 600px
-   :height: 294px
-   :target: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-base-seq-content.png
-.. |fastqc sequence duplication levels| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-sequence-duplication-levels.png
-   :class: alignnone wp-image-4197
-   :width: 600px
-   :height: 390px
-   :target: https://genestack.com/wp-content/uploads/2015/12/fastqc-sequence-duplication-levels.png
-.. |FastQC (overrepresented sequences)| image:: https://genestack.com/wp-content/uploads/2015/08/FastQC-overrepresented-sequences.png
-   :class: size-full wp-image-2981 aligncenter
-   :width: 584px
-   :height: 127px
-.. |DF_WGBS| image:: https://genestack.com/wp-content/uploads/2015/12/DF_WGBS2.png
-   :class: size-full wp-image-4200 aligncenter
-   :width: 479px
-   :height: 834px
-   :target: https://genestack.com/wp-content/uploads/2015/12/DF_WGBS2.png
-.. |File chooser (ref-genome)| image:: https://genestack.com/wp-content/uploads/2015/11/File-chooser-ref-genome.png
-   :class: alignleft wp-image-3822
-   :width: 600px
-   :height: 276px
-   :target: https://genestack.com/wp-content/uploads/2015/11/File-chooser-ref-genome.png
-.. |DF trim adaptors and contaminants| image:: https://genestack.com/wp-content/uploads/2015/12/DF-trim-adaptors-and-contaminants.png
-   :class: size-full wp-image-4204 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/DF-trim-adaptors-and-contaminants.png
-.. |df trim low quality bases| image:: https://genestack.com/wp-content/uploads/2015/12/df-trim-low-quality-bases.png
-   :class: size-full wp-image-4205 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/df-trim-low-quality-bases.png
+.. |choose DF| image:: images/choose-DF.png
+.. |DF_FastQC| image:: images/DF_FastQC.png
+.. |Start initialization| image:: images/Start-initialization.png
+.. |View Resuts| image:: images/View-Resuts.png
+.. |FastQC_3| image:: images/FastQC_3.png
+.. |Multiple QC plot for RawReads| image:: images/Multiple-QC-plot-for-RawReads.png
+.. |Per sequence GC content| image:: images/Per-sequence-GC-content1.png
+.. |per base sequence quality| image:: images/per-base-sequence-quality-1.png
+.. |fastqc per sequence quality scores| image:: images/fastqc-per-sequence-quality-scores.png
+.. |fastqc per base seq content| image:: images/fastqc-per-base-seq-content.png
+.. |fastqc sequence duplication levels| image:: images/fastqc-sequence-duplication-levels.png
+.. |FastQC (overrepresented sequences)| image:: images/FastQC-overrepresented-sequences.png
+.. |DF_WGBS| image:: images/DF_WGBS2.png
+.. |File chooser (ref-genome)| image:: images/File-chooser-ref-genome.png
+.. |DF trim adaptors and contaminants| image:: images/DF-trim-adaptors-and-contaminants.png
+.. |df trim low quality bases| image:: images/df-trim-low-quality-bases.png

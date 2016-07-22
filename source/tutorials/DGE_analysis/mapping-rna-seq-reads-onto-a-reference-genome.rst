@@ -67,37 +67,10 @@ metainfo values. Read more what the app does in our blog post about
 sequencing quality control
 reports <https://genestack.com/blog/2014/12/10/interactive-sequencing-quality-control-reports/>`__ .
 
-.. |DGE_spl_mapping| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_spl_mapping.png
-   :class: aligncenter size-full wp-image-2897
-   :width: 401px
-   :height: 613px
-.. |DGE_spl_map| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_spl_map-e1445441938143.png
-   :class: aligncenter wp-image-2958 size-full
-   :width: 600px
-   :height: 729px
-   :target: https://genestack.com/wp-content/uploads/2015/08/DGE_spl_map.png
-.. |DGE_coverage_21| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_coverage_21-e1445441975435.png
-   :class: aligncenter wp-image-2899 size-full
-   :width: 600px
-   :height: 380px
-   :target: https://genestack.com/wp-content/uploads/2015/07/DGE_coverage_21.png
-.. |DGE_GB_combined_track| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_GB_combined_track-e1445442051712.png
-   :class: aligncenter wp-image-2903 size-full
-   :width: 600px
-   :height: 397px
-   :target: https://genestack.com/wp-content/uploads/2015/07/DGE_GB_combined_track.png
-.. |Coverage_by_chromosome| image:: https://genestack.com/wp-content/uploads/2015/07/Coverage_by_chromosome-e1445442085712.png
-   :class: aligncenter wp-image-2764 size-full
-   :width: 600px
-   :height: 400px
-   :target: https://genestack.com/wp-content/uploads/2015/07/Coverage_by_chromosome.png
-.. |Insert_size_distribution| image:: https://genestack.com/wp-content/uploads/2015/07/Insert_size_distribution-e1445442123895.png
-   :class: aligncenter wp-image-2763 size-full
-   :width: 600px
-   :height: 398px
-   :target: https://genestack.com/wp-content/uploads/2015/07/Insert_size_distribution.png
-.. |DGE_multiple_qc_plotter| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_multiple_qc_plotter-e1445442157923.png
-   :class: aligncenter wp-image-3083 size-full
-   :width: 600px
-   :height: 377px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_multiple_qc_plotter.png
+.. |DGE_spl_mapping| image:: images/DGE_spl_mapping.png
+.. |DGE_spl_map| image:: images/DGE_spl_map.png
+.. |DGE_coverage_21| image:: images/DGE_coverage_21.png
+.. |DGE_GB_combined_track| image:: images/DGE_GB_combined_track.png
+.. |Coverage_by_chromosome| image:: images/Coverage_by_chromosome.png
+.. |Insert_size_distribution| image:: images/Insert_size_distribution.png
+.. |DGE_multiple_qc_plotter| image:: images/DGE_multiple_qc_plotter.png

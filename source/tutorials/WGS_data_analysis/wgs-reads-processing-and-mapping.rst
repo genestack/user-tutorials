@@ -21,7 +21,7 @@ sequence on the app page
 
 |Screenshot 2015-12-24 15.42.34|
 
- The next read
+The next read
 preprocessing procedure we plan to do is removing bases of low quality
 with *Trim Low Quality Bases* app based on seqtk 1.0 tool. It removes
 nucleotides of a low quality from the raw data according to phred33
@@ -136,62 +136,16 @@ page... |Start initialization (DFR)| ...or open the resulting Genetic
 variants file in Variant Explorer, Genome Browser or Effect Prediction
 apps. |Screenshot 2015-12-25 13.46.50|    
 
-.. |Edit file list| image:: https://genestack.com/wp-content/uploads/2015/12/Edit-file-list.png
-   :class: size-full wp-image-4351 aligncenter
-   :width: 482px
-   :height: 437px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Edit-file-list.png
-.. |Screenshot 2015-12-24 15.42.34| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-24-15.42.34.png
-   :class: wp-image-4356 alignnone
-   :width: 600px
-   :height: 304px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-24-15.42.34.png
-.. |Filter by qual score| image:: https://genestack.com/wp-content/uploads/2015/11/Filter-by-qual-score.png
-   :class: wp-image-3919 aligncenter
-   :width: 600px
-   :height: 184px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Filter-by-qual-score.png
-.. |Screenshot 2016-03-18 17.47.23| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-18-17.47.23.png
-   :class: alignleft wp-image-4858
-   :width: 600px
-   :height: 281px
-.. |Screenshot 2016-03-18 17.44.03| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-18-17.44.03.png
-   :class: alignleft wp-image-4857 size-full
-   :width: 551px
-   :height: 402px
-.. |Screenshot 2015-11-19 14.08.48| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-19-14.08.48.png
-   :class: size-full wp-image-3939 aligncenter
-   :width: 424px
-   :height: 169px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-19-14.08.48.png
-.. |MR QC DFR| image:: https://genestack.com/wp-content/uploads/2015/12/MR-QC-DFR.png
-   :class: size-full wp-image-4372 aligncenter
-   :width: 323px
-   :height: 367px
-   :target: https://genestack.com/wp-content/uploads/2015/12/MR-QC-DFR.png
-.. |Screenshot 2015-12-25 15.43.51| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-25-15.43.51.png
-   :class: size-full wp-image-4371 aligncenter
-   :width: 422px
-   :height: 216px
-.. |Mapped ReadsQC| image:: https://genestack.com/wp-content/uploads/2015/11/Mapped-ReadsQC.png
-   :class: aligncenter wp-image-3936
-   :width: 600px
-   :height: 153px
-.. |Screenshot 2016-04-17 16.55.26| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-17-16.55.26.png
-   :class: size-full wp-image-4897 aligncenter
-   :width: 295px
-   :height: 164px
-.. |Screenshot 2016-01-15 16.12.43| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-15-16.12.43.png
-   :class: aligncenter wp-image-4527
-   :width: 600px
-   :height: 495px
-.. |Start initialization (DFR)| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initialization-DFR1.png
-   :class: size-full wp-image-4366 aligncenter
-   :width: 494px
-   :height: 475px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Start-initialization-DFR1.png
-.. |Screenshot 2015-12-25 13.46.50| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-25-13.46.50.png
-   :class: alignleft wp-image-4367
-   :width: 600px
-   :height: 275px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-25-13.46.50.png
+.. |Edit file list| image:: images/Edit-file-list.png
+.. |Screenshot 2015-12-24 15.42.34| image:: images/Screenshot-2015-12-24-15.42.34.png
+.. |Filter by qual score| image:: images/Filter-by-qual-score.png
+.. |Screenshot 2016-03-18 17.47.23| image:: images/Screenshot-2016-03-18-17.47.23.png
+.. |Screenshot 2016-03-18 17.44.03| image:: images/Screenshot-2016-03-18-17.44.03.png
+.. |Screenshot 2015-11-19 14.08.48| image:: images/Screenshot-2015-11-19-14.08.48.png
+.. |MR QC DFR| image:: images/MR-QC-DFR.png
+.. |Screenshot 2015-12-25 15.43.51| image:: images/Screenshot-2015-12-25-15.43.51.png
+.. |Mapped ReadsQC| image:: images/Mapped-ReadsQC.png
+.. |Screenshot 2016-04-17 16.55.26| image:: images/Screenshot-2016-04-17-16.55.26.png
+.. |Screenshot 2016-01-15 16.12.43| image:: images/Screenshot-2016-01-15-16.12.43.png
+.. |Start initialization (DFR)| image:: images/Start-initialization-DFR1.png
+.. |Screenshot 2015-12-25 13.46.50| image:: images/Screenshot-2015-12-25-13.46.50.png
