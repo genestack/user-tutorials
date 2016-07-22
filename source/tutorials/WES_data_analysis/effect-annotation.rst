@@ -1,17 +1,6 @@
 Effect-annotation
 *****************
 
-.. raw:: html
-
-   <div class="layoutArea">
-
-.. raw:: html
-
-   <div class="column">
-
-.. rubric:: **8. Effect annotation**
-   :name: effect
-
 After variants are detected, use Effect Annotation application based on
 `SnpEff <http://snpeff.sourceforge.net/>`__ tool. The app annotates
 variants and predicts the effects they produce on genes such as amino
@@ -97,22 +86,6 @@ transversions in both whole exome and whole genome samples. **Transition
 vs transversions (Ts/Tv)** section is about the number of transitions,
 number of transversions and their ratio in SNPs and all variants.
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="layoutArea">
-
-.. raw:: html
-
-   <div class="column">
-
 Transitions are mutations within the same type of nucleotide:
 pyrimidine-pyrimidine mutations (C <> T) and purine-purine mutations (A
 <> G).  Transversions are mutations from a pyrimidine to a purine or
@@ -125,40 +98,16 @@ outside coding exons (only 60% of variants were found in introns, for
 Nimblegen sample). However, for WGS data, the ratio is equal to 2 as
 it's expected *(Ebersberger I. et al, 2002)*.
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="column">
-
 Looking at **Frequency of alleles** histogram, you can evaluate how many
 times an allele appears once (singleton), twice (doubleton), etc:
 |WES_alleles_frequencies|
-
-.. raw:: html
-
-   </div>
 
 In all samples, most of the variants are represented as singletons.
 Some variants (less than 400,000 for WES, and about 1,5 million for WGS)
 have two alternate alleles *.*
 
-.. raw:: html
-
-   <div class="column">
-
 **Codon changes** table outputs what and how many reference codons have
 been replaced. Here is just a fragment of this table:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="column">
 
 |WES_codon_changes| Reference codons are shown in rows, changed codons
 - in columns. The most of changes happened are indicated in red color.
@@ -169,26 +118,10 @@ samples. In ** Amino acid changes** table, you can see type and
 number of amino acid changes. Row indicates a reference amino acid,
 column - changed amino acid.
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="column">
-
 |WES_amino_acid_changes| For example, 957 Alanines (A, Ala) have been
 replaced by Tryptophan (T, Trp) in Nimblegen sample. Number and type of
 amino acid changes look pretty similar across WGS and different WES
 samples.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="column">
 
 **Changes by chromosome** plots show the number of variants per
 10000Kb throughout the whole chromosome length. Such histogram is
@@ -234,10 +167,6 @@ current exome designs. That's why, for covering really all variants, it
 might be worth to think about doing both WGS and WES experiments in
 parallel. Both technologies complement each other.
 
-.. raw:: html
-
-   <div class="page" title="Page 5">
-
 In general, all technologies performed well. Our results demonstrated
 that they give a very high level of targeting efficiency, with the
 Nimblegen technology demonstrating the highest one, and able to
@@ -252,14 +181,6 @@ number of variants in comparison to Nimblegen one. That's why the
 question of which enrichment platform is best must be answered with
 respect to all these specific parameters.
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="page" title="Page 5">
-
 Congratulations! We've worked through the entire tutorial! Try to repeat
 all the steps with your own data or using other
 Genestack  `public ** ** experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile>`__!
@@ -268,12 +189,8 @@ sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email
 us <http://support@genestack.com>`__.
 
-.. raw:: html
-
-   </div>
-
-.. rubric:: **References:**
-   :name: references
+References:
+-----------
 
 #. Clark M. J., et al. Performance comparison of exome DNA sequencing
    technologies.  *Nature biotechnology* 2011; 29(10):908-914.
@@ -284,14 +201,6 @@ us <http://support@genestack.com>`__.
    variation in the human genome. *Genome Research* 2006; 16:1182–1190.
 #. van Dijk E.L., et al. Ten years of next-generation sequencing
    technology. *Trends in Genetics* 2014; 30:418-426.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |WES_change_rate_by_cromosome_| image:: images/WES_change_rate_by_cromosome_.png
 .. |WES_number_changes by_type_1| image:: images/WES_number_changes-by_type_1.png

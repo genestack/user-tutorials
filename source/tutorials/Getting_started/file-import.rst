@@ -1,10 +1,6 @@
 Importing data onto the Genestack Platform
 ------------------------------------------
 
-.. raw:: html
-
-   <div class="readoffline-embed">
-
 We’ve talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data onto the platform. On the
 `Welcome
@@ -13,23 +9,7 @@ can find an “ `Import
 data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ ”
 option,  and an "Import" button can be found in the File Manager.
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="readoffline-embed">
-
 |import file manager|
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="readoffline-embed">
 
 Once you click it, this will take you to the `Raw File
 uploader <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__
@@ -49,10 +29,6 @@ age. |Zrzut ekranu 2015-11-03 o 11.33.53| Once this step is completed,
 you can go to “Show files in File Manager” at the bottom of the page.
 Take a look at a “kind” column- there are no file formats, just
 biological data types. |Zrzut ekranu 2015-11-03 o 11.34.14|
-
-.. raw:: html
-
-   </div>
 
 Additional option of importing your data is using import templates. On
 the Welcome page you can find an "`Add import
