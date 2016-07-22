@@ -21,7 +21,7 @@ sequence on the app page
 
 |Screenshot 2015-12-24 15.42.34|
 
- The next read
+The next read
 preprocessing procedure we plan to do is removing bases of low quality
 with *Trim Low Quality Bases* app based on seqtk 1.0 tool. It removes
 nucleotides of a low quality from the raw data according to phred33

@@ -78,7 +78,7 @@ reads displays a menu:
 
 |dropdown menu raw sequencing reads|
 
- You can
+You can
 view and edit file metadata via the  **Edit Metainfo**, which appears
 under the  **Manage** submenu. |edit metainfo2| You can open the
 metainfo viewer on any file in the system by clicking on the eye icon.

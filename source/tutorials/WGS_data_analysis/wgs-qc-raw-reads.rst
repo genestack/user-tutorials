@@ -112,7 +112,7 @@ sequence several times.   
 
 |Seq duplication run1|
 
- Lastly, according to
+Lastly, according to
 the reports, the first sequencing run compared to the second one
 contains some over-represented sequences — sequences that are highly
 duplicated in a sample. In total, the app identified 1,052,139

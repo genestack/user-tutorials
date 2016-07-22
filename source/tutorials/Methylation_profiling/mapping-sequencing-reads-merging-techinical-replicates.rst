@@ -7,7 +7,7 @@ the reference genome.**
 
 |df bisulfte seq mapping|
 
- We run Bisulfite
+We run Bisulfite
 Sequencing Mapping with default parameters. Click on the app name to
 move to its page where you can change the parameters of alignment and
 learn more about the app clicking on the "about". |BSMAP| In

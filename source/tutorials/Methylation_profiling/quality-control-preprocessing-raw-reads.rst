@@ -90,7 +90,7 @@ same area several times.**
 
 |fastqc sequence duplication levels|
 
- The
+The
 application also detects **Overrepresented sequences**  that may
 correspond to primer or adapter contamination.  **Indeed, in our case
 two over-represented sequences were found in our assay.** **Here they
@@ -98,7 +98,7 @@ are:**
 
 |FastQC (overrepresented sequences)|
 
- These contaminants can
+These contaminants can
 strongly influence the results of analysis and should be trimmed.
 
 **3. Preprocessing of raw reads: trimming adaptors, contaminants and low quality bases.**
@@ -132,18 +132,18 @@ of raw sequencing data. Based on the QC statistics we highly recommend
 you to  **remove adapters and contaminants**, **trim low quality
 bases** and **remove duplicates**. And we also remove duplicates
 during Methylation Ratio Analysis, but you can also use a separate
-preprocess application  **Remove** ** Duplicated Reads** . Firstly,
+preprocess application  **Remove Duplicated Reads** . Firstly,
 we can easily remove the found overrepresented sequences from WGBS data
 using  **Trim adapters and contaminants** app: |DF trim adaptors and
 contaminants| **Later, to avoid mismatches in read mapping, we
-should **** ****** remove low quality bases **** from the sequencing
-reads **. **Trim low quality bases** application allows you to get rid
+should remove low quality bases from the sequencing
+reads**. **Trim low quality bases** application allows you to get rid
 of nucleotide bases with a low phred33 quality which corresponds to an
-error threshold equal to 1%.**
+error threshold equal to 1%.
 
 |df trim low quality bases|
 
- All
+All
 preprocessed files are freely accessible in the folders `Trim adaptors
 for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968745&action=viewFile>`__ and `Trim

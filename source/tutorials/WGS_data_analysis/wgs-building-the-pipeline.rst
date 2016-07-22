@@ -38,13 +38,13 @@ merge parents:
 
 |Screenshot 2016-01-11 12.49.07|
 
- Merge parents option
+Merge parents option
 allows to focus on the main steps of the pipeline by merging of files
 from each step into one group:
 
 |Screenshot 2016-01-11 12.55.56|
 
- To run
+To run
 the pipeline click on the "Run Data Flow" button at the bottom of the
 data flow. After that you will be suggested to either start the
 computation now or delay it till later:
@@ -62,7 +62,7 @@ the app that created this file:
 
 |Edit File List BWA|
 
- Data Flow Runner
+Data Flow Runner
 allows you to start initialization up to any step of the pipeline. We
 recommend  you check the mapping quality after removing the duplicates
 from mapped reads to assure that they could be further used in variant
@@ -75,7 +75,7 @@ folder.  
 
 |Start initial|
 
- Note that there is a data flow file including
+Note that there is a data flow file including
 all the mentioned preprocess and analysis steps previously prepared by
 Genestack team. This data flow is called `WGS data
 analysis <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1018398&action=viewFile>`__ and you

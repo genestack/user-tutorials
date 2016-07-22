@@ -73,7 +73,7 @@ InDels (341,382 insertions and 372,258 deletions) ranging from −52 bp to
 
 |Indel length dostributions|
 
- Additionally, we
+Additionally, we
 performed filtering by effect to find out InDel distribution throughout
 different genomic locations.  From identified InDels 258680 and 263835
 were in an intergenic and intronic region, respectively. We also found

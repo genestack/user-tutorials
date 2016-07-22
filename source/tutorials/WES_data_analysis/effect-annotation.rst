@@ -199,8 +199,8 @@ tables, you can see  **Details by gene** as well. We annotated the
 variants calculating the effects they produced on known genes and put
 them in  `Variants with predicted effects for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1>`__ folder.
-.. rubric:: **9. Variant prioritisation in Variant Explorer**
-   :name: explorer
+
+**9. Variant prioritisation in Variant Explorer**
 
 The variants can be also interactively analysed in Genestack Variant
 Explorer application:
