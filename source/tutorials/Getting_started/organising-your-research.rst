@@ -58,18 +58,6 @@ fields are filled in by our curators, some are available for you to edit
 via different applications in Genestack Platform, and some are computed
 when files are initialised.  
 
-.. |file manager| image:: https://genestack.com/wp-content/uploads/2015/12/file-manager-1024x580.png
-   :class: alignnone size-large wp-image-4281
-   :width: 604px
-   :height: 342px
-   :target: https://genestack.com/wp-content/uploads/2015/12/file-manager.png
-.. |reference genomes| image:: https://genestack.com/wp-content/uploads/2015/12/reference-genomes-1024x357.png
-   :class: alignnone size-large wp-image-4292
-   :width: 604px
-   :height: 211px
-   :target: https://genestack.com/wp-content/uploads/2015/12/reference-genomes.png
+.. |file manager| image:: https://genestack.com/wp-content/uploads/2015/12/file-manager.png
+.. |reference genomes| image:: https://genestack.com/wp-content/uploads/2015/12/reference-genomes.png
 .. |metainfo reference genome| image:: https://genestack.com/wp-content/uploads/2015/12/metainfo-reference-genome.png
-   :class: alignnone size-full wp-image-4288
-   :width: 539px
-   :height: 569px
-   :target: https://genestack.com/wp-content/uploads/2015/12/metainfo-reference-genome.png

@@ -52,28 +52,8 @@ options. If you have any questions and comments, please submit them
 below or email us at support@genestack.com .  Follow us on
 Twitter:  `@genestack <https://twitter.com/genestack>`__.
 
-.. |DGE_GO_filters| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_GO_filters-e1445441681370.png
-   :class: aligncenter wp-image-3232 size-full
-   :width: 600px
-   :height: 434px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_GO_filters.png
-.. |DGE_down_DGE_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_down_DGE_genes_GO_terms-e1445441710305.png
-   :class: aligncenter wp-image-3233 size-full
-   :width: 600px
-   :height: 421px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_down_DGE_genes_GO_terms.png
+.. |DGE_GO_filters| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_GO_filters.png
+.. |DGE_down_DGE_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_down_DGE_genes_GO_terms.png
 .. |DGE_down_paper| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_down_paper.png
-   :class: aligncenter size-full wp-image-2953
-   :width: 613px
-   :height: 403px
-   :target: https://genestack.com/wp-content/uploads/2015/08/DGE_down_paper.png
-.. |DGE_up_regulated_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_up_regulated_genes_GO_terms-e1445441756258.png
-   :class: aligncenter wp-image-3234 size-full
-   :width: 600px
-   :height: 418px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_up_regulated_genes_GO_terms.png
+.. |DGE_up_regulated_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_up_regulated_genes_GO_terms.png
 .. |DGE_up_paper| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_up_paper.png
-   :class: aligncenter size-full wp-image-2955
-   :width: 616px
-   :height: 198px
-   :target: https://genestack.com/wp-content/uploads/2015/08/DGE_up_paper.png

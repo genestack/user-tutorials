@@ -50,20 +50,5 @@ If you have any questions, suggestions etc, please leave them in
 comments below or `email us <mailto:info@genestack.com>`__.
 
 .. |Genome Browser (Pax6; only WTs)| image:: https://genestack.com/wp-content/uploads/2015/08/GB-Pax6-only-WTs.png
-   :class: aligncenter wp-image-2989
-   :width: 650px
-   :height: 428px
-   :target: https://genestack.com/wp-content/uploads/2015/08/GB-Pax6-only-WTs.png
-.. |Pax6-paper| image:: https://genestack.com/wp-content/uploads/2015/08/Pax6-paper.png
-   :class: size-full wp-image-2992 aligncenter
-   :width: 517px
-   :height: 288px
-.. |Genome Browser (WT vs KO)| image:: https://genestack.com/wp-content/uploads/2015/08/GB-WT-vs-KO.png
-   :class: aligncenter wp-image-2991
-   :width: 650px
-   :height: 344px
-   :target: https://genestack.com/wp-content/uploads/2015/08/GB-WT-vs-KO.png
+.. |Pax6-paper| image:: https://genestack.com/wp-content/uploads/2015/08/GB-WT-vs-KO.png
 .. |Hox-paper2| image:: https://genestack.com/wp-content/uploads/2015/08/Hox-paper2.png
-   :class: size-full wp-image-2990 aligncenter
-   :width: 652px
-   :height: 341px

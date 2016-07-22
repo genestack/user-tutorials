@@ -73,17 +73,6 @@ with data flows pre-prepared by Genestack.
    :width: 604px
    :height: 64px
    :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3ZfhBit9j2sTwTRiLvkJ6T
-.. |DNA_methylation| image:: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation-300x225.jpg
-   :class: alignright wp-image-3052 size-medium
-   :width: 300px
-   :height: 225px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation.jpg
+.. |DNA_methylation| image:: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation.jpg
 .. |public experiments| image:: https://genestack.com/wp-content/uploads/2015/12/public-experiments.png
-   :class: alignnone wp-image-4182
-   :width: 600px
-   :height: 167px
-   :target: https://genestack.com/wp-content/uploads/2015/12/public-experiments.png
 .. |Experiment_Viewer| image:: https://genestack.com/wp-content/uploads/2015/08/Experiment_Viewer.png
-   :class: aligncenter wp-image-2971 size-full
-   :width: 701px
-   :height: 685px

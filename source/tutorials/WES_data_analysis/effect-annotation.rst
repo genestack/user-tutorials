@@ -294,97 +294,21 @@ us <http://support@genestack.com>`__.
    </div>
 
 .. |WES_change_rate_by_cromosome_| image:: https://genestack.com/wp-content/uploads/2015/11/WES_change_rate_by_cromosome_.png
-   :class: aligncenter size-full wp-image-3893
-   :width: 493px
-   :height: 234px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_change_rate_by_cromosome_.png
 .. |WES_number_changes by_type_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_changes-by_type_1.png
-   :class: aligncenter wp-image-3905 size-full
-   :width: 279px
-   :height: 182px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_number_changes-by_type_1.png
 .. |WES_number_of_effects_by_impact_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_effects_by_impact_1.png
-   :class: size-full wp-image-3906 aligncenter
-   :width: 351px
-   :height: 112px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_effects_by_impact_1.png
 .. |WES_number_of_affects_by_functional_class_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_affects_by_functional_class_1.png
-   :class: size-full wp-image-3907 aligncenter
-   :width: 334px
-   :height: 102px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_affects_by_functional_class_1.png
 .. |WES_Number_of_variants_by_effect_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Number_of_variants_by_effect_1.png
-   :class: aligncenter wp-image-3915
-   :width: 600px
-   :height: 393px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_Number_of_variants_by_effect_1.png
 .. |WES_variations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_variations.png
-   :class: aligncenter wp-image-3876
-   :width: 600px
-   :height: 229px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_variations.png
 .. |WES_quality| image:: https://genestack.com/wp-content/uploads/2015/11/WES_quality.png
-   :class: aligncenter wp-image-3879
-   :width: 600px
-   :height: 200px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_quality.png
 .. |WES_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage.png
-   :class: aligncenter wp-image-3880
-   :width: 600px
-   :height: 203px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_coverage.png
 .. |WES_insertions_and_deletions_length| image:: https://genestack.com/wp-content/uploads/2015/11/WES_insertions_and_deletions_length.png
-   :class: aligncenter wp-image-3881
-   :width: 600px
-   :height: 253px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_insertions_and_deletions_length.png
 .. |WES_Indel_size_distribution| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Indel_size_distribution.png
-   :class: aligncenter size-full wp-image-4017
-   :width: 574px
-   :height: 274px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_Indel_size_distribution.png
 .. |WES_base_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_base_changes.png
-   :class: aligncenter size-full wp-image-3883
-   :width: 273px
-   :height: 127px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_base_changes.png
 .. |WES_Ts_Tv| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Ts_Tv.png
-   :class: aligncenter size-full wp-image-3884
-   :width: 190px
-   :height: 82px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_Ts_Tv.png
 .. |WES_alleles_frequencies| image:: https://genestack.com/wp-content/uploads/2015/11/WES_alleles_frequencies.png
-   :class: aligncenter size-full wp-image-3885
-   :width: 160px
-   :height: 302px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_alleles_frequencies.png
 .. |WES_codon_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_codon_changes.png
-   :class: aligncenter wp-image-3886
-   :width: 600px
-   :height: 350px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_codon_changes.png
-.. |WES_amino_acid_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_amino_acid_changes-1024x503.png
-   :class: aligncenter wp-image-3887 size-large
-   :width: 604px
-   :height: 297px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_amino_acid_changes.png
+.. |WES_amino_acid_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_amino_acid_changes.png
 .. |WES_Changes_by_chromosome_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Changes_by_chromosome_1.png
-   :class: aligncenter wp-image-3890
-   :width: 600px
-   :height: 227px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_Changes_by_chromosome_1.png
-.. |WES_VE_1| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_1-1024x599.png
-   :class: aligncenter wp-image-4482 size-large
-   :width: 604px
-   :height: 353px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_VE_1.png
-.. |WES_VE_2| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_2-1024x522.png
-   :class: aligncenter wp-image-4483 size-large
-   :width: 604px
-   :height: 308px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_VE_2.png
+.. |WES_VE_1| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_1.png
+.. |WES_VE_2| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_2.png
 .. |WES_filters_history| image:: https://genestack.com/wp-content/uploads/2015/11/WES_filters_history.png
-   :class: aligncenter wp-image-4041
-   :width: 600px
-   :height: 246px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_filters_history.png

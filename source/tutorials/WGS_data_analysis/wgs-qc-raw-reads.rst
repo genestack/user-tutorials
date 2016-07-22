@@ -131,48 +131,12 @@ for genetic variants analysis of WGS data from the raw data
 preprocessing to the genetic variants annotation and filtering.
 
 .. |DF list| image:: https://genestack.com/wp-content/uploads/2015/11/DF-list.png
-   :class: aligncenter wp-image-3833
-   :width: 600px
-   :height: 307px
-   :target: https://genestack.com/wp-content/uploads/2015/11/DF-list.png
 .. |FastQCReport_DF| image:: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
-   :class: aligncenter wp-image-4264 size-full
-   :width: 310px
-   :height: 367px
-   :target: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
 .. |Start initializ_DF| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initializ_DF.png
-   :class: aligncenter wp-image-4267 size-full
-   :width: 547px
-   :height: 261px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Start-initializ_DF.png
 .. |Start init (FastQC)| image:: https://genestack.com/wp-content/uploads/2015/12/Start-init-FastQC.png
-   :class: aligncenter wp-image-4271 size-full
-   :width: 496px
-   :height: 388px
 .. |Multiple QC| image:: https://genestack.com/wp-content/uploads/2015/12/Multiple-QC.png
-   :class: aligncenter wp-image-4270
-   :width: 600px
-   :height: 171px
 .. |TaskManager| image:: https://genestack.com/wp-content/uploads/2015/12/TaskManager.png
-   :class: aligncenter wp-image-4273
-   :width: 600px
-   :height: 193px
-   :target: https://genestack.com/wp-content/uploads/2015/12/TaskManager.png
 .. |Screenshot 2016-02-19 20.53.39| image:: https://genestack.com/wp-content/uploads/2016/02/Screenshot-2016-02-19-20.53.39.png
-   :class: alignleft wp-image-4757
-   :width: 600px
-   :height: 203px
 .. |Screenshot 2016-02-19 20.48.12| image:: https://genestack.com/wp-content/uploads/2016/02/Screenshot-2016-02-19-20.48.12.png
-   :class: alignleft wp-image-4756
-   :width: 600px
-   :height: 276px
 .. |Per base sequence content (Run1)| image:: https://genestack.com/wp-content/uploads/2015/11/Per-base-sequence-content-Run1.png
-   :class: aligncenter wp-image-3843
-   :width: 600px
-   :height: 238px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Per-base-sequence-content-Run1.png
 .. |Seq duplication run1| image:: https://genestack.com/wp-content/uploads/2015/11/Seq-duplication-run1.png
-   :class: aligncenter wp-image-3867
-   :width: 600px
-   :height: 233px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Seq-duplication-run1.png

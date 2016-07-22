@@ -62,27 +62,7 @@ email and password. Users added this way are immediately confirmed, and
 can log in right away.  
 
 .. |sign up screen| image:: https://genestack.com/wp-content/uploads/2015/12/sign-up-screen.png
-   :class: alignnone size-full wp-image-4294
-   :width: 698px
-   :height: 541px
-   :target: https://genestack.com/wp-content/uploads/2015/12/sign-up-screen.png
-.. |genestack welcome page| image:: https://genestack.com/wp-content/uploads/2016/01/genestack-welcome-page-1024x565.png
-   :class: alignnone wp-image-4404 size-large
-   :width: 604px
-   :height: 333px
-   :target: https://genestack.com/wp-content/uploads/2016/01/genestack-welcome-page.png
+.. |genestack welcome page| image:: https://genestack.com/wp-content/uploads/2016/01/genestack-welcome-page.png
 .. |user management| image:: https://genestack.com/wp-content/uploads/2015/12/user-management.png
-   :class: alignnone wp-image-4300 size-full
-   :width: 589px
-   :height: 189px
-   :target: https://genestack.com/wp-content/uploads/2015/12/user-management.png
 .. |first user on the platform| image:: https://genestack.com/wp-content/uploads/2015/12/first-user.png
-   :class: alignnone wp-image-4284
-   :width: 600px
-   :height: 210px
-   :target: https://genestack.com/wp-content/uploads/2015/12/first-user.png
 .. |second user creation| image:: https://genestack.com/wp-content/uploads/2015/12/second-user.png
-   :class: alignnone size-full wp-image-4293
-   :width: 582px
-   :height: 480px
-   :target: https://genestack.com/wp-content/uploads/2015/12/second-user.png

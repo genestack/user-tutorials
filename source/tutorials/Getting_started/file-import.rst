@@ -64,32 +64,8 @@ template <https://platform.genestack.org/endpoint/application/run/genestack/meta
 button. |import welcome pagea|
 
 .. |import file manager| image:: https://genestack.com/wp-content/uploads/2015/12/import-file-manager1.png
-   :class: alignnone size-full wp-image-4302
-   :width: 541px
-   :height: 272px
-   :target: https://genestack.com/wp-content/uploads/2015/12/import-file-manager1.png
-.. |Zrzut ekranu 2015-11-03 o 11.32.40| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.32.40-e1446550979678.png
-   :class: alignnone wp-image-3643 size-full
-   :width: 600px
-   :height: 439px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.32.40.png
-.. |Zrzut ekranu 2015-11-03 o 11.33.02| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.02-e1446551006743.png
-   :class: alignnone wp-image-3644 size-full
-   :width: 600px
-   :height: 420px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.02.png
-.. |Zrzut ekranu 2015-11-03 o 11.33.53| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.53-1024x366.png
-   :class: alignnone wp-image-3645 size-large
-   :width: 604px
-   :height: 216px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.53.png
-.. |Zrzut ekranu 2015-11-03 o 11.34.14| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.34.14-e1446551049359.png
-   :class: alignnone wp-image-3646 size-full
-   :width: 600px
-   :height: 308px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.34.14.png
+.. |Zrzut ekranu 2015-11-03 o 11.32.40| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.32.40.png
+.. |Zrzut ekranu 2015-11-03 o 11.33.02| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.02.png
+.. |Zrzut ekranu 2015-11-03 o 11.33.53| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.53.png
+.. |Zrzut ekranu 2015-11-03 o 11.34.14| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.34.14.png
 .. |import welcome pagea| image:: https://genestack.com/wp-content/uploads/2015/12/import-welcome-page1.png
-   :class: alignnone size-full wp-image-4303
-   :width: 514px
-   :height: 221px
-   :target: https://genestack.com/wp-content/uploads/2015/12/import-welcome-page1.png

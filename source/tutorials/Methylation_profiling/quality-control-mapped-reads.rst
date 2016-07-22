@@ -60,16 +60,5 @@ and "`Merged Mapped Reads QC for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969220&action=viewFile&page=1>`__".
 
 .. |GB_search by gene| image:: https://genestack.com/wp-content/uploads/2015/11/GB_search-by-gene.png
-   :class: size-full wp-image-3818 aligncenter
-   :width: 542px
-   :height: 246px
-   :target: https://genestack.com/wp-content/uploads/2015/11/GB_search-by-gene.png
 .. |GB coverage (v2) Sequencing coverage| image:: https://genestack.com/wp-content/uploads/2015/08/GB-coverage-v2.png
-   :class: aligncenter wp-image-2986
-   :width: 650px
-   :height: 607px
 .. |Merged mapped reads QC| image:: https://genestack.com/wp-content/uploads/2015/09/Merged-mapped-reads-QC.png
-   :class: aligncenter wp-image-3068
-   :width: 650px
-   :height: 276px
-   :target: https://genestack.com/wp-content/uploads/2015/09/Merged-mapped-reads-QC.png

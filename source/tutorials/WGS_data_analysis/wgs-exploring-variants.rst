@@ -180,95 +180,21 @@ questions or suggestions, please leave them below or `email
 us <mailto:contact@genestack.com>`__.  
 
 .. |VarCalling_options| image:: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
-   :class: alignleft wp-image-3958
-   :width: 600px
-   :height: 401px
-   :target: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
 .. |GB_variants| image:: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
-   :class: size-full wp-image-4070 aligncenter
-   :width: 553px
-   :height: 375px
-   :target: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
-.. |Screenshot 2016-01-14 13.50.17| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-14-13.50.17.png
-   :class: alignleft wp-image-4512
-   :width: 600px
-   :height: 162px
-.. |start init| image:: https://genestack.com/wp-content/uploads/2015/11/start-init.png
-   :class: size-full wp-image-3962 aligncenter
-   :width: 472px
-   :height: 502px
-.. |Screenshot 2015-11-23 11.14.46| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
-   :class: size-full wp-image-3973 aligncenter
-   :width: 585px
-   :height: 291px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
+.. |Screenshot 2016-01-14 13.50.17| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
 .. |Summary| image:: https://genestack.com/wp-content/uploads/2015/12/Summary.png
-   :class: aligncenter wp-image-4141
-   :width: 600px
-   :height: 379px
 .. |Screenshot 2016-03-14 12.24.19| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-12.24.19.png
-   :class: size-full wp-image-4852 aligncenter
-   :width: 262px
-   :height: 184px
 .. |Indel length dostributions| image:: https://genestack.com/wp-content/uploads/2015/12/Indel-length-dostributions.png
-   :class: aligncenter wp-image-4253
-   :width: 600px
-   :height: 225px
 .. |Quality| image:: https://genestack.com/wp-content/uploads/2015/11/Quality.png
-   :class: alignleft wp-image-3970
-   :width: 600px
-   :height: 202px
 .. |coverage| image:: https://genestack.com/wp-content/uploads/2016/01/coverage-.png
-   :class: alignleft wp-image-4572
-   :width: 600px
-   :height: 191px
 .. |Effects by impact| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-impact.png
-   :class: size-full wp-image-3966 aligncenter
-   :width: 356px
-   :height: 118px
 .. |Effects by type and region (table)| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-type-and-region-table.png
-   :class: aligncenter wp-image-3968
-   :width: 600px
-   :height: 391px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Effects-by-type-and-region-table.png
 .. |Effects by region| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-region.png
-   :class: aligncenter wp-image-4013
-   :width: 600px
-   :height: 231px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Effects-by-region.png
 .. |Base changes| image:: https://genestack.com/wp-content/uploads/2015/11/Base-changes.png
-   :class: size-full wp-image-3974 aligncenter
-   :width: 300px
-   :height: 120px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Base-changes.png
 .. |Ts:Tv| image:: https://genestack.com/wp-content/uploads/2015/11/TsTv.png
-   :class: size-full wp-image-3975 aligncenter
-   :width: 203px
-   :height: 89px
 .. |Codon changes| image:: https://genestack.com/wp-content/uploads/2015/11/Codon-changes.png
-   :class: size-full wp-image-3981 aligncenter
-   :width: 574px
-   :height: 324px
-   :target: https://genestack.com/wp-content/uploads/2015/11/Codon-changes.png
 .. |AA chages| image:: https://genestack.com/wp-content/uploads/2015/11/AA-chages.png
-   :class: aligncenter wp-image-3980
-   :width: 600px
-   :height: 304px
-   :target: https://genestack.com/wp-content/uploads/2015/11/AA-chages.png
 .. |Table Viewer| image:: https://genestack.com/wp-content/uploads/2015/12/Table-Viewer.png
-   :class: wp-image-4078 alignnone
-   :width: 600px
-   :height: 248px
-   :target: https://genestack.com/wp-content/uploads/2015/12/Table-Viewer.png
 .. |Screenshot 2016-04-24 14.05.22| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.05.22.png
-   :class: wp-image-4904 aligncenter
-   :width: 600px
-   :height: 135px
 .. |Screenshot 2016-04-24 14.10.20| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.10.20.png
-   :class: wp-image-4905 aligncenter
-   :width: 600px
-   :height: 128px
 .. |Screenshot 2016-03-14 18.25.42| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-18.25.42-1024x154.png
-   :class: wp-image-4854 size-large aligncenter
-   :width: 604px
-   :height: 91px

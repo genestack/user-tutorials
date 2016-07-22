@@ -48,17 +48,5 @@ opening the `Merged mapped reads for Rodriguez et al.,
  
 
 .. |df bisulfte seq mapping| image:: https://genestack.com/wp-content/uploads/2015/12/df-bisulfte-seq-mapping-.png
-   :class: size-full wp-image-4202 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/df-bisulfte-seq-mapping-.png
 .. |BSMAP| image:: https://genestack.com/wp-content/uploads/2015/11/BSMAP.png
-   :class: aligncenter wp-image-3825
-   :width: 600px
-   :height: 347px
-   :target: https://genestack.com/wp-content/uploads/2015/11/BSMAP.png
 .. |df merge mapped reads| image:: https://genestack.com/wp-content/uploads/2015/12/df-merge-mapped-reads.png
-   :class: size-full wp-image-4203 aligncenter
-   :width: 474px
-   :height: 838px
-   :target: https://genestack.com/wp-content/uploads/2015/12/df-merge-mapped-reads.png

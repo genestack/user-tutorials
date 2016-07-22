@@ -98,73 +98,17 @@ Let's run "Trim Adaptors and Contaminants" step:
 stored in `Trimmed raw reads for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF971384&action=viewFile&page=1>`__  folder.
 
-.. |WES_FastQC_report| image:: https://genestack.com/wp-content/uploads/2016/01/WES_FastQC_report1-1024x609.png
-   :class: aligncenter wp-image-4446 size-large
-   :width: 604px
-   :height: 359px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_FastQC_report1.png
+.. |WES_FastQC_report| image:: https://genestack.com/wp-content/uploads/2016/01/WES_FastQC_report1.png
 .. |WES_per_sequnce_GC_content| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequnce_GC_content.png
-   :class: aligncenter wp-image-3245
-   :width: 600px
-   :height: 381px
-   :target: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequnce_GC_content.png
 .. |WES_per_base_sequence_quality| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_quality.png
-   :class: aligncenter wp-image-3246
-   :width: 600px
-   :height: 234px
-   :target: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_quality.png
 .. |WES_per_sequence_quality_scores| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequence_quality_scores.png
-   :class: aligncenter wp-image-3247
-   :width: 600px
-   :height: 388px
-   :target: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequence_quality_scores.png
 .. |WES_per_base_sequence_content| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_content.png
-   :class: aligncenter wp-image-3249
-   :width: 600px
-   :height: 232px
-   :target: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_content.png
 .. |WES_sequence_duplication_levels| image:: https://genestack.com/wp-content/uploads/2015/09/WES_sequence_duplication_levels.png
-   :class: aligncenter wp-image-3250
-   :width: 600px
-   :height: 345px
-   :target: https://genestack.com/wp-content/uploads/2015/09/WES_sequence_duplication_levels.png
 .. |WES_Multiple_Raw| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Multiple_Raw.png
-   :class: aligncenter wp-image-3829
-   :width: 600px
-   :height: 251px
-   :target: https://genestack.com/wp-content/uploads/2015/11/WES_Multiple_Raw.png
 .. |WES_preprocess_apps| image:: https://genestack.com/wp-content/uploads/2016/01/WES_preprocess_apps.png
-   :class: aligncenter wp-image-4448
-   :width: 600px
-   :height: 368px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_preprocess_apps.png
 .. |WES_data_flow_| image:: https://genestack.com/wp-content/uploads/2016/01/WES_data_flow_.png
-   :class: aligncenter wp-image-4451
-   :width: 600px
-   :height: 306px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_data_flow_.png
 .. |WES_create_df| image:: https://genestack.com/wp-content/uploads/2016/01/WES_create_df.png
-   :class: aligncenter wp-image-4453
-   :width: 600px
-   :height: 266px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_create_df.png
 .. |WES_run_dataflow| image:: https://genestack.com/wp-content/uploads/2016/01/WES_run_dataflow.png
-   :class: aligncenter size-full wp-image-4454
-   :width: 401px
-   :height: 717px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_run_dataflow.png
 .. |WES_start_initialization copy| image:: https://genestack.com/wp-content/uploads/2016/01/WES_start_initialization-copy.png
-   :class: aligncenter wp-image-4455
-   :width: 600px
-   :height: 346px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_start_initialization-copy.png
 .. |WES_view_apps| image:: https://genestack.com/wp-content/uploads/2016/01/WES_view_apps.png
-   :class: aligncenter wp-image-4456
-   :width: 600px
-   :height: 399px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_view_apps.png
 .. |WES_start_preprocess| image:: https://genestack.com/wp-content/uploads/2016/01/WES_start_preprocess.png
-   :class: aligncenter size-full wp-image-4457
-   :width: 435px
-   :height: 742px
-   :target: https://genestack.com/wp-content/uploads/2016/01/WES_start_preprocess.png

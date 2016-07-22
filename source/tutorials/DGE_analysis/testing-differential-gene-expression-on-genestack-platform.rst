@@ -59,18 +59,6 @@ Analysis <https://platform.genestack.org/endpoint/application/run/genestack/data
 flow. But before let's check the quality of raw reads to decide whether
 we should improve it or not.
 
-.. |Zrzut ekranu 2015-10-21 o 16.01.36| image:: https://genestack.com/wp-content/uploads/2015/10/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
-   :class: aligncenter wp-image-3563 size-large
-   :width: 604px
-   :height: 64px
-   :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3uoajkhcNsnjSfflkjh5sq
-.. |DGE_file_manager_red_arrow| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_file_manager_red_arrow-1024x478.png
-   :class: aligncenter wp-image-3170 size-large
-   :width: 604px
-   :height: 282px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_file_manager_red_arrow.png
-.. |DGE_metainfo| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_metainfo-e1445441525138.png
-   :class: wp-image-3168 size-full alignnone
-   :width: 600px
-   :height: 521px
-   :target: https://genestack.com/wp-content/uploads/2015/09/DGE_metainfo.png
+.. |Zrzut ekranu 2015-10-21 o 16.01.36| image:: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3uoajkhcNsnjSfflkjh5sq
+.. |DGE_file_manager_red_arrow| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_file_manager_red_arrow.png
+.. |DGE_metainfo| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_metainfo.png

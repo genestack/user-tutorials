@@ -35,28 +35,8 @@ post them on our `forum <http://forum.genestack.org/>`__ and we will
 answer them as soon as we can. Alternatively, you can `e-mail
 us <mailto:info@genestack.com>`__. Genestack team  
 
-.. |create new data flow| image:: https://genestack.com/wp-content/uploads/2015/12/create-new-data-flow1-e1452162516291.png
-   :class: alignnone wp-image-4311 size-full
-   :width: 600px
-   :height: 463px
-   :target: https://genestack.com/wp-content/uploads/2015/12/create-new-data-flow1.png
+.. |create new data flow| image:: https://genestack.com/wp-content/uploads/2015/12/create-new-data-flow1.png
 .. |run data flow| image:: https://genestack.com/wp-content/uploads/2015/12/run-data-flow.png
-   :class: alignnone size-full wp-image-4320
-   :width: 691px
-   :height: 804px
-   :target: https://genestack.com/wp-content/uploads/2015/12/run-data-flow.png
 .. |choose another file| image:: https://genestack.com/wp-content/uploads/2015/12/choose-another-file.png
-   :class: alignnone size-full wp-image-4310
-   :width: 491px
-   :height: 295px
-   :target: https://genestack.com/wp-content/uploads/2015/12/choose-another-file.png
 .. |delay initialization until later| image:: https://genestack.com/wp-content/uploads/2015/12/delay-initialization-until-later1.png
-   :class: alignnone size-full wp-image-4328
-   :width: 553px
-   :height: 254px
-   :target: https://genestack.com/wp-content/uploads/2015/12/delay-initialization-until-later1.png
 .. |Zrzut ekranu 2015-11-03 o 13.16.22| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-13.16.22.png
-   :class: alignnone size-full wp-image-3678
-   :width: 560px
-   :height: 596px
-   :target: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-13.16.22.png
