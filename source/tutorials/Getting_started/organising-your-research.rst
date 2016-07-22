@@ -21,13 +21,17 @@ Format-Free Files
 ~~~~~~~~~~~~~~~~~
 
 While you browse around all the folders, we’d like to point out a
-key feature of Genestack Platform: \ ***all files are format-free
+key feature of Genestack Platform:  ***all files are format-free
 objects***. Each Genestack file can be considered a container, packing
 several physical files or even a database, with complex and rich
-metadata. Let us take a look at an example. In the \ `Reference
+metadata. Let us take a look at an example. In the  `Reference
 genomes folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000018&action=viewFile>`__
-you will see several pre-loaded genomes: |reference genomes| Take a look
-at the \ *KIND* column. These files are of the \ *Reference
+you will see several pre-loaded genomes:
+
+|reference genomes|
+
+ Take a look
+at the  *KIND* column. These files are of the  *Reference
 Genome* type. There is no single, standard, commonly accepted file
 format for storing and exchanging genomic sequence and features:
 sequence can be stored in FASTA, EMBL or GenBank formats. Genomic
@@ -41,7 +45,7 @@ When data, such as reference genomes, is imported onto Genestack (and
 several different formats can be imported) it is  “packed” into a
 Genestack file, meaning all reference genomes will behave identically,
 regardless of any differences in the physical formats underneath. You
-can browse reference genomes with our \ `Genome
+can browse reference genomes with our  `Genome
 Browser, <https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-browser/>`__
 you can use them to map raw sequence reads, to analyse variations, to
 add and manage rich annotations such as Gene Ontology and you never have

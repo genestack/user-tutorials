@@ -1,9 +1,9 @@
-This post has videos accompanying it. You can watch them here:\ |Watch
+This post has videos accompanying it. You can watch them here: |Watch
 all videos here | Or read full text and watch the videos separately:
 Bisulfite sequencing approaches are currently considered a “gold
 standard” for detecting DNA methylation. One of them, whole-genome
 bisulfite sequencing (WGBS), provides single-base resolution of
-methylated cytosines in genomic DNA. |DNA\_methylation| Investigating
+methylated cytosines in genomic DNA. |DNA_methylation| Investigating
 the methylation profile of DNA is extremely valuable because this type
 of epigenetic modification controls gene expression, and is involved in
 such processes as embryonic development, genomic imprinting,
@@ -36,11 +36,11 @@ steps:
 `The data
 flow <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1>`__ used
 in this tutorial, has been previously prepared by our team and put into
-\ `tutorial
+ `tutorial
 folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1>`__
 for your convenience.
 
-****\ ****1. Setting up a WGBS experiment**** To go through all these
+**** ****1. Setting up a WGBS experiment**** To go through all these
 steps, we need to choose one of the WGBS experiments from Genestack
 `Public
 Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__ which
@@ -54,13 +54,13 @@ Importer <https://platform.genestack.org/endpoint/application/run/genestack/uplo
 the Public data and select the "Whole-genome Bisulfite Sequencing Data
 Analysis on Genestack Platform". In the folder you will find the WGBS
 experiment used in this tutorial, processed data and all the other
-needed files.  **Experiment by \ `Rodriguez et al.,
+needed files.  **Experiment by  `Rodriguez et al.,
 2014 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714>`__
-\ can serve as a clear example of the applications of WGBS to
+ can serve as a clear example of the applications of WGBS to
 genome-wide DNA 5-methylcytosine landscape profiling.** |public
 experiments| To learn more just open the experiment in `Experiment
-Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile>`__\ :
-|Experiment\_Viewer| Briefly, the authors performed WGBS on DNA obtained
+Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile>`__ :
+|Experiment_Viewer| Briefly, the authors performed WGBS on DNA obtained
 from mouse hematopoietic stem cells (HSCs) to investigate the mechanisms
 that could promote changes in DNA methylation and contribute
 to malignant transformation. They discovered extended DNA regions of low
@@ -78,7 +78,7 @@ with data flows pre-prepared by Genestack.
    :width: 604px
    :height: 64px
    :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3ZfhBit9j2sTwTRiLvkJ6T
-.. |DNA\_methylation| image:: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation-300x225.jpg
+.. |DNA_methylation| image:: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation-300x225.jpg
    :class: alignright wp-image-3052 size-medium
    :width: 300px
    :height: 225px
@@ -88,7 +88,7 @@ with data flows pre-prepared by Genestack.
    :width: 600px
    :height: 167px
    :target: https://genestack.com/wp-content/uploads/2015/12/public-experiments.png
-.. |Experiment\_Viewer| image:: https://genestack.com/wp-content/uploads/2015/08/Experiment_Viewer.png
+.. |Experiment_Viewer| image:: https://genestack.com/wp-content/uploads/2015/08/Experiment_Viewer.png
    :class: aligncenter wp-image-2971 size-full
    :width: 701px
    :height: 685px

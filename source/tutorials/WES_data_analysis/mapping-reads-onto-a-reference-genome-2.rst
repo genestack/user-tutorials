@@ -4,7 +4,7 @@ Mapping reads onto a reference genome
 After raw data QC and preprocessing, the next step is to map exome
 sequencing data to the reference genome with high efficiency and
 accuracy. Genestack supports two Unspliced mappers, one is based
-on \ `Bowtie2 <http://bowtie-bio.sourceforge.net/manual.shtml>`__,
+on  `Bowtie2 <http://bowtie-bio.sourceforge.net/manual.shtml>`__,
 another - on `BWA <http://bio-bwa.sourceforge.net/bwa.shtml>`__. We'll
 use the last one since it is fast and allows gapped alignments which are
 essential for accurate SNP and indels (insertion/deletions)
@@ -16,11 +16,11 @@ compare their `read
 coverage <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999244&action=viewFile>`__. Let's
 look for specific gene or region, for example, HBA1 and HBA2 genes
 encoding alpha-globin chains of hemoglobin. With WGS technology, you can
-see coverage in both protein-coding and non-coding sequences: |WES\_GB|
+see coverage in both protein-coding and non-coding sequences: |WES_GB|
 As for WES technology, you are interested only in exome. That's why, you
 see coverage for HBA1 and HBA2 coding regions and do not see it in
 non-coding ones. To compare read coverage between different enrichment
-platforms, you can build a coverage track: |WES\_coverage\_1| In most
+platforms, you can build a coverage track: |WES_coverage_1| In most
 cases you'll see a significant coverage for sample enriched by
 Nimblegen. Moreover, each platform targets particular exomic segments
 based on combinations of the
@@ -30,7 +30,7 @@ based on combinations of the
 That's why, you may expect difference in coverage for specific
 gene-coding regions. To further use mapped reads, go to the `Mapped
 reads for Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999176&action=viewFile&page=1>`__\  folder.
+(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999176&action=viewFile&page=1>`__  folder.
 
 **4. Targeted Sequencing Quality Control**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,7 +53,7 @@ app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-
 In this tutorial, we are looking at three exome enrichment platforms
 from Agilent, Nimblegen and Illumina and assessing their overall
 targeting efficiency by measuring base coverage over all targeted bases
-and on-target coverage for each platform: |WES\_target| A typical
+and on-target coverage for each platform: |WES_target| A typical
 target-enrichment WES experiment results in ~90% of target-bases covered
 at coverage ≥ 1x. This value tends to decrease as the coverage threshold
 increases. How fast this percentage decreases with the coverage
@@ -64,7 +64,7 @@ regions, with the Nimblegen platform giving the highest coverage: about
 87% at ≥ 50x. With Agilent, 91% of bases were covered at ≥ 2x, 86% at ≥
 10x and 66% at ≥ 50x. With Illumina TruSeq enrichment, 91% of bases were
 covered at ≥ 2x, 86% at ≥ 10x and only 50% at ≥ 50x. These results are
-very similar to the paper results: |WES\_paper\_target\_enrichment|
+very similar to the paper results: |WES_paper_target_enrichment|
 Regarding the overall percentage of reads mapped on the target, in a
 typical experiment one may expect ~70%. Looking at the plot, you see the
 highest 77% and 74% values for samples enriched by Nimblegen and Agilent
@@ -76,16 +76,16 @@ multiple times, making it the highest density platform of the
 three. Agilent baits reside immediately adjacent to one another across
 the target exon intervals. Illumina relies on paired-end reads to extend
 outside the bait sequences and fill in the gaps (*Clark M.J. et al,
-2011*): |WES\_diff\_annotations| Target annotations used in this
-tutorial can be found in Public Data, \ `Genome
+2011*): |WES_diff_annotations| Target annotations used in this
+tutorial can be found in Public Data,  `Genome
 annotations <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000048&action=viewFile>`__ folder
-or in \ `Target Annotations for Clark et al
+or in  `Target Annotations for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972510&action=viewFile>`__ tutorial
 folder, where we put them for your convenience. Besides the target
 enrichment statistics, you can assess the percentage of exome bases with
 coverage started from ≥ 2x and the overall proportion of reads mapped on
-exome: |WES\_exome| All targeted sequencing QC reports are
-collected in \ `Mapped reads enrichment reports for Clark et al
+exome: |WES_exome| All targeted sequencing QC reports are
+collected in  `Mapped reads enrichment reports for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972509&action=viewFile>`__ folder.
 
 **5. Quality control of mapped reads**
@@ -97,7 +97,7 @@ artifacts, etc. The detection of such aberrations is an important step
 because it allows you to drive an appropriate downstream analysis. You
 can “generate reports” for each mapping separately or just run `Mapped
 Reads Quality
-Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources>`__\ data
+Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources>`__ data
 flow for multiple samples and analyse the output reports in Multiple QC
 Report app:
 
@@ -117,62 +117,62 @@ Output report includes mapping statistics such as:
 
 The **Coverage by chromosome** plot shows a read coverage at each base
 on each chromosome and patch (if it's presented) defined by lines in
-different colours: |WES\_chr\_coverage| If your reads are paired, the
+different colours: |WES_chr_coverage| If your reads are paired, the
 application additionally calculates insert size statistics, such as
 median and mean insert sizes, median absolute deviation and standard
 deviation of insert size. The **Insert size distribution** plot shows
-the insert size length frequencies: |WES\_ins\_dist| All complete QC
-reports for mapped reads are stored in \ `Mapped reads QC reports for
+the insert size length frequencies: |WES_ins_dist| All complete QC
+reports for mapped reads are stored in  `Mapped reads QC reports for
 Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972891&action=viewFile>`__ folder.
 You can open all of them at once in `Multiple QC Report
 app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999242&action=viewFile>`__ to
 interactively analyse and compare mapping statistics between samples:
-|WES\_mult\_mapped\_reads\_1| Speaking of mapping results, for each
+|WES_mult_mapped_reads_1| Speaking of mapping results, for each
 sample, almost all of the reads is mapped properly and there is a small
 percentage of partially or improperly mapped reads.
 
-.. |WES\_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_GB-1024x468.png
+.. |WES_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_GB-1024x468.png
    :class: aligncenter wp-image-3853 size-large
    :width: 604px
    :height: 276px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_GB.png
-.. |WES\_coverage\_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1-1024x267.png
+.. |WES_coverage_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1-1024x267.png
    :class: aligncenter wp-image-3862 size-large
    :width: 604px
    :height: 157px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1.png
-.. |WES\_target| image:: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
+.. |WES_target| image:: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
    :class: aligncenter wp-image-3841
    :width: 600px
    :height: 245px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
-.. |WES\_paper\_target\_enrichment| image:: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
+.. |WES_paper_target_enrichment| image:: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
    :class: aligncenter wp-image-3859 size-full
    :width: 513px
    :height: 215px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
-.. |WES\_diff\_annotations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
+.. |WES_diff_annotations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
    :class: aligncenter size-full wp-image-3806
    :width: 434px
    :height: 203px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
-.. |WES\_exome| image:: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
+.. |WES_exome| image:: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
    :class: aligncenter wp-image-3846
    :width: 600px
    :height: 243px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
-.. |WES\_chr\_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
+.. |WES_chr_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
    :class: aligncenter wp-image-3847
    :width: 600px
    :height: 410px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
-.. |WES\_ins\_dist| image:: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
+.. |WES_ins_dist| image:: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
    :class: aligncenter wp-image-3848
    :width: 600px
    :height: 397px
    :target: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
-.. |WES\_mult\_mapped\_reads\_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_mult_mapped_reads_1.png
+.. |WES_mult_mapped_reads_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_mult_mapped_reads_1.png
    :class: aligncenter wp-image-3851
    :width: 600px
    :height: 365px

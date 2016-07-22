@@ -11,7 +11,7 @@ flow, and finally, discuss the results obtained in such analysis.
 **Setting up an exome sequencing experiment**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First off, let's choose exome sequencing data. You can \ `upload your
+First off, let's choose exome sequencing data. You can  `upload your
 own
 data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ using
 'Import' button or search through all `public
@@ -19,9 +19,9 @@ experiments <https://platform.genestack.org/endpoint/application/run/genestack/f
 we have on the platform. Our analysis will be based on data coming
 from `Clark et al.
 2011 <http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007499>`__. Let's
-find this experiment in the platform and open it \ `Experiment
+find this experiment in the platform and open it  `Experiment
 Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile>`__:
-|WES\_experiment\_viewer copy| The authors compared the performance of
+|WES_experiment_viewer copy| The authors compared the performance of
 three major commercial exome sequencing platforms: Agilent’s SureSelect
 Human All Exon 50Mb, Roche/Nimblegen’s SeqCap EZ Exome Library v2.0 and
 Illumina’s TruSeq Exome Enrichment; all applied to the same human blood
@@ -55,7 +55,7 @@ A typical data flow of WES analysis consists of the following steps:
 Let’s look at each step separately to get a better idea of what it
 really means.
 
-.. |WES\_experiment\_viewer copy| image:: https://genestack.com/wp-content/uploads/2016/01/WES_experiment_viewer-copy.png
+.. |WES_experiment_viewer copy| image:: https://genestack.com/wp-content/uploads/2016/01/WES_experiment_viewer-copy.png
    :class: aligncenter wp-image-4444
    :width: 600px
    :height: 456px

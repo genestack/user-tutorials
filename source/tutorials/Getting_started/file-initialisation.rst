@@ -9,16 +9,16 @@ download, indexing, computation. In practice it means that uninitialised
 files are cheap and quick to create, can be configured, used as inputs
 to applications to create other files, and then, later, computed all at
 once. Let’s look at an example. Go to the public experiment library and
-choose *“*\ *`Analysis of the intestinal microbiota of hybrid house mice
+choose *“* *`Analysis of the intestinal microbiota of hybrid house mice
 reveals evolutionary divergence in a vertebrate
 hologenome” <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF317032&action=viewFile&page=1>`__* 
 experiment by Wang et al. Select one of the raw sequencing reads file
 called "FS01", right click on it, and select “Preprocessing” and “Trim
 Low Quality Bases” app. This created a file “Trimmed FS01” that is not
-initialised yet. \ What is special about our system, is that you \ **do
+initialised yet.  What is special about our system, is that you  **do
 not** **have to** start initialisation! In fact, you can use this file
 as input to applications for creating other files. |trim low quality
-bases app|\ Notice that you can edit the initialisation parameters of
+bases app| Notice that you can edit the initialisation parameters of
 the new file. You can change them because the file is not yet
 initialised, i.e. the computation – in this case, trimming – has not yet
 been started. After initialisation has completed, these parameters are
@@ -26,7 +26,7 @@ fixed and are there to inform you about how the file was created. They
 can be used to identically reproduce your work. If you wanted to start
 initialisation of this newly created file, click on the name of the file
 and select "Start initialisation". |trim low quality bases start
-initialization|\ In this post we will show you how to use this file as
+initialization| In this post we will show you how to use this file as
 an input for a different application. The trimmed file can for example
 be mapped to a reference genome. In order to do this you should click on
 "add step" and select the Spliced Mapping application. Using the "edit
@@ -40,7 +40,7 @@ example create a genetic variations file by choosing the Variant Calling
 app in the "add step" option. In order to see `the entire data
 flow <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1016183&action=viewFile>`__
 we have just created, click on the name of the last created file, go to
-“manage” and “File provenance”. |file provenence|\ It will show
+“manage” and “File provenance”. |file provenence| It will show
 you processes that have been completed, and ones that need to be
 initialised. To initialise only one of the steps, click on a given cell,
 then on “Actions” and later select “Start initialization". To initialise
@@ -74,11 +74,19 @@ suggestions about what kinds of analyses a given file can be used in.
 Almost anywhere you see file names and accessions, e.g., File Manager or
 in other applications, you can click on them and a file context menu
 will show up. For example, clicking on a file containing raw sequenced
-reads displays a menu:\ |dropdown menu raw sequencing reads| You can
-view and edit file metadata via the \ **Edit Metainfo**, which appears
-under the \ **Manage** submenu. |edit metainfo2| You can open the
+reads displays a menu:
+
+|dropdown menu raw sequencing reads|
+
+ You can
+view and edit file metadata via the  **Edit Metainfo**, which appears
+under the  **Manage** submenu. |edit metainfo2| You can open the
 metainfo viewer on any file in the system by clicking on the eye icon.
-Here it is on a sequencing assay: |edit metainfo|
+Here it is on a sequencing assay:
+
+|edit metainfo|
+
+
 
 Folders
 ~~~~~~~
@@ -95,11 +103,11 @@ as if they were all part of one experiment.
 Experiments, Assays, and Assay Groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An \ **experiment** is a very special kind of folder. It contains only
+An  **experiment** is a very special kind of folder. It contains only
 assays, or files, which contain experimentally collected data. One can
 think of experiments as packages for experimental data. They are a handy
-container for data. \ **Assays** are a general category of file types,
-which store experimentally collected data. \ **Assay groups** are a way
+container for data.  **Assays** are a general category of file types,
+which store experimentally collected data.  **Assay groups** are a way
 to collect assays with common metadata into experimental subgroups,
 e.g., technical replicates, biological samples undergoing the same
 treatment, and so forth.

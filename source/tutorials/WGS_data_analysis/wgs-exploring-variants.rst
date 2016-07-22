@@ -10,7 +10,7 @@ analysis-ready mapped reads for both technical replicates with default
 parameters that always could be changed on the Variant Calling app page.
   In the picture below you can see source files (reference genome and
 both filtered mapped reads files) and default command line options.
-|VarCalling\_options| Track the progress of your tasks in Task Manager
+|VarCalling_options| Track the progress of your tasks in Task Manager
 and as soon as the computation is finished, explore the results of
 variant identification using the interactive applications such
 as Variant Explorer or Genome Browser. Let's click on the genetic
@@ -24,7 +24,7 @@ calling <https://platform.genestack.org/endpoint/application/run/genestack/genom
 performed for our tutorial. On the Genome Browser page you will see the
 reference track displaying annotated genes with their coordinates and
 variation track representing  genetic variants, their genomic position,
-average mapping quality and raw read depth. |GB\_variants| Zoom in to
+average mapping quality and raw read depth. |GB_variants| Zoom in to
 explore genetic variants in single-base resolution. For example, looking
 at the region 1:725878-725972 (95 bp) we can see several SNPs (red) and
 one deletion 5bp long (blue). |Screenshot 2016-01-14 13.50.17|
@@ -43,7 +43,7 @@ or frame shifts. The app page will give you more information about it.
 Remember, if you have some files uninitialized, you can run the
 analysis on the Effect Prediction page or Data Flow Runner page. |start
 init| Explore annotated variants in Genome Browser and Variant Explorer
-apps. Let's open generated\ ` report
+apps. Let's open generated ` report
 file <https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF973651&action=viewFile>`__ containing
 some information about identified variants from our tutorial
 folder. Right click on the genetic variants file name and go to "View
@@ -58,11 +58,15 @@ the paper, the authors identified 3,642,449 and 4,301,769 SNPs using
 Casava and GATK workflows, respectively. However in the downstream
 analysis they used 3,537,794 variants identified by both methods.
 |Screenshot 2016-03-14 12.24.19| *Insertion deletion length
-histogram *\ graphically demonstrates the distribution of length of all
+histogram * graphically demonstrates the distribution of length of all
 insertions and deletions. The discovered Indels ranged from -43 to 28 bp
 in length with the standard deviation of 5.256. Authors detected 713,640
 InDels (341,382 insertions and 372,258 deletions) ranging from −52 bp to
-34 bp in length.   |Indel length dostributions| Additionally, we
+34 bp in length.  
+
+|Indel length dostributions|
+
+ Additionally, we
 performed filtering by effect to find out InDel distribution throughout
 different genomic locations.  From identified InDels 258680 and 263835
 were in an intergenic and intronic region, respectively. We also found
@@ -93,12 +97,12 @@ deletions, frame shift mutations etc. Genetic variants can affect
 different genomic regions such as exons, intergenic regions, introns,
 untranslated regions, splice sites, upstream and downstream regions. As
 we can see from the report most changes in the Turkish individual genome
-are located in intronic regions  (63,351% of the total).\ |Effects by
+are located in intronic regions  (63,351% of the total). |Effects by
 type and region (table)| As we can see the vast majority of identified
 variations are associated with introns (climbed above 60%) and there is
 no mutations in splice sites. The changes in intergenic regions
 represent ~17% of the total, while changes in exons occur in
-approximately 2% of events.\ |Effects by region| The most frequent base
+approximately 2% of events. |Effects by region| The most frequent base
 changes is G to A with 651,754, followed by C to T (650,016), T to C
 (621,506) and A to G (620,959) base changes. |Base changes| The quality
 of SNP data could be characterised with transition/transvertion (Ts/Tv)
@@ -110,13 +114,13 @@ paper by Dogan et. al where they have identified 2,383,204 transitions,
 the report is the codon replacements table (we have posted a fragment of
 it below). Rows represent reference codons and columns represent changed
 codons. The most common codon change for our data is from GAC to GAT
-(876 events) resulting in a synonymous change.\ |Codon changes| The
+(876 events) resulting in a synonymous change. |Codon changes| The
 report also contains the amino acid changes table where reference amino
 acids are represented by rows and changed amino acids are represented by
 columns. For example, row 'A' and column 'E' show how many Ala have been
 replaced by Glu. The most common amino acid changes are Ala to Thr, 722
 times, followed by 693 changes from Ile to Val events, and 780 Val to
-Ile events.\ |AA chages|\ Apart from the mentioned statistics and plots,
+Ile events. |AA chages| Apart from the mentioned statistics and plots,
  report also contains allele frequency plots and information on the
 change rate per chromosome.
 
@@ -140,7 +144,7 @@ To prioritise found mutations open an annotated genetic variants file in
 the Variant Explorer: right-click on the resulting file name in the Data
 Flow Runner, Task Manager or File Browser and select Variant Explorer in
 the context menu. In total 4,361,389 variants were found. |Table
-Viewer|\ Let’s now use the filters to see how many of these are high
+Viewer| Let’s now use the filters to see how many of these are high
 impact variants. Set the filter "Impact" to "high". As we can see out of
 all the identified variants 1007 have a high impact. |Screenshot
 2016-04-24 14.05.22| Let’s now see how many of these are nonsense
@@ -167,7 +171,7 @@ Eland-Casava pipeline and The Genome Analysis Toolkit (GATK v2.2), while
 we used Variant Calling tool based on SAMtools and BCFtools.   Need to
 perform analysis of
 `WGBS <https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/>`__,
-`WES <https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/>`__\ or
+`WES <https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/>`__ or
 `RNA-Seq
 data <https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/>`__?
 Visit our website to check out more
@@ -175,12 +179,12 @@ Visit our website to check out more
 questions or suggestions, please leave them below or `email
 us <mailto:contact@genestack.com>`__.  
 
-.. |VarCalling\_options| image:: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
+.. |VarCalling_options| image:: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
    :class: alignleft wp-image-3958
    :width: 600px
    :height: 401px
    :target: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
-.. |GB\_variants| image:: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
+.. |GB_variants| image:: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
    :class: size-full wp-image-4070 aligncenter
    :width: 553px
    :height: 375px
