@@ -32,18 +32,6 @@ application”. When files will be complete, you can analyse  `variants
 in Genome
 Browser <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999281&action=viewFile>`__:
 
-.. raw:: html
-
-   <div class="page" title="Page 6">
-
-.. raw:: html
-
-   <div class="layoutArea">
-
-.. raw:: html
-
-   <div class="column">
-
 |WES_variants_GB| Genome Browser application allows you investigate
 the variants interactively: how many mutations are in this particular
 gene or region, review some information about detected variants such
@@ -53,18 +41,6 @@ can notice a large amount of both exome WES–specific and WGS-specific
 SNVs. We identified variants for each sample separately and put
 them in  `Variants for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1>`__  folder.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |WES_remove_duplicates| image:: images/WES_remove_duplicates.png
 .. |WES_variant_calling| image:: images/WES_variant_calling.png

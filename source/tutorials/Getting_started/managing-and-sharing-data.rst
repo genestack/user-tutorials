@@ -1,10 +1,6 @@
 Managing and sharing data
 -------------------------
 
-.. raw:: html
-
-   <div class="readoffline-embed">
-
 To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your e-mail address in the upper right corner
 and select "Manage groups" from the administration menu. |manage groups|
@@ -85,10 +81,6 @@ from the organisation being invited. Once the approvals are in, sharing
 is easy. So, you can easily collaborate across organisational
 (enterprise) boundaries, and appropriate administrative controls are in
 place.
-
-.. raw:: html
-
-   </div>
 
 .. |manage groups| image:: images/manage-groups.png
 .. |create new group| image:: images/create-new-group.png
