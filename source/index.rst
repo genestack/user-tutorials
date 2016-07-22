@@ -8,10 +8,9 @@ Table of Contents
 .. toctree::
    :maxdepth: 2
 
-   tutorials/DGE_analysis/counting-reads-mapped-to-annotated-features
+   tutorials/DGE_analysis/dge
    tutorials/DGE_analysis/differential-gene-expression-analysis
    tutorials/DGE_analysis/quality-control-and-preprocessing-of-raw-reads-3
-   tutorials/DGE_analysis/mapping-rna-seq-reads-onto-a-reference-genome
    tutorials/DGE_analysis/quality-control-of-mapped-reads-2
    tutorials/DGE_analysis/testing-differential-gene-expression-on-genestack-platform
    tutorials/WES_data_analysis/effect-annotation

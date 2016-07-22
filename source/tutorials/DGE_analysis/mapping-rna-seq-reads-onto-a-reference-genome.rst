@@ -24,8 +24,8 @@ indeed more expressed in the trisomic samples than in the euploid ones,
 which is consistent with the overall up-regulation of chr21 genes in
 individuals with Down syndrome.
 
-**Quality control of mapped reads**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quality control of mapped reads
+*******************************
 
 The optional step is to check how mapping went using Mapped Reads QC
 Report app. You can "generate reports" for each mapping separately or
