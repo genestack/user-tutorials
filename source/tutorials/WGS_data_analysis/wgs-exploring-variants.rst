@@ -179,22 +179,22 @@ Visit our website to check out more
 questions or suggestions, please leave them below or `email
 us <mailto:contact@genestack.com>`__.  
 
-.. |VarCalling_options| image:: https://genestack.com/wp-content/uploads/2015/11/VarCalling_options.png
-.. |GB_variants| image:: https://genestack.com/wp-content/uploads/2015/12/GB_variants.png
-.. |Screenshot 2016-01-14 13.50.17| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-23-11.14.46.png
-.. |Summary| image:: https://genestack.com/wp-content/uploads/2015/12/Summary.png
-.. |Screenshot 2016-03-14 12.24.19| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-12.24.19.png
-.. |Indel length dostributions| image:: https://genestack.com/wp-content/uploads/2015/12/Indel-length-dostributions.png
-.. |Quality| image:: https://genestack.com/wp-content/uploads/2015/11/Quality.png
-.. |coverage| image:: https://genestack.com/wp-content/uploads/2016/01/coverage-.png
-.. |Effects by impact| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-impact.png
-.. |Effects by type and region (table)| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-type-and-region-table.png
-.. |Effects by region| image:: https://genestack.com/wp-content/uploads/2015/11/Effects-by-region.png
-.. |Base changes| image:: https://genestack.com/wp-content/uploads/2015/11/Base-changes.png
-.. |Ts:Tv| image:: https://genestack.com/wp-content/uploads/2015/11/TsTv.png
-.. |Codon changes| image:: https://genestack.com/wp-content/uploads/2015/11/Codon-changes.png
-.. |AA chages| image:: https://genestack.com/wp-content/uploads/2015/11/AA-chages.png
-.. |Table Viewer| image:: https://genestack.com/wp-content/uploads/2015/12/Table-Viewer.png
-.. |Screenshot 2016-04-24 14.05.22| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.05.22.png
-.. |Screenshot 2016-04-24 14.10.20| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-24-14.10.20.png
-.. |Screenshot 2016-03-14 18.25.42| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-14-18.25.42-1024x154.png
+.. |VarCalling_options| image:: images/VarCalling_options.png
+.. |GB_variants| image:: images/GB_variants.png
+.. |Screenshot 2016-01-14 13.50.17| image:: images/Screenshot-2015-11-23-11.14.46.png
+.. |Summary| image:: images/Summary.png
+.. |Screenshot 2016-03-14 12.24.19| image:: images/Screenshot-2016-03-14-12.24.19.png
+.. |Indel length dostributions| image:: images/Indel-length-dostributions.png
+.. |Quality| image:: images/Quality.png
+.. |coverage| image:: images/coverage-.png
+.. |Effects by impact| image:: images/Effects-by-impact.png
+.. |Effects by type and region (table)| image:: images/Effects-by-type-and-region-table.png
+.. |Effects by region| image:: images/Effects-by-region.png
+.. |Base changes| image:: images/Base-changes.png
+.. |Ts:Tv| image:: images/TsTv.png
+.. |Codon changes| image:: images/Codon-changes.png
+.. |AA chages| image:: images/AA-chages.png
+.. |Table Viewer| image:: images/Table-Viewer.png
+.. |Screenshot 2016-04-24 14.05.22| image:: images/Screenshot-2016-04-24-14.05.22.png
+.. |Screenshot 2016-04-24 14.10.20| image:: images/Screenshot-2016-04-24-14.10.20.png
+.. |Screenshot 2016-03-14 18.25.42| image:: images/Screenshot-2016-03-14-18.25.42-1024x154.png

@@ -136,16 +136,16 @@ page... |Start initialization (DFR)| ...or open the resulting Genetic
 variants file in Variant Explorer, Genome Browser or Effect Prediction
 apps. |Screenshot 2015-12-25 13.46.50|    
 
-.. |Edit file list| image:: https://genestack.com/wp-content/uploads/2015/12/Edit-file-list.png
-.. |Screenshot 2015-12-24 15.42.34| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-24-15.42.34.png
-.. |Filter by qual score| image:: https://genestack.com/wp-content/uploads/2015/11/Filter-by-qual-score.png
-.. |Screenshot 2016-03-18 17.47.23| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-18-17.47.23.png
-.. |Screenshot 2016-03-18 17.44.03| image:: https://genestack.com/wp-content/uploads/2016/03/Screenshot-2016-03-18-17.44.03.png
-.. |Screenshot 2015-11-19 14.08.48| image:: https://genestack.com/wp-content/uploads/2015/11/Screenshot-2015-11-19-14.08.48.png
-.. |MR QC DFR| image:: https://genestack.com/wp-content/uploads/2015/12/MR-QC-DFR.png
-.. |Screenshot 2015-12-25 15.43.51| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-25-15.43.51.png
-.. |Mapped ReadsQC| image:: https://genestack.com/wp-content/uploads/2015/11/Mapped-ReadsQC.png
-.. |Screenshot 2016-04-17 16.55.26| image:: https://genestack.com/wp-content/uploads/2016/04/Screenshot-2016-04-17-16.55.26.png
-.. |Screenshot 2016-01-15 16.12.43| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-15-16.12.43.png
-.. |Start initialization (DFR)| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initialization-DFR1.png
-.. |Screenshot 2015-12-25 13.46.50| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-25-13.46.50.png
+.. |Edit file list| image:: images/Edit-file-list.png
+.. |Screenshot 2015-12-24 15.42.34| image:: images/Screenshot-2015-12-24-15.42.34.png
+.. |Filter by qual score| image:: images/Filter-by-qual-score.png
+.. |Screenshot 2016-03-18 17.47.23| image:: images/Screenshot-2016-03-18-17.47.23.png
+.. |Screenshot 2016-03-18 17.44.03| image:: images/Screenshot-2016-03-18-17.44.03.png
+.. |Screenshot 2015-11-19 14.08.48| image:: images/Screenshot-2015-11-19-14.08.48.png
+.. |MR QC DFR| image:: images/MR-QC-DFR.png
+.. |Screenshot 2015-12-25 15.43.51| image:: images/Screenshot-2015-12-25-15.43.51.png
+.. |Mapped ReadsQC| image:: images/Mapped-ReadsQC.png
+.. |Screenshot 2016-04-17 16.55.26| image:: images/Screenshot-2016-04-17-16.55.26.png
+.. |Screenshot 2016-01-15 16.12.43| image:: images/Screenshot-2016-01-15-16.12.43.png
+.. |Start initialization (DFR)| image:: images/Start-initialization-DFR1.png
+.. |Screenshot 2015-12-25 13.46.50| image:: images/Screenshot-2015-12-25-13.46.50.png

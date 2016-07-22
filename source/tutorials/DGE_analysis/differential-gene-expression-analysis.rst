@@ -52,8 +52,8 @@ options. If you have any questions and comments, please submit them
 below or email us at support@genestack.com .  Follow us on
 Twitter:  `@genestack <https://twitter.com/genestack>`__.
 
-.. |DGE_GO_filters| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_GO_filters.png
-.. |DGE_down_DGE_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_down_DGE_genes_GO_terms.png
-.. |DGE_down_paper| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_down_paper.png
-.. |DGE_up_regulated_genes_GO_terms| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_up_regulated_genes_GO_terms.png
-.. |DGE_up_paper| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_up_paper.png
+.. |DGE_GO_filters| image:: images/DGE_GO_filters.png
+.. |DGE_down_DGE_genes_GO_terms| image:: images/DGE_down_DGE_genes_GO_terms.png
+.. |DGE_down_paper| image:: images/DGE_down_paper.png
+.. |DGE_up_regulated_genes_GO_terms| image:: images/DGE_up_regulated_genes_GO_terms.png
+.. |DGE_up_paper| image:: images/DGE_up_paper.png

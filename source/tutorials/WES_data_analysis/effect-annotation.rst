@@ -293,22 +293,22 @@ us <http://support@genestack.com>`__.
 
    </div>
 
-.. |WES_change_rate_by_cromosome_| image:: https://genestack.com/wp-content/uploads/2015/11/WES_change_rate_by_cromosome_.png
-.. |WES_number_changes by_type_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_changes-by_type_1.png
-.. |WES_number_of_effects_by_impact_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_effects_by_impact_1.png
-.. |WES_number_of_affects_by_functional_class_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_number_of_affects_by_functional_class_1.png
-.. |WES_Number_of_variants_by_effect_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Number_of_variants_by_effect_1.png
-.. |WES_variations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_variations.png
-.. |WES_quality| image:: https://genestack.com/wp-content/uploads/2015/11/WES_quality.png
-.. |WES_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage.png
-.. |WES_insertions_and_deletions_length| image:: https://genestack.com/wp-content/uploads/2015/11/WES_insertions_and_deletions_length.png
-.. |WES_Indel_size_distribution| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Indel_size_distribution.png
-.. |WES_base_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_base_changes.png
-.. |WES_Ts_Tv| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Ts_Tv.png
-.. |WES_alleles_frequencies| image:: https://genestack.com/wp-content/uploads/2015/11/WES_alleles_frequencies.png
-.. |WES_codon_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_codon_changes.png
-.. |WES_amino_acid_changes| image:: https://genestack.com/wp-content/uploads/2015/11/WES_amino_acid_changes.png
-.. |WES_Changes_by_chromosome_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Changes_by_chromosome_1.png
-.. |WES_VE_1| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_1.png
-.. |WES_VE_2| image:: https://genestack.com/wp-content/uploads/2016/01/WES_VE_2.png
-.. |WES_filters_history| image:: https://genestack.com/wp-content/uploads/2015/11/WES_filters_history.png
+.. |WES_change_rate_by_cromosome_| image:: images/WES_change_rate_by_cromosome_.png
+.. |WES_number_changes by_type_1| image:: images/WES_number_changes-by_type_1.png
+.. |WES_number_of_effects_by_impact_1| image:: images/WES_number_of_effects_by_impact_1.png
+.. |WES_number_of_affects_by_functional_class_1| image:: images/WES_number_of_affects_by_functional_class_1.png
+.. |WES_Number_of_variants_by_effect_1| image:: images/WES_Number_of_variants_by_effect_1.png
+.. |WES_variations| image:: images/WES_variations.png
+.. |WES_quality| image:: images/WES_quality.png
+.. |WES_coverage| image:: images/WES_coverage.png
+.. |WES_insertions_and_deletions_length| image:: images/WES_insertions_and_deletions_length.png
+.. |WES_Indel_size_distribution| image:: images/WES_Indel_size_distribution.png
+.. |WES_base_changes| image:: images/WES_base_changes.png
+.. |WES_Ts_Tv| image:: images/WES_Ts_Tv.png
+.. |WES_alleles_frequencies| image:: images/WES_alleles_frequencies.png
+.. |WES_codon_changes| image:: images/WES_codon_changes.png
+.. |WES_amino_acid_changes| image:: images/WES_amino_acid_changes.png
+.. |WES_Changes_by_chromosome_1| image:: images/WES_Changes_by_chromosome_1.png
+.. |WES_VE_1| image:: images/WES_VE_1.png
+.. |WES_VE_2| image:: images/WES_VE_2.png
+.. |WES_filters_history| image:: images/WES_filters_history.png

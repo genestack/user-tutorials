@@ -61,8 +61,8 @@ user* button. |second user creation| You will need to set the user name,
 email and password. Users added this way are immediately confirmed, and
 can log in right away.  
 
-.. |sign up screen| image:: https://genestack.com/wp-content/uploads/2015/12/sign-up-screen.png
-.. |genestack welcome page| image:: https://genestack.com/wp-content/uploads/2016/01/genestack-welcome-page.png
-.. |user management| image:: https://genestack.com/wp-content/uploads/2015/12/user-management.png
-.. |first user on the platform| image:: https://genestack.com/wp-content/uploads/2015/12/first-user.png
-.. |second user creation| image:: https://genestack.com/wp-content/uploads/2015/12/second-user.png
+.. |sign up screen| image:: images/sign-up-screen.png
+.. |genestack welcome page| image:: images/genestack-welcome-page.png
+.. |user management| image:: images/user-management.png
+.. |first user on the platform| image:: images/first-user.png
+.. |second user creation| image:: images/second-user.png

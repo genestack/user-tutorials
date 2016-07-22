@@ -66,6 +66,6 @@ them in  `Variants for Clark et al
 
    </div>
 
-.. |WES_remove_duplicates| image:: https://genestack.com/wp-content/uploads/2016/01/WES_remove_duplicates.png
-.. |WES_variant_calling| image:: https://genestack.com/wp-content/uploads/2016/01/WES_variant_calling.png
-.. |WES_variants_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_variants_GB.png
+.. |WES_remove_duplicates| image:: images/WES_remove_duplicates.png
+.. |WES_variant_calling| image:: images/WES_variant_calling.png
+.. |WES_variants_GB| image:: images/WES_variants_GB.png

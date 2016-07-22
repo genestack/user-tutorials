@@ -63,9 +63,9 @@ the bottom of the page, you'll see an "`Add import
 template <https://platform.genestack.org/endpoint/application/run/genestack/metainfotemplateeditorapp?action=openInBrowser>`__"
 button. |import welcome pagea|
 
-.. |import file manager| image:: https://genestack.com/wp-content/uploads/2015/12/import-file-manager1.png
-.. |Zrzut ekranu 2015-11-03 o 11.32.40| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.32.40.png
-.. |Zrzut ekranu 2015-11-03 o 11.33.02| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.02.png
-.. |Zrzut ekranu 2015-11-03 o 11.33.53| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.33.53.png
-.. |Zrzut ekranu 2015-11-03 o 11.34.14| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-11.34.14.png
-.. |import welcome pagea| image:: https://genestack.com/wp-content/uploads/2015/12/import-welcome-page1.png
+.. |import file manager| image:: images/import-file-manager1.png
+.. |Zrzut ekranu 2015-11-03 o 11.32.40| image:: images/Zrzut-ekranu-2015-11-03-o-11.32.40.png
+.. |Zrzut ekranu 2015-11-03 o 11.33.02| image:: images/Zrzut-ekranu-2015-11-03-o-11.33.02.png
+.. |Zrzut ekranu 2015-11-03 o 11.33.53| image:: images/Zrzut-ekranu-2015-11-03-o-11.33.53.png
+.. |Zrzut ekranu 2015-11-03 o 11.34.14| image:: images/Zrzut-ekranu-2015-11-03-o-11.34.14.png
+.. |import welcome pagea| image:: images/import-welcome-page1.png

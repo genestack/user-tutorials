@@ -98,17 +98,17 @@ Let's run "Trim Adaptors and Contaminants" step:
 stored in `Trimmed raw reads for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF971384&action=viewFile&page=1>`__  folder.
 
-.. |WES_FastQC_report| image:: https://genestack.com/wp-content/uploads/2016/01/WES_FastQC_report1.png
-.. |WES_per_sequnce_GC_content| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequnce_GC_content.png
-.. |WES_per_base_sequence_quality| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_quality.png
-.. |WES_per_sequence_quality_scores| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_sequence_quality_scores.png
-.. |WES_per_base_sequence_content| image:: https://genestack.com/wp-content/uploads/2015/09/WES_per_base_sequence_content.png
-.. |WES_sequence_duplication_levels| image:: https://genestack.com/wp-content/uploads/2015/09/WES_sequence_duplication_levels.png
-.. |WES_Multiple_Raw| image:: https://genestack.com/wp-content/uploads/2015/11/WES_Multiple_Raw.png
-.. |WES_preprocess_apps| image:: https://genestack.com/wp-content/uploads/2016/01/WES_preprocess_apps.png
-.. |WES_data_flow_| image:: https://genestack.com/wp-content/uploads/2016/01/WES_data_flow_.png
-.. |WES_create_df| image:: https://genestack.com/wp-content/uploads/2016/01/WES_create_df.png
-.. |WES_run_dataflow| image:: https://genestack.com/wp-content/uploads/2016/01/WES_run_dataflow.png
-.. |WES_start_initialization copy| image:: https://genestack.com/wp-content/uploads/2016/01/WES_start_initialization-copy.png
-.. |WES_view_apps| image:: https://genestack.com/wp-content/uploads/2016/01/WES_view_apps.png
-.. |WES_start_preprocess| image:: https://genestack.com/wp-content/uploads/2016/01/WES_start_preprocess.png
+.. |WES_FastQC_report| image:: images/WES_FastQC_report1.png
+.. |WES_per_sequnce_GC_content| image:: images/WES_per_sequnce_GC_content.png
+.. |WES_per_base_sequence_quality| image:: images/WES_per_base_sequence_quality.png
+.. |WES_per_sequence_quality_scores| image:: images/WES_per_sequence_quality_scores.png
+.. |WES_per_base_sequence_content| image:: images/WES_per_base_sequence_content.png
+.. |WES_sequence_duplication_levels| image:: images/WES_sequence_duplication_levels.png
+.. |WES_Multiple_Raw| image:: images/WES_Multiple_Raw.png
+.. |WES_preprocess_apps| image:: images/WES_preprocess_apps.png
+.. |WES_data_flow_| image:: images/WES_data_flow_.png
+.. |WES_create_df| image:: images/WES_create_df.png
+.. |WES_run_dataflow| image:: images/WES_run_dataflow.png
+.. |WES_start_initialization copy| image:: images/WES_start_initialization-copy.png
+.. |WES_view_apps| image:: images/WES_view_apps.png
+.. |WES_start_preprocess| image:: images/WES_start_preprocess.png

@@ -47,6 +47,6 @@ opening the `Merged mapped reads for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile>`__ folder.
  
 
-.. |df bisulfte seq mapping| image:: https://genestack.com/wp-content/uploads/2015/12/df-bisulfte-seq-mapping-.png
-.. |BSMAP| image:: https://genestack.com/wp-content/uploads/2015/11/BSMAP.png
-.. |df merge mapped reads| image:: https://genestack.com/wp-content/uploads/2015/12/df-merge-mapped-reads.png
+.. |df bisulfte seq mapping| image:: images/df-bisulfte-seq-mapping-.png
+.. |BSMAP| image:: images/BSMAP.png
+.. |df merge mapped reads| image:: images/df-merge-mapped-reads.png

@@ -130,13 +130,13 @@ the appropriate preprocessing steps, it is time to create the pipeline
 for genetic variants analysis of WGS data from the raw data
 preprocessing to the genetic variants annotation and filtering.
 
-.. |DF list| image:: https://genestack.com/wp-content/uploads/2015/11/DF-list.png
-.. |FastQCReport_DF| image:: https://genestack.com/wp-content/uploads/2015/12/FastQCReport_DF.png
-.. |Start initializ_DF| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initializ_DF.png
-.. |Start init (FastQC)| image:: https://genestack.com/wp-content/uploads/2015/12/Start-init-FastQC.png
-.. |Multiple QC| image:: https://genestack.com/wp-content/uploads/2015/12/Multiple-QC.png
-.. |TaskManager| image:: https://genestack.com/wp-content/uploads/2015/12/TaskManager.png
-.. |Screenshot 2016-02-19 20.53.39| image:: https://genestack.com/wp-content/uploads/2016/02/Screenshot-2016-02-19-20.53.39.png
-.. |Screenshot 2016-02-19 20.48.12| image:: https://genestack.com/wp-content/uploads/2016/02/Screenshot-2016-02-19-20.48.12.png
-.. |Per base sequence content (Run1)| image:: https://genestack.com/wp-content/uploads/2015/11/Per-base-sequence-content-Run1.png
-.. |Seq duplication run1| image:: https://genestack.com/wp-content/uploads/2015/11/Seq-duplication-run1.png
+.. |DF list| image:: images/DF-list.png
+.. |FastQCReport_DF| image:: images/FastQCReport_DF.png
+.. |Start initializ_DF| image:: images/Start-initializ_DF.png
+.. |Start init (FastQC)| image:: images/Start-init-FastQC.png
+.. |Multiple QC| image:: images/Multiple-QC.png
+.. |TaskManager| image:: images/TaskManager.png
+.. |Screenshot 2016-02-19 20.53.39| image:: images/Screenshot-2016-02-19-20.53.39.png
+.. |Screenshot 2016-02-19 20.48.12| image:: images/Screenshot-2016-02-19-20.48.12.png
+.. |Per base sequence content (Run1)| image:: images/Per-base-sequence-content-Run1.png
+.. |Seq duplication run1| image:: images/Seq-duplication-run1.png

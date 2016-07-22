@@ -112,12 +112,12 @@ to collect assays with common metadata into experimental subgroups,
 e.g., technical replicates, biological samples undergoing the same
 treatment, and so forth.
 
-.. |trim low quality bases app| image:: https://genestack.com/wp-content/uploads/2015/12/trim-low-quality-bases-app.png
-.. |trim low quality bases start initialization| image:: https://genestack.com/wp-content/uploads/2015/12/spliced-mapping-mouse.png
-.. |file provenence| image:: https://genestack.com/wp-content/uploads/2015/12/file-provenence.png
-.. |file provenance| image:: https://genestack.com/wp-content/uploads/2015/12/file-provenance.png
-.. |running an app on multiple files| image:: https://genestack.com/wp-content/uploads/2016/01/running-an-app-on-multiple-files.png
-.. |app page 100 files| image:: https://genestack.com/wp-content/uploads/2016/01/app-page-100-files.png
-.. |dropdown menu raw sequencing reads| image:: https://genestack.com/wp-content/uploads/2015/12/dropdown-menu.png
-.. |edit metainfo2| image:: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo2.png
-.. |edit metainfo| image:: https://genestack.com/wp-content/uploads/2015/12/edit-metainfo.png
+.. |trim low quality bases app| image:: images/trim-low-quality-bases-app.png
+.. |trim low quality bases start initialization| image:: images/spliced-mapping-mouse.png
+.. |file provenence| image:: images/file-provenence.png
+.. |file provenance| image:: images/file-provenance.png
+.. |running an app on multiple files| image:: images/running-an-app-on-multiple-files.png
+.. |app page 100 files| image:: images/app-page-100-files.png
+.. |dropdown menu raw sequencing reads| image:: images/dropdown-menu.png
+.. |edit metainfo2| image:: images/edit-metainfo2.png
+.. |edit metainfo| image:: images/edit-metainfo.png

@@ -132,12 +132,12 @@ interactively analyse and compare mapping statistics between samples:
 sample, almost all of the reads is mapped properly and there is a small
 percentage of partially or improperly mapped reads.
 
-.. |WES_GB| image:: https://genestack.com/wp-content/uploads/2015/11/WES_GB.png
-.. |WES_coverage_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_coverage_1.png
-.. |WES_target| image:: https://genestack.com/wp-content/uploads/2015/11/WES_target.png
-.. |WES_paper_target_enrichment| image:: https://genestack.com/wp-content/uploads/2015/11/WES_paper_target_enrichment.png
-.. |WES_diff_annotations| image:: https://genestack.com/wp-content/uploads/2015/11/WES_diff_annotations.png
-.. |WES_exome| image:: https://genestack.com/wp-content/uploads/2015/11/WES_exome.png
-.. |WES_chr_coverage| image:: https://genestack.com/wp-content/uploads/2015/11/WES_chr_coverage.png
-.. |WES_ins_dist| image:: https://genestack.com/wp-content/uploads/2015/11/WES_ins_dist.png
-.. |WES_mult_mapped_reads_1| image:: https://genestack.com/wp-content/uploads/2015/11/WES_mult_mapped_reads_1.png
+.. |WES_GB| image:: images/WES_GB.png
+.. |WES_coverage_1| image:: images/WES_coverage_1.png
+.. |WES_target| image:: images/WES_target.png
+.. |WES_paper_target_enrichment| image:: images/WES_paper_target_enrichment.png
+.. |WES_diff_annotations| image:: images/WES_diff_annotations.png
+.. |WES_exome| image:: images/WES_exome.png
+.. |WES_chr_coverage| image:: images/WES_chr_coverage.png
+.. |WES_ins_dist| image:: images/WES_ins_dist.png
+.. |WES_mult_mapped_reads_1| image:: images/WES_mult_mapped_reads_1.png

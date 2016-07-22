@@ -150,19 +150,19 @@ for Rodriguez et al.,
 low quality bases for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile>`__.
 
-.. |choose DF| image:: https://genestack.com/wp-content/uploads/2015/11/choose-DF.png
-.. |DF_FastQC| image:: https://genestack.com/wp-content/uploads/2015/12/DF_FastQC.png
-.. |Start initialization| image:: https://genestack.com/wp-content/uploads/2015/12/Start-initialization.png
-.. |View Resuts| image:: https://genestack.com/wp-content/uploads/2015/12/View-Resuts.png
-.. |FastQC_3| image:: https://genestack.com/wp-content/uploads/2015/08/FastQC_3.png
-.. |Multiple QC plot for RawReads| image:: https://genestack.com/wp-content/uploads/2015/09/Multiple-QC-plot-for-RawReads.png
-.. |Per sequence GC content| image:: https://genestack.com/wp-content/uploads/2015/12/Per-sequence-GC-content1.png
-.. |per base sequence quality| image:: https://genestack.com/wp-content/uploads/2015/12/per-base-sequence-quality-1.png
-.. |fastqc per sequence quality scores| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-sequence-quality-scores.png
-.. |fastqc per base seq content| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-per-base-seq-content.png
-.. |fastqc sequence duplication levels| image:: https://genestack.com/wp-content/uploads/2015/12/fastqc-sequence-duplication-levels.png
-.. |FastQC (overrepresented sequences)| image:: https://genestack.com/wp-content/uploads/2015/08/FastQC-overrepresented-sequences.png
-.. |DF_WGBS| image:: https://genestack.com/wp-content/uploads/2015/12/DF_WGBS2.png
-.. |File chooser (ref-genome)| image:: https://genestack.com/wp-content/uploads/2015/11/File-chooser-ref-genome.png
-.. |DF trim adaptors and contaminants| image:: https://genestack.com/wp-content/uploads/2015/12/DF-trim-adaptors-and-contaminants.png
-.. |df trim low quality bases| image:: https://genestack.com/wp-content/uploads/2015/12/df-trim-low-quality-bases.png
+.. |choose DF| image:: images/choose-DF.png
+.. |DF_FastQC| image:: images/DF_FastQC.png
+.. |Start initialization| image:: images/Start-initialization.png
+.. |View Resuts| image:: images/View-Resuts.png
+.. |FastQC_3| image:: images/FastQC_3.png
+.. |Multiple QC plot for RawReads| image:: images/Multiple-QC-plot-for-RawReads.png
+.. |Per sequence GC content| image:: images/Per-sequence-GC-content1.png
+.. |per base sequence quality| image:: images/per-base-sequence-quality-1.png
+.. |fastqc per sequence quality scores| image:: images/fastqc-per-sequence-quality-scores.png
+.. |fastqc per base seq content| image:: images/fastqc-per-base-seq-content.png
+.. |fastqc sequence duplication levels| image:: images/fastqc-sequence-duplication-levels.png
+.. |FastQC (overrepresented sequences)| image:: images/FastQC-overrepresented-sequences.png
+.. |DF_WGBS| image:: images/DF_WGBS2.png
+.. |File chooser (ref-genome)| image:: images/File-chooser-ref-genome.png
+.. |DF trim adaptors and contaminants| image:: images/DF-trim-adaptors-and-contaminants.png
+.. |df trim low quality bases| image:: images/df-trim-low-quality-bases.png

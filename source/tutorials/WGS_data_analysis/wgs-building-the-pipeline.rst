@@ -82,15 +82,15 @@ analysis <https://platform.genestack.org/endpoint/application/run/genestack/data
 can find in our tutorial folder.   Now let's talk about each of the
 analysis steps we included in the pipeline in greater detail.
 
-.. |Trim adaptors and contaminants| image:: https://genestack.com/wp-content/uploads/2015/12/Trim-adaptors-and-contaminants.png
-.. |Trim A & C (2)| image:: https://genestack.com/wp-content/uploads/2015/12/Trim-A-C-2.png
-.. |Screenshot 2016-01-10 22.33.45| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-10-22.33.45.png
-.. |Add step| image:: https://genestack.com/wp-content/uploads/2015/12/Add-step.png
-.. |Data Flow on the CLA page| image:: https://genestack.com/wp-content/uploads/2015/12/Data-Flow-on-the-CLA-page.png
-.. |Create new data flow| image:: https://genestack.com/wp-content/uploads/2015/12/Create-new-data-flow.png
-.. |Screenshot 2016-01-11 12.34.09| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.34.09.png
-.. |Screenshot 2016-01-11 12.49.07| image:: https://genestack.com/wp-content/uploads/2016/01/Screenshot-2016-01-11-12.55.56-e1452507717712.png
-.. |Screenshot 2015-12-23 18.32.32| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-23-18.32.32.png
-.. |Screenshot 2015-12-24 15.28.14| image:: https://genestack.com/wp-content/uploads/2015/12/Screenshot-2015-12-24-15.28.14.png
-.. |Edit File List BWA| image:: https://genestack.com/wp-content/uploads/2016/01/Edit-File-List-BWA.png
-.. |Start initial| image:: https://genestack.com/wp-content/uploads/2015/11/Start-initial.png
+.. |Trim adaptors and contaminants| image:: images/Trim-adaptors-and-contaminants.png
+.. |Trim A & C (2)| image:: images/Trim-A-C-2.png
+.. |Screenshot 2016-01-10 22.33.45| image:: images/Screenshot-2016-01-10-22.33.45.png
+.. |Add step| image:: images/Add-step.png
+.. |Data Flow on the CLA page| image:: images/Data-Flow-on-the-CLA-page.png
+.. |Create new data flow| image:: images/Create-new-data-flow.png
+.. |Screenshot 2016-01-11 12.34.09| image:: images/Screenshot-2016-01-11-12.34.09.png
+.. |Screenshot 2016-01-11 12.49.07| image:: images/Screenshot-2016-01-11-12.55.56-e1452507717712.png
+.. |Screenshot 2015-12-23 18.32.32| image:: images/Screenshot-2015-12-23-18.32.32.png
+.. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png
+.. |Edit File List BWA| image:: images/Edit-File-List-BWA.png
+.. |Start initial| image:: images/Start-initial.png

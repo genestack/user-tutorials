@@ -67,10 +67,10 @@ metainfo values. Read more what the app does in our blog post about
 sequencing quality control
 reports <https://genestack.com/blog/2014/12/10/interactive-sequencing-quality-control-reports/>`__ .
 
-.. |DGE_spl_mapping| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_spl_mapping.png
-.. |DGE_spl_map| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_spl_map.png
-.. |DGE_coverage_21| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_coverage_21.png
-.. |DGE_GB_combined_track| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_GB_combined_track.png
-.. |Coverage_by_chromosome| image:: https://genestack.com/wp-content/uploads/2015/07/Coverage_by_chromosome.png
-.. |Insert_size_distribution| image:: https://genestack.com/wp-content/uploads/2015/07/Insert_size_distribution.png
-.. |DGE_multiple_qc_plotter| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_multiple_qc_plotter.png
+.. |DGE_spl_mapping| image:: images/DGE_spl_mapping.png
+.. |DGE_spl_map| image:: images/DGE_spl_map.png
+.. |DGE_coverage_21| image:: images/DGE_coverage_21.png
+.. |DGE_GB_combined_track| image:: images/DGE_GB_combined_track.png
+.. |Coverage_by_chromosome| image:: images/Coverage_by_chromosome.png
+.. |Insert_size_distribution| image:: images/Insert_size_distribution.png
+.. |DGE_multiple_qc_plotter| image:: images/DGE_multiple_qc_plotter.png

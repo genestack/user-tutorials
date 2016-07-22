@@ -63,11 +63,11 @@ Contaminants app: |DGE_trim_ad| All resulting files are collected
 in  `Trimmed raw reads for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967714&action=viewFile>`__ folder.
 
-.. |DGE_per_seq_GC_cont| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_per_seq_GC_cont.png
-.. |DGE_per_base_s| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_per_base_s.png
-.. |DGE_per_seq_quality_sco| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_per_seq_quality_sco.png
-.. |DGE_per_base_seq_cont| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_per_base_seq_cont.png
-.. |DGE_seq_dupl_lev| image:: https://genestack.com/wp-content/uploads/2015/08/DGE_seq_dupl_lev.png
-.. |DGE_data_flow_first_step| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_data_flow_first_step.png
-.. |DGE_preprocess_apps| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_preprocess_apps.png
-.. |DGE_trim_ad| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_trim_ad.png
+.. |DGE_per_seq_GC_cont| image:: images/DGE_per_seq_GC_cont.png
+.. |DGE_per_base_s| image:: images/DGE_per_base_s.png
+.. |DGE_per_seq_quality_sco| image:: images/DGE_per_seq_quality_sco.png
+.. |DGE_per_base_seq_cont| image:: images/DGE_per_base_seq_cont.png
+.. |DGE_seq_dupl_lev| image:: images/DGE_seq_dupl_lev.png
+.. |DGE_data_flow_first_step| image:: images/DGE_data_flow_first_step.png
+.. |DGE_preprocess_apps| image:: images/DGE_preprocess_apps.png
+.. |DGE_trim_ad| image:: images/DGE_trim_ad.png

@@ -35,8 +35,8 @@ post them on our `forum <http://forum.genestack.org/>`__ and we will
 answer them as soon as we can. Alternatively, you can `e-mail
 us <mailto:info@genestack.com>`__. Genestack team  
 
-.. |create new data flow| image:: https://genestack.com/wp-content/uploads/2015/12/create-new-data-flow1.png
-.. |run data flow| image:: https://genestack.com/wp-content/uploads/2015/12/run-data-flow.png
-.. |choose another file| image:: https://genestack.com/wp-content/uploads/2015/12/choose-another-file.png
-.. |delay initialization until later| image:: https://genestack.com/wp-content/uploads/2015/12/delay-initialization-until-later1.png
-.. |Zrzut ekranu 2015-11-03 o 13.16.22| image:: https://genestack.com/wp-content/uploads/2014/09/Zrzut-ekranu-2015-11-03-o-13.16.22.png
+.. |create new data flow| image:: images/create-new-data-flow1.png
+.. |run data flow| image:: images/run-data-flow.png
+.. |choose another file| image:: images/choose-another-file.png
+.. |delay initialization until later| image:: images/delay-initialization-until-later1.png
+.. |Zrzut ekranu 2015-11-03 o 13.16.22| image:: images/Zrzut-ekranu-2015-11-03-o-13.16.22.png

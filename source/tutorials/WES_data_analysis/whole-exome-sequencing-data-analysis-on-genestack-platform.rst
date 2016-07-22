@@ -58,4 +58,4 @@ A typical data flow of WES analysis consists of the following steps:
 Let’s look at each step separately to get a better idea of what it
 really means.
 
-.. |WES_experiment_viewer copy| image:: https://genestack.com/wp-content/uploads/2016/01/WES_experiment_viewer-copy.png
+.. |WES_experiment_viewer copy| image:: images/WES_experiment_viewer-copy.png

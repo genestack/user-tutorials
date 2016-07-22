@@ -68,11 +68,11 @@ knockout mouse HSCs. And it was revealed that the loss of DNA Dnmt3a can
 influence the Canyon size. Now let's start reproducing these results
 with data flows pre-prepared by Genestack.
 
-.. |Watch all videos here| image:: https://genestack.com/wp-content/uploads/2015/10/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
+.. |Watch all videos here| image:: images/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
    :class: aligncenter wp-image-3563 size-large
    :width: 604px
    :height: 64px
    :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3ZfhBit9j2sTwTRiLvkJ6T
-.. |DNA_methylation| image:: https://genestack.com/wp-content/uploads/2015/09/DNA_methylation.jpg
-.. |public experiments| image:: https://genestack.com/wp-content/uploads/2015/12/public-experiments.png
-.. |Experiment_Viewer| image:: https://genestack.com/wp-content/uploads/2015/08/Experiment_Viewer.png
+.. |DNA_methylation| image:: images/DNA_methylation.jpg
+.. |public experiments| image:: images/public-experiments.png
+.. |Experiment_Viewer| image:: images/Experiment_Viewer.png

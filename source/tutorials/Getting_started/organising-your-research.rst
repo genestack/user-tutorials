@@ -58,6 +58,6 @@ fields are filled in by our curators, some are available for you to edit
 via different applications in Genestack Platform, and some are computed
 when files are initialised.  
 
-.. |file manager| image:: https://genestack.com/wp-content/uploads/2015/12/file-manager.png
-.. |reference genomes| image:: https://genestack.com/wp-content/uploads/2015/12/reference-genomes.png
-.. |metainfo reference genome| image:: https://genestack.com/wp-content/uploads/2015/12/metainfo-reference-genome.png
+.. |file manager| image:: images/file-manager.png
+.. |reference genomes| image:: images/reference-genomes.png
+.. |metainfo reference genome| image:: images/metainfo-reference-genome.png

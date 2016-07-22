@@ -60,5 +60,5 @@ flow. But before let's check the quality of raw reads to decide whether
 we should improve it or not.
 
 .. |Zrzut ekranu 2015-10-21 o 16.01.36| image:: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3uoajkhcNsnjSfflkjh5sq
-.. |DGE_file_manager_red_arrow| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_file_manager_red_arrow.png
-.. |DGE_metainfo| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_metainfo.png
+.. |DGE_file_manager_red_arrow| image:: images/DGE_file_manager_red_arrow.png
+.. |DGE_metainfo| image:: images/DGE_metainfo.png

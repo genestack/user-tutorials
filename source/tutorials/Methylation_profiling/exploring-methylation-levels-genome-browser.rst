@@ -49,6 +49,6 @@ with Genestack! Later you can return back to the tutorial if necessary.
 If you have any questions, suggestions etc, please leave them in
 comments below or `email us <mailto:info@genestack.com>`__.
 
-.. |Genome Browser (Pax6; only WTs)| image:: https://genestack.com/wp-content/uploads/2015/08/GB-Pax6-only-WTs.png
-.. |Pax6-paper| image:: https://genestack.com/wp-content/uploads/2015/08/GB-WT-vs-KO.png
-.. |Hox-paper2| image:: https://genestack.com/wp-content/uploads/2015/08/Hox-paper2.png
+.. |Genome Browser (Pax6; only WTs)| image:: images/GB-Pax6-only-WTs.png
+.. |Pax6-paper| image:: images/GB-WT-vs-KO.png
+.. |Hox-paper2| image:: images/Hox-paper2.png
