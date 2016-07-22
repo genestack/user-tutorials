@@ -66,12 +66,12 @@ If you move cursor to the top right corner of the graph, 3 icons will appear:
    graph and change its appearance by modifying the parameters on display when
    you right-click the graph area.
 
-.. |DGE_DGE| image:: https://genestack.com/wp-content/uploads/2015/07/DGE_DGE.png
+.. |DGE_DGE| image:: images/DGE_DGE.png
 
-.. |DGE_DGE_table| image:: https://genestack.com/wp-content/uploads/2015/09/DGE_DGE_table.png
+.. |DGE_DGE_table| image:: images/DGE_DGE_table.png
 
-.. |Filters| image:: https://genestack.com/wp-content/uploads/2015/07/Filters.png
+.. |Filters| image:: images/Filters.png
 
-.. |zinc_finger| image:: https://genestack.com/wp-content/uploads/2015/07/zinc_finger.png
+.. |zinc_finger| image:: images/zinc_finger.png
 
-.. |zinc_DGE_plot| image:: https://genestack.com/wp-content/uploads/2015/07/zinc_DGE_plot.png
+.. |zinc_DGE_plot| image:: images/zinc_DGE_plot.png
