@@ -1,3 +1,6 @@
+WGS QC raw reads
+****************
+
 Poorly identified bases, low-quality sequences and contaminants (such as
 adaptors) in the raw sequencing data can affect downstream analysis
 leading to erroneous results and conclusions. Before starting the WGS

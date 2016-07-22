@@ -38,8 +38,7 @@ take, to also add them to the group folder:
 
 |link shared files|
 
- If you
-choose to link the shared files, then all group members will see the
+If you choose to link the shared files, then all group members will see the
 files you shared at the top level of the group folder. If you choose not
 to link them into the group folder, do not worry – the files are still
 shared. This means that users will see them in search results, they will
@@ -48,6 +47,7 @@ applications. You can always add shared files to group folders later. If
 you add a file to a group folder, e.g., by drag-and-dropping it in File
 Manager, the platform will try to detect this and ask you if you want to
 share it first.
+
 .. rubric:: Sharing with Other Organisations
    :name: sharing-with-other-organisations
 
@@ -130,16 +130,16 @@ place.
    :width: 422px
    :height: 304px
    :target: https://genestack.com/wp-content/uploads/2015/12/link-shared-files.png
-.. |manage-groups-invite| image:: /wp-content/uploads/2014/03/manage-groups-invite.png
+.. |manage-groups-invite| image:: https://genestack.com/wp-content/uploads/2014/03/manage-groups-invite.png
    :class: aligncenter
    :width: 450px
    :height: 211px
    :target: /wp-content/uploads/2014/03/manage-groups-invite.png
-.. |incoming-invitation| image:: /wp-content/uploads/2014/03/incoming-invitation.png
+.. |incoming-invitation| image:: https://genestack.com/wp-content/uploads/2014/03/incoming-invitation.png
    :class: aligncenter
    :width: 450px
    :target: /wp-content/uploads/2014/03/incoming-invitation.png
-.. |cross-org-group| image:: /wp-content/uploads/2014/03/cross-org-group.png
+.. |cross-org-group| image:: https://genestack.com/wp-content/uploads/2014/03/cross-org-group.png
    :class: aligncenter
    :width: 450px
-   :target: /wp-content/uploads/2014/03/cross-org-group.png
+   :target: https://genestack.com/wp-content/uploads/2014/03/cross-org-group.png

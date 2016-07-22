@@ -7,7 +7,7 @@ in raw reads quality control check but some issues,  such as low
 coverage, homopolymer biases, experimental artifacts, only appears after
 alignment.
 
-**** Sequencing coverage is an important quality metric, as biases in
+**Sequencing** coverage is an important quality metric, as biases in
 sample preparation, sequencing and read mapping can result in genome
 regions that lack coverage or in regions with much higher coverage than
 theoretically expected. You could explore the coverage for merged mapped
@@ -27,8 +27,7 @@ and high enough coverage. Our last three samples are very good for the
 further processing. At the same time, the coverage for the first
 sample— biological replicate 2 of 12 HSCs — is uneven — with gaps and
 regions with coverage up to x133. That is why, such results may generate
-biases during methylation ratios calculation. |GB coverage (v2)
-Sequencing coverage | You can explore mapping quality for each
+biases during methylation ratios calculation. |GB coverage (v2) Sequencing coverage| You can explore mapping quality for each
 individual file: right click merged reads file name, go to “explore” and
 select “Mapped reads QC report”. On the opened app page you should
 click “generate reports” to start calculation of quality control
@@ -65,7 +64,7 @@ and "`Merged Mapped Reads QC for Rodriguez et al.,
    :width: 542px
    :height: 246px
    :target: https://genestack.com/wp-content/uploads/2015/11/GB_search-by-gene.png
-.. |GB coverage (v2) Sequencing coverage | image:: https://genestack.com/wp-content/uploads/2015/08/GB-coverage-v2.png
+.. |GB coverage (v2) Sequencing coverage| image:: https://genestack.com/wp-content/uploads/2015/08/GB-coverage-v2.png
    :class: aligncenter wp-image-2986
    :width: 650px
    :height: 607px

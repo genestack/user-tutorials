@@ -16,7 +16,7 @@ region with author’s results:
 
 |Pax6-paper|
 
- As DNMT3a is often mutated in
+As DNMT3a is often mutated in
 human leukemias, authors also examined the impact of loss of Dnmt3a on
 the Canyon size. For this they compared low-methylated regions in HSCs
 conditionally inactivated for Dnmt3a to WT HSCs: |Genome Browser (WT vs
@@ -35,7 +35,7 @@ results:**
 
 |Hox-paper2|
 
- This experiment is a part of the large research
+This experiment is a part of the large research
 of changes in DNA methylation profile including different methodologies
 such as, for example, whole genome bisulfite sequencing and CMS-seq to
 reveal genome-wide distribution of mCs and hmCs, RNA-Seq to analyse

@@ -1,5 +1,7 @@
-This post has videos accompanying it. You can watch them here: |Watch
-all videos here | Or read full text and watch the videos separately:
+Whole genome bilsulfite sequencing analisys
+*******************************************
+
+This post has videos accompanying it. You can watch them here: |Watch all videos here| Or read full text and watch the videos separately:
 Bisulfite sequencing approaches are currently considered a “gold
 standard” for detecting DNA methylation. One of them, whole-genome
 bisulfite sequencing (WGBS), provides single-base resolution of
@@ -33,33 +35,26 @@ steps:
 #. `Exploring the genome methylation levels in Genome
    Browser <https://genestack.com/tutorial/exploring-methylation-levels-genome-browser/>`__
 
-`The data
-flow <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1>`__ used
-in this tutorial, has been previously prepared by our team and put into
- `tutorial
-folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1>`__
+`The dataflow <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1>`__ used
+in this tutorial, has been previously prepared by our team and put into `tutorial folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1>`__
 for your convenience.
 
-**** ****1. Setting up a WGBS experiment**** To go through all these
+****1. Setting up a WGBS experiment**** To go through all these
 steps, we need to choose one of the WGBS experiments from Genestack
 `Public
 Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__ which
-are the part of our `Public
-data <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=public&action=viewFile&page=1>`__.
+are the part of our `Public data <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=public&action=viewFile&page=1>`__.
 Feel free to reproduce the workflow on your own data uploaded with the
-`Data
-Importer <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__.
+`Data Importer <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__.
  What's more, you could open the folder
 `"Tutorials" <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1>`__  in
 the Public data and select the "Whole-genome Bisulfite Sequencing Data
 Analysis on Genestack Platform". In the folder you will find the WGBS
 experiment used in this tutorial, processed data and all the other
-needed files.  **Experiment by  `Rodriguez et al.,
-2014 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714>`__
- can serve as a clear example of the applications of WGBS to
+needed files.  **Experiment by  `Rodriguez et al., 2014 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714>`__
+can serve as a clear example of the applications of WGBS to
 genome-wide DNA 5-methylcytosine landscape profiling.** |public
-experiments| To learn more just open the experiment in `Experiment
-Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile>`__ :
+experiments| To learn more just open the experiment in `Experiment Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile>`__ :
 |Experiment_Viewer| Briefly, the authors performed WGBS on DNA obtained
 from mouse hematopoietic stem cells (HSCs) to investigate the mechanisms
 that could promote changes in DNA methylation and contribute
@@ -73,7 +68,7 @@ knockout mouse HSCs. And it was revealed that the loss of DNA Dnmt3a can
 influence the Canyon size. Now let's start reproducing these results
 with data flows pre-prepared by Genestack.
 
-.. |Watch all videos here | image:: https://genestack.com/wp-content/uploads/2015/10/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
+.. |Watch all videos here| image:: https://genestack.com/wp-content/uploads/2015/10/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
    :class: aligncenter wp-image-3563 size-large
    :width: 604px
    :height: 64px

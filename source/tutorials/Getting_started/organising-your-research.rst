@@ -30,8 +30,7 @@ you will see several pre-loaded genomes:
 
 |reference genomes|
 
- Take a look
-at the  *KIND* column. These files are of the  *Reference
+Take a look at the  *KIND* column. These files are of the  *Reference
 Genome* type. There is no single, standard, commonly accepted file
 format for storing and exchanging genomic sequence and features:
 sequence can be stored in FASTA, EMBL or GenBank formats. Genomic

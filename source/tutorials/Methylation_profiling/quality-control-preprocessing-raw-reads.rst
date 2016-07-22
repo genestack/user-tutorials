@@ -9,13 +9,13 @@ sequencing protocol utilizes sodium bisulfite conversion of unmethylated
 cytosines to thymidines and that reduces the sequence
 complexity resulting in errors during alignment.
 
-**With our platform you can quickly and easily obtain an interactive
-Fas** tQC Report ** **** that covers different quality aspects of raw
+With our platform you can quickly and easily obtain an interactiveFas tQC Report
+that covers different quality aspects of raw
 data such as general sequence quality, total number of reads, GC content
 distribution, read quality distribution and much more. To start the
-analysis we can use public **`Raw Reads Quality
+analysis we can use public `Raw Reads Quality
 Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF972554&action=viewFile>`__ data
-flow. **** There is no need to repeat the same steps for each sample —
+flow. There is no need to repeat the same steps for each sample —
 the pipelines for all 16 assays from our experiment can easily be
 built simultaneously using this public data flow. In order to run the
 raw reads QC data flow, select all of the files from the experiment,
@@ -52,21 +52,21 @@ for one of the assays, for example, “ko3a_b2l4 Bisulfite-Seq”.  All
 prepared FastQC reports for all the samples are stored in the `FastQC
 reports for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969029&action=viewFile&page=1>`__ folder.
-****Per sequence GC content** graph shows the GC content across the
+Per sequence GC content graph shows the GC content across the
 whole length of each read. Ideally, we will see the normal distribution
 of GC content. Our results reflect some deviation from from normal
 distribution: unusual sharp shape of the central peak may indicate the
 presence of contaminants in our library, for example adaptor
-dimers.**
+dimers.
 
 |Per sequence GC content|
 
- On the **Per base sequence
-quality** plots  ****we can see that all bases in our sequence have
+On the Per base sequence
+quality plots we can see that all bases in our sequence have
 the quality score equal or more than 30, which corresponds to 99.9% base
 calling accuracy. The quality is degraded in the last bases, but it is
-an expected behaviour corresponding to the sequencing chemistry.****
-|per base sequence quality| ****Per sequence quality score**  graph
+an expected behaviour corresponding to the sequencing chemistry.****|per base sequence quality|****
+Per sequence quality score**  graph
 shows an average quality distribution over the set of sequences. It will
 help us see if there are any problems with sequencing run, for example a
 significant proportion of low quality sequences can be a signal of a

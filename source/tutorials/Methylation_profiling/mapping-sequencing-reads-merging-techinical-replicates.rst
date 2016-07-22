@@ -39,7 +39,7 @@ WT * * HSCs:
 
 |df merge mapped reads|
 
- Use the same data flow to merge
+Use the same data flow to merge
 mapped reads for technical replicates of remaining samples. As a result
 you will get 4 merged mapped reads for both analysed murine
 phenotypes. You can also use prepared Merged Mapped Reads files by

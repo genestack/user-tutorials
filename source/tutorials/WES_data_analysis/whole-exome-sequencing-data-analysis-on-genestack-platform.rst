@@ -1,3 +1,6 @@
+Whole exome sequencing data analisys on Genestack platform
+**********************************************************
+
 As one of the widely used targeted sequencing method, whole exome
 sequencing (WES) has become more and more popular in clinical and basic
 research. Albeit, the exome (protein-coding regions of the genome) makes

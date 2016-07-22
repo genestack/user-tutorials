@@ -1,3 +1,6 @@
+Effect-annotation
+*****************
+
 .. raw:: html
 
    <div class="layoutArea">
