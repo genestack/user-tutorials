@@ -89,6 +89,7 @@ analysis steps we included in the pipeline in greater detail.
 .. |Data Flow on the CLA page| image:: images/Data-Flow-on-the-CLA-page.png
 .. |Create new data flow| image:: images/Create-new-data-flow.png
 .. |Screenshot 2016-01-11 12.34.09| image:: images/Screenshot-2016-01-11-12.34.09.png
+.. |Screenshot 2016-01-11 12.55.56| image:: images/Screenshot-2016-01-11-12.55.56-e1452507717712.png
 .. |Screenshot 2016-01-11 12.49.07| image:: images/Screenshot-2016-01-11-12.55.56-e1452507717712.png
 .. |Screenshot 2015-12-23 18.32.32| image:: images/Screenshot-2015-12-23-18.32.32.png
 .. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png

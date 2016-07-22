@@ -41,13 +41,20 @@ downstream, splice site, or intergenic regions. It also determines
 effects genetic variants have on genes, such as amino acid replacement
 or frame shifts. The app page will give you more information about it.
 Remember, if you have some files uninitialized, you can run the
-analysis on the Effect Prediction page or Data Flow Runner page. |start
-init| Explore annotated variants in Genome Browser and Variant Explorer
+analysis on the Effect Prediction page or Data Flow Runner page.
+
+|start init|
+
+Explore annotated variants in Genome Browser and Variant Explorer
 apps. Let's open generated ` report
 file <https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF973651&action=viewFile>`__ containing
 some information about identified variants from our tutorial
 folder. Right click on the genetic variants file name and go to "View
-Report". |Screenshot 2015-11-23 11.14.46| First of all, the report
+Report".
+
+|Screenshot 2015-11-23 11.14.46|
+
+First of all, the report
 summary contains some basic information about the analysed file.
 |Summary| In general 4,389,254 mutations were found in our assay with
 one change every 7,014 bases. The most common variants are SNPs that
@@ -181,6 +188,8 @@ us <mailto:contact@genestack.com>`__.  
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
 .. |GB_variants| image:: images/GB_variants.png
+.. |start init| image:: images/start-init.png
+.. |Screenshot 2015-11-23 11.14.46| image:: images/Screenshot-2015-11-23-11.14.46.png
 .. |Screenshot 2016-01-14 13.50.17| image:: images/Screenshot-2015-11-23-11.14.46.png
 .. |Summary| image:: images/Summary.png
 .. |Screenshot 2016-03-14 12.24.19| image:: images/Screenshot-2016-03-14-12.24.19.png

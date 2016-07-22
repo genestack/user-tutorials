@@ -113,6 +113,7 @@ e.g., technical replicates, biological samples undergoing the same
 treatment, and so forth.
 
 .. |trim low quality bases app| image:: images/trim-low-quality-bases-app.png
+.. |spliced mapping mouse genome| image:: images/spliced-mapping-mouse.png
 .. |trim low quality bases start initialization| image:: images/spliced-mapping-mouse.png
 .. |file provenence| image:: images/file-provenence.png
 .. |file provenance| image:: images/file-provenance.png

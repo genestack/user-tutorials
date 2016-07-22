@@ -19,8 +19,11 @@ region with author’s results:
 As DNMT3a is often mutated in
 human leukemias, authors also examined the impact of loss of Dnmt3a on
 the Canyon size. For this they compared low-methylated regions in HSCs
-conditionally inactivated for Dnmt3a to WT HSCs: |Genome Browser (WT vs
-KO)| This investigation revealed the fact that methylation loss in
+conditionally inactivated for Dnmt3a to WT HSCs:
+
+|Genome Browser (WT vs KO)|
+
+This investigation revealed the fact that methylation loss in
 Dnmt3a KO HSCs leads to the formation of new Canyons. Lack of Dnmt3a
 does not affect regions inside Canyons but it results in changes of
 Canyon boundaries: Canyon size can be decreased due to hypermethylation
@@ -50,5 +53,6 @@ If you have any questions, suggestions etc, please leave them in
 comments below or `email us <mailto:info@genestack.com>`__.
 
 .. |Genome Browser (Pax6; only WTs)| image:: images/GB-Pax6-only-WTs.png
+.. |Genome Browser (WT vs KO)| image:: images/GB-WT-vs-KO.png
 .. |Pax6-paper| image:: images/GB-WT-vs-KO.png
 .. |Hox-paper2| image:: images/Hox-paper2.png
