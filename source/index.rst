@@ -38,8 +38,3 @@ Table of Contents
    tutorials/WGS_data_analysis/wgs-qc-raw-reads
    tutorials/WGS_data_analysis/wgs-reads-processing-and-mapping
 
-
-
-
-
-
