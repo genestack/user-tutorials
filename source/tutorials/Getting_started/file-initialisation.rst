@@ -1,5 +1,5 @@
 Initialising files and various file types
------------------------------------------
+*****************************************
 
 Now that you know how to import data onto the platform, we will walk you
 through file initialisation. All files on Genestack are created by

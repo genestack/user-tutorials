@@ -1,5 +1,5 @@
 Reproducing your work with data flows
--------------------------------------
+*************************************
 
 So, you learned how to work with files and folders, you even created a
 simple analytical data flow to go from raw sequence to a list of

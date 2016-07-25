@@ -29,8 +29,8 @@ explore genetic variants in single-base resolution. For example, looking
 at the region 1:725878-725972 (95 bp) we can see several SNPs (red) and
 one deletion 5bp long (blue). |Screenshot 2016-01-14 13.50.17|
 
- Effect prediction
-~~~~~~~~~~~~~~~~~~
+Effect prediction
+*****************
 
 After variants have been identified, we could annotate them and identify
 the effects they produce on known genes. Let's return to the Data Flow

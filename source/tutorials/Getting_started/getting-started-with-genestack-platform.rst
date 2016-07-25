@@ -1,6 +1,3 @@
-Getting started with Genestack_platform
----------------------------------------
-
 In this tutorial, we'd like to introduce you to the core features of
 Genestack Platform. You will learn how our system deals with files, how
 it helps you organise and manage your data and how to share data with

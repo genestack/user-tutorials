@@ -1,5 +1,5 @@
 Managing and sharing data
--------------------------
+*************************
 
 To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your e-mail address in the upper right corner

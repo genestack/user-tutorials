@@ -1,5 +1,5 @@
 Importing data onto the Genestack Platform
-------------------------------------------
+******************************************
 
 We’ve talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data onto the platform. On the

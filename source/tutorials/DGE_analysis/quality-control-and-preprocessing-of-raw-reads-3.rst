@@ -1,4 +1,7 @@
-**Quality control of raw reads** Raw sequencing reads can include PCR
+Quality control of raw reads
+****************************
+
+Raw sequencing reads can include PCR
 primers, adaptors, low quality bases, duplicates and other contaminants
 coming from the experimental protocols. That's why we recommend you to
 check the quality of your raw data looking at such aspects as GC
@@ -41,8 +44,8 @@ run QC on all the data in the experiment and collected reports in `Raw
 reads QC reports for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000383&action=viewFile>`__ folder.
 
-**3. Preprocessing of raw reads**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Preprocessing of raw reads
+**************************
 
 Once the quality of raw data has been checked, we can go back to the
 main `Differential Gene Expression
