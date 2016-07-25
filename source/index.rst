@@ -9,10 +9,6 @@ Table of Contents
    :maxdepth: 2
 
    tutorials/DGE_analysis/dge
-   tutorials/DGE_analysis/differential-gene-expression-analysis
-   tutorials/DGE_analysis/quality-control-and-preprocessing-of-raw-reads-3
-   tutorials/DGE_analysis/quality-control-of-mapped-reads-2
-   tutorials/DGE_analysis/testing-differential-gene-expression-on-genestack-platform
    tutorials/WES_data_analysis/effect-annotation
    tutorials/WES_data_analysis/effect-annotation
    tutorials/WES_data_analysis/mapping-reads-onto-a-reference-genome-2
