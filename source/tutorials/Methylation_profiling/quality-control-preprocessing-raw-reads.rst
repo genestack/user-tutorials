@@ -101,8 +101,8 @@ are:**
 These contaminants can
 strongly influence the results of analysis and should be trimmed.
 
-**3. Preprocessing of raw reads: trimming adaptors, contaminants and low quality bases.**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Preprocessing of raw reads
+**************************
 
 After checking the quality of our data,  we can proceed with
 appropriate steps for improving the original raw data in order to get

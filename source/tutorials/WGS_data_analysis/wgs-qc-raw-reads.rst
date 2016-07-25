@@ -1,5 +1,5 @@
-WGS QC raw reads
-****************
+Quality control of raw sequencing reads
+***************************************
 
 Poorly identified bases, low-quality sequences and contaminants (such as
 adaptors) in the raw sequencing data can affect downstream analysis

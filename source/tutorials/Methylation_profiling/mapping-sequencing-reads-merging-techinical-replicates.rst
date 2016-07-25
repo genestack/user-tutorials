@@ -15,8 +15,8 @@ the  `Mapped reads for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968739&action=viewFile>`__ folder
 you can find all the Mapped Reads.
 
-**5. Merging**  **of the mapped reads** obtained from technical replicates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Merging of the mapped reads** obtained from technical replicates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is essential for any experiment to create a good and adequate
 control. Using replicates can improve quality and precision of your

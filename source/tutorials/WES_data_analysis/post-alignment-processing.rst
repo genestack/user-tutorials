@@ -9,8 +9,8 @@ why we run "Remove Duplicated Mapped Reads" app:
 in `Filtered mapped reads for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1>`__ folder.
 
-**7. Variant calling**
-~~~~~~~~~~~~~~~~~~~~~~
+Variant calling
+***************
 
 After duplicate removal, the next step is to identify different
 genomic variants including SNVs, indels, MNVs, etc. For this, we'll use

@@ -43,7 +43,7 @@ is time to begin the mapping of analysis-ready reads onto the human
 reference genome.
 
 Unspliced mapping of the preprocessed reads onto a reference genome
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*******************************************************************
 
 To map preprocessed reads to the reference genome we will use the
 Unspliced Mapping with BWA app which with high efficiency and accuracy
@@ -67,7 +67,7 @@ post <https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-brows
 |Screenshot 2016-03-18 17.44.03|
 
 Remove duplicated mapped reads
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+******************************
 
 Sometimes due to errors in the sample or library preparation, reads may
 come from the exact same input DNA template and accumulate at the same
@@ -84,7 +84,7 @@ and orientations of both reads of a read pair. Based on the identical
 the "best" copy.
 
 Mapped Reads QC
-~~~~~~~~~~~~~~~
+***************
 
 As you remember, we run just a part of the pipeline including
 preprocessing, alignment and removing of duplicates to check if the

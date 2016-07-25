@@ -32,8 +32,8 @@ gene-coding regions. To further use mapped reads, go to the `Mapped
 reads for Clark et al
 (2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999176&action=viewFile&page=1>`__  folder.
 
-**4. Targeted Sequencing Quality Control**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Targeted Sequencing Quality Control
+***********************************
 
 Besides quality control of the raw sequencing reads, it is also crucial
 to assess whether the target capture has been successful, i.e. if most

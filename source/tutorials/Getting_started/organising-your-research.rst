@@ -1,5 +1,5 @@
 Organising your research
-------------------------
+************************
 
 So you have created a Genestack Platform account, logged on, and created
 a bunch of users. Let’s now talk about data organisation on Genestack

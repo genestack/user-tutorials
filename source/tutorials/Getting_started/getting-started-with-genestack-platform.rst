@@ -1,5 +1,5 @@
-Getting started with Genestack_platform
----------------------------------------
+Getting started with Genestack platform
+***************************************
 
 In this tutorial, we'd like to introduce you to the core features of
 Genestack Platform. You will learn how our system deals with files, how

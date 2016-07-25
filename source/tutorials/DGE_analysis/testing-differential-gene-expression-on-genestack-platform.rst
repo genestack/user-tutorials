@@ -22,8 +22,8 @@ analysis includes the following steps:
 
 Let’s deal with these steps one by one.
 
-**Setting up an RNA-seq experiment**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting up an RNA-seq experiment
+********************************
 
 The first step is to choose RNA-seq dataset. You can open  `File
 Manager <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=private&action=viewFile>`__ and `upload

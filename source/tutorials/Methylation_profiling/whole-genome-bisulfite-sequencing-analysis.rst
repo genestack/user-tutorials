@@ -39,7 +39,10 @@ steps:
 in this tutorial, has been previously prepared by our team and put into `tutorial folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1>`__
 for your convenience.
 
-****1. Setting up a WGBS experiment**** To go through all these
+Setting up a WGBS experiment
+****************************
+
+To go through all these
 steps, we need to choose one of the WGBS experiments from Genestack
 `Public
 Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__ which
