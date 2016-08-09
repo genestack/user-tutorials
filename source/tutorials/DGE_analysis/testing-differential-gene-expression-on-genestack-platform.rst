@@ -1,5 +1,5 @@
-.. This post has videos accompanying it. You can watch them here: |Zrzut ekranu 2015-10-21 o 16.01.36| 
-.. Or read full text and watch the videos separately: 
+.. This post has videos accompanying it. You can watch them here: |Zrzut ekranu 2015-10-21 o 16.01.36|
+.. Or read full text and watch the videos separately:
 One of the most widespread applications of RNA-seq
 technology is differential gene expression (DGE) analysis. By
 understanding how gene expression levels change across different
@@ -28,9 +28,9 @@ The first step is to choose RNA-seq dataset. You can open  `File
 Manager <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=private&action=viewFile>`__ and `upload
 your own
 data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ using
-'Import' button: 
+'Import' button:
 
-|DGE_file_manager_red_arrow| 
+|DGE_file_manager_red_arrow|
 
 In the left-hand folder tree, you can see various  `public
 data <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=public&action=viewFile>`__ that
@@ -44,9 +44,9 @@ RNA-Seq experiment we will use comes from `Hibaoui et al.
 2013 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52249>`__ and
 is publicly available on Genestack. Open it in
 `Experiment Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF091068&action=viewFile>`__
-to see more details: 
+to see more details:
 
-|DGE_metainfo| 
+|DGE_metainfo|
 
 The authors investigated the transcriptional signature of  `Down syndrome (trisomy
 21) <https://en.wikipedia.org/wiki/Down_syndrome>`__ during development,

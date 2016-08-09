@@ -16,45 +16,45 @@ Rep3 <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-r
 
 **Per sequence GC content.** In a random library you expect a roughly
 normal GC content distribution. An unusually shaped or shifted
-distribution could indicate a contamination. 
+distribution could indicate a contamination.
 
 |DGE_per_seq_GC_cont|
 
 **Per base sequence quality** plot depicts the range of quality scores
 for each position in the reads. A good sample will have qualities all
-above 28: 
+above 28:
 
-|DGE_per_base_s| 
+|DGE_per_base_s|
 
 **Per sequence quality scores** plot shows the frequencies of quality scores in a sample. If the
 reads are of good quality, the peak on the plot should be shifted to the
 right as far as possible. In our case, the majority of Illumina reads
 have a good quality - in the range from 35 to 40 (the best score is 41):
 
-|DGE_per_seq_quality_sco| 
+|DGE_per_seq_quality_sco|
 
 **Per base sequence content** shows the four nucleotides’ proportions for each position. In a random library you
 expect no nucleotide bias and the lines should be almost parallel with
-each other: 
+each other:
 
-|DGE_per_base_seq_cont| 
+|DGE_per_base_seq_cont|
 
 There is a bias at the beginning of the reads, which is common for RNA-Seq data. This occurs during
 RNA-seq library preparation, when “random” primers are annealed to the
 start of sequences. These primers are not truly random, and it leads to
-a variation at the  beginning of the reads. 
+a variation at the  beginning of the reads.
 
 **Sequence duplication levels** plots represent the proportion of the library made up of
 sequences with different duplication levels. Sequences with 1, 2, 3, 4,
 etc duplicates are grouped to give the overall duplication level.
 
-|DGE_seq_dupl_lev| 
+|DGE_seq_dupl_lev|
 
 Looking at these plots, you may notice 15% of sequences duplicated more than 10 times, 6% of sequences are repeated
 more than 100 times, etc. The overall rate of  duplication is about 40
 %. Nevertheless, while analysing transcriptome sequencing data, we
 should not remove these duplicates because we don't know whether they
-represent PCR duplicates or high gene expression of our samples. 
+represent PCR duplicates or high gene expression of our samples.
 
 We have run QC on all the data in the experiment and collected reports in `Raw
 reads QC reports for Hibaoui et al (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000383&action=viewFile>`__ folder.
@@ -64,7 +64,7 @@ Preprocessing of raw reads
 
 Once the quality of raw data has been checked, we can go back to the
 main `Differential Gene Expression Analysis <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources>`__ data
-flow and choose sources: 
+flow and choose sources:
 
 |DGE_data_flow_first_step|
 
@@ -77,15 +77,15 @@ QC reports can not only provide you with the information on the data
 quality but can also help you to decide how to preprocess the data in
 order to improve its quality and get more reliable results in further
 analysis. There are various Genestack applications that allow you to do
-preprocessing: 
+preprocessing:
 
-|DGE_preprocess_apps| 
+|DGE_preprocess_apps|
 
-We'll run Trim Adaptors and Contaminants app: 
+We'll run Trim Adaptors and Contaminants app:
 
-|DGE_trim_ad| 
+|DGE_trim_ad|
 
-All resulting files are collected in  `Trimmed raw reads for Hibaoui et al 
+All resulting files are collected in  `Trimmed raw reads for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967714&action=viewFile>`__ folder.
 
 .. |DGE_per_seq_GC_cont| image:: images/DGE_per_seq_GC_cont.png

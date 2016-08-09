@@ -4,9 +4,9 @@ Mapping RNA-seq reads onto a reference genome
 When all files were created, you can run the whole analysis here,
 choosing Expression Navigator for genes. But first, let’s align RNA-seq
 reads to the reference genome across splicing junctions and then compare
-mappings in Genome Browser. 
+mappings in Genome Browser.
 
-|DGE_spl_mapping| 
+|DGE_spl_mapping|
 
 Find Spliced Mapping step, click on “7 files”. In “Explore” section choose “Genome Browser”
 and start initialization there.
@@ -17,21 +17,21 @@ and start initialization there.
 We run Spliced Mapping app with default parameters. To change them go to
 the app page and choose "Edit parameters" button. If you want to learn
 more about the app and its options, click on the app name and then on
-"About application". 
+"About application".
 
-|DGE_spl_map| 
+|DGE_spl_map|
 
 Completed Mapped Reads files can be found in `Mapped reads files for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967837&action=viewFile>`__ folder. Let's
 open some of them in Genome Browser to analyse reads  `coverage on
 chromosome 21 <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF968535&action=viewFile&expired>`__ on
-the region chr21:30007376-40007694 (10 Mb): 
+the region chr21:30007376-40007694 (10 Mb):
 
-|DGE_coverage_21| 
+|DGE_coverage_21|
 
 Here is a combined track for all trisomic and control samples:
 
-|DGE_GB_combined_track| 
+|DGE_GB_combined_track|
 
 As you see, the majority of chr21 genes are indeed more expressed in the trisomic samples than in the euploid ones,
 which is consistent with the overall up-regulation of chr21 genes in
@@ -63,20 +63,20 @@ Output report includes mapping statistics such as:
    where one of the mates was mapped with unexpected orientation.
 
 The **Coverage by chromosome** plot shows the percentage of bases
-covered (y-axis) by at least N (x-axis) reads. 
+covered (y-axis) by at least N (x-axis) reads.
 
-|Coverage_by_chromosome| 
+|Coverage_by_chromosome|
 
 For paired reads, you can look at insert size statistics, such as median and mean insert sizes, median
 absolute deviation and standard deviation of insert size. The **Insert
-size distribution** plot is generated: 
+size distribution** plot is generated:
 
-|Insert_size_distribution| 
+|Insert_size_distribution|
 
 We already prepared all QC reports for mapped reads and put them in `Mapped
 reads QC reports for Hibaoui et al (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967840&action=viewFile>`__ folder.
 You can open all of them in `Multiple QC Report app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF968715&action=viewFile>`__ to
-view mapping statistics interactively: 
+view mapping statistics interactively:
 
 |DGE_multiple_qc_plotter|
 

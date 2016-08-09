@@ -15,7 +15,7 @@ Changing the group and thresholds criteria in the Filter Options, you
 can set what DE genes can be further used for enrichment analysis. Let's
 run GO app twice, analysing down- and up-regulated genes separately.
 
-|DGE_GO_filters| 
+|DGE_GO_filters|
 
 Analysing down-regulated genes we observed significant enrichment for genes involved in multiple
 developmental processes specifically in organ development and
@@ -28,27 +28,27 @@ adhesion (i.e. biological adhesion, cell adhesion, cell-cell adhesion)
 and to the cadherin signalling pathway. Here is the first 8 of 1017 GO
 terms related to the biological processes:
 
-|DGE_down_DGE_genes_GO_terms| 
+|DGE_down_DGE_genes_GO_terms|
 
 Additionally, you can also review molecular functions or cellular components that could be affected
 in Twin-DS-iPSCs. Just change the "Top GO Terms" from Biological Process
-category to the corresponding one. 
+category to the corresponding one.
 
 By comparison, this is the table from the paper which listed the first 20 biological processes that might be
-affected due to trisomy 21: 
+affected due to trisomy 21:
 
-|DGE_down_paper| 
+|DGE_down_paper|
 
 Our GO analysis of the genes up-regulated in trisomic samples revealed enrichment for functions
 related to different metabolic and biological processes, regulation of
 transcription and DNA-dependent transcription. Here is the list of the
 first 8 of 339 biological process GO terms:
 
-|DGE_up_regulated_genes_GO_terms| 
+|DGE_up_regulated_genes_GO_terms|
 
-Look at the GO terms associated with up-regulated genes and reported in the paper: 
+Look at the GO terms associated with up-regulated genes and reported in the paper:
 
-|DGE_up_paper| 
+|DGE_up_paper|
 
 All these biological processes can be found in our results. The difference
 is in GO counts. But we expected it, because the ontologies are not
@@ -65,7 +65,7 @@ You can try it right now! Just open `the tutorial data
 flow <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources>`__ or
 create your own one by adding new steps, changing sources and default
 options. If you have any questions and comments, please submit them
-below or email us at support@genestack.com. 
+below or email us at support@genestack.com.
 
 Follow us on Twitter: `@genestack <https://twitter.com/genestack>`__.
 
