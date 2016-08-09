@@ -18,7 +18,7 @@ data, but WGS provides more comprehensive picture of the genome
 considering both non-coding and coding genomic regions. It also allows
 to identify SV and CNV that may be missed by WES. Moreover, WGS allows
 to obtain more uniform and reliable coverage. All in all, WGS is a more
-universal method than WES.  
+universal method than WES.
 
   This tutorial will guide you through the genetic variants discovery
 workflow on Genestack. We will analyse a dataset by Dogan *et
@@ -51,6 +51,6 @@ importer <https://platform.genestack.org/endpoint/application/run/genestack/uplo
 
 Raw sequencing assays from the Dogan *et al.* experiment, all processed
 data and reports are located in the `WGS Data Analysis on Genestack
-Platform <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970302&action=viewFile&page=1>`__. 
+Platform <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970302&action=viewFile&page=1>`__.
 
 .. |Screenshot 2016-01-09 16.03.58| image:: images/Screenshot-2016-01-09-16.03.58.png

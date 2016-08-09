@@ -33,7 +33,7 @@ this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform. If you have any questions you can
 post them on our `forum <http://forum.genestack.org/>`__ and we will
 answer them as soon as we can. Alternatively, you can `e-mail
-us <mailto:info@genestack.com>`__. Genestack team  
+us <mailto:info@genestack.com>`__. Genestack team
 
 .. |create new data flow| image:: images/create-new-data-flow1.png
 .. |run data flow| image:: images/run-data-flow.png

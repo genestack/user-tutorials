@@ -106,7 +106,7 @@ Preprocessing of raw reads
 
 After checking the quality of our data,  we can proceed with
 appropriate steps for improving the original raw data in order to get
-reliable results in the downstream analysis. 
+reliable results in the downstream analysis.
 
 The authors analysed two biological replicates for two murine
 phenotypes: wild type (WT) HSCs and conditionally *Dnmt3a* knocked out

@@ -12,7 +12,7 @@ flow <https://platform.genestack.org/endpoint/application/run/genestack/dataflow
 Genestack FastQC application generates basic statistics and many useful
 data diagnosis plots. Here is some of them for `sample enriched by
 Aligned SureSelect
-50M <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF970289&action=viewFile>`__ : 
+50M <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF970289&action=viewFile>`__ :
 |WES_FastQC_report| **Basic statistics** tells you about basis data
 metrics such as reads type, number of reads, GC content and total
 sequence length. **Sequence length distribution** module reports if all
@@ -36,7 +36,7 @@ little difference between A, T, C, G nucleotides, and the lines
 representing them should be parallel with each other. The black N line
 indicates the content of unknown N bases which shouldn't be presented in
 the library. In our case, you can notice the absence of
-unknown nucleotides and a slight difference in A-T and G-C frequencies: 
+unknown nucleotides and a slight difference in A-T and G-C frequencies:
 |WES_per_base_sequence_content| **Sequence duplication levels**
 plots represent the percentage of the library made up of sequences with
 different duplication levels. In simple words, 44% of reads are unique,

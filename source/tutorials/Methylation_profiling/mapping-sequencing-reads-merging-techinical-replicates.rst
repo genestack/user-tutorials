@@ -45,7 +45,7 @@ you will get 4 merged mapped reads for both analysed murine
 phenotypes. You can also use prepared Merged Mapped Reads files by
 opening the `Merged mapped reads for Rodriguez et al.,
 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile>`__ folder.
- 
+
 
 .. |df bisulfte seq mapping| image:: images/df-bisulfte-seq-mapping-.png
 .. |BSMAP| image:: images/BSMAP.png
