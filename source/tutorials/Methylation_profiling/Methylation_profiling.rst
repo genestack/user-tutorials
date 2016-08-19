@@ -6,4 +6,4 @@ Methylation Profiling Using Genestack Platform
 .. include:: mapping-sequencing-reads-merging-techinical-replicates.rst
 .. include:: quality-control-mapped-reads.rst
 .. include:: methylation-ratio-analysis.rst
-.. include:: texploring-methylation-levels-genome-browser.rst
+.. include:: exploring-methylation-levels-genome-browser.rst

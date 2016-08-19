@@ -5,13 +5,18 @@ We can explore the distribution of genome methylation levels counted for
 both murine phenotypes in  `Genome
 Browser <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile>`__ .
 
+.. youtube:: https://www.youtube.com/watch?v=juojLSCcrFU
+
 As it was mentioned before, "Canyons" are the large unmethylated DNA
 regions inside of a highly methylated locus that often harbour genes
 playing a role in hematopoiesis and being deregulated in human leukemia.
 Some Canyons can be exceptionally large, for example one associated with
-the  *Pax6 * homeobox gene encoding a homeobox-containing protein
-regulating  transcription is extended over 25 kb: |Genome Browser (Pax6;
-only WTs)| Let’s compare our methylation ratios distribution in these
+the  *Pax6* homeobox gene encoding a homeobox-containing protein
+regulating  transcription is extended over 25 kb:
+
+|Genome Browser (Pax6; only WTs)|
+
+Let’s compare our methylation ratios distribution in these
 region with author’s results:
 
 |Pax6-paper|
@@ -32,9 +37,9 @@ containing cluster of Canyons in WT HSCs,  larger Canyons (“Grand
 Canyons”)  can be formed. We can see it on the example of  *HoxB*
 regions in which Canyons are interrupted by short stretches of higher
 methylation. All these findings suggest that Dnmt3a can be crucial for
-maintaining methylation in the Canyon boundaries. **Now, let's take a
-look at the original track for the same Canyon cluster to compare the
-results:**
+maintaining methylation in the Canyon boundaries.
+Now, let's take a look at the original track for the same Canyon cluster to compare the
+results:
 
 |Hox-paper2|
 
@@ -43,10 +48,8 @@ of changes in DNA methylation profile including different methodologies
 such as, for example, whole genome bisulfite sequencing and CMS-seq to
 reveal genome-wide distribution of mCs and hmCs, RNA-Seq to analyse
 expression of Canyon-associated genes. This incredible work was turned
-into a
-research  `paper <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/>`__,  and
-the data sets can be found in our `Public
-Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__ !
+into a research `paper <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/>`__, and
+the data sets can be found in our `Public Experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__ !
 That's it for the tutorial, we hope you will enjoy working on your data
 with Genestack! Later you can return back to the tutorial if necessary.
 If you have any questions, suggestions etc, please leave them in
