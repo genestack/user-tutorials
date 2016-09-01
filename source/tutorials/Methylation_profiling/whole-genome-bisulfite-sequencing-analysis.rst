@@ -89,7 +89,7 @@ canyon size.
 
 Now let's start reproducing these results with data flows pre-prepared by Genestack.
 
-To learn more just open the experiment in `Experiment Viewer`_ :
+To learn more just open the experiment in `Experiment Viewer`_:
 
 |Experiment_Viewer|
 
