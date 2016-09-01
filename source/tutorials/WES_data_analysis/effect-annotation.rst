@@ -189,8 +189,8 @@ sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email
 us <http://support@genestack.com>`__.
 
-References:
------------
+References
+==========
 
 #. Clark M. J., et al. Performance comparison of exome DNA sequencing
    technologies.  *Nature biotechnology* 2011; 29(10):908-914.

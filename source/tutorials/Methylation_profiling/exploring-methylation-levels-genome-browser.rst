@@ -58,8 +58,8 @@ with Genestack! Later you can return back to the tutorial if necessary.
 If you have any questions or suggestions, please leave them in
 comments below or `contact us <feedback@genestack.com>`_.
 
-References:
-~~~~~~~~~~~
+References
+==========
 
 - Challen G.A. et al. Dnmt3a is essential for hematopoietic stem cell differentiation. *Nat Genet.* 44:23–31 (2012)
 - De Carvalho D.D. et al. DNA Methylation Screening Identifies Driver Epigenetic Events of Cancer Cell Survival. *Cancer Cell* 21(5):655-667 (2012)
