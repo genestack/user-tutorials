@@ -71,7 +71,7 @@ References
 
 .. |Genome Browser (Pax6; only WTs)| image:: images/GB-Pax6-only-WTs.png
 .. |Genome Browser (WT vs KO)| image:: images/GB-WT-vs-KO.png
-.. |Pax6-paper| image:: images/GB-WT-vs-KO.png
+.. |Pax6-paper| image:: images/Pax6-paper.png
 .. |Hox-paper2| image:: images/Hox-paper2.png
 .. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
 .. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
