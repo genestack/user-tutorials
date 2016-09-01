@@ -66,8 +66,9 @@ initialisation” blue button at the top.
 the progress of your computations using the Task Manager that can be
 found at the top of the page. All the files created in the above example
 are located in the `tutorial
-folder`_. To
-read more about data flows `scroll down <#reproduce>`__. One additional
+folder`_.
+
+One additional
 thing we should mention is that if you want to analyse more than one
 file using the same app, it's very easy: just tick all the files you
 want to analyse, right click on them and select the app you wish to use.
@@ -113,8 +114,6 @@ Here it is on a sequencing assay:
 
 |edit metainfo|
 
-
-
 Folders
 ~~~~~~~
 
@@ -150,4 +149,5 @@ treatment, and so forth.
 .. |edit metainfo2| image:: images/edit-metainfo2.png
 .. |edit metainfo| image:: images/edit-metainfo.png
 .. _“Analysis of the intestinal microbiota of hybrid house mice reveals evolutionary divergence in a vertebrate hologenome”: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF317032&action=viewFile&page=1
+.. _the entire data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1016183&action=viewFile
 .. _tutorial folder: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1016175&action=viewFile&page=1

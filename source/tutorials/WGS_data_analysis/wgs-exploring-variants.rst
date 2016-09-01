@@ -73,10 +73,9 @@ the paper, the authors identified 3,642,449 and 4,301,769 SNPs using
 Casava and GATK workflows, respectively. However in the downstream
 analysis they used 3,537,794 variants identified by both methods.
 
-
 |Screenshot 2016-03-14 12.24.19|
 
- *Insertion deletion length histogram * graphically demonstrates the
+ *Insertion deletion length histogram* graphically demonstrates the
 distribution of length of all insertions and deletions. The discovered Indels
 ranged from -43 to 28 bp in length with the standard deviation of 5.256. 
 Authors detected 713,640 InDels (341,382 insertions and 372,258 deletions)
@@ -93,12 +92,12 @@ regions. Only 69 and 78 mutations were detected in the splice site donor
 and in splice site acceptor, respectively. Finally, we detected 6241
 insertions and deletions in exons.   Besides the statistics on the
 change type of the found mutations, report also contains quality and
-coverage information.   *Quality histogram* shows quality distribution
+coverage information. *Quality histogram* shows quality distribution
 with minimum value of 3 and maximum value of 486 for the analysed data:
 
 |Quality|
 
-The following histogram shows *coverage.* For our data the mean
+The following histogram shows *coverage*. For our data the mean
 coverage is 28.882 while the maximum coverage is 8,026.
 
 |coverage|
@@ -228,9 +227,9 @@ For example, authors identified variants with the vendor-supplied
 Eland-Casava pipeline and The Genome Analysis Toolkit (GATK v2.2), while
 we used Variant Calling tool based on SAMtools and BCFtools.  
 
-Need to perform analysis of `WGBS`_, `WES`_ or `RNA-Seq data`_ ?
+Need to perform analysis of `WGBS`_, `WES`_ or `RNA-Seq data`_?
 
-Visit our website to check out more `tutorials`_ !   If you have any
+Visit our website to check out more `tutorials`_!   If you have any
 questions or suggestions, please leave them below or `email
 us <feedback@genestack.com>`_.
 

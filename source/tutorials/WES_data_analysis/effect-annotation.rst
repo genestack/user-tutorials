@@ -10,7 +10,7 @@ application:
 Let's analyse annotated variants for sample enriched by Nimblegen.
 Output report contains **summary** about tool version, number of
 variants, number of effects, change rate, and other information.
-**Change rate details ** table shows length, changes and change rate
+**Change rate details** table shows length, changes and change rate
 for each chromosome and patch (if they are presented). Here is the
 change rate details for the first 10 chromosomes:
 
@@ -20,7 +20,7 @@ The app calculates total number of
 variants as well as number of homo/hetero single nucleotide
 polymorphisms (SNPs), multiple nucleotide polymorphisms (MNPs),
 insertions (INS), deletions (DEL), combination of SNPs and indels at a
-single position (MIXED) and records it in ** Number of changes by type ** table:
+single position (MIXED) and records it in **Number of changes by type** table:
 
 |WES_number_changes by_type_1|
 
@@ -32,7 +32,7 @@ of SNPs and ~40,000 of both insertions and deletions. No significant
 difference in the ratio of heterozygous to homozygous variants between
 platforms was observed. However, regarding WGS sample, much more
 variants were detected (3,8 million of SNPs and about 600,000 indels).
-**Number of effects by impact ** table shows count and percentage of
+**Number of effects by impact** table shows count and percentage of
 variants that have high, low, moderate impact or tagged as modifiers:
 
 |WES_number_of_effects_by_impact_1|
@@ -52,7 +52,7 @@ impact. However more than 97% mutation are modifiers. We see the same
 percentage of modifiers in WES and WGS samples. Also the output report
 contains information about the count and percentage of missense,
 nonsense and silent mutations. Find out this in
-** Number of effects by functional class** table:
+**Number of effects by functional class** table:
 
 |WES_number_of_affects_by_functional_class_1|
 
@@ -156,7 +156,7 @@ Reference codons are shown in rows, changed codons
 For example, 811 'ACG' reference codons have been replaced by 'ACA'
 triplet. If we compare this information between our samples, you'll find
 the same type and almost the same number of codon changes across WES
-samples. In ** Amino acid changes** table, you can see type and
+samples. In **Amino acid changes** table, you can see type and
 number of amino acid changes. Row indicates a reference amino acid,
 column - changed amino acid.
 
@@ -180,7 +180,7 @@ variants calculating the effects they produced on known genes and put
 them in  `Variants with predicted effects for Clark et al
 (2011)`_ folder.
 
-**9. Variant prioritisation in Variant Explorer**
+**Variant prioritisation in Variant Explorer**
 
 The variants can be also interactively analysed in Genestack Variant
 Explorer application:
@@ -240,7 +240,7 @@ question of which enrichment platform is best must be answered with
 respect to all these specific parameters.
 
 Congratulations! We've worked through the entire tutorial! Try to repeat
-all the steps with your own data or using other Genestack  `public experiments`_.
+all the steps with your own data or using other Genestack `public experiments`_.
 As well as create your own data flows by adding new steps, changing
 sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email us <feedback@genestack.com>`_.

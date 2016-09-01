@@ -53,7 +53,7 @@ Raw sequencing assays from the Dogan *et al.* experiment, all processed
 data and reports are located in the `WGS Data Analysis on Genestack
 Platform`_.
 
-.. |Screenshot 2016-01-09 16.03.58| image:: images/Screenshot-2016-01-09-16.03.58.png
+.. |Screenshot 2016-01-09 16.03.58| image:: images/apple.png
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
 .. _data importer: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _WGS Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970302&action=viewFile&page=1

@@ -53,7 +53,7 @@ Flow".
 
 |Screenshot 2016-01-11 12.34.09|
 
-Click on the"Run dataflow " button to run the pipeline. This will take you to the
+Click on the "Run dataflow " button to run the pipeline. This will take you to the
 Data Flow Runner page where the pipeline for genetic variants
 investigation using WGS is graphically represented. Click on "Action"
 in the Variant Calling step to change the data flow and, for example
@@ -88,8 +88,7 @@ the app that created this file:
 
 |Edit File List BWA|
 
-Data Flow Runner
-allows you to start initialization up to any step of the pipeline. We
+Data Flow Runner allows you to start initialization up to any step of the pipeline. We
 recommend  you check the mapping quality after removing the duplicates
 from mapped reads to assure that they could be further used in variant
 calling and effect prediction. In order to do this,  click on "2 files"

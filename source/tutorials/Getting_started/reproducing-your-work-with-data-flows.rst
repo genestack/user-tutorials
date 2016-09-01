@@ -44,12 +44,12 @@ back to the Data Flow Runner page where you can initialize individual
 files by clicking on the file name and later selecting "Start
 initialization".
 
-|Zrzut ekranu 2015-11-03 o 13.16.22|
+|start initialization|
 
 This is the end of
 this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform. If you have any questions you can
-post them on our `forum`_ and we will
+post them on our forum_ and we will
 answer them as soon as we can. Alternatively, you can `email us <feedback@genestack.com>`_.
 Genestack team
 
@@ -57,5 +57,5 @@ Genestack team
 .. |run data flow| image:: images/run-data-flow.png
 .. |choose another file| image:: images/choose-another-file.png
 .. |delay initialization until later| image:: images/delay-initialization-until-later1.png
-.. |Zrzut ekranu 2015-11-03 o 13.16.22| image:: images/Zrzut-ekranu-2015-11-03-o-13.16.22.png
+.. |start initialization| image:: images/start_init.png
 .. _forum: http://forum.genestack.org/

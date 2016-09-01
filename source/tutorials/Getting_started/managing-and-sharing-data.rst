@@ -7,7 +7,6 @@ and select "Manage groups" from the administration menu.
 
 |manage groups|
 
-
 Any user can create a group. You can think of a group as a shared
 project for two or more users. Let’s share some data — the files we
 created above. To do this go to Manage Groups and create your first
@@ -21,11 +20,11 @@ Right away we have a new group:
 
  And we can add a new member to this newly created group:
 
- |add user to the group|
+|add user to the group|
 
 Now your group looks like this:
 
-|Zrzut ekranu 2015-11-03 o 12.48.41|
+|first group|
 
 No confirmation is needed – any user in your
 organisation can create a group and add other users from your
@@ -86,7 +85,6 @@ others. This is a security feature, it means that no one from any other
 organisation can find out who is registered in Genestack Platform from
 yours. After you enter the user’s email, you will see a new screen:
 
-
 |manage-groups-invite|
 
 The new user is not added to your group right
@@ -98,14 +96,12 @@ administrators of both parties, the group becomes a cross-organisational
 group and other users can be added easily. The inviting organisation’s
 administrator will see the following in their group management screens:
 
-
 |incoming-invitation|
 
  Once they confirm the outgoing invitation, the
 other organisation’s administrator will see the same in their Incoming
 invitations section and will have to confirm it as well. After both
 confirmations, the new group has members from both organisations:
-
 
 |cross-org-group|
 
@@ -123,7 +119,7 @@ place.
 .. |create new group| image:: images/create-new-group.png
 .. |my new group members| image:: images/my-new-group-members.png
 .. |add user to the group| image:: images/add-user-to-the-group1.png
-.. |Zrzut ekranu 2015-11-03 o 12.48.41| image:: images/Zrzut-ekranu-2015-11-03-o-12.48.41.png
+.. |first group| image:: images/first_group.png
 .. |shared with me folder| image:: images/shared-with-me.png
 .. |share data| image:: images/share.png
 .. |link shared files| image:: images/link-shared-files.png

@@ -16,8 +16,8 @@ Platform <https://genestack.com/tutorial/file-import/>`__
 `6.Managing and Sharing Data <https://genestack.com/tutorial/managing-and-sharing-data/>`__
 `7.Reproducing the Analyses with Data Flows <https://genestack.com/tutorial/reproducing-your-work-with-data-flows/>`__
 
-**Creating an Account and Managing Users**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating an Account and Managing Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It’s easy to register
 on `Genestack`_.
@@ -75,5 +75,5 @@ can log in right away.
 .. |user management| image:: images/user-management.png
 .. |first user on the platform| image:: images/first-user.png
 .. |second user creation| image:: images/second-user.png
-.. _Genestack: https://platform.genestack.org/endpoint/application/run/genestack/signin?&_ga=1.73978646.523296008.1444049524#signup
+.. _Genestack: https://platform.genestack.org/endpoint/application/run/genestack/signin
 .. _Welcome Page: https://genestack.com/blog/2015/10/01/new-dashboard-style-start-screen-for-genestack/
