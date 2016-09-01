@@ -1,5 +1,5 @@
 Effect-annotation
------------------
+*****************
 
 After variants are detected, use Effect Annotation application based on
 `SnpEff`_ tool. The app annotates
@@ -246,7 +246,7 @@ sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email us <feedback@genestack.com>`_.
 
 References
-**********
+~~~~~~~~~~
 
 #. Clark M. J., et al. Performance comparison of exome DNA sequencing
    technologies.  *Nature biotechnology* 2011; 29(10):908-914.
