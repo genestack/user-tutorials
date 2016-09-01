@@ -78,8 +78,6 @@ As the *de novo* DNA methyltransferase Dnmt3a is shown to be crucial for normal 
 differentiation, and *Dnmt3a* gene is often mutated in human leukemias, the authors further explore
 how loss of Dnmt3a influences canyons.
 
-|DNMT|
-
 .. figure:: images/DNMT.png
    :alt: DNMT
 
@@ -100,10 +98,8 @@ To learn more just open the experiment in `Experiment Viewer`_ :
    :width: 604px
    :height: 64px
    :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3ZfhBit9j2sTwTRiLvkJ6T
-.. |DNA_methylation| image:: images/DNA_methylation.png
 .. |public experiments| image:: images/public-experiments.png
 .. |Experiment_Viewer| image:: images/Experiment_Viewer.png
-.. |DNMT| image:: images/DNMT.png
 .. _Tutorials: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1
 .. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
 .. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
