@@ -4,33 +4,36 @@ Mapping reads onto a reference genome
 After raw data QC and preprocessing, the next step is to map exome
 sequencing data to the reference genome with high efficiency and
 accuracy. Genestack supports two Unspliced mappers, one is based
-on  `Bowtie2 <http://bowtie-bio.sourceforge.net/manual.shtml>`__,
-another - on `BWA <http://bio-bwa.sourceforge.net/bwa.shtml>`__. We'll
+on  `Bowtie2`_,
+another - on `BWA`_. We'll
 use the last one since it is fast and allows gapped alignments which are
 essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
 on this step and analyse mapping results in Genome Browser:
 
 When mappings will be complete, open all 4 files in Genome browser to
-compare their `read
-coverage <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999244&action=viewFile>`__. Let's
+compare their `read coverage`_. Let's
 look for specific gene or region, for example, HBA1 and HBA2 genes
 encoding alpha-globin chains of hemoglobin. With WGS technology, you can
-see coverage in both protein-coding and non-coding sequences: |WES_GB|
+see coverage in both protein-coding and non-coding sequences:
+
+|WES_GB|
+
 As for WES technology, you are interested only in exome. That's why, you
 see coverage for HBA1 and HBA2 coding regions and do not see it in
 non-coding ones. To compare read coverage between different enrichment
-platforms, you can build a coverage track: |WES_coverage_1| In most
+platforms, you can build a coverage track:
+
+|WES_coverage_1|
+
+In most
 cases you'll see a significant coverage for sample enriched by
 Nimblegen. Moreover, each platform targets particular exomic segments
 based on combinations of the
-`RefSeq <http://www.ncbi.nlm.nih.gov/refseq/>`__,
-`UCSC <https://genome.ucsc.edu/>`__,
-`Ensembl <http://www.ensembl.org/index.html>`__ and other databases.
+`RefSeq`_, `UCSC`_, `Ensembl`_ and other databases.
 That's why, you may expect difference in coverage for specific
 gene-coding regions. To further use mapped reads, go to the `Mapped
-reads for Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999176&action=viewFile&page=1>`__  folder.
+reads for Clark et al (2011)`_  folder.
 
 Targeted Sequencing Quality Control
 ***********************************
@@ -44,16 +47,17 @@ go to the app page, change the value to “Both exome and target file” and
 select the appropriate target annotation file, you get both exome and/or
 target enrichment statistics. To do this step, you can "generate
 reports" for each mapping separately or run our `Targeted Sequencing
-Quality
-Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF998561&action=createFromSources>`__
-public data flow (with default values) for several samples at once and
-analyse the output reports in `Multiple QC Report
-app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999241&action=viewFile>`__:
+Quality Control`_ public data flow (with default values) for several samples at once and
+analyse the output reports in `Multiple QC Report app`_:
 
 In this tutorial, we are looking at three exome enrichment platforms
 from Agilent, Nimblegen and Illumina and assessing their overall
 targeting efficiency by measuring base coverage over all targeted bases
-and on-target coverage for each platform: |WES_target| A typical
+and on-target coverage for each platform:
+
+|WES_target|
+
+ A typical
 target-enrichment WES experiment results in ~90% of target-bases covered
 at coverage ≥ 1x. This value tends to decrease as the coverage threshold
 increases. How fast this percentage decreases with the coverage
@@ -64,7 +68,10 @@ regions, with the Nimblegen platform giving the highest coverage: about
 87% at ≥ 50x. With Agilent, 91% of bases were covered at ≥ 2x, 86% at ≥
 10x and 66% at ≥ 50x. With Illumina TruSeq enrichment, 91% of bases were
 covered at ≥ 2x, 86% at ≥ 10x and only 50% at ≥ 50x. These results are
-very similar to the paper results: |WES_paper_target_enrichment|
+very similar to the paper results:
+
+|WES_paper_target_enrichment|
+
 Regarding the overall percentage of reads mapped on the target, in a
 typical experiment one may expect ~70%. Looking at the plot, you see the
 highest 77% and 74% values for samples enriched by Nimblegen and Agilent
@@ -75,18 +82,24 @@ overlapping oligonucleotide probes that cover the bases it targets
 multiple times, making it the highest density platform of the
 three. Agilent baits reside immediately adjacent to one another across
 the target exon intervals. Illumina relies on paired-end reads to extend
-outside the bait sequences and fill in the gaps (*Clark M.J. et al,
-2011*): |WES_diff_annotations| Target annotations used in this
-tutorial can be found in Public Data,  `Genome
-annotations <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000048&action=viewFile>`__ folder
+outside the bait sequences and fill in the gaps (*Clark M.J. et al, 2011*):
+
+|WES_diff_annotations|
+
+ Target annotations used in this
+tutorial can be found in Public Data,  `Genome annotations`_ folder
 or in  `Target Annotations for Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972510&action=viewFile>`__ tutorial
+(2011)`_ tutorial
 folder, where we put them for your convenience. Besides the target
 enrichment statistics, you can assess the percentage of exome bases with
 coverage started from ≥ 2x and the overall proportion of reads mapped on
-exome: |WES_exome| All targeted sequencing QC reports are
+exome:
+
+|WES_exome|
+
+All targeted sequencing QC reports are
 collected in  `Mapped reads enrichment reports for Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972509&action=viewFile>`__ folder.
+(2011)`_ folder.
 
 **5. Quality control of mapped reads**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,8 +109,7 @@ biases only show up during mapping process: low coverage, experimental
 artifacts, etc. The detection of such aberrations is an important step
 because it allows you to drive an appropriate downstream analysis. You
 can “generate reports” for each mapping separately or just run `Mapped
-Reads Quality
-Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources>`__ data
+Reads Quality Control`_ data
 flow for multiple samples and analyse the output reports in Multiple QC
 Report app:
 
@@ -117,18 +129,26 @@ Output report includes mapping statistics such as:
 
 The **Coverage by chromosome** plot shows a read coverage at each base
 on each chromosome and patch (if it's presented) defined by lines in
-different colours: |WES_chr_coverage| If your reads are paired, the
+different colours:
+
+|WES_chr_coverage|
+
+If your reads are paired, the
 application additionally calculates insert size statistics, such as
 median and mean insert sizes, median absolute deviation and standard
 deviation of insert size. The **Insert size distribution** plot shows
-the insert size length frequencies: |WES_ins_dist| All complete QC
-reports for mapped reads are stored in  `Mapped reads QC reports for
-Clark et al
-(2011) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972891&action=viewFile>`__ folder.
-You can open all of them at once in `Multiple QC Report
-app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999242&action=viewFile>`__ to
+the insert size length frequencies:
+
+|WES_ins_dist|
+
+ All complete QC
+reports for mapped reads are stored in  `Mapped reads QC reports for Clark et al (2011)`_ folder.
+You can open all of them at once in `Multiple QC Report`_ app to
 interactively analyse and compare mapping statistics between samples:
-|WES_mult_mapped_reads_1| Speaking of mapping results, for each
+
+|WES_mult_mapped_reads_1|
+
+Speaking of mapping results, for each
 sample, almost all of the reads is mapped properly and there is a small
 percentage of partially or improperly mapped reads.
 
@@ -141,3 +161,18 @@ percentage of partially or improperly mapped reads.
 .. |WES_chr_coverage| image:: images/WES_chr_coverage.png
 .. |WES_ins_dist| image:: images/WES_ins_dist.png
 .. |WES_mult_mapped_reads_1| image:: images/WES_mult_mapped_reads_1.png
+.. _Bowtie2: http://bowtie-bio.sourceforge.net/manual.shtml
+.. _BWA: http://bio-bwa.sourceforge.net/bwa.shtml
+.. _read coverage: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999244&action=viewFile
+.. _RefSeq: http://www.ncbi.nlm.nih.gov/refseq/
+.. _UCSC: https://genome.ucsc.edu/
+.. _Ensembl: http://www.ensembl.org/index.html
+.. _Mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999176&action=viewFile&page=1
+.. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF998561&action=createFromSources
+.. _Multiple QC Report app: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999241&action=viewFile
+.. _Genome annotations: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000048&action=viewFile
+.. _Target Annotations for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972510&action=viewFile
+.. _Mapped reads enrichment reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972509&action=viewFile
+.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
+.. _Mapped reads QC reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972891&action=viewFile
+.. _Multiple QC Report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999242&action=viewFile

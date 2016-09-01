@@ -15,16 +15,14 @@ flow, and finally, discuss the results obtained in such analysis.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First off, let's choose exome sequencing data. You can  `upload your
-own
-data <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__ using
-'Import' button or search through all `public
-experiments <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__
-we have on the platform. Our analysis will be based on data coming
-from `Clark et al.
-2011 <http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007499>`__. Let's
-find this experiment in the platform and open it  `Experiment
-Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile>`__:
-|WES_experiment_viewer copy| The authors compared the performance of
+own data`_ using 'Import' button or search through all `public
+experiments`_ we have on the platform. Our analysis will be based on data coming
+from `Clark et al. 2011`_. Let's find this experiment in the platform and open it 
+`Experiment Viewer`_:
+
+|WES_experiment_viewer copy|
+
+The authors compared the performance of
 three major commercial exome sequencing platforms: Agilent’s SureSelect
 Human All Exon 50Mb, Roche/Nimblegen’s SeqCap EZ Exome Library v2.0 and
 Illumina’s TruSeq Exome Enrichment; all applied to the same human blood
@@ -59,3 +57,8 @@ Let’s look at each step separately to get a better idea of what it
 really means.
 
 .. |WES_experiment_viewer copy| image:: images/WES_experiment_viewer-copy.png
+.. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
+.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
+.. _Clark et al. 2011: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP00
+.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile
+

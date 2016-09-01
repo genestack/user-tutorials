@@ -3,21 +3,42 @@ Managing and sharing data
 
 To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your e-mail address in the upper right corner
-and select "Manage groups" from the administration menu. |manage groups|
+and select "Manage groups" from the administration menu.
+
+|manage groups|
+
+
 Any user can create a group. You can think of a group as a shared
 project for two or more users. Let’s share some data — the files we
 created above. To do this go to Manage Groups and create your first
-group. |create new group| Right away we have a new group: |my new group
-members| And we can add a new member to this newly created group: |add
-user to the group| Now your group looks like this: |Zrzut ekranu
-2015-11-03 o 12.48.41| No confirmation is needed – any user in your
+group.
+
+|create new group|
+
+Right away we have a new group:
+
+|my new group members|
+
+ And we can add a new member to this newly created group:
+
+ |add user to the group|
+
+Now your group looks like this:
+
+|Zrzut ekranu 2015-11-03 o 12.48.41|
+
+No confirmation is needed – any user in your
 organisation can create a group and add other users from your
 organisation to it. You are the group administrator of any groups that
 you create. As group administrator you can add/remove other users to
 your group, make them administrators, or at least make them “sharing” or
 “non-sharing” users. All groups appear as folders under "Shared with me"
 in File Manager, and the moment you add a user to a group they’ll see
-the group’s folder in their File Manager. |shared with me folder| Group
+the group’s folder in their File Manager.
+
+|shared with me folder|
+
+ Group
 folders are the same as all other folders in the system: you can add and
 remove files to group folders just like to any other regular folder.
 There is an important point to note though:  ***adding a file to a
@@ -26,7 +47,11 @@ one or more files with a group, you need to select them in File
 Manager (sharing functionality is also available in other places in
 Genestack Platform) and click "Share".  A window will open where you
 will need to select with which group you want to share the selected
-files. |share data| After you select the group and click  *Share*,
+files.
+
+|share data|
+
+After you select the group and click  *Share*,
 you’ll need to confirm that you want to share these files by entering
 your password (the system will remember this authorisation for the next
 five minutes) and then you’ll have the option, which you do not have to
@@ -60,7 +85,11 @@ Platform will autocomplete only users in your organisation, not for
 others. This is a security feature, it means that no one from any other
 organisation can find out who is registered in Genestack Platform from
 yours. After you enter the user’s email, you will see a new screen:
-|manage-groups-invite| The new user is not added to your group right
+
+
+|manage-groups-invite|
+
+The new user is not added to your group right
 away: you will now create an invitation and send it to another
 organisation. Your organisation administrator will need to approve it
 first, and then the other organisation’s administrator will have to
@@ -68,11 +97,19 @@ approve it, too. After confirmation of collaboration by organisation
 administrators of both parties, the group becomes a cross-organisational
 group and other users can be added easily. The inviting organisation’s
 administrator will see the following in their group management screens:
-|incoming-invitation| Once they confirm the outgoing invitation, the
+
+
+|incoming-invitation|
+
+ Once they confirm the outgoing invitation, the
 other organisation’s administrator will see the same in their Incoming
 invitations section and will have to confirm it as well. After both
 confirmations, the new group has members from both organisations:
-|cross-org-group| Note that you can change the status of users from your
+
+
+|cross-org-group|
+
+Note that you can change the status of users from your
 organisation, but not from other organisations. A cross-organisational
 group can have multiple organisations participating in it. The addition
 of each new participating organisation needs approvals of administrators
