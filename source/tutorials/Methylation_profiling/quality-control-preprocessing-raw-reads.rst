@@ -60,7 +60,7 @@ of our raw reads.
 |Multiple QC plot for RawReads|
 
 Looking at the plot we can see the number of nucleotides counted for each individual sample
-obtained from Dnmt3a-KO (blue) or WT HSCs (red) samples.
+obtained from *Dnmt3a*-KO (blue) or WT (red) HSCs samples.
 Additionally, on the app page you could specify the statistics and
 metainfo which will be displayed on the plot and sort the samples by
 specific QC statistics or metainfo keys of choice.
