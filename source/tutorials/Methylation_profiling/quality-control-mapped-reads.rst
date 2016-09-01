@@ -3,7 +3,7 @@ Quality control of mapped reads
 
 Before proceeding to the next analysis step we would recommend you to
 check the quality of mapped reads because the reads might look alright
-in raw reads quality control check but some issues,  such as low
+in raw reads quality control check but some issues, such as low
 coverage, homopolymer biases, experimental artifacts, only appears after
 alignment.
 

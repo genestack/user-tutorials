@@ -1,29 +1,33 @@
-Whole genome bilsulfite sequencing analisys
+Whole genome bisulfite sequencing analisys
 *******************************************
 
-This post has videos accompanying it. You can watch them here:
-|Watch all videos here|
-
-Or read full text and watch the videos separately:
-Bisulfite sequencing approaches are currently considered a “gold
-standard” for detecting DNA methylation. One of them, whole-genome
-bisulfite sequencing (WGBS), provides single-base resolution of
-methylated cytosines in genomic DNA.
-
 |DNA_methylation|
-(Adapted from Lorenzen J.M., Martino F., Thum T. Epigenetic modifications in cardiovascular disease. *Basic Res Cardiol* 107:245 (2012))
 
-Investigating the methylation profile of DNA is extremely valuable because this type
-of epigenetic modification controls gene expression, and is involved in
-such processes as embryonic development, genomic imprinting,
-X-chromosome inactivation and cell differentiation. Since methylation
-takes part in so many cellular processes, it can be expected
-that aberrant methylation can be associated with various diseases for
-example different types of cancer.
-In this tutorial we will show you how
-to bioinformatically analyse the whole genome DNA methylation with
-Genestack applications.
-The entire pipeline includes the following steps:
+
+(Adapted from Lorenzen J.M., Martino F., Thum T. Epigenetic modifications in cardiovascular disease.
+*Basic Res Cardiol* 107:245 (2012))
+
+Investigating the DNA methylation pattern is extremely valuable because this epigenetic system
+regulates gene expression. It is involved in embryonic development, genomic imprinting, X chromosome
+inactivation and cell differentiation. Since methylation takes part in many normal cellular
+functions, aberrant methylation of DNA may be associated with a wide spectrum of human diseases,
+including cancer. Methylation is in strong interplay with other epigenetic systems, providing the
+unique balanced picture of active and supressed genes. Indeed, methylomes of a malignantly
+transformed cell and a healthy one are differ. Moreover, both hyper- and hypomethylation events are
+associated with cancer.
+
+As methylation model of DNA is reversible and can be modified under the influence of
+the environment, epigenetics open new prospectives in diagnose and therapy of cancers and many other
+severe diseases.
+
+Bisulfite sequencing approaches are currently considered a “gold standard” allowing comprehensive
+understanding of the methylome landscape. Whole-genome bisulfite sequencing (WGBS), provides single-
+base resolution of methylated cytosines accross the entire genome.
+
+In this tutorial step-by-step we will show you how to analyse and interprete bisulfite sequencing
+data with Genestack Platform.
+
+The overall pipeline includes the following steps:
 
 #. Setting up a WGBS experiment
 #. Quality control of bisulfite sequencing reads
@@ -35,48 +39,59 @@ The entire pipeline includes the following steps:
 #. Methylation ratio analysis
 #. Exploring the genome methylation levels in Genome Browser
 
-The `dataflow <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1>`__ used
-in this tutorial, has been previously prepared by our team and put into `tutorial folder <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1>`__
-for your convenience.
+
+The details will be further elaborated in the sections below.
+To follow along go to `Tutorials`_ folder in the Public data. Then select the
+`Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform`_
+folder, containing all the tutorial files we talk about here for your convenience. Find there
+processed files, explore results, and repeat the analysis steps on data of your interest with a
+`WGBS data analysis (for Rodriguez et al., 2014) dataflow`_.
 
 .. youtube:: https://www.youtube.com/watch?v=o7RkUrCRl4s
+
 
 Setting up a WGBS experiment
 ****************************
 
-To go through all these
-steps, we will use one of the WGBS experiments from Genestack
-`Public Experiments collection <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1>`__.
-Feel free to reproduce the workflow on your own data uploaded with the
-`Data Importer <https://platform.genestack.org/endpoint/application/run/genestack/uploader>`__.
-
-What's more, you could open the `Tutorials <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1>`__ folder in
-the Public data and select the "Whole-genome Bisulfite Sequencing Data
-Analysis on Genestack Platform". In the folder you will find the WGBS
-experiment used in this tutorial, processed data and all the other
-needed files. 
-Experiment by  `Rodriguez et al., 2014 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714>`__
-can serve as a clear example of the applications of WGBS to
-genome-wide DNA 5-methylcytosine landscape profiling.
+For this tutorial we picked the data set by `Rodriguez et al., 2014`_ from the Genestack collection
+of `Public Experiments`_.
 
 |public experiments|
 
-To learn more just open the experiment in `Experiment Viewer <https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile>`__ :
+Feel free to reproduce the workflow on any other relevant data set with
+`Experiment Browser`_.
+If you do not find there needed experiment or you intend to analyse your own data use our
+`Data Import`_ application allowing to upload files from your computer or from URL. Learn more about
+importing data onto the Genestack in our `blog post`_.
+
+In this experiment authors applied WGBS of genomic DNA to investigate the mechanisms that could
+promote changes in DNA methylation and contribute to cell differentiation and malignant
+transformation. They investigated the cytosine methylation profile in normal precursors of leukemia
+cells, hematopoietic stem cells (HSCs).
+
+The team discovered novel genomic features, they called them DNA methylation canyons, that are uncommonly
+large DNA regions of low methylation. Canyons are distinct from CpG islands and associated with
+genes involved in development.
+
+In mammals, a methyl group is added to cytosine residues by DNA methyltransferase (DNMT) enzymes.
+As the *de novo* DNA methyltransferase Dnmt3a is shown to be crucial for normal HSCs
+differentiation, and *Dnmt3a* gene is often mutated in human leukemias, the authors further explore
+how loss of Dnmt3a influences canyons.
+
+|DNMT|
+
+(Adapted from Jeong M. & Goodell M.A. New answers to old questions from genome-wide maps of DNA
+methylation in hematopoietic cells. *Exp Hematol* 42(8):609-617)
+
+They compared DNA methylation patterns in wild type and *Dnmt3a* knockout mouse HSCs. It turned out
+that the loss of Dnmt3a results in methylation changes at the edge of canyons and can influence
+canyon size.
+
+Now let's start reproducing these results with data flows pre-prepared by Genestack.
+
+To learn more just open the experiment in `Experiment Viewer`_ :
 
 |Experiment_Viewer|
-
-Briefly, the authors performed WGBS on DNA obtained
-from mouse hematopoietic stem cells (HSCs) to investigate the mechanisms
-that could promote changes in DNA methylation and contribute
-to malignant transformation. They discovered extended DNA regions of low
-methylation — “Canyons” — that are distinct from CpG islands and
-shores and cover conserved domains frequently containing transcription
-factors. Then, as DNA methyltransferase 3a (Dnmt3a) encoding gene is
-often mutated in human leukemias, the authors also compared DNA
-methylation patterns in purified wild type and Dnmt3a conditional
-knockout mouse HSCs. And it was revealed that the loss of DNA Dnmt3a can
-influence the Canyon size. Now let's start reproducing these results
-with data flows pre-prepared by Genestack.
 
 .. |Watch all videos here| image:: images/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
    :class: aligncenter wp-image-3563 size-large

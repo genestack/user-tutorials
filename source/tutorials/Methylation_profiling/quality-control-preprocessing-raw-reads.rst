@@ -63,9 +63,9 @@ Looking at the plot we can see the number of nucleotides counted for each indiv
 obtained from Dnmt3a-KO (blue) or WT HSCs (red) samples.
 Additionally, on the app page you could specify the statistics and
 metainfo which will be displayed on the plot and sort the samples by
-specific QC statistics or metainfo keys of choice. Now let's look
-at the  `FastQC report`_ for one of the assays, for example, “ko3a_b2l4 Bisulfite-Seq”.  All
-prepared FastQC reports for all the samples are stored in the `FastQC reports for Rodriguez et al., 2014`_ folder.
+specific QC statistics or metainfo keys of choice.
+
+Now let's look at the  `FastQC report`_ for one of the assays, for example, “ko3a_b2l4 Bisulfite-Seq”.
 Per sequence GC content graph shows the GC content across the
 whole length of each read. Ideally, we will see the normal distribution
 of GC content. Our results reflect some deviation from from normal
@@ -119,6 +119,8 @@ are:
 
 These contaminants can strongly influence the results of analysis and should be trimmed.
 
+All prepared FastQC reports for all the samples are stored in the `FastQC reports for Rodriguez et al., 2014`_ folder.
+
 Preprocessing of raw reads
 **************************
 
@@ -130,7 +132,7 @@ reliable results in the downstream analysis.
 
 The authors analysed two biological replicates for two murine
 phenotypes: wild type (WT) HSCs and conditionally *Dnmt3a* knocked out
-(KO) HSCs. Moreover, each biological replicate of WT or  *Dnmt3a* KO
+(KO) HSCs. Moreover, each biological replicate of WT or  *Dnmt3a*-null
 HSCs condition has several technical replicates. Let's select the raw
 reads "m12_b4l1 Bisulfite-Seq", "m12_b4l2 Bisulfite-Seq" and "m12_b3
 Bisulfite-Seq" that are three technical replicates for the second
