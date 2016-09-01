@@ -1,11 +1,11 @@
 Whole genome bisulfite sequencing analisys
 *******************************************
 
-|DNA_methylation|
+.. figure:: images/DNA_methylation.png
+   :alt: DNA methylation
 
-
-(Adapted from Lorenzen J.M., Martino F., Thum T. Epigenetic modifications in cardiovascular disease.
-*Basic Res Cardiol* 107:245 (2012))
+   Adapted from Lorenzen J.M., Martino F., Thum T. Epigenetic modifications in cardiovascular disease.
+   *Basic Res Cardiol* 107:245 (2012)
 
 Investigating the DNA methylation pattern is extremely valuable because this epigenetic system
 regulates gene expression. It is involved in embryonic development, genomic imprinting, X chromosome
@@ -80,8 +80,10 @@ how loss of Dnmt3a influences canyons.
 
 |DNMT|
 
-(Adapted from Jeong M. & Goodell M.A. New answers to old questions from genome-wide maps of DNA
-methylation in hematopoietic cells. *Exp Hematol* 42(8):609-617)
+.. figure:: images/DNMT.png
+   :alt: DNMT
+
+   Adapted from Jeong M. & Goodell M.A. New answers to old questions from genome-wide maps of DNA methylation in hematopoietic cells. *Exp Hematol* 42(8):609-617
 
 They compared DNA methylation patterns in wild type and *Dnmt3a* knockout mouse HSCs. It turned out
 that the loss of Dnmt3a results in methylation changes at the edge of canyons and can influence
