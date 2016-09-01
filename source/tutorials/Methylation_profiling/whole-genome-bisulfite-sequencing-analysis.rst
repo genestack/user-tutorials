@@ -86,3 +86,14 @@ with data flows pre-prepared by Genestack.
 .. |DNA_methylation| image:: images/DNA_methylation.png
 .. |public experiments| image:: images/public-experiments.png
 .. |Experiment_Viewer| image:: images/Experiment_Viewer.png
+.. |DNMT| image:: images/DNMT.png
+.. _Tutorials: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1
+.. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
+.. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
+.. _Rodriguez et al., 2014: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714
+.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
+.. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
+.. _Data Import: https://platform.genestack.org/endpoint/application/run/genestack/uploader
+.. _blog post: https://genestack.com/tutorial/file-import/
+.. _Rodriguez et al., 2014: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714
+.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile

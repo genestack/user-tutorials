@@ -15,7 +15,7 @@ With our platform you can quickly and easily obtain an interactive FastQC Report
 that covers different quality aspects of raw
 data such as general sequence quality, total number of reads, GC content
 distribution, read quality distribution and much more. To start the
-analysis we can use public `Raw Reads Quality Control <https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF972554&action=viewFile>`__ data
+analysis we can use public `Raw Reads Quality Control`_ data
 flow. There is no need to repeat the same steps for each sample —
 the pipelines for all 16 assays from our experiment can easily be
 built simultaneously using this public data flow. In order to run the
@@ -53,23 +53,19 @@ for all the samples we have selected.
 
 We will demonstrate the examples of QC-reports using files previously prepared by our team.
 Go to the folder with processed files for our tutorial and click on the
-complete  `Multiple QC Report for Raw
-Reads <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF970040&action=viewFile>`__ we
+complete  `Multiple QC Report for Raw Reads`_ we
 have created for all 16 raw read files in order to compare the quality
 of our raw reads.
 
 |Multiple QC plot for RawReads|
 
 Looking at the plot we can see the number of nucleotides counted for each individual sample
-obtained from  *Dnmt3a* KO (blue) or WT HSCs (red) samples.
+obtained from Dnmt3a-KO (blue) or WT HSCs (red) samples.
 Additionally, on the app page you could specify the statistics and
 metainfo which will be displayed on the plot and sort the samples by
 specific QC statistics or metainfo keys of choice. Now let's look
-at the  `FastQC
-report <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF969042&action=viewFile>`__
-for one of the assays, for example, “ko3a_b2l4 Bisulfite-Seq”.  All
-prepared FastQC reports for all the samples are stored in the `FastQC
-reports for Rodriguez et al., 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969029&action=viewFile&page=1>`__ folder.
+at the  `FastQC report`_ for one of the assays, for example, “ko3a_b2l4 Bisulfite-Seq”.  All
+prepared FastQC reports for all the samples are stored in the `FastQC reports for Rodriguez et al., 2014`_ folder.
 Per sequence GC content graph shows the GC content across the
 whole length of each read. Ideally, we will see the normal distribution
 of GC content. Our results reflect some deviation from from normal
@@ -176,8 +172,7 @@ error threshold equal to 1%.
 |df trim low quality bases|
 
 All preprocessed files are freely accessible in the folders `Trim adaptors
-for Rodriguez et al., 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968745&action=viewFile>`__ and `Trim
-low quality bases for Rodriguez et al., 2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile>`__.
+for Rodriguez et al., 2014`_ and `Trim low quality bases for Rodriguez et al., 2014`_.
 
 .. |choose DF| image:: images/choose-DF.png
 .. |DF_FastQC| image:: images/DF_FastQC.png
@@ -195,3 +190,9 @@ low quality bases for Rodriguez et al., 2014 <https://platform.genestack.org/end
 .. |File chooser (ref-genome)| image:: images/File-chooser-ref-genome.png
 .. |DF trim adaptors and contaminants| image:: images/DF-trim-adaptors-and-contaminants.png
 .. |df trim low quality bases| image:: images/df-trim-low-quality-bases.png
+.. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF972554&action=viewFile
+.. _Multiple QC Report for Raw Reads: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF970040&action=viewFile
+.. _FastQC report: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF969042&action=viewFile
+.. _FastQC reports for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969029&action=viewFile&page=1
+.. _Trim adaptors for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968745&action=viewFile 
+.. _Trim low quality bases for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile.

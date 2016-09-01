@@ -5,7 +5,7 @@ Following the preprocessing, our data is of improved quality and we
 can move on to the next step — alignment of trimmed reads onto
 the reference genome.
 
-|df bisulfte seq mapping|
+|df bisulfite seq mapping|
 
 We run Bisulfite Sequencing Mapping with default parameters. Click on the app name to
 move to its page where you can change the parameters of alignment and
@@ -13,8 +13,7 @@ learn more about the app clicking on the "about".
 
 |BSMAP|
 
-In the  `Mapped reads for Rodriguez et al.,
-2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968739&action=viewFile>`__ folder
+In the  `Mapped reads for Rodriguez et al., 2014`_ folder
 you can find all the Mapped Reads.
 
 **Merging of the mapped reads** obtained from technical replicates
@@ -45,9 +44,11 @@ Use the same data flow to merge mapped reads for technical replicates of remain
 you will get 4 merged mapped reads for both analysed murine
 phenotypes. You can also use prepared Merged Mapped Reads files by
 opening the `Merged mapped reads for Rodriguez et al.,
-2014 <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile>`__ folder.
+2014`_ folder.
 
 
-.. |df bisulfte seq mapping| image:: images/df-bisulfte-seq-mapping-.png
+.. |df bisulfite seq mapping| image:: images/df-bisulfte-seq-mapping-.png
 .. |BSMAP| image:: images/BSMAP.png
 .. |df merge mapped reads| image:: images/df-merge-mapped-reads.png
+.. _Mapped reads for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968739&action=viewFile
+.. _Merged mapped reads for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile
