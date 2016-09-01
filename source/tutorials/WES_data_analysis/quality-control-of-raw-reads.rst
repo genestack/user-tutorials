@@ -26,7 +26,7 @@ unusually shaped or shifted GC distribution:
 
 |WES_per_sequnce_GC_content|
 
- **Per base sequence quality** plots
+**Per base sequence quality** plots
 show the quality scores across all bases at each position in the reads.
 By default you see low quality zone and mean quality line. If the median
 is less than 25 or the lower quartile is less than 10, you'll get
@@ -34,7 +34,7 @@ warnings.
 
 |WES_per_base_sequence_quality|
 
- **Per sequence quality
+**Per sequence quality
 scores** report allows you to see frequencies of quality values in a
 sample. The reads are of good quality if the peak on the plot is shifted
 to the right, to the max quality score. In our case, almost all of the
@@ -53,7 +53,7 @@ unknown nucleotides and a slight difference in A-T and G-C frequencies:
 
 |WES_per_base_sequence_content|
 
- **Sequence duplication levels**
+**Sequence duplication levels**
 plots represent the percentage of the library made up of sequences with
 different duplication levels. In simple words, 44% of reads are unique,
 26% of reads are repeated twice, 13% - three times, 4% - more than 10
@@ -131,7 +131,7 @@ suggests you to choose the app where you can also start computation:
 
 |WES_view_apps|
 
- In order to start computation for each data flow step
+In order to start computation for each data flow step
 separately, click on file name and choose 'start initialization'.
 Let's run "Trim Adaptors and Contaminants" step:
 

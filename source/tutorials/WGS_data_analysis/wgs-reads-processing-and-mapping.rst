@@ -118,7 +118,7 @@ initialization to generate mapped reads QC reports.
 
 |MR QC DFR|
 
- As in
+As in
 the case of raw reads quality control, you may explore results not only
 in Mapped Reads QC Report app itself, but also compare the mapping
 quality of both tested assays with Multiple QC Report app. Report
@@ -126,7 +126,7 @@ appears on the page as the computation is finished.
 
 |Screenshot 2015-12-25 15.43.51|
 
- Let's look at the example report for the two
+Let's look at the example report for the two
 sequencing runs from our experiment. Go to the tutorial folder and open
 `QC reports`_
 for both mapped reads files in Multiple QC Report app. Use the drop-down
@@ -136,7 +136,7 @@ see on the plot.
 
 |Mapped ReadsQC|
 
- According to the QC check, both
+According to the QC check, both
 technical replicates from our experiment are concordant with all reads
 being mapped and 95% of the reads are mapped properly. To obtain more
 detailed statistics explore individual QC report in Mapped Reads QC
@@ -151,12 +151,12 @@ deviation equal to 66.99.
 
 |Screenshot 2016-04-17 16.55.26|
 
- *Insert size distribution* plot displays the range lengths and frequencies of inserts
+*Insert size distribution* plot displays the range lengths and frequencies of inserts
 (x- and y-axis, respectively) in the analysed assay.
 
 |Screenshot 2016-01-15 16.12.43|
 
- After ensuring that our mapped reads are of high
+After ensuring that our mapped reads are of high
 enough quality, we can move on to the final stages of our analysis
 pipeline — variant identification and effect prediction. Now then,
 let's finalize the computations of the pipeline. Make sure to check the

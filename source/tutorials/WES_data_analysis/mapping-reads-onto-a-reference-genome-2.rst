@@ -57,7 +57,7 @@ and on-target coverage for each platform:
 
 |WES_target|
 
- A typical
+A typical
 target-enrichment WES experiment results in ~90% of target-bases covered
 at coverage ≥ 1x. This value tends to decrease as the coverage threshold
 increases. How fast this percentage decreases with the coverage
@@ -86,7 +86,7 @@ outside the bait sequences and fill in the gaps (*Clark M.J. et al, 2011*):
 
 |WES_diff_annotations|
 
- Target annotations used in this
+Target annotations used in this
 tutorial can be found in Public Data,  `Genome annotations`_ folder
 or in  `Target Annotations for Clark et al
 (2011)`_ tutorial
@@ -141,7 +141,7 @@ the insert size length frequencies:
 
 |WES_ins_dist|
 
- All complete QC
+All complete QC
 reports for mapped reads are stored in  `Mapped reads QC reports for Clark et al (2011)`_ folder.
 You can open all of them at once in `Multiple QC Report`_ app to
 interactively analyse and compare mapping statistics between samples:

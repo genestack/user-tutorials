@@ -29,7 +29,7 @@ change anything.
 
 |choose another file|
 
- In this example, we will use this
+In this example, we will use this
 data flow to produce variant calls for another raw sequence data file,
 FS02 reproducing the entire workflow including trimming low quality
 bases, spliced mapping and variant calling. All you need to do is choose
@@ -39,7 +39,7 @@ flow now or delay initialization.
 
 |delay initialization until later|
 
- If you decide to delay the initialization till later, you will be brought
+If you decide to delay the initialization till later, you will be brought
 back to the Data Flow Runner page where you can initialize individual
 files by clicking on the file name and later selecting "Start
 initialization".

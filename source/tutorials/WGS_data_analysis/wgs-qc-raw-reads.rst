@@ -19,7 +19,7 @@ Control" to open it in Data Flow Runner app.
 
 |DF list|
 
- The app page
+The app page
 presents the quality control part of the pipeline in a graphical form.
 To generate QC-reports click on the "Run Data Flow" button and then on
 "Start initialization now".
@@ -35,7 +35,7 @@ back to the Data Flow Runner page, click "2 files" link and select
 
 |Start init (FastQC)|
 
- The calculations can
+The calculations can
 be started directly from the Multiple QC Report app page by clicking
 "(re)-start computation if possible".
 
@@ -113,7 +113,7 @@ sequences or other contaminations of the library.
 
 |Per base sequence content (Run1)|
 
- The warning reported for the  *sequence
+The warning reported for the  *sequence
 duplication * metric for the first sequencing run indicates that the
 number of non-unique sequences in the assay has reached more than 20% of
 the total. The average duplication levels for read mates are 1.50x and

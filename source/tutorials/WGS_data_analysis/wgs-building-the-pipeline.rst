@@ -27,7 +27,7 @@ Low Quality Bases.
 
 |Add step|
 
- This will take you to the Trim Low Quality
+This will take you to the Trim Low Quality
 Bases app page. Proceed in the same way and add all the desired steps to
 the pipeline until you reach the final one — Effect Prediction. Don't
 forget to set the parameters for each app in the pipeline and select
@@ -49,7 +49,7 @@ Flow".
 
 |Create new data flow|
 
- The created data flow will be opened in the Data Flow Editor.
+The created data flow will be opened in the Data Flow Editor.
 
 |Screenshot 2016-01-11 12.34.09|
 
@@ -81,7 +81,7 @@ Effect Prediction.
 
 |Screenshot 2015-12-24 15.28.14|
 
- You can verify
+You can verify
 processing parameters on each individual app pages before running the
 pipeline. To do this, click on "Edit file list" and open the file using
 the app that created this file:

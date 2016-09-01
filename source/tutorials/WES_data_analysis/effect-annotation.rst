@@ -76,28 +76,28 @@ additionally illustrates what regions of genome are mostly affected:
 
 |WES_variations|
 
- Most of variants are detected in the introns. That can
+Most of variants are detected in the introns. That can
 be explained by the fact that platform baits sometimes extend farther
 outside the exon targets. **Quality** histogram, like this one below,
 shows you the distribution of quality scores for detected variants:
 
 |WES_quality|
 
- This one is asymmetrical, there are more then 160,000
+This one is asymmetrical, there are more then 160,000
 variants with quality of 10 and a lot of small peaks of lower and
 greater qualities. Also the application reports a histogram
 of **Coverage** for detected variants:
 
 |WES_coverage|
 
- All variants
+All variants
 have coverage 2 and more. Next **Insertions and deletions length**
 histogram shows size distribution of detected indels:
 
 
 |WES_insertions_and_deletions_length|
 
- For Nimblegen sample, we
+For Nimblegen sample, we
 identified more than 40,000 indels, of which ~24,000 were deletions of
 up to 12 bases and the rest were insertions of up to 12 bases. There are
 more indels were identified after Illumina TruSeq enrichment (~80,000)
@@ -129,7 +129,7 @@ SNP variants.
 
 |WES_Ts_Tv|
 
- But below the table, you can find the
+But below the table, you can find the
 information for all variants. For WES data, the Ts/Tv ratio of total
 variants ranged from 1.6 to 1.8 and was lower than the estimated ~2.6.
 It can be explained by the fact that the platforms target sequences

@@ -20,7 +20,7 @@ as input to applications for creating other files.
 
 |trim low quality bases app|
 
- Notice that you can edit the initialisation parameters of
+Notice that you can edit the initialisation parameters of
 the new file. You can change them because the file is not yet
 initialised, i.e. the computation – in this case, trimming – has not yet
 been started. After initialisation has completed, these parameters are
@@ -62,7 +62,7 @@ initialisation” blue button at the top.
 
 |file provenance|
 
- You can track
+You can track
 the progress of your computations using the Task Manager that can be
 found at the top of the page. All the files created in the above example
 are located in the `tutorial
@@ -75,7 +75,7 @@ want to analyse, right click on them and select the app you wish to use.
 
 |running an app on multiple files|
 
- All the steps you need to take are
+All the steps you need to take are
 identical to if you would want to analyse just one file. In this example
 we have created 100 files that we have to initialize to start the tasks.
 

@@ -18,7 +18,7 @@ Right away we have a new group:
 
 |my new group members|
 
- And we can add a new member to this newly created group:
+And we can add a new member to this newly created group:
 
 |add user to the group|
 
@@ -37,7 +37,7 @@ the group’s folder in their File Manager.
 
 |shared with me folder|
 
- Group
+Group
 folders are the same as all other folders in the system: you can add and
 remove files to group folders just like to any other regular folder.
 There is an important point to note though:  ***adding a file to a
@@ -98,7 +98,7 @@ administrator will see the following in their group management screens:
 
 |incoming-invitation|
 
- Once they confirm the outgoing invitation, the
+Once they confirm the outgoing invitation, the
 other organisation’s administrator will see the same in their Incoming
 invitations section and will have to confirm it as well. After both
 confirmations, the new group has members from both organisations:

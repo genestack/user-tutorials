@@ -50,7 +50,7 @@ tables, and so forth.
 
 |metainfo reference genome|
 
- We can take a look at
+We can take a look at
 any file’s metadata by clicking the “eye” icon in the File Manager. All
 files have rich metadata, different for each file type. Some metadata
 fields are filled in by our curators, some are available for you to edit

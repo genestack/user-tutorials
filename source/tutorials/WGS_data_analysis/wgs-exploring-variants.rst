@@ -75,7 +75,7 @@ analysis they used 3,537,794 variants identified by both methods.
 
 |Screenshot 2016-03-14 12.24.19|
 
- *Insertion deletion length histogram* graphically demonstrates the
+*Insertion deletion length histogram* graphically demonstrates the
 distribution of length of all insertions and deletions. The discovered Indels
 ranged from -43 to 28 bp in length with the standard deviation of 5.256. 
 Authors detected 713,640 InDels (341,382 insertions and 372,258 deletions)
@@ -125,7 +125,7 @@ are located in intronic regions  (63,351% of the total).
 
 |Effects by type and region (table)|
 
- As we can see the vast majority of identified
+As we can see the vast majority of identified
 variations are associated with introns (climbed above 60%) and there is
 no mutations in splice sites. The changes in intergenic regions
 represent ~17% of the total, while changes in exons occur in
@@ -147,7 +147,7 @@ higher for exons.
 
 |Ts:Tv|
 
- Our results are in line with the original
+Our results are in line with the original
 paper by Dogan et. al where they have identified 2,383,204 transitions,
 1,154,590 transversions resulting in Ts/Tv ratio of 2.06   Next entry of
 the report is the codon replacements table (we have posted a fragment of
@@ -166,7 +166,7 @@ Ile events.
 
 |AA chages|
 
- Apart from the mentioned statistics and plots, report also contains allele
+Apart from the mentioned statistics and plots, report also contains allele
 frequency plots and information on the change rate per chromosome.
 
 Genetic Variants Filtering

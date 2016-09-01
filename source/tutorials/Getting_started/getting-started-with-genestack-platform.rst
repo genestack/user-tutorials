@@ -46,7 +46,7 @@ screen, where your email is displayed.
 
 |user management|
 
- If you click on  *Manage Users * you will go to the user management screen. Every
+If you click on  *Manage Users * you will go to the user management screen. Every
 user in Genestack Platform belongs to an organisation. When you signed
 up to use Genestack via the sign up dialog, we created a new
 organisation for you, and you have automatically become its first user
@@ -66,7 +66,7 @@ user* button.
 
 |second user creation|
 
- You will need to set the user name,
+You will need to set the user name,
 email and password. Users added this way are immediately confirmed, and
 can log in right away.
 
