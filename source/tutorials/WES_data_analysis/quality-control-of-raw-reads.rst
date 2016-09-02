@@ -155,7 +155,7 @@ stored in `Trimmed raw reads for Clark et al (2011)`_  folder.
 .. |WES_start_preprocess| image:: images/WES_start_preprocess.png
 .. _the Raw Reads QC data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 .. _sample enriched by Aligned SureSelect 50M: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF970289&action=viewFile
-.. _Raw reads QC reports for Clark et al 2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970288&action=viewFile
+.. _Raw reads QC reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970288&action=viewFile
 .. _Multiple QC Report application: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999102&action=viewFile
 .. _Whole Exome Sequencing Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF999236&action=createFromSources
 .. _Trimmed raw reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF971384&action=viewFile&page=1

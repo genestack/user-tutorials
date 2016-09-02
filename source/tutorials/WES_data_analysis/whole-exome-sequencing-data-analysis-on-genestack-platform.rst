@@ -15,8 +15,7 @@ flow, and finally, discuss the results obtained in such analysis.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First off, let's choose exome sequencing data. You can `upload your
-own data`_ using 'Import' button or search through all `public
-experiments`_ we have on the platform. Our analysis will be based on data coming
+own data`_ using 'Import' button or search through all `public experiments`_ we have on the platform. Our analysis will be based on data coming
 from `Clark et al. 2011`_. Let's find this experiment in the platform and open it 
 `Experiment Viewer`_:
 

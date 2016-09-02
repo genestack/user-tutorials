@@ -1,4 +1,4 @@
-WGS analyses on Genestack
+WGS analysis on Genestack
 *************************
 
 |Screenshot 2016-01-09 16.03.58|
@@ -25,7 +25,7 @@ universal method than WES.
 This tutorial will guide you through the genetic variants discovery
 workflow on Genestack. We will analyse a dataset by Dogan *et
 al.* including high coverage (x35) WGS data from a Turkish
-individual. The experiment can be found in `Public Experiments`_  —
+individual. The experiment can be found in `Public Experiments`_ —
 regularly updated collection of freely accessible experiments imported
 from SRA, ENA, GEO, ArrayExpress. Genestack enables you to work on
 public and private data seamlessly. Import your own sequencing data,
