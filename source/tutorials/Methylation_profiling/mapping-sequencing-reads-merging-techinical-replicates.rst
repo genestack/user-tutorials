@@ -13,7 +13,7 @@ learn more about the app clicking on the "about".
 
 |BSMAP|
 
-In the  `Mapped reads for Rodriguez et al., 2014`_ folder
+In the `Mapped reads for Rodriguez et al., 2014`_ folder
 you can find all the Mapped Reads.
 
 **Merging of the mapped reads** obtained from technical replicates

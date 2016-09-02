@@ -4,8 +4,7 @@ Mapping reads onto a reference genome
 After raw data QC and preprocessing, the next step is to map exome
 sequencing data to the reference genome with high efficiency and
 accuracy. Genestack supports two Unspliced mappers, one is based
-on  `Bowtie2`_,
-another - on `BWA`_. We'll
+on `Bowtie2`_, another - on `BWA`_. We'll
 use the last one since it is fast and allows gapped alignments which are
 essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
@@ -29,8 +28,7 @@ platforms, you can build a coverage track:
 In most
 cases you'll see a significant coverage for sample enriched by
 Nimblegen. Moreover, each platform targets particular exomic segments
-based on combinations of the
-`RefSeq`_, `UCSC`_, `Ensembl`_ and other databases.
+based on combinations of the `RefSeq`_, `UCSC`_, `Ensembl`_ and other databases.
 That's why, you may expect difference in coverage for specific
 gene-coding regions. To further use mapped reads, go to the `Mapped
 reads for Clark et al (2011)`_  folder.
@@ -109,8 +107,7 @@ biases only show up during mapping process: low coverage, experimental
 artifacts, etc. The detection of such aberrations is an important step
 because it allows you to drive an appropriate downstream analysis. You
 can “generate reports” for each mapping separately or just run `Mapped
-Reads Quality Control`_ data
-flow for multiple samples and analyse the output reports in Multiple QC
+Reads Quality Control`_ data flow for multiple samples and analyse the output reports in Multiple QC
 Report app:
 
 Output report includes mapping statistics such as:
@@ -142,7 +139,7 @@ the insert size length frequencies:
 |WES_ins_dist|
 
 All complete QC
-reports for mapped reads are stored in  `Mapped reads QC reports for Clark et al (2011)`_ folder.
+reports for mapped reads are stored in `Mapped reads QC reports for Clark et al (2011)`_ folder.
 You can open all of them at once in `Multiple QC Report`_ app to
 interactively analyse and compare mapping statistics between samples:
 

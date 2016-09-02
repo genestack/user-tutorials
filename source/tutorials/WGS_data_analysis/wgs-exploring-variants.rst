@@ -18,10 +18,12 @@ and as soon as the computation is finished, explore the results of
 variant identification using the interactive applications such
 as Variant Explorer or Genome Browser. Let's click on the genetic
 variants file name in Task Manager and open it in Genome Browser using
-the context menu.   In case some files are not initialized yet, Genome
+the context menu. In case some files are not initialized yet, Genome
 Browser page is empty. You can initialize the files by clicking on "Go!"
 to start the process. Tracks representing found mutations will appear on
-the page as the task is finished.   Here we will show you the `results of variant calling`_
+the page as the task is finished.
+
+Here we will show you the `results of variant calling`_
 performed for our tutorial. On the Genome Browser page you will see the
 reference track displaying annotated genes with their coordinates and
 variation track representing  genetic variants, their genomic position,
@@ -83,9 +85,8 @@ ranging from −52 bp to 34 bp in length.
 
 |Indel length dostributions|
 
-Additionally, we
-performed filtering by effect to find out InDel distribution throughout
-different genomic locations.  From identified InDels 258680 and 263835
+Additionally, we performed filtering by effect to find out InDel distribution throughout
+different genomic locations. From identified InDels 258680 and 263835
 were in an intergenic and intronic region, respectively. We also found
 69426 InDels in the upstream and 74162 InDels in the downstream gene
 regions. Only 69 and 78 mutations were detected in the splice site donor
@@ -133,8 +134,7 @@ approximately 2% of events.
 
 |Effects by region|
 
-The most frequent base
-changes is G to A with 651,754, followed by C to T (650,016), T to C
+The most frequent base changes is G to A with 651,754, followed by C to T (650,016), T to C
 (621,506) and A to G (620,959) base changes.
 
 |Base changes|
@@ -173,8 +173,7 @@ Genetic Variants Filtering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Resulting genetic variants files, annotated or not, can be opened in the
-`Variant Explorer`_
-app. In the Variant Explorer you can interactively explore the
+`Variant Explorer`_ app. In the Variant Explorer you can interactively explore the
 information about found mutations, as well as sort and filter them by
 specific factors such as: locus, type of variants (SNP, INS, DEL, MNP),
 reference or alternative allele, Phred-scaled probability that the
@@ -204,7 +203,7 @@ high impact variants, 154 are nonsense mutations.
 |Screenshot 2016-04-24 14.10.20|
 
 Let’s see how many of those are found on chromosome 10 by
-specifying the chromosome in the "Locus".   Turns out on chromosome 10
+specifying the chromosome in the "Locus". Turns out on chromosome 10
 there only one variant change that is high impact nonsense mutation.
 This base change is located in CTBP2 gene, and result in a premature
 stop codon.
@@ -229,7 +228,7 @@ we used Variant Calling tool based on SAMtools and BCFtools.  
 
 Need to perform analysis of `WGBS`_, `WES`_ or `RNA-Seq data`_?
 
-Visit our website to check out more `tutorials`_!   If you have any
+Visit our website to check out more `tutorials`_! If you have any
 questions or suggestions, please leave them below or `email
 us <feedback@genestack.com>`_.
 

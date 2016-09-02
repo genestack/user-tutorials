@@ -31,7 +31,7 @@ This will take you to the Trim Low Quality
 Bases app page. Proceed in the same way and add all the desired steps to
 the pipeline until you reach the final one — Effect Prediction. Don't
 forget to set the parameters for each app in the pipeline and select
-appropriate reference genome, in this case  *H. sapiens* reference
+appropriate reference genome, in this case *H. sapiens* reference
 genome (GRCh37.75), that will be used by Unspliced Mapping with BWA,
 Variant Calling and Effect Prediction apps. You can return to any
 added app by clicking on its name in File Dataflow.
@@ -66,8 +66,7 @@ from each step into one group:
 
 |Screenshot 2016-01-11 12.55.56|
 
-To run
-the pipeline click on the "Run Data Flow" button at the bottom of the
+To run the pipeline click on the "Run Data Flow" button at the bottom of the
 data flow. After that you will be suggested to either start the
 computation now or delay it till later:
 

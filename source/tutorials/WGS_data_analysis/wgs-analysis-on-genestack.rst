@@ -14,7 +14,7 @@ genetic variants associated with human complex or Mendelian diseases and
 reveal the variations across diverse human populations. There are
 significant advantages and limitations of both of these techniques, but
 balancing cost- and time-effectiveness against the desired results helps
-choosing the optimal sequencing approach.   WES may cost less than WGS
+choosing the optimal sequencing approach. WES may cost less than WGS
 because it covers only protein-coding regions and generates less raw
 data, but WGS provides more comprehensive picture of the genome
 considering both non-coding and coding genomic regions. It also allows
@@ -22,16 +22,16 @@ to identify SV and CNV that may be missed by WES. Moreover, WGS allows
 to obtain more uniform and reliable coverage. All in all, WGS is a more
 universal method than WES.
 
-  This tutorial will guide you through the genetic variants discovery
+This tutorial will guide you through the genetic variants discovery
 workflow on Genestack. We will analyse a dataset by Dogan *et
 al.* including high coverage (x35) WGS data from a Turkish
-individual. The experiment can be found in  `Public Experiments`_  —
+individual. The experiment can be found in `Public Experiments`_  —
 regularly updated collection of freely accessible experiments imported
 from SRA, ENA, GEO, ArrayExpress. Genestack enables you to work on
 public and private data seamlessly. Import your own sequencing data,
-mapped reads or genetic variants data with our  `data importer`_ .
+mapped reads or genetic variants data with our `data importer`_ .
 
-  The genetic variants analysis pipeline includes the following steps:
+The genetic variants analysis pipeline includes the following steps:
 
 #. Quality control of raw reads
 #. Preprocessing of the raw reads

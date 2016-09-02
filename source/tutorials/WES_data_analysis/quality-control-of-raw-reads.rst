@@ -68,8 +68,7 @@ Application also
 detects **overrepresented sequences** that may be an indication of
 primer or adaptor contamination. We have run QC on all the data in the
 experiment and put the reports in `Raw reads QC reports for Clark et al
-(2011)`_ folder,
-so that you can open all of them in `Multiple QC Report application`_ to analyse results:
+(2011)`_ folder, so that you can open all of them in `Multiple QC Report application`_ to analyse results:
 
 |WES_Multiple_Raw|
 

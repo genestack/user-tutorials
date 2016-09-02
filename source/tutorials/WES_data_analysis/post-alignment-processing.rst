@@ -45,7 +45,7 @@ as average mapping quality and raw read depth and compare variants
 enrichment between samples. Analysing variants in Genome Browser, you
 can notice a large amount of both exome WES–specific and WGS-specific
 SNVs. We identified variants for each sample separately and put
-them in  `Variants for Clark et al (2011)`_  folder.
+them in `Variants for Clark et al (2011)`_ folder.
 
 .. |WES_remove_duplicates| image:: images/WES_remove_duplicates.png
 .. |WES_variant_calling| image:: images/WES_variant_calling.png

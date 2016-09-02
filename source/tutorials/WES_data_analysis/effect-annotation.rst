@@ -2,11 +2,10 @@ Effect-annotation
 *****************
 
 After variants are detected, use Effect Annotation application based on
-`SnpEff`_ tool. The app annotates
-variants and predicts the effects they produce on genes such as amino
+`SnpEff`_ tool. The app annotates variants and predicts the effects they produce on genes such as amino
 acid changes, impact, functional class, etc. To review this information,
-open variants with predicted effects in `View report`_
-application:
+open variants with predicted effects in `View report`_ application.
+
 Let's analyse annotated variants for sample enriched by Nimblegen.
 Output report contains **summary** about tool version, number of
 variants, number of effects, change rate, and other information.
@@ -123,7 +122,7 @@ number of transversions and their ratio in SNPs and all variants.
 
 Transitions are mutations within the same type of nucleotide:
 pyrimidine-pyrimidine mutations (C <> T) and purine-purine mutations (A
-<> G).  Transversions are mutations from a pyrimidine to a purine or
+<> G). Transversions are mutations from a pyrimidine to a purine or
 vice versa. The table represents these values taking into account only
 SNP variants.
 
