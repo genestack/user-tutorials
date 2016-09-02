@@ -1,6 +1,3 @@
-Whole exome sequencing data analisys on Genestack platform
-**********************************************************
-
 As one of the widely used targeted sequencing method, whole exome
 sequencing (WES) has become more and more popular in clinical and basic
 research. Albeit, the exome (protein-coding regions of the genome) makes
@@ -11,8 +8,8 @@ this tutorial we'll provide a comprehensive description of the various
 steps required for WES analysis, explain how to build your own data
 flow, and finally, discuss the results obtained in such analysis.
 
-**Setting up an exome sequencing experiment**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting up an exome sequencing experiment
+*****************************************
 
 First off, let's choose exome sequencing data. You can `upload your own data`_
 using 'Import' button or search through all `public experiments`_ we have on
@@ -37,8 +34,8 @@ the community in selecting the optimal exome-seq platform for their
 experiments, as well as proving that whole genome experiments benefit
 from being supplemented with WES experiments.
 
-**Whole Exome Sequencing Data Analysis pipeline**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Whole Exome Sequencing data analysis pipeline
+*********************************************
 
 A typical data flow of WES analysis consists of the following steps:
 

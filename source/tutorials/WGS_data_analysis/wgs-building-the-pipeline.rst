@@ -1,5 +1,5 @@
-WGS building pipeline
-*********************
+Building the genetic variants analysis pipeline
+***********************************************
 
 To start the pipeline,  select the sequencing assays from "Homo sapiens
 Genome sequencing and variation" experiment, right click on them and

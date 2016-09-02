@@ -159,4 +159,4 @@ preprocessing to the genetic variants annotation and filtering.
 .. |Seq duplication run1| image:: images/Seq-duplication-run1.png
 .. _Multiple QC Report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF1001533&action=viewFile
 .. _FastQC report: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF971377&action=viewFile
-.._
+

@@ -169,8 +169,8 @@ Ile events.
 Apart from the mentioned statistics and plots, report also contains allele
 frequency plots and information on the change rate per chromosome.
 
-Genetic Variants Filtering
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Genetic variants filtering
+**************************
 
 Resulting genetic variants files, annotated or not, can be opened in the
 `Variant Explorer`_ app. In the Variant Explorer you can interactively explore the

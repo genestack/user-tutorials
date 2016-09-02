@@ -1,6 +1,3 @@
-Whole genome bisulfite sequencing analisys
-*******************************************
-
 .. figure:: images/DNA_methylation.png
    :alt: DNA methylation
 

@@ -37,11 +37,9 @@ the group’s folder in their File Manager.
 
 |shared with me folder|
 
-Group
-folders are the same as all other folders in the system: you can add and
+Group folders are the same as all other folders in the system: you can add and
 remove files to group folders just like to any other regular folder.
-There is an important point to note though:  ***adding a file to a
-group folder is not the same as sharing it with the group***. To share
+There is an important point to note though:  ***adding a file to a group folder is not the same as sharing it with the group***. To share
 one or more files with a group, you need to select them in File
 Manager (sharing functionality is also available in other places in
 Genestack Platform) and click "Share".  A window will open where you
@@ -50,7 +48,7 @@ files.
 
 |share data|
 
-After you select the group and click  *Share*,
+After you select the group and click  "Share",
 you’ll need to confirm that you want to share these files by entering
 your password (the system will remember this authorisation for the next
 five minutes) and then you’ll have the option, which you do not have to
@@ -68,8 +66,8 @@ you add a file to a group folder, e.g., by drag-and-dropping it in File
 Manager, the platform will try to detect this and ask you if you want to
 share it first.
 
-.. rubric:: Sharing with Other Organisations
-   :name: sharing-with-other-organisations
+Sharing with other organisations
+--------------------------------
 
 It is very easy to share data with users in the same organisation. You
 simply create a group and share files; all group members see share data
