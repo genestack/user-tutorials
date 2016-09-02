@@ -11,7 +11,7 @@ to applications to create other files, and then, later, computed all at
 once. Let’s look at an example. Go to the public experiment library and
 choose *“* *`Analysis of the intestinal microbiota of hybrid house mice
 reveals evolutionary divergence in a vertebrate
-hologenome” <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF317032&action=viewFile&page=1>`__* 
+hologenome” <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF317032&action=viewFile&page=1>`__*
 experiment by Wang et al. Select one of the raw sequencing reads file
 called "FS01", right click on it, and select “Preprocessing” and “Trim
 Low Quality Bases” app. This created a file “Trimmed FS01” that is not

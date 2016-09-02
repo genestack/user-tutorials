@@ -69,7 +69,7 @@ histogram * graphically demonstrates the distribution of length of all
 insertions and deletions. The discovered Indels ranged from -43 to 28 bp
 in length with the standard deviation of 5.256. Authors detected 713,640
 InDels (341,382 insertions and 372,258 deletions) ranging from −52 bp to
-34 bp in length.  
+34 bp in length.
 
 |Indel length dostributions|
 
@@ -146,7 +146,7 @@ their predicted effect, impact and functional class.   Besides that, the
 app computes genotype frequencies for homozygous samples with reference
 and alternative alleles (GF HOM REF and GF HOM ALT columns,
 respectively), reads depth for homozygous samples with alternative
-allele (DP HOM ALT) and reads depth for heterozygous samples (DP HET).  
+allele (DP HOM ALT) and reads depth for heterozygous samples (DP HET).
 To prioritise found mutations open an annotated genetic variants file in
 the Variant Explorer: right-click on the resulting file name in the Data
 Flow Runner, Task Manager or File Browser and select Variant Explorer in
@@ -184,7 +184,7 @@ data <https://genestack.com/tutorial/testing-differential-gene-expression-on-gen
 Visit our website to check out more
 `tutorials <https://genestack.com/tutorials/>`__!   If you have any
 questions or suggestions, please leave them below or `email
-us <mailto:contact@genestack.com>`__.  
+us <mailto:contact@genestack.com>`__.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
 .. |GB_variants| image:: images/GB_variants.png

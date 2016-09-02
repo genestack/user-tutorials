@@ -19,7 +19,7 @@ Variant Calling application based on samtools mpileup:
 The app automatically scans every position along the genome, computes
 all the possible genotypes from the aligned reads, and calculates the
 probability that each of these genotypes is truly present in your
-sample. Then genotype likelihoods are used to call the SNVs and indels. 
+sample. Then genotype likelihoods are used to call the SNVs and indels.
 |WES_variant_calling| We run Variant Calling with default
 parameters, identifying multi-allelic SNPs and indels, excluding
 non-variant sites and not considering anomalous read pairs. Maximum read

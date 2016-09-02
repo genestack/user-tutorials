@@ -71,7 +71,7 @@ in Remove Duplicated Mapped Reads section and start initialization with
 right-click context menu. Follow the process in the Task Manager.
 Regardless of the status of the analysis all the created data flow files
 will be located in the corresponding folder in the "Created Files"
-folder.  
+folder.
 
 |Start initial|
 

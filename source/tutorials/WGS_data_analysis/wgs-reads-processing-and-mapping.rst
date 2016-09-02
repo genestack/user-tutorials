@@ -134,7 +134,7 @@ parameters of Variant Calling and Effect Prediction apps. To initilize
 the rest of the files, you can open previously created Data Flow Runner
 page... |Start initialization (DFR)| ...or open the resulting Genetic
 variants file in Variant Explorer, Genome Browser or Effect Prediction
-apps. |Screenshot 2015-12-25 13.46.50|    
+apps. |Screenshot 2015-12-25 13.46.50|
 
 .. |Edit file list| image:: images/Edit-file-list.png
 .. |Screenshot 2015-12-24 15.42.34| image:: images/Screenshot-2015-12-24-15.42.34.png

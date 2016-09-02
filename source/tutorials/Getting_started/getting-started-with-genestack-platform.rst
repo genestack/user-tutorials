@@ -56,7 +56,7 @@ out of the system. |first user on the platform| You can also create new
 users.  Let’s create a Second User by clicking the  *Create
 user* button. |second user creation| You will need to set the user name,
 email and password. Users added this way are immediately confirmed, and
-can log in right away.  
+can log in right away.
 
 .. |sign up screen| image:: images/sign-up-screen.png
 .. |genestack welcome page| image:: images/genestack-welcome-page.png

@@ -56,7 +56,7 @@ any file’s metadata by clicking the “eye” icon in the File Manager. All
 files have rich metadata, different for each file type. Some metadata
 fields are filled in by our curators, some are available for you to edit
 via different applications in Genestack Platform, and some are computed
-when files are initialised.  
+when files are initialised.
 
 .. |file manager| image:: images/file-manager.png
 .. |reference genomes| image:: images/reference-genomes.png

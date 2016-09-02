@@ -5,7 +5,7 @@ Poorly identified bases, low-quality sequences and contaminants (such as
 adaptors) in the raw sequencing data can affect downstream analysis
 leading to erroneous results and conclusions. Before starting the WGS
 analysis, we will check the initial data quality and decide how to
-improve the downstream analysis by a variety of preprocessing options.  
+improve the downstream analysis by a variety of preprocessing options.
 FastQC Report app is based on FastQC tool and produces
 several statistics characterising the raw data quality: Phred score
 distribution per base and per sequence, GC content distribution, per
@@ -48,47 +48,47 @@ have the general impression of quality of raw reads we can go deeper and
 get a more detailed statistics using  `FastQC
 report <https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF971377&action=viewFile>`__
 for each individual sequencing run.   FastQC report contains several
-quality control metrics outlined below:  
+quality control metrics outlined below:
 
 -  *Basic statistics* of raw data, for example the total number of
    reads processed, and GC content;
 
- 
+
 
 -  *Sequence length distribution* describing * * the distribution of
    fragment sizes in the analysed sequencing assay;
 
- 
+
 
 -  *Per sequence GC content* plot displaying the GC content across the
    whole length of each individual read;
 
- 
+
 
 -  *Per base sequence quality* plots depicting the range of quality
    scores for each base at each position in the analysed  sequencing
    assay;
 
- 
+
 
 -  *Per sequence quality scores* plot allowing the detection of poor
    quality sequences in the total sequences;
 
- 
+
 
 -  *Per base sequence content* plots representing the relative number of
    A, C, T, and G for each position in the tested sample;
 
- 
+
 
 -  *Sequence duplication level* plots representing the proportion of
    non-unique sequences which could be present in the library;
 
- 
+
 
 -  *Overrepresented sequences* providing the information on sequences
    that make up more than 0.1% of the total, and may either have a high
-   biological significance or indicate contamination of the library. 
+   biological significance or indicate contamination of the library.
 
 Table located on the left side of the page informs us which reports
 raise concerns or report failures. In this case it is the  *Per base
@@ -108,7 +108,7 @@ sequences having different duplication levels, and for  WGS
 experiments, generally characterised by even coverage, this graph should
 quickly drop to zero. Duplicates could correspond to PCR amplification
 bias generated during library preparation or reading the same
-sequence several times.   
+sequence several times.
 
 |Seq duplication run1|
 
