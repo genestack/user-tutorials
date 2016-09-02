@@ -30,24 +30,17 @@ regularly updated collection of freely accessible experiments imported
 from SRA, ENA, GEO, ArrayExpress. Genestack enables you to work on
 public and private data seamlessly. Import your own sequencing data,
 mapped reads or genetic variants data with our  `data importer`_ .
+
   The genetic variants analysis pipeline includes the following steps:
 
-#. `Quality control of raw
-   reads <https://genestack.com/tutorial/wgs-qc-raw-reads/>`__
-#. `Preprocessing of the raw
-   reads <https://genestack.com/tutorial/wgs-reads-processing-mapping-qc/>`__
-#. `Unspliced mapping of the preprocessed reads onto a reference
-   genome <https://genestack.com/tutorial/wgs-reads-processing-mapping-qc/>`__
-#. `Post-alignment
-   processing <https://genestack.com/tutorial/wgs-reads-processing-mapping-qc/>`__
-#. `Quality control of the mapped
-   reads <https://genestack.com/tutorial/wgs-reads-processing-mapping-qc/>`__
-#. `Variant
-   calling <https://genestack.com/tutorial/wgs-exploring-variants/>`__
-#. `Variant
-   annotation <https://genestack.com/tutorial/wgs-exploring-variants/>`__
-#. `Variant filtering and
-   prioritisation <https://genestack.com/tutorial/wgs-exploring-variants/>`__
+#. Quality control of raw reads
+#. Preprocessing of the raw reads
+#. Unspliced mapping of the preprocessed reads onto a reference genome
+#. Post-alignment processing
+#. Quality control of the mapped reads
+#. Variant calling
+#. Variant annotation
+#. Variant filtering and prioritisation
 
 Raw sequencing assays from the Dogan *et al.* experiment, all processed
 data and reports are located in the `WGS Data Analysis on Genestack

@@ -7,14 +7,13 @@ analyses with data flows, a built-in mechanism for capturing and
 replaying your research.
 
 In this tutorial we will walk you through:
-`1.Creating an Account and Managing Users <#createaccount>`__
-`2.Creating Users <#createuser>`__
-`3.Organising your research <https://genestack.com/tutorial/organising-your-research/>`__
-`4.Importing data into the Genestack
-Platform <https://genestack.com/tutorial/file-import/>`__
-`5.Initializing files <https://genestack.com/tutorial/file-initialisation/>`__
-`6.Managing and Sharing Data <https://genestack.com/tutorial/managing-and-sharing-data/>`__
-`7.Reproducing the Analyses with Data Flows <https://genestack.com/tutorial/reproducing-your-work-with-data-flows/>`__
+#. Creating an Account and Managing Users
+#. Creating Users
+#. Organising your research
+#. Importing data into the Genestack Platform
+#. Initializing files
+#. Managing and Sharing Data
+#. Reproducing the Analyses with Data Flows
 
 Creating an Account and Managing Users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

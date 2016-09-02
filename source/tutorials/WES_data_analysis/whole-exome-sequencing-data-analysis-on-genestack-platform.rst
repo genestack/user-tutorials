@@ -43,15 +43,15 @@ from being supplemented with WES experiments.
 
 A typical data flow of WES analysis consists of the following steps:
 
-#. `Quality control of raw reads <#rawreadsqc>`__
-#. `Preprocessing of raw reads <#preprocessing>`__
-#. `Mapping reads onto a reference genome <#mapping>`__
-#. `Targeted Sequencing quality control <http://targeted>`__
-#. `Quality control of mapped reads <#qcmapped>`__
-#. `Post-alignment processing <#post>`__
-#. `Variant calling <#variant>`__
-#. `Effect annotation of the found variants <#effect>`__
-#. `Variant prioritisation in Variant Explorer <#explorer>`__
+#. Quality control of raw reads
+#. Preprocessing of raw reads
+#. Mapping reads onto a reference genome
+#. Targeted Sequencing quality control
+#. Quality control of mapped reads
+#. Post-alignment processing
+#. Variant calling
+#. Effect annotation of the found variants
+#. Variant prioritisation in Variant Explorer
 
 Let’s look at each step separately to get a better idea of what it
 really means.
