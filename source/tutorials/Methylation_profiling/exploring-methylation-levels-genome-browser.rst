@@ -2,7 +2,7 @@ Exploring the genome methylation levels in Genome Browser
 *********************************************************
 
 We can explore the distribution of genome methylation levels counted for
-both murine phenotypes in  `Genome Browser`_.
+both murine phenotypes in `Genome Browser`_.
 
 .. youtube:: https://www.youtube.com/watch?v=juojLSCcrFU
 
@@ -11,8 +11,8 @@ methylated locus that often harbour genes, such as *Hoxa9* and *Meis1*, playing 
 human leukemia.
 
 Some Canyons can be exceptionally large, for example one associated with
-the  *Pax6* homeobox gene encoding a homeobox-containing protein
-regulating  transcription is extended over 25 kb:
+the *Pax6* homeobox gene encoding a homeobox-containing protein
+regulating transcription is extended over 25 kb:
 
 |Genome Browser (Pax6; only WTs)|
 
@@ -33,8 +33,8 @@ Canyon edges. Boundaries of canyons became hotspots of differential
 methylation: Canyon size can be decreased due to hypermethylation
 or increased due to hypomethylation.
 
-Moreover, at DNA regions containing cluster of Canyons in WT HSCs,  larger Canyons (“Grand
-Canyons”)  can be formed. We can see it on the example of  *HoxB*
+Moreover, at DNA regions containing cluster of Canyons in WT HSCs, larger Canyons (“Grand
+Canyons”) can be formed. We can see it on the example of *HoxB*
 regions in which Canyons are interrupted by short stretches of higher
 methylation.
 
