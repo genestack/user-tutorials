@@ -1,7 +1,7 @@
 Initialising files and various file types
 *****************************************
 
-Now that you know how to import data onto the platform, we will walk you
+Now that you know how to import data into the platform, we will walk you
 through file initialisation. All files on Genestack are created by
 various applications.  When an application creates a new file, it
 specifies what should happen when it is initialised: a script, a

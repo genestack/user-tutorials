@@ -62,7 +62,7 @@ Feel free to reproduce the workflow on any other relevant data set with
 `Experiment Browser`_.
 If you do not find there needed experiment or you intend to analyse your own data use our
 `Data Import`_ application allowing to upload files from your computer or from URL. Learn more about
-importing data onto the Genestack in our `blog post`_.
+importing data into the Genestack in our `blog post`_.
 
 In this experiment authors applied WGBS of genomic DNA to investigate the mechanisms that could
 promote changes in DNA methylation and contribute to cell differentiation and malignant

@@ -35,7 +35,7 @@ occasionally suffering from incompatibilities and conflicts. In
 Genestack you no longer have to worry or know about file formats
 (“low-level implementation details” as programmers call them).
 A Reference Genome file contains packed sequence and genomic features.
-When data, such as reference genomes, is imported onto Genestack (and
+When data, such as reference genomes, is imported into Genestack (and
 several different formats can be imported) it is  “packed” into a
 Genestack file, meaning all reference genomes will behave identically,
 regardless of any differences in the physical formats underneath. You

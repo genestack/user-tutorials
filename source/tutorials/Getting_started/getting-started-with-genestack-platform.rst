@@ -10,7 +10,7 @@ In this tutorial we will walk you through:
 `1.Creating an Account and Managing Users <#createaccount>`__
 `2.Creating Users <#createuser>`__
 `3.Organising your research <https://genestack.com/tutorial/organising-your-research/>`__
-`4.Importing data onto the Genestack
+`4.Importing data into the Genestack
 Platform <https://genestack.com/tutorial/file-import/>`__
 `5.Initializing files <https://genestack.com/tutorial/file-initialisation/>`__
 `6.Managing and Sharing Data <https://genestack.com/tutorial/managing-and-sharing-data/>`__
