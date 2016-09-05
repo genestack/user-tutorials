@@ -47,7 +47,7 @@ This again can be used as an
 input for a different application. As a last step you could for
 example create a genetic variations file by choosing the Variant Calling
 app in the "add step" option. In order to see `the entire data
-flow <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1016183&action=viewFile>`__
+flow`_
 we have just created, click on the name of the last created file, go to
 “manage” and “File provenance”.
 
@@ -88,7 +88,7 @@ useful when it comes to organising your research and now we will discuss
 them in more detail.
 
 Files
-~~~~~
+-----
 
 There are many different file types in Genestack Platform. Every file is
 created by an application and there’s a lot of metadata associated with
@@ -115,7 +115,7 @@ Here it is on a sequencing assay:
 |edit metainfo|
 
 Folders
-~~~~~~~
+-------
 
 Folders in Genestack behave the same as folders in other systems. You
 can put files in folders, and you can remove files from folders. There’s
@@ -127,7 +127,7 @@ collect into one folder files from multiple experiments and work on them
 as if they were all part of one experiment.
 
 Experiments, Assays, and Assay Groups
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 
 An  **experiment** is a very special kind of folder. It contains only
 assays, or files, which contain experimentally collected data. One can

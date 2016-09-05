@@ -179,7 +179,8 @@ variants calculating the effects they produced on known genes and put
 them in  `Variants with predicted effects for Clark et al
 (2011)`_ folder.
 
-**Variant prioritisation in Variant Explorer**
+Variant prioritisation in Variant Explorer
+******************************************
 
 The variants can be also interactively analysed in Genestack Variant
 Explorer application:
@@ -245,7 +246,7 @@ sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email us <feedback@genestack.com>`_.
 
 References
-~~~~~~~~~~
+----------
 
 #. Clark M. J., et al. Performance comparison of exome DNA sequencing
    technologies.  *Nature biotechnology* 2011; 29(10):908-914.

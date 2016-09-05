@@ -16,15 +16,17 @@ In this tutorial we will walk you through:
 #. Managing and Sharing Data
 #. Reproducing the Analyses with Data Flows
 
-Creating an Account and Managing Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating an account and managing users
+**************************************
 
-It’s easy to register
-on `Genestack`_.
-All you need to do is provide an email and set up a password. |sign up
-screen| You will quickly receive a confirmation email with a link to
-click on and then you'll be able to log in. After you log in, the system
-will take you to the `Welcome Page`_.
+It’s easy to register on `Genestack`_.  All you need to do is provide an email
+and set up a password.
+
+|sign up screen|
+
+You will quickly receive a confirmation email with a link to click on and then
+you'll be able to log in. After you log in, the system will take you to the
+`Welcome Page <wp-blog_>`_.
 
 |genestack welcome page|
 
@@ -37,8 +39,8 @@ upper left corner.  You can always change the settings of your account
 and instead of the Welcome Page choose the File Manager as the main
 point of entry to the platform.
 
-**Creating Users**
-~~~~~~~~~~~~~~~~~~
+Creating users
+**************
 
 Now that you have set up your own account, let's talk about user
 management. Try opening the menu in the top right hand corner of the
@@ -46,7 +48,7 @@ screen, where your email is displayed.
 
 |user management|
 
-If you click on  *Manage Users * you will go to the user management screen. Every
+If you click on  "Manage Users" you will go to the user management screen. Every
 user in Genestack Platform belongs to an organisation. When you signed
 up to use Genestack via the sign up dialog, we created a new
 organisation for you, and you have automatically become its first user
@@ -61,8 +63,7 @@ out of the system.
 |first user on the platform|
 
 You can also create new
-users.  Let’s create a Second User by clicking the  *Create
-user* button.
+users.  Let’s create a Second User by clicking the  "Create user" button.
 
 |second user creation|
 
@@ -76,4 +77,4 @@ can log in right away.
 .. |first user on the platform| image:: images/first-user.png
 .. |second user creation| image:: images/second-user.png
 .. _Genestack: https://platform.genestack.org/endpoint/application/run/genestack/signin
-.. _Welcome Page: https://genestack.com/blog/2015/10/01/new-dashboard-style-start-screen-for-genestack/
+.. _wp-blog: https://genestack.com/blog/2015/10/01/new-dashboard-style-start-screen-for-genestack/

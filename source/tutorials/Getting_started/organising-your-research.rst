@@ -13,19 +13,19 @@ We have preloaded the platform with hunders of thousands of `publicly available 
 `curated datasets`_ and `reference genomes`_. In the public data folder you will also find
 `Public Data Flows`_ that you can use in the future.
 
-Format-Free Files
-~~~~~~~~~~~~~~~~~
+Format-free files
+-----------------
 
 While you browse around all the folders, we’d like to point out a
-key feature of Genestack Platform:  ***all files are format-free
-objects***. Each Genestack file can be considered a container, packing
+key feature of Genestack Platform:  ***all files are format-free objects***.
+Each Genestack file can be considered a container, packing
 several physical files or even a database, with complex and rich
 metadata. Let us take a look at an example. In the  `Reference
 genomes folder`_ you will see several pre-loaded genomes:
 
 |reference genomes|
 
-Take a look at the  KIND column. These files are of the  *Reference Genome* type.
+Take a look at the  "Kind" column. These files are of the  "Reference Genome" type.
 There is no single, standard, commonly accepted file
 format for storing and exchanging genomic sequence and features:
 sequence can be stored in FASTA, EMBL or GenBank formats. Genomic

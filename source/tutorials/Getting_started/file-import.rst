@@ -2,7 +2,7 @@ Importing data into the Genestack Platform
 ******************************************
 
 We have talked about the core concepts of Genestack and the geography of
-the Platform. Now let's discuss importing data into the platform. On the `Welcome Page`_ you
+the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you
 can find an “Import data” option, and an "Import" button can be found in the File Manager.
 
 |import file manager|
@@ -50,6 +50,6 @@ the bottom of the page, you'll see an `Add import template`_ button.
 .. |Import_step3| image:: images/Import_step3.png
 .. |File in file manager| image:: images/files_in_FM.png
 .. |import welcome page| image:: images/import-welcome-page1.png
-.. _Welcome Page: https://platform.genestack.org/endpoint/application/run/genestack/welcome
+.. _welcome page: https://platform.genestack.org/endpoint/application/run/genestack/welcome
 .. _Import data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Add import template: https://platform.genestack.org/endpoint/application/run/genestack/metainfotemplateeditorapp?action=openInBrowser

@@ -1,5 +1,5 @@
-Bisulfite Sequencing Mapping of the preprocessed reads onto a reference genome
-******************************************************************************
+Mapping reads onto a reference genome
+*************************************
 
 Following the preprocessing, our data is of improved quality and we
 can move on to the next step — alignment of trimmed reads onto
@@ -16,8 +16,8 @@ learn more about the app clicking on the "about".
 In the `Mapped reads for Rodriguez et al., 2014`_ folder
 you can find all the Mapped Reads.
 
-**Merging of the mapped reads** obtained from technical replicates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Merging of the mapped reads obtained from technical replicates
+**************************************************************
 
 It is essential for any experiment to create a good and adequate
 control. Using replicates can improve quality and precision of your
