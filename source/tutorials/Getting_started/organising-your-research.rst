@@ -17,7 +17,7 @@ Format-free files
 -----------------
 
 While you browse around all the folders, we’d like to point out a
-key feature of Genestack Platform:  ***all files are format-free objects***.
+key feature of Genestack Platform:  **all files are format-free objects**.
 Each Genestack file can be considered a container, packing
 several physical files or even a database, with complex and rich
 metadata. Let us take a look at an example. In the  `Reference
@@ -51,7 +51,7 @@ tables, and so forth.
 |metainfo reference genome|
 
 We can take a look at
-any file’s metadata by clicking the “eye” icon in the File Manager. All
+any file’s metadata by clicking the **"eye"** icon in the File Manager. All
 files have rich metadata, different for each file type. Some metadata
 fields are filled in by our curators, some are available for you to edit
 via different applications in Genestack Platform, and some are computed

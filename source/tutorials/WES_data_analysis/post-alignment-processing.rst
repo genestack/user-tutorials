@@ -4,7 +4,7 @@ Post-alignment processing
 After mapping reads to the reference genome, it's recommended to remove
 duplicates before variant calling, with the purpose of eliminating
 PCR-introduced bias due to uneven amplification of DNA fragments. That's
-why we run "Remove Duplicated Mapped Reads" app:
+why we run Remove Duplicated Mapped Reads app:
 
 |WES_remove_duplicates|
 
@@ -32,8 +32,8 @@ depth per position was set as 250 and minimum number of gapped reads for
 an indel candidate is 1. Base alignment quality (BAQ) recalculation is
 turned on by default. It helps to rule out false positive SNP calls due
 to alignment artefacts near small indels. For more information about the
-app and its options, click on the app name and then on “About
-application”. When files will be complete, you can analyse  `variants
+app and its options, click on the **app name** and then on **About application**.
+When files will be complete, you can analyse  `variants
 in Genome Browser`_:
 
 |WES_variants_GB|

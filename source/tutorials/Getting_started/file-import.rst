@@ -3,7 +3,7 @@ Importing data into the Genestack Platform
 
 We have talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you
-can find an “Import data” option, and an "Import" button can be found in the File Manager.
+can find an **Import data** option, and an **Import** button can be found in the File Manager.
 
 |import file manager|
 
@@ -30,7 +30,7 @@ age.
 |Import_step3|
 
 Once this step is completed,
-you can go to “Show files in File Manager” at the bottom of the page.
+you can go to **Show files in File Manager** at the bottom of the page.
 Take a look at a “kind” column ― there are no file formats, just
 biological data types.
 

@@ -19,7 +19,7 @@ variant identification using the interactive applications such
 as Variant Explorer or Genome Browser. Let's click on the genetic
 variants file name in Task Manager and open it in Genome Browser using
 the context menu. In case some files are not initialized yet, Genome
-Browser page is empty. You can initialize the files by clicking on "Go!"
+Browser page is empty. You can initialize the files by clicking on **Go!**
 to start the process. Tracks representing found mutations will appear on
 the page as the task is finished.
 
@@ -56,8 +56,7 @@ analysis on the Effect Prediction page or Data Flow Runner page.
 Explore annotated variants in Genome Browser and Variant Explorer
 apps. Let's open generated `report file`_ containing
 some information about identified variants from our tutorial
-folder. Right click on the genetic variants file name and go to "View
-Report".
+folder. Right click on the genetic variants file name and go to **View Report**.
 
 |Screenshot 2015-11-23 11.14.46|
 
@@ -77,7 +76,7 @@ analysis they used 3,537,794 variants identified by both methods.
 
 |Screenshot 2016-03-14 12.24.19|
 
-*Insertion deletion length histogram* graphically demonstrates the
+**Insertion deletion length histogram** graphically demonstrates the
 distribution of length of all insertions and deletions. The discovered Indels
 ranged from -43 to 28 bp in length with the standard deviation of 5.256. 
 Authors detected 713,640 InDels (341,382 insertions and 372,258 deletions)
@@ -93,12 +92,12 @@ regions. Only 69 and 78 mutations were detected in the splice site donor
 and in splice site acceptor, respectively. Finally, we detected 6241
 insertions and deletions in exons.   Besides the statistics on the
 change type of the found mutations, report also contains quality and
-coverage information. *Quality histogram* shows quality distribution
+coverage information. **Quality histogram** shows quality distribution
 with minimum value of 3 and maximum value of 486 for the analysed data:
 
 |Quality|
 
-The following histogram shows *coverage*. For our data the mean
+The following histogram shows **coverage**. For our data the mean
 coverage is 28.882 while the maximum coverage is 8,026.
 
 |coverage|
@@ -185,7 +184,7 @@ respectively), reads depth for homozygous samples with alternative
 allele (DP HOM ALT) and reads depth for heterozygous samples (DP HET).
 To prioritise found mutations open an annotated genetic variants file in
 the Variant Explorer: right-click on the resulting file name in the Data
-Flow Runner, Task Manager or File Browser and select Variant Explorer in
+Flow Runner, Task Manager or File Browser and select **Variant Explorer** in
 the context menu. In total 4,361,389 variants were found.
 
 |Table Viewer|

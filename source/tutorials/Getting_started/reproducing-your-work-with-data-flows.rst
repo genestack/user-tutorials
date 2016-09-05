@@ -11,7 +11,7 @@ Trimmed FS01″. You might use the Welcome Page to find it in Resent
 Results or go to the "Created files" folder in the File Manager. You can
 also find it in the tutorial folder. Rather than viewing its provenance
 like we did before, let’s see if we can reuse the provenance. To do
-this, select the file, go to "Manage" and "Create new Data Flow".
+this, select the file, go to **Manage** and **Create new Data Flow**.
 
 |create new data flow|
 
@@ -23,8 +23,7 @@ have previously created.
 The data flow editor has one
 core goal: to help you create more files using this diagram. To do this
 you will need to make some decisions for boxes in the diagram via
-the Action menu. If you want to select different files, go to "Choose
-another file". If you want to leave the original file simply don't
+the **Action** menu. If you want to select different files, go to **Choose another file**. If you want to leave the original file simply don't
 change anything.
 
 |choose another file|
@@ -33,7 +32,7 @@ In this example, we will use this
 data flow to produce variant calls for another raw sequence data file,
 FS02 reproducing the entire workflow including trimming low quality
 bases, spliced mapping and variant calling. All you need to do is choose
-another input file and click on "Run dataflow" button at the top of the
+another input file and click on **Run dataflow** button at the top of the
 page. You will be given a choice: you can initialize the entire data
 flow now or delay initialization.
 
@@ -41,8 +40,7 @@ flow now or delay initialization.
 
 If you decide to delay the initialization till later, you will be brought
 back to the Data Flow Runner page where you can initialize individual
-files by clicking on the file name and later selecting "Start
-initialization".
+files by clicking on the file name and later selecting **Start initialization**.
 
 |start initialization|
 

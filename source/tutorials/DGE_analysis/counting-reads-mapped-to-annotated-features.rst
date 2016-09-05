@@ -60,13 +60,13 @@ them:
 
 If you move cursor to the top right corner of the graph, 3 icons will appear:
 
-#. Filter icon lets you filter the graph data by samples, groups, features,
+#. **Filter** icon lets you filter the graph data by samples, groups, features,
    etc.
 
-#. Data icon will display all the data contained in the graph, and allow you to
+#. **Data** icon will display all the data contained in the graph, and allow you to
    save the table data locally.
 
-#. Camera icon lets you save the displayed graph locally. Add labels to the
+#. **Camera** icon lets you save the displayed graph locally. Add labels to the
    graph and change its appearance by modifying the parameters on display when
    you right-click the graph area.
 

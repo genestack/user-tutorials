@@ -15,7 +15,7 @@ regions that lack coverage or in regions with much higher coverage than
 theoretically expected. You could explore the coverage for merged mapped
 reads in our Genome Browser. Go to the folder created, find merged
 mapped reads file we have created and click on the name of the merged
-mapped reads files, go to “explore” option and select the Genome
+mapped reads files, go to **explore** option and select the Genome
 Browser. Also go to our tutorial folder, find there `Coverage for
 merged mapped reads for Rodriguez et al., 2014`_ file and open it in Genome browser app to explore results for
 initialized mapped reads.
@@ -35,9 +35,9 @@ biases during methylation ratios calculation.
 |GB coverage (v2) Sequencing coverage|
 
 You can explore mapping quality for each
-individual file: right click merged reads file name, go to “explore” and
-select “Mapped reads QC report”. On the opened app page you should
-click “generate reports” to start calculation of quality control
+individual file: right click merged reads file name, go to **explore** and
+select **Mapped reads QC report**. On the opened app page you should
+click **generate reports** to start calculation of quality control
 statistics. To check the quality of all mapped reads or merged mapped
 reads simultaneously use the `Mapped Reads Quality Control`_ public data flow as we done previously for Raw Reads Quality Control. Mapped
 reads QC report describes results of alignment of preprocessed reads
