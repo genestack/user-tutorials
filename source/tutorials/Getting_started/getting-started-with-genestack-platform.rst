@@ -7,6 +7,7 @@ analyses with data flows, a built-in mechanism for capturing and
 replaying your research.
 
 In this tutorial we will walk you through:
+
 #. Creating an Account and Managing Users
 #. Creating Users
 #. Organising your research
