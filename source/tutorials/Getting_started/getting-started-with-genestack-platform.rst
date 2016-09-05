@@ -18,12 +18,14 @@ In this tutorial we will walk you through:
 Creating an account and managing users
 **************************************
 
-It’s easy to register
-on `Genestack`_.
-All you need to do is provide an email and set up a password. |sign up
-screen| You will quickly receive a confirmation email with a link to
-click on and then you'll be able to log in. After you log in, the system
-will take you to the `Welcome Page blog`_.
+It’s easy to register on `Genestack`_.  All you need to do is provide an email
+and set up a password.
+
+|sign up screen|
+
+You will quickly receive a confirmation email with a link to click on and then
+you'll be able to log in. After you log in, the system will take you to the
+`Welcome Page <wp-blog_>`_.
 
 |genestack welcome page|
 
@@ -74,4 +76,4 @@ can log in right away.
 .. |first user on the platform| image:: images/first-user.png
 .. |second user creation| image:: images/second-user.png
 .. _Genestack: https://platform.genestack.org/endpoint/application/run/genestack/signin
-.. _Welcome Page blog: https://genestack.com/blog/2015/10/01/new-dashboard-style-start-screen-for-genestack/
+.. _wp-blog: https://genestack.com/blog/2015/10/01/new-dashboard-style-start-screen-for-genestack/
