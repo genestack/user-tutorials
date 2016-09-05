@@ -9,9 +9,9 @@ step, click on “7 files”. In “Explore” section choose “Genome Browser�
 and start initialization there.
 
 We run Spliced Mapping app with default parameters. To change them go to
-the app page and choose "Edit parameters" button. If you want to learn
+the app page and choose **Edit parameters** button. If you want to learn
 more about the app and its options, click on the app name and then on
-"About application". |DGE_spl_map| Completed Mapped Reads files can be
+**About application**. |DGE_spl_map| Completed Mapped Reads files can be
 found in `Mapped reads files for Hibaoui et al
 (2013) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967837&action=viewFile>`__ folder. Let's
 open some of them in Genome Browser to analyse reads  `coverage on

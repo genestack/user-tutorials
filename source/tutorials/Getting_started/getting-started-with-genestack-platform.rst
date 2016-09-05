@@ -34,7 +34,7 @@ This is your main point of entry and the place
 where you can manage and search data using the File Manager, view your
 recent results and share the findings with your colleagues, set up and
 launch analysis pipelines and visit the tutorials section. You can
-always go back to the Welcome Page by clicking the Genestack icon in the
+always go back to the Welcome Page by clicking the **Genestack icon** in the
 upper left corner.  You can always change the settings of your account
 and instead of the Welcome Page choose the File Manager as the main
 point of entry to the platform.
@@ -48,7 +48,7 @@ screen, where your email is displayed.
 
 |user management|
 
-If you click on  "Manage Users" you will go to the user management screen. Every
+If you click on  **Manage Users** you will go to the user management screen. Every
 user in Genestack Platform belongs to an organisation. When you signed
 up to use Genestack via the sign up dialog, we created a new
 organisation for you, and you have automatically become its first user
@@ -63,7 +63,7 @@ out of the system.
 |first user on the platform|
 
 You can also create new
-users.  Let’s create a Second User by clicking the  "Create user" button.
+users.  Let’s create a Second User by clicking the  **Create user** button.
 
 |second user creation|
 

@@ -6,17 +6,17 @@ reference genome with high enough quality, we can move on to the very
 last step in our pipeline — determining DNA methylation
 status of every single cytosine position on the both strands. In order
 to do that, go back to the Data Flow Runner page. Click on the
-"Methylation Ratio Analysis" to go to the app page where you can see
+**Methylation Ratio Analysis** to go to the app page where you can see
 source files and command line options that could be easily changed.
 
 |DF methylation analysis|
 
-Then return to the data flow click on “action”,
-“add files”, chose the remaining merged mapped reads, and start
+Then return to the data flow click on **action**,
+**add files**, chose the remaining merged mapped reads, and start
 initialization. During this step we apply several options to remove
 technical biases in WGBS data:
 
-#. **Trim N end-repairing fill-in bases set to “3”.** This option
+#. **Trim N end-repairing fill-in bases set to “3”**. This option
    allows to trim 3 bases from the read end to remove the DNA overhangs
    created during read end-repair in library preparation. It is
    important because this end repair procedure may introduce artefacts

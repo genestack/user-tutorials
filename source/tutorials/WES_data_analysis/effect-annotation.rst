@@ -207,7 +207,7 @@ step:
 
 When the variants are sorted and filtered,
 you can share them with your colleagues, export them as tsv
-file clicking on 'Download table' and attach it to your papers and other
+file clicking on **Download table** and attach it to your papers and other
 reports. So, what can we conclude from our findings? Are the results
 for WES samples really comparable to a WGS one? If there are any key
 differences in performance between the three enrichment platforms? And

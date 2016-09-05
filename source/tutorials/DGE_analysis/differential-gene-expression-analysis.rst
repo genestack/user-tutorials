@@ -9,7 +9,7 @@ exact test <https://en.wikipedia.org/wiki/Fisher%27s_exact_test>`__
 based on gene counts, against GO annotations.  Open the app on one of
 the completed Differential Expression Statistics files:
 
-Changing the group and thresholds criteria in the Filter Options, you
+Changing the group and thresholds criteria in the "Filter Options", you
 can set what DE genes can be further used for enrichment analysis. Let's
 run GO app twice, analysing down- and up-regulated genes separately.
 |DGE_GO_filters| Analysing down-regulated genes we
@@ -25,7 +25,7 @@ and to the cadherin signalling pathway. Here is the first 8 of 1017 GO
 terms related to the biological processes:
 |DGE_down_DGE_genes_GO_terms| Additionally, you can also
 review molecular functions or cellular components that could be affected
-in Twin-DS-iPSCs. Just change the "Top GO Terms" from Biological Process
+in Twin-DS-iPSCs. Just change the "Top GO Terms" from "Biological Process"
 category to the corresponding one. By comparison, this is the table from
 the paper which listed the first 20 biological processes that might be
 affected due to trisomy 21: |DGE_down_paper| Our GO analysis of the
