@@ -8,8 +8,9 @@ such aspects as GC percentage, per base sequence quality scores, and other
 quality sttistics. The easiest way to do this is to run `the Raw Reads QC`_
 data flow:
 
+.. youtube:: https://www.youtube.com/watch?v=cWQa1EET9F4↵ 
+
 .. _the Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
-.. youtube:: https://www.youtube.com/watch?v=cWQa1EET9F4
 
 After generating reports, you'll be able to review various statistics and
 plots for each sample. Here is some of them for `Twin-N-iPSC Rep3`_:

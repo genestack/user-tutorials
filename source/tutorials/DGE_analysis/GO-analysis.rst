@@ -8,9 +8,10 @@ which performs the classic `Fisher's exact test`_ based on gene counts,
 against GO annotations. Open the app on one of the completed Differential
 Expression Statistics files:
 
+.. youtube:: https://www.youtube.com/watch?v=-RalDy631wk
+
 .. _the downstream gene ontology (GO) analysis: http://geneontology.org/
 .. _Fisher's exact test: https://en.wikipedia.org/wiki/Fisher%27s_exact_test
-.. youtube:: https://www.youtube.com/watch?v=-RalDy631wk
 
 Changing the group and thresholds criteria in the Filter Options, you can set
 what DE genes can be further used for enrichment analysis. Let's run GO app
