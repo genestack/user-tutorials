@@ -44,7 +44,7 @@ app. You can "generate reports" for each mapping separately or just run
 `Mapped Reads Quality Control`_ data flow for multiple
 samples:
 
-.. youtube:: https://www.youtube.com/watch?v=0C2x9Xm-ji8↵ 
+.. youtube:: https://www.youtube.com/watch?v=0C2x9Xm-ji8
 
 .. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
 
