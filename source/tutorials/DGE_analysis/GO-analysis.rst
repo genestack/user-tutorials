@@ -57,22 +57,19 @@ is in GO counts. But we expected it, because the ontologies are not complete,
 they are being expanded constantly during the association of gene products
 from the collaborating databases. If you'd like to check it out, open
 differential expression statistics files stored in folder `GO enrichment
-analysis for Hibaoui et al (2013) <GO-folder_>`__.
+analysis for Hibaoui et al (2013)`_.
 
-.. _GO-folder:
-    https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967843&action=viewFile
+.. _GO enrichment analysis for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967843&action=viewFile
 
 This is all for the tutorial. Why don’t you try repeating these steps with
-your own data or using our `public experiments <public-exp-folder_>`__? You
-can try it right now! Just open `the tutorial data flow <data-flow_>`__ or
-create your own one by adding new steps, changing sources and default
-options. If you have any questions and comments, please submit them below or
-email us at support@genestack.com.
+your own data or using our `public experiments`_? You can try it right now!
+Just open the `tutorial data flow`_ or create your own one by adding new
+steps, changing sources and default options. If you have any questions and
+comments, please submit them below or email us at `support@genestack.com`_.
 
-.. _public-exp-folder:
-    https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
-.. _data-flow:
-    https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources
+.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
+.. _tutorial data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources
+.. _support@genestack.com: support@genestack.com
 
 Follow us on Twitter: `@genestack <https://twitter.com/genestack>`__.
 
