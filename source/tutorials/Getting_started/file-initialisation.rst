@@ -12,10 +12,10 @@ once. Let’s look at an example. Go to the public experiment library and
 choose `“Analysis of the intestinal microbiota of hybrid house mice
 reveals evolutionary divergence in a vertebrate
 hologenome”`_ experiment by Wang et al. Select one of the raw sequencing reads file
-called "FS01", right click on it, and select “Preprocessing” and “Trim
-Low Quality Bases” app. This created a file “Trimmed FS01” that is not
-initialised yet.  What is special about our system, is that you  **do
-not** **have to** start initialisation! In fact, you can use this file
+called "FS01", right click on it, and select Preprocessing and Trim Low Quality Bases app.
+This created a file “Trimmed FS01” that is not
+initialised yet.  What is special about our system, is that you do
+not have to start initialisation! In fact, you can use this file
 as input to applications for creating other files.
 
 |trim low quality bases app|
@@ -34,8 +34,8 @@ and select "Start initialisation".
 In this post we will show you how to use this file as
 an input for a different application. The trimmed file can for example
 be mapped to a reference genome. In order to do this you should click on
-"add step" and select the Spliced Mapping application. Using the "edit
-parameters" option you can check if the system suggested a correct
+**add step** and select the Spliced Mapping application. Using the **edit parameters**
+option you can check if the system suggested a correct
 reference genome and if not, you can select the correct one (in this
 case this should be a mouse genome). These actions created another file
 called "Mapped reads for Trimmed FS01" that is waiting to be
@@ -46,8 +46,8 @@ initialised.
 This again can be used as an
 input for a different application. As a last step you could for
 example create a genetic variations file by choosing the Variant Calling
-app in the "add step" option. In order to see `the entire data
-flow <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1016183&action=viewFile>`__
+app in the **add step** option. In order to see `the entire data
+flow`_
 we have just created, click on the name of the last created file, go to
 “manage” and “File provenance”.
 
@@ -56,9 +56,8 @@ we have just created, click on the name of the last created file, go to
 It will show
 you processes that have been completed, and ones that need to be
 initialised. To initialise only one of the steps, click on a given cell,
-then on “Actions” and later select “Start initialization". To initialise
-all of the uninitialised dependencies, simply click on “Start
-initialisation” blue button at the top.
+then on **Actions** and later select **Start initialization**. To initialise
+all of the uninitialised dependencies, simply press **Start initialisation** at the top.
 
 |file provenance|
 
@@ -88,7 +87,7 @@ useful when it comes to organising your research and now we will discuss
 them in more detail.
 
 Files
-~~~~~
+-----
 
 There are many different file types in Genestack Platform. Every file is
 created by an application and there’s a lot of metadata associated with
@@ -115,7 +114,7 @@ Here it is on a sequencing assay:
 |edit metainfo|
 
 Folders
-~~~~~~~
+-------
 
 Folders in Genestack behave the same as folders in other systems. You
 can put files in folders, and you can remove files from folders. There’s
@@ -127,7 +126,7 @@ collect into one folder files from multiple experiments and work on them
 as if they were all part of one experiment.
 
 Experiments, Assays, and Assay Groups
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 
 An  **experiment** is a very special kind of folder. It contains only
 assays, or files, which contain experimentally collected data. One can

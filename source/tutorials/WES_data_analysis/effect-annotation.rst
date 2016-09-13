@@ -179,7 +179,8 @@ variants calculating the effects they produced on known genes and put
 them in  `Variants with predicted effects for Clark et al
 (2011)`_ folder.
 
-**Variant prioritisation in Variant Explorer**
+Variant prioritisation in Variant Explorer
+******************************************
 
 The variants can be also interactively analysed in Genestack Variant
 Explorer application:
@@ -206,7 +207,7 @@ step:
 
 When the variants are sorted and filtered,
 you can share them with your colleagues, export them as tsv
-file clicking on 'Download table' and attach it to your papers and other
+file clicking on **Download table** and attach it to your papers and other
 reports. So, what can we conclude from our findings? Are the results
 for WES samples really comparable to a WGS one? If there are any key
 differences in performance between the three enrichment platforms? And
@@ -245,7 +246,7 @@ sources and default parameters. If you have any questions
 or suggestions, please leave them below or `email us <feedback@genestack.com>`_.
 
 References
-~~~~~~~~~~
+----------
 
 #. Clark M. J., et al. Performance comparison of exome DNA sequencing
    technologies.  *Nature biotechnology* 2011; 29(10):908-914.

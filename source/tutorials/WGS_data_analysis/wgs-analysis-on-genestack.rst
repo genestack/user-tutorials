@@ -1,6 +1,3 @@
-WGS analysis on Genestack
-*************************
-
 |Screenshot 2016-01-09 16.03.58|
 
 Understanding genetic variations, such

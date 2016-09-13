@@ -20,7 +20,7 @@ flow. There is no need to repeat the same steps for each sample —
 the pipelines for all 16 assays from our experiment can easily be
 built simultaneously using this public data flow. In order to run the
 raw reads QC data flow, select all of the files from the experiment,
-right click on them, select “Run data flow on selection” and choose “Raw
+right click on them, select **Run data flow on selection** and choose “Raw
 Reads Quality Control”.
 
 |choose DF|
@@ -29,7 +29,7 @@ In the Data Flow Runner page you can see 16 raw reads samples from the experimen
 
 |DF_FastQC|
 
-To start computation click on the button "Run Data Flow" and create
+To start computation click on the button **Run Data Flow** and create
 resulting files. You will be suggested to initialize the created files
 at once or delay it till later.
 
@@ -137,7 +137,7 @@ HSCs condition has several technical replicates. Let's select the raw
 reads "m12_b4l1 Bisulfite-Seq", "m12_b4l2 Bisulfite-Seq" and "m12_b3
 Bisulfite-Seq" that are three technical replicates for the second
 biological replicate of WT HSCs from our experiment and right
-click on them. Click on "Run data flow on selection" and choose from the
+click on them. Click on **Run data flow on selection** and choose from the
 list of suggested variants “Data Flow for WGBS data analysis (for
 Rodriguez et al., 2014)”. After that you will find yourself on the Data
 flow Runner page, where all the steps of our pipeline are
@@ -146,8 +146,8 @@ schematically represented. 
 |DF_WGBS|
 
 In the first block you will see the source files we have just selected. Also you need to specify
-reference genome onto which our reads will be mapped. So "Choose
-sources", find appropriate murine reference genome and "Select".
+reference genome onto which our reads will be mapped. So **Choose
+sources**, find appropriate murine reference genome and **Select**.
 
 |File chooser (ref-genome)|
 

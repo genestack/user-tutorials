@@ -33,7 +33,7 @@ That's why, you may expect difference in coverage for specific
 gene-coding regions. To further use mapped reads, go to the `Mapped
 reads for Clark et al (2011)`_  folder.
 
-Targeted Sequencing Quality Control
+Targeted sequencing quality control
 ***********************************
 
 Besides quality control of the raw sequencing reads, it is also crucial
@@ -99,8 +99,8 @@ All targeted sequencing QC reports are
 collected in  `Mapped reads enrichment reports for Clark et al
 (2011)`_ folder.
 
-**5. Quality control of mapped reads**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quality control of mapped reads
+*******************************
 
 The reads may look OK on the Raw Reads quality control step but some
 biases only show up during mapping process: low coverage, experimental

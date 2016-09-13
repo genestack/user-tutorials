@@ -49,8 +49,8 @@ the preprocessing steps, our raw reads are of better quality, and now it
 is time to begin the mapping of analysis-ready reads onto the human
 reference genome.
 
-Unspliced mapping of the preprocessed reads onto a reference genome
-*******************************************************************
+Unspliced mapping reads onto a reference genome
+***********************************************
 
 To map preprocessed reads to the reference genome we will use the
 Unspliced Mapping with BWA app which with high efficiency and accuracy
@@ -59,7 +59,6 @@ allowing large gaps, such as splice junctions. The BWA-based aligner
 currently has a hardcoded command line.
 
 |Screenshot 2016-03-18 17.47.23|
-
 
 Prior to the variant discovery we would recommend you to check the
 quality of mapped reads because some issues, such as low coverage,
@@ -93,8 +92,8 @@ and orientations of both reads of a read pair. Based on the identical
 5'mapping coordinates it discards all duplicates with the exception of
 the "best" copy.
 
-Mapped Reads QC
-***************
+Quality control of mapped reads
+*******************************
 
 As you remember, we run just a part of the pipeline including
 preprocessing, alignment and removing of duplicates to check if the

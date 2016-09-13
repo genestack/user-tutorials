@@ -34,8 +34,7 @@ warnings.
 
 |WES_per_base_sequence_quality|
 
-**Per sequence quality
-scores** report allows you to see frequencies of quality values in a
+**Per sequence quality scores** report allows you to see frequencies of quality values in a
 sample. The reads are of good quality if the peak on the plot is shifted
 to the right, to the max quality score. In our case, almost all of the
 reads are of good quality (>30):
@@ -58,7 +57,7 @@ plots represent the percentage of the library made up of sequences with
 different duplication levels. In simple words, 44% of reads are unique,
 26% of reads are repeated twice, 13% - three times, 4% - more than 10
 times, etc. All these duplicates are grouped to give the overall
-duplication level. You can use “Filter Duplicated Reads” application to
+duplication level. You can use Filter Duplicated Reads application to
 remove duplicates in raw reads data, however we'll get rid of them after
 mapping step.
 
@@ -104,20 +103,20 @@ analytical step or use relevant viewers:
 Note that
 you can create as many files as you want and run the computation process
 later. Now let's create a data flow from the pipeline we built. For the
-last created file choose "Create new Data Flow" in Manage section:
+last created file choose "Create new Data Flow" in **Manage** section:
 
 |WES_create_df|
 
-This takes us to the "Data Flow Editor" app page where
+This takes us to the Data Flow Editor app page where
 you can rename, describe your pipeline and change sources. Let's 'clear
-files' and click "Run dataflow".
+files' and click **Run dataflow**.
 
 |WES_run_dataflow|
 
 Now we're on
-the "Data Flow Runner" application page. Just choose sources -
-experiment assays and human reference genome - and click "Run Data
-Flow". Note that if you choose several raw reads files, the multi-sample
+the Data Flow Runner application page. Just choose sources -
+experiment assays and human reference genome - and click **Run Data Flow**. 
+Note that if you choose several raw reads files, the multi-sample
 variant calling will be performed. However, in order to compare our
 results, we need to run this data flow for each sample separately. After
 that, the app suggests you to choose the explore app where you can start
@@ -131,7 +130,7 @@ suggests you to choose the app where you can also start computation:
 |WES_view_apps|
 
 In order to start computation for each data flow step
-separately, click on file name and choose 'start initialization'.
+separately, click on file name and choose "start initialization".
 Let's run "Trim Adaptors and Contaminants" step:
 
 |WES_start_preprocess|

@@ -1,5 +1,5 @@
-WGS building pipeline
-*********************
+Building the genetic variants analysis pipeline
+***********************************************
 
 To start the pipeline,  select the sequencing assays from "Homo sapiens
 Genome sequencing and variation" experiment, right click on them and
@@ -16,13 +16,13 @@ the initial quality of raw reads with FastQC Report app.
 |Trim A & C (2)|
 
 If you want to learn more about the application, click on its name
-and go to  "About application".
+and go to  **About application**.
 
 |Screenshot 2016-01-10 22.33.45|
 
 You can
 use the created trimmed files as inputs for other applications. Let's
-click on "Add step" button and select the next preprocessing app — Trim
+click on **Add step** button and select the next preprocessing app — Trim
 Low Quality Bases.
 
 |Add step|
@@ -39,13 +39,12 @@ added app by clicking on its name in File Dataflow.
 |Data Flow on the CLA page|
 
 Keep in mind that after each analysis step, you can explore
-the results using the apps suggested in "Explore results" section. The
+the results using the apps suggested in **Explore results** section. The
 very final output file containing genetic variants and their possible
 effects on annotated genes can be opened with Variant Explorer and
 Genome Browser apps. To be able to re-use manually built pipeline you
 could create a data flow. Click on the resulting file name on the final
-Effect Prediction app page and go to "Manage" and "Create new Data
-Flow".
+Effect Prediction app page and go to **Manage** and **Create new Data Flow**.
 
 |Create new data flow|
 
@@ -53,9 +52,9 @@ The created data flow will be opened in the Data Flow Editor.
 
 |Screenshot 2016-01-11 12.34.09|
 
-Click on the "Run dataflow " button to run the pipeline. This will take you to the
+Click on the **Run dataflow** button to run the pipeline. This will take you to the
 Data Flow Runner page where the pipeline for genetic variants
-investigation using WGS is graphically represented. Click on "Action"
+investigation using WGS is graphically represented. Click on **Action**
 in the Variant Calling step to change the data flow and, for example
 merge parents:
 
@@ -66,7 +65,7 @@ from each step into one group:
 
 |Screenshot 2016-01-11 12.55.56|
 
-To run the pipeline click on the "Run Data Flow" button at the bottom of the
+To run the pipeline click on the **Run Data Flow** button at the bottom of the
 data flow. After that you will be suggested to either start the
 computation now or delay it till later:
 
@@ -82,7 +81,7 @@ Effect Prediction.
 
 You can verify
 processing parameters on each individual app pages before running the
-pipeline. To do this, click on "Edit file list" and open the file using
+pipeline. To do this, click on **Edit file list** and open the file using
 the app that created this file:
 
 |Edit File List BWA|
@@ -90,7 +89,7 @@ the app that created this file:
 Data Flow Runner allows you to start initialization up to any step of the pipeline. We
 recommend  you check the mapping quality after removing the duplicates
 from mapped reads to assure that they could be further used in variant
-calling and effect prediction. In order to do this,  click on "2 files"
+calling and effect prediction. In order to do this,  click on **2 files**
 in Remove Duplicated Mapped Reads section and start initialization with
 right-click context menu. Follow the process in the Task Manager.
 Regardless of the status of the analysis all the created data flow files
