@@ -13,7 +13,7 @@ data flow:
 .. _the Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 
 After generating reports, you'll be able to review various statistics and
-plots for each sample
+plots for each sample.
 
 .. _Twin-N-iPSC Rep3: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF968986&action=viewFile
 
