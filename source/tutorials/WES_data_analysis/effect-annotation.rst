@@ -244,10 +244,12 @@ enrichment platform is best must be answered with respect to all these
 specific parameters.
 
 Congratulations! We've worked through the entire tutorial! Try to repeat all
-the steps with your own data or using other Genestack `public experiments`_.
+the steps with your own data or using other Genestack `public experiments`__.
 As well as create your own data flows by adding new steps, changing sources
 and default parameters. If you have any questions or suggestions, please
 leave them below or `email us <feedback@genestack.com>`_.
+
+.. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 
 References
 ----------
@@ -280,5 +282,4 @@ References
 .. _View report: https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF999233&action=viewFile
 .. _Variants with predicted effects for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1 
 .. _the detected variants: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1001169&action=viewFile#
-.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 .. _email us: feedback@genestack.com

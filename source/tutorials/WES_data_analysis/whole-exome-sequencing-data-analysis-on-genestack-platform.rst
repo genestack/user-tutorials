@@ -15,10 +15,12 @@ Setting up an exome sequencing experiment
 *****************************************
 
 First off, let's choose exome sequencing data. You can `upload your own data`_
-using 'Import' button or search through all `public experiments`_ we have on
+using 'Import' button or search through all `public experiments`__ we have on
 the platform. Our analysis will be based on data coming from `Clark et al.
 2011`_. Let's find this experiment in the platform and open it `Experiment
 Viewer`_:
+
+.. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 
 |WES_experiment_viewer copy|
 
@@ -57,6 +59,5 @@ really means.
 
 .. |WES_experiment_viewer copy| image:: images/WES_experiment_viewer-copy.png
 .. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
 .. _Clark et al. 2011: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP00
 .. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile
