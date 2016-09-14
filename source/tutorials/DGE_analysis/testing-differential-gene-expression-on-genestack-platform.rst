@@ -5,7 +5,7 @@ learn how genes work together to carry out biological processes.
 
 .. youtube:: https://www.youtube.com/watch?v=aLT-FnZMIls
 
-In this tutorial we will use Genestack_ applications to identify differentially
+In this tutorial we will use Genestack applications to identify differentially
 expressed (DE) genes and further annotate them according to biological
 process, molecular function and cellular component.
 The whole analysis includes the following steps:
@@ -20,8 +20,6 @@ The whole analysis includes the following steps:
 #. GO-based enrichment analysis
 
 Let’s deal with these steps one by one.
-
-.. _Genestack: https://genestack.com/
 
 Setting up an RNA-seq experiment
 ********************************

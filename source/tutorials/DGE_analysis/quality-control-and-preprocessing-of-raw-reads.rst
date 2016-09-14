@@ -13,7 +13,7 @@ data flow:
 .. _the Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 
 After generating reports, you'll be able to review various statistics and
-plots for each sample. Here is some of them for `Twin-N-iPSC Rep3`_:
+plots for each sample
 
 .. _Twin-N-iPSC Rep3: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF968986&action=viewFile
 
@@ -76,7 +76,7 @@ Once the quality of raw data has been checked, we can go back to the main
 |DGE_data_flow_first_step|
 
 You can upload your samples directly into the data flow or select them from
-the available datasets. Let's choose sources - 7 sequencing assays from the
+the available datasets. Let's choose sources — 7 sequencing assays from the
 experiment and a human reference genome, and create resulting files in a
 specific folder.
 
