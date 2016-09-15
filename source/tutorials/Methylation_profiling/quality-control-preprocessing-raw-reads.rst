@@ -76,7 +76,7 @@ dimers.
 |Per sequence GC content|
 
 On the **Per base sequence quality** plots we can see that all bases in our sequence have
-the quality score equal or more than 30, which corresponds to 99.9% base
+the quality score equal or more than 30, which corresponds to 99.9 % base
 calling accuracy. The quality is degraded in the last bases, but it is
 an expected behaviour corresponding to the sequencing chemistry.
 
@@ -92,18 +92,18 @@ of a high quality (more than 30).
 
 Let's move on to the **Per base sequence content** graphs. The fact that our data failed this metric indicates
 that the base distribution is not uniform, namely the difference between
-A and T, or G and C is greater than 20%. Indeed, we can see fluctuations
+A and T, or G and C is greater than 20 %. Indeed, we can see fluctuations
 in base compositions over the entire read length. This should not alarm
 us, because bisulfite treatment converts the most of the cytosines to
 thymines and that obviously affects the base composition. Looking at the
-plot we can see that the number of thymines is approximately 50%, while
+plot we can see that the number of thymines is approximately 50 %, while
 cytosines are almost absent.
 
 |fastqc per base seq content|
 
 **Sequence duplication levels** metric allows us to assess
 the duplication level as well as the number of sequences that are not
-unique in the raw data. According to the plot, we have more than 30% of
+unique in the raw data. According to the plot, we have more than 30 % of
 non-unique sequences of the total in the assay. Such a high duplication
 level can be linked to PCR artefacts, contaminants or sequencing of the
 same area several times.
@@ -169,7 +169,7 @@ Later, to avoid mismatches in read mapping, we
 should remove low quality bases from the sequencing
 reads. **Trim low quality bases** application allows you to get rid
 of nucleotide bases with a low phred33 quality which corresponds to an
-error threshold equal to 1%.
+error threshold equal to 1 %.
 
 |df trim low quality bases|
 

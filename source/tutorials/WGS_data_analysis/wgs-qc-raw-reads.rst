@@ -98,7 +98,7 @@ quality control metrics outlined below:
    non-unique sequences which could be present in the library;
 
 -  *Overrepresented sequences* providing the information on sequences
-   that make up more than 0.1% of the total, and may either have a high
+   that make up more than 0.1 % of the total, and may either have a high
    biological significance or indicate contamination of the library.
 
 Table located on the left side of the page informs us which reports
@@ -115,7 +115,7 @@ sequences or other contaminations of the library.
 
 The warning reported for the  *sequence
 duplication * metric for the first sequencing run indicates that the
-number of non-unique sequences in the assay has reached more than 20% of
+number of non-unique sequences in the assay has reached more than 20 % of
 the total. The average duplication levels for read mates are 1.50x and
 1.48x.  *Sequence duplication* plot represents the relative number of
 sequences having different duplication levels, and for  WGS

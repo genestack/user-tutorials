@@ -53,9 +53,9 @@ made up of sequences with different duplication levels. Sequences with 1, 2,
 
 |DGE_seq_dupl_lev|
 
-Looking at these plots, you may notice 15% of sequences duplicated more than
-10 times, 6% of sequences are repeated more than 100 times, etc. The overall
-rate of  duplication is about 40%. Nevertheless, while analysing
+Looking at these plots, you may notice 15 % of sequences duplicated more than
+10 times, 6 % of sequences are repeated more than 100 times, etc. The overall
+rate of  duplication is about 40 %. Nevertheless, while analysing
 transcriptome sequencing data, we should not remove these duplicates because
 we don't know whether they represent PCR duplicates or high gene expression
 of our samples.

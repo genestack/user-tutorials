@@ -121,15 +121,15 @@ deletions, frame shift mutations etc. Genetic variants can affect
 different genomic regions such as exons, intergenic regions, introns,
 untranslated regions, splice sites, upstream and downstream regions. As
 we can see from the report most changes in the Turkish individual genome
-are located in intronic regions  (63,351% of the total).
+are located in intronic regions  (63,351 % of the total).
 
 |Effects by type and region (table)|
 
 As we can see the vast majority of identified
-variations are associated with introns (climbed above 60%) and there is
+variations are associated with introns (climbed above 60 %) and there is
 no mutations in splice sites. The changes in intergenic regions
-represent ~17% of the total, while changes in exons occur in
-approximately 2% of events.
+represent ~17 % of the total, while changes in exons occur in
+approximately 2 % of events.
 
 |Effects by region|
 

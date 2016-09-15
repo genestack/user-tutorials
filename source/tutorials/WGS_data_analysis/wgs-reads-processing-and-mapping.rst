@@ -36,7 +36,7 @@ line options.   We will finalize the data preprocessing by 
 file according to the set value of Phred33 quality score. As usual, you
 can change the default parameters on the app page. We will eliminate all
 reads with quality score below 20, considering only the bases called
-with 99% accuracy. By default "Minimum quality score" is already equal
+with 99 % accuracy. By default "Minimum quality score" is already equal
 to "20", so we only need to set the command line option "Percentage of
 bases to be above the minimum quality score" to "100".
 
@@ -137,7 +137,7 @@ see on the plot.
 
 According to the QC check, both
 technical replicates from our experiment are concordant with all reads
-being mapped and 95% of the reads are mapped properly. To obtain more
+being mapped and 95 % of the reads are mapped properly. To obtain more
 detailed statistics explore individual QC report in Mapped Reads QC
 Report app. Let's explore the mapping quality for the first sequencing
 run of Turkish individual sample. On the app page you will find mapping
