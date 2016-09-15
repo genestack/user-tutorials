@@ -43,15 +43,14 @@ When files will be complete, you can analyse `variants in Genome Browser`_:
 Genome Browser application allows you investigate the variants interactively:
 how many mutations are in this particular gene or region, review some
 information about detected variants such as average mapping quality and raw
-read depth and compare variants enrichment between samples. Analysing
-variants in Genome Browser, you can notice a large amount of both exome
-WES–specific and WGS-specific SNVs. We identified variants for each sample
-separately and put them in `Variants for Clark et al (2011)`_ folder.
+read depth and compare variants enrichment between samples. Analysing variants
+in Genome Browser, you can notice a large amount of both exome WES–specific and
+WGS-specific SNVs. We identified variants for each sample separately and put
+them in `Variants for Clark et al (2011)`_ folder.
 
 .. |WES_remove_duplicates| image:: images/WES_remove_duplicates.png
 .. |WES_variant_calling| image:: images/WES_variant_calling.png
 .. |WES_variants_GB| image:: images/WES_variants_GB.png
 .. _Filtered mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1
 .. _variants in Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999281&action=viewFile
-.. _Variants for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1
-.. _
+.. _Variants for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1.. _

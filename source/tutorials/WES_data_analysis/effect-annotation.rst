@@ -40,7 +40,7 @@ that have high, low, moderate impact or tagged as modifiers:
 |WES_number_of_effects_by_impact_1|
 
 As a rule, the mutation has high impact if it causes significant changes such
-as frame shift, stop codon formation, deletion of a large part (over 1%) of
+as frame shift, stop codon formation, deletion of a large part (over 1 %) of
 chromosome or even the whole exon, etc. Variants with low impact do not change
 function of the protein they encoded. Usually this is synonymous mutations.
 Moderate variants do not affect protein structure significantly but change
@@ -48,8 +48,8 @@ effectiveness of the protein function. They mostly include missense mutations,
 codon deletions or insertions, etc. So called modifiers are mutations in
 introns, intergenic, intragenic and other non-coding regions.
 
-For sample enriched by Nimblegen, just about 0.04% of all annotated variants
-has high impact. However more than 97% mutation are modifiers. We see the
+For sample enriched by Nimblegen, just about 0.04 % of all annotated variants
+has high impact. However more than 97 % mutation are modifiers. We see the
 same percentage of modifiers in WES and WGS samples.
 
 Also, the output report contains information about the count and percentage of
@@ -58,10 +58,10 @@ by functional class** table:
 
 |WES_number_of_affects_by_functional_class_1|
 
-For Nimblegen sample, the app detected ~50% point mutations in which a single
+For Nimblegen sample, the app detected ~50 % point mutations in which a single
 nucleotide change results in a codon that codes for a different amino acid
-(missense mutations). There are more then 50% of silent mutations which do
-not significantly alter the protein. And only ~0.3% are nonsense mutations.
+(missense mutations). There are more then 50 % of silent mutations which do
+not significantly alter the protein. And only ~0.3 % are nonsense mutations.
 They change codon in a way resulting in a stop (or nonsense) codon formation,
 and subsequently a truncated, incomplete, and usually nonfunctional protein
 is produced. Almost the same percentage of missense, nonsense and silent
@@ -126,7 +126,7 @@ G→C/C→G transversions in both whole exome and whole genome samples.
 transitions, number of transversions and their ratio in SNPs and all variants.
 
 Transitions are mutations within the same type of nucleotide —
-pyrimidine-pyrimidine mutations (C <> T) and purine-purine mutations (A <> G).
+pyrimidine-pyrimidine mutations (C↔T) and purine-purine mutations (A↔G).
 Transversions are mutations from a pyrimidine to a purine or vice versa. The
 table represents these values taking into account only SNP variants.
 
@@ -135,7 +135,7 @@ table represents these values taking into account only SNP variants.
 But below the table, you can find the information for all variants. For WES
 data, the Ts/Tv ratio of total variants ranged from 1.6 to 1.8 and was lower
 than the estimated ~2.6. It can be explained by the fact that the platforms
-target sequences outside coding exons (only 60% of variants were found in
+target sequences outside coding exons (only 60 % of variants were found in
 introns, for Nimblegen sample). However, for WGS data, the ratio is equal to
 2 as it's expected (*Ebersberger I. et al, 2002*).
 
@@ -153,7 +153,7 @@ replaced. Here is just a fragment of this table:
 
 |WES_codon_changes|
 
-Reference codons are shown in rows, changed codons - in columns. The most of
+Reference codons are shown in rows, changed codons — in columns. The most of
 changes happened are indicated in red color. For example, 811 'ACG' reference
 codons have been replaced by 'ACA' triplet. If we compare this information
 between our samples, you'll find the same type and almost the same number of
@@ -237,7 +237,7 @@ largest proportion of its target bases. Therefore, the Nimblegen is superior
 to the Agilent and Illumina TruSeq platforms for research restricted to the
 regions that it covers. The technologies target different exomic features but
 all of them cover a large portion of the overall exome with Illumina able to
-achieve the best exome coverage (~60%). Moreover, the results showed that
+achieve the best exome coverage (~60 %). Moreover, the results showed that
 Agilent and Illumina platforms appeared to detect a higher total number of
 variants in comparison to Nimblegen one. That's why the question of which
 enrichment platform is best must be answered with respect to all these

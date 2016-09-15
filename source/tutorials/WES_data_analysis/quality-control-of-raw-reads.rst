@@ -54,8 +54,8 @@ and G-C frequencies:
 |WES_per_base_sequence_content|
 
 **Sequence duplication levels** plots represent the percentage of the library
-made up of sequences with different duplication levels. In simple words, 44%
-of reads are unique, 26% of reads are repeated twice, 13% - three times, 4% -
+made up of sequences with different duplication levels. In simple words, 44 %
+of reads are unique, 26 % of reads are repeated twice, 13 % - three times, 4 % -
 more than 10 times, etc. All these duplicates are grouped to give the overall
 duplication level. You can use Filter Duplicated Reads application to remove
 duplicates in raw reads data, however we'll get rid of them after mapping step.

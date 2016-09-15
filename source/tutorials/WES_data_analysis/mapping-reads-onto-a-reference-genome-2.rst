@@ -11,7 +11,7 @@ on this step and analyse mapping results in Genome Browser:
 
 .. youtube:: https://www.youtube.com/watch?v=hCGkOYQfH5g
 
-When mappings will be complete, open all 4 files in Genome browser to compare
+When mappings are complete, open all 4 files in Genome browser to compare
 their `read coverage`_. Let's look for specific gene or region, for example,
 HBA1 and HBA2 genes encoding alpha-globin chains of hemoglobin. With WGS
 technology, you can see coverage in both protein-coding and non-coding
@@ -57,25 +57,25 @@ coverage for each platform:
 
 |WES_target|
 
-A typical target-enrichment WES experiment results in ~90% of target-bases
+A typical target-enrichment WES experiment results in ~90 % of target-bases
 covered at coverage ≥ 1x. This value tends to decrease as the coverage
 threshold increases. How fast this percentage decreases with the coverage
 increment depends on the specific experimental design.
 
 Not surprisingly, all the technologies give high coverage of their respective
 target regions, with the Nimblegen platform giving the highest coverage: about
-94% of the targeted bases were covered at least twice, 93% at ≥ 10x and 87%
-at ≥ 50x. With Agilent, 91% of bases were covered at ≥ 2x, 86% at ≥ 10x and
-66% at ≥ 50x. With Illumina TruSeq enrichment, 91% of bases were covered
-at ≥ 2x, 86% at ≥ 10x and only 50% at ≥ 50x. These results are very similar
+94 % of the targeted bases were covered at least twice, 93 % at ≥ 10x and 87 %
+at ≥ 50x. With Agilent, 91 % of bases were covered at ≥ 2x, 86 % at ≥ 10x and
+66 % at ≥ 50x. With Illumina TruSeq enrichment, 91 % of bases were covered
+at ≥ 2x, 86 % at ≥ 10x and only 50 % at ≥ 50x. These results are very similar
 to the paper results (*Clark M.J. et al, 2011*):
 
 |WES_paper_target_enrichment|
 
 Regarding the overall percentage of reads mapped on the target, in a typical
-experiment one may expect ~70%. Looking at the plot, you see the highest 77%
-and 74% values for samples enriched by Nimblegen and Agilent platforms
-respectively and only 48% - for Illumina TruSeq. Also, it's not surprising
+experiment one may expect ~70 %. Looking at the plot, you see the highest 77 %
+and 74 % values for samples enriched by Nimblegen and Agilent platforms
+respectively and only 48 % - for Illumina TruSeq. Also, it's not surprising
 that we notice the biggest mean coverage on target with ≥ 2x coverage for
 Nimblegen samples, since this platform contains overlapping oligonucleotide
 probes that cover the bases it targets multiple times, making it the highest

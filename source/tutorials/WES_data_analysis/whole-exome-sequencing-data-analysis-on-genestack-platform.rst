@@ -1,7 +1,7 @@
 As one of the widely used targeted sequencing method, whole exome
 sequencing (WES) has become more and more popular in clinical and basic
 research. Albeit, the exome (protein-coding regions of the genome) makes
-up ~1% of the genome, it contains about 85% of known disease-related variants
+up ~1 % of the genome, it contains about 85 % of known disease-related variants
 (*van Dijk E.L. et al, 2014*), making whole-exome sequencing a fast and
 cost-effective alternative to whole genome sequencing (WGS).
 
