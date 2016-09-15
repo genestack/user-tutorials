@@ -17,7 +17,7 @@ Setting up an exome sequencing experiment
 First off, let's choose exome sequencing data. You can `upload your own data`_
 using 'Import' button or search through all `public experiments`__ we have on
 the platform. Our analysis will be based on data coming from `Clark et al.
-2011`_. Let's find this experiment in the platform and open it `Experiment
+2011`_. Let's find this experiment in the platform and open it in `Experiment
 Viewer`_:
 
 .. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
@@ -47,7 +47,7 @@ A typical data flow of WES analysis consists of the following steps:
 #. Quality control of raw reads
 #. Preprocessing of raw reads
 #. Mapping reads onto a reference genome
-#. Targeted Sequencing quality control
+#. Targeted sequencing quality control
 #. Quality control of mapped reads
 #. Post-alignment processing
 #. Variant calling

@@ -43,7 +43,7 @@ coverage, etc. However, by default the application allows you to compute
 enrichment statistics for reads mapped only on exome. If you go to the app
 page, change the value to 'Both exome and target file' and select the
 appropriate target annotation file, you get both exome and/or target
-enrichment statistics. To do this step, you can "generate reports" for each
+enrichment statistics. To do this step, you can 'generate reports' for each
 mapping separately or run our `Targeted Sequencing Quality Control`_ public
 data flow (with default values) for several samples at once and analyse the
 output reports in `Multiple QC Report app`_:
@@ -68,7 +68,7 @@ target regions, with the Nimblegen platform giving the highest coverage: about
 at ≥ 50x. With Agilent, 91% of bases were covered at ≥ 2x, 86% at ≥ 10x and
 66% at ≥ 50x. With Illumina TruSeq enrichment, 91% of bases were covered
 at ≥ 2x, 86% at ≥ 10x and only 50% at ≥ 50x. These results are very similar
-to the paper results:
+to the paper results (*Clark M.J. et al, 2011*):
 
 |WES_paper_target_enrichment|
 
