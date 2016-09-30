@@ -225,11 +225,7 @@ For example, authors identified variants with the vendor-supplied
 Eland-Casava pipeline and The Genome Analysis Toolkit (GATK v2.2), while
 we used Variant Calling tool based on SAMtools and BCFtools.  
 
-Need to perform analysis of `WGBS`_, `WES`_ or `RNA-Seq data`_?
-
-Visit our website to check out more `tutorials`_! If you have any
-questions or suggestions, please leave them below or `email
-us <feedback@genestack.com>`_.
+If you have any questions or suggestions feel free to `email us <feedback@genestack.com>`_.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
 .. |GB_variants| image:: images/GB_variants.png
