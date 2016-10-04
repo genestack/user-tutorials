@@ -100,7 +100,7 @@ folder.
 
 Note that there is a data flow file including
 all the mentioned preprocess and analysis steps previously prepared by
-Genestack team. This data flow is called `WGS data analysis`_ and you can find in our tutorial folder. Now let's talk about each of the
+Genestack team. This data flow is called `WGS data analysis for Dogan et al. (2014)`_ and you can find in our tutorial folder. Now let's talk about each of the
 analysis steps we included in the pipeline in greater detail.
 
 .. |Trim adaptors and contaminants| image:: images/Trim-adaptors-and-contaminants.png
@@ -116,4 +116,4 @@ analysis steps we included in the pipeline in greater detail.
 .. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png
 .. |Edit File List BWA| image:: images/Edit-File-List-BWA.png
 .. |Start initial| image:: images/Start-initial.png
-.. _WGS data analysis: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1018398&action=viewFile
+.. _WGS data analysis for Dogan et al. (2014): https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3669358&action=viewFile

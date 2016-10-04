@@ -66,11 +66,11 @@ This is all for the tutorial. Why don’t you try repeating these steps with
 your own data or using our `public experiments`_? You can try it right now!
 Just open the `tutorial data flow`_ or create your own one by adding new
 steps, changing sources and default options. If you have any questions and
-comments, please submit them below or email us at `support@genestack.com`_.
+comments, please submit them below or email us at `feedback@genestack.com`_.
 
 .. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 .. _tutorial data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources
-.. _support@genestack.com: support@genestack.com
+.. _feedback@genestack.com: feedback@genestack.com
 
 Follow us on Twitter: `@genestack <https://twitter.com/genestack>`__.
 

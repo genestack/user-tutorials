@@ -3,7 +3,7 @@ Mapping reads onto a reference genome
 
 After raw data QC and preprocessing, the next step is to map exome sequencing
 data to the reference genome with high efficiency and accuracy. Genestack
-supports two Unspliced mappers, one is based on Bowtie2_, another - on BWA_.
+supports two Unspliced mappers, one is based on Bowtie2_, another — on BWA_.
 We'll use the last one since it is fast and allows gapped alignments which
 are essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
@@ -75,7 +75,7 @@ to the paper results (*Clark M.J. et al, 2011*):
 Regarding the overall percentage of reads mapped on the target, in a typical
 experiment one may expect ~70 %. Looking at the plot, you see the highest 77 %
 and 74 % values for samples enriched by Nimblegen and Agilent platforms
-respectively and only 48 % - for Illumina TruSeq. Also, it's not surprising
+respectively and only 48 % — for Illumina TruSeq. Also, it's not surprising
 that we notice the biggest mean coverage on target with ≥ 2x coverage for
 Nimblegen samples, since this platform contains overlapping oligonucleotide
 probes that cover the bases it targets multiple times, making it the highest
@@ -128,7 +128,7 @@ Output report includes mapping statistics such as:
    where one of the mates was mapped with unexpected orientation.
 
 The **Coverage by chromosome** plot shows a read coverage at each base on
-each chromosome and patch (if it's presented) defined by lines in different
+each chromosome and patch (if it is presented) defined by lines in different
 colours:
 
 |WES_chr_coverage|
@@ -160,7 +160,7 @@ mapped reads.
 .. |WES_chr_coverage| image:: images/WES_chr_coverage.png
 .. |WES_ins_dist| image:: images/WES_ins_dist.png
 .. |WES_mult_mapped_reads_1| image:: images/WES_mult_mapped_reads_1.png
-.. _Bowtie2: http://bowtie-bio.sourceforge.net/manual.shtml
+.. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
 .. _BWA: http://bio-bwa.sourceforge.net/bwa.shtml
 .. _read coverage: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999244&action=viewFile
 .. _RefSeq: http://www.ncbi.nlm.nih.gov/refseq/
@@ -171,7 +171,7 @@ mapped reads.
 .. _Multiple QC Report app: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999241&action=viewFile
 .. _Genome annotations: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000048&action=viewFile
 .. _Target Annotations for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972510&action=viewFile
-.. _Mapped reads enrichment reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972509&action=viewFile
-.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
-.. _Mapped reads QC reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972891&action=viewFile
+.. _Mapped reads enrichment reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999224&action=viewFile&page=1
+.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3669351&action=viewFile
+.. _Mapped reads QC reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999191&action=viewFile&page=1
 .. _Multiple QC Report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999242&action=viewFile

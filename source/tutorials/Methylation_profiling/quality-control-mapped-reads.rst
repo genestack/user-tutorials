@@ -63,7 +63,7 @@ reads QC for Rodriguez et al., 2014`_ and `Merged Mapped Reads QC for Rodriguez 
 .. |GB_search by gene| image:: images/GB_search-by-gene.png
 .. |GB coverage (v2) Sequencing coverage| image:: images/GB-coverage-v2.png
 .. |Merged mapped reads QC| image:: images/Merged-mapped-reads-QC.png
-.. _Coverage for merged mapped reads for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969004&action=viewFile#
+.. _Coverage for merged mapped reads for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF3669169&action=viewFile
 .. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
 .. _QC-report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF970069&action=viewFile
 .. _Mapped reads QC for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968916&action=viewFile

@@ -48,7 +48,7 @@ This is the end of
 this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform. If you have any questions you can
 post them on our forum_ and we will
-answer them as soon as we can. Alternatively, you can `email us <feedback@genestack.com>`_.
+answer them as soon as we can. Alternatively, you can `email us`_.
 Genestack team
 
 .. |create new data flow| image:: images/create-new-data-flow1.png
@@ -57,3 +57,4 @@ Genestack team
 .. |delay initialization until later| image:: images/delay-initialization-until-later1.png
 .. |start initialization| image:: images/start_init.png
 .. _forum: http://forum.genestack.org/
+.. _email us: feedback@genestack.com

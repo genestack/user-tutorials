@@ -197,4 +197,4 @@ for Rodriguez et al., 2014`_ and `Trim low quality bases for Rodriguez et al., 
 .. _FastQC report: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF969042&action=viewFile
 .. _FastQC reports for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969029&action=viewFile&page=1
 .. _Trim adaptors for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968745&action=viewFile 
-.. _Trim low quality bases for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile.
+.. _Trim low quality bases for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968751&action=viewFile
