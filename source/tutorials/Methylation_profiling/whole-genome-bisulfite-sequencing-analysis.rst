@@ -58,8 +58,7 @@ of `Public Experiments`_.
 Feel free to reproduce the workflow on any other relevant data set with
 `Experiment Browser`_.
 If you do not find there needed experiment or you intend to analyse your own data use our
-`Import Data`_ application allowing to upload files from your computer or from URL. Learn more about
-importing data into the Genestack in our `blog post`_.
+`Import Data`_ application allowing to upload files from your computer or from URL.
 
 In this experiment authors applied WGBS of genomic DNA to investigate the mechanisms that could
 promote changes in DNA methylation and contribute to cell differentiation and malignant
@@ -104,5 +103,4 @@ To learn more just open the experiment in `Experiment Viewer`_:
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
 .. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
 .. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _blog post: https://genestack.com/tutorial/file-import/
 .. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile

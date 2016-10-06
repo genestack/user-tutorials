@@ -5,7 +5,7 @@ Raw sequencing reads can include PCR primers, adaptors, low quality bases,
 duplicates and other contaminants coming from the experimental protocols.
 That's why we recommend you to check the quality of your raw data looking at
 such aspects as GC percentage, per base sequence quality scores, and other
-quality sttistics. The easiest way to do this is to run `the Raw Reads QC`_
+quality stаtistics. The easiest way to do this is to run `the Raw Reads QC`_
 data flow:
 
 .. youtube:: https://www.youtube.com/watch?v=cWQa1EET9F4

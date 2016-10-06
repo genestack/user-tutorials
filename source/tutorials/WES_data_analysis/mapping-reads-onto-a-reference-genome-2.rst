@@ -172,6 +172,6 @@ mapped reads.
 .. _Genome annotations: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000048&action=viewFile
 .. _Target Annotations for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF972510&action=viewFile
 .. _Mapped reads enrichment reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999224&action=viewFile&page=1
-.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3669351&action=viewFile
+.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
 .. _Mapped reads QC reports for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999191&action=viewFile&page=1
 .. _Multiple QC Report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF999242&action=viewFile
