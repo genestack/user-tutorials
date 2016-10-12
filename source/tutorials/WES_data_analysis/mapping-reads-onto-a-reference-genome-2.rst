@@ -3,7 +3,7 @@ Mapping reads onto a reference genome
 
 After raw data QC and preprocessing, the next step is to map exome sequencing
 data to the reference genome with high efficiency and accuracy. Genestack
-supports two Unspliced mappers, one is based on Bowtie2_, another — on BWA_.
+supports two Unspliced mappers, one is based on Bowtie2_, another on BWA_.
 We'll use the last one since it is fast and allows gapped alignments which
 are essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
