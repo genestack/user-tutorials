@@ -3,7 +3,7 @@ Mapping reads onto a reference genome
 
 After raw data QC and preprocessing, the next step is to map exome sequencing
 data to the reference genome with high efficiency and accuracy. Genestack
-supports two Unspliced mappers, one is based on Bowtie2_, another on BWA_.
+supports two Unspliced mappers: one is based on Bowtie2_, another uses BWA_ alignment package.
 We'll use the last one since it is fast and allows gapped alignments which
 are essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
@@ -74,8 +74,8 @@ to the paper results (*Clark M.J. et al, 2011*):
 
 Regarding the overall percentage of reads mapped on the target, in a typical
 experiment one may expect ~70 %. Looking at the plot, you see the highest 77 %
-and 74 % values for samples enriched by Nimblegen and Agilent platforms
-respectively and only 48 % — for Illumina TruSeq. Also, it's not surprising
+and 74 % values for samples enriched by Nimblegen and Agilent platforms,
+respectively. For Illumina TruSeq, on the other hand, only 48 % reads are mapped on the target region. Also, it's not surprising
 that we notice the biggest mean coverage on target with ≥ 2x coverage for
 Nimblegen samples, since this platform contains overlapping oligonucleotide
 probes that cover the bases it targets multiple times, making it the highest
