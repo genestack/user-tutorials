@@ -53,10 +53,10 @@ reveal genome-wide distribution of mCs and hmCs, RNA-Seq to analyse
 expression of Canyon-associated genes. This incredible work was turned
 into a research `paper`_, and the data sets can be found in our `Public Experiments`_!
 
-That's it for the tutorial, we hope you will enjoy working on your data
-with Genestack! Later you can return back to the tutorial if necessary.
-If you have any questions or suggestions, please leave them in
-comments below or `contact us <feedback@genestack.com>`_.
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -76,4 +76,4 @@ References
 .. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
 .. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
-.. _contact us: feedback@genestack.com
+.. _forum: http://forum.genestack.org/

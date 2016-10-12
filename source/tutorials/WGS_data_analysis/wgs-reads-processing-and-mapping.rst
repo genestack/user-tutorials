@@ -17,7 +17,7 @@ app.
 Trim Adaptors and Contaminants app finds and
 clips adapters and contaminating sequences from raw reads. The authors
 of the experiment trimmed and filtered reads with
-`Trimmomatic`_ so that
+Trimmomatic_ so that
 reads with a high quality score and a minimum length of 36 bp after
 trimming were kept. We will apply default parameters ejecting reads
 below a length of 15 bp. You can change the minimum length of trimmed

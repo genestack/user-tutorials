@@ -58,8 +58,7 @@ of `Public Experiments`_.
 Feel free to reproduce the workflow on any other relevant data set with
 `Experiment Browser`_.
 If you do not find there needed experiment or you intend to analyse your own data use our
-`Data Import`_ application allowing to upload files from your computer or from URL. Learn more about
-importing data into the Genestack in our `blog post`_.
+`Import Data`_ application allowing to upload files from your computer or from URL.
 
 In this experiment authors applied WGBS of genomic DNA to investigate the mechanisms that could
 promote changes in DNA methylation and contribute to cell differentiation and malignant
@@ -100,10 +99,8 @@ To learn more just open the experiment in `Experiment Viewer`_:
 .. _Tutorials: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1
 .. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
 .. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
-.. _Rodriguez et al., 2014: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714
+.. _Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF088374&action=viewFile&page=1
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
 .. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
-.. _Data Import: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _blog post: https://genestack.com/tutorial/file-import/
-.. _Rodriguez et al., 2014: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49714
+.. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile

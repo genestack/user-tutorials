@@ -59,5 +59,5 @@ really means.
 
 .. |WES_experiment_viewer copy| image:: images/WES_experiment_viewer-copy.png
 .. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _Clark et al. 2011: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP00
+.. _Clark et al. 2011: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007499
 .. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile

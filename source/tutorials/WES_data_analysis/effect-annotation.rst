@@ -4,8 +4,7 @@ Effect-annotation
 After variants are detected, use Effect Annotation application based on
 SnpEff_ tool. The app annotates variants and predicts the effects they
 produce on genes such as amino acid changes, impact, functional class, etc.
-To review this information, open variants with predicted effects in `View
-report`_ application:
+To review this information, open `Variants with predicted effects`_ in **View report** application:
 
 .. youtube:: https://www.youtube.com/watch?v=0fm7ZsFeRq0
 
@@ -53,8 +52,7 @@ has high impact. However more than 97 % mutation are modifiers. We see the
 same percentage of modifiers in WES and WGS samples.
 
 Also, the output report contains information about the count and percentage of
-missense, nonsense and silent mutations. Find out this in **Number of effects
-by functional class** table:
+missense, nonsense and silent mutations. Find out this in **Number of effects by functional class** table:
 
 |WES_number_of_affects_by_functional_class_1|
 
@@ -243,13 +241,10 @@ variants in comparison to Nimblegen one. That's why the question of which
 enrichment platform is best must be answered with respect to all these
 specific parameters.
 
-Congratulations! We've worked through the entire tutorial! Try to repeat all
-the steps with your own data or using other Genestack `public experiments`__.
-As well as create your own data flows by adding new steps, changing sources
-and default parameters. If you have any questions or suggestions, please
-leave them below or `email us <feedback@genestack.com>`_.
-
-.. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -280,6 +275,8 @@ References
 .. |WES_filters_history| image:: images/WES_filters_history.png
 .. _SnpEff: http://snpeff.sourceforge.net/
 .. _View report: https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF999233&action=viewFile
+.. _Variants with predicted effects: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1
 .. _Variants with predicted effects for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1 
 .. _the detected variants: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1001169&action=viewFile#
 .. _email us: feedback@genestack.com
+.. _forum: http://forum.genestack.org/

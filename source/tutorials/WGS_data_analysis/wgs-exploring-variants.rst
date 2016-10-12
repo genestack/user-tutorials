@@ -16,16 +16,14 @@ both filtered mapped reads files) and default command line options.
 Track the progress of your tasks in Task Manager
 and as soon as the computation is finished, explore the results of
 variant identification using the interactive applications such
-as Variant Explorer or Genome Browser. Let's click on the genetic
-variants file name in Task Manager and open it in Genome Browser using
+as Variant Explorer or Genome Browser.
+Now, let’s take a look at the `results of variant calling`_ in the Genome Browser.
+Let's click on the genetic variants file name in Task Manager and open it in Genome Browser using
 the context menu. In case some files are not initialized yet, Genome
 Browser page is empty. You can initialize the files by clicking on **Go!**
 to start the process. Tracks representing found mutations will appear on
 the page as the task is finished.
-
-Here we will show you the `results of variant calling`_
-performed for our tutorial. On the Genome Browser page you will see the
-reference track displaying annotated genes with their coordinates and
+The reference track displaying annotated genes with their coordinates and
 variation track representing  genetic variants, their genomic position,
 average mapping quality and raw read depth.
 
@@ -40,23 +38,22 @@ one deletion 5bp long (blue).
 Effect prediction
 *****************
 
-After variants have been identified, we could annotate them and identify
-the effects they produce on known genes. Let's return to the Data Flow
-Runner page with "WGS Data Analysis" data flow. Effect Prediction app
-is based on SnpEff  tool that annotates variants based on their genomic
-location: intronic, untranslated regions (5′ UTR or 3′UTR), upstream,
+After variants have been identified, we can annotate them and identify
+the effects they produce on known genes with Effect Prediction app. The app
+is based on SnpEff_ tool that annotates variants based on their genomic
+location: intronic, untranslated regions (5′UTR or 3′UTR), upstream,
 downstream, splice site, or intergenic regions. It also determines
 effects genetic variants have on genes, such as amino acid replacement
-or frame shifts. The app page will give you more information about it.
-Remember, if you have some files uninitialized, you can run the
+or frame shifts. Remember, if you have some files uninitialized, you can run the
 analysis on the Effect Prediction page or Data Flow Runner page.
 
 |start init|
 
-Explore annotated variants in Genome Browser and Variant Explorer
-apps. Let's open generated `report file`_ containing
-some information about identified variants from our tutorial
-folder. Right click on the genetic variants file name and go to **View Report**.
+Let's now analyse the annotated variants in the genome of the Turkish individual.
+You can do this with **Report Viewer** application:
+right click the "Variants with predicted effects for Dogan et al. (2014)" file name and go to **View Report**.
+Note that you can also explore annotated variants in Genome Browser and Variant Explorer
+apps.
 
 |Screenshot 2015-11-23 11.14.46|
 
@@ -90,7 +87,7 @@ were in an intergenic and intronic region, respectively. We also found
 69426 InDels in the upstream and 74162 InDels in the downstream gene
 regions. Only 69 and 78 mutations were detected in the splice site donor
 and in splice site acceptor, respectively. Finally, we detected 6241
-insertions and deletions in exons.   Besides the statistics on the
+insertions and deletions in exons. Besides the statistics on the
 change type of the found mutations, report also contains quality and
 coverage information. **Quality histogram** shows quality distribution
 with minimum value of 3 and maximum value of 486 for the analysed data:
@@ -148,8 +145,8 @@ higher for exons.
 
 Our results are in line with the original
 paper by Dogan et. al where they have identified 2,383,204 transitions,
-1,154,590 transversions resulting in Ts/Tv ratio of 2.06   Next entry of
-the report is the codon replacements table (we have posted a fragment of
+1,154,590 transversions resulting in Ts/Tv ratio of 2.06.
+Next entry of the report is the codon replacements table (we have posted a fragment of
 it below). Rows represent reference codons and columns represent changed
 codons. The most common codon change for our data is from GAC to GAT
 (876 events) resulting in a synonymous change.
@@ -172,7 +169,7 @@ Genetic variants filtering
 **************************
 
 Resulting genetic variants files, annotated or not, can be opened in the
-`Variant Explorer`_ app. In the Variant Explorer you can interactively explore the
+Variant Explorer app. In the Variant Explorer you can interactively explore the
 information about found mutations, as well as sort and filter them by
 specific factors such as: locus, type of variants (SNP, INS, DEL, MNP),
 reference or alternative allele, Phred-scaled probability that the
@@ -222,14 +219,14 @@ concordance with original paper, there are also some differences in
 number of identified mutations or InDel length distribution we mentioned
 above. Such variation could be explained by the use of different tools.
 For example, authors identified variants with the vendor-supplied
-Eland-Casava pipeline and The Genome Analysis Toolkit (GATK v2.2), while
-we used Variant Calling tool based on SAMtools and BCFtools.  
+Eland-Casava pipeline and `The Genome Analysis Toolkit`_ (GATK v2.2), while
+we used Variant Calling application based on SAMtools_ and BCFtools_.  
 
-Need to perform analysis of `WGBS`_, `WES`_ or `RNA-Seq data`_?
 
-Visit our website to check out more `tutorials`_! If you have any
-questions or suggestions, please leave them below or `email
-us <feedback@genestack.com>`_.
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
 .. |GB_variants| image:: images/GB_variants.png
@@ -252,10 +249,11 @@ us <feedback@genestack.com>`_.
 .. |Screenshot 2016-04-24 14.05.22| image:: images/Screenshot-2016-04-24-14.05.22.png
 .. |Screenshot 2016-04-24 14.10.20| image:: images/Screenshot-2016-04-24-14.10.20.png
 .. |Screenshot 2016-03-14 18.25.42| image:: images/Screenshot-2016-03-14-18.25.42-1024x154.png
-.. _results of variant calling: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF1976635&action=viewFile
-.. _report file: https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF973651&action=viewFile
-.. _Variant Explorer: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1976637&action=viewFile
-.. _WGBS: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
-.. _WES: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
-.. _RNA-Seq data: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
-.. _tutorials: https://genestack.com/tutorials/
+.. _results of variant calling: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF3669362&action=viewFile
+.. _report file:
+.. _Variants with predicted effects:
+.. _SnpEff: http://snpeff.sourceforge.net/
+.. _The Genome Analysis Toolkit: https://software.broadinstitute.org/gatk/
+.. _SAMtools: http://samtools.sourceforge.net/
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
+.. _forum: http://forum.genestack.org/

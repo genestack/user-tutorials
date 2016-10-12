@@ -39,7 +39,7 @@ the group’s folder in their File Manager.
 
 Group folders are the same as all other folders in the system: you can add and
 remove files to group folders just like to any other regular folder.
-There is an important point to note though:  ***adding a file to a group folder is not the same as sharing it with the group***. To share
+There is an important point to note though: **adding a file to a group folder is not the same as sharing it with the group**. To share
 one or more files with a group, you need to select them in File
 Manager (sharing functionality is also available in other places in
 Genestack Platform) and click **Share**.  A window will open where you
@@ -62,7 +62,7 @@ to link them into the group folder, do not worry – the files are still
 shared. This means that users will see them in search results, they will
 see them in file provenance data flows and will be able to open them in
 applications. You can always add shared files to group folders later. If
-you add a file to a group folder, e.g., by drag-and-dropping it in File
+you add a file to a group folder, e.g. by drag-and-dropping it in File
 Manager, the platform will try to detect this and ask you if you want to
 share it first.
 

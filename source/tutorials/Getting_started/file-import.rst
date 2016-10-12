@@ -40,7 +40,7 @@ Additional option of importing your data is using import templates. On
 the Welcome page you can find an `Add import template`_
 option. Import templates allow you to specify required and optional
 metainfo attributes for different file kinds. When you scroll down to
-the bottom of the page, you'll see an `Add import template`_ button.
+the bottom of the page, you'll see an **Add import template** button.
 
 |import welcome page|
 
