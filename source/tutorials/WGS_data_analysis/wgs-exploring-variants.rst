@@ -222,7 +222,11 @@ For example, authors identified variants with the vendor-supplied
 Eland-Casava pipeline and `The Genome Analysis Toolkit`_ (GATK v2.2), while
 we used Variant Calling application based on `SAMtools`_ and `BCFtools`_.  
 
-If you have any questions or suggestions feel free to `email us <feedback@genestack.com>`_.
+
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
 .. |GB_variants| image:: images/GB_variants.png
@@ -256,3 +260,4 @@ If you have any questions or suggestions feel free to `email us <feedback@gene
 .. _The Genome Analysis Toolkit: https://software.broadinstitute.org/gatk/
 .. _SAMtools: http://samtools.sourceforge.net/
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
+.. _forum: http://forum.genestack.org/

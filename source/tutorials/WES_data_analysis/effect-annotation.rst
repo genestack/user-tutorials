@@ -241,13 +241,10 @@ variants in comparison to Nimblegen one. That's why the question of which
 enrichment platform is best must be answered with respect to all these
 specific parameters.
 
-Congratulations! We've worked through the entire tutorial! Try to repeat all
-the steps with your own data or using other Genestack `public experiments`__.
-As well as create your own data flows by adding new steps, changing sources
-and default parameters. If you have any questions or suggestions, please
-leave them below or `email us <feedback@genestack.com>`_.
-
-.. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -282,3 +279,4 @@ References
 .. _Variants with predicted effects for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1 
 .. _the detected variants: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1001169&action=viewFile#
 .. _email us: feedback@genestack.com
+.. _forum: http://forum.genestack.org/
