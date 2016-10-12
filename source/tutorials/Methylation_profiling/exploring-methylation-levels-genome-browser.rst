@@ -76,5 +76,4 @@ References
 .. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
 .. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
-.. _contact us: feedback@genestack.com
 .. _forum: http://forum.genestack.org/

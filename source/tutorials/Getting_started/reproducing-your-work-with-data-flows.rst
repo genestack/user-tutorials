@@ -56,4 +56,3 @@ visit our forum_. Also we invite you to follow us on Twitter `@genestack <https
 .. |delay initialization until later| image:: images/delay-initialization-until-later1.png
 .. |start initialization| image:: images/start_init.png
 .. _forum: http://forum.genestack.org/
-.. _email us: feedback@genestack.com

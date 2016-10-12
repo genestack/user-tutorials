@@ -40,7 +40,7 @@ Effect prediction
 
 After variants have been identified, we can annotate them and identify
 the effects they produce on known genes with Effect Prediction app. The app
-is based on `SnpEff`_ tool that annotates variants based on their genomic
+is based on SnpEff_ tool that annotates variants based on their genomic
 location: intronic, untranslated regions (5′UTR or 3′UTR), upstream,
 downstream, splice site, or intergenic regions. It also determines
 effects genetic variants have on genes, such as amino acid replacement
@@ -220,7 +220,7 @@ number of identified mutations or InDel length distribution we mentioned
 above. Such variation could be explained by the use of different tools.
 For example, authors identified variants with the vendor-supplied
 Eland-Casava pipeline and `The Genome Analysis Toolkit`_ (GATK v2.2), while
-we used Variant Calling application based on `SAMtools`_ and `BCFtools`_.  
+we used Variant Calling application based on SAMtools_ and BCFtools_.  
 
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
@@ -252,10 +252,6 @@ visit our forum_. Also we invite you to follow us on Twitter `@genestack <https
 .. _results of variant calling: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF3669362&action=viewFile
 .. _report file:
 .. _Variants with predicted effects:
-.. _WGBS: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
-.. _WES: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
-.. _RNA-Seq data: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
-.. _tutorials: https://genestack.com/tutorials/
 .. _SnpEff: http://snpeff.sourceforge.net/
 .. _The Genome Analysis Toolkit: https://software.broadinstitute.org/gatk/
 .. _SAMtools: http://samtools.sourceforge.net/
