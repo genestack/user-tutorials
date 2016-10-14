@@ -13,3 +13,4 @@ Table of Contents
    tutorials/Methylation_profiling/index
    tutorials/WES_data_analysis/index
    tutorials/WGS_data_analysis/index
+   tutorials/Genome_browser_navigation/genome_browser_navigation
