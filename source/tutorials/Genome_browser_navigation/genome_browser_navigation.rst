@@ -25,8 +25,8 @@ Browser
 page <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF966706&action=viewFile>`__ and start
 our navigation tour in Genome Browser.
 
-**Search**
-~~~~~~~~~~
+Search
+------
 
 If you want to go to specific genomic positions or browse a specific
 feature the most suitable way is via search. You can choose search type:
@@ -39,8 +39,8 @@ see that XIST gene is really non-transcribed in H9 XIST- cells.
 
 |XIST_coverage|
 
-**Overview track**
-~~~~~~~~~~~~~~~~~~
+Overview track
+--------------
 
 To quickly reach specific region, use navigation by overview track. Move
 cursor to the overview track, choose the region and click. From the
@@ -50,8 +50,8 @@ these positions on the overview track:
 
 |Overview_track|
 
-**Pan and drag**
-~~~~~~~~~~~~~~~~
+Pan and drag
+------------
 
 Let’s imagine that a feature starts outside of the chosen interval or
 you’d like to browse surrounding regions. To achieve this, you can set
@@ -67,30 +67,30 @@ to find it:
 
 |sticky|
 
-**Zoom**
-~~~~~~~~
+Zoom
+----
 
 To look at some features more closely or, vice versa, browse data around
 a feature, you can apply zoom in (or out). There are several ways to
 zoom:
 
-**1. With buttons.** Choose zoom percentage or use default value and
-click the corresponding button. *XACT* and *T113.3* transcripts are
-located between two protein-coding genes AMOT and HTR2C. Let’s zoom out
-*XACT* region to capture both genes.
+#. **With buttons.** Choose zoom percentage or use default value and
+   click the corresponding button. *XACT* and *T113.3* transcripts are
+   located between two protein-coding genes AMOT and HTR2C. Let’s zoom out
+   *XACT* region to capture both genes.
 
 |With_buttons|
 
-**2. By double clicking on the track.** Instead of zooming by buttons
-you can double click on the track. In this case, zoom percentage will be
-the same as set in the dropdown list near zoom buttons. Look at HTR2C
-more closely:
+#. **By double clicking on the track.** Instead of zooming by buttons
+   you can double click on the track. In this case, zoom percentage will be
+   the same as set in the dropdown list near zoom buttons. Look at HTR2C
+   more closely:
 
 |HTR2C_gene|
 
-**3. Via mouse selection.** If you want to zoom into specific region,
-turn on “zoom by mouse selection” mode and select region of interest.
-*XACT* region contains some variants for XIST- sample:
+#. **Via mouse selection.** If you want to zoom into specific region,
+   turn on “zoom by mouse selection” mode and select region of interest.
+   *XACT* region contains some variants for XIST- sample:
 
 |variation_track|
 
@@ -98,8 +98,8 @@ Let’s zoom into the SNP to nucleotide level:
 
 |new_nucleo|
 
-**Sorting tracks**
-~~~~~~~~~~~~~~~~~~
+Sorting tracks
+--------------
 
 Move and sort your tracks in Genome Browser:
 
