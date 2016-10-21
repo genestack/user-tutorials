@@ -10,10 +10,10 @@ time when browsing genomic data.
 
 As an example of genomic data, we’ll use `Vallot et al.
 2013`_
-experiment. Briefly, authors investigated X-chromosome inactivation
-(XCI), which relies on long noncoding *XIST* transcript. They identified
-unannotated expressed regions on the X chromosome – *XACT*
-and \ *T113.3 *\ transcripts, and reported a slight increased *XACT*
+experiment.
+Briefly, authors investigated X-chromosome inactivation in mammals, which relies on a long noncoding RNA, *XIST*. They identified
+a large unannotated expressed regions on the X chromosome – *XACT*
+and *T113.3* transcripts, and reported a slight increased *XACT*
 expression for H9 hESCs not expressing *XIST* compared to H9 cells that
 did express it.
 
@@ -28,12 +28,12 @@ Search
 
 If you want to go to specific genomic positions or browse a specific
 feature the most suitable way is via search. You can choose search type:
-coordinates or feature name. Let’s find the XIST gene:
+coordinates or feature name. Let’s find the *XIST* region:
 
 |new_search|
 
 Looking at the coverage tracks for H9 XIST- and H9 XIST+ cells, you can
-see that XIST gene is really non-transcribed in H9 XIST- cells.
+see that *XIST* region is really non-transcribed in H9 XIST- cells.
 
 |XIST_coverage|
 
@@ -53,14 +53,14 @@ Pan and drag
 
 Let’s imagine that a feature starts outside of the chosen interval or
 you’d like to browse surrounding regions. To achieve this, you can set
-pan percentage, choosing from a dropdown list, and click pan buttons.
+pan percentage, choosing from a drop-down list, and click pan buttons.
 Also, you can simply drag tracks. Try to find *T113.3* transcript
 (113283559-113302505), panning right or dragging the track:
 
 |new_dragging|
 
 According to the paper, we expect to see a slight increase
-in \ *XACT* coverage for XIST- cells. Let’s combine two coverage tracks
+in *XACT* coverage for XIST- cells. Let’s combine two coverage tracks
 to find it:
 
 |sticky|
@@ -74,21 +74,21 @@ zoom:
 
 #. **With buttons.** Choose zoom percentage or use default value and
    click the corresponding button. *XACT* and *T113.3* transcripts are
-   located between two protein-coding genes AMOT and HTR2C. Let’s zoom out
-   *XACT* region to capture both genes.
+   located between two protein-coding genes AMOT and HTR2C. Let’s zoom out the
+   *XACT* to explore the localization of both regions on the human X-chromosome.
 
 |With_buttons|
 
 #. **By double clicking on the track.** Instead of zooming by buttons
    you can double click on the track. In this case, zoom percentage will be
-   the same as set in the dropdown list near zoom buttons. Look at HTR2C
+   the same as set in the drop-down list near zoom buttons. Look at HTR2C
    more closely:
 
 |HTR2C_gene|
 
 #. **Via mouse selection.** If you want to zoom into specific region,
    turn on “zoom by mouse selection” mode and select region of interest.
-   *XACT* region contains some variants for XIST- sample:
+   *XACT* region contains some genetic variants for XIST- sample:
 
 |variation_track|
 
@@ -103,14 +103,9 @@ Move and sort your tracks in Genome Browser:
 
 |new_sort|
 
-To reproduce this analysis, use `this data
-flow`_:
+To reproduce this analysis, use `this data flow`_:
 
 |Data_flow|
-
-We hope you enjoy these navigation features, and as always we welcome
-your feedback. Please leave your thoughts and suggestions in the
-comments below.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
@@ -132,3 +127,4 @@ visit our forum_. Also we invite you to follow us on Twitter `@genestack <https
 .. _the corresponding data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile
 .. _this Genome Browser page: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF966706&action=viewFile
 .. _this data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile
+.. _forum: http://forum.genestack.org/
