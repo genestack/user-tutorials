@@ -9,7 +9,7 @@ demonstrate our track navigation features, which allow you to save your
 time when browsing genomic data.
 
 As an example of genomic data, we’ll use `Vallot et al.
-2013 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39757>`__
+2013`_
 experiment. Briefly, authors investigated X-chromosome inactivation
 (XCI), which relies on long noncoding *XIST* transcript. They identified
 unannotated expressed regions on the X chromosome – *XACT*
@@ -18,11 +18,9 @@ expression for H9 hESCs not expressing *XIST* compared to H9 cells that
 did express it.
 
 We reproduced these results and prepared `the corresponding data
-flow <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile>`__,
+flow`_,
 which takes you from raw sequence to variant calls, if you’d like to
-reproduce this analysis. To review the results, let’s open `this Genome
-Browser
-page <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF966706&action=viewFile>`__ and start
+reproduce this analysis. To review the results, let’s open `this Genome Browser page`_ and start
 our navigation tour in Genome Browser.
 
 Search
@@ -106,7 +104,7 @@ Move and sort your tracks in Genome Browser:
 |new_sort|
 
 To reproduce this analysis, use `this data
-flow <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile>`__:
+flow`_:
 
 |Data_flow|
 
@@ -114,7 +112,10 @@ We hope you enjoy these navigation features, and as always we welcome
 your feedback. Please leave your thoughts and suggestions in the
 comments below.
 
-Follow us on Twitter: `@genestack <https://twitter.com/genestack>`__.
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |new_search| image:: images/new_search.gif
 .. |XIST_coverage| image:: images/XIST_coverage.png
@@ -127,3 +128,7 @@ Follow us on Twitter: `@genestack <https://twitter.com/genestack>`__.
 .. |new_nucleo| image:: images/new_nucleo.gif
 .. |new_sort| image:: images/new_sort.gif
 .. |Data_flow| image:: images/Data_flow.png
+.. _Vallot et al. 2013: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39757
+.. _the corresponding data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile
+.. _this Genome Browser page: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF966706&action=viewFile
+.. _this data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF966710&action=viewFile
