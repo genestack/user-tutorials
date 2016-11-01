@@ -4,10 +4,9 @@ Testing Differential Isoform Expression on Genestack Platform
 Detecting differential isoform expression from RNA-seq data is one of
 the common transcriptome analysis tasks. And the purpose of this
 tutorial is to show you how to perform this analysis on
-`Genestack <https://platform.genestack.org/>`__  platform.
+`Genestack`_  platform.
 
-|isoforms| You know that in the process of `alternative
-splicing <http://en.wikipedia.org/wiki/Alternative_splicing>`__ (when
+|isoforms| You know that in the process of `alternative splicing`_ (when
 different combinations of exons can be spliced together) a single gene
 can produce multiple mRNA and protein isoforms with different structures
 and biological functions. These alternative isoforms can differentially
@@ -20,15 +19,11 @@ datasets.
    :name: setting-up-an-rna-seq-experiment
 
 First of all, you need a nice example of differential isoform usage. For
-this, you can upload your own RNA-Seq samples using  `Data
-Importer <https://platform.genestack.org/endpoint/application/run/genestack/rawloader?_ga=1.253500042.203380008.1427286202>`__
+this, you can upload your own RNA-Seq samples using  `Data Importer`_
 or search through all public experiments we have on the platform and
 choose a suitable one. Our analysis will be based on RNA-seq data coming
-from `Trapnell et al.
-2012 <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37703>`__ .
-Here is some information about this
-`experiment <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF080230&action=viewFile>`__ opened
-in Metainfo Viewer:
+from `Trapnell et al. 2012`_.
+Here is some information about this `experiment`_ opened in Metainfo Viewer:
 
 |Metainfo_viewer|
 
@@ -92,8 +87,7 @@ some other kinds of biased subset.
 
 You can find more statistics in output Raw Reads QC Reports. We run QC
 on all the data in the experiment and collected reports in folder `Raw
-Reads QC reports for Trapnell et al.
-(2012) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123619&action=viewFile>`__.
+Reads QC reports for Trapnell et al. (2012)`_.
 
 .. rubric:: **2. Mapping RNA-seq reads onto reference genome**
    :name: mapping-rna-seq-reads-onto-reference-genome
@@ -105,11 +99,8 @@ variants, will align reads with no more than 2 mismatches and report
 both unique and multiple mappings. Change options and default values,
 clicking on “Edit parameters” button. 
 
-You can find all Mapped Reads files in folder `Mapped Reads files for
-Trapnell et al.
-(2012) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123417&action=viewFile>`__.
-If you open them in `Genome
-Browser <https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF123458&action=viewFile>`__,
+You can find all Mapped Reads files in folder `Mapped Reads files for Trapnell et al. (2012)`_.
+If you open them in `Genome Browser`_,
 you can find out that HOXA1 gene is really non-transcribed for
 HOXA1 * * knockdown data:
 
@@ -121,14 +112,13 @@ HOXA1 * * knockdown data:
 This is an optional step. There are some apps developed for simple
 quality control of your mapped reads. In this tutorial, let’s create QC
 report for each Mapped Reads file using Mapped Reads QC Report app and
-then open all reports in `Multiple QC plotter
-app <https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF966973&action=viewFile>`__:
+then open all reports in `Multiple QC plotter app`_:
 
 |Mapped_QC_plotter|
 
 All Mapped Reads QC reports are publicly available and stored in
 folder  `Mapped Reads QC reports for Trapnell et al.
-(2012) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123419&action=viewFile>`__.
+(2012)`_.
 
 .. rubric:: **4. Calculate FPKM coverage for each isoform**
    :name: calculate-fpkm-coverage-for-each-isoform
@@ -140,8 +130,7 @@ each transcript.
 
 So, now we have pipeline for one sample. Is it possible to run dataflow
 for multiple samples? Yes, it’s possible. Open FPKM isoform counts file
-in `Data Flow
-Editor <https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF967066&action=viewFile>`__
+in `Data Flow Editor`_
 app, for sequencing assay make “Add files” action, choosing the left 11
 raw sequencing files and click on blue “Create files” button. Look, we
 built 12 pipelines! The last thing is just to “start initialization” for
@@ -150,8 +139,7 @@ all of them.
 |DF|
 
 We calculate FPKM coverage in all samples and collected result files in
-folder  `FPKM isoforms counts for Trapnell et al.
-(2012) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile>`__.
+folder  `FPKM isoforms counts for Trapnell et al. (2012)`_.
 
 .. rubric:: **5. Differential isoform expression analysis**
    :name: differential-isoform-expression-analysis
@@ -161,9 +149,7 @@ analysis between two groups of samples corresponding to different
 conditions. In our case, it is anti-HOXA1 siRNA and scrambled control
 fibroblasts.
 
-In `File
-Browser <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile>`__,
-we choose these 6 Data files with FPKM isoforms counts (let’s consider
+In `File Browser`_, we choose these 6 Data files with FPKM isoforms counts (let’s consider
 only MiSeq data) and click on Test Differential Isoform Expression in
 Analyse section. To run the app we need to assign samples to groups. We
 can do it manually or apply auto-grouping. Just click, for example on
@@ -179,8 +165,7 @@ values. And finally let’s create our file and run the analysis clicking
 on “start initialization” in “Other Actions”. We created two
 Differential Expression Statistics files (for data from two sequencing
 platforms – MiSeq and HiSeq) and put them in folder  `Differential
-Isoform Expression Analysis for Trapnell et al.
-(2012) <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123432&action=viewFile>`__.
+Isoform Expression Analysis for Trapnell et al. (2012)`_.
 
 When the analysis will be complete, look at the Top Differentially
 Expressed Isoforms table. On HiSeq data, more than 800 differentially
@@ -201,17 +186,13 @@ loss of *HOXA1* results in significant expression level changes for
 different transcripts encoded by genes which play important role in cell
 development.
 
-You can find all tutorial files in folder  `[Tutorial] Testing
-Differential Isoform Expression on Genestack
-Platform <https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123346&action=viewFile>`__ and
+You can find all tutorial files in folder `[Tutorial] Testing Differential Isoform Expression on Genestack Platform`_ and
 look at all results we got for each analytical step.
 
-We wish you good luck in building your own pipelines and hope to
-get your feedback about
-`Genestack <https://platform.genestack.org/>`__ apps and
-features. Please submit any questions, bugs, comments through green
-feedback button on the platform or email us
-at  support@genestack.com. See you soon!
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at feedback@genestack.com or
+visit our forum_ . Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |isoforms| image:: images/isoforms.png
 .. |Metainfo_viewer| image:: images/Metainfo_viewer.png
@@ -224,3 +205,18 @@ at  support@genestack.com. See you soon!
 .. |Diff_iso| image:: images/Diff_iso.png
 .. |HiSeq_DIEA| image:: images/HiSeq_DIEA.png
 .. |graph| image:: images/graph.png
+.. _Genestack: https://platform.genestack.org/
+.. _alternative splicing: http://en.wikipedia.org/wiki/Alternative_splicing
+.. _Data Importer: https://platform.genestack.org/endpoint/application/run/genestack/rawloader?_ga=1.253500042.203380008.1427286202
+.. _Trapnell et al. 2012: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37703
+.. _experiment: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF080230&action=viewFile
+.. _Raw Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123619&action=viewFile
+.. _Mapped Reads files for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123417&action=viewFile
+.. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF123458&action=viewFile
+.. _Multiple QC plotter app: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF966973&action=viewFile
+.. _Mapped Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123419&action=viewFile
+.. _Data Flow Editor: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF967066&action=viewFile
+.. _FPKM isoforms counts for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile
+.. _File Browser: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile
+.. _Differential Isoform Expression Analysis for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123432&action=viewFile
+.. _[Tutorial] Testing Differential Isoform Expression on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123346&action=viewFile
