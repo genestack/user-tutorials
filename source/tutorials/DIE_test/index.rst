@@ -19,7 +19,7 @@ datasets.
    :name: setting-up-an-rna-seq-experiment
 
 First of all, you need a nice example of differential isoform usage. For
-this, you can upload your own RNA-Seq samples using  `Data Importer`_
+this, you can upload your own RNA-Seq samples using  `Data Import`_ application
 or search through all public experiments we have on the platform and
 choose a suitable one. Our analysis will be based on RNA-seq data coming
 from `Trapnell et al. 2012`_.
@@ -186,13 +186,13 @@ loss of *HOXA1* results in significant expression level changes for
 different transcripts encoded by genes which play important role in cell
 development.
 
-You can find all tutorial files in folder `[Tutorial] Testing Differential Isoform Expression on Genestack Platform`_ and
+You can find all tutorial files in folder `Testing Differential Isoform Expression on Genestack Platform`_ and
 look at all results we got for each analytical step.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
 If you have any questions and comments, feel free to email us at feedback@genestack.com or
-visit our forum_ . Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |isoforms| image:: images/isoforms.png
 .. |Metainfo_viewer| image:: images/Metainfo_viewer.png
@@ -207,16 +207,17 @@ visit our forum_ . Also we invite you to follow us on Twitter `@genestack <http
 .. |graph| image:: images/graph.png
 .. _Genestack: https://platform.genestack.org/
 .. _alternative splicing: http://en.wikipedia.org/wiki/Alternative_splicing
-.. _Data Importer: https://platform.genestack.org/endpoint/application/run/genestack/rawloader?_ga=1.253500042.203380008.1427286202
+.. _Data Import: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Trapnell et al. 2012: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37703
 .. _experiment: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF080230&action=viewFile
-.. _Raw Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123619&action=viewFile
-.. _Mapped Reads files for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123417&action=viewFile
-.. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF123458&action=viewFile
-.. _Multiple QC plotter app: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF966973&action=viewFile
-.. _Mapped Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123419&action=viewFile
-.. _Data Flow Editor: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF967066&action=viewFile
-.. _FPKM isoforms counts for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile
-.. _File Browser: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123418&action=viewFile
-.. _Differential Isoform Expression Analysis for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123432&action=viewFile
-.. _[Tutorial] Testing Differential Isoform Expression on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123346&action=viewFile
+.. _Raw Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018515&action=viewFile&page=1
+.. _Mapped Reads files for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018519&action=viewFile&page=1
+.. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF1018248&action=viewFile
+.. _Multiple QC plotter app: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF1018535&action=viewFile
+.. _Mapped Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018518&action=viewFile&page=1
+.. _Data Flow Editor: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF3725699&action=viewFile
+.. _FPKM isoforms counts for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018517&action=viewFile&page=1
+.. _File Browser: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018517&action=viewFile&page=1
+.. _Differential Isoform Expression Analysis for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018516&action=viewFile&page=1
+.. _Testing Differential Isoform Expression on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF123346&action=viewFile
+.. _forum: http://forum.genestack.org/
