@@ -15,8 +15,8 @@ biological processes. Therefore, it’s very important to study
 alternative splicing events and estimate isoforms abundance in RNA-Seq
 datasets.
 
-.. rubric:: **Setting up an RNA-Seq experiment**
-   :name: setting-up-an-rna-seq-experiment
+Setting up an RNA-Seq experiment
+********************************
 
 First of all, you need a nice example of differential isoform usage. For
 this, you can upload your own RNA-Seq samples using  `Data Import`_ application
@@ -40,9 +40,8 @@ They identified differentially expressed transcripts and genes specific
 to cell cycle progression and related to apoptosis induction. And
 in this tutorial we’ll try to reproduce their results.
 
-.. rubric:: **Building an Isoform-level Differential Expression Analysis
-   pipeline**
-   :name: building-an-isoform-level-differential-expression-analysis-pipeline
+Building an Isoform-level Differential Expression Analysis pipeline
+*******************************************************************
 
 Below is a simple  dataflow to analyze one of our RNA-Seq samples.
 Later we’ll show you how it’s easy to build the same pipeline for the
@@ -61,8 +60,8 @@ The dataflow consists of several steps:
 Let’s look at each step separately to get a better idea of what it
 really means.
 
-.. rubric:: **1. Quality control and preprocessing of raw reads**
-   :name: quality-control-and-preprocessing-of-raw-reads
+Quality control and preprocessing of raw reads
+**********************************************
 
 Before mapping raw reads and calculation of isoform abundance, you may
 be interested in improving the reads quality. We offer you
@@ -89,8 +88,8 @@ You can find more statistics in output Raw Reads QC Reports. We run QC
 on all the data in the experiment and collected reports in folder `Raw
 Reads QC reports for Trapnell et al. (2012)`_.
 
-.. rubric:: **2. Mapping RNA-seq reads onto reference genome**
-   :name: mapping-rna-seq-reads-onto-reference-genome
+Mapping RNA-seq reads onto reference genome
+*******************************************
 
 On the next step, we’ll use Spliced Mapping app to map RNA-seq reads
 onto the reference genome and discover transcript splice sites. By
@@ -106,8 +105,8 @@ HOXA1 * * knockdown data:
 
 |GB_HOXA1|
 
-.. rubric:: **3. Quality control of mapped reads**
-   :name: quality-control-of-mapped-reads
+Quality control of mapped reads
+*******************************
 
 This is an optional step. There are some apps developed for simple
 quality control of your mapped reads. In this tutorial, let’s create QC
@@ -120,8 +119,8 @@ All Mapped Reads QC reports are publicly available and stored in
 folder  `Mapped Reads QC reports for Trapnell et al.
 (2012)`_.
 
-.. rubric:: **4. Calculate FPKM coverage for each isoform**
-   :name: calculate-fpkm-coverage-for-each-isoform
+Calculate FPKM coverage for each isoform
+****************************************
 
 We will run Quantify FPKM Coverage in Isoforms app to calculate isoform
 abundance. The app takes Mapped Reads file and calculates FPKM
@@ -141,8 +140,8 @@ all of them.
 We calculate FPKM coverage in all samples and collected result files in
 folder  `FPKM isoforms counts for Trapnell et al. (2012)`_.
 
-.. rubric:: **5. Differential isoform expression analysis**
-   :name: differential-isoform-expression-analysis
+Differential isoform expression analysis
+****************************************
 
 The final step is to perform differential isoform expression
 analysis between two groups of samples corresponding to different
