@@ -6,7 +6,9 @@ the common transcriptome analysis tasks. And the purpose of this
 tutorial is to show you how to perform this analysis on
 `Genestack`_  platform.
 
-|isoforms| You know that in the process of `alternative splicing`_ (when
+|isoforms|
+
+You know that in the process of `alternative splicing`_ (when
 different combinations of exons can be spliced together) a single gene
 can produce multiple mRNA and protein isoforms with different structures
 and biological functions. These alternative isoforms can differentially
@@ -76,13 +78,15 @@ view using Raw Reads QC Report app:
 **Qualities per base ** plot shows the range of quality scores for each
 position on the reads.
 
-|Qualities per base| **GC content distribution** plot shows GC%
+|Qualities per base|
+
+**GC content distribution** plot shows GC%
 (x-axis) and read frequencies (y-axis). In a random library you can
 expect a roughly normal distribution of GC content, as in our case. An
 unusually shaped distribution could indicate a contaminated library or
 some other kinds of biased subset.
 
-**|GC content distribution|**
+|GC content distribution|
 
 You can find more statistics in output Raw Reads QC Reports. We run QC
 on all the data in the experiment and collected reports in folder `Raw
