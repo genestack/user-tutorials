@@ -8,12 +8,12 @@ tutorial is to show you how to perform this analysis on
 
 |isoforms|
 
-You know that in the process of `alternative splicing`_ (when
-different combinations of exons can be spliced together) a single gene
+In the process of `alternative splicing`_ (when different combinations of
+exons can be spliced together) a single gene
 can produce multiple mRNA and protein isoforms with different structures
 and biological functions. These alternative isoforms can differentially
 affect downstream pathways, cell growth, development and other
-biological processes. Therefore, it’s very important to study
+biological processes. Therefore, it is very important to study
 alternative splicing events and estimate isoforms abundance in RNA-Seq
 datasets.
 
@@ -38,29 +38,26 @@ do not target a specific gene. Then, the authors isolated total RNA in
 biological triplicate and sequenced RNA on Illumina HiSeq 2000 and
 Illumina MiSeq platforms.
 
-They identified differentially expressed transcripts and genes specific
+As a result, they identified differentially expressed transcripts and genes specific
 to cell cycle progression and related to apoptosis induction. And
-in this tutorial we’ll try to reproduce their results.
+in this tutorial we will try to reproduce their results.
 
 Building an Isoform-level Differential Expression Analysis pipeline
 *******************************************************************
 
-Below is a simple  dataflow to analyze one of our RNA-Seq samples.
-Later we’ll show you how it’s easy to build the same pipeline for the
-left 11 samples.
+Below is a simple dataflow to analyze one of our RNA-Seq samples.
+Later we will show you how it is easy to build the same pipeline for the other 11 samples.
 
 |Dataflow_up_1|
 
 The dataflow consists of several steps:
 
-#. Quality control and preprocessing of raw reads
-#. Mapping RNA-seq reads onto reference genome
+#. Quality control and preprocessing of RNA-Seq reads
+#. Mapping raw reads onto reference genome
 #. Quality control of mapped reads
 #. Calculate FPKM coverage for each isoform
 #. Differential isoform expression analysis
 
-Let’s look at each step separately to get a better idea of what it
-really means.
 
 Quality control and preprocessing of raw reads
 **********************************************
@@ -71,11 +68,11 @@ various preprocess applications to do some quality control checks on
 your raw sequence data.
 
 Start with one sample and try to run, for example, Trim Low Quality
-Bases app. You’ll see that each app suggests you to add next analytical
+Bases app. You will see that each app suggests you to add next analytical
 step or to use relevant viewers. Look, what quality statistics you can
-view using Raw Reads QC Report app:
+view using FastQC Report app:
 
-**Qualities per base ** plot shows the range of quality scores for each
+**Qualities per base** plot shows the range of quality scores for each
 position on the reads.
 
 |Qualities per base|
@@ -95,7 +92,7 @@ Reads QC reports for Trapnell et al. (2012)`_.
 Mapping RNA-seq reads onto reference genome
 *******************************************
 
-On the next step, we’ll use Spliced Mapping app to map RNA-seq reads
+On the next step, we will use Spliced Mapping app to map RNA-seq reads
 onto the reference genome and discover transcript splice sites. By
 default, the app will identify both known and novel alternative splicing
 variants, will align reads with no more than 2 mismatches and report
@@ -132,7 +129,7 @@ abundance. The app takes Mapped Reads file and calculates FPKM
 each transcript.
 
 So, now we have pipeline for one sample. Is it possible to run dataflow
-for multiple samples? Yes, it’s possible. Open FPKM isoform counts file
+for multiple samples? Yes, it is possible. Open FPKM isoform counts file
 in `Data Flow Editor`_
 app, for sequencing assay make “Add files” action, choosing the left 11
 raw sequencing files and click on blue “Create files” button. Look, we
