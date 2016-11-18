@@ -1,30 +1,29 @@
 Testing Differential Isoform Expression on Genestack Platform
 *************************************************************
 
-Detecting differential isoform expression from RNA-seq data is one of
-the common transcriptome analysis tasks. And the purpose of this
-tutorial is to show you how to perform this analysis on
-`Genestack`_  platform.
+Detecting differential isoform (i.e., transcript) expression across different biological conditions
+from RNA-Seq data is one of the common transcriptome analysis tasks. And the purpose of this
+tutorial is to show you how to perform this analysis on `Genestack`_  platform.
 
 |isoforms|
 
-In the process of `alternative splicing`_ (when different combinations of
-exons can be spliced together) a single gene
-can produce multiple mRNA and protein isoforms with different structures
-and biological functions. These alternative isoforms can differentially
-affect downstream pathways, cell growth, development and other
-biological processes. Therefore, it is very important to study
-alternative splicing events and estimate isoforms abundance in RNA-Seq
-datasets.
+`Alternative splicing`_ of messenger RNA, when different combinations of
+exons can be spliced together, produces a wide variety of RNA transcript
+isoforms encoding different protein products. Changes in protein sequence may
+influence its function, that is why alternative splicing is not only
+a source of huge protein diversity but it can also significantly affect various cellular processes.
+Undoubtedly, alternative splicing is a major mechanism for gene regulation that is
+of great importance to understand.
+
 
 Setting up an RNA-Seq experiment
-********************************
+--------------------------------
+Our analysis will be based on RNA-Seq data coming from `Trapnell et al. 2012`_,
+one of the public experiments we have on the platform.
+However, you can upload your own RNA-Seq data using `Data Import`_ application
+or search through all `public experiments`_ we have on the platform and
+choose a suitable one.
 
-First of all, you need a nice example of differential isoform usage. For
-this, you can upload your own RNA-Seq samples using  `Data Import`_ application
-or search through all public experiments we have on the platform and
-choose a suitable one. Our analysis will be based on RNA-seq data coming
-from `Trapnell et al. 2012`_.
 Here is some information about this `experiment`_ opened in Metainfo Viewer:
 
 |Metainfo_viewer|
@@ -42,8 +41,9 @@ As a result, they identified differentially expressed transcripts and genes spec
 to cell cycle progression and related to apoptosis induction. And
 in this tutorial we will try to reproduce their results.
 
+
 Building an Isoform-level Differential Expression Analysis pipeline
-*******************************************************************
+-------------------------------------------------------------------
 
 Below is a simple dataflow to analyze one of our RNA-Seq samples.
 Later we will show you how it is easy to build the same pipeline for the other 11 samples.
@@ -60,17 +60,27 @@ The dataflow consists of several steps:
 
 
 Quality control and preprocessing of raw reads
-**********************************************
-
+----------------------------------------------
 Before mapping raw reads and calculation of isoform abundance, you may
 be interested in improving the reads quality. We offer you
-various preprocess applications to do some quality control checks on
-your raw sequence data.
+various preprocess applications to improve quality  of
+your raw sequencing data.
 
-Start with one sample and try to run, for example, Trim Low Quality
-Bases app. You will see that each app suggests you to add next analytical
-step or to use relevant viewers. Look, what quality statistics you can
-view using FastQC Report app:
+Start with one sample and try to run, for example, Trim Adaptors and Contaminants app.
+You will see that each app suggests you to add next analytical
+step or to use relevant viewers. 
+
+Generally speaking, quality control checks should be performed on different steps of
+the analysis to monitor quality of your data and, therefore, ensure reliability and
+accuracy of the results.
+
+Quality control of raw reads read allows to determine sequence quality, GC content
+distribution, the presence of adaptors, overrepresented sequences and duplicated reads.
+
+Here we will check quality of raw sequence data with FastQC Report application
+based on widely-used FastQC tool.
+
+Look, what quality statistics you can view using FastQC Report app:
 
 **Qualities per base** plot shows the range of quality scores for each
 position on the reads.
@@ -89,10 +99,13 @@ You can find more statistics in output Raw Reads QC Reports. We run QC
 on all the data in the experiment and collected reports in folder `Raw
 Reads QC reports for Trapnell et al. (2012)`_.
 
-Mapping RNA-seq reads onto reference genome
-*******************************************
 
-On the next step, we will use Spliced Mapping app to map RNA-seq reads
+
+
+Mapping RNA-Seq reads onto reference genome
+-------------------------------------------
+
+On the next step, we will use Spliced Mapping app to map RNA-Seq reads
 onto the reference genome and discover transcript splice sites. By
 default, the app will identify both known and novel alternative splicing
 variants, will align reads with no more than 2 mismatches and report
@@ -102,12 +115,12 @@ clicking on “Edit parameters” button. 
 You can find all Mapped Reads files in folder `Mapped Reads files for Trapnell et al. (2012)`_.
 If you open them in `Genome Browser`_,
 you can find out that HOXA1 gene is really non-transcribed for
-HOXA1 * * knockdown data:
+HOXA1 knockdown data:
 
 |GB_HOXA1|
 
 Quality control of mapped reads
-*******************************
+-------------------------------
 
 This is an optional step. There are some apps developed for simple
 quality control of your mapped reads. In this tutorial, let’s create QC
@@ -121,7 +134,7 @@ folder  `Mapped Reads QC reports for Trapnell et al.
 (2012)`_.
 
 Calculate FPKM coverage for each isoform
-****************************************
+----------------------------------------
 
 We will run Quantify FPKM Coverage in Isoforms app to calculate isoform
 abundance. The app takes Mapped Reads file and calculates FPKM
@@ -142,7 +155,7 @@ We calculate FPKM coverage in all samples and collected result files in
 folder  `FPKM isoforms counts for Trapnell et al. (2012)`_.
 
 Differential isoform expression analysis
-****************************************
+----------------------------------------
 
 The final step is to perform differential isoform expression
 analysis between two groups of samples corresponding to different
@@ -206,8 +219,9 @@ visit our forum_. Also we invite you to follow us on Twitter `@genestack <https
 .. |HiSeq_DIEA| image:: images/HiSeq_DIEA.png
 .. |graph| image:: images/graph.png
 .. _Genestack: https://platform.genestack.org/
-.. _alternative splicing: http://en.wikipedia.org/wiki/Alternative_splicing
+.. _Alternative splicing: http://en.wikipedia.org/wiki/Alternative_splicing
 .. _Data Import: https://platform.genestack.org/endpoint/application/run/genestack/uploader
+.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
 .. _Trapnell et al. 2012: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37703
 .. _experiment: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF080230&action=viewFile
 .. _Raw Reads QC reports for Trapnell et al. (2012): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1018515&action=viewFile&page=1
