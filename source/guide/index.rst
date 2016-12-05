@@ -1,5 +1,4 @@
-The Genestack User Guide
-========================
 
 .. include:: platform-overview.rst
-.. include:: guide.rst
+.. include:: applications.rst
+.. include:: data-flows.rst

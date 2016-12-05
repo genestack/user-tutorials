@@ -1,14 +1,20 @@
-Genestack User Tutorials
+Genestack User Resources
 ########################
 
 
-Table of Contents
-*****************
+Genestack User Guide
+--------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    guide/index
+
+Tutorials
+---------
+
+.. toctree::
+	:maxdepth: 2
 
    tutorials/Getting_started/index
    tutorials/DGE_analysis/index

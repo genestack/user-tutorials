@@ -109,8 +109,7 @@ Genestack deals with any formatting-issues allowing users to spend more
 time on actual data analysis. After you are done with your analysis you
 can export the data in the format of your choice.
 
-NOTE: Formatting Hell
-~~~~~~~~~~~~~~~~~~~~~
+**NOTE: Formatting Hell**
 
 You might be wondering why we made our platform format-free and why this
 is such a big deal. In the current landscape of bioinformatics there
@@ -133,7 +132,7 @@ analysis on a different set of data, you can do this easily using data
 flows. Genestack platform hosts multiple tool versions at any given
 time in case you want to reproduce past results.
 
-e) Data flows and Delayed Initialization 
+Data flows and Delayed Initialization 
 -----------------------------------------
 
 Data flows on Genestack are visual representations of bioinformatics
