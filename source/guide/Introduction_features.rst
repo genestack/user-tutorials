@@ -27,7 +27,109 @@ touch with our team at contact@genestack.com
 
 This guide will be divided into the following sections:
 
-.. TODO
+#. **Introduction to bioinformatics**
+#. **Genestack features**
+– rich metadata system
+– interactive data analysis and visualisations
+– format-free files
+	– Note: Formatting hell
+– reproducibility
+– data flows & delayed initialization
+– public data collection
+#. **Genestack Platform**
+– Registering
+– Welcome Page map
+– Data Import
+	– Supported data files
+	– Importing from spreadsheet
+	– Attachments
+- Data Export
+– Browsing data
+	– File Manager
+	– Experiment Browser
+– Metadata management
+	– Metainfo Editor
+	– Metainfo Templates
+	– Dictionaries
+– Sharing data
+	– Organisations, groups, users
+	– Sharing and permissions
+– Task Manager
+– Your Profile
+	– Manage applications
+	– Manage groups
+	– Manage users
+#. **Introduction to Next Generation Sequencing Data Analysis**
+#. **Pipelines and applications**
+**Sequencing Data**
+- Raw reads preprocessing and quality control
+    - FastQC report*
+    - Multiple QC report*
+    - Subsample reads
+    - Filter duplicated reads
+    - Filter by Quality Score
+    - Trim adaptors and contaminants
+    - Trim low-quality bases
+    - Trim reads to fixed length
+- Mapped reads preprocessing and QC
+    - Mapped reads QC report*
+    - Targeted sequencing QC report*
+    - Mark duplicated mapped reads
+    - Remove duplicated mapped reads
+    - Subsample mapped reads
+    - Merge mapped reads
+    - Merge Variants
+    - Concatenate Variants
+- RNA-Seq
+    - Spliced mapping with TopHat2
+    - Spliced mapping with STAR
+    - Gene quantification with RSEM
+    - Gene quantification with HTSeq-count
+    - Spliced mapping and quantification with Kallisto
+    - Isoforms quantification with cuffQuant
+    - Test Differential Gene Expression
+    - Expression Navigator for RNA-seq
+    - Expression Navigator for splice isoforms
+    - Single-cell RNA-seq analysis*
+    - Note: Choosing Reference Genome
+- Genome / exome sequencing
+    - Unspliced mapping with BWA
+    – Unspliced mapping with Bowtie2
+    – Variant calling with samtools and bcftools
+    – Variant effect prediction with SnpEff
+    – Variant association analysis
+    – Variant Explorer*
+    – Intersect Genomic Features
+    – DbNSFP Annotation
+- Methylation analysis
+    - Reduced representation bisulfite sequencing mapping with BSMAP
+    - Bisulfite sequencing mapping with BSMAP
+- Microbiome analysis
+    - Microbiome analysis with QIIME*
+- Others
+    - Genome Browser
+**Microarray data**
+    - Expression arrays
+    - Microarray normalisation
+    - Microarray QC*
+    - Expression navigator for expression arrays*
+    - Compound dose response analysis*
+    - Methylation arrays
+    - Methylation array normalisation (coming soon)
+    - Methylation array QC (coming soon)*
+    - Expression navigator for methylation arrays (coming soon)*
+
+* = the app has interactive analytics/visualizations
+
+#. **Running and reproducing data flows**
+    – Data Flow Editor and Runner
+    – File Provenance
+#. **Getting help**
+    – Tutorials
+    – Getting in touch [chat, forum, blog, newsletters]
+#. **Genestack License**
+#. **FAQ**
+
 
 Introduction to Bioinformatics
 ==================================
