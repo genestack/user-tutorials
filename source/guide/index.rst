@@ -1,4 +1,7 @@
-.. include:: itroduction_features.rst
+The Genestack Guide to Bioinformatics  
+=====================================
+
+.. include:: Introduction_features.rst
 .. include:: platform-overview.rst
 .. include:: introduction-to-NGS.rst
 .. include:: Pipelines_SeqData_PreprocessingQC.rst
