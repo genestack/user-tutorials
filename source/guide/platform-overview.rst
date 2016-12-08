@@ -32,8 +32,7 @@ Clicking on your username (your email address) in the top right corner
 of the page will give you access to your profile, allow you to manage
 your applications, groups, and users or logout of the platform.
 
-You can watch a video on managing users on Genestack here:
-`https://genestack.com/tutorial/getting-started-with-genestack-platform/#createaccount <https://www.google.com/url?q=https://genestack.com/tutorial/getting-started-with-genestack-platform/%23createaccount&sa=D&ust=1480960531686000&usg=AFQjCNEEFyoonAXgJ3CC6_OhEFwaHPQxGw>`__
+You can watch a video on managing users on Genestack here: https://genestack.com/tutorial/getting-started-with-genestack-platform/#createaccount
 
 Tasks links to the Task Manager, which will be described later in the
 guide (+ link to the guide part about it). 
@@ -291,19 +290,14 @@ structured vocabularies to annotate your data, for example:
 
 -  First of all, the non-hierarchical controlled vocabularies (e.g. Sex,
    Method, Platform fields), which are simply lists of terms;.
--  The `NCBI
-   Taxonomy <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/&sa=D&ust=1480960531739000&usg=AFQjCNHXRm-_EKLzBKHyaKvfSeqiPBB9sw>`__ is
+-  The `NCBI Taxonomy`_ is
    a standard hierarchical nomenclature and classification scheme for
    Organisms;.
--  The `Cellosaurus
-   vocabulary <https://www.google.com/url?q=http://web.expasy.org/cellosaurus/description.html&sa=D&ust=1480960531739000&usg=AFQjCNEGk0nWV0tYEju7LXpQzFmP8u56pQ>`__ we
+-  The `Cellosaurus vocabulary`_  we
    used for Cell Line field - is an example of controlled vocabulary
    which describes all cell lines used in biomedical research;.
--  We also applied a bunch of ontologies - `ChEBI
-   Ontology <https://www.google.com/url?q=https://www.ebi.ac.uk/chebi/&sa=D&ust=1480960531740000&usg=AFQjCNEFAXz1qfBvqvgh-wzlREp2_CakqA>`__,
-   `Cell
-   Ontology <https://www.google.com/url?q=https://bioportal.bioontology.org/ontologies/CL&sa=D&ust=1480960531740000&usg=AFQjCNEvt5WcK__hKzEOdPVbItvMzkj5Zw>`__ -
-   to annotate e.g. Compound and Cell type fields.
+-  We also applied a bunch of ontologies - `ChEBI Ontology`_,
+   `Cell Ontology`_  - to annotate e.g. Compound and Cell type fields.
 
 File Manager
 ~~~~~~~~~~~~
@@ -332,9 +326,7 @@ result of your analysis (e.g. Genetic Variations file containing found
 mutations), results of all intermediate analysis steps (e. g.
 preprocessed reads, mapped reads etc. created by the apps participating
 in your pipeline as you remember each contributing app creates a file),
-as well as all original files\ :sup:``[n] <#cmnt14>`__`\  (“Original
-Files for XYZ, a sub-folder in the “Dependencies” folder).
-\ :sup:``[o] <#cmnt15>`__`
+as well as all original files (“Original Files for XYZ, a sub-folder in the “Dependencies” folder).
 
 Imported files contains everything you have ever imported, organized by
 date: all files imported at the same time (during one import action)
@@ -398,32 +390,15 @@ with to make life a bit simpler for our users. This folder contains:
    is?). If you want to know more about a specific experiment use the
    Experiment Viewer app.
 #. Tutorials: the folder contains files we use as examples during
-   various tutorials. To read more on particular analysis types, go to
-   `https://genestack.com/tutorials/ <https://www.google.com/url?q=https://genestack.com/tutorials/&sa=D&ust=1480960531756000&usg=AFQjCNHO-99oV9W_M1BFS-i3MbFQgHNVbA>`__ 
+   various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/
 
 Here are links to all the tutorials we have prepared so far:
 
- 
-
--  Getting Started With Genestack Platform
-
-`https://genestack.com/tutorial/getting-started-with-genestack-platform/ <https://www.google.com/url?q=https://genestack.com/tutorial/getting-started-with-genestack-platform/&sa=D&ust=1480960531757000&usg=AFQjCNHJjiUyjCRxVwhcWJvU5N1BIxZqVQ>`__
-
--  Testing Differential Gene Expression
-
-`https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/ <https://www.google.com/url?q=https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/&sa=D&ust=1480960531758000&usg=AFQjCNH-tAzk5FaCncmjwIP5TFHg7ngluA>`__
-
--  Whole Genome Bisulfite Sequencing Analysis
-
-`https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/ <https://www.google.com/url?q=https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/&sa=D&ust=1480960531759000&usg=AFQjCNHatZVvUqIi7pivTWYtBPR2n58oaQ>`__
-
--  Whole Exome Sequencing Analysis
-
-`https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/ <https://www.google.com/url?q=https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/&sa=D&ust=1480960531760000&usg=AFQjCNFPsEJ1CZurzrifP3l4HSIZmdCdiA>`__
-
--  Whole Genome Sequencing Analysis
-
-`https://genestack.com/tutorial/wgs-analysis-on-genestack/ <https://www.google.com/url?q=https://genestack.com/tutorial/wgs-analysis-on-genestack/&sa=D&ust=1480960531761000&usg=AFQjCNFQhZhhL2OZUhF5ZeTYWlEzO7gdMw>`__
+-  `Getting Started With Genestack Platform`_
+-  `Testing Differential Gene Expression`_
+-  `Whole Genome Bisulfite Sequencing Analysis`_
+-  `Whole Exome Sequencing Analysis`_
+-  `Whole Genome Sequencing Analysis`_
 
 To access the menu for a given file, you can either right or left click
 on the respective entry in the file browser. The topmost entry is the
@@ -499,7 +474,7 @@ file.
 
 |image18|
 
-Use the share button\ :sup:``[p] <#cmnt16>`__`\  to share your
+Use the share button to share your
 results with colleagues (the share button will not be available if you
 are using a guest account) [link on the section in the guide]. Read more
 about sharing on Genestack here (link)
@@ -507,7 +482,7 @@ about sharing on Genestack here (link)
 <screenshot “Share menu”>|image19|
 
 The delete button allows you to remove your files from the
-system.\ :sup:``[q] <#cmnt17>`__`
+system.
 
 <screenshot “Delete menu”>|image20|
 
@@ -596,8 +571,7 @@ managed using groups. To create a new collaborative group, click on your
 username (your email address) in the upper right corner of the page and
 go to “Manage Groups”.
 
-Learn more on how to Create and Manage Groups here:
-`https://genestack.com/tutorial/managing-and-sharing-data/ <https://www.google.com/url?q=https://genestack.com/tutorial/managing-and-sharing-data/&sa=D&ust=1480960531790000&usg=AFQjCNFBX7HBZthKUA4S9kkmvdhzdQtQ_Q>`__
+Learn more on how to Create and Manage Groups here: https://genestack.com/tutorial/managing-and-sharing-data/
 
 To share a file with your group, select it, and click on the “Share”
 button that appears in the top left corner of the page and follow the
@@ -707,7 +681,7 @@ The Developer button will give you the option to choose which version of
 an app you want to use. The ‘bundled’ and ‘minified’ options optimize
 loading of CSS and JS used in the app. You can find more details on
 bundling and
-minifying `here <https://www.google.com/url?q=https://msdn.microsoft.com/en-us/magazine/dn451436.aspx&sa=D&ust=1480960531806000&usg=AFQjCNGcA1VS-Ywnbylny453uooeFiCEeQ>`__.
+minifying here: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx.
 The Session and User drop-down menus allow you to chose the version of
 the app you want to use for your current log-in session and for your
 current user account respectively. Inherit is the default option and the
@@ -724,7 +698,7 @@ can change the settings of your current collaboration groups or create
 new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users. Read more about
 collaboration on Genestack
-`here <https://www.google.com/url?q=https://genestack.com/tutorial/managing-and-sharing-data/&sa=D&ust=1480960531808000&usg=AFQjCNHTek5pPHhA7DKcuPwCgBLCGd5fXA>`__.
+here: https://genestack.com/tutorial/managing-and-sharing-data/.
 
 Manage Users 
 ~~~~~~~~~~~~
@@ -735,3 +709,14 @@ users.
 Log out
 
 Use this button to log out of Genestack.
+
+
+.. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
+.. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
+.. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
+.. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
+.. _Getting Started With Genestack Platform: https://genestack.com/tutorial/getting-started-with-genestack-platform/
+.. _Testing Differential Gene Expression: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
+.. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
+.. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
+.. _Whole Genome Sequencing Analysis:  https://genestack.com/tutorial/wgs-analysis-on-genestack/

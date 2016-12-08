@@ -81,7 +81,7 @@ buttons, or “Initialize all” to do them all at once. Files do not need
 to be produced by the same apps to be initialized together.
 
 Running the Data flows
----------------------
+----------------------
 
 There are two apps that can be used to edit and run a data flow. The
 first one you’ll usually see is the Data Flow Editor. This app presents
@@ -107,37 +107,19 @@ Public data flows on Genestack
 On our platform, you can find a range of public data flows we have
 prepared for our users. We cover most of the common analysis types:
 
--  `Single-cell Transcriptomic
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968143%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNEhL4uWcHXHOr1FGZ5tIBY5kYgTXg>`__
--  `Genetic Variation
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1021590%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNH4ZvdWkHff66-8rHQA5k2oKvuT_g>`__
--  `Whole Exome Sequencing
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF999236%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNG0Aiv5aOhWP7aOzsAnlMG2VPAuFw>`__
--  `Differential Isoform Expression
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968203%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNG7i1NzFiknvU7YSW33u94PD47dug>`__
--  `Whole Genome Methylation
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968148%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNGxFpqgjVxexfPISr8fP26oEFsaCw>`__
--  `Differential Gene Expression
-   Analysis <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF972243%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532142000&usg=AFQjCNGK6v2wfFbccO03CPii9bo74JFedw>`__
-
--  `Affymetrix Microarray Quality
-   Control <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1015655%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532142000&usg=AFQjCNHg44yDnCHJ9wImdxm88Okr4kSPeQ>`__
--  `Targeted Sequencing Quality
-   Control <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1014486%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNFrje64ZaANbD8gFdytIUg57WOxqA>`__
--  `Mapped Reads Quality
-   Control <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968216%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNF-20mX9xHnQ9X3hQhAfKce_FcRBg>`__
--  `Raw Reads Quality
-   Control <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF969011%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNH5lJSaESPs3pUeBrEIFNlkMs-e4g>`__
--  `Agilent Microarray Quality
-   Control <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1015659%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNHwRN4S4g8o97lI1jPk0Nl4fFiW5A>`__
--  `Unspliced
-   Mapping <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1014279%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNGI7qIqJF-YRl8ucCZ-083HWgXJmw>`__
--  `Spliced
-   Mapping <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968220%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532145000&usg=AFQjCNFB8P_K2h7NeJkIbyI8ySfN7EhaEA>`__
-
-You can access the data flows from the Welcome Page or find them in the
-File Manager.
-
+-  `Single-cell Transcriptomic Analysis`_
+-  `Genetic Variation Analysis`_
+-  `Whole Exome Sequencing Analysis`_
+-  `Differential Isoform Expression Analysis`_
+-  `Whole Genome Methylation Analysis`_
+-  `Differential Gene Expression Analysis`_
+-  `Affymetrix Microarray Quality Control`_
+-  `Targeted Sequencing Quality Control`_
+-  `Mapped Reads Quality Control`_
+-  `Raw Reads Quality Control`_
+-  `Agilent Microarray Quality Control`_
+-  `Unspliced Mapping`_
+-  `Spliced Mapping`_
 Clicking on the data flow will take you to the data flow editor where
 you can add source files and reference genomes (we have a wide range of
 reference genomes readily available on the platform). When you have
@@ -199,7 +181,7 @@ Complete data export features are currently under development. However,
 you can contact our team to export files on demand.
 
 Getting Help 
-=============
+============
 
 Tutorials 
 ----------
@@ -280,9 +262,8 @@ Selecting File Provenance instead of Create New Data Flow will show you
 the pipeline (in the form of a data flow) that was used to create this
 file.
 
-Read more about data flows in this tutorial:
+Read more about data flows in this tutorial_:
 
-`https://genestack.com/tutorial/reproducing-your-work-with-data-flows/ <https://www.google.com/url?q=https://genestack.com/tutorial/reproducing-your-work-with-data-flows/&sa=D&ust=1480960532164000&usg=AFQjCNGYSmTnqQSobfVYp7xDiStTaIveSg>`__
 
 What’s the difference between BWA and Bowtie2?
 
@@ -335,14 +316,13 @@ and find links to public databases.
 All public experiments available on our platform are provided as
 experiments, not folders. Remember you can share both experiments and
 folders with other Genestack users using Groups. You can read more about
-this in our “Getting Started” tutorial
-(https://genestack.com/blog/2016/01/06/getting-started/).
+this in our `“Getting Started”`_ tutorial.
 
 What’s the difference between masked and unmasked reference genomes?
 
 In general, when a genomes is “masked” it means that all repeats and low
 complexity regions of your reference genome (detected
-by` RepeatMasker <https://www.google.com/url?q=http://www.repeatmasker.org/&sa=D&ust=1480960532173000&usg=AFQjCNE4ktR5xI4yZEvRi94d-Tc1QkJnvA>`__ tool)
+by `RepeatMasker`_ tool)
 are hidden away and replaced with “N”s, so that they will not be aligned
 to.
 
@@ -369,119 +349,103 @@ References:
 
 Introduction to bioinformatics:
 
-`https://www.ebi.ac.uk/luscombe/docs/imia\_review.pdf <https://www.google.com/url?q=https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf&sa=D&ust=1480960532176000&usg=AFQjCNECv1qiuG5D7TZ4unbvKbyxKRgwrQ>`__ 
+Luscombe NM et al. “What is bioinformatics? An introduction and overview.” Yearbook of Medical Informatics. 2001.
+https://www.ebi.ac.uk/luscombe/docs/imia\_review.pdf)
 
 Application management:
 
-`https://msdn.microsoft.com/en-us/magazine/dn451436.aspx <https://www.google.com/url?q=https://msdn.microsoft.com/en-us/magazine/dn451436.aspx&sa=D&ust=1480960532177000&usg=AFQjCNHd7Bpqrgo5KvNXeRW0OAIq6A8cKA>`__
+https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 
 Introduction to NGS:
 
-`Riyue Bao, Lei Huang, Jorge Andrade, Wei Tan, Warren A Kibbe, Hongmei
+Riyue Bao, Lei Huang, Jorge Andrade, Wei Tan, Warren A Kibbe, Hongmei
 Jiang, Gang Feng. “Review of Current Methods, Applications, and Data
 Management for the Bioinformatics Analysis of Whole Exome Sequencing.”
-Cancer Inform. 2014; 13(Suppl 2):
-67–82. <https://www.google.com/url?q=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960532178000&usg=AFQjCNG5MIj9-FB__VVyQsXtbuo9xWdxSg>`__
+Cancer Inform. 2014; 13(Suppl 2): 67–82. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624)
 
 Metadata:
 
-`http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/ <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/&sa=D&ust=1480960532178000&usg=AFQjCNEx9b-A8uoyTj6RpcvMX5htEaBLYQ>`__ 
-
-`http://web.expasy.org/cellosaurus/description.html <https://www.google.com/url?q=http://web.expasy.org/cellosaurus/description.html&sa=D&ust=1480960532179000&usg=AFQjCNG2AFQDhjnvzudkkGBYZIo_ou6ggw>`__
-
-`https://www.ebi.ac.uk/chebi/ <https://www.google.com/url?q=https://www.ebi.ac.uk/chebi/&sa=D&ust=1480960532179000&usg=AFQjCNHtCRLaVpzCpjLMeelUeSiW0MopvQ>`__
-
-`https://bioportal.bioontology.org/ontologies/CL <https://www.google.com/url?q=https://bioportal.bioontology.org/ontologies/CL&sa=D&ust=1480960532180000&usg=AFQjCNHUlmGU8604RpsgSdWAEcgCyH14CA>`__ 
+- http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/ 
+- http://web.expasy.org/cellosaurus/description.html
+- https://www.ebi.ac.uk/chebi/
+- https://bioportal.bioontology.org/ontologies/CL
 
 Quality Control
 
-`http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ <https://www.google.com/url?q=http://www.bioinformatics.babraham.ac.uk/projects/fastqc/&sa=D&ust=1480960532181000&usg=AFQjCNG3gFfG_fo8sDG2sG-A4qhqxbMSSA>`__ 
-
-`https://code.google.com/archive/p/ea-utils/ <https://www.google.com/url?q=https://code.google.com/archive/p/ea-utils/&sa=D&ust=1480960532182000&usg=AFQjCNFWTsEMPwSNdE_GIEC1zlKVhmkQFw>`__ 
-
-`http://hannonlab.cshl.edu/fastx\_toolkit/ <https://www.google.com/url?q=http://hannonlab.cshl.edu/fastx_toolkit/&sa=D&ust=1480960532182000&usg=AFQjCNEPkbwuAM0B36I80uePu4pA55PbpQ>`__ 
-
-`https://github.com/lh3/seqtk <https://www.google.com/url?q=https://github.com/lh3/seqtk&sa=D&ust=1480960532183000&usg=AFQjCNHkqVC50LC9CBp6em_x990YOZsoCQ>`__ 
-
-`http://www.ebi.ac.uk/~stijn/reaper/tally.html <https://www.google.com/url?q=http://www.ebi.ac.uk/~stijn/reaper/tally.html&sa=D&ust=1480960532183000&usg=AFQjCNFONvWxHmnsFr9xxt241ymdqFhykg>`__ 
-
-`http://seqanswers.com/forums/showthread.php?t=6854 <https://www.google.com/url?q=http://seqanswers.com/forums/showthread.php?t%3D6854&sa=D&ust=1480960532184000&usg=AFQjCNGljd0M1bsRN5MeeLARQuAnu_wCMQ>`__
+- http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+- https://code.google.com/archive/p/ea-utils/
+- http://hannonlab.cshl.edu/fastx\_toolkit/ 
+- https://github.com/lh3/seqtk
+- http://www.ebi.ac.uk/~stijn/reaper/tally.html
+- http://seqanswers.com/forums/showthread.php?t=6854
 
 Choosing a mapper
 
-`http://ccb.jhu.edu/software/tophat/index.shtml <https://www.google.com/url?q=http://ccb.jhu.edu/software/tophat/index.shtml&sa=D&ust=1480960532184000&usg=AFQjCNEI6DXhzMkh9mjr61t-nTcr6HqKiA>`__
+- http://ccb.jhu.edu/software/tophat/index.shtml
+- http://bio-bwa.sourceforge.net/
+- http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+- https://code.google.com/archive/p/bsmap/
 
-`http://bio-bwa.sourceforge.net/ <https://www.google.com/url?q=http://bio-bwa.sourceforge.net/&sa=D&ust=1480960532185000&usg=AFQjCNESUGTzGfz2KOJjkgQKfYZmqndWuQ>`__
-
-`http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml <https://www.google.com/url?q=http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml&sa=D&ust=1480960532185000&usg=AFQjCNESa3B3VzRyUIRmz6r4x0SDatipzg>`__
-
-`https://code.google.com/archive/p/bsmap/ <https://www.google.com/url?q=https://code.google.com/archive/p/bsmap/&sa=D&ust=1480960532186000&usg=AFQjCNF0nUWqLxH5A3gq6_NRLdnTW3Ze3g>`__ 
-
-`Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini J,
+- Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini J,
 Nery JR, Lee L, Ye Z, Ngo Q-M, Edsall L, Antosiewicz-Bourget J, Stewart
 R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. “Human DNA
 methylomes at base resolution show widespread epigenomic
-differences.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532186000&usg=AFQjCNFe8b24Hp9-48ChWBDSW7BPi6y1Tg>`__`Nature. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532187000&usg=AFQjCNFBf5LYtKrv0KWTxTS8KJPEt6ifnw>`__`2009
-462(7271):315-22. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532187000&usg=AFQjCNFBf5LYtKrv0KWTxTS8KJPEt6ifnw>`__
+differences.” Nature. 2009 462(7271):315-22. (http://europepmc.org/abstract/MED/19829295)
 
-`Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD, Pradhan
-S, Nelson SF, Pellegrini M, Jacobsen SE. “Shotgun bisulphite sequencing
-of the Arabidopsis genome reveals DNA methylation
-patterning.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532188000&usg=AFQjCNE8zFhjG-v5VvOv4naOTnfKIATX3A>`__`Nature <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532188000&usg=AFQjCNE8zFhjG-v5VvOv4naOTnfKIATX3A>`__`.
-2008
-452(7184):215–219. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532188000&usg=AFQjCNE8zFhjG-v5VvOv4naOTnfKIATX3A>`__
+- Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD, Pradhan
+S, Nelson SF, Pellegrini M, Jacobsen SE. “Shotgun bisulphite sequencing of the Arabidopsis
+genome reveals DNA methylation patterning.” Nature. 2008 452(7184):215–219.
+(http://europepmc.org/abstract/MED/18278030)
 
 Reference genomes
 
-`McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB,
+- McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB,
 Donnelly P. Choice of transcripts and software has a large effect on
-variant annotation. Genome Med.
-2014;6(3):26; <https://www.google.com/url?q=https://genomemedicine.biomedcentral.com/articles/10.1186/gm543&sa=D&ust=1480960532189000&usg=AFQjCNH5Nei2JJC6WGrokdfLCUuIK-EiSA>`__
-
-`Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D,
+variant annotation. Genome Med. 2014;6(3):26 (https://genomemedicine.biomedcentral.com/articles/10.1186/gm543)
+- Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D,
 Petryszak R, et al. Comparison of GENCODE and RefSeq gene annotation and
-the impact of reference geneset on variant effect prediction. BMC
-Genomics. 2015;16 (Suppl
-8):S2 <https://www.google.com/url?q=http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-16-S8-S2&sa=D&ust=1480960532190000&usg=AFQjCNHU77gqTmoSYhN3YJFxat55aLxDBQ>`__
+the impact of reference geneset on variant effect prediction. BMC Genomics. 2015;16 (Suppl 8):S2
+(http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-16-S8-S2)
 
 Microarray Normalization
 
-`http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf <https://www.google.com/url?q=http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf&sa=D&ust=1480960532191000&usg=AFQjCNEUt8EfYF9MJEMk3xXwSx4EOdVF8w>`__
-
-`https://www.bioconductor.org/packages/3.3/bioc/html/affy.html <https://www.google.com/url?q=https://www.bioconductor.org/packages/3.3/bioc/html/affy.html&sa=D&ust=1480960532191000&usg=AFQjCNE-bRmZ9xWjQ0nBEyIl7GOxss4png>`__
-
-`https://www.bioconductor.org/packages/3.3/bioc/html/limma.html <https://www.google.com/url?q=https://www.bioconductor.org/packages/3.3/bioc/html/limma.html&sa=D&ust=1480960532192000&usg=AFQjCNF9SGPgVYs7hc56iwKazTa3LAQzZA>`__\ :sup:``[be] <#cmnt57>`__`[bf] <#cmnt58>`__`[bg] <#cmnt59>`__`[bh] <#cmnt60>`__`[bi] <#cmnt61>`__`
-
-`Gautier L, Cope L, Bolstad BM and Irizarry RA (2004). “affy—analysis of
-Affymetrix GeneChip data at the probe
-level.” <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532192000&usg=AFQjCNEGDThDd2ID5zDSlFC97-OWJ7mljQ>`__`Bioinformatics <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532193000&usg=AFQjCNF9Jw4PyOtYBlTd4qWytJSU4kvZeQ>`__`, <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532193000&usg=AFQjCNF9Jw4PyOtYBlTd4qWytJSU4kvZeQ>`__`20 <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532193000&usg=AFQjCNF9Jw4PyOtYBlTd4qWytJSU4kvZeQ>`__`(3),
-pp.
-307–315. <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532194000&usg=AFQjCNEg7kg2G01UTbmP_QvAfIaHe3pmAQ>`__
-
-`Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK (2015).
-“limma powers differential expression analyses for RNA-sequencing and
-microarray
-studies.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532194000&usg=AFQjCNFoyk38qI6GEcCA0220tADRx9FEvw>`__`Nucleic
-Acids
-Research <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532194000&usg=AFQjCNFoyk38qI6GEcCA0220tADRx9FEvw>`__`, <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532195000&usg=AFQjCNE39KiEDy4aTgjAhOXrB88ZMNLHXQ>`__`43 <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532195000&usg=AFQjCNE39KiEDy4aTgjAhOXrB88ZMNLHXQ>`__`(7),
-pp.
-e47. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532195000&usg=AFQjCNE39KiEDy4aTgjAhOXrB88ZMNLHXQ>`__\ :sup:``[bj] <#cmnt62>`__`[bk] <#cmnt63>`__`[bl] <#cmnt64>`__`[bm] <#cmnt65>`__`[bn] <#cmnt66>`__`
+- Madan Babu M.M. "An Introduction to Microarray Data Analysis" Computational Genomics (Ed: R. Grant), Horizon press, UK 2004
+(http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf)
+- https://www.bioconductor.org/packages/3.3/bioc/html/affy.html
+- https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
+- Gautier L. et al. “affy—analysis of Affymetrix GeneChip data at the probe level.” 2004
+Bioinformatics, 20(3), pp. 307–315 (http://www.ncbi.nlm.nih.gov/pubmed/14960456)
+- Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK “limma powers
+differential expression analyses for RNA-sequencing and microarray studies.” 2015 Nucleic Acids
+Research, 43 (7), pp. e47 (http://europepmc.org/abstract/MED/25605792)
 
 Preformating tools:
-
-`http://samtools.github.io/bcftools/bcftools.html <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960532196000&usg=AFQjCNHfZ1OYs1TlhMJYgDZ9DxR_9wIMPg>`__
-
-`http://samtools.sourceforge.net/ <https://www.google.com/url?q=http://samtools.sourceforge.net/&sa=D&ust=1480960532196000&usg=AFQjCNFa4tnoTbjuiTHNKWVlCu9WJOOs8w>`__
-
-http://broadinstitute.github.io/picard/
+- http://samtools.github.io/bcftools/bcftools.html
+- http://samtools.sourceforge.net/
+- http://broadinstitute.github.io/picard/
 
 Analysis tools:
-
-`http://www-huber.embl.de/users/anders/HTSeq/doc/count.html <https://www.google.com/url?q=http://www-huber.embl.de/users/anders/HTSeq/doc/count.html&sa=D&ust=1480960532197000&usg=AFQjCNHmYx9L7XeB7XWefam_DCBWdbKnFA>`__
+- http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
 
 Visualization tools:
+- http://www.cbil.upenn.edu/PaGE/fdr.html
 
-`http://www.cbil.upenn.edu/PaGE/fdr.html <https://www.google.com/url?q=http://www.cbil.upenn.edu/PaGE/fdr.html&sa=D&ust=1480960532198000&usg=AFQjCNHi3gFvw_wJNRrRfwn0VM5_uOtIQQ>`__
+.. _Single-cell Transcriptomic Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968143%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNEhL4uWcHXHOr1FGZ5tIBY5kYgTXg
+.. _Genetic Variation Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1021590%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNH4ZvdWkHff66-8rHQA5k2oKvuT_g
+.. _Whole Exome Sequencing Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF999236%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNG0Aiv5aOhWP7aOzsAnlMG2VPAuFw
+.. _Differential Isoform Expression Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968203%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNG7i1NzFiknvU7YSW33u94PD47dug
+.. _Whole Genome Methylation Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968148%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNGxFpqgjVxexfPISr8fP26oEFsaCw
+.. _Differential Gene Expression Analysis: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF972243%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532142000&usg=AFQjCNGK6v2wfFbccO03CPii9bo74JFedw
+.. _Affymetrix Microarray Quality Control: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1015655%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532142000&usg=AFQjCNHg44yDnCHJ9wImdxm88Okr4kSPeQ
+.. _Targeted Sequencing Quality Control: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1014486%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNFrje64ZaANbD8gFdytIUg57WOxqA
+.. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968216%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNF-20mX9xHnQ9X3hQhAfKce_FcRBg
+.. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF969011%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532143000&usg=AFQjCNH5lJSaESPs3pUeBrEIFNlkMs-e4g
+.. _Agilent Microarray Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1015659%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNHwRN4S4g8o97lI1jPk0Nl4fFiW5A
+.. _Unspliced Mapping: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1014279%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNGI7qIqJF-YRl8ucCZ-083HWgXJmw
+.. _Spliced Mapping: https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968220%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532145000&usg=AFQjCNFB8P_K2h7NeJkIbyI8ySfN7EhaEA
+.. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
+.. _“Getting Started”: https://genestack.com/blog/2016/01/06/getting-started/
+.. _RepeatMasker: http://www.repeatmasker.org/&sa=D&ust=1480960532173000&usg=AFQjCNE4ktR5xI4yZEvRi94d-Tc1QkJnvA
 
 
 .. |image0| image:: images/image39.png
@@ -547,3 +511,4 @@ Visualization tools:
 .. |image60| image:: images/image24.png
 .. |image61| image:: images/image37.png
 .. |image62| image:: images/image36.png
+

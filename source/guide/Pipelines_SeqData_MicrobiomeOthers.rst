@@ -93,4 +93,6 @@ page with your collaborators, sticky notes will  help to focus their
 attention on your findings.
 
 You can see the Genome browser in action in this blog
-`post <https://www.google.com/url?q=https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-browser/&sa=D&ust=1480960532101000&usg=AFQjCNE3r6NoPVzIZm7LOxsU0h9eopDvDQ>`__.
+post_.
+
+.. _post: https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-browser/

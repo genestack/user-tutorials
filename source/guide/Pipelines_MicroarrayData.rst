@@ -13,8 +13,7 @@ change given different conditions (e.g. housekeeping genes) report an
 expression ratio other than 1. This can be caused by a variety of
 reasons, for instance: variation caused by differential labelling
 efficiency of the two fluorescent dyes used or different amounts of
-starting mRNA. (You can read more about this here:
-`http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf <https://www.google.com/url?q=http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf&sa=D&ust=1480960532104000&usg=AFQjCNHGZj1SPDUpfzu6vDTvtF4OMUzInA>`__)
+starting mRNA. You can read more about this here_.
 
 Normalisation is a process that eliminates such variations in order to
 allow users to observe the actual biological differences in gene
@@ -65,8 +64,8 @@ GK (2015), distributed under GNU General Public License (GPL) version
 
 Link:
 
--  `https://www.bioconductor.org/packages/3.3/bioc/html/affy.html <https://www.google.com/url?q=https://www.bioconductor.org/packages/3.3/bioc/html/affy.html&sa=D&ust=1480960532112000&usg=AFQjCNFEFVLSDkBgAHfki3pyVUAMNWe4vg>`__
--  `https://www.bioconductor.org/packages/3.3/bioc/html/limma.html <https://www.google.com/url?q=https://www.bioconductor.org/packages/3.3/bioc/html/limma.html&sa=D&ust=1480960532112000&usg=AFQjCNG6rPPgV-YtGyt_EIb9Qef1Ke01Cg>`__
+-  https://www.bioconductor.org/packages/3.3/bioc/html/affy.html
+-  https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
 References:
 
@@ -158,3 +157,4 @@ Expression navigator for methylation arrays (coming soon)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+.. _here: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf

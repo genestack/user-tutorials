@@ -62,8 +62,7 @@ if that proves to be unsatisfactory.
 How can you check the quality of the data?
 
 The tool used for raw reads quality check is FastQC Report app, based on
-`FastQC
-tool <https://www.google.com/url?q=http://www.bioinformatics.babraham.ac.uk/projects/fastqc/&sa=D&ust=1480960531831000&usg=AFQjCNH02ePdMGERL56j74uXPHwHmKTndg>`__ developed
+`FastQC tool`_ developed
 by Simon Andrews at the Babraham Institute.
 
 The quickest way to perform the quality assessment of your data in
@@ -312,8 +311,7 @@ reads.Changing the random seed value will let you create different
 subsets with the same number of reads. Using the same random seed and
 the same number of reads will result in identical subsets.
 
-This application is based on
-`Seqtk <https://www.google.com/url?q=https://github.com/lh3/seqtk&sa=D&ust=1480960531871000&usg=AFQjCNFaavr1xxB-goj-qyxDMaqTgd5njw>`__.
+This application is based on Seqtk_.
 
 Best used when:
 
@@ -336,8 +334,7 @@ in a library, the output will include only one copy of that sequence.
 The phred quality scores are created by keeping the highest score across
 all identical reads for each position.
 
-This tool is based on
-`Tally <https://www.google.com/url?q=http://www.ebi.ac.uk/~stijn/reaper/tally.html&sa=D&ust=1480960531874000&usg=AFQjCNGSCUslmJdaVfxMgfxRfu6XqZ7B5w>`__.
+This tool is based on Tally_.
 
 Best used
 when:
@@ -364,7 +361,7 @@ You can also discard reads specifying a minimum percentage of bases to
 be above the minimum quality score.
 
 This tool is based on fastq\_quality\_filter, which is part of the
-`FASTX-Toolkit <https://www.google.com/url?q=http://hannonlab.cshl.edu/fastx_toolkit/&sa=D&ust=1480960531878000&usg=AFQjCNFdpUyemH0OOfSQC7BusQ6otEFjmQ>`__.
+FASTX-Toolkit_.
 
 Best used when:
 
@@ -384,12 +381,9 @@ The app uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies
 and platform used. For instance, it contains widely used PCR primers and
 adaptors for Illumina, ABI etc. You can view the full list
-`here <https://www.google.com/url?q=https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt&sa=D&ust=1480960531881000&usg=AFQjCNFst2bVH0ONqjijIMuLGMl02gh88g>`__.
+here: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt.
 
-This tool is based
-on `fastq-mcf <https://www.google.com/url?q=https://code.google.com/p/ea-utils/wiki/FastqMcf&sa=D&ust=1480960531882000&usg=AFQjCNFm6647jAO33m4WZpSGH3Zvv6nn7A>`__,
-one of the
-`EA-Utils <https://www.google.com/url?q=https://code.google.com/archive/p/ea-utils/&sa=D&ust=1480960531883000&usg=AFQjCNHE_8KWOdIrCPTQ_lhxTFPRl2emWQ>`__ utilities.
+This tool is based on `fastq-mcf`_ , one of the EA-Utils_ utilities.
 
 Best used when:
 
@@ -426,9 +420,7 @@ Best used when:
 If your per-base quality declines over the course of your reads the Trim
 Low Quality Bases will select the highest quality region for each read.
 
-This tool is based on the
-`Seqtk <https://www.google.com/url?q=https://github.com/lh3/seqtk&sa=D&ust=1480960531888000&usg=AFQjCNFUVpRUIwwFfj5NUsDAZn_9jI1Mcg>`__ tool,
-which uses the Phred algorithm.
+This tool is based on the `Seqtk tool`_, which uses the Phred algorithm.
 
 Trim Reads to Fixed Length
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -441,8 +433,8 @@ kept. For example, if you set 5 as the first base to keep and 30 as the
 last base to keep, it means that the application trims all nucleotides
 to the 5 position and all nucleotides from the 30th base.
 
-This tool is based on fastx\_trimmer, which is part of the
-`FASTX-Toolkit <https://www.google.com/url?q=http://hannonlab.cshl.edu/fastx_toolkit/&sa=D&ust=1480960531891000&usg=AFQjCNF1hob9o2h0-j49uKNqqhYZqPwV2g>`__.
+This tool is based on fastx_trimmer, which is part of the
+FASTX-Toolkit.
 
 Best used when: Trim to fix length is helpful when you want to obtain
 reads of specific length (regardless of the quality).
@@ -547,7 +539,7 @@ Multiple QC Report app.
 Watch the video here: https://youtu.be/\_jHrtq\_3ya8
 
 This application is based
-on BED`tools <https://www.google.com/url?q=https://code.google.com/p/bedtools/&sa=D&ust=1480960531903000&usg=AFQjCNHFYsSqknf5t--ej96MWqPvN1jMEA>`__,
+on `BED tools`_ ,
 `Picard <https://www.google.com/url?q=http://broadinstitute.github.io/picard/&sa=D&ust=1480960531903000&usg=AFQjCNE7Nx1DN1A6MJS58mdncbZw3paNKQ>`__ `tools <https://www.google.com/url?q=http://broadinstitute.github.io/picard/&sa=D&ust=1480960531904000&usg=AFQjCNHQu-By-46lV8YOZ9fOB5PWZPMzGA>`__,
 and SAMtools.
 
@@ -562,8 +554,7 @@ reads would lead to early PCR amplification effects (jackpotting)
 contributing noise to the signal.
 
 You can read more about Duplicated Mapped Reads in this excellent
-`SeqAnswers
-thread <https://www.google.com/url?q=http://seqanswers.com/forums/showthread.php?t%3D6854&sa=D&ust=1480960531906000&usg=AFQjCNEf4S1SCRUDkW22TsOHHRxjWD6Bvg>`__.
+`SeqAnswers thread`_.
 
 Action:goes through all reads in a Mapped Reads file, marking as
 “duplicates” for paired or single reads where the orientation and the 5’
@@ -674,7 +665,7 @@ Action: allows you to merge two or more Genetic Variations files into a
 single file.
 
 This application is based on
-`BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`__.
+BCFtools_ <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`__.
 
 Concatenate Variants 
 ^^^^^^^^^^^^^^^^^^^^^
@@ -692,4 +683,17 @@ position of the first input. There is an option to remove duplicated
 variants to make sure that there are no redundant results.
 
 This application is based on
-`BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531926000&usg=AFQjCNFoChUsLd1NE-xsBd1GInhmlBtuHw>`__.
+BCFtools_ <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531926000&usg=AFQjCNFoChUsLd1NE-xsBd1GInhmlBtuHw>`__.
+
+
+.. _FastQC tool:  http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+.. _Seqtk: https://www.google.com/url?q=https://github.com/lh3/seqtk
+.. _Tally: https://www.google.com/url?q=http://www.ebi.ac.uk/~stijn/reaper/tally.html
+.. _FASTX-Toolkit: https://www.google.com/url?q=http://hannonlab.cshl.edu/fastx_toolkit/
+.. _fastq-mcf: https://code.google.com/p/ea-utils/wiki/FastqMcf
+.. _EA-Utils: https://code.google.com/archive/p/ea-utils/
+.. _Seqtk tool: https://github.com/lh3/seqtk
+.. _BED tools: https://code.google.com/p/bedtools/
+.. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t%3D6854&sa=D&ust=1480960531906000&usg=AFQjCNEf4S1SCRUDkW22TsOHHRxjWD6Bvg
+
+

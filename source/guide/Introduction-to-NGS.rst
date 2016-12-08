@@ -9,8 +9,7 @@ analysis. To help you better understand the processes involved, we will
 use the example of genetic variant analysis for Whole Exome Sequencing
 data. A typical WES data analysis pipeline includes: raw reads quality
 control, preprocessing, mapping, post-alignment processing, variant
-calling, annotation, and prioritization  (`Bao et al.,
-2010 <https://www.google.com/url?q=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960531812000&usg=AFQjCNEanbRs0Pes_OFgveaUiLQ59pPQfQ>`__).
+calling, annotation, and prioritization  (`Bao et al., 2010`_).
 
 The first thing you need to do with sequencing data is quality control
 of raw reads.  Here you should check metrics such as GC content of
@@ -32,10 +31,7 @@ de novo assembly because obtained reads are compared with a reference
 already existed in a data base. For example, in our case, aligning WES
 reads allows you to discover nucleotides that vary between reference and
 tested sequence and the accuracy of variant identification depends on
-the mapping accuracy (`The 1000 Genomes Project
-Consortium <https://www.google.com/url?q=http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html&sa=D&ust=1480960531815000&usg=AFQjCNFuLcgFRjG08dkh7vuZnnQPJPmbsQ>`__`,
-2010 <https://www.google.com/url?q=http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html&sa=D&ust=1480960531815000&usg=AFQjCNFuLcgFRjG08dkh7vuZnnQPJPmbsQ>`__).
-
+the mapping accuracy (`The 1000 Genomes Project Consortium, 2010`_).
  
 
 After you have mapped your reads, it’s a good idea to check the mapping
@@ -83,3 +79,6 @@ Explore section are interactive, visual applications allowing you to
 view the results of your analyses, identify the most interesting
 findings and interpret your results. The manage section apps allow you
 to keep track of, describe, and explore the metadata of your files.
+
+.. _`Bao et al., 2010`: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960531812000&usg=AFQjCNEanbRs0Pes_OFgveaUiLQ59pPQfQ
+.. _`The 1000 Genomes Project Consortium, 2010`: http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html&sa=D&ust=1480960531815000&usg=AFQjCNFuLcgFRjG08dkh7vuZnnQPJPmbsQ
