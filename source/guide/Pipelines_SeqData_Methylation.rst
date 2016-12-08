@@ -1,8 +1,8 @@
 Methylation Analysis
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 Bisulfite sequencing mapping with BSMAP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The application is based on the
 `BSMAP <https://www.google.com/url?q=https://code.google.com/archive/p/bsmap/&sa=D&ust=1480960532079000&usg=AFQjCNFq0kN0aK1f-Wy2i7s1c83XjQg8IA>`__ tool
@@ -37,7 +37,7 @@ tutorial that can be accessed
 `here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-sequencing-reads-merging-techinical-replicates/&sa=D&ust=1480960532082000&usg=AFQjCNEzDwcTF01UsBP5l0UyOKnKYYJKIA>`__.
 
 Reduced representation bisulfite sequencing mapping with BSMAP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The application is based on the
 `BSMAP <https://www.google.com/url?q=https://code.google.com/archive/p/bsmap/&sa=D&ust=1480960532083000&usg=AFQjCNGrxXhzcONteprQELjc63McEx1vhg>`__ tool
@@ -86,7 +86,7 @@ References:
    452(7184):215–219. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__
 
 Methylation Ratio Analysis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Methylation Profiling
 

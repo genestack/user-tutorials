@@ -1,8 +1,8 @@
 Microbiome Analysis
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Microbiome Analysis with QIIME
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Microbiome Analysis
 
@@ -41,10 +41,10 @@ that failed mapping to reference sequence are excluded. Tools used:
 qiime 1.9.1
 
 Others
-~~~~~~~
+~~~~~~
 
 Genome Browser
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Good for: Variant Calling, Methylation Profiling, Whole Exome Sequencing
 Analysis, Whole Genome Sequencing Analysis and many more.

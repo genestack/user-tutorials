@@ -1,5 +1,5 @@
 Pipelines and applications
-===========================
+==========================
 
 Applications available on Genestack fall into four categories:
 Preprocess, Analyse, Explore and Manage.
@@ -30,10 +30,10 @@ and select  “About application”.
 <About Application>|image32|
 
 Sequencing data
-----------------
+---------------
 
 Raw Reads preprocessing & QC
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sequencing Assay Viewer app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -280,7 +280,7 @@ Procedures and caveats for improving data quality are the same as for
 sequence duplication level.
 
 Multiple QC Report
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 You can also view a couple of reports at once using our Multiple QC
 Report App. Go to the Created Files folder, select all the FastQC
@@ -302,7 +302,7 @@ other files in the dataset are ways of identifying which files
 should not be used for further analysis.
 
 Subsample Reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Action:  used to create a random subset of raw reads.
 
@@ -327,7 +327,7 @@ do this, you need to run a different computation, this time inputting
 processed data source files into the data flow).
 
 Filter Duplicated Reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Action: discards duplicated sequenced fragments from raw reads data. If
 the sequence of two paired reads or a single read occurs multiple times
@@ -352,7 +352,7 @@ After completing preprocessing, it’s a good idea to run a FastQC report
 on the preprocessed files to see if the quality has improved.
 
 Filter By Quality Score
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Action: discards reads in a raw reads sample based on Phred33 quality
 scores. You can change the minimum quality score, which is set to 20 by
@@ -398,7 +398,7 @@ reads, duplicated reads. Since this QC app relies on sequence matching
 it should be run first if used in conjunction with other QC apps
 
 Trim Low Quality Bases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Action: removes bases with a low phred33 quality score in raw reads
 data. Note that a quality value of 3 means that there is a 50% chance
@@ -431,7 +431,7 @@ This tool is based on the
 which uses the Phred algorithm.
 
 Trim Reads to Fixed Length
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Action: trims a specific amount of bases from the extremities of all
 reads in a sample.
@@ -451,7 +451,7 @@ Mapped Reads Preprocessing and QC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mapped Reads QC Report
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 In order to perform the mapped reads QC we follow a similar procedure to
 the one used to generate FastQC reports. After selecting all the mapped
@@ -633,7 +633,7 @@ This tool is based on MarkDuplicates, part of the `Picard
 tools <https://www.google.com/url?q=http://broadinstitute.github.io/picard/&sa=D&ust=1480960531914000&usg=AFQjCNH7a8doEzmn-2YlGchG7q_J-PR-YA>`__.
 
 Subsample Reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Best used when: For example, if you want to take a look at what your
 final experimental results will look like, but don’t want to spend time
@@ -651,7 +651,7 @@ This application is based on
 `SAMtools <https://www.google.com/url?q=http://samtools.sourceforge.net/&sa=D&ust=1480960531916000&usg=AFQjCNFB4gFPcb-Qn-otAuuvXdgQxS-qew>`__.
 
 Merge Mapped Reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 Best used when: For example, if you have multiple replicates of the same
 experiment and want to combine them before producing your final result.
@@ -663,7 +663,7 @@ This application is based on
 `SAMtools <https://www.google.com/url?q=http://samtools.sourceforge.net/&sa=D&ust=1480960531918000&usg=AFQjCNExyI1vxeDPJ4fJDe3oEq6iaUomvA>`__.
 
 Merge Variants 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Best used when: Merging Genomic Variations files can be useful, when you
 have, for example, one Genetic Variations file for SNPs and another one
@@ -677,7 +677,7 @@ This application is based on
 `BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`__.
 
 Concatenate Variants 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 Best used when: Concatenation would be appropriate if you, for example,
 have separate Genetic Variations files for each chromosome, and simply

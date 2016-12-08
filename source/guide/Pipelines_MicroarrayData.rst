@@ -1,11 +1,11 @@
 Microarray data
-----------------
+---------------
 
 Expression arrays 
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Microarray normalisation 
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 When investigating differential gene expression using microarrays, it’s
 often the case that the expression levels of genes that should not
@@ -101,13 +101,13 @@ for downstream processing such as Dose Response
 Analysis.
 
 Microarray QC 
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Expression navigator for expression analysis 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Compound dose response analysis 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Good for: Microarray data analysis
 
@@ -146,15 +146,15 @@ Link:
 package limma).
 
 Methylation arrays 
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Methylation array normalisation (coming soon) 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Methylation array QC (coming soon) 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Expression navigator for methylation arrays (coming soon) 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 

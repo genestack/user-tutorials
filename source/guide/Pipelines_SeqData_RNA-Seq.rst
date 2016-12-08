@@ -24,7 +24,7 @@ be able to look at specific variations (SNPs, InDels etc).
 
 
 Spliced Mapping with TopHat2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This application is used to map Raw Reads with transcriptomic data like
 RNA-seq to a Reference Genome, taking into account splice junctions.
@@ -71,10 +71,10 @@ that can be found
 `here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-rna-seq-reads-onto-a-reference-genome/&sa=D&ust=1480960531934000&usg=AFQjCNFMSiaZdYZX9Sp1-nzMlTdCUM_5DA>`__ (link)
 
 Spliced Mapping with STAR
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Gene Quantification with RSEM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 RSEM Report application uses STAR mapper [2] to align reads against
 reference transcripts and applies `Expectation-Maximization
@@ -252,7 +252,7 @@ tool),
 algorithm)
 
 Isoforms quantification with cuffQuant
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Differential Isoform Expression Analysis
 
@@ -296,7 +296,7 @@ This application is based on cuffQuant which is a part of
 `Cufflinks <https://www.google.com/url?q=http://cufflinks.cbcb.umd.edu/&sa=D&ust=1480960531964000&usg=AFQjCNHU3aK5lX71_5lPCL820JdJ4BeLtw>`__.
 
 Test Differential Gene Expression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Differential Gene Expression Analysis
 
@@ -444,7 +444,7 @@ and
 `http://www.cbil.upenn.edu/PaGE/fdr.html <https://www.google.com/url?q=http://www.cbil.upenn.edu/PaGE/fdr.html&sa=D&ust=1480960531986000&usg=AFQjCNEL6qdg6agmqnsXX1OwJqfeK99CNQ>`__ (FDR)
 
 Expression Navigator for splice isoforms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Testing Differential Isoform Expression Analysis
 

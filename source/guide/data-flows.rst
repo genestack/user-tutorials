@@ -1,6 +1,6 @@
 
 Running and reproducing data flows 
-===================================
+==================================
 
 Your data has been imported on the platform, you have checked its
 quality and chosen the apps you wish to use to analyse your data. Here
@@ -80,8 +80,8 @@ initialize  those that need to be by clicking on their respective “Go!”
 buttons, or “Initialize all” to do them all at once. Files do not need
 to be produced by the same apps to be initialized together.
 
-Running the Dataflows 
-----------------------
+Running the Data flows
+---------------------
 
 There are two apps that can be used to edit and run a data flow. The
 first one you’ll usually see is the Data Flow Editor. This app presents
@@ -100,7 +100,7 @@ Merge parents and other things you can do with data flows
 
 
 Public data flows on Genestack 
--------------------------------
+------------------------------
 
 [main bioinformatics analysis + Wp data flows + tutorial data flows]
 

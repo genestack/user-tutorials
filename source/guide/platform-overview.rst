@@ -1,8 +1,8 @@
 Genestack Platform
-======================
+==================
 
 Registering 
-------------
+-----------
 
 If you don’t have an account already, please register first:
 
@@ -75,7 +75,7 @@ customized or a default template. Find more info on importing data here
 4) Tutorials explain the most common analysis types in greater detail.
 
 Importing Data 
----------------
+--------------
 
 As we mentioned in the Platform Map section, there are two
 ways: you can access the Import app:  using the “Import” button in the File
@@ -190,7 +190,7 @@ Page. Later you can find your files in the “Imported files” folder which
 can be accessed from the Welcome Page and from the File Manager.
 
 Importing from spreadsheet 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Supported file types
 ~~~~~~~~~~~~~~~~~~~~
@@ -234,7 +234,7 @@ Reference Genomes - Reference genomic sequence for a specific organism
 with annotation.
 
 Attachments 
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 When you import an experiment into Genestack , you can choose to attach
 various files to it. For example you could include a PDF file with the
@@ -258,7 +258,7 @@ an attachments button by the experiment name.
 <file import attachments> |image8|
 
 Browsing Data 
---------------
+-------------
 
 Efficient data search and browsing are at the core of Genestack. The
 platform provides  rapid access to private, shared, and public data
@@ -519,7 +519,7 @@ permissions.
 <screenshot “View metainfo window”>|image21|
 
 Experiment Browser 
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Experiment Browser is an app that can be used to find connections
 between various results and various experiments. Let’s say you’re
@@ -548,10 +548,10 @@ You can access the Experiment Browser either from the Welcome Page or
 the Shortcuts Menu.
 
 Metadata Management 
---------------------
+-------------------
 
 Metainfo Editor 
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 |Metainfo editor.png|
 
@@ -569,10 +569,10 @@ Select the assays of interest, right click on them and in “Manage”
 section choose “Edit metainfo”.
 
 Metainfo Templates 
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Dictionaries 
-~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 NOTE: What is a dictionary?
 
@@ -582,13 +582,13 @@ Genestack. These files are used for curation of public experiments and
 for editing metainfo created or imported files.
 
 Sharing Data 
-~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Organisations, groups, users 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sharing and permissions 
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 You can share everything you do on the platform: files, scripts,
 results, data flows,  and import templates. Sharing on Genestack is
@@ -666,7 +666,7 @@ what each status means:
 -  Killed: the task has been canceled .
 
 Your Profile 
--------------
+------------
 
 Clicking on your username (your email) in the top right corner provides
 access to various applications used to manage your account and your
@@ -691,7 +691,7 @@ Moreover, here you can specify which page you would like to see after
 login: Welcome Page or File Manager.
 
 Manage Applications 
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 [manage applications 1]|image29|
 
@@ -727,7 +727,7 @@ collaboration on Genestack
 `here <https://www.google.com/url?q=https://genestack.com/tutorial/managing-and-sharing-data/&sa=D&ust=1480960531808000&usg=AFQjCNHTek5pPHhA7DKcuPwCgBLCGd5fXA>`__.
 
 Manage Users 
-~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 In this section, you can create new users or change password of your
 users.
