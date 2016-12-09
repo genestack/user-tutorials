@@ -73,7 +73,7 @@ Rich metadata system
 Genestack is a data-centred platform. We believe your data should be
 harmonized, searchable and well-managed, so that you can use it over and
 over again. This is why we have invested so much of our time into our
-data and metadata management system. When using the platform you’ll
+data and metadata management system. When using the platform you will
 notice excel-like import templates that allow users to specify required
 metainfo fields; a context-sensitive metadata editor with ontology
 autosuggest support; rapid access to private, shared and public
@@ -101,7 +101,7 @@ Genestack deals with any formatting-issues allowing users to spend more
 time on actual data analysis. After you are done with your analysis you
 can export the data in the format of your choice.
 
-***NOTE: Formatting Hell***
+**NOTE: Formatting Hell**
 
 You might be wondering why we made our platform format-free and why this
 is such a big deal. In the current landscape of bioinformatics there
@@ -139,7 +139,7 @@ Sequencing Assay” (those names may sound funny, but are helpful when
 tracking what apps you used already. Remember you can change the file
 names!).
 
-***NOTE: How can you create a data flow?***
+**NOTE: How can you create a data flow?**
 Forum_ `Tutorial`__
 
 When an application creates a new file, it specifies what should happen
@@ -153,7 +153,7 @@ other files, and later computed all at once. Remember – you always need
 to initialize your files to view your results (same rule goes for data
 flows). Once you do, any further changes become impossible.
 
-***NOTE: How do you initialize your files?***
+**NOTE: How do you initialize your files?**
 Forum1_  Forum2_ `Tutorial`__
 
 Public experiments collection from databases and archives
@@ -167,7 +167,7 @@ a data repository, that allows users to work both on private and public
 data seamlessly.
 
 .. _article: https://www.google.com/url?q=https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf&sa=D&ust=1480960531653000&usg=AFQjCNFUGLBg9Y8pGX_C7QUt__SuRovLEw
-.. _Forum: https://www.google.com/url?q=http://forum.genestack.org/t/creating-new-pipelines-on-genestack/26/2&sa=D&ust=1480960531665000&usg=AFQjCNGsKa_LCh2oqWkcWS-25VW1ky0ZMA
+.. _Forum: http://forum.genestack.org/t/creating-new-pipelines-on-genestack/26
 .. _Forum1: https://www.google.com/url?q=http://forum.genestack.org/t/initializing-only-1-process-from-the-data-flow/27&sa=D&ust=1480960531670000&usg=AFQjCNEnvIRoiBG5yi6JlF1zoono5bWTJQ
 .. _Forum2: https://www.google.com/url?q=http://forum.genestack.org/t/how-to-map-or-pre-process-several-raw-reads-files-at-once/28&sa=D&ust=1480960531671000&usg=AFQjCNGe-i-PAff70bMqjC0uZk0-Wiy2xw
 __ https://genestack.com/blog/2016/06/21/building-pipelines-reproducibility/#buildingapipeline
