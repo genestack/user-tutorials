@@ -168,7 +168,7 @@ data seamlessly.
 
 .. _article: https://www.google.com/url?q=https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf&sa=D&ust=1480960531653000&usg=AFQjCNFUGLBg9Y8pGX_C7QUt__SuRovLEw
 .. _Forum: http://forum.genestack.org/t/creating-new-pipelines-on-genestack/26
-.. _Forum1: https://www.google.com/url?q=http://forum.genestack.org/t/initializing-only-1-process-from-the-data-flow/27&sa=D&ust=1480960531670000&usg=AFQjCNEnvIRoiBG5yi6JlF1zoono5bWTJQ
-.. _Forum2: https://www.google.com/url?q=http://forum.genestack.org/t/how-to-map-or-pre-process-several-raw-reads-files-at-once/28&sa=D&ust=1480960531671000&usg=AFQjCNGe-i-PAff70bMqjC0uZk0-Wiy2xw
+.. _Forum1: http://forum.genestack.org/t/initializing-only-1-process-from-the-data-flow/27
+.. _Forum2: http://forum.genestack.org/t/how-to-map-or-pre-process-several-raw-reads-files-at-once/28
 __ https://genestack.com/blog/2016/06/21/building-pipelines-reproducibility/#buildingapipeline
 __ https://genestack.com/blog/2016/06/21/building-pipelines-reproducibility/#fileinitialization
