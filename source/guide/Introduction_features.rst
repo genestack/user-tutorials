@@ -23,110 +23,6 @@ options, tech support or running the platform on or off the cloud, to
 name a few things. If you have any further questions, please get in
 touch with our team at contact@genestack.com
 
-This guide will be divided into the following sections:
-
-1. **Introduction to bioinformatics**
-2. **Genestack features**
-– rich metadata system
-– interactive data analysis and visualisations
-– format-free files
-    Note: Formatting hell
-– reproducibility
-– data flows & delayed initialization
-– public data collection
-3. **Genestack Platform**
-– Registering
-– Welcome Page map
-– Data Import
-    Supported data files
-    Importing from spreadsheet
-    Attachments
-- Data Export
-– Browsing data
-    File Manager
-    Experiment Browser
-– Metadata management
-    Metainfo Editor
-    Metainfo Templates
-    Dictionaries
-– Sharing data
-    Organisations, groups, users
-    Sharing and permissions
-– Task Manager
-– Your Profile
-    – Manage applications
-	– Manage groups
-	– Manage users
-4. **Introduction to Next Generation Sequencing Data Analysis**
-5. **Pipelines and applications**
-**Sequencing Data**
-- Raw reads preprocessing and quality control
-    - FastQC report*
-    - Multiple QC report*
-    - Subsample reads
-    - Filter duplicated reads
-    - Filter by Quality Score
-    - Trim adaptors and contaminants
-    - Trim low-quality bases
-    - Trim reads to fixed length
-- Mapped reads preprocessing and QC
-    - Mapped reads QC report*
-    - Targeted sequencing QC report*
-    - Mark duplicated mapped reads
-    - Remove duplicated mapped reads
-    - Subsample mapped reads
-    - Merge mapped reads
-    - Merge Variants
-    - Concatenate Variants
-- RNA-Seq
-    - Spliced mapping with TopHat2
-    - Spliced mapping with STAR
-    - Gene quantification with RSEM
-    - Gene quantification with HTSeq-count
-    - Spliced mapping and quantification with Kallisto
-    - Isoforms quantification with cuffQuant
-    - Test Differential Gene Expression
-    - Expression Navigator for RNA-seq
-    - Expression Navigator for splice isoforms
-    - Single-cell RNA-seq analysis*
-    - Note: Choosing Reference Genome
-- Genome / exome sequencing
-    - Unspliced mapping with BWA
-    – Unspliced mapping with Bowtie2
-    – Variant calling with samtools and bcftools
-    – Variant effect prediction with SnpEff
-    – Variant association analysis
-    – Variant Explorer*
-    – Intersect Genomic Features
-    – DbNSFP Annotation
-- Methylation analysis
-    - Reduced representation bisulfite sequencing mapping with BSMAP
-    - Bisulfite sequencing mapping with BSMAP
-- Microbiome analysis
-    - Microbiome analysis with QIIME*
-- Others
-    - Genome Browser
-**Microarray data**
-    - Expression arrays
-    - Microarray normalisation
-    - Microarray QC*
-    - Expression navigator for expression arrays*
-    - Compound dose response analysis*
-    - Methylation arrays
-    - Methylation array normalisation (coming soon)
-    - Methylation array QC (coming soon)*
-    - Expression navigator for methylation arrays (coming soon)*
-* = the app has interactive analytics/visualizations
-6. **Running and reproducing data flows**
-    – Data Flow Editor and Runner
-    – File Provenance
-7. **Getting help**
-    – Tutorials
-    – Getting in touch [chat, forum, blog, newsletters]
-8. **Genestack License**
-9. **FAQ**
-
-
 Introduction to Bioinformatics
 ==============================
 
@@ -177,7 +73,7 @@ Rich metadata system
 Genestack is a data-centred platform. We believe your data should be
 harmonized, searchable and well-managed, so that you can use it over and
 over again. This is why we have invested so much of our time into our
-data and metadata management system. When using the platform you’ll
+data and metadata management system. When using the platform you will
 notice excel-like import templates that allow users to specify required
 metainfo fields; a context-sensitive metadata editor with ontology
 autosuggest support; rapid access to private, shared and public
@@ -205,7 +101,7 @@ Genestack deals with any formatting-issues allowing users to spend more
 time on actual data analysis. After you are done with your analysis you
 can export the data in the format of your choice.
 
-***NOTE: Formatting Hell***
+**NOTE: Formatting Hell**
 
 You might be wondering why we made our platform format-free and why this
 is such a big deal. In the current landscape of bioinformatics there
@@ -243,7 +139,7 @@ Sequencing Assay” (those names may sound funny, but are helpful when
 tracking what apps you used already. Remember you can change the file
 names!).
 
-***NOTE: How can you create a data flow?***
+**NOTE: How can you create a data flow?**
 Forum_ `Tutorial`__
 
 When an application creates a new file, it specifies what should happen
@@ -257,7 +153,7 @@ other files, and later computed all at once. Remember – you always need
 to initialize your files to view your results (same rule goes for data
 flows). Once you do, any further changes become impossible.
 
-***NOTE: How do you initialize your files?***
+**NOTE: How do you initialize your files?**
 Forum1_  Forum2_ `Tutorial`__
 
 Public experiments collection from databases and archives
@@ -271,8 +167,8 @@ a data repository, that allows users to work both on private and public
 data seamlessly.
 
 .. _article: https://www.google.com/url?q=https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf&sa=D&ust=1480960531653000&usg=AFQjCNFUGLBg9Y8pGX_C7QUt__SuRovLEw
-.. _Forum: https://www.google.com/url?q=http://forum.genestack.org/t/creating-new-pipelines-on-genestack/26/2&sa=D&ust=1480960531665000&usg=AFQjCNGsKa_LCh2oqWkcWS-25VW1ky0ZMA
-.. _Forum1: https://www.google.com/url?q=http://forum.genestack.org/t/initializing-only-1-process-from-the-data-flow/27&sa=D&ust=1480960531670000&usg=AFQjCNEnvIRoiBG5yi6JlF1zoono5bWTJQ
-.. _Forum2: https://www.google.com/url?q=http://forum.genestack.org/t/how-to-map-or-pre-process-several-raw-reads-files-at-once/28&sa=D&ust=1480960531671000&usg=AFQjCNGe-i-PAff70bMqjC0uZk0-Wiy2xw
+.. _Forum: http://forum.genestack.org/t/creating-new-pipelines-on-genestack/26
+.. _Forum1: http://forum.genestack.org/t/initializing-only-1-process-from-the-data-flow/27
+.. _Forum2: http://forum.genestack.org/t/how-to-map-or-pre-process-several-raw-reads-files-at-once/28
 __ https://genestack.com/blog/2016/06/21/building-pipelines-reproducibility/#buildingapipeline
 __ https://genestack.com/blog/2016/06/21/building-pipelines-reproducibility/#fileinitialization
