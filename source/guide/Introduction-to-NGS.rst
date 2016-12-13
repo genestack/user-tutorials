@@ -50,5 +50,5 @@ to use Variant Explorer which can be used to sieve through thousands of variants
 to focus on their most important findings.
 
 
-.. _`Bao et al., 2010`: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960531812000&usg=AFQjCNEanbRs0Pes_OFgveaUiLQ59pPQfQ
-.. _`The 1000 Genomes Project Consortium, 2010`: http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html&sa=D&ust=1480960531815000&usg=AFQjCNFuLcgFRjG08dkh7vuZnnQPJPmbsQ
+.. _`Bao et al., 2010`: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/
+.. _`The 1000 Genomes Project Consortium, 2010`: http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html
