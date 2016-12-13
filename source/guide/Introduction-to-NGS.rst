@@ -18,7 +18,6 @@ from your data. Or if your data shows high sequence duplication levels, you may 
 duplicated reads. Quality control and preprocessing are essential steps, because if you don’t
 make sure your data is of good quality to begin with, you cannot fully rely on analysis  results.
 
-
 After you’ve checked the quality of your data and if necessary, preprocessed it, the next step
 is mapping, also called aligning, of your reads to a reference genome or reference transcriptome.
 It allows to determine the nucleotide sequence of data being studied with no need of de novo
@@ -56,11 +55,11 @@ analysis, and result visualisation.
 On Genestack we have divided the available applications into four categories based on what they do:
 Preprocess, Analyse, Explore, and Manage. Apps in the preprocess section are used to prepare raw or
 mapped data for future computations (by improving their quality) or to uncover any poor quality data
- or contaminants. Apps in the Analyse section are computational apps used to perform actual data
- analysis. Apps in the Explore section are interactive, visual applications allowing you to view
- the results of your analyses, identify the most interesting findings and interpret your results.
- The manage section apps allow you to keep track of data, create a template for your pipeline and
- explore and edit the metadata of your files.
+or contaminants. Apps in the Analyse section are computational apps used to perform actual data
+analysis. Apps in the Explore section are interactive, visual applications allowing you to view
+the results of your analyses, identify the most interesting findings and interpret your results.
+The manage section apps allow you to keep track of data, create a template for your pipeline and
+explore and edit the metadata of your files.
 
 
 .. _`Bao et al., 2010`: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960531812000&usg=AFQjCNEanbRs0Pes_OFgveaUiLQ59pPQfQ
