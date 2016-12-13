@@ -49,18 +49,6 @@ better understand your data considering their nature. For example for WES or WGS
 to use Variant Explorer which can be used to sieve through thousands of variants and  allow users
 to focus on their most important findings.
 
-In summary, the basic steps of bioinformatics analysis are: data preparation, mapping, difference
-analysis, and result visualisation.
-
-On Genestack we have divided the available applications into four categories based on what they do:
-Preprocess, Analyse, Explore, and Manage. Apps in the preprocess section are used to prepare raw or
-mapped data for future computations (by improving their quality) or to uncover any poor quality data
-or contaminants. Apps in the Analyse section are computational apps used to perform actual data
-analysis. Apps in the Explore section are interactive, visual applications allowing you to view
-the results of your analyses, identify the most interesting findings and interpret your results.
-The manage section apps allow you to keep track of data, create a template for your pipeline and
-explore and edit the metadata of your files.
-
 
 .. _`Bao et al., 2010`: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624/&sa=D&ust=1480960531812000&usg=AFQjCNEanbRs0Pes_OFgveaUiLQ59pPQfQ
 .. _`The 1000 Genomes Project Consortium, 2010`: http://www.nature.com/nature/journal/v467/n7319/full/nature09534.html&sa=D&ust=1480960531815000&usg=AFQjCNFuLcgFRjG08dkh7vuZnnQPJPmbsQ
