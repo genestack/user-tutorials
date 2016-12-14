@@ -1,164 +1,264 @@
 Genestack Platform
 ==================
 
-Registering 
+Registering
 -----------
 
 If you don’t have an account already, please register first:
 
-Go to platform.genestack.org, click on “Sign Up”, fill in the form and
+Go to `platform.genestack.org`_, click on “Sign Up”, fill in the form and
 wait for a confirmation email.
 
-If you’re just taking Genestack out for a spin, you can also use our
-platform as a guest (by clicking on “continue as guest” button).
-Remember, as a guest you can only create up to 200 files and your
-results will disappear after 24h of inactivity.
+If you’re just taking Genestack out for a spin, you can also use our platform
+as a guest (by clicking on “continue as guest” button). Remember, as a guest
+you can only create up to 200 files and your results will disappear after 24h
+of inactivity.
 
 Welcome Page Map
 ----------------
 
-After you login, you’ll see your Welcome Page. Let’s cover the basics.
+After you login, you’ll see your **Welcome Page**. Let’s cover the basics.
 
-[welcome page]
+|welcome_page|
 
-|image0|
+The very top of the page is static and you can always refer to it. Clicking
+on the Genestack logo in the top left corner of any platform page will take
+you back to the Welcome Page. This option is customizable: you can instead
+have it link to the File manager.
 
-The very top of the page is static and you can always refer to it.
-Clicking on the Genestack logo in the top left corner of any platform
-page will take you back to the Welcome Page. This option is
-customizable: you can instead have it link to the File manager.
+Clicking on your username (your email address) in the top right corner of the
+page will give you access to your profile, allow you to manage your
+applications, groups, and users or logout of the platform.
 
-Clicking on your username (your email address) in the top right corner
-of the page will give you access to your profile, allow you to manage
-your applications, groups, and users or logout of the platform.
+You can watch a video on managing users on Genestack here:
 
-You can watch a video on managing users on Genestack here: https://genestack.com/tutorial/getting-started-with-genestack-platform/#createaccount
+.. youtube:: https://www.youtube.com/watch?v=asMhUjD_i68
 
-Tasks links to the Task Manager, which will be described later in the
-guide (+ link to the guide part about it). 
 
-In the bottom right corner of the page you can see the chat window.
-Please message us whenever you have any questions or want to make any
-suggestions.
+**Tasks** links to the **Task Manager**, which will be described later in the
+guide. 
 
-Wherever you are on the platform, you can also access a shortcuts
-menu. It’s an easy way to reach most commonly used apps and folders.
-Genestack Import, Manage apps, Manage groups, Experiment Browser as well
-as the folders for Created and Imported files can all be found here. To
-access the shortcuts menu simply move your mouse cursor to the left hand
-side of any page.
+In the bottom right corner of the page you can see the **chat window**. Please
+message us whenever you have any questions or want to make any suggestions.
 
- 
+Wherever you are on the platform, you can also access a **shortcuts menu**.
+It’s an easy way to reach most commonly used apps and folders. Genestack
+Import, Manage apps, Manage groups, Experiment Browser as well as the folders
+for Created and Imported files can all be found here. To access the shortcuts
+menu simply move your mouse cursor to the left hand side of any page.
 
-[screenshot “Shortcuts menu’]|image1|
+|shortcuts_menu|
 
-Let’s go back to the Welcome Page. Here you can find the following
-sections:
-1) Run Data Flow includes a collection of most commonly used data
-flows we have prepared for our users
+Let’s go back to the Welcome Page. Here you can find the following sections:
 
-2) Recent Results shows you the files you have recently created
-(including their initialization or completion status)  
+1. **Run Data Flow** includes a collection of **most commonly used data
+   flows** we have prepared for our users.
+2. **Recent Results** shows you the files you have recently created
+   (including their initialization or completion status).
+3. **Browse data** section allows you to browse through public, private and
+   shared data with **Experiment Browser** which allows you to search through
+   the wealth of your data using complex queries.
+   In the Browse Data section, you’ll also find a link to the File Manager
+   (home), as well as often used folders: Uploaded files, Imported files,
+   Created files and Exports.
+4. **Import data** section allows you to import your data using either a
+   customized or a default template.
+5. **Tutorials** explain the most common analysis types in greater detail.
 
-3) Browse data section allows you to browse through public, private and
-shared data with Experiment Browser which allows you to search through
-the wealth of your data using complex queries.
+Your Profile
+------------
 
-In the Browse Data section, you’ll also find a link to the File Manager
-(home), as well as often used folders: Created files and Imported files.
 
-4)Import data section allows you to import your data using either a
-customized or a default template. Find more info on importing data here
-(link on the talk).
 
-4) Tutorials explain the most common analysis types in greater detail.
 
-Importing Data 
+Importing Data
 --------------
 
-As we mentioned in the Platform Map section, there are two
-ways: you can access the Import app:  using the “Import” button in the File
-Manager or “Import data” on the Welcome Page.
+Supported file types
+********************
 
-You can import data directly or using an import template. When
-importing, choose the files from your computer, import from URL, or use
-previous uploads.
+Genestack allows its users to upload various files to the cloud and keep them
+organized transforming them into the following data types:
 
- 
+- **Microarray Assay** - Raw microarray data obtained from a microarray 
+  experiment (you can import Affymetrix, Agilent or GenePix microarrays);
+- **Sequencing Assay** - Raw sequencing data associated with a specific NGS
+  experiment;
+- **Microarray Annotation** - Annotation file containing information about
+  association of microarray probes to biological entities like genes,
+  transcripts and proteins;
+- **Continuous Genomic Data** - Contains information on continuous genome
+  statistics, e.g. GC% content;
+- **Discrete Genomic Data** - Information on discrete regions of the genome
+  with an exact start and end position;
+- **Mapped Reads** - Reads aligned to a specific reference genome;
+- **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
+- **Reference Genome** - Reference genome sequence for a specific organism
+  with annotation;
+- **Variation Files** - Genetic Variations files, storing gene sequence
+  variations.
 
-You can select which import template to use in two ways: from the
-welcome page, or during the 3d stage of the import process by
-right-clicking on the import template name. You can add new import
-templates using the Import Template Editor app, which can be found by
-clicking “Add import template” from the WP or from the manage submenu
-when you right click on an import template.
+When you upload microarrays or sequencing assays onto the platform, they will
+be automatically imported as an experiment.
 
-<import templates>
+- **Experiment** - An experiment is a special type of folder that can only
+  contain assays. When you import files that are detected as raw sequencing or
+  microarray assays, Genestack creates an experiment and adds the assays to it.
+  Additional information on the experiment can be added as attachments in any
+  file format.
 
-|image2|
+**NOTE: What's the difference between experiments and folders?**
+Forum3_
 
-What is an import template?
+Moreover, when you perform any analysis on Genestack, you can create other data
+types, which are not yet supported in import. Here is the list of them:
+
+- **Auxiliary File** - Contains index for the Reference Genome;
+- **Affymetrix/Agilent/GenePix Microarrays Normalisation** - File with
+  normalized Affymetrix/Agilent/GenePix microarrays inside;
+- **Chimerism analysis file** - contains interpretive report with determined
+  percentage of donor and recipient cells within the patient's blood;
+- **Differential Expression Statistics** - RNA expression statistics for
+  individual genes contained in a sequence such as Fold Changes, p values,
+  FDR, etc;
+- **Dose Response Analyser File** - Interactive report describing the change
+  in effect on an organism caused by differing dose levels;
+- **FastQC Report** - Report file containing calculated quality control
+  metrics for sequencing data;
+- **FPKM Counts** - A file containing isoform expression levels calculated for
+  each gene in sample;
+- **Genome Annotations** - A technical file used for matching GO terms and
+  gene symbols to gene coordinates;
+- **Mapped Read Counts** - The number of mappings to each bit of reference
+  sequence. Produced from Mapped Reads files;
+- **Mapped Reads QC Report** - The output report file with calculated quality
+  metrics for mapped reads;
+- **Microarray QC File** - The file reporting quality metrics for microarrays
+  and detected apparent outlier arrays;
+- **Microbiome Analysis File** - Reports the abundance of microbial species
+  presented in a sample;
+- **Raw Reads** - Raw sequencing data that does not need to be associated with
+  an experiment (as opposed to a sequencing assay);
+- **Single-cell RNA-seq Analysis File** - Contains identified
+  heterogeneously-expressed genes across cells;
+- **Targeted Sequencing QC Report** - Displays enrichment statistics
+  calculated based on the exome of the specified reference genome, on the
+  specific target annotation file from the capture strategy, or on both - on
+  exome and target file.
+
+Biodata Import
+**************
+
+There are several ways you can access the **Import** application:
+
+- clicking the “Import” button in the File Manager
+
+|FM_import|
+
+- using “Import data” link on the Welcome Page
+
+|WP_import|
+
+- clicking “Upload“ button when you choose sources in the dataflow you'd like
+  to run
+
+|DF_import|
+
+- using an import template. We’ll describe what import template is and how to
+  use it later in the guide
+
+|IT_import|
+
+When importing, there are 2 ways to upload data into the platform:
+
+- **Use data from your computer** - select or drag-and-drop files.
+
+|import_start|
+
+- **Upload from URLs (FTP or HTTP/HTTPS)** - specify URLs for separate files or
+  directories.
+
+|URL_import|
+
+
+
+You can select which import template to use in two ways: from the welcome
+page, or during the 3rd stage of the import process by right-clicking on the
+import template name. You can add new import templates using the **Import
+Template Editor** app, which can be found by clicking “Add import template”
+from the Welcome Page or from the manage submenu when you right click on an
+import template.
+
+|import_templates|
+
+**NOTE: What is an import template?**
 
 Import templates allow you to select what metainfo attributes of your
-imported files will be tightly controlled (so you don’t lose any
-information in the process). Import templates allow you to set default
-fields for file metadata based on file type (e.g. Experiments, Discrete
-Genomic Data, Genetic Variations, etc.). Of course if you’re only
-importing mapped reads, you don’t need to specify metainfo attributes
-for other data types.
+imported files will be tightly controlled (so you don’t lose any information
+in the process). Import templates allow you to set default fields for file
+metadata based on file type (e.g. Experiments, Discrete Genomic Data, Genetic
+Variations, etc.). Of course if you’re only importing mapped reads, you don’t
+need to specify metainfo attributes for other data types.
 
-Genestack will attempt to fill these fields automatically, but you can
-always edit the contents manually during the import process.
+Genestack will attempt to fill these fields automatically, but you can always
+edit the contents manually during the import process.
 
-By using metainfo templates you can make sure that all of your files
-will be adequately and consistently described so you will not lose any
-valuable information.
+By using metainfo templates you can make sure that all of your files will be
+adequately and consistently described so you will not lose any valuable
+information.
 
-<default import template>|image3|
+|default_import_template|
 
-Example
+*Example:*
 
-For instance, let’s say you wish to create an import template where you
-want to control the metainfo attributes of sequencing assays (e.g. you
-always need to know the tissue and sex of your samples). In order to do
-this, click on “Add import template”, then look for the table related to
-Sequencing Assays and for the fields “tissue” and “sex”, change the
-“required” fields to ‘Yes’. As you can see, the system controls what
-type of information can you put into your metainfo fields. In this case,
-for tissue the system will map your entries to the Uberon Anatomical
-Entities dictionary and the metainfo type must be text. You can edit
-existing templates by right-clicking on a template and selecting the
-‘Import Template Editor’ app from the ‘Manage’ sub-menu.
+For instance, let’s say you wish to create an import template where you want
+to control the metainfo attributes of sequencing assays (e.g. you always need
+to know the tissue and sex of your samples). In order to do this, click on
+“Add import template”, then look for the table related to Sequencing Assays
+and for the fields “tissue” and “sex”, change the required fields to ‘Yes’.
+As you can see, the system controls what type of information can you put into
+your metainfo fields. In this case, for tissue the system will map your
+entries to the Uberon Anatomical Entities dictionary and the metainfo type
+must be text. You can edit existing templates by right-clicking on a template
+and selecting the **Import Template Editor** app from the 'Manage' sub-menu.
 
-If you wanted to add other metainfo fields that are not included in the
-table already, you can do this at the bottom of the table where there
-are blank spaces. For each entry, you must specify whether or not this
-field is required, what is it’s metainfo type (e.g. text, yes/no,
-integer) and whether or not you wish to map it to a specific dictionary
-(private or public). 
+If you wanted to add other metainfo fields that are not included in the table
+already, you can do this at the bottom of the table where there are blank
+spaces. For each entry, you must specify whether or not this field is
+required and what is it’s metainfo type (e.g. text, yes/no, integer).
 
-<metainfo type editor>|image4|
+|metainfo_type_editor|
 
-If you are using a file kind that is not yet listed, you can add a new
-one by clicking on the “Add File Kind” button at the bottom of the page
-and specifying the required metainfo attributes. Keep in mind that file
-kinds are defined in Genestack - you won’t be able to create a template
-entry for a file kind that is not used on the platform.
+Also, you should specify whether↵or not you wish to map the metainfo field to
+a specific dictionary. You can import your own private dictionary as OWL, OBO
+or CSV file or use the pre-loaded public ones, for example:
 
-When you’re done, click on the blue “Import data using this template”
-button. This will take you to the file import page. You can drag and
-drop or select files from your computer, import data from URL or use
-previous uploads.
+- The non-hierarchical controlled vocabularies (to cover e.g. Sex, Method,
+  Platform fields), which are simply lists of terms;
+- The `NCBI Taxonomy`_ is a standard hierarchical nomenclature and
+  classification scheme for Organisms;
+- The `Cellosaurus vocabulary`_ used for Cell Line field annotation - is an
+  example of controlled vocabulary which describes all cell lines used in
+  biomedical research;
+- A bunch of ontologies - `ChEBI Ontology`_, `Cell Ontology`_ (to annotate
+  Compound and Cell type fields, respectively), `Uberon Ontology`_ (covering
+  anatomical structures in animals) and other ontologies.
 
-<screenshot>|image5|
+If you are using a file kind that is not yet listed, you can add a new one by
+clicking on the “Add File Kind” button at the bottom of the page and
+specifying the required metainfo attributes. Keep in mind that file kinds are
+defined in Genestack - you won’t be able to create a template entry for a
+file kind that is not used on the platform.
+
+When you’re done, click on the blue “Import data using this template” button.
+This will take you to the file import page. You can drag and drop or select
+files from your computer, import data from URL or use previous uploads.
 
 After your data is uploaded, the platform automatically recognizes file
-formats and transforms them into biological data types e.g. raw reads,
-mapped reads, reference genomes and so on. If files are unrecognized,
-you can manually allocate them to a specific data type using the drag &
-drop menu located at the top of the page.
-
- 
+formats and transforms them into biological data types e.g. raw reads, mapped
+reads, reference genomes and so on. If files are unrecognized, you can
+manually allocate them to a specific data type using the drag & drop menu
+located at the top of the page.
 
 [Import page].|image6|
 
@@ -190,47 +290,6 @@ can be accessed from the Welcome Page and from the File Manager.
 
 Importing from spreadsheet 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Supported file types
-~~~~~~~~~~~~~~~~~~~~
-
-File Types on Genestack
-
-Experiment - An experiment is a special type of folder that can only
-contain assays. When you import files that are detected as raw
-sequencing or microarray assays, Genestack creates an experiment and
-adds the assays to it. Additional information on the experiment can be
-added as attachments in any file format.
-
-Sequencing / Microarray Assay - Raw sequencing / Microarray data
-associated with a specific Experiment.
-
-Differential Expression Statistics - RNA expression statistics for
-individual genes contained in a sequence such as Fold Changes, p values,
-FDR, etc.
-
-Genetic Variations - Sequence variants, that can be viewed with the
-Variant Explorer app.  
-
-Genome Annotations - A technical file used for matching GO terms and
-gene symbols to gene coordinates.
-
-Discrete Genomic Data - Information on discrete regions of the genome
-with an exact start and end position.
-
-Continuous Genomic Data - Contains information on continuous genome
-statistics, e.g. GC% content.  
-
-Mapped Read Counts - The number of mappings to each bit of reference
-sequence. Produced from Mapped Reads files.
-
-Mapped Reads - Reads aligned to a specific reference genome.
-
-Raw Reads - Raw sequencing data that does not need to be associated with
-an experiment (as opposed to a sequencing assay).
-
-Reference Genomes - Reference genomic sequence for a specific organism
-with annotation.
 
 Attachments 
 ~~~~~~~~~~~
@@ -709,12 +768,24 @@ users.
 Log out
 
 Use this button to log out of Genestack.
-
-
+.. |metainfo_type_editor| image:: images/metainfo_type_editor.png
+.. |default_import_template| image:: images/default_import_template.png
+.. |welcome_page| image:: images/welcome_page.png
+.. |shortcuts_menu| image:: images/shortcuts_menu.png
+.. |import_templates| image:: images/import_templates.png
+.. |import_start| image:: images/import_start.png
+.. |FM_import| image:: images/FM_import.png
+.. |WP_import| image:: images/WP_import.png
+.. |DF_import| image:: images/DF_import.png
+.. |IT_import| image:: images/IT_import.png
+.. |URL_import| image:: images/URL_import.png
+.. _platform.genestack.org: https://platform.genestack.org/endpoint/application/run/genestack/signin
 .. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
 .. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
 .. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
+.. _Uberon Ontology: http://uberon.github.io/about.html
+.. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
 .. _Getting Started With Genestack Platform: https://genestack.com/tutorial/getting-started-with-genestack-platform/
 .. _Testing Differential Gene Expression: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
