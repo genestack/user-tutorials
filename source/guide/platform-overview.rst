@@ -61,7 +61,7 @@ Let’s go back to the Welcome Page. Here you can find the following sections:
    customized or a default template.
 5. **Tutorials** explain the most common analysis types in greater detail.
 
-Your Prifile
+Your Profile
 ------------
 
 
@@ -80,7 +80,7 @@ organized transforming them into the following data types:
   experiment (you can import Affymetrix, Agilent or GenePix microarrays);
 - **Sequencing Assay** - Raw sequencing data associated with a specific NGS
   experiment;
-- **Micriarray Annotation** - Annotation file containing information about
+- **Microarray Annotation** - Annotation file containing information about
   association of microarray probes to biological entities like genes,
   transcripts and proteins;
 - **Continuous Genomic Data** - Contains information on continuous genome
@@ -89,7 +89,7 @@ organized transforming them into the following data types:
   with an exact start and end position;
 - **Mapped Reads** - Reads aligned to a specific reference genome;
 - **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
-- **Reference Genome** - Reference genomic sequence for a specific organism
+- **Reference Genome** - Reference genome sequence for a specific organism
   with annotation;
 - **Variation Files** - Genetic Variations files, storing gene sequence
   variations.
