@@ -150,6 +150,7 @@ Biodata Import
 **************
 
 There are several ways you can access the **Import** application:
+
 - clicking the “Import” button in the File Manager
 
 |FM_import|
