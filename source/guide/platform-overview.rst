@@ -30,7 +30,10 @@ Clicking on your username (your email address) in the top right corner of the
 page will give you access to your profile, allow you to manage your
 applications, groups, and users or logout of the platform.
 
-You can watch a video on managing users on Genestack here_.
+You can watch a video on managing users on Genestack here:
+
+.. youtube:: https://www.youtube.com/watch?v=asMhUjD_i68
+
 
 **Tasks** links to the **Task Manager**, which will be described later in the
 guide. 
@@ -47,7 +50,8 @@ menu simply move your mouse cursor to the left hand side of any page.
 |shortcuts_menu|
 
 Let’s go back to the Welcome Page. Here you can find the following sections:
-1. **Run Data Flow** includes a collection of **most commonly used data
+
+1. **Run Data Flow** includes a collection of **most commonly used data
    flows** we have prepared for our users.
 2. **Recent Results** shows you the files you have recently created
    (including their initialization or completion status).
@@ -165,6 +169,7 @@ There are several ways you can access the **Import** application:
 |IT_import|
 
 When importing, there are 2 ways to upload data into the platform:
+
 - **Use data from your computer** - select or drag-and-drop files.
 
 |import_start|
@@ -773,7 +778,6 @@ Use this button to log out of Genestack.
 .. |DF_import| image:: images/DF_import.png
 .. |IT_import| image:: images/IT_import.png
 .. |URL_import| image:: images/URL_import.png
-.. _here: https://genestack.com/tutorial/getting-started-with-genestack-platform/#createaccount
 .. _platform.genestack.org: https://platform.genestack.org/endpoint/application/run/genestack/signin
 .. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
 .. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
