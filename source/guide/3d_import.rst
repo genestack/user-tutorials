@@ -1,0 +1,260 @@
+Importing Data
+--------------
+
+Supported file types
+********************
+
+Genestack allows its users to upload various files to the cloud and keep them
+organized transforming them into the following data types:
+
+- **Microarray Assay** - Raw microarray data obtained from a microarray
+  experiment (you can import Affymetrix, Agilent or GenePix microarrays);
+- **Sequencing Assay** - Raw sequencing data associated with a specific NGS
+  experiment;
+- **Microarray Annotation** - Annotation file containing information about
+  association of microarray probes to biological entities like genes,
+  transcripts and proteins;
+- **Continuous Genomic Data** - Contains information on continuous genome
+  statistics, e.g. GC% content;
+- **Discrete Genomic Data** - Information on discrete regions of the genome
+  with an exact start and end position;
+- **Mapped Reads** - Reads aligned to a specific reference genome;
+- **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
+- **Reference Genome** - Reference genome sequence for a specific organism
+  with annotation;
+- **Variation Files** - Genetic Variations files, storing gene sequence
+  variations.
+
+When you upload microarrays or sequencing assays onto the platform, they will
+be automatically imported as an experiment.
+
+- **Experiment** - An experiment is a special type of folder that can only
+  contain assays. When you import files that are detected as raw sequencing or
+  microarray assays, Genestack creates an experiment and adds the assays to it.
+  Additional information on the experiment can be added as attachments in any
+  file format.
+
+**NOTE: What's the difference between experiments and folders?**
+Forum3_
+
+Moreover, when you perform any analysis on Genestack, you can create other data
+types, which are not yet supported in import. Here is the list of them:
+
+- **Auxiliary File** - Contains index for the Reference Genome;
+- **Affymetrix/Agilent/GenePix Microarrays Normalisation** - File with
+  normalized Affymetrix/Agilent/GenePix microarrays inside;
+- **Chimerism analysis file** - contains interpretive report with determined
+  percentage of donor and recipient cells within the patient's blood;
+- **Differential Expression Statistics** - RNA expression statistics for
+  individual genes contained in a sequence such as Fold Changes, p values,
+  FDR, etc;
+- **Dose Response Analyser File** - Interactive report describing the change
+  in effect on an organism caused by differing dose levels;
+- **FastQC Report** - Report file containing calculated quality control
+  metrics for sequencing data;
+- **FPKM Counts** - A file containing isoform expression levels calculated for
+  each gene in sample;
+- **Genome Annotations** - A technical file used for matching GO terms and
+  gene symbols to gene coordinates;
+- **Mapped Read Counts** - The number of mappings to each bit of reference
+  sequence. Produced from Mapped Reads files;
+- **Mapped Reads QC Report** - The output report file with calculated quality
+  metrics for mapped reads;
+- **Microarray QC File** - The file reporting quality metrics for microarrays
+  and detected apparent outlier arrays;
+- **Microbiome Analysis File** - Reports the abundance of microbial species
+  presented in a sample;
+- **Raw Reads** - Raw sequencing data that does not need to be associated with
+  an experiment (as opposed to a sequencing assay);
+- **Single-cell RNA-seq Analysis File** - Contains identified
+  heterogeneously-expressed genes across cells;
+- **Targeted Sequencing QC Report** - Displays enrichment statistics
+  calculated based on the exome of the specified reference genome, on the
+  specific target annotation file from the capture strategy, or on both - on
+  exome and target file.
+
+Biodata Import
+**************
+
+There are several ways you can access the **Import** application:
+
+- clicking the “Import” button in the File Manager
+
+|FM_import|
+
+- using “Import data” link on the Welcome Page
+
+|WP_import|
+
+- clicking “Upload“ button when you choose sources in the dataflow you'd like
+  to run
+
+|DF_import|
+
+- using an import template. We’ll describe what import template is and how to
+  use it later in the guide
+
+|IT_import|
+
+When importing, there are 2 ways to upload data into the platform:
+
+- **Use data from your computer** - select or drag-and-drop files.
+
+|import_start|
+
+- **Upload from URLs (FTP or HTTP/HTTPS)** - specify URLs for separate files or
+  directories.
+
+|URL_import|
+
+
+You can select which import template to use in two ways: from the welcome
+page, or during the 3rd stage of the import process by right-clicking on the
+import template name. You can add new import templates using the **Import
+Template Editor** app, which can be found by clicking “Add import template”
+from the Welcome Page or from the manage submenu when you right click on an
+import template.
+
+|import_templates|
+
+**NOTE: What is an import template?**
+
+Import templates allow you to select what metainfo attributes of your
+imported files will be tightly controlled (so you don’t lose any information
+in the process). Import templates allow you to set default fields for file
+metadata based on file type (e.g. Experiments, Discrete Genomic Data, Genetic
+Variations, etc.). Of course if you’re only importing mapped reads, you don’t
+need to specify metainfo attributes for other data types.
+
+Genestack will attempt to fill these fields automatically, but you can always
+edit the contents manually during the import process.
+
+By using metainfo templates you can make sure that all of your files will be
+adequately and consistently described so you will not lose any valuable
+information.
+
+|default_import_template|
+
+*Example:*
+
+For instance, let’s say you wish to create an import template where you want
+to control the metainfo attributes of sequencing assays (e.g. you always need
+to know the tissue and sex of your samples). In order to do this, click on
+“Add import template”, then look for the table related to Sequencing Assays
+and for the fields “tissue” and “sex”, change the required fields to ‘Yes’.
+As you can see, the system controls what type of information can you put into
+your metainfo fields. In this case, for tissue the system will map your
+entries to the Uberon Anatomical Entities dictionary and the metainfo type
+must be text. You can edit existing templates by right-clicking on a template
+and selecting the **Import Template Editor** app from the 'Manage' sub-menu.
+
+If you wanted to add other metainfo fields that are not included in the table
+already, you can do this at the bottom of the table where there are blank
+spaces. For each entry, you must specify whether or not this field is
+required and what is it’s metainfo type (e.g. text, yes/no, integer).
+
+|metainfo_type_editor|
+
+Also, you should specify whether↵or not you wish to map the metainfo field to
+a specific dictionary. You can import your own private dictionary as OWL, OBO
+or CSV file or use the pre-loaded public ones, for example:
+
+- The non-hierarchical controlled vocabularies (to cover e.g. Sex, Method,
+  Platform fields), which are simply lists of terms;
+- The `NCBI Taxonomy`_ is a standard hierarchical nomenclature and
+  classification scheme for Organisms;
+- The `Cellosaurus vocabulary`_ used for Cell Line field annotation - is an
+  example of controlled vocabulary which describes all cell lines used in
+  biomedical research;
+- A bunch of ontologies - `ChEBI Ontology`_, `Cell Ontology`_ (to annotate
+  Compound and Cell type fields, respectively), `Uberon Ontology`_ (covering
+  anatomical structures in animals) and other ontologies.
+
+If you are using a file kind that is not yet listed, you can add a new one by
+clicking on the “Add File Kind” button at the bottom of the page and
+specifying the required metainfo attributes. Keep in mind that file kinds are
+defined in Genestack - you won’t be able to create a template entry for a
+file kind that is not used on the platform.
+
+When you’re done, click on the blue “Import data using this template” button.
+This will take you to the file import page. You can drag and drop or select
+files from your computer, import data from URL or use previous uploads.
+
+After your data is uploaded, the platform automatically recognizes file
+formats and transforms them into biological data types e.g. raw reads, mapped
+reads, reference genomes and so on. If files are unrecognized, you can
+manually allocate them to a specific data type using the drag & drop menu
+located at the top of the page.
+
+[Import page].|image6|
+
+Once you are done, click on the “Edit metainfo” button at the top of the
+page. You will be taken to an Excel-like spreadsheet where you can edit
+the file metainfo and add new attributes. Importantly, during this step
+the import has already completed - you will notice a message at the top
+of the page listing the name of the folder where the imported files are
+located (names “Imported on <date> <time>) and suggesting to share the
+data. If you want to change the import template at this time, click on
+the name of the current template to the left of “Add attribute” and
+select “Change template”. You will then be able to select the desired
+template from the pop-up file browser window. You can also choose to
+apply a naming scheme. This will allow you to order attributes in a
+drag-and-drop-interface  to create a naming format of your choice. The
+file name will be updated dynamically if any of the metadata fields used
+in the scheme are modified.
+
+ 
+
+[edit import metadata]\ |image7|
+
+Once you have completed the metainfo editing step, you may see a “Use
+files in data flow” button at the bottom of the page by “Import files”.
+This depends on the file type you have imported. Alternatively, click on
+the Genestack logo in upper left corner to go back to the Welcome
+Page. Later you can find your files in the “Imported files” folder which
+can be accessed from the Welcome Page and from the File Manager.
+
+Importing from spreadsheet
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Attachments
+~~~~~~~~~~~
+
+When you import an experiment into Genestack , you can choose to attach
+various files to it. For example you could include a PDF file with the
+experiment plant, an R script that you used to process your data, etc.
+When you open your newly-imported experiment, all of the attachments
+will accompany it. They will be safely stored on Genestack, so later you
+can download them from the platform, in case they get lost on your
+computer.
+
+How to upload an attachment?
+
+The attachment are uploaded together with the experiment data. In the
+“Upload” section of the Import app, choose the attachments from your
+computer along with your experiment data. In the “Import” section, the
+platform will recognize the raw data and the fact that you have uploaded
+unrecognisable files. All the unrecognised uploads will be stored as
+attachments to your experiment. You can also add and remove attachments
+later from inside the file browser. When you open an experiment there is
+an attachments button by the experiment name.
+
+<file import attachments> |image8|
+
+.. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
+.. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
+.. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
+.. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
+.. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
+.. _Uberon Ontology: http://uberon.github.io/about.html
+
+..|default_import_template| image:: images/default_import_template.png
+
+..|import_templates| image:: images/import_templates.png
+..|import_start| image:: images/import_start.png
+..|FM_import| image:: images/FM_import.png
+..|WP_import| image:: images/WP_import.png
+..|DF_import| image:: images/DF_import.png
+..|IT_import| image:: images/IT_import.png
+..|URL_import| image:: images/URL_import.png
+.. |metainfo_type_editor| image:: images/metainfo_type_editor.png
