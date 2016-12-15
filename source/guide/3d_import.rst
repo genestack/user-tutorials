@@ -71,7 +71,7 @@ types, which are not yet supported in import. Here is the list of them:
 - **Targeted Sequencing QC Report** - Displays enrichment statistics
   calculated based on the exome of the specified reference genome, on the
   specific target annotation file from the capture strategy, or on both - on
-  exome and target file.
+  exome and target files.
 
 Biodata Import
 **************
@@ -106,6 +106,10 @@ When importing, there are 2 ways to upload data into the platform:
   directories.
 
 |URL_import|
+
+**Use previous uploads** option allows you to avoid uploading the data a
+second time.
+
 
 
 You can select which import template to use in two ways: from the welcome
