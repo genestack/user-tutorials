@@ -16,7 +16,7 @@ groups, and users** or logout of the platform. For the more details, read
 Clicking on the Genestack logo in the top left corner of any platform page
 will take you back to the Welcome Page. This option is customizable: in your
 profile settings you can choose the ‘Application to show after login’ and
-set the File Manager instead of the Welcome Page.
+set the File Manager as a starting page instead of the Welcome Page.
 
 **Tasks** links to the **Task Manager**, where you can monitor running and
 previous computations. We'll describe it later in the guide.
@@ -26,7 +26,7 @@ message us whenever you have any questions or want to make any suggestions.
 
 Wherever you are on the platform, you can also access a **shortcuts menu**.
 It’s an easy way to reach most commonly used apps and folders. Genestack
-Import, Manage apps, Manage groups, Experiment Browser as well as the folders
+Import, Manage applications, Manage groups, Experiment Browser as well as the folders
 for Created and Imported files can all be found here. To access the shortcuts
 menu simply move your mouse cursor to the left hand side of any page.
 
