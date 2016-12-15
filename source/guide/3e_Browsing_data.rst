@@ -7,12 +7,9 @@ analyses; facilitates search for  studies and samples across your
 private, public, and shared data; and accepts queries using synonyms,
 ontology expansions, and chemical similarity.
 
-File Manager is where you can easily access all of your private, public
-and shared data. Read more about FM in the Platform Map section (link).
-
-Here are other apps that help users better analyse their data and find
+**File Manager** is where you can easily access all of your private, public
+and shared data. Here are other apps that help users better analyse their data and find
 links between various results.
-
 To be useful, data needs to be set in a context, i.e. to be associated
 with metainfo (data describing other data).
 
@@ -31,13 +28,13 @@ Similarly to import templates, the app uses specific standards and
 structured vocabularies to annotate your data, for example:
 
 -  First of all, the non-hierarchical controlled vocabularies (e.g. Sex,
-   Method, Platform fields), which are simply lists of terms;.
+   Method, Platform fields), which are simply lists of terms;
 -  The `NCBI Taxonomy`_ is
    a standard hierarchical nomenclature and classification scheme for
-   Organisms;.
+   Organisms;
 -  The `Cellosaurus vocabulary`_  we
    used for Cell Line field - is an example of controlled vocabulary
-   which describes all cell lines used in biomedical research;.
+   which describes all cell lines used in biomedical research;
 -  We also applied a bunch of ontologies - `ChEBI Ontology`_,
    `Cell Ontology`_  - to annotate e.g. Compound and Cell type fields.
 
@@ -248,7 +245,10 @@ between the two to get the whole picture of your results. If your
 colleagues have shared their research with you, you can also view their
 results.
 
-<Experiment Browser>|image22|
+You can access the Experiment Browser either from the **Welcome Page** or
+the **Shortcuts Menu**.
+
+|ExperimentBrowser|
 
 Use the search box at the top of the page to look for specific terms.
 Use the menu on the left hand side to specify the characteristics of an
@@ -259,10 +259,7 @@ Illumina HiSeq 2500 on humans. Clicking on the name of any of the found
 assays will take you to the Metainfo Editor app, where you can view all
 the information on that experiment.
 
-How to access the app?
 
-You can access the Experiment Browser either from the Welcome Page or
-the Shortcuts Menu.
 
 .. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
 .. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
@@ -273,3 +270,4 @@ the Shortcuts Menu.
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
 .. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
 .. _Whole Genome Sequencing Analysis:  https://genestack.com/tutorial/wgs-analysis-on-genestack/
+.. |ExperimentBrowser| image:: images/experiment-browser.png
