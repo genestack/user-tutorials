@@ -96,20 +96,41 @@ There are several ways you can access the **Import** application:
 
 |IT_import|
 
-When importing, there are 2 ways to upload data into the platform:
+Import data includes three steps:
 
-- **Use data from your computer** - select or drag-and-drop files.
+**Step 1: Uploading files**
+
+There are two ways to upload data into the platform:
+
+1. Use data from your computer - select or drag-and-drop files.
 
 |import_start|
 
-- **Upload from URLs (FTP or HTTP/HTTPS)** - specify URLs for separate files or
+2. Upload from URLs (FTP or HTTP/HTTPS) - specify URLs for separate files or
   directories.
 
 |URL_import|
 
-**Use previous uploads** option allows you to avoid uploading the data a
+"Use previous uploads" option allows you to avoid uploading the data a
 second time.
 
+Files are uploaded in multiple streams to increase upload speed. Uploading
+from URLs is done in the background. This means that even while these files
+are being uploaded, you can describe their metadata and use them in
+pipelines.
+
+|uploading_step|
+
+Click the “Import files” button to proceed.
+
+**Step 2: Format recognition**
+
+After your data is uploaded, Genestack automatically recognizes file formats
+and transforms them into biological data types: raw reads, mapped reads,
+reference genomes, etc. You won’t have to worry about formats at all. Format
+conversions will be handled internally by Genestack.
+
+||
 
 
 You can select which import template to use in two ways: from the welcome
@@ -251,14 +272,13 @@ an attachments button by the experiment name.
 .. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
 .. _Uberon Ontology: http://uberon.github.io/about.html
-
-..|default_import_template| image:: images/default_import_template.png
-
-..|import_templates| image:: images/import_templates.png
-..|import_start| image:: images/import_start.png
-..|FM_import| image:: images/FM_import.png
-..|WP_import| image:: images/WP_import.png
-..|DF_import| image:: images/DF_import.png
-..|IT_import| image:: images/IT_import.png
-..|URL_import| image:: images/URL_import.png
+.. |default_import_template| image:: images/default_import_template.png
+.. |import_templates| image:: images/import_templates.png
+.. |import_start| image:: images/import_start.png
+.. |FM_import| image:: images/FM_import.png
+.. |WP_import| image:: images/WP_import.png
+.. |DF_import| image:: images/DF_import.png
+.. |IT_import| image:: images/IT_import.png
+.. |URL_import| image:: images/URL_import.png
+.. |uploading_step| image:: images/uploading_step.png
 .. |metainfo_type_editor| image:: images/metainfo_type_editor.png
