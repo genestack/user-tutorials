@@ -29,7 +29,7 @@ Manage Applications
 |ManageApp|
 
 Here you can view the list of all applications available on the platform
-– both ones you have written as well as public ones (note that you won’t
+– both ones you have written as well as public ones (note that you will not
 be able to use all of these applications).
 
 The **Developer** button will give you the option to choose which version of
@@ -39,12 +39,12 @@ an app you want to use.
 
 The **‘bundled’** and **‘minified’** options optimize
 loading of CSS and JS used in the app. You can find more details on
-bundling and minifying here_.
+bundling and minifying here__.
 
 The **Session** and **User** drop-down menus allow you to chose the version of
 the app you want to use for your current log-in session and for your
 current user account respectively. **Inherit** is the default option and the
-order of version choice inheritance is Global -> User -> Session. If you
+order of version choice inheritance is Global → User → Session. If you
 change the version of an application, use you also need to **reload** it to run
 the version of choice.
 
@@ -57,14 +57,14 @@ In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
 new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users.
-Read more about collaboration on Genestack here_.
+Read more about collaboration on Genestack here__.
 
 Manage Users
 ~~~~~~~~~~~~
 
 In this section, you can create new users or change password of your
 users.
-You can watch a video on managing users on Genestack here_.
+You can watch a video on managing users on Genestack here__.
 
 |ManageUsers|
 
@@ -72,6 +72,7 @@ You can watch a video on managing users on Genestack here_.
 .. |profile| image:: images/profile.png
 .. |ManageApp| image:: images/manage_app.png
 .. |DeveloperButton| image:: images/developer_button.png
+   :scale: 35 %
 .. |ManageGroups| image:: images/manage_groups.png
 .. |ManageUsers| image:: images/manage_users.png
 
