@@ -38,18 +38,19 @@ Genestack deals with any formatting-issues allowing users to spend more
 time on actual data analysis. After you are done with your analysis you
 can export the data in the format of your choice.
 
-**NOTE: Formatting Hell**
+.. note:: **Formatting Hell**
 
-You might be wondering why we made our platform format-free and why this
-is such a big deal. In the current landscape of bioinformatics there
-seems to be a never-ending number of formats your data might be saved
-in. There are a few prominent formats used in next generation sequencing
-analysis, like FastQ, BAM and VCF. But very often new programs come with
-new formats. Bioinformaticians say they spend almost 80% of their time
-worrying about data grooming and file reformatting and only 20% on
-actual data analysis. Now, that’s insane, isn’t it? On Genestack you
-don’t have to worry about formats at all – our OS takes care of all the
-routine tasks so that you can focus on your work.
+          You might be wondering why we made our platform format-free and why this
+          is such a big deal. In the current landscape of bioinformatics there
+          seems to be a never-ending number of formats your data might be saved
+          in. There are a few prominent formats used in next generation sequencing
+          analysis, like FastQ, BAM and VCF. But very often new programs come with
+          new formats. Bioinformaticians say they spend almost 80% of their time
+          worrying about data grooming and file reformatting and only 20% on
+          actual data analysis. Now, that’s insane, isn’t it? On Genestack you
+          don’t have to worry about formats at all – our OS takes care of all the
+          routine tasks so that you can focus on your work.
+
 
 Reproducibility
 ---------------
