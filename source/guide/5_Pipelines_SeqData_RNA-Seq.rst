@@ -685,154 +685,134 @@ References: 
 Read more about single-cell RNA-seq analysis on Genestack here:
 `https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/ <https://www.google.com/url?q=https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/&sa=D&ust=1480960532022000&usg=AFQjCNFHLp_YAJtq-t55uRJlHo1K1NAPwg>`__
 
-NOTE: Reference Genomes
+.. note:: **Reference Genomes**
 
-One way or another, most bioinformatics analysis pipelines, regardless
-of the data type analysed, require the use of a reference genome. For
-instance,  we use reference genomes in `DNA methylation
-analysis <https://www.google.com/url?q=https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/&sa=D&ust=1480960532024000&usg=AFQjCNEON1E936WzebWy5w5hCqDobFfbyQ>`__,
-in `differential gene expression
-analysis <https://www.google.com/url?q=https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/&sa=D&ust=1480960532025000&usg=AFQjCNF8iK-m3LAGKdEi3YCpFxG4BQO4jg>`__,
-and analysis of the `transcriptomic heterogeneity within populations of
-cells <https://www.google.com/url?q=https://genestack.com/blog/2014/09/24/single-cell-rna-seq-analysis-tutorial/&sa=D&ust=1480960532025000&usg=AFQjCNF8rzNCeKOex8EvDd2Y0DVNHe855A>`__.
-The choice of a reference genome can increase the quality and accuracy
-of the downstream analysis or it can have a harmful effect on it. For
-instance, it has been shown that the choice of a gene annotation has a
-big impact on RNA-seq data analysis, but also on `variant effect
-prediction <https://www.google.com/url?q=http://www.intechopen.com/books/references/next-generation-sequencing-advances-applications-and-challenges/impact-of-gene-annotation-on-rna-seq-data-analysis%23B34&sa=D&ust=1480960532026000&usg=AFQjCNHaCNQIeKNrxp0ot4JjVhZTFfN3fA>`__[
-1, 2].
+          One way or another, most bioinformatics analysis pipelines, regardless
+          of the data type analysed, require the use of a reference genome. For
+          instance,  we use reference genomes in `DNA methylation
+          analysis <https://www.google.com/url?q=https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/&sa=D&ust=1480960532024000&usg=AFQjCNEON1E936WzebWy5w5hCqDobFfbyQ>`__,
+          in `differential gene expression
+          analysis <https://www.google.com/url?q=https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/&sa=D&ust=1480960532025000&usg=AFQjCNF8iK-m3LAGKdEi3YCpFxG4BQO4jg>`__,
+          and analysis of the `transcriptomic heterogeneity within populations of
+          cells <https://www.google.com/url?q=https://genestack.com/blog/2014/09/24/single-cell-rna-seq-analysis-tutorial/&sa=D&ust=1480960532025000&usg=AFQjCNF8rzNCeKOex8EvDd2Y0DVNHe855A>`__.
+          The choice of a reference genome can increase the quality and accuracy
+          of the downstream analysis or it can have a harmful effect on it. For
+          instance, it has been shown that the choice of a gene annotation has a
+          big impact on RNA-seq data analysis, but also on `variant effect
+          prediction <https://www.google.com/url?q=http://www.intechopen.com/books/references/next-generation-sequencing-advances-applications-and-challenges/impact-of-gene-annotation-on-rna-seq-data-analysis%23B34&sa=D&ust=1480960532026000&usg=AFQjCNHaCNQIeKNrxp0ot4JjVhZTFfN3fA>`__[
+          1, 2].
 
-On Genestack, you can find `several reference
-genomes <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/signin?original_url%3D%252Fendpoint%252Fapplication%252Frun%252Fgenestack%252Ffilebrowser%253Fa%253DGSF000018%2526action%253DviewFile%2526page%253D1&sa=D&ust=1480960532027000&usg=AFQjCNHhglPt1_5NPlkDPhTBlVLosmZJ6A>`__ for
-some of the most common model organisms. We are adding more and more
-reference genomes of model organisms to this list regularly.
+          On Genestack, you can find `several reference
+          genomes <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/signin?original_url%3D%252Fendpoint%252Fapplication%252Frun%252Fgenestack%252Ffilebrowser%253Fa%253DGSF000018%2526action%253DviewFile%2526page%253D1&sa=D&ust=1480960532027000&usg=AFQjCNHhglPt1_5NPlkDPhTBlVLosmZJ6A>`__ for
+          some of the most common model organisms. We are adding more and more
+          reference genomes of model organisms to this list regularly.
+           
+          For some organisms we provide several genomes, e.g.  there are 3
+          reference genomes for H. sapiens. What are the differences between these
+          reference genomes? And how do you chose the correct one?  The answer is
+          not so straightforward and depends on several factors – let’s discuss
+          each of them:
 
- 
+          1) Versions of the reference genome
 
-For some organisms we provide several genomes, e.g.  there are 3
-reference genomes for H. sapiens. What are the differences between these
-reference genomes? And how do you chose the correct one?  The answer is
-not so straightforward and depends on several factors – let’s discuss
-each of them:
+          For instance:  Homo sapiens GRCh37.75 (unmasked) vs GRCh38.80 (unmasked)
 
- 
+          The numbers correspond to versions (or “builds”) of the reference genome
+          – the higher the number, the more recent the version. We generally
+          recommend you use the latest version possible. One thing to remember is
+          that for the newest genome builds, it’s likely that resources such as
+          genome annotations and functional information will be limited, as it
+          takes time for Ensembl/ UCSC to integrate additional genomic data with
+          the new build. You can read more about it a `blog
+          post <https://www.google.com/url?q=http://genomespot.blogspot.co.uk/2015/06/mapping-ngs-data-which-genome-version.html&sa=D&ust=1480960532030000&usg=AFQjCNFBJPxQvY3k5N-9Vf16-S9qYj1Sqg>`__ from
+          Genome Spot blog and in
+          `this <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__`article <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__ from
+          Bio-IT.
 
-1) Versions of the reference genome
+          2) One organism – many strains
 
-For instance:  Homo sapiens GRCh37.75 (unmasked) vs GRCh38.80 (unmasked)
+          K12 and O103:H2 are two different strains of E.coli.
+          `K12 <https://www.google.com/url?q=https://www.genome.wisc.edu/resources/strains.htm&sa=D&ust=1480960532032000&usg=AFQjCNH9An3zJ5ilwpvmVlEVsxbLsRLFFA>`__ is
+          an innocuous strain commonly used in various labs around the world.
+          `O103:H2 <https://www.google.com/url?q=http://aem.asm.org/content/79/23/7502.full&sa=D&ust=1480960532033000&usg=AFQjCNEHcWj9cqdYfeXTHPadk8p4twNGrQ>`__ is
+          a pathogenic strain, commonly isolated from human cases in Europe.
+          Depending on your experiment, you should choose a matching reference
+          genome. 
 
-The numbers correspond to versions (or “builds”) of the reference genome
-– the higher the number, the more recent the version. We generally
-recommend you use the latest version possible. One thing to remember is
-that for the newest genome builds, it’s likely that resources such as
-genome annotations and functional information will be limited, as it
-takes time for Ensembl/ UCSC to integrate additional genomic data with
-the new build. You can read more about it a `blog
-post <https://www.google.com/url?q=http://genomespot.blogspot.co.uk/2015/06/mapping-ngs-data-which-genome-version.html&sa=D&ust=1480960532030000&usg=AFQjCNFBJPxQvY3k5N-9Vf16-S9qYj1Sqg>`__ from
-Genome Spot blog and in
-`this <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__`article <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__ from
-Bio-IT.
+          3) Masked, soft-masked and unmasked genomes
 
- 
+          There are three types of Ensembl reference genomes: unmasked,
+          soft-masked and masked.
 
-2) One organism – many strains
+          Generally speaking, it’s recommended to use unmasked reference genome
+          builds for alignment.
 
-K12 and O103:H2 are two different strains of E.coli.
-`K12 <https://www.google.com/url?q=https://www.genome.wisc.edu/resources/strains.htm&sa=D&ust=1480960532032000&usg=AFQjCNH9An3zJ5ilwpvmVlEVsxbLsRLFFA>`__ is
-an innocuous strain commonly used in various labs around the world.
-`O103:H2 <https://www.google.com/url?q=http://aem.asm.org/content/79/23/7502.full&sa=D&ust=1480960532033000&usg=AFQjCNEHcWj9cqdYfeXTHPadk8p4twNGrQ>`__ is
-a pathogenic strain, commonly isolated from human cases in Europe.
-Depending on your experiment, you should choose a matching reference
-genome.
+          Masking is used to detect and conceal interspersed repeats and low
+          complexity DNA regions so that they could be processed properly by
+          alignment tools.
 
- 
+          Masking can be performed by special tools, like
+          `RepeatMasker <https://www.google.com/url?q=http://www.repeatmasker.org/&sa=D&ust=1480960532035000&usg=AFQjCNHVO50QRN7dUkikjWjvgoLYePqSgg>`__.
+           The tool goes through DNA sequence looking for repeats and
+          low-complexity regions.
 
-3) Masked, soft-masked and unmasked genomes
+          There are two types of masked reference genomes: masked and soft-masked.
 
-There are three types of Ensembl reference genomes: unmasked,
-soft-masked and masked.
+          MASKED
 
-Generally speaking, it’s recommended to use unmasked reference genome
-builds for alignment.
+          Masked reference genomes are also known as hard-masked DNA sequences.
+          Repetitive and low complexity DNA regions are detected and replaced with
+          ‘N’s. The use of masked genome may adversely affect the analysis
+          results, leading to wrong read mapping and incorrect variant calls.
 
-Masking is used to detect and conceal interspersed repeats and low
-complexity DNA regions so that they could be processed properly by
-alignment tools.
+          When should you use a masked genome?
 
-Masking can be performed by special tools, like
-`RepeatMasker <https://www.google.com/url?q=http://www.repeatmasker.org/&sa=D&ust=1480960532035000&usg=AFQjCNHVO50QRN7dUkikjWjvgoLYePqSgg>`__.
- The tool goes through DNA sequence looking for repeats and
-low-complexity regions.
+          We generally don’t recommend using masked genome, as it relates to the
+          loss of information (after mapping, some “unique” sequences may not be
+          truly unique) and does not guarantee 100% accuracy and sensitivity (e.g.
+          masking cannot be absolutely perfect). Moreover, it can lead to the
+          increase in number of falsely mapped reads.
 
-There are two types of masked reference genomes: masked and soft-masked.
+          SOFT-MASKED  
 
-MASKED
+          In soft-masked reference genomes, repeats and low complexity regions are
+          also detected but in this case they are masked by converting to a
+          lowercase variants of the base (e.g. acgt).
 
-Masked reference genomes are also known as hard-masked DNA sequences.
-Repetitive and low complexity DNA regions are detected and replaced with
-‘N’s. The use of masked genome may adversely affect the analysis
-results, leading to wrong read mapping and incorrect variant calls.
+          When should you use a soft-masked genome?
 
- 
+          The soft-masked sequence does contain repeats indicated by lowercase
+          letters, so the use of soft-masked reference could improve the quality
+          of the mapping without detriment to sensitivity. But it should be noted
+          that most of the alignment tools do not take into account soft-masked
+          regions, for example BWA, tophat, bowtie2 tools always use all bases in
+          alignment weather they are in lowercase nucleotides or not. That is why,
+          there is no actual benefit from the use of soft masked genome in
+          comparison with unmasked one.
 
-When should you use a masked genome?
+          Therefore, we recommend you use unmasked genomes when you don’t want to
+          lose any information. If you want to perform some sort of filtering,
+          it’s better to do so  after the mapping step.
 
-We generally don’t recommend using masked genome, as it relates to the
-loss of information (after mapping, some “unique” sequences may not be
-truly unique) and does not guarantee 100% accuracy and sensitivity (e.g.
-masking cannot be absolutely perfect). Moreover, it can lead to the
-increase in number of falsely mapped reads.
+          Example:
 
-SOFT-MASKED
+          To perform WES analysis, we recommend you use an unmasked reference
+          genome of the latest releases and assemblies (e.g. Homo sapiens /
+          GRCh38.80 (unmasked) for human samples).
 
- 
+          The bioinformatics community is divided on the topic of the use of
+          reference genomes. It is our personal opinion that it is best to always
+          use unmasked genome and perform filtering after the mapping step.
+          However, if you would like to read more on the topic, we suggest taking
+          a look at the following papers:
 
-In soft-masked reference genomes, repeats and low complexity regions are
-also detected but in this case they are masked by converting to a
-lowercase variants of the base (e.g. acgt).
+          #. `McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB,
+             Donnelly P. Choice of transcripts and software has a large effect on
+             variant annotation. Genome Med.
+             2014;6(3):26; <https://www.google.com/url?q=https://genomemedicine.biomedcentral.com/articles/10.1186/gm543&sa=D&ust=1480960532039000&usg=AFQjCNFQKTLLLg3B69W8VzPfoavzieNoow>`__
 
- 
-
-When should you use a soft-masked genome?
-
-The soft-masked sequence does contain repeats indicated by lowercase
-letters, so the use of soft-masked reference could improve the quality
-of the mapping without detriment to sensitivity. But it should be noted
-that most of the alignment tools do not take into account soft-masked
-regions, for example BWA, tophat, bowtie2 tools always use all bases in
-alignment weather they are in lowercase nucleotides or not. That is why,
-there is no actual benefit from the use of soft masked genome in
-comparison with unmasked one.
-
- 
-
-Therefore, we recommend you use unmasked genomes when you don’t want to
-lose any information. If you want to perform some sort of filtering,
-it’s better to do so  after the mapping step.
-
- 
-
-Example:
-
-To perform WES analysis, we recommend you use an unmasked reference
-genome of the latest releases and assemblies (e.g. Homo sapiens /
-GRCh38.80 (unmasked) for human samples).
-
- 
-
-The bioinformatics community is divided on the topic of the use of
-reference genomes. It is our personal opinion that it is best to always
-use unmasked genome and perform filtering after the mapping step.
-However, if you would like to read more on the topic, we suggest taking
-a look at the following papers:
-
-#. `McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB,
-   Donnelly P. Choice of transcripts and software has a large effect on
-   variant annotation. Genome Med.
-   2014;6(3):26; <https://www.google.com/url?q=https://genomemedicine.biomedcentral.com/articles/10.1186/gm543&sa=D&ust=1480960532039000&usg=AFQjCNFQKTLLLg3B69W8VzPfoavzieNoow>`__
-
-2. `Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D,
-   Petryszak R, et al. Comparison of GENCODE and RefSeq gene annotation
-   and the impact of reference geneset on variant effect prediction. BMC
-   Genomics. 2015;16 (Suppl
-   8):S2 <https://www.google.com/url?q=http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-16-S8-S2&sa=D&ust=1480960532040000&usg=AFQjCNEhK7CXAJi8svzmvtqxfNNceHfm2w>`__
+          2. `Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D,
+             Petryszak R, et al. Comparison of GENCODE and RefSeq gene annotation
+             and the impact of reference geneset on variant effect prediction. BMC
+             Genomics. 2015;16 (Suppl
+             8):S2 <https://www.google.com/url?q=http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-16-S8-S2&sa=D&ust=1480960532040000&usg=AFQjCNEhK7CXAJi8svzmvtqxfNNceHfm2w>`__
