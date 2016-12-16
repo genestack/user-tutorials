@@ -3,46 +3,69 @@ Browsing Data
 
 Efficient data search and browsing are at the core of Genestack. The
 platform provides  rapid access to private, shared, and public data
-analyses; facilitates search for  studies and samples across your
+analyses results; facilitates search for studies and assays across your
 private, public, and shared data; and accepts queries using synonyms,
 ontology expansions, and chemical similarity.
 
-**File Manager** is where you can easily access all of your private, public
-and shared data. Read more about FM in the Platform Map section.
+Experiment Browser
+~~~~~~~~~~~~~~~~~~
 
-Here are other apps that help users better analyse their data and find
-links between various results.
+Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
+and ArrayExpress, and Genestack synchronizes data from these databases regularly keeping
+it up-to-date. There are currently more than 3 millions sequencing and microarray assays from over
+100 000 experiments.
+Experiment Browser app allows to browse these public datasets, as well as your private
+experiments or the ones shared with you on Genestack. You can access the Experiment
+Browser either from the Welcome Page or the Shortcuts Menu on the left-hand side.
 
-To be useful, data needs to be set in a context, i.e. to be associated
-with metainfo (data describing other data).
+You can search relevant data with **a free-text query**, and you can further
+filter down experiments by **metadata attributes** using the checkboxes
+on the left. These attributes are generated based on the metadata available for experiments.
+For instance, you can set the filters 'Access', 'Method'
+and 'Organism' to 'Public', 'RNA-Seq', 'Mus musculus', respectively,
+to filter out publicly accessible data on mice obtained from  mouse RNA-Seq data.
 
-For your experiments to make sense, especially later on in time when you
-might not remember exactly what you did in a particular experiment, it
-is crucial to represent both data and metadata in a consistent manner.
+|ExperimentBrowser|
 
-You can impose consistency by importing your data using import
-templates. Learn more about import templates in **Biodata Import** section.  When you wish
-to view the existing metainfo, or add more metainfo, you should use the
-Metainfo Editor app. The Metainfo Editor allows you to view and edit
-multiple files simultaneously in a spreadsheet-like environment. Keep in
-mind you won’t be able to edit metainfo for experiments you don’t own.
+Click **Save N matching assays** link to explore
+the list of matching assays and save them into one folder.
 
-Similarly to import templates, the app uses specific standards and
-structured vocabularies to annotate your data, for example:
+|SaveMatchingAssays|
 
--  First of all, the non-hierarchical controlled vocabularies (e.g. Sex,
-   Method, Platform fields), which are simply lists of terms;.
--  The `NCBI Taxonomy`_ is
-   a standard hierarchical nomenclature and classification scheme for
-   Organisms;.
--  The `Cellosaurus vocabulary`_  we
-   used for Cell Line field - is an example of controlled vocabulary
-   which describes all cell lines used in biomedical research;.
--  We also applied a bunch of ontologies - `ChEBI Ontology`_,
-   `Cell Ontology`_  - to annotate e.g. Compound and Cell type fields.
+Moreover, Experiment Browser allows to find bioinformatic analyses results
+associated with raw data. Indeed, if there are analysis performed on a given experiment,
+and you have an access to these results (i.e. theses are yours or shared with you),
+then under the experiment name you will see **"View N analysis results"** link.
+Click it shows you the list of existing resulting files such as, for example, QC reports
+or Genome Browser pages.
+
+|AnalysisResults|
+
+Clicking on the name of any of the found experiments will take you to
+the **Metainfo Editor**, where you can learn more that experiment
+and get some information on samples.
+
+|EditMetainfo|
+
+Besides that, on the Metainfo Editor page you can run the assays through a pipeline with
+**"Star new data flow with application"**:
+you can use existing data flows matching for the assays of choice or build pipeline step-by-step
+ option.
+
+|NewDF|
+
+Click **"Use files in data flow"** button and
+From the metainfo editor, you can also open the experiment in the **file manager** by clicking on
+the experiment's name at the top of the page and selecting **Explore > File Manager**.
+
+|fromMEtoFB|
+
 
 File Manager
 ~~~~~~~~~~~~
+**File Manager** is where you can easily access all of your private, public
+and shared data. Here are other apps that help users better analyse their data and find
+links between various results.
 
 Clicking on the home icon will take you to the File Manager – a central
 place on the platform, as it contains all of your files (you probably
@@ -65,7 +88,7 @@ header of the “Last Update” column). If you created a couple of files at
 once using a data flow they will be located in one folder (called “Files
 for XYZ data flow run <date>). In these folders you will find the very
 result of your analysis (e.g. Genetic Variations file containing found
-mutations), results of all intermediate analysis steps (e. g.
+mutations), results of all intermediate analysis steps (e.g.
 preprocessed reads, mapped reads etc. created by the apps participating
 in your pipeline as you remember each contributing app creates a file),
 as well as all original files (“Original Files for XYZ, a sub-folder in the “Dependencies” folder).
@@ -77,18 +100,20 @@ will be located in the same folder (until you move them around etc). 
 Raw uploads contains all the files you’ve uploaded into Genestack -
 fastq and bam files, pdf documents, excel tables etc.
 
-**NOTE: What’s the difference between raw uploads and imported files?**
 
-When you have just started importing your files (in various formats like
-FASTQ, BAM etc), they all go to the specific storage area (“Raw uploads”
-folder). During import Genestack will recognize these uploaded files and
-allocate them to appropriate biological types (you can also do it
-manually), e.g. sequencing assays, mapped reads etc. These meaningful
-biological objects is what you work with on our platform and these are
-located in the “Imported files” folder.
+.. note:: **What’s the difference between raw uploads and imported files?**
+
+          When you have just started importing your files (in various formats like
+          FASTQ, BAM etc), they all go to the specific storage area (“Raw uploads”
+          folder). During import Genestack will recognize these uploaded files and
+          allocate them to appropriate biological types (you can also do it
+          manually), e.g. sequencing assays, mapped reads etc. These meaningful
+          biological objects is what you work with on our platform and these are
+          located in the “Imported files” folder.
 
 **Exports** folder contains export files with download links. For example,
-sets of exported microarrays. (+[link to the export section)
+sets of exported microarrays. Get more information about Exporting Data from Genestack in
+the Export Data section.
 
 Below these four grouped folders, you will see two more: Shared with me
 and Public Data.
@@ -104,48 +129,48 @@ with to make life a bit simpler for our users. This folder contains:
 
 |PublicData|
 
-#. Codon tables: currently 18 different tables such as yeast
+#. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
-   etc.
-#. Dictionaries: used for metainfo editing and curation, e.g. sex,
-   sequencing platform, NCBI taxonomy. Read more about dictionaries here
-   (link)
-#. Example results: so you can play around with our platform and see
-   what types of visualizations are available
-#. External databases: sets of sequences with associated annotation;
-   e.g. greengenes for 16S rRNA
-#. Genome annotations: for a range of different organisms and platforms
-    (for WES Analysis)
-#. Microarray annotations: annotation lists to be used as the
-   translation table to link probes and common public domain sequences
-#. Public analyses: all files created during re-analysis of previously
-   published data sets
-#. Reference genomes: various reference genomes for the most commonly
-   analysed organisms
-#. Public data flows: all data flows available to our users, including
-   tutorial data flows and the ones found on the Welcome page
-#. Public experiments: this is a feature we’re particularly proud of. We
+   etc;
+#. **Dictionaries**: used for metainfo editing and curation, e.g. sex,
+   sequencing platform, NCBI taxonomy. Read more about dictionaries in
+   "Data and Metainfo Management" section;
+#. **Example results**: so you can play around with our platform and see
+   what types of visualizations are available;
+#. **External databases**: sets of sequences with associated annotation;
+   e.g. greengenes for 16S rRNA;
+#. **Genome annotations**: for a range of different organisms and platforms
+    (for WES Analysis);
+#. **Microarray annotations**: annotation lists to be used as the
+   translation table to link probes and common public domain sequences;
+#. **Public analyses**: all files created during re-analysis of previously
+   published data sets;
+#. **Reference genomes**: various reference genomes for the most commonly
+   analysed organisms;
+#. **Public data flows**: all data flows available to our users, including
+   tutorial data flows and the ones found on the Welcome page;
+#. **Public experiments**: this is a feature we’re particularly proud of. We
    have preloaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
    ArrayExpress, SRA, and ENA. Currently we have about 100,000
-   experiments in our database (and if that’s not impressive, then what
-   is?). If you want to know more about a specific experiment use the
-   Experiment Viewer app.
-#. Tutorials: the folder contains files we use as examples during
-   various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/
+   experiments in our database. If you want to know more about a specific experiment use the
+   Experiment Viewer app;
+#. **Tutorials**: the folder contains files we use as examples during
+   various tutorials. To read more on particular analysis types, go to
+   https://genestack.com/tutorials/.
 
-Here are links to all the tutorials we have prepared so far:
+   Currently, we can offer you the following tutorials:
 
--  `Getting Started With Genestack Platform`_
--  `Testing Differential Gene Expression`_
--  `Whole Genome Bisulfite Sequencing Analysis`_
--  `Whole Exome Sequencing Analysis`_
--  `Whole Genome Sequencing Analysis`_
+  -  `Getting Started With Genestack Platform`_
+  -  `Testing Differential Gene Expression`_
+  -  `Whole Genome Bisulfite Sequencing Analysis`_
+  -  `Whole Exome Sequencing Analysis`_
+  -  `Whole Genome Sequencing Analysis`_
 
 To access the **context menu** for a given file, you can either right or left click
 on the respective entry in the file browser. The topmost entry is the
 app that was used to generate this file, or the app that should be used
-to view it. The next 4 entries are submenus for each of the 4 different
+to view it. The next four entries are submenus for each of the four different
 types of apps that can be used on the file. Further down are options for
 viewing and re-using the pipeline used to generate the file. The final
 section allows you to manage file locations and names. For folders,
@@ -168,8 +193,8 @@ import them into the platform and edit their metainfo. 
 |import|
 
 Next to the Import button, you can see a **New Folder button**. Using it
-you’ll be able to create a new folder wherever you want. Another option
-- New folder with selection - appears when you have selected files and
+you will be able to create a new folder wherever you want. Another option
+- **New folder with selection** - appears when you have selected files and
 want to put all of them in a separate folder.
 
 |NewFolder|
@@ -187,8 +212,7 @@ the data. For instance, if you want to align a raw WGBS sequencing assay
 Genestack will suggest several mappers, but only the Bisulfite
 Sequencing Mapping app will be suitable in this case. To figure out what
 apps are recommended to process WGBS, WES, RNA-seq or other sequencing
-data, go to the “Bioinformatics apps” section of this guide. [link on
-the section in the guide]
+data, go to the “Pipelines and applications” section of this guide.
 
 **File search** in the top right corner allows you to search for files using
 their metadata (names, organism, method). To limit the search by file
@@ -197,14 +221,14 @@ triangle inside the search box.
 
 |FileSearch|
 
-Below the search box is a button to access your briefcase. Your
-Briefcase is a place where you can temporarily store files from various
-folders. How do you add files to your briefcase? Hover over each
+Below the search box is a button to access your **briefcase**. Your
+briefcase is a place where you can temporarily store files from various
+folders. **To add files** to your briefcase hover over each
 individual file and use the special “briefcase” button that appears or
 select several files, right click on them and choose “Add to
-briefcase...”. To delete an item from your briefcase hover over it and
-click on the “x” button. To clear all items from the briefcase, select
-“Clear all”.
+briefcase...”. **To delete an item** from your briefcase hover over it and
+click on the “x” button. **To clear all** items from the briefcase, select
+“Clear all” option.
 
 |BriefCase|
 
@@ -216,12 +240,10 @@ file.
 
 |3buttons2|
 
-
-
 Use the **Share button** to share your
-results with colleagues (the share button will not be available if you
-are using a guest account) [link on the section in the guide]. Read more
-about sharing on Genestack here (link)
+data with colleagues (the share button will not be available if you
+are using a guest account).
+Read more about sharing on Genestack in the "Data and Metainfo Management" part of the Guide.
 
 |share|
 
@@ -232,43 +254,11 @@ system.
 
 **View metainfo** gives you more information about the file: technical (file
 type, its accession and owner, when the file was created and modified,
-etc), biological (e.g. cell line, cell type, organism, etc.), and file
+etc.), biological (e.g. cell line, cell type, organism, etc.), and file
 permissions.
 
 |eye|
 
-
-Experiment Browser
-~~~~~~~~~~~~~~~~~~
-
-Experiment Browser is an app that can be used to find connections
-between various results and various experiments. Let’s say you’re
-performing a methylation profiling analysis of a particular zebrafish
-mutant. Using Experiment Browser you can find all public experiments
-analysing this zebrafish mutant, find methylation profiling experiments
-done on this particular mutant type and start looking for connections
-between the two to get the whole picture of your results. If your
-colleagues have shared their research with you, you can also view their
-results. You can access the Experiment Browser either from the Welcome Page or
-the Shortcuts Menu.
-
-|ExperimentBrowser|
-
-Use the search box at the top of the page to look for specific terms.
-Use the menu on the left hand side to specify the characteristics of an
-experiment you are looking for. These characteristics are generated
-based on the metadata available for experiments. For instance: a public
-experiment, using whole genome sequencing method, performed using
-Illumina HiSeq 2500 on humans. Clicking on the name of any of the found
-assays will take you to the Metainfo Editor app, where you can view all
-the information on that experiment.
-
-
-
-.. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
-.. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
-.. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
-.. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
 .. _Getting Started With Genestack Platform: https://genestack.com/tutorial/getting-started-with-genestack-platform/
 .. _Testing Differential Gene Expression: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
@@ -277,7 +267,7 @@ the information on that experiment.
 
 
 
-
+.. |SaveMatchingAssays| image:: images/save-matching-assays.png
 .. |FileManager| image:: images/file-manager.png
 .. |PublicData| image:: images/public-data.png
 .. |ParentContainers| image:: images/parent-containers.png
@@ -291,6 +281,8 @@ the information on that experiment.
 .. |delete| image:: images/delete.png
 .. |eye| image:: images/eye.png
 .. |ExperimentBrowser| image:: images/experiment-browser.png
-.. |NewFolder| image:: images/new-folder
-
-
+.. |NewFolder| image:: images/new-folder.png
+.. |AnalysisResults| image:: images/analysis-results.png
+.. |EditMetainfo| image:: images/DB-to-EditMetainfo.png
+.. |fromMEtoFB| image:: images/From-ME-to-FB.png
+.. |NewDF| image:: images/new-df.png
