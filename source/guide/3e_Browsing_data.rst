@@ -60,7 +60,6 @@ the experiment's name at the top of the page and selecting **Explore > File Mana
 
 |fromMEtoFB|
 
-
 File Manager
 ~~~~~~~~~~~~
 **File Manager** is where you can easily access all of your private, public
@@ -264,9 +263,6 @@ permissions.
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
 .. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
 .. _Whole Genome Sequencing Analysis: https://genestack.com/tutorial/wgs-analysis-on-genestack/
-
-
-
 .. |SaveMatchingAssays| image:: images/save-matching-assays.png
 .. |FileManager| image:: images/file-manager.png
 .. |PublicData| image:: images/public-data.png
