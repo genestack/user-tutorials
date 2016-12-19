@@ -2,7 +2,7 @@ Importing Data
 --------------
 
 Supported file types
-********************
+~~~~~~~~~~~~~~~~~~~~
 
 Genestack allows its users to upload various files to the cloud and keep them
 organized transforming them into the following data types:
@@ -74,7 +74,7 @@ types, which are not yet supported in import. Here is the list of them:
   exome and target files.
 
 Biodata Import
-**************
+~~~~~~~~~~~~~~
 
 There are several ways you can access the **Import** application:
 
@@ -127,10 +127,29 @@ Click the “Import files” button to proceed.
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
-reference genomes, etc. You won’t have to worry about formats at all. Format
-conversions will be handled internally by Genestack.
+reference genomes, etc. Format conversions will be handled internally by
+Genestack. You won’t have to worry about formats at all.
 
-||
+|file_recognition|
+
+If files are unrecognized or recognized incorrectly, you can manually allocate
+them to a specific data type: drag the raw file and move it to the green
+“Choose type” box appeared at the top of the page.
+
+|unrecognized_uploads|
+
+Choose the data type you find suitable:
+
+|file_types_box|
+
+Click "Edit metainfo" button to procead.
+
+**Step 3: Editing metainfo**
+
+On this step, you can describe uploaded data using an Excel-like spreadsheet:
+
+|import_edit_metainfo|
+
 
 
 You can select which import template to use in two ways: from the welcome
@@ -281,4 +300,9 @@ an attachments button by the experiment name.
 .. |IT_import| image:: images/IT_import.png
 .. |URL_import| image:: images/URL_import.png
 .. |uploading_step| image:: images/uploading_step.png
+.. |file_recognition| image:: images/file_recognition.png
+.. |unrecognized_uploads| image:: images/unrecognized_uploads.png
+.. |file_types_box| image:: images/file_types_box.png
+.. |import_edit_metainfo| image:: images/import_edit_metainfo.png
+.. 
 .. |metainfo_type_editor| image:: images/metainfo_type_editor.png
