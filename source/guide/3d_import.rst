@@ -239,9 +239,36 @@ files” folder which can be accessed from the Welcome Page and from the File
 Manager.
 
 Metainfo Import
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
+Apart from importing biodata, you’re able to easily import and validate the
+metainfo attached to the assays and to the experiment. The **Import data from
+spreadsheet** button allows you to retrieve the metainfo from a local CSV or
+Excel file and map it to the Genestack assays:
 
+|import_from_spreadsheet|
+
+Click “Import data from spreadsheet” and drag the file with metainfo:
+
+|import_metainfo|
+
+You should see something like this:
+
+|import_metainfo_table|
+
+Each row of the Excel file was matched to one of the assays, based on the
+"Name" column. We can see that the last row did not match to any of the
+imported files. Columns that are mapped to a key present in the experiment's
+template will be highlighted in green.
+
+We can specify for each column whether the column should be imported, and if it
+should be mapped to a different metainfo key, by clicking on the column header.
+Click “Import” when you finish editing the table:
+
+|import_metadata|
+
+For instance, in this case we added new column “Age” and fill “Organism”,
+“Sex”, “Tissue” and “Disease” co,umns that came from default template.
 
 Attachments
 ~~~~~~~~~~~
@@ -302,3 +329,7 @@ description:
 .. |exp_attachments| image:: images/exp_attachments.png
 .. |fm_attachments| image:: images/fm_attachments.png
 .. |metainfo_type_editor| image:: images/metainfo_type_editor.png
+.. |import_from_spreadsheet| image:: images/import_from_spreadsheet.png
+.. |import_metainfo| image:: images/import_metainfo.png
+.. |import_metainfo_table| image:: images/import_metainfo_table.png
+.. |import_metadata| image:: images/import_metadata.png
