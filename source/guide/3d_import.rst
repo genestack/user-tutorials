@@ -241,29 +241,41 @@ Manager.
 Metainfo Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+
 Attachments
 ~~~~~~~~~~~
 
-When you import an experiment into Genestack , you can choose to attach
-various files to it. For example you could include a PDF file with the
-experiment plant, an R script that you used to process your data, etc.
-When you open your newly-imported experiment, all of the attachments
-will accompany it. They will be safely stored on Genestack, so later you
-can download them from the platform, in case they get lost on your
-computer.
+While importing an experiment into Genestack (just to remind you, an
+experiment is a special folder that is created when you import sequencing or
+microarray assays) and you can choose to attach various files to it. For
+example, you could include a PDF file with the experiment plan, an R script
+that you used to process your data, etc. When you open your newly-imported
+experiment, all of the attachments will accompany it. They will be safely
+stored on Genestack, so later you can download them from the platform, in case
+they get lost on your computer.
 
-How to upload an attachment?
+**How to upload an attachment?**
 
-The attachment are uploaded together with the experiment data. In the
-“Upload” section of the Import app, choose the attachments from your
-computer along with your experiment data. In the “Import” section, the
-platform will recognize the raw data and the fact that you have uploaded
-unrecognisable files. All the unrecognised uploads will be stored as
-attachments to your experiment. You can also add and remove attachments
-later from inside the file browser. When you open an experiment there is
-an attachments button by the experiment name.
+The attachment are uploaded together with the experiment data. In the “Upload”
+section of the Import app, choose the attachments from your computer along
+with your experiment data. On the “Import” step, the platform will
+recognize the raw data and the fact that you have uploaded unrecognisable
+files.
 
-<file import attachments> |image8|
+|attachments|
+
+All the unrecognised uploads will be stored as attachments to your
+experiment. You can also upload more or remove attachments later on the "Edit
+metainfo" step:
+
+|exp_attachments|
+
+Or, add and remove attachments from inside the File manager, when you open an
+experiment. There is an "attachments" link by the experiment name and
+description:
+
+|fm_attachments|
 
 .. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
 .. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
@@ -286,5 +298,7 @@ an attachments button by the experiment name.
 .. |import_edit_metainfo| image:: images/import_edit_metainfo.png
 .. |add_metainfo_field| image:: images/add_metainfo_field.png
 .. |naming_scheme| image:: images/naming_scheme.png
-.. 
+.. |attachments| image:: images/attachments.png
+.. |exp_attachments| image:: images/exp_attachments.png
+.. |fm_attachments| image:: images/fm_attachments.png
 .. |metainfo_type_editor| image:: images/metainfo_type_editor.png
