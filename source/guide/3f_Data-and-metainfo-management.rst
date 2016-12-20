@@ -1,4 +1,4 @@
-Curating Data and managing metadata
+Curating Data and Managing Metadata
 -----------------------------------
 
 **Automate curation**
