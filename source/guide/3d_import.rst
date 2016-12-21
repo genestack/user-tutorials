@@ -78,21 +78,21 @@ Biodata Import
 
 There are several ways you can access the **Import** application:
 
-- clicking the “Import” button in the File Manager
+- clicking the **Import** button in the File Manager;
 
 |FM_import|
 
-- using “Import data” link on the Welcome Page
+- using **Import data** link on the Welcome Page;
 
 |WP_import|
 
-- clicking “Upload“ button when you choose sources in the dataflow you'd like
-  to run
+- clicking **Upload** button when you choose sources in the dataflow you'd like
+  to run;
 
 |DF_import|
 
-- using an import template. We’ll describe what import template is and how to
-  use it later in the guide
+- using an **import template**. We’ll describe what import template is and how to
+  use it later in the guide.
 
 |IT_import|
 
@@ -305,13 +305,14 @@ description:
 |fm_attachments|
 
 .. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
-.. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
+.. _NCBI Taxonomy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/
 .. _ChEBI ontology: https://www.ebi.ac.uk/chebi/
 .. _Cell ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
 .. _Uberon ontology: http://uberon.github.io/about.html
 .. |default_import_template| image:: images/default_import_template.png
 .. |import_templates| image:: images/import_templates.png
+   :scale: 45 %
 .. |import_start| image:: images/import_start.png
 .. |FM_import| image:: images/FM_import.png
 .. |WP_import| image:: images/WP_import.png
