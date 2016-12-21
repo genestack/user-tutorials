@@ -318,7 +318,7 @@ description:
 
 .. |default_import_template| image:: images/default_import_template.png
 .. |resumed_uploads| image:: images/resumed_uploads.png
-   :scale: 45 %
+   :scale: 85 %
 .. |import_templates| image:: images/import_templates.png
    :scale: 45 %
 .. |import_start| image:: images/import_start.png
