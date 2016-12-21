@@ -2,6 +2,7 @@ Curating Data and Managing Metadata
 -----------------------------------
 
 **Automate curation**
+
 To handle the increasing volume of biological data we standardize raw data imported from
 public archives by **automated curation**. In the curation process
 raw metadata associated with the **Public Experiments** is
@@ -115,7 +116,7 @@ an existing data flow or build a new one using the available applications on the
 
 |runDFfromME|
 
-.. _NCBI Taxonomy: https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
+.. _NCBI Taxonomy: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
 .. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
 .. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
