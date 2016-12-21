@@ -107,7 +107,7 @@ There are two ways to upload data into the platform:
 |import_start|
 
 2. Upload from URLs (FTP or HTTP/HTTPS) - specify URLs for separate files or
-  directories.
+   directories.
 
 |URL_import|
 
@@ -268,14 +268,14 @@ Click “Import” when you finish editing the table:
 |import_metadata|
 
 For instance, in this case we added new column “Age” and fill “Organism”,
-“Sex”, “Tissue” and “Disease” co,umns that came from default template.
+“Sex”, “Tissue” and “Disease” columns that came from default template.
 
 Attachments
 ~~~~~~~~~~~
 
 While importing an experiment into Genestack (just to remind you, an
 experiment is a special folder that is created when you import sequencing or
-microarray assays) and you can choose to attach various files to it. For
+microarray assays) you can choose to attach various files to it. For
 example, you could include a PDF file with the experiment plan, an R script
 that you used to process your data, etc. When you open your newly-imported
 experiment, all of the attachments will accompany it. They will be safely
