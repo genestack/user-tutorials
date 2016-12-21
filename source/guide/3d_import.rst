@@ -121,6 +121,11 @@ pipelines.
 
 |uploading_step|
 
+If during uploading you lose your Internet connection, you will be able to
+resume unfinished uploads later.
+
+|resumed_uploads|
+
 Click the “Import files” button to proceed.
 
 **Step 2: Format recognition**
@@ -310,7 +315,10 @@ description:
 .. _Cell ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
 .. _Uberon ontology: http://uberon.github.io/about.html
+
 .. |default_import_template| image:: images/default_import_template.png
+.. |resumed_uploads| image:: images/resumed_uploads.png
+   :scale: 45 %
 .. |import_templates| image:: images/import_templates.png
    :scale: 45 %
 .. |import_start| image:: images/import_start.png
