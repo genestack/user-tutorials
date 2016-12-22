@@ -49,8 +49,8 @@ and get some information on samples.
 
 Besides that, on the Metainfo Editor page you can run the assays through a pipeline with
 **"Star new data flow with application"**:
-you can use existing data flows matching for the assays of choice or build pipeline step-by-step
- option.
+you can use existing data flows matching for the assays of choice or build
+pipeline step-by-step option.
 
 |NewDF|
 
@@ -59,7 +59,6 @@ From the metainfo editor, you can also open the experiment in the **file manager
 the experiment's name at the top of the page and selecting **Explore > File Manager**.
 
 |fromMEtoFB|
-
 
 File Manager
 ~~~~~~~~~~~~
@@ -77,7 +76,7 @@ The panel (tree view) on the left side is our file system navigator.
 Here you can see many different folders. Let’s look at them in greater
 detail:
 
-**Created files** contains everything you have created on Genestack
+**Created files** contains everything you have created on Genestack
 Platform. Created a new import template? You’ll find it there. Processed
 some of your files? You’ll find the results there. Created a new data
 flow and want to share it? It will be in the Created files folder.
@@ -186,15 +185,15 @@ name has changed.
 
 |ParentContainers|
 
-Above the file system navigator you can find the **Import button**. Clicking
+Above the file system navigator you can find the **Import** button. Clicking
 it takes you to the Import app page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 
 |import|
 
-Next to the Import button, you can see a **New Folder button**. Using it
+Next to the Import button, you can see a **New Folder** button. Using it
 you will be able to create a new folder wherever you want. Another option
-- **New folder with selection** - appears when you have selected files and
+- **New folder with selection** - appears when you have selected files and
 want to put all of them in a separate folder.
 
 |NewFolder|
@@ -214,7 +213,7 @@ Sequencing Mapping app will be suitable in this case. To figure out what
 apps are recommended to process WGBS, WES, RNA-seq or other sequencing
 data, go to the “Pipelines and applications” section of this guide.
 
-**File search** in the top right corner allows you to search for files using
+**File search** in the top right corner allows you to search for files using
 their metadata (names, organism, method). To limit the search by file
 type or whether or not the file is shared with you, click on the little
 triangle inside the search box.
@@ -223,37 +222,35 @@ triangle inside the search box.
 
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
-folders. **To add files** to your briefcase hover over each
+folders. **To add** files to your briefcase hover over each
 individual file and use the special “briefcase” button that appears or
 select several files, right click on them and choose “Add to
-briefcase...”. **To delete an item** from your briefcase hover over it and
+briefcase...”. **To delete** an item from your briefcase hover over it and
 click on the “x” button. **To clear all** items from the briefcase, select
 “Clear all” option.
 
 |BriefCase|
 
-If you select a file, **three additional buttons** will show up, allowing
-you to **share**, **delete** the file or **view metainfo** (an “eye”-icon) for the
-file.
+If you select a file, **three additional** buttons will show up, allowing
+you to **share**, **delete** the file or **view metainfo** (an “eye”-icon) for
+the file.
 
 |3buttons1|
 
 |3buttons2|
 
-Use the **Share button** to share your
-data with colleagues (the share button will not be available if you
-are using a guest account).
+Use the **Share** button to share your data with colleagues (the share button
+will not be available if you are using a guest account).
 Read more about sharing on Genestack in the "Data and Metainfo Management" part of the Guide.
 
 |share|
 
-The **Delete button** allows you to remove your files from the
-system.
+The **Delete** button allows you to remove your files from the system.
 
 |delete|
 
-**View metainfo** gives you more information about the file: technical (file
-type, its accession and owner, when the file was created and modified,
+**View metainfo** option gives you more information about the file: technical
+(file type, its accession and owner, when the file was created and modified,
 etc.), biological (e.g. cell line, cell type, organism, etc.), and file
 permissions.
 
@@ -264,9 +261,6 @@ permissions.
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
 .. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
 .. _Whole Genome Sequencing Analysis: https://genestack.com/tutorial/wgs-analysis-on-genestack/
-
-
-
 .. |SaveMatchingAssays| image:: images/save-matching-assays.png
 .. |FileManager| image:: images/file-manager.png
 .. |PublicData| image:: images/public-data.png
