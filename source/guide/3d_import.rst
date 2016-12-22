@@ -272,8 +272,8 @@ Click “Import” when you finish editing the table:
 
 |import_metadata|
 
-For instance, in this case we added new column “Age” and fill “Organism”,
-“Sex”, “Tissue” and “Disease” columns that came from default template.
+For instance, in this case we added new column “Age” and filled “Organism”,
+“Sex”, “Tissue” and “Disease” columns that came from the default template.
 
 Attachments
 ~~~~~~~~~~~
