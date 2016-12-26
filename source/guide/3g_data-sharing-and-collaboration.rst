@@ -96,7 +96,8 @@ search for it in the File Search text box, which you can find on the home page,
 in the File Browser and in the right-hand side dock in every window.
 
 Once you find the file you want to share, select it in the File Manager by
-ticking the checkbox next to it, then click the "Share" button in the top bar.
+ticking the checkbox next to it, then click the "Share" button in the top bar
+or right-click on the file and “Share” option in the context menu.
 
 |sharing_experiment|
 
@@ -142,6 +143,7 @@ will be located in that folder.
 .. |profile_organisation| image:: images/profile_organisation.png
 .. |profile_manage_users| image:: images/profile_manage_users.png
 .. |pr_manage_users| image:: images/pr_manage_users.png
+   :scale: 45 %
 .. |profile_manage_groups| image:: images/profile_manage_groups.png
 .. |manage_create_groups| image:: images/manage_create_groups.png
 .. |group_add_member| image:: images/group_add_member.png
