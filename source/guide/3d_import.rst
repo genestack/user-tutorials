@@ -183,14 +183,14 @@ later in the Data and Metainfo Management section of the guide.
 Also, you can create your own private dictionary importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
 
-**What is an import template?**
+.. note:: **What is an import template?**
 
-Import templates allow you to select what metainfo attributes of your imported
-files will be tightly controlled (so you don’t lose any information in the
-process). Import templates allow you to set default fields for file metadata
-based on file type (e.g. Experiments, Discrete Genomic Data, Genetic
-Variations, etc.). Of course, if you’re only importing mapped reads, you don’t
-need to specify metainfo attributes for other data types.
+          Import templates allow you to select what metainfo attributes of your imported
+          files will be tightly controlled (so you don’t lose any information in the
+          process). Import templates allow you to set default fields for file metadata
+          based on file type (e.g. Experiments, Discrete Genomic Data, Genetic
+          Variations, etc.). Of course, if you’re only importing mapped reads, you don’t
+          need to specify metainfo attributes for other data types.
 
 You can select which import template to use in two ways: from the Welcome
 Page, or during the 3rd step of the import process by right-clicking on the
