@@ -59,10 +59,12 @@ organisation, you will be provided with autocomplete:
 
 |group_add_member|
 
-Note that you can also add users from other organisations to a user group
-("cross-organisation group"). However, in that case, every user invitation will
-need to be approved by an organisation administrator of both your organisation
-and the other user's organisation.
+.. note:: **Can I add users from other organisations?**
+
+          You can also add users from other organisations to a user group
+          ("cross-organisation group"). However, in that case, every user invitation will
+          need to be approved by an organisation administrator of both your organisation
+          and the other user's organisation.
 
 Once you have added a user from your organisation to the newly created group,
 you will also be able to set up their permissions within the group. Within a
@@ -76,7 +78,7 @@ group, a user can be:
 By default, newly added users will be granted the lowest permission level
 (Non-sharing user). You can change that using the dropdown next to their name.
 
-|users_permissions.png|
+|users_permissions|
 
 Learn more on how to Create and Manage Groups `here`_.
 
@@ -85,31 +87,56 @@ Learn more on how to Create and Manage Groups `here`_.
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Now that the group is setup, you can share your files. In fact, you can share
+everything you do on the platform: data, scripts, results, data flows, and
+import templates. Let's share the imported experiment.
 
+Go to the “Imported files” folder in File Manager. Alternatively, you can
+search for it in the File Search text box, which you can find on the home page,
+in the File Browser and in the right-hand side dock in every window.
 
+Once you find the file you want to share, select it in the File Manager by
+ticking the checkbox next to it, then click the "Share" button in the top bar.
 
+|sharing_experiment|
 
-You can share everything you do on the platform: files, scripts,
-results, data flows, and import templates.
+From there, you will be taken to the file sharing dialog, which asks you to
+select a group to share the file with. By default, files are shared with
+read-only permissions (both for data and metadata). But you have the option of
+giving members the ability to edit the files in addition to just viewing them.
+This does not stop them from using the shared files in data flows, but it does
+prevent them from editing parameters in files that are not yet initialized as
+well as metadata for both initialized and uninitialized files.
 
-To share a file with your group, select it, and click on the “Share”
-button that appears in the top left corner of the page and follow the
-instructions. You have the option of giving members the ability to edit
-the files in addition to viewing them. This does not stop them from
-using the shared files in data flows, but it does prevent them from
-editing parameters in files that are not yet initialized as well as
-metadata for both initialized and uninitialized files.
+|sharing_dialog|
 
-|managing-and-sharing-tutorial-tick-box-for-write-permissions-in-sharing-popup|
+Once you click the blue "Share" button, you will be prompted for your password,
+and then asked whether you would like to link the file into the group's shared
+folder.
 
-If a file is shared with a group, members
-can find that file in searches and file provenance, however it will not
-be present in the main group folder. This helps reduce clutter while
-maintaining functionality for dependencies and intermediate files. If
-you want the shared file to be present in the group folder you need to
-use the “Link” button from the sharing popup. All files you share with
-other people, along with all files shared with you, will be located in
-the “Shared with me” folder.
+|sharing_with_link|
+
+If you link the file into that folder, it will be visible to the group's users
+when they open that folder (which can make it easier for them to find it). If
+you click "No", the file will not be linked into the group folder but the
+group's users will still be able to find the file through the File Search box
+(for instance, if you tell them the accession of the file), in File Provenance
+and through the Experiment Browser.
+
+.. note:: **What is the differance between linking and copying?**
+
+          We use the word "linking" and not "copying", because in Genestack,
+          adding a file to a folder does not physically create a duplicate of
+          that file (unlike copy-pasting in your OS). It just adds a link to
+          that file from the folder (similar to symbolic links on UNIX).
+
+Each group has an associated group folder which you can access from the File
+Manager under "Shared with me" in the left-hand side panel.
+
+|shared_with_me|
+
+All files you share with other people, along with all files shared with you,
+will be located in that folder.
 
 .. |profile_menu| image:: images/profile_menu.png
 .. |profile_organisation| image:: images/profile_organisation.png
@@ -119,4 +146,7 @@ the “Shared with me” folder.
 .. |manage_create_groups| image:: images/manage_create_groups.png
 .. |group_add_member| image:: images/group_add_member.png
 .. |users_permissions| image:: images/users_permissions.png
-.. 
+.. |sharing_experiment| image:: images/sharing_experiment.png
+.. |sharing_dialog| image:: images/sharing_dialog.png
+.. |sharing_with_link| image:: images/sharing_with_link.png
+.. |shared_with_me| image:: images/shared_with_me.png
