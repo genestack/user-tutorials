@@ -34,8 +34,7 @@ be automatically imported as an experiment.
   Additional information on the experiment can be added as attachments in any
   file format.
 
-**NOTE: What's the difference between experiments and folders?**
-Forum3_
+**NOTE: What's the difference between experiments and folders?** Forum3_
 
 Moreover, when you perform any analysis on Genestack, you can create other data
 types, which are not yet supported in import. Here is the list of them:
@@ -102,16 +101,16 @@ Import data includes three steps:
 
 There are two ways to upload data into the platform:
 
-1. Use data from your computer - select or drag-and-drop files.
+1. **Use data from your computer** - select or drag-and-drop files.
 
 |import_start|
 
-2. Upload from URLs (FTP or HTTP/HTTPS) - specify URLs for separate files or
+2. **Upload from URLs (FTP or HTTP/HTTPS)** - specify URLs for separate files or
    directories.
 
 |URL_import|
 
-"Use previous uploads" option allows you to avoid uploading the data a
+**Use previous uploads** option allows you to avoid uploading the data a
 second time.
 
 Files are uploaded in multiple streams to increase upload speed. Uploading
