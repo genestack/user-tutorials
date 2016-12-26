@@ -25,6 +25,8 @@ We categorized our terminological resources in the following sets:
   Compound and Cell type fields, respectively), `Uberon Ontology`_ (covering
   anatomical structures in animals) and other ontologies.
 
+.. _NCBI Taxonomy: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
+
 Besides, the importance of dictionaries in automated curation of public experiments,
 the controlled terms can be used to fill in and edit metadata for imported
 files or those created with the platform. The use of standardized terms will help to
@@ -116,7 +118,6 @@ an existing data flow or build a new one using the available applications on the
 
 |runDFfromME|
 
-.. _NCBI Taxonomy: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
 .. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
 .. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
@@ -135,4 +136,3 @@ an existing data flow or build a new one using the available applications on the
 .. |namingScheme| image:: images/naming-scheme.png
 .. |runDFfromME| image:: images/run-df-from-me.png
 .. |addAttribute| image:: images/add-attribute.png
-

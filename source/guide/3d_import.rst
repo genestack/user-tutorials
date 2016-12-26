@@ -34,7 +34,7 @@ be automatically imported as an experiment.
   Additional information on the experiment can be added as attachments in any
   file format.
 
-**NOTE: What's the difference between experiments and folders?** Forum3_
+.. note:: **What's the difference between experiments and folders?** Forum3_
 
 Moreover, when you perform any analysis on Genestack, you can create other data
 types, which are not yet supported in import. Here is the list of them:
@@ -178,6 +178,8 @@ ontology`_, `Cell ontology`_, etc and created our own controlled vocabularies
 (to cover e.g. Sex, Method, Platform fields). We'll back to the dictionaries
 later in the Data and Metainfo Management section of the guide.
 
+.. _NCBI Taxonomy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/
+
 Also, you can create your own private dictionary importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
 
@@ -309,7 +311,6 @@ description:
 |fm_attachments|
 
 .. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
-.. _NCBI Taxonomy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/
 .. _ChEBI ontology: https://www.ebi.ac.uk/chebi/
 .. _Cell ontology: https://bioportal.bioontology.org/ontologies/CL
 .. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html

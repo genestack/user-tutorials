@@ -62,6 +62,4 @@ If you want more information on the concepts and history of
 bioinformatics, we’d like to refer you to this awesome article_ by N.M.
 Luscombe, D. Greenbaum and M. Gerstein (2001)
 
-
-
-.. _article: https://www.google.com/url?q=https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf&sa=D&ust=1480960531653000&usg=AFQjCNFUGLBg9Y8pGX_C7QUt__SuRovLEw
+.. _article: https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf

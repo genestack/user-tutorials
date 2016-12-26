@@ -62,8 +62,7 @@ Read more about collaboration on Genestack here__.
 Manage Users
 ~~~~~~~~~~~~
 
-In this section, you can create new users or change password of your
-users.
+In this section, you can create new users or change password of your users.
 You can watch a video on managing users on Genestack here__.
 
 |ManageUsers|

@@ -1,4 +1,3 @@
-
 Genestack Features
 ==================
 
@@ -77,8 +76,7 @@ Sequencing Assay” (those names may sound funny, but are helpful when
 tracking what apps you used already. Remember you can change the file
 names!).
 
-**NOTE: How can you create a data flow?**
-Forum_ `Tutorial`__
+.. note:: **How can you create a data flow?** Forum_  `Tutorial`__
 
 When an application creates a new file, it specifies what should happen
 when it is initialised: a script, a download, indexing, computation.
@@ -91,8 +89,7 @@ other files, and later computed all at once. Remember – you always need
 to initialize your files to view your results (same rule goes for data
 flows). Once you do, any further changes become impossible.
 
-**NOTE: How do you initialize your files?**
-Forum1_  Forum2_ `Tutorial`__
+.. note:: **How do you initialize your files?** Forum1_  Forum2_  `Tutorial`__
 
 Public experiments collection from databases and archives
 ---------------------------------------------------------

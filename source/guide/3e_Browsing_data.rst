@@ -48,9 +48,9 @@ and get some information on samples.
 |EditMetainfo|
 
 Besides that, on the Metainfo Editor page you can run the assays through a pipeline with
-**"Star new data flow with application"**:
-you can use existing data flows matching for the assays of choice or build
-pipeline step-by-step option.
+**"Start new data flow with application"**. You can:
+- existing data flows matching for the assays of choice;
+- build the pipeline step-by-step option.
 
 |NewDF|
 
@@ -160,11 +160,13 @@ with to make life a bit simpler for our users. This folder contains:
 
    Currently, we can offer you the following tutorials:
 
-  -  `Getting Started With Genestack Platform`_
-  -  `Testing Differential Gene Expression`_
-  -  `Whole Genome Bisulfite Sequencing Analysis`_
-  -  `Whole Exome Sequencing Analysis`_
-  -  `Whole Genome Sequencing Analysis`_
+-  `Getting Started With Genestack Platform`_
+-  `Testing Differential Gene Expression`_
+-  `Whole Genome Bisulfite Sequencing Analysis`_
+-  `Whole Exome Sequencing Analysis`_
+-  `Whole Genome Sequencing Analysis`_
+
+.. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
 
 To access the **context menu** for a given file, you can either right or left click
 on the respective entry in the file browser. The topmost entry is the
@@ -259,7 +261,6 @@ permissions.
 .. _Getting Started With Genestack Platform: https://genestack.com/tutorial/getting-started-with-genestack-platform/
 .. _Testing Differential Gene Expression: https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/
 .. _Whole Genome Bisulfite Sequencing Analysis: https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/
-.. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
 .. _Whole Genome Sequencing Analysis: https://genestack.com/tutorial/wgs-analysis-on-genestack/
 .. |SaveMatchingAssays| image:: images/save-matching-assays.png
 .. |FileManager| image:: images/file-manager.png
