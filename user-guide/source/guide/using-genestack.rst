@@ -541,6 +541,7 @@ the experiment's name at the top of the page and selecting **Explore > File Mana
 
 File Manager
 ~~~~~~~~~~~~
+
 Like on any operating system, the **File Manager** is where you can easily access
 all of your files, organise them into folders, and open them with various applications.
 
@@ -607,7 +608,7 @@ to make life a bit simpler for our users. This folder contains:
 #. **Public data flows**: all data flows available to our users, including
    tutorial data flows and the ones found on the Welcome page;
 #. **Public experiments**: this is a feature we’re particularly proud of. We
-   have preloaded the platform with thousands and thousands of publicly
+   have pre-loaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
    ArrayExpress, SRA, and ENA. Currently we have about 100,000
    experiments in our database.
@@ -615,26 +616,30 @@ to make life a bit simpler for our users. This folder contains:
    various tutorials. To read more on particular analysis types, go to
    `<https://genestack.com/tutorials/>`_.
 
-To access the **context menu** for a given file, you can either right or left click
+To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
 app that was used to generate this file, or the app that should be used
 to view it. The next four entries are submenus for each of the four different
 types of apps that can be used on the file. Further down are options for
 viewing and re-using the pipeline used to generate the file. The final
 section allows you to manage file locations and names. For folders,
-left-clicking opens the folder, while right-clicking opens the menu. You
-can open file menus whenever you see a file name in link colors when
-using the platform. The **Add to** option allows you to copy files while the
-**Move to** option removes the original.
+left-clicking opens the folder, while right-clicking opens the menu.
+The **Add to** and **Move to** action allow you to link or move a file to a chosen directory.
 
-**Show all parent containers** gives you the option to quickly find all
-copies of a file that are available to you. The **file accession** is a
-unique identifier which allows you to find a file even when the file
-name has changed.
+.. note:: **This does not perform a copy**
+
+          We use the word "linking" and not "copying" in this context, because in Genestack,
+          adding a file to a folder does not physically create a duplicate of
+          that file (unlike copy-pasting in your traditional operating system). It just adds a link to
+          that file from the folder (similar to symbolic links on UNIX).
+
+**Show all parent containers** shows you a list of all the folders in which the
+current file is linked. The **file accession** is a unique identifier attached to each file.
+Unlike other metainfo attributes, it will never change for any file.
 
 |ParentContainers|
 
-Above the file system navigator you can find the **Import** button. Clicking
+Above the file manager pane, you can find the **Import** button. Clicking
 it takes you to the Import app page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 
@@ -648,35 +653,34 @@ want to put all of them in a separate folder.
 |NewFolder|
 
 The **Preprocess, Analyse, Explore and Manage** menus at the top of the page
-correspond to the four main actions you can undertake with your data.
+correspond to the four groups of applications that can be used to process and view data.
 These menus will become available when you select a file. 
 
 |MatchingApps|
 
-These apps are "clever" –  when you choose a file, the system will
-suggest  apps which can work with the specific file type (e.g.
-sequencing assay). However, you still need to think about the nature of
-the data. For instance, if you want to align a raw WGBS sequencing assay
+When you choose a file, the system will suggest apps which can work with the specific
+file type (e.g. sequencing assay). However, you still need to think about the nature of
+the data. For instance, if you want to align a raw WGBS sequencing assay,
 Genestack will suggest several mappers, but only the Bisulfite
 Sequencing Mapping app will be suitable in this case. To figure out what
 apps are recommended to process WGBS, WES, RNA-seq or other sequencing
-data, go to the "Pipelines and applications" section of this guide.
+data, go to the :ref:`pipelines` section of this guide.
 
-**File search** in the top right corner allows you to search for files using
-their metadata (names, organism, method). To limit the search by file
-type or whether or not the file is shared with you, click on the little
-triangle inside the search box.
+**File search** in the top-right corner allows you to search for files by
+metadata (names, organism, method). To limit the search by file
+type or whether or not the file is shared with you, click on the arrow
+inside the search box.
 
 |FileSearch|
 
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
-folders. **To add** files to your briefcase hover over each
+folders. **To add** files to your briefcase, hover over each
 individual file and use the special "briefcase" button that appears or
-select several files, right click on them and choose "Add to
+select several files, right-click on them and choose "Add to
 briefcase...". **To delete** an item from your briefcase hover over it and
 click on the "x" button. **To clear all** items from the briefcase, select
-"Clear all" option.
+the "Clear all" option.
 
 |BriefCase|
 
@@ -690,7 +694,7 @@ the file.
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
-Read more about sharing on Genestack in the "Data and Metainfo Management" part of the Guide.
+Read more about sharing on Genestack in the section :ref:`sharing`.
 
 |share|
 
@@ -698,7 +702,7 @@ The **Delete** button allows you to remove your files from the system.
 
 |delete|
 
-**View metainfo** option gives you more information about the file: technical
+The **View metainfo** button gives you more information about the file: technical
 (file type, its accession and owner, when the file was created and modified,
 etc.), biological (e.g. cell line, cell type, organism, etc.), and file
 permissions.
@@ -731,6 +735,8 @@ permissions.
 
 
 .. _metainfo-editor:
+
+.. TODO this is copy-pasted from a workshop guide, wrong tone
 
 Curating Data and Managing Metadata
 -----------------------------------
@@ -800,8 +806,7 @@ the popover button **Add another <item>**
 
 |addAttribute|
 
-
-Using Metainfo Editor app, you can also retrieve the metadata from a local CSV
+Using the Metainfo Editor app, you can also retrieve the metadata from a local CSV
 or Excel file and add it to the Genestack assays. Click **import metainfo from spreadsheet**
 button and select a file containing metainfo for you data.
 
@@ -859,8 +864,8 @@ Sharing Data and Collaboration
 Access control model
 ~~~~~~~~~~~~~~~~~~~~
 
-There are three concepts around access control in Genestack: users, user groups
-and organisations. Each user belongs to a single organisation (typically
+There are three concepts around access control in Genestack: **users**, **groups**
+and **organisations**. Each user belongs to a single organisation (typically
 corresponding to the user's company or institution, or a specific team within
 the institution). Organisations have two types of users: regular users and
 administrators, who have the right to add new users, and deactivate existing
@@ -877,7 +882,7 @@ top-right corner of any page.
 Managing users
 ~~~~~~~~~~~~~~
 
-If you are an administrator of your organisation, the menu under your email
+**If you are an administrator of your organisation**, the menu under your email
 address will also have an additional item, "Manage Users", which takes you to
 the organisation's user management page.
 
@@ -887,36 +892,35 @@ From there, administrators can add or disable users, and reset passwords.
 
 |pr_manage_users|
 
-Sharing in Genestack is done through user groups: every user can create any
-number of user groups, and add other users to them. Each file in the system can
-be shared with any number of user groups, who are granted different permissions
+Sharing in Genestack is done through groups: every user can create any
+number of groups, and add other users to them. Each file in the system can
+be shared with any number of groups, who are granted different permissions
 (read-only, read and write, etc.).
 
 Managing groups
 ~~~~~~~~~~~~~~~
 
-Now, back to sharing our files. To share them, we first need to setup a user
-group. To manage your user groups, click again on your email address at the
+To manage your groups, click on your email address at the
 top-right corner of any screen and select "Manage Groups".
 
 |profile_manage_groups|
 
-From there, you can create groups using "Create group" button, add or remove
+From there, you can create groups using the "Create group" button, add or remove
 people from groups, and change users' privileges within groups. By default, you
-will be a group administrator of any group that is created by your user. Let's
-create a new group "Alpha Corporation release".
+will be a group administrator of any group that is created by your user.
 
 |manage_create_groups|
 
-Click "Add member" button to add people to this group. From there you will be
+If you are an administrator of a group, you can click the "Add member" button
+to add people to a group. From there you will be
 prompted for the e-mail of the user you want to add. If they are in your
-organisation, you will be provided with autocomplete:
+organisation, you will be provided with autocomplete
 
 |group_add_member|
 
 .. note:: **Can I add users from other organisations?**
 
-          You can also add users from other organisations to a user group
+          You can also add users from other organisations to a group
           ("cross-organisation group"). However, in that case, every user invitation will
           need to be approved by an organisation administrator of both your organisation
           and the other user's organisation.
@@ -935,6 +939,8 @@ By default, newly added users will be granted the lowest permission level
 
 |users_permissions|
 
+.. TODO I don't like the fact that we are linking to tutorials and videos from here
+
 Learn more on how to Create and Manage Groups `here`_.
 
 .. _here: https://genestack.com/tutorial/managing-and-sharing-data/
@@ -942,16 +948,13 @@ Learn more on how to Create and Manage Groups `here`_.
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that the group is set up, you can share your files.
-Any file created on Genestack can be shared. Let's share the imported experiment.
 
-Go to the "Imported files" folder in File Manager. Alternatively, you can
-search for it in the File Search text box, which you can find on the home page,
-in the File Browser and in the right-hand side dock in every window.
+If you are a sharing user or an administrator of a group, you can share files with that group.
+Any file created on Genestack can be shared.
 
-Once you find the file you want to share, select it in the File Manager by
-ticking the checkbox next to it, then click the "Share" button in the top bar
-or right-click on the file and "Share" option in the context menu.
+To share a file, you can select it in the File Manager by
+ticking the checkbox next to it, then clicking the "Share" button in the top bar.
+Alternatively you can right-click on the file and select the "Share" option in the context menu.
 
 |sharing_experiment|
 
@@ -959,9 +962,6 @@ From there, you will be taken to the file sharing dialog, which asks you to
 select a group to share the file with. By default, files are shared with
 read-only permissions (both for data and metadata). But you have the option of
 giving members the ability to edit the files in addition to just viewing them.
-This does not stop them from using the shared files in data flows, but it does
-prevent them from editing parameters in files that are not yet initialized as
-well as metadata for both initialized and uninitialized files.
 
 |sharing_dialog|
 
@@ -977,13 +977,6 @@ you click "No", the file will not be linked into the group folder but the
 group's users will still be able to find the file through the File Search box
 (for instance, if you tell them the accession of the file), in File Provenance
 and through the :ref:`experiment-browser`.
-
-.. note:: **What is the difference between linking and copying?**
-
-          We use the word "linking" and not "copying", because in Genestack,
-          adding a file to a folder does not physically create a duplicate of
-          that file (unlike copy-pasting in your OS). It just adds a link to
-          that file from the folder (similar to symbolic links on UNIX).
 
 Each group has an associated group folder which you can access from the File
 Manager under "Shared with me" in the left-hand side panel.
@@ -1011,9 +1004,7 @@ will be located in that folder.
 Running and reproducing data flows
 ----------------------------------
 
-Your data has been imported on the platform, you have checked its
-quality and chosen the apps you wish to use to analyse your data. Here
-is how you can create your pipeline.
+.. TODO rewrite this section
 
 |pipeline_building|
 
@@ -1110,8 +1101,8 @@ You can track the progress of this task in Task Manager. Doing this will begin
 initialization of all the files (including intermediate files) you have
 created whilst building this pipeline.
 
-Running the Data flows
-~~~~~~~~~~~~~~~~~~~~~~
+Running a data flow
+~~~~~~~~~~~~~~~~~~~
 
 There are two apps that can be used to edit and run a data flow. The first one
 you will usually see is the Data Flow Editor. This app presents a visual
@@ -1173,10 +1164,11 @@ the data flow and initialize your computations.
 
 File Provenance
 ~~~~~~~~~~~~~~~
+
 **Reproducibility of pipelines**
 
 Complete reproducibility is one of the core strengths of Genestack. For any
-file in the system you can view the file provenance and then replay the same
+file in the system, you can view the file provenance and then replay the same
 exact analysis on other data files.
 
 |file_provenance|
@@ -1184,15 +1176,13 @@ exact analysis on other data files.
 The File Provenance app also allows you to view the text description of the
 pipeline used to create a given file. Clicking the "View as text" button
 allows you to see what parameters and what tool versions were used at each
-analytical step. You can copy this text and e.g. use it in your publication.
+analytical step. You can copy this text and use it in a publication or a report.
 
-|view_as_text|
-
-Clicking "New folder with files" button will create you a folder with all the
+Clicking the "New folder with files" button will create a folder with all the
 files used in this pipeline.
 
-Later, if you’ll want to reuse the same pipeline on different data, you can
-create the dataflow identical to the pipeline used to create the original file,
+Later, if you want to reuse the same pipeline on different data, you can
+create the data flow identical to the pipeline used to create the original file,
 by selecting the file of interest and choosing "Create new Data Flow" from the
 available "Manage" apps.
 

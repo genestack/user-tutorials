@@ -4,20 +4,7 @@
 Pipelines and applications
 ==========================
 
-The basic steps of bioinformatics analysis are: data preparation, mapping,
-difference analysis, and result visualisation. On Genestack we have divided
-the available applications into four categories based on what they do:
-Preprocess, Analyse, Explore, and Manage. Apps in the ***preprocess*** section
-are used to prepare raw or mapped data for future computations
-(by improving their quality) or to uncover any poor quality data or contaminants.
-Apps in the Analyse section are computational apps used to perform actual data
-analysis. Apps in the Explore section are interactive, visual applications
-allowing you to view the results of your analyses, identify the most interesting
-findings and interpret your results. The manage section apps allow you to keep
-track of data, create a template for your pipeline and explore and edit the
-metadata of your files.
-
-Applications available on Genestack fall into four categories:
+Applications available on Genestack are grouped into four categories:
 Preprocess, Analyse, Explore and Manage.
 
 Preprocess contains all applications used to process files pre- or
@@ -32,18 +19,16 @@ computations. Apps for visualizing QC reports, the Genome Browser, apps
  for exploring  genomic variants, and many more.
 
 Manage contains apps used to manage your data: apps dealing with data
-flows, file provenance and so on.
+flows, file provenance, export, metadata editing and so on.
 
 An extended version (including information on licensing and references)
-of every application description found in this guidebook can be found in
-"About application" section of each of the individual apps.
+of every application description found in this guide can be found in the
+"About application" text of each of the individual apps.
 
-How to find the About Application section?
+To view this text for a specific app, click on the application's name at the
+top-left corner of the page, and in the dropdown menu select "About application".
 
-On the app page click on the name of the app in the upper left corner
-and select  "About application".
-
-|about_app|
+.. image:: images/about_app.png
 
 Sequencing data
 ---------------
@@ -55,7 +40,10 @@ Raw Reads quality control and preprocessing
 
 FastQC report
 ^^^^^^^^^^^^^
-Let’s begin the analysis pipeline. The usual first step of any NGS data
+
+.. TODO this is a tutorial on data flows !!!!!!
+
+The usual first step of any NGS data
 analysis is quality control of raw sequencing reads. According to the
 "garbage in, garbage out" rule, if we begin our analysis with poor
 quality reads, we shouldn’t expect great results at the end. Luckily,
@@ -64,13 +52,11 @@ if that proves to be unsatisfactory.
 
 How can you check the quality of the data?
 
-The tool used for raw reads quality check is FastQC Report app, based on
-`FastQC tool`_ developed
-by Simon Andrews at the Babraham Institute.
+The tool used for raw reads quality check is FastQC Report app, based on the
+`FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 
 The quickest way to perform the quality assessment of your data in
-Genestack is via the use of one of the public data flows– Raw Reads
-Quality Control Data Flow.
+Genestack is via the public data flow "Raw Reads Quality Control".
 
 In order to use it, select all of your raw reads, right click on them
 and from the dropdown menu select "Run dataflow on selection" and choose
@@ -284,16 +270,14 @@ sequence duplication level.
 Multiple QC Report
 ^^^^^^^^^^^^^^^^^^
 
-You can also view a couple of reports at once using our Multiple QC
-Report App. Go to the Created Files folder, select all the FastQC
-reports you wish to compare, right click and select Multiple QC report.
+You can also display metrics from multiple reports at once using the Multiple QC Report app.
+It accepts as input a collection of FastQC or other types of QC reports.
 
-Select from a range of QC keys to display on the plot (Total Nucleotide
-Count (mate 1 and 2), GC Content % (mate 1 and 2), Number of distinct
-reads (mate 1 and 2), number of reads (mate 1 and 2).
+You can select from a range of QC keys to display on a barplot, you can also select
+which metainfo to display in the plot labels, and you can sort reports by a specified metric.
 
-You can highlight the interesting reports and put them in a separate
-folder.
+Finally, you can select reports by drawing a rectangle over the barplot and subsequently move the
+corresponding files into a separate folder (for instance, to exclude outliers).
 
 <screenshot>|image42|
 
@@ -306,17 +290,16 @@ should not be used for further analysis.
 Subsample Reads
 ^^^^^^^^^^^^^^^
 
-Action:  used to create a random subset of raw reads.
+Action: used to create a random subset of raw reads.
 
 The number of reads in the subset can be changed (default: 50,000). It
 is also possible to specify a fraction of the original number of
-reads.Changing the random seed value will let you create different
-subsets with the same number of reads. Using the same random seed and
+reads. Changing the seed value will let you create different
+subsets with the same number of reads. Using the same seed and
 the same number of reads will result in identical subsets.
 
 This application is based on Seqtk_.
 
-Best used when:
 
 When the quality of the raw reads is unsatisfactory, several
 preprocessing apps are available on the platform that can increase the
@@ -339,8 +322,6 @@ all identical reads for each position.
 
 This tool is based on Tally_.
 
-Best used
-when:
 
 If you suspect contamination with primers, or some  other repetitive
 sequence. This should be evident from Sequence duplication levels and
@@ -348,28 +329,22 @@ Overrepresented Sequences of the FastQC report. Keep in mind this app
 should not be used with RNA-seq data as it will remove observed
 differences in expression level.
 
-After completing preprocessing, it’s a good idea to run a FastQC report
-on the preprocessed files to see if the quality has improved.
-
 Filter By Quality Score
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: discards reads in a raw reads sample based on Phred33 quality
+Action: discards reads from a sequencing assay based on Phred33 quality
 scores. You can change the minimum quality score, which is set to 20 by
-default. A score of 20 means that there is a 1/100 probability that a
-base was called incorrectly. In comparison, a score of 30 corresponds to
-a 1/1000 probability.
+default. A score of 20 means that there is a 1% chance that the corresponding
+base was called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an incorrect base call.
 
 You can also discard reads specifying a minimum percentage of bases to
 be above the minimum quality score.
 
-This tool is based on fastq\_quality\_filter, which is part of the
+This tool is based on *fastq\_quality\_filter*, which is part of the
 FASTX-Toolkit_.
 
-Best used when:
-
-If you have some low quality reads, but others are high-quality. You
-should be able to tell if this is the case from the shape of the Per
+This app is best used if you have some low quality reads, but others are high-quality.
+You should be able to tell if this is the case from the shape of the Per
 sequence quality scores plot from FastQC. It may also be worth trying
 this app if the per base sequence quality is low.
 
@@ -384,42 +359,20 @@ The app uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies
 and platform used. For instance, it contains widely used PCR primers and
 adaptors for Illumina, ABI etc. You can view the full list
-here: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt.
+`here <https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt>`_.
 
 This tool is based on `fastq-mcf`_ , one of the EA-Utils_ utilities.
 
-Best used when:
-
-You have irregularities in GC content, in base content at the start of
+Best used when you have irregularities in GC content, in base content at the start of
 reads, duplicated reads. Since this QC app relies on sequence matching
 it should be run first if used in conjunction with other QC apps
 
 Trim Low Quality Bases
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Action: removes bases with a low phred33 quality score in raw reads
-data. Note that a quality value of 3 means that there is a 50% chance
-the base is wrong, and lower values represent even higher probabilities
-of error. That’s why it can be useful to remove such bases from your
-data.
-
-Imagine you have a sequence:
-
-Sequence:             C     G    T       A       G       A     C     T
-
-Phred score          10   20   30      40     40      30    20   10
-
-Error probability    .1   .01  .001  .0001 .0001 .001 .01   .1
-
-The app will find the fragment of the read where the sum of all
-probability errors will not be more than 0.01 (in our case).
-
-In this case, the best sequence will be "TAGA" (.001\^2 + .0001\^2 =
-.0022). Other fragments will have the sum of error probabilities more
-than the cutoff (0.01)
+Action: isolate high-quality regions from raw reads
 
 Best used when:
-
 If your per-base quality declines over the course of your reads the Trim
 Low Quality Bases will select the highest quality region for each read.
 
@@ -434,13 +387,13 @@ reads in a sample.
 You should specify the first base and the last base that should be
 kept. For example, if you set 5 as the first base to keep and 30 as the
 last base to keep, it means that the application trims all nucleotides
-to the 5 position and all nucleotides from the 30th base.
+before the 5th position, and all nucleotides after the 30th base.
 
 This tool is based on fastx_trimmer, which is part of the
 FASTX-Toolkit.
 
 Best used when: Trim to fix length is helpful when you want to obtain
-reads of specific length (regardless of the quality).
+reads of a specific length (regardless of the quality).
 
 Mapped Reads Preprocessing and QC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -668,7 +621,8 @@ Action: allows you to merge two or more Genetic Variations files into a
 single file.
 
 This application is based on
-BCFtools_ <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`__.
+`BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools
+.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`_.
 
 Concatenate Variants 
 ^^^^^^^^^^^^^^^^^^^^^
@@ -685,8 +639,8 @@ start of the second input will be allowed to come before the last
 position of the first input. There is an option to remove duplicated
 variants to make sure that there are no redundant results.
 
-This application is based on
-BCFtools_ <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools.html&sa=D&ust=1480960531926000&usg=AFQjCNFoChUsLd1NE-xsBd1GInhmlBtuHw>`__.
+This application is based on `BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools
+.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`_.
 
 
 .. _FastQC tool:  http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
@@ -738,21 +692,20 @@ Let’s take a look at the app page and talk about various parameters:
 
 Details on various settings:
 
-1)If you are using strand-specific RNA-seq data, the option
+If you are using strand-specific RNA-seq data, the option
 "Strand-specificity protocol" will let you choose between the "dUTP" and
 "ligation" method. If you are not sure whether your RNA-seq data is
 strand-specific or not, you can try using Subsample reads to make a
 small subsample, map it with Spliced Mapping and check the coverage in
-Genome Browser for genes on the two
-strands.
+Genome Browser for genes on both strands.
 
-2)By default, the application uses annotated transcripts from the
+By default, the application uses annotated transcripts from the
 Reference Genome to distinguish between novel and known junctions. Using
 the option "Rule for mapping over known annotation" you can restrict
 mappings only across known junctions or infer splice junctions without
 any reference annotation.
 
-3)With default settings, the application will report the single best
+With default settings, the application will report the single best
 mapping for each read, even if there are multiple valid mapping
 positions. The option "Number of "best" mappings to report" lets you
 increase the number of reported mappings. This can be used together with
@@ -761,7 +714,7 @@ uniquely or to multiple positions, e.g. report up to 5 possible
 mappings, and only for multi-hit reads. If you want to be stricter, you
 can set the number of allowed mismatches from 2 to 1 or 0.
 
-4)For paired reads, using the option "Disallow unique mappings of one
+For paired reads, using the option "Disallow unique mappings of one
 mate" you can discard pairs of reads where one mate maps uniquely and
 the other to multiple positions. Selecting "Disallow discordant
 mappings" will discard all mappings where the two mates map uniquely but
@@ -769,30 +722,31 @@ with unexpected orientation, or where the distance between two mapped
 mates differs from and internally estimated fragment length, including
 mates mapping to different chromosomes.
 
-We used this app in the Testing Differential Gene Expression tutorial
+This app is used in the the Testing Differential Gene Expression tutorial
 that can be found
-`here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-rna-seq-reads-onto-a-reference-genome/&sa=D&ust=1480960531934000&usg=AFQjCNFMSiaZdYZX9Sp1-nzMlTdCUM_5DA>`__ (link)
+`here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-rna-seq-reads-onto-a-reference-genome/&sa=D&ust=1480960531934000&usg=AFQjCNFMSiaZdYZX9Sp1-nzMlTdCUM_5DA>`_
 
 Spliced Mapping with STAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. TODO
+
 Gene Quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-RSEM Report application uses STAR mapper [2] to align reads against
-reference transcripts and applies `Expectation-Maximization
-algorithm <https://www.google.com/url?q=https://en.wikipedia.org/wiki/Expectation%25E2%2580%2593maximization_algorithm&sa=D&ust=1480960531936000&usg=AFQjCNEBalCXSFMsrtTXF_2Onc0ebj2Djw>`__ [3]
+RSEM Report application uses STAR mapper to align reads against
+reference transcripts and applies an expectation-maximization algorithm
 to estimate gene and isoform expression levels from RNA-Seq data.
 
-However, it’s important to know the fragment length distribution to
+However, it is important to know the fragment length distribution to
 estimate expression levels from for single-end data accurately. In this
 case, you need to specify the "Estimated average fragment length (for
 single-end reads only)". Typical Illumina libraries produce fragment
-lengths ranging from 180–200 bp. By default it’s equal to 190. For
+lengths ranging between 180–200 bp. By default the fragment length is set equal to 190. For
 paired-end reads, the average fragment length can be directly estimated
 from the reads.
 
-Also, you can set the "Estimated standard deviation of fragment length
+You can also set the "Estimated standard deviation of fragment length
 (for single-end reads only)" (the default value is 20). For paired-end
 reads this value will be estimated from the input data.
 
@@ -800,7 +754,7 @@ reads this value will be estimated from the input data.
 yes, check it. By default, the app considers the reads as
 non-strand-specific.
 
-When the app did its job, click View report in Explore section to get
+When the task is complete, click View report in the Explore section to get
 gene and isoform level expression estimates. The output report
 represents a table with the following main columns:
 
@@ -823,11 +777,8 @@ represents a table with the following main columns:
    gene's abundance. If the parent gene has only one isoform or the gene
    information is not provided, this field will be set to 100.
 
-The application is based on the
-`RSEM <https://www.google.com/url?q=http://deweylab.github.io/RSEM/&sa=D&ust=1480960531941000&usg=AFQjCNFjee9tNzlLAIYCCE5MdnaUL6BK6g>`__ program
-and
-`STAR <https://www.google.com/url?q=https://github.com/alexdobin/STAR&sa=D&ust=1480960531942000&usg=AFQjCNFAhrRRKB4LfbFwdzh7e47fEJTb0Q>`__ mapper,
-which are distributed under the GPLv3 license.
+The application is based on the `RSEM <http://deweylab.github.io/RSEM/>`_ program
+and the `STAR <https://github.com/alexdobin/STAR>`_ mapper, which are distributed under the GPLv3 license.
 
 References:
 
@@ -893,18 +844,16 @@ Spliced Mapping and quantification with Kallisto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Kallisto Report application quantifies abundances of transcripts from
-RNA-Seq data without the need for alignment. It uses
-`Expectation-Maximization
-algorithm <https://www.google.com/url?q=http://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html&sa=D&ust=1480960531950000&usg=AFQjCNFybXjTk5KPRxNbmjxlhLL-3DHqww>`__ [2]
+RNA-Seq data without the need for alignment. It uses an expectation-maximization algorithm
 on "pseudoalignments" to find a set of potential transcripts a read
-could have come from.
+could have originated from.
 
 Use "Strand-specificity protocol" parameter to specify how to process
-the pseudoalignments. By default, the app doesn’t consider
-strand-specificity ("none" value). To run the app in strand specific
+the pseudoalignments. By default, the app does not take into account
+strand specificity ("none" value). To run the app in strand specific
 mode, change this value to "forward" if you are interested only in
-fragments where the first read in the pair pseudoaligns to the forward
-strand of a transcript. If a fragment pseudoaligns to multiple
+fragments where the first read in the pair is pseudomapped to the forward
+strand of a transcript. If a fragment is pseudomapped to multiple
 transcripts, only the transcripts that are consistent with the first
 read are kept. The "reverse" is the same as "forward" but the first read
 will be pseudomapped to the reverse strand of the transcript.
@@ -919,12 +868,12 @@ ranging from 180–200 bp. By default it’s equal to 190. For paired-end
 reads, the average fragment length can be directly estimated from the
 reads.
 
-Also, you can set the "Estimated standard deviation of fragment length
+Finally, you can set the "Estimated standard deviation of fragment length
 (for single-end reads only)" (the default value is 20). For paired-end
 reads this value will be estimated from the input data.
 
-Choose View report app in Explore section to review the Kallisto output
-report. It represents the table with the following main columns:
+Use the "View report" app in the Explore section to review the Kallisto output
+report. It contains a table with the following main columns:
 
 -  target\_id - feature name, e.g. for transcript, gene;
 -  length - feature length;
@@ -934,10 +883,7 @@ report. It represents the table with the following main columns:
 -  tpm - transcripts per million normalized by total transcript count in
    addition to average transcript length.
 
-The application is based on the
-`Kallisto <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/&sa=D&ust=1480960531955000&usg=AFQjCNE1bXBQ3qF6jc_wDAJCNw22jHdrZg>`__`  <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/&sa=D&ust=1480960531955000&usg=AFQjCNE1bXBQ3qF6jc_wDAJCNw22jHdrZg>`__`program <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/&sa=D&ust=1480960531956000&usg=AFQjCNGGXcC1THxvDTJyvb4No9GcizX0NA>`__ which
-is distributed under a non-commercial license you can find
-`here <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/download&sa=D&ust=1480960531957000&usg=AFQjCNGSAn4zmuZk6doICwwo5UJRomORqA>`__.
+The application is based on `Kallisto <https://pachterlab.github.io/kallisto/>`_.
 
 References:
 
@@ -947,12 +893,6 @@ References:
 #. Do C B and Batzoglou S. "What is the expectation maximization
    algorithm?" Nature biotechnology, 2008 26(8): 897-899.
 
-Links:
-`https://pachterlab.github.io/kallisto/ <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/&sa=D&ust=1480960531958000&usg=AFQjCNFwEnUvLs3G_D06Nm-namQCuBh5lA>`__ (kallisto
-tool),
-`https://pachterlab.github.io/kallisto/download <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/download&sa=D&ust=1480960531959000&usg=AFQjCNHK84Jj-rL_8ko43QfPhd4F-BSIiw>`__ (licence),
-`http://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html <https://www.google.com/url?q=http://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html&sa=D&ust=1480960531959000&usg=AFQjCNF-2DCoxnVl6lfofDiGhLfeJbq-1w>`__ (EM
-algorithm)
 
 Isoforms quantification with cuffQuant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -996,7 +936,7 @@ The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
 
 This application is based on cuffQuant which is a part of
-`Cufflinks <https://www.google.com/url?q=http://cufflinks.cbcb.umd.edu/&sa=D&ust=1480960531964000&usg=AFQjCNHU3aK5lX71_5lPCL820JdJ4BeLtw>`__.
+`Cufflinks <http://cole-trapnell-lab.github.io/cufflinks/>`_.
 
 Test Differential Gene Expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
