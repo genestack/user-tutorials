@@ -1,5 +1,5 @@
-Genestack Features
-==================
+Genestack Key Features
+======================
 
 Here are a few of the concepts at the core of Genestack:
 

@@ -1,5 +1,5 @@
-References:
-===========
+References
+==========
 
 Introduction to bioinformatics:
 
