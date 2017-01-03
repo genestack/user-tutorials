@@ -3,7 +3,7 @@ References
 
 Introduction to bioinformatics:
 
-Luscombe NM et al. “What is bioinformatics? An introduction and overview.” Yearbook of Medical Informatics. 2001.
+Luscombe NM et al. "What is bioinformatics? An introduction and overview." Yearbook of Medical Informatics. 2001.
 https://www.ebi.ac.uk/luscombe/docs/imia\_review.pdf)
 
 Application management:
@@ -13,8 +13,8 @@ https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 Introduction to NGS:
 
 Riyue Bao, Lei Huang, Jorge Andrade, Wei Tan, Warren A Kibbe, Hongmei
-Jiang, Gang Feng. “Review of Current Methods, Applications, and Data
-Management for the Bioinformatics Analysis of Whole Exome Sequencing.”
+Jiang, Gang Feng. "Review of Current Methods, Applications, and Data
+Management for the Bioinformatics Analysis of Whole Exome Sequencing."
 Cancer Inform. 2014; 13(Suppl 2): 67–82. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179624)
 
 Metadata:
@@ -42,13 +42,13 @@ Choosing a mapper
 
 - Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini J,
 Nery JR, Lee L, Ye Z, Ngo Q-M, Edsall L, Antosiewicz-Bourget J, Stewart
-R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. “Human DNA
+R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. "Human DNA
 methylomes at base resolution show widespread epigenomic
-differences.” Nature. 2009 462(7271):315-22. (http://europepmc.org/abstract/MED/19829295)
+differences." Nature. 2009 462(7271):315-22. (http://europepmc.org/abstract/MED/19829295)
 
 - Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD, Pradhan
-S, Nelson SF, Pellegrini M, Jacobsen SE. “Shotgun bisulphite sequencing of the Arabidopsis
-genome reveals DNA methylation patterning.” Nature. 2008 452(7184):215–219.
+S, Nelson SF, Pellegrini M, Jacobsen SE. "Shotgun bisulphite sequencing of the Arabidopsis
+genome reveals DNA methylation patterning." Nature. 2008 452(7184):215–219.
 (http://europepmc.org/abstract/MED/18278030)
 
 Reference genomes
@@ -67,10 +67,10 @@ Microarray Normalization
 (http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf)
 - https://www.bioconductor.org/packages/3.3/bioc/html/affy.html
 - https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
-- Gautier L. et al. “affy—analysis of Affymetrix GeneChip data at the probe level.” 2004
+- Gautier L. et al. "affy—analysis of Affymetrix GeneChip data at the probe level." 2004
 Bioinformatics, 20(3), pp. 307–315 (http://www.ncbi.nlm.nih.gov/pubmed/14960456)
-- Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK “limma powers
-differential expression analyses for RNA-sequencing and microarray studies.” 2015 Nucleic Acids
+- Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK "limma powers
+differential expression analyses for RNA-sequencing and microarray studies." 2015 Nucleic Acids
 Research, 43 (7), pp. e47 (http://europepmc.org/abstract/MED/25605792)
 
 Preformating tools:

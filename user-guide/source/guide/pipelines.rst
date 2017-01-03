@@ -1,5 +1,9 @@
+
+.. _pipelines:
+
 Pipelines and applications
 ==========================
+
 The basic steps of bioinformatics analysis are: data preparation, mapping,
 difference analysis, and result visualisation. On Genestack we have divided
 the available applications into four categories based on what they do:
@@ -32,24 +36,28 @@ flows, file provenance and so on.
 
 An extended version (including information on licensing and references)
 of every application description found in this guidebook can be found in
-“About application” section of each of the individual apps.
+"About application" section of each of the individual apps.
 
 How to find the About Application section?
 
 On the app page click on the name of the app in the upper left corner
-and select  “About application”.
+and select  "About application".
 
 |about_app|
 
 Sequencing data
 ---------------
+
 Raw Reads quality control and preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _fastqc:
+
 FastQC report
 ^^^^^^^^^^^^^
 Let’s begin the analysis pipeline. The usual first step of any NGS data
 analysis is quality control of raw sequencing reads. According to the
-“garbage in, garbage out” rule, if we begin our analysis with poor
+"garbage in, garbage out" rule, if we begin our analysis with poor
 quality reads, we shouldn’t expect great results at the end. Luckily,
 there are a few procedures that can be used to improve the data quality
 if that proves to be unsatisfactory.
@@ -65,7 +73,7 @@ Genestack is via the use of one of the public data flows– Raw Reads
 Quality Control Data Flow.
 
 In order to use it, select all of your raw reads, right click on them
-and from the dropdown menu select “Run dataflow on selection” and choose
+and from the dropdown menu select "Run dataflow on selection" and choose
 the appropriate data flow.  Remember you need to initialize the
 computation! On the Data Flow Runner page click on Run Data Flow and
 select Start initialization now
@@ -80,7 +88,7 @@ one of these reports, click on the report and from the dropdown menu
 select FastQC Report app.
 
 If you don’t want to use a data flow, you can select all of your raw
-reads, right click on them, go to “Explore” and select the appropriate
+reads, right click on them, go to "Explore" and select the appropriate
 app. In this case you’ll also need to wait until the computations are
 done and you will be able to track the progress of your tasks using Task
 Manager.
@@ -197,7 +205,7 @@ beginning of reads in the tested sample may be caused by adapter
 sequences or other contaminations of the library.
 
 A bias at the beginning of the reads is common for RNA-Seq data. This
-occurs during RNA-seq library preparation, when “random” primers are
+occurs during RNA-seq library preparation, when "random" primers are
 annealed to the start of sequences. These primers are not truly random,
 and it leads to a variation at the  beginning of the reads.
 
@@ -445,7 +453,7 @@ the one used to generate FastQC reports. After selecting all the mapped
 reads we wish to check the quality of, we can use the Mapped Reads QC
 public data flow, initialize the computations, and then explore the
 results. You can read more about the Mapped Reads QC Report app in the
-“Explore” section of this guide.
+"Explore" section of this guide.
 
 An individual Mapped Reads QC report contains a range of mapping
 statistics including:
@@ -458,9 +466,9 @@ statistics including:
    were mapped;
 #. Mapped reads with partially mapped mate: total paired reads where
    only one mate in the pair was mapped;
-#. Mapped reads with “properly” mapped mate: total paired reads where
+#. Mapped reads with "properly" mapped mate: total paired reads where
    both mates were mapped with the expected orientation;
-#. Mapped reads with “improperly” mapped mate: total paired reads where
+#. Mapped reads with "improperly" mapped mate: total paired reads where
    one of the mates was mapped with an unexpected orientation.
 
 → what should we be on a lookout for here?
@@ -514,7 +522,7 @@ Report.
 
 By default the application allows you to compute enrichment statistics
 for reads mapped only on exome. If you go to the app page, change the
-value to “Both exome and target file” and select the appropriate target
+value to "Both exome and target file" and select the appropriate target
 annotation file, you get both exome and/or target enrichment statistics.
 
 The following enrichment statistics are computed:
@@ -552,7 +560,7 @@ You can read more about Duplicated Mapped Reads in this excellent
 `SeqAnswers thread`_.
 
 Action:goes through all reads in a Mapped Reads file, marking as
-“duplicates” for paired or single reads where the orientation and the 5’
+"duplicates" for paired or single reads where the orientation and the 5’
 mapping coordinate are the same.
 
 3’ coordinates are not considered due to two reasons:
@@ -595,8 +603,8 @@ You can read more about Duplicated Mapped Reads in this excellent
 thread <https://www.google.com/url?q=http://seqanswers.com/forums/showthread.php?t%3D6854&sa=D&ust=1480960531910000&usg=AFQjCNFadUu7kTaUIPWmbsa6k4trTNpkHA>`__.
 
 Action: goes through all reads in a Mapped Reads file, marking as
-“duplicates” paired or single reads where the orientation and the 5’
-mapping coordinate are the same and discarding all except the “best”
+"duplicates" paired or single reads where the orientation and the 5’
+mapping coordinate are the same and discarding all except the "best"
 copy.
 
 3’ coordinates are not considered due to two reasons:
@@ -731,8 +739,8 @@ Let’s take a look at the app page and talk about various parameters:
 Details on various settings:
 
 1)If you are using strand-specific RNA-seq data, the option
-“Strand-specificity protocol” will let you choose between the “dUTP” and
-“ligation” method. If you are not sure whether your RNA-seq data is
+"Strand-specificity protocol" will let you choose between the "dUTP" and
+"ligation" method. If you are not sure whether your RNA-seq data is
 strand-specific or not, you can try using Subsample reads to make a
 small subsample, map it with Spliced Mapping and check the coverage in
 Genome Browser for genes on the two
@@ -740,23 +748,23 @@ strands.
 
 2)By default, the application uses annotated transcripts from the
 Reference Genome to distinguish between novel and known junctions. Using
-the option “Rule for mapping over known annotation” you can restrict
+the option "Rule for mapping over known annotation" you can restrict
 mappings only across known junctions or infer splice junctions without
 any reference annotation.
 
 3)With default settings, the application will report the single best
 mapping for each read, even if there are multiple valid mapping
-positions. The option “Number of “best” mappings to report” lets you
+positions. The option "Number of "best" mappings to report" lets you
 increase the number of reported mappings. This can be used together with
-“Rule for filtering mappings” to choose whether to keep reads mapping to
+"Rule for filtering mappings" to choose whether to keep reads mapping to
 uniquely or to multiple positions, e.g. report up to 5 possible
 mappings, and only for multi-hit reads. If you want to be stricter, you
 can set the number of allowed mismatches from 2 to 1 or 0.
 
-4)For paired reads, using the option “Disallow unique mappings of one
-mate” you can discard pairs of reads where one mate maps uniquely and
-the other to multiple positions. Selecting “Disallow discordant
-mappings” will discard all mappings where the two mates map uniquely but
+4)For paired reads, using the option "Disallow unique mappings of one
+mate" you can discard pairs of reads where one mate maps uniquely and
+the other to multiple positions. Selecting "Disallow discordant
+mappings" will discard all mappings where the two mates map uniquely but
 with unexpected orientation, or where the distance between two mapped
 mates differs from and internally estimated fragment length, including
 mates mapping to different chromosomes.
@@ -778,17 +786,17 @@ to estimate gene and isoform expression levels from RNA-Seq data.
 
 However, it’s important to know the fragment length distribution to
 estimate expression levels from for single-end data accurately. In this
-case, you need to specify the “Estimated average fragment length (for
-single-end reads only)”. Typical Illumina libraries produce fragment
+case, you need to specify the "Estimated average fragment length (for
+single-end reads only)". Typical Illumina libraries produce fragment
 lengths ranging from 180–200 bp. By default it’s equal to 190. For
 paired-end reads, the average fragment length can be directly estimated
 from the reads.
 
-Also, you can set the “Estimated standard deviation of fragment length
-(for single-end reads only)” (the default value is 20). For paired-end
+Also, you can set the "Estimated standard deviation of fragment length
+(for single-end reads only)" (the default value is 20). For paired-end
 reads this value will be estimated from the input data.
 
-“The RNA-Seq protocol used to generate the reads is strand specific”? If
+"The RNA-Seq protocol used to generate the reads is strand specific"? If
 yes, check it. By default, the app considers the reads as
 non-strand-specific.
 
@@ -823,14 +831,14 @@ which are distributed under the GPLv3 license.
 
 References:
 
-#. Li B and Dewey C N. “RSEM: accurate transcript quantification from
-   RNA-Seq data with or without a reference genome.” BMC Bioinformatics
+#. Li B and Dewey C N. "RSEM: accurate transcript quantification from
+   RNA-Seq data with or without a reference genome." BMC Bioinformatics
    2011 12:323, doi: 10.1186/1471-2105-12-323
 #. Dobin A, Davis C A, Schlesinger F, Drenkow J, Zaleski C, Jha S, Batut
-   P, Chaisson M and Gingeras T R. “STAR: ultrafast universal RNA-seq
-   aligner.” Bioinformatics 2012 29(1): 15-21.
-#. Do C B and Batzoglou S. “What is the expectation maximization
-   algorithm?” Nature biotechnology, 2008 26(8): 897-899.
+   P, Chaisson M and Gingeras T R. "STAR: ultrafast universal RNA-seq
+   aligner." Bioinformatics 2012 29(1): 15-21.
+#. Do C B and Batzoglou S. "What is the expectation maximization
+   algorithm?" Nature biotechnology, 2008 26(8): 897-899.
 
 Gene Quantification with HTSeq-count
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -845,12 +853,12 @@ overlapping each gene specified in the reference annotation)
 Further apps to use: Test Differential Gene Expression
 
 Depending on your tasks, you should specify the feature type for which
-overlaps choosing from “exon”, “CDS” (coding DNA sequence), “3’UTR” (the
-3’ untranslated region) or “5’UTR” (the 5’ untranslated region). For
+overlaps choosing from "exon", "CDS" (coding DNA sequence), "3’UTR" (the
+3’ untranslated region) or "5’UTR" (the 5’ untranslated region). For
 example, you may consider each exon as a feature in order to check for
 alternative splicing.
 
-By default, the “gene-id” will be used as a feature identifier. If some
+By default, the "gene-id" will be used as a feature identifier. If some
 features will have the same feature identifier the application will
 consider all these features as relating to the same feature.
 
@@ -859,9 +867,9 @@ reads that overlap genomic features will be treated. There are three
 overlap resolution modes: union, strict-intersection, and non-empty
 intersection.
 
-The first one - “union” - is the most recommended. It combines all cases
+The first one - "union" - is the most recommended. It combines all cases
 when the read (or read pair) at least partly overlaps the feature. The
-“strict-intersection” mode is about strict intersection between the
+"strict-intersection" mode is about strict intersection between the
 feature and the read overlapping this feature. But if you are interested
 in counting reads that are fully or partly intersected with the feature,
 you should use the last mode. It’s important that the read will be
@@ -870,15 +878,15 @@ read overlaps with more than one feature, it will not be counted. 
 
 |image47|
 
-An additional useful option is “Strand-specific reads”. The application
+An additional useful option is "Strand-specific reads". The application
 takes into account the direction of the read and the reference, so that
 a read from the wrong direction, even if it is mapped to the right
 place, will not be counted. This option can be useful if your data is
 strand-specific and you are interested in counting of reads overlapping
 with feature regarding to whether these reads are mapped to the same or
-the opposite strand as the feature. Choose “yes”, if the reads were
-mapped to the same strand as the feature and “reverse” - if the reads
-were mapped on the opposite strand as the feature. Specify “no”, if you
+the opposite strand as the feature. Choose "yes", if the reads were
+mapped to the same strand as the feature and "reverse" - if the reads
+were mapped on the opposite strand as the feature. Specify "no", if you
 don’t consider strand-specificity.
 
 Spliced Mapping and quantification with Kallisto
@@ -888,31 +896,31 @@ Kallisto Report application quantifies abundances of transcripts from
 RNA-Seq data without the need for alignment. It uses
 `Expectation-Maximization
 algorithm <https://www.google.com/url?q=http://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html&sa=D&ust=1480960531950000&usg=AFQjCNFybXjTk5KPRxNbmjxlhLL-3DHqww>`__ [2]
-on “pseudoalignments” to find a set of potential transcripts a read
+on "pseudoalignments" to find a set of potential transcripts a read
 could have come from.
 
-Use “Strand-specificity protocol” parameter to specify how to process
+Use "Strand-specificity protocol" parameter to specify how to process
 the pseudoalignments. By default, the app doesn’t consider
-strand-specificity (“none” value). To run the app in strand specific
-mode, change this value to “forward” if you are interested only in
+strand-specificity ("none" value). To run the app in strand specific
+mode, change this value to "forward" if you are interested only in
 fragments where the first read in the pair pseudoaligns to the forward
 strand of a transcript. If a fragment pseudoaligns to multiple
 transcripts, only the transcripts that are consistent with the first
-read are kept. The “reverse” is the same as “forward” but the first read
+read are kept. The "reverse" is the same as "forward" but the first read
 will be pseudomapped to the reverse strand of the transcript.
 
 To correct the transcript abundances according to the model of sequences
-specific bias, check “Enable sequence based bias correction” option.
+specific bias, check "Enable sequence based bias correction" option.
 
-In the case of single-end reads, the “Estimated average fragment length
-(for single-end reads only)” option must be used to specify the average
+In the case of single-end reads, the "Estimated average fragment length
+(for single-end reads only)" option must be used to specify the average
 fragment length. Typical Illumina libraries produce fragment lengths
 ranging from 180–200 bp. By default it’s equal to 190. For paired-end
 reads, the average fragment length can be directly estimated from the
 reads.
 
-Also, you can set the “Estimated standard deviation of fragment length
-(for single-end reads only)” (the default value is 20). For paired-end
+Also, you can set the "Estimated standard deviation of fragment length
+(for single-end reads only)" (the default value is 20). For paired-end
 reads this value will be estimated from the input data.
 
 Choose View report app in Explore section to review the Kallisto output
@@ -933,11 +941,11 @@ is distributed under a non-commercial license you can find
 
 References:
 
-#. Bray N L, Pimentel H, Melsted P and Pachter L. “Near-optimal
-   probabilistic RNA-seq quantification.” Nature Biotechnology 2016
+#. Bray N L, Pimentel H, Melsted P and Pachter L. "Near-optimal
+   probabilistic RNA-seq quantification." Nature Biotechnology 2016
    34:525–527, doi:10.1038/nbt.3519
-#. Do C B and Batzoglou S. “What is the expectation maximization
-   algorithm?” Nature biotechnology, 2008 26(8): 897-899.
+#. Do C B and Batzoglou S. "What is the expectation maximization
+   algorithm?" Nature biotechnology, 2008 26(8): 897-899.
 
 Links:
 `https://pachterlab.github.io/kallisto/ <https://www.google.com/url?q=https://pachterlab.github.io/kallisto/&sa=D&ust=1480960531958000&usg=AFQjCNFwEnUvLs3G_D06Nm-namQCuBh5lA>`__ (kallisto
@@ -977,10 +985,10 @@ application.
 
 Before running the application, you can choose strand-specificity
 protocol used for generating your reads. By default, the application
-takes “none” strand-specific data, but this value can be changed to
-“dUTP” or “RNA-ligation”.
+takes "none" strand-specific data, but this value can be changed to
+"dUTP" or "RNA-ligation".
 
-Switch the “No correction by effective length” option if you’d like to
+Switch the "No correction by effective length" option if you’d like to
 not apply effective length normalization to transcript FPKM (fragments
 per kilo bases of exons for per million mapped reads).
 
@@ -1063,7 +1071,7 @@ expression analyses, including isoform expression.
 
 The Expression navigator page contains 4 sections.
 
-The topmost section, “Groups Information”, is a summary of the groups
+The topmost section, "Groups Information", is a summary of the groups
 available for comparison. Size refers to the number of samples used to
 generate each group. The drop-down selection menu lets you choose which
 groups to compare.
@@ -1125,12 +1133,12 @@ You can read more about this app in the following
 
 References:
 
-#. Love MI, Huber W and Anders S. “Moderated estimation of fold change
-   and dispersion for RNA-seq data with DESeq2.” Genome Biology. 2014;
+#. Love MI, Huber W and Anders S. "Moderated estimation of fold change
+   and dispersion for RNA-seq data with DESeq2." Genome Biology. 2014;
    15(12):550.
-#. Robinson MD, McCarthy DJ and Smyth GK. “edgeR: a Bioconductor package
+#. Robinson MD, McCarthy DJ and Smyth GK. "edgeR: a Bioconductor package
    for differential expression analysis of digital gene expression
-   data.” Bioinformatics. 2010; 26(1):139-140.
+   data." Bioinformatics. 2010; 26(1):139-140.
 
 Links:
 `http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html <https://www.google.com/url?q=http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html&sa=D&ust=1480960531985000&usg=AFQjCNHmLvVJ1fGf6hrnWo7wzwmUMFX5aA>`__ (DESeq2)
@@ -1155,11 +1163,11 @@ that to run DE analysis you need to create only two groups.
 
 Results exploration:  Expression Navigator for Isoforms
 
-In “Program Options” section you can apply two options to run the
-analysis. The first one - “Apply fragment bias correction” - if checked,
+In "Program Options" section you can apply two options to run the
+analysis. The first one - "Apply fragment bias correction" - if checked,
 the application runs the bias detection and correction algorithm which
 can significantly improve accuracy of transcript abundance estimates.
-Use the second option “Apply multiple reads correction” if you’d like to
+Use the second option "Apply multiple reads correction" if you’d like to
 apply the multiple reads correction.
 
 The application finds isoforms that are differentially expressed between
@@ -1216,7 +1224,7 @@ algorithm based on smoothing splines and doesn’t require the presence of
 spike-in data.
 
 To identify highly variable genes you can try different options.
-“Exclude samples with low coverage” option (switched by default) allows
+"Exclude samples with low coverage" option (switched by default) allows
 you to exclude or include for analysis samples with low read
 counts.
 
@@ -1224,7 +1232,7 @@ Set significance level for the p-value (-10log₁₀(p)). The application
 will use the default of 1, which corresponds to selecting genes for
 which P is smaller than 0.1.
 
-The “Use spike-ins to calibrate noise” option determines whether or not
+The "Use spike-ins to calibrate noise" option determines whether or not
 spike-in data should be taken into account. If you select only one
 folder before running the app, you will use spike-free algorithm and
 this option will be switched off by default. But if you select two
@@ -1232,15 +1240,15 @@ folders, one for biological and the other for spike-in data, you can use
 the Brennecke algorithm [1]  which requires this option.  
 
 The next three options will be available if spike-ins are included in
-the experiment and “Use spike-ins to calibrate noise” option is
-switched. You’ll be able to set “Expected
-biological CV” which is the minimum threshold chosen for quantifying the
+the experiment and "Use spike-ins to calibrate noise" option is
+switched. You’ll be able to set "Expected
+biological CV" which is the minimum threshold chosen for quantifying the
 level of biological variability (CV - coefficient of variation) expected
 in the null hypothesis of the model. The default value is 0.5.
 
-The other two options - “Noise fit - proportion of genes with high CV²
-to remove” and “Noise fit - proportion of genes with low mean expression
-to remove” - enable us to exclude a fraction of spike-in genes to fit
+The other two options - "Noise fit - proportion of genes with high CV²
+to remove" and "Noise fit - proportion of genes with low mean expression
+to remove" - enable us to exclude a fraction of spike-in genes to fit
 the noise model, because extreme outliers tend to skew the fit. The
 default values for these options are 0 and 0.85, consequently.
 
@@ -1255,7 +1263,7 @@ References:
 
 #. Brennecke P, Anders S, Kim JK, Kolodziejczyk AA, Zhang X, Proserpio
    V, Baying B, Benes V, Teichmann SA, Marioni JC, Heisler MG.
-   “Accounting for technical noise in single-cell RNA-seq experiments.”
+   "Accounting for technical noise in single-cell RNA-seq experiments."
    Nature Methods. 2013 Sep 22; 10(11):1093–1095.
 
 Read more about single-cell RNA-seq analysis on Genestack here:
@@ -1311,7 +1319,7 @@ variance.
 
 If spike-ins were used to calibrate technical noise, then the separate
 Technical Noise Fit plot is displayed. On this plot, each dot
-corresponds to a “ technical gene” (spike-in gene).It plots the mean
+corresponds to a " technical gene" (spike-in gene).It plots the mean
 normalized count across all samples on the x-coordinate and the squared
 coefficient of variation (CV2) of the normalized counts across all
 samples on the y-coordinate. The coefficient of variation is defined as
@@ -1366,15 +1374,15 @@ References: 
 
 #. Brennecke P, Anders S, Kim JK, Kołodziejczyk AA, Zhang X, Proserpio
    V, Baying B, Benes V, Teichmann SA, Marioni JC and Heisler MG.
-   “Accounting for technical noise in single-cell RNA-seq experiments.”
+   "Accounting for technical noise in single-cell RNA-seq experiments."
    Nature Methods 2013 10(11), 1093-1095. PMID: 24056876
 #. Anders S and Huber W. "Differential expression analysis for sequence
    count data". Genome Biology 2010 11:R106  
-#. Škuta C, Bartůněk P and Svozil D. “InCHlib–interactive cluster
-   heatmap for web applications.” Journal of Cheminformatics 2014 6(1),
+#. Škuta C, Bartůněk P and Svozil D. "InCHlib–interactive cluster
+   heatmap for web applications." Journal of Cheminformatics 2014 6(1),
    1-9.
-#. van der Maaten LJP and Hinton GE. “Visualizing High-Dimensional Data
-   Using t-SNE.” Journal of Machine Learning Research 2008 9(11),
+#. van der Maaten LJP and Hinton GE. "Visualizing High-Dimensional Data
+   Using t-SNE." Journal of Machine Learning Research 2008 9(11),
    2579-2605
 
 Read more about single-cell RNA-seq analysis on Genestack here:
@@ -1412,7 +1420,7 @@ Read more about single-cell RNA-seq analysis on Genestack here:
 
           For instance:  Homo sapiens GRCh37.75 (unmasked) vs GRCh38.80 (unmasked)
 
-          The numbers correspond to versions (or “builds”) of the reference genome
+          The numbers correspond to versions (or "builds") of the reference genome
           – the higher the number, the more recent the version. We generally
           recommend you use the latest version possible. One thing to remember is
           that for the newest genome builds, it’s likely that resources such as
@@ -1463,7 +1471,7 @@ Read more about single-cell RNA-seq analysis on Genestack here:
           When should you use a masked genome?
 
           We generally don’t recommend using masked genome, as it relates to the
-          loss of information (after mapping, some “unique” sequences may not be
+          loss of information (after mapping, some "unique" sequences may not be
           truly unique) and does not guarantee 100% accuracy and sensitivity (e.g.
           masking cannot be absolutely perfect). Moreover, it can lead to the
           increase in number of falsely mapped reads.
@@ -1529,12 +1537,12 @@ mpileup <https://www.google.com/url?q=http://samtools.sourceforge.net/mpileup.sh
 |unspliced mapping with BWA|
 
 BWA’s MEM algorithm will be used to map paired or single-ends reads from
-70 bp up to 1Mbp (“mem” option in command line). For reads up to 70 bp
+70 bp up to 1Mbp ("mem" option in command line). For reads up to 70 bp
 the algorithm called BWA-backtrack will be applied. This algorithm is
-implemented with the “aln” command, which produces the suffix array (SA)
+implemented with the "aln" command, which produces the suffix array (SA)
 coordinates of the input reads. Then the application converts these SA
-coordinates to chromosome coordinates using the “samse” command (if your
-reads are single-end) or “sampe” (for paired-end reads).
+coordinates to chromosome coordinates using the "samse" command (if your
+reads are single-end) or "sampe" (for paired-end reads).
 
 We used this app in the Whole Exome Sequencing Data Analysis tutorial
 that can be found
@@ -1555,7 +1563,7 @@ Let’s talk a bit about the various settings:
 1)By default the application will report the best mapping for one
 mappable read. If you are interested in reads mapping to multiple
 positions, switch off this option and set N mappable positions for one
-read in the text box “Limit the number of mappings to search”.
+read in the text box "Limit the number of mappings to search".
 
 2)You can apply a rule for filtering mappings to choose whether to keep
 reads mapping uniquely or to multiple positions. If you want to be
@@ -1563,10 +1571,10 @@ stricter, you can change the maximum number of allowed mismatches, e.g.
 if you set it to 1, any mapping with 2 or more mismatches won’t be
 reported.
 
-3)For paired reads, using the option “Disallow unique mappings of one
-mate” you can discard pairs of reads where one mate maps uniquely and
-the other to multiple positions. Selecting “Disallow discordant
-mappings” will discard all mappings where the two mates map uniquely but
+3)For paired reads, using the option "Disallow unique mappings of one
+mate" you can discard pairs of reads where one mate maps uniquely and
+the other to multiple positions. Selecting "Disallow discordant
+mappings" will discard all mappings where the two mates map uniquely but
 with unexpected orientation or where the distance between two mapped
 mates differs from and internally estimated fragment length, including
 mates mapping to different chromosomes.
@@ -1607,18 +1615,18 @@ likelihoods generated from the previous step to call genetic variants
 and outputs the all identified variants in the Genetic Variations file.
 
 By default, the application call both SNPs and indels, but if you’d like
-to report only SNPs change “Variants to report” option to “SNPs only”
+to report only SNPs change "Variants to report" option to "SNPs only"
 value. Also, you can tell the application to call only multi-allelic
-variants, switching the “Call multi-allelic variants” option. The
+variants, switching the "Call multi-allelic variants" option. The
 multiallelic calling is recommended for most tasks.
 
-To skip anomalous read pairs in variant calling, use option “Discard
-anomalous read pairs” checked.
+To skip anomalous read pairs in variant calling, use option "Discard
+anomalous read pairs" checked.
 
 In some cases, it’ll be interested to report only potential variant
 sites and exclude monomorphic ones (sites without alternate alleles) in
-output Genetic Variation file. For this purpose, switch the option “Only
-report variant sites”.
+output Genetic Variation file. For this purpose, switch the option "Only
+report variant sites".
 
 The application allows you to set maximum read depth to consider per
 position and minimum number of gapped reads for an INDEL candidate. The
@@ -1636,9 +1644,9 @@ forward reference, reverse reference, forward non-reference and reverse
 non-reference alleles used in variant calling) and SP (phred-scaled
 strand bias P-value) tags in the output file.
 
-You are also able to select chromosomes for analysis, using “Chromosome
-to analyse” option and merge samples with the same metainfo key
-(specify “Key to merge samples)”. The last option can be useful for
+You are also able to select chromosomes for analysis, using "Chromosome
+to analyse" option and merge samples with the same metainfo key
+(specify "Key to merge samples)". The last option can be useful for
 merging technical replicates.
 
 The result Genetic Variations file can be opened in Genome Browser as a
@@ -1717,6 +1725,9 @@ Benjamini-Hochberg P Value adjustment is applied.
 With Variant Explorer application the file can be filtered and sorted by
 this values.
 
+
+.. _variant-explorer:
+
 Variant Explorer
 ^^^^^^^^^^^^^^^^
 
@@ -1732,27 +1743,27 @@ various fields, such as mutation type, quality, locus, etc.
 Variant Explorer takes as input a  Genetic Variations file which can be
 imported or generated with the Variant Calling app. If you open it in
 the app, you’ll see default DP (Raw read depth) and MQ (Average mapping
-quality) columns (“Other” tab in “Columns” section).
+quality) columns ("Other" tab in "Columns" section).
 
 Variants can be annotated with the Effect Prediction app that analyzes
 genomic position of the variants and reveals the effects they produce on
 known genes (such as amino acid changes, synonymous and nonsynonymous
 mutations, etc.). For such variants the following information will be
-shown (find it in “Effect prediction” tab):
+shown (find it in "Effect prediction" tab):
 
 -  Effect - effect predicted by SnpEff tool;
 -  Impact - impact predicted by SnpEff tool;
 -  Functional class - functional class of a region, annotated by SnpEff
    tool.
 
-Moreover, the app calculates “Additional metrics” such as genotype
+Moreover, the app calculates "Additional metrics" such as genotype
 frequencies for homozygous samples with reference and alteration alleles
 (GF HOM REF and GF HOM ALT columns correspondingly), reads depth for
 homozygous samples with alteration allele (DP HOM ALT) and reads depth
 for heterozygous samples (DP HET).
 
 To change the default columns or add more columns, choose them in the
-corresponding tabs in “Columns” section and “Save” your changes. After
+corresponding tabs in "Columns" section and "Save" your changes. After
 that all selected columns will be displayed in Table viewer.
 
 You can read more about this app in the following
@@ -1775,18 +1786,18 @@ Further apps to use: depends on the analysis type
 \
 
 With default settings, the application will report overlapping features
-(see option “Rule for filtering”). For example, you could isolate single
+(see option "Rule for filtering"). For example, you could isolate single
 nucleotide polymorphisms (SNPs) that overlap with SNPs from another
 file. For this, intersect two Genetic Variations files. But there are
 cases when you’d like to know which features don’t overlap with other
-ones. To get such outputs, use “Report non-overlapping features” filter.
+ones. To get such outputs, use "Report non-overlapping features" filter.
 
 The application has also other possibilities. For example, by setting
 minimum overlapping fraction equal to 10 (default value), you can check
 whether a feature of interest has at least 10% of its length overlapping
 another feature.
 
-The “Rule for overlap strandedness” option allows you to ignore overlaps
+The "Rule for overlap strandedness" option allows you to ignore overlaps
 on the same strand or on the other strand. By default, overlapping
 features are reported without respect to the strandedness.
 
@@ -1826,7 +1837,7 @@ whole genome.|bisulfite sequencing mapping|
 
 Let’s talk a bit about various settings:
 
-1)The option “Number of mismatches” lets you set the maximum number of
+1)The option "Number of mismatches" lets you set the maximum number of
 allowed mismatches per read. Changing this number you can affect
 application runtime and percentage of mapped reads. There is an increase
 in the percentage of mapped reads and in the application runtime when
@@ -1836,14 +1847,14 @@ to the genome with no more than 5 mismatches.
 2)By default, the application only reports unique hits for one mappable
 read. But if your reads are mapped to multiple positions in the genome,
 than you can change rule for multiple mappings to report one random
-“best” mapping. This stops duplicated genome regions from being omitted
+"best" mapping. This stops duplicated genome regions from being omitted
 altogether.
 
 3)Depending on the BS data generation protocol that was used to
 construct the bisulfite converted library, BS reads need to  be analysed
-in different ways. If  the “Lister” protocol was used, your reads will
+in different ways. If  the "Lister" protocol was used, your reads will
 be mapped to two forward strands. You can read more about this protocol
-in Lister et al. [1]. If you Choose the “Cokus” protocol the application
+in Lister et al. [1]. If you Choose the "Cokus" protocol the application
 will align your reads to all four strands. You can find more details
 about this protocol in the original study by Cokus et al. [2].
 
@@ -1862,12 +1873,12 @@ representation bisulfite sequencing mapping|
 
 Let’s talk a bit about various settings:
 
-1)You should set the “Enzyme sequence” which was recognized by by the
+1)You should set the "Enzyme sequence" which was recognized by by the
  restriction enzyme used to digest genomic DNA in the process of library
 preparation. By default, the application uses the ‘C-CGG’ sequence which
 is recognised in MspI restriction.
 
-2)The option “Number of mismatches” lets you set the maximum number of
+2)The option "Number of mismatches" lets you set the maximum number of
 allowed mismatches per read. Decreasing this number you can reduce
 application runtime and percentage of mapped reads. By default the
 application aligns reads to the reference genome with no more than 5
@@ -1875,7 +1886,7 @@ mismatches.
 
 3)By default the application only reports unique hits for one mappable
 read. You can change the rule for multiple mappings to report one random
-“best” mapping, if your reads are mapped to multiple positions in the
+"best" mapping, if your reads are mapped to multiple positions in the
 genome.
 
 4) Choose the BS data generation protocol that was used to construct the
@@ -1889,14 +1900,14 @@ References:
 
 #. `Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini
    J, Nery JR, Lee L, Ye Z, Ngo Q-M, Edsall L, Antosiewicz-Bourget J,
-   Stewart R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. “Human
+   Stewart R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. "Human
    DNA methylomes at base resolution show widespread epigenomic
-   differences.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532085000&usg=AFQjCNG66MkWxikJT0StWhOxW1ei40wiWQ>`__`Nature. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532086000&usg=AFQjCNGpU4pwPyy6XnfY0z4BvUuolapZgw>`__`2009
+   differences." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532085000&usg=AFQjCNG66MkWxikJT0StWhOxW1ei40wiWQ>`__`Nature. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532086000&usg=AFQjCNGpU4pwPyy6XnfY0z4BvUuolapZgw>`__`2009
    462(7271):315-22. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532086000&usg=AFQjCNGpU4pwPyy6XnfY0z4BvUuolapZgw>`__
 #. `Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD,
-   Pradhan S, Nelson SF, Pellegrini M, Jacobsen SE. “Shotgun bisulphite
+   Pradhan S, Nelson SF, Pellegrini M, Jacobsen SE. "Shotgun bisulphite
    sequencing of the Arabidopsis genome reveals DNA methylation
-   patterning.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532086000&usg=AFQjCNGTngx6W4ckwk5HLaZRD1DR6crp2A>`__`Nature <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__`.
+   patterning." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532086000&usg=AFQjCNGTngx6W4ckwk5HLaZRD1DR6crp2A>`__`Nature <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__`.
    2008
    452(7184):215–219. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__
 
@@ -1912,41 +1923,41 @@ base in the Mapped Reads file.
 
 Further apps to use: Genome Browser
 
-To get results filtered by depth of coverage use “Minimum coverage”
+To get results filtered by depth of coverage use "Minimum coverage"
 option. By default, this value is not set. But raising it to a higher
 value (e.g. 5) requires that at least five reads will cover the
 position.
 
 For paired-end mappings, you can trim from 1 to 240 fill-in nucleotides
-in the DNA fragment end-repairing. By default, this “Trim N
-end-repairing fill-in bases” option is switched off. For RRBS mappings,
+in the DNA fragment end-repairing. By default, this "Trim N
+end-repairing fill-in bases" option is switched off. For RRBS mappings,
 the number of fill-in bases could be determined by the distance between
 cuttings sites on forward and reverse strands. If you analyse WGBS
 mappings, it’s recommended to set this number between 0~3.
 
-Switch “Report loci with zero methylation ratios” option to report
+Switch "Report loci with zero methylation ratios" option to report
 positions with zero methylation. The application doesn’t apply this
 option by default.
 
-To combine CpG methylation ratio from both strands, set “Combine ratios
-on both strands” option switched. By default, it is unchecked. If you
-want to process only unique mappings, check “Only unique mappings”
+To combine CpG methylation ratio from both strands, set "Combine ratios
+on both strands" option switched. By default, it is unchecked. If you
+want to process only unique mappings, check "Only unique mappings"
 option.
 
-For paired reads, using the option “Discard discordant mappings” you can
+For paired reads, using the option "Discard discordant mappings" you can
 discard all mappings where the two mates map uniquely but with
 unexpected orientation, or where the distance between two mapped mates
 differs from and internally estimated fragment length, including mates
 mapping to different chromosomes.
 
 Sometimes you need to remove duplicates from your Mapped Reads files.
-For this purpose, use “Discard duplicated reads” option.
+For this purpose, use "Discard duplicated reads" option.
 
 To ignore positions where there is a possible C/T SNPs detected, choose
-“skip” value for “C/T SNPs filtering” option. If you want to correct the
+"skip" value for "C/T SNPs filtering" option. If you want to correct the
 methylation ratio according to the C/T SNP information estimated by the
-G/A counts on reverse strand, set “correct” value. By default, the
-application doesn’t consider C/T SNPs (“no-action” value).
+G/A counts on reverse strand, set "correct" value. By default, the
+application doesn’t consider C/T SNPs ("no-action" value).
 
 This application is based on methratio.py script.
 
@@ -1983,7 +1994,7 @@ number of taxa identified)
 of samples)
 
 Microbiome analysis is performed using QIIME (open source tool), using
-“Greengenes 13.8” (for bacteria) and UNITE (for fungi) reference
+"Greengenes 13.8" (for bacteria) and UNITE (for fungi) reference
 databases to estimate the taxonomic composition of the microbial
 communities.
 
@@ -2007,7 +2018,7 @@ reverse, complement or reverse complement to the sequence of interest.
 How to access the app?
 
 Select the assay you are interested in, right click on it and from the
-“Explore” section select the name of the app.
+"Explore" section select the name of the app.
 
 
 Genome Browser
@@ -2047,7 +2058,7 @@ results of the computations will be shown on the formula track.
 
 Moreover, each track can be personalised by changing its properties
 (track color, normalized values, show only SNPs, maximum and minimum
-values to be shown on a track, etc.). Use “Edit” button to change
+values to be shown on a track, etc.). Use "Edit" button to change
 properties for multiple tracks at once.
 
 Genome Browser allows you to browse either a specific genomic position
@@ -2135,15 +2146,15 @@ Link:
 
 References:
 
--  `Gautier L, Cope L, Bolstad BM and Irizarry RA (2004). “affy—analysis
+-  `Gautier L, Cope L, Bolstad BM and Irizarry RA (2004). "affy—analysis
    of Affymetrix GeneChip data at the probe
-   level.” <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532113000&usg=AFQjCNFtiT-91LNqFrgRk1EAgdkumx1r9A>`__`Bioinformatics <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`, <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`20 <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`(3),
+   level." <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532113000&usg=AFQjCNFtiT-91LNqFrgRk1EAgdkumx1r9A>`__`Bioinformatics <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`, <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`20 <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`(3),
    pp.
    307–315. <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__
 -  `Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK
-   (2015). “limma powers differential expression analyses for
+   (2015). "limma powers differential expression analyses for
    RNA-sequencing and microarray
-   studies.” <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`Nucleic
+   studies." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`Nucleic
    Acids
    Research <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`, <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`43 <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532116000&usg=AFQjCNHHiEdnVuGvopb20Ndrx5PTDAUPkg>`__`(7),
    pp.

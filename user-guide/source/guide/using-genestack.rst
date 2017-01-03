@@ -4,30 +4,30 @@ Using Genestack
 Registering
 -----------
 
-If you don’t have an account already, please register first:
+If you haven't done so already, you can create an account on Genestack:
 
-Go to `platform.genestack.org`_, click on “Sign Up”, fill in the form and
+Go to `<platform.genestack.org>`_, click on "Sign Up", fill in the form and
 wait for a confirmation email.
 
 If you’re just taking Genestack out for a spin, you can also use our platform
-as a guest (by clicking on “continue as guest” button). Remember, as a guest
-you can only create up to 200 files and your results will disappear after 24h
+as a guest (by clicking on "Continue as guest" button). However, remember that as a guest,
+you can only create up to 200 files, and your results will disappear after 24h
 of inactivity.
 
-.. _platform.genestack.org: https://platform.genestack.org/endpoint/application/run/genestack/signin
 
-Welcome Page Map
-----------------
+.. _welcome_page:
 
-After you login, you’ll see your **Welcome Page**. Let’s cover the basics.
+Welcome Page
+------------
+
+After you log in, you will see your **Welcome Page**. Let’s cover the basics.
 
 |welcome_page|
 
 The very top of the page is static and you can always refer to it. Clicking
 on your username (your email address) in the top right corner of the page will
-give you access to your **profile**, allow you to **manage your applications,
-groups, and users** or logout of the platform. For the more details, read
-"Your Profile" part of the guide.
+give you access to your :ref:`profile`, allow you to manage your applications,
+groups, and users or log out of the platform.
 
 |WP_profile|
 
@@ -36,17 +36,17 @@ will take you back to the Welcome Page. This option is customizable: in your
 profile settings you can choose the ‘Application to show after login’ and
 set the File Manager as a starting page instead of the Welcome Page.
 
-**Tasks** links to the **Task Manager**, where you can monitor running and
-previous computations. We'll describe it later in the guide.
+**Tasks** links to the :ref:`task-manager`, where you can monitor running and
+previous computations.
 
-In the bottom right corner of the page you can see the **chat window**. Please
-message us whenever you have any questions or want to make any suggestions.
+In the bottom right corner of the page you can see the Chatra **chat window**.
+You can chat with us at any time if you get stuck or if you find a bug.
 
 Wherever you are on the platform, you can also access a **shortcuts menu**.
 It’s an easy way to reach most commonly used apps and folders. Genestack
-Import, Manage applications, Manage groups, Experiment Browser as well as the folders
+Import, Manage applications, Manage groups, :ref:`experiment-browser` as well as the folders
 for Created and Imported files can all be found here. To access the shortcuts
-menu simply move your mouse cursor to the left hand side of any page.
+menu, simply move your mouse cursor to the left-hand side of any page.
 
 |shortcuts_menu|
 
@@ -57,13 +57,13 @@ Let’s go back to the Welcome Page. Here you can find the following sections:
 2. **Recent Results** shows you the files you have recently created
    (including their initialization or completion status).
 3. **Browse data** section allows you to browse through public, private and
-   shared data with **Experiment Browser** which allows you to search through
+   shared data with :ref:`experiment-browser` which allows you to search through
    the wealth of your data using complex queries.
    In the Browse Data section, you’ll also find a link to the File Manager
    (home), as well as often used folders: Uploaded files, Imported files,
    Created files and Exports.
-4. **Import data** section allows you to import your data using either a
-   customized or a default import template.
+4. **Import data** allows you to import your data using either a
+   custom or the default import template. See the section :ref:`import`
 5. **Tutorials** explain the most common analysis types in greater detail.
 6. **Search** across the metadata of all your files using the full-text file
    search text box.
@@ -72,15 +72,18 @@ Let’s go back to the Welcome Page. Here you can find the following sections:
 .. |shortcuts_menu| image:: images/shortcuts_menu.png
 .. |WP_profile| image:: images/WP_profile.png
 
+.. _profile:
+
 Your Profile
 ------------
 
-Clicking on your username (your email) in the top right corner provides
+Clicking on your username (your email) in the top-right corner provides
 access to various applications used to manage your account and your
 groups.
 
 Profile
 ~~~~~~~
+
 In this section you can change your name, password, the name of your
 organisation and your vendor ID. 
 
@@ -92,7 +95,8 @@ the same organization as another user, you can add them to groups you
 control and share files with them freely. If you are in different
 organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
-permissions and groups in "Data and Metainfo Management" section.
+permissions and groups in the :ref:`sharing` section.
+
 Vendor IDs are used for app development. Apps you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
 would like to see after login: Welcome Page or File Manager.
@@ -103,8 +107,7 @@ Manage Applications
 |ManageApp|
 
 Here you can view the list of all applications available on the platform
-– both ones you have written as well as public ones (note that you will not
-be able to use all of these applications).
+– both ones you have written as well as public ones.
 
 The **Developer** button will give you the option to choose which version of
 an app you want to use.
@@ -115,12 +118,12 @@ The **‘bundled’** and **‘minified’** options optimize
 loading of CSS and JS used in the app. You can find more details on
 bundling and minifying here__.
 
-The **Session** and **User** drop-down menus allow you to chose the version of
+The **Session** and **User** dropdown menus allow you to chose the version of
 the app you want to use for your current log-in session and for your
 current user account respectively. **Inherit** is the default option and the
 order of version choice inheritance is Global → User → Session. If you
-change the version of an application, use you also need to **reload** it to run
-the version of choice.
+change the version of an application, you also need to **reload** it to run
+the version of your choice.
 
 Manage Groups
 ~~~~~~~~~~~~~
@@ -131,13 +134,14 @@ In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
 new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users.
-Read more about collaboration on Genestack here__.
+Read more about collaboration on Genestack in :ref:`sharing`.
 
 Manage Users
 ~~~~~~~~~~~~
 
 In this section, you can create new users or change password of your users.
-You can watch a video on managing users on Genestack here__.
+You can watch `this video about managing users on Genestack <https://www.youtube
+.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1>`_.
 
 |ManageUsers|
 
@@ -149,10 +153,8 @@ You can watch a video on managing users on Genestack here__.
 .. |ManageGroups| image:: images/manage_groups.png
 .. |ManageUsers| image:: images/manage_users.png
 
-__ https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
-__ https://genestack.com/tutorial/managing-and-sharing-data
-__ https://genestack.com/tutorial/getting-started-with-genestack-platform/#createaccount
 
+.. _import:
 
 Importing Data
 --------------
@@ -160,26 +162,25 @@ Importing Data
 Supported file types
 ~~~~~~~~~~~~~~~~~~~~
 
-Genestack allows its users to upload various files to the cloud and keep them
-organized transforming them into the following data types:
+Here is a list of file types that can be imported into Genestack.
+Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
 - **Microarray Assay** - Raw microarray data obtained from a microarray
-  experiment (you can import Affymetrix, Agilent or GenePix microarrays);
-- **Sequencing Assay** - Raw sequencing data associated with a specific NGS
-  experiment;
+  experiment (you can import Affymetrix, Agilent or GenePix microarrays)
+- **Sequencing Assay** - Raw sequencing data (FASTQ, SRA or FASTA+QUAL)
 - **Microarray Annotation** - Annotation file containing information about
   association of microarray probes to biological entities like genes,
-  transcripts and proteins;
+  transcripts and proteins
 - **Continuous Genomic Data** - Contains information on continuous genome
   statistics, e.g. GC% content;
 - **Discrete Genomic Data** - Information on discrete regions of the genome
   with an exact start and end position;
-- **Mapped Reads** - Reads aligned to a specific reference genome;
+- **Mapped Reads** - Reads aligned to a specific reference genome (BAM or CRAM);
 - **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
 - **Reference Genome** - Reference genome sequence for a specific organism
-  with annotation;
+  with annotation; (FASTA + GTF)
 - **Variation Files** - Genetic Variations files, storing gene sequence
-  variations.
+  variations (VCF)
 
 When you upload microarrays or sequencing assays onto the platform, they will
 be automatically imported as an experiment.
@@ -187,59 +188,38 @@ be automatically imported as an experiment.
 - **Experiment** - An experiment is a special type of folder that can only
   contain assays. When you import files that are detected as raw sequencing or
   microarray assays, Genestack creates an experiment and adds the assays to it.
-  Additional information on the experiment can be added as attachments in any
-  file format.
 
-.. note:: **What's the difference between experiments and folders?** Forum3_
+- **Experiment attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
+  can be uploaded as an experiment attachment. See :ref:`attachments`
+
 
 Moreover, when you perform any analysis on Genestack, you can create other data
-types, which are not yet supported in import. Here is the list of them:
+types, which cannot be imported. They include:
 
-- **Auxiliary File** - Contains index for the Reference Genome;
 - **Affymetrix/Agilent/GenePix Microarrays Normalisation** - File with
-  normalized Affymetrix/Agilent/GenePix microarrays inside;
-- **Chimerism analysis file** - contains interpretive report with determined
-  percentage of donor and recipient cells within the patient's blood;
-- **Differential Expression Statistics** - RNA expression statistics for
-  individual genes contained in a sequence such as Fold Changes, p values,
-  FDR, etc;
-- **Dose Response Analyser File** - Interactive report describing the change
-  in effect on an organism caused by differing dose levels;
-- **FastQC Report** - Report file containing calculated quality control
-  metrics for sequencing data;
-- **FPKM Counts** - A file containing isoform expression levels calculated for
-  each gene in sample;
+  normalized Affymetrix/Agilent/GenePix microarrays data;
+- **Differential Expression Statistics** - expression statistics for
+  change in expression of individual genes or other genomic features between groups of samples,
+  such as fold-changes, p-values, FDR, etc;
 - **Genome Annotations** - A technical file used for matching GO terms and
   gene symbols to gene coordinates;
-- **Mapped Read Counts** - The number of mappings to each bit of reference
+- **Mapped Read Counts** - The number of reads mapped to each feature of a reference
   sequence. Produced from Mapped Reads files;
-- **Mapped Reads QC Report** - The output report file with calculated quality
-  metrics for mapped reads;
-- **Microarray QC File** - The file reporting quality metrics for microarrays
-  and detected apparent outlier arrays;
-- **Microbiome Analysis File** - Reports the abundance of microbial species
-  presented in a sample;
 - **Raw Reads** - Raw sequencing data that does not need to be associated with
   an experiment (as opposed to a sequencing assay);
-- **Single-cell RNA-seq Analysis File** - Contains identified
-  heterogeneously-expressed genes across cells;
-- **Targeted Sequencing QC Report** - Displays enrichment statistics
-  calculated based on the exome of the specified reference genome, on the
-  specific target annotation file from the capture strategy, or on both - on
-  exome and target files.
 
-Biodata Import
-~~~~~~~~~~~~~~
+Data Import
+~~~~~~~~~~~
 
 There are several ways you can access the **Import** application:
+
+- using the **Import data** link on the Welcome Page;
+
+|WP_import|
 
 - clicking the **Import** button in the File Manager;
 
 |FM_import|
-
-- using **Import data** link on the Welcome Page;
-
-|WP_import|
 
 - clicking **Upload** button when you choose sources in the dataflow you'd like
   to run;
@@ -253,7 +233,8 @@ There are several ways you can access the **Import** application:
 
 Import data includes three steps:
 
-**Step 1: Uploading files**
+Step 1: Uploading files
+^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two ways to upload data into the platform:
 
@@ -266,12 +247,12 @@ There are two ways to upload data into the platform:
 
 |URL_import|
 
-**Use previous uploads** option allows you to avoid uploading the data a
+The **Use previous uploads** option allows you to avoid uploading the data a
 second time.
 
 Files are uploaded in multiple streams to increase upload speed. Uploading
 from URLs is done in the background. This means that even while these files
-are being uploaded, you can describe their metadata and use them in
+are being uploaded, you can edit their metadata and use them in
 pipelines.
 
 |uploading_step|
@@ -281,9 +262,10 @@ resume unfinished uploads later.
 
 |resumed_uploads|
 
-Click the “Import files” button to proceed.
+Click the "Import files" button to proceed.
 
-**Step 2: Format recognition**
+Step 2: Format recognition
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
@@ -294,7 +276,7 @@ Genestack. You won’t have to worry about formats at all.
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
 them to a specific data type: drag the raw file and move it to the green
-“Choose type” box appeared at the top of the page.
+"Choose type" box at the top of the page.
 
 |unrecognized_uploads|
 
@@ -302,15 +284,16 @@ Choose the data type you find suitable:
 
 |file_types_box|
 
-Click "Edit metainfo" button to procead.
+Click the "Edit metainfo" button to proceed.
 
-**Step 3: Editing metainfo**
+Step 3: Editing metainfo
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-On this step, you can describe uploaded data using an Excel-like spreadsheet.
-Importantly, during this step the import has already completed - you will
-notice a message at the top of the page listing the name of the folder where
-the imported files are located (names “Imported on <date> <time>) and
-suggesting to share the data:
+In this step, you can describe uploaded data using an Excel-like spreadsheet.
+Importantly, during this step, the import has already completed - you will
+notice a message at the top of the page with the name of the folder where
+the imported files are located (named "Imported on <date> <time>"), and
+offering to share the data:
 
 |import_edit_metainfo|
 
@@ -320,23 +303,21 @@ field and choose its type (Text, Integer, etc.):
 
 |add_metainfo_field|
 
-Also, you can choose to apply a naming scheme. This will allow you to order
-attributes in a drag-and-drop interface  to create a naming format of your
-choice. The file name will be updated dynamically if any of the metainfo
-fields used in the scheme are modified.
+Also, you can choose to apply a naming scheme. This allows you to generate
+file names automatically based on other metainfo attributes.
 
 |naming_scheme|
 
 Metainfo fields can be associated with specific dictionaries and
-ontologies. We pre-uploaded some public dictionaries such as `NCBI Taxonomy`_
-(for Organism field), `Cellosaurus vocabulary`_ (for Cell Line), `ChEBI
-ontology`_, `Cell ontology`_, etc and created our own controlled vocabularies
-(to cover e.g. Sex, Method, Platform fields). We'll back to the dictionaries
-later in the Data and Metainfo Management section of the guide.
+ontologies. We pre-uploaded some public dictionaries such as the
+`NCBI Taxonomy <https://www.ncbi.nlm.nih.gov/taxonomy>`_
+(for the Organism field), `Cellosaurus <http://web.expasy.org/cellosaurus/description.html>`_ (for Cell Line),
+`ChEBI <https://www.ebi.ac.uk/chebi/>`_ for chemical compounds, and the `Cell ontology <http://www.obofoundry
+.org/ontology/cl.html>`_.
+We also created our own controlled vocabularies to cover the Sex, Method and Platform fields.
+You can find out more about ontologies in the :ref:`metainfo-editor` section.
 
-.. _NCBI Taxonomy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/
-
-Also, you can create your own private dictionary importing it into the
+Finally, you can also create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
 
 .. note:: **What is an import template?**
@@ -352,7 +333,7 @@ You can select which import template to use in two ways: from the Welcome
 Page, or during the 3rd step of the import process by right-clicking on the
 import template name ("Default template" is for the public one). You can add
 new import templates using the **Import Template Editor** app, which can be
-found by clicking “Add import template” from the Welcome Page or from the
+found by clicking "Add import template" from the Welcome Page or from the
 "Manage" submenu when you right click on an import template.
 
 |import_templates|
@@ -368,12 +349,12 @@ Reference Genome data:
 
 Now let’s say you wish to create an import template where you want to control
 the metainfo attributes of sequencing assays (e.g. you always need to know the
-tissue and sex of your samples). In order to do this, click on “Add import
-template”, then look for the table related to Sequencing Assays and for the
-fields “tissue” and “sex”, change the required fields to ‘Yes’. As you can
+tissue and sex of your samples). In order to do this, click on "Add import
+template", then look for the table related to Sequencing Assays and for the
+fields "tissue" and "sex", change the required fields to ‘Yes’. As you can
 see, the system controls what type of information can you put into your
 metainfo fields. In this case, for tissue the system will map your entries to
-the `Uberon ontology`_ and the metainfo type must be text. You can edit
+the Uberon ontology and the metainfo type must be text. You can edit
 existing templates by right-clicking on a template and selecting the **Import
 Template Editor** app from the "Manage" submenu.
 
@@ -385,32 +366,32 @@ required and what is it’s metainfo type (e.g. text, yes/no, integer).
 |metainfo_type_editor|
 
 If you are using a file kind that is not yet listed, you can add a new one by
-clicking on the “Add File Kind” button at the bottom of the page and
+clicking on the "Add File Kind" button at the bottom of the page and
 specifying the required metainfo attributes. Keep in mind that file kinds are
 defined in Genestack - you won’t be able to create a template entry for a
 file kind that is not used on the platform.
 
-When you’re done, click on the blue “Import data using this template” button.
+When you’re done, click on the blue "Import data using this template" button.
 This will take you to the import page, where you can go through three import
 stages described above.
 
-Once you have completed the metainfo editing step, you may see a “Use files in
-data flow” button at the bottom of the page by “Import files”. This depends on
-the file type you have imported. Later you can find your files in the “Imported
-files” folder which can be accessed from the Welcome Page and from the File
+Once you have completed the metainfo editing step, you may see a "Use files in
+data flow" button at the bottom of the page by "Import files". This depends on
+the file type you have imported. Later you can find your files in the "Imported
+files" folder which can be accessed from the Welcome Page and from the File
 Manager.
 
-Metainfo Import
+Metadata Import
 ~~~~~~~~~~~~~~~
 
-Apart from importing biodata, you’re able to easily import and validate the
+Apart from importing data, you can also import and validate the
 metainfo attached to the assays and to the experiment. The **Import data from
 spreadsheet** button allows you to retrieve the metainfo from a local CSV or
 Excel file and map it to the Genestack assays:
 
 |import_from_spreadsheet|
 
-Click “Import data from spreadsheet” and drag the file with metainfo:
+Click "Import data from spreadsheet" and drag the file with metainfo:
 
 |import_metainfo|
 
@@ -425,12 +406,14 @@ template will be highlighted in green.
 
 We can specify for each column whether the column should be imported, and if it
 should be mapped to a different metainfo key, by clicking on the column header.
-Click “Import” when you finish editing the table:
+Click "Import" when you finish editing the table:
 
 |import_metadata|
 
-For instance, in this case we added new column “Age” and filled “Organism”,
-“Sex”, “Tissue” and “Disease” columns that came from the default template.
+For instance, in this case we added new column "Age" and filled "Organism",
+"Sex", "Tissue" and "Disease" columns that came from the default template.
+
+.. _attachments:
 
 Attachments
 ~~~~~~~~~~~
@@ -446,9 +429,9 @@ they get lost on your computer.
 
 **How to upload an attachment?**
 
-The attachment are uploaded together with the experiment data. In the “Upload”
+The attachment are uploaded together with the experiment data. In the "Upload"
 section of the Import app, choose the attachments from your computer along
-with your experiment data. On the “Import” step, the platform will
+with your experiment data. On the "Import" step, the platform will
 recognize the raw data and the fact that you have uploaded unrecognisable
 files.
 
@@ -465,12 +448,6 @@ experiment. There is an "attachments" link by the experiment name and
 description:
 
 |fm_attachments|
-
-.. _Forum3: http://forum.genestack.org/t/the-difference-between-experiments-and-folders/37
-.. _ChEBI ontology: https://www.ebi.ac.uk/chebi/
-.. _Cell ontology: https://bioportal.bioontology.org/ontologies/CL
-.. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
-.. _Uberon ontology: http://uberon.github.io/about.html
 
 .. |default_import_template| image:: images/default_import_template.png
 .. |resumed_uploads| image:: images/resumed_uploads.png
@@ -504,28 +481,29 @@ Browsing Data
 -------------
 
 Efficient data search and browsing are at the core of Genestack. The
-platform provides  rapid access to private, shared, and public data
-analyses results; facilitates search for studies and assays across your
-private, public, and shared data; and accepts queries using synonyms,
-ontology expansions, and chemical similarity.
+platform provides rapid access to private, shared, and public data
+analyses results.
+
+.. _experiment-browser:
 
 Experiment Browser
 ~~~~~~~~~~~~~~~~~~
 
 Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
-and ArrayExpress, and Genestack synchronizes data from these databases regularly keeping
-it up-to-date. There are currently more than 3 millions sequencing and microarray assays from over
-100 000 experiments.
-Experiment Browser app allows to browse these public datasets, as well as your private
+and ArrayExpress. Data is synchronizes regularly from these databases, keeping
+things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
+100,000 public experiments indexed in Genestack.
+
+The Experiment Browser allows to browse these public datasets, as well as your private
 experiments or the ones shared with you on Genestack. You can access the Experiment
-Browser either from the Welcome Page or the Shortcuts Menu on the left-hand side.
+Browser either from the :ref:`welcome-page` or the Shortcuts Menu on the left-hand side.
 
 You can search relevant data with **a free-text query**, and you can further
 filter down experiments by **metadata attributes** using the checkboxes
 on the left. These attributes are generated based on the metadata available for experiments.
 For instance, you can set the filters 'Access', 'Method'
 and 'Organism' to 'Public', 'RNA-Seq', 'Mus musculus', respectively,
-to filter out publicly accessible data on mice obtained from  mouse RNA-Seq data.
+to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
 
 |ExperimentBrowser|
 
@@ -534,99 +512,77 @@ the list of matching assays and save them into one folder.
 
 |SaveMatchingAssays|
 
-Moreover, Experiment Browser allows to find bioinformatic analyses results
-associated with raw data. Indeed, if there are analysis performed on a given experiment,
-and you have an access to these results (i.e. theses are yours or shared with you),
-then under the experiment name you will see **"View N analysis results"** link.
-Click it shows you the list of existing resulting files such as, for example, QC reports
+Moreover, Experiment Browser allows you to find bioinformatics analyses results
+associated with raw data. If there are analysis performed on a given experiment,
+and you have access to these results (i.e. they are yours, or they are shared with you),
+then under the experiment name you will see a **"View N analysis results"** link.
+Clicking it shows you the list of existing resulting files such as, for example, QC reports
 or Genome Browser pages.
 
 |AnalysisResults|
 
-Clicking on the name of any of the found experiments will take you to
-the **Metainfo Editor**, where you can learn more that experiment
-and get some information on samples.
+Clicking on the name of any of the experiments will take you to
+the :ref:`metainfo-editor`, where you can view (and possibly edit) the metadata of this experiment and its assays.
 
 |EditMetainfo|
 
-Besides that, on the Metainfo Editor page you can run the assays through a pipeline with
-**"Start new data flow with application"**. You can:
-- existing data flows matching for the assays of choice;
-- build the pipeline step-by-step option.
+Besides that, on the Metainfo Editor page you can run the assays through a pipeline via the button
+**"Start new data flow with application"**. You can either use an existing data flow matching the assays, or build a
+new pipeline step by step.
 
 |NewDF|
 
-Click **"Use files in data flow"** button and
-From the metainfo editor, you can also open the experiment in the **file manager** by clicking on
+From the metainfo editor, you can also open the experiment in the :ref:`file-manager` by clicking on
 the experiment's name at the top of the page and selecting **Explore > File Manager**.
 
 |fromMEtoFB|
 
+.. _file-manager:
+
 File Manager
 ~~~~~~~~~~~~
-**File Manager** is where you can easily access all of your private, public
-and shared data. Here are other apps that help users better analyse their data and find
-links between various results.
-
-Clicking on the home icon will take you to the File Manager – a central
-place on the platform, as it contains all of your files (you probably
-got that already).
+Like on any operating system, the **File Manager** is where you can easily access
+all of your files, organise them into folders, and open them with various applications.
 
 |FileManager|
 
-The panel (tree view) on the left side is our file system navigator.
-Here you can see many different folders. Let’s look at them in greater
-detail:
+The panel (tree view) on the left-hand side is the file system navigator.
+Here you can see many different folders. Some special folders are worth mentioning:
 
-**Created files** contains everything you have created on Genestack
-Platform. Created a new import template? You’ll find it there. Processed
-some of your files? You’ll find the results there. Created a new data
-flow and want to share it? It will be in the Created files folder.
+**Created files** is the folder where any new file created by an application on Genestack goes.
 
-The files are organized by date, with oldest ones on top (however, you
+The files are organized by date, with oldest ones on top ; however, you
 can change this order to show the most recent ones - just click on the
-header of the “Last Update” column). If you created a couple of files at
-once using a data flow they will be located in one folder (called “Files
-for XYZ data flow run <date>). In these folders you will find the very
-result of your analysis (e.g. Genetic Variations file containing found
-mutations), results of all intermediate analysis steps (e.g.
-preprocessed reads, mapped reads etc. created by the apps participating
-in your pipeline as you remember each contributing app creates a file),
-as well as all original files (“Original Files for XYZ, a sub-folder in the “Dependencies” folder).
+header of the "Last Update" column.
 
-**Imported files** contains everything you have ever imported, organized by
+**Imported files** is where imported data goes, organized by
 date: all files imported at the same time (during one import action)
-will be located in the same folder (until you move them around etc). 
+will be located in the same folder. 
 
-Raw uploads contains all the files you’ve uploaded into Genestack -
-fastq and bam files, pdf documents, excel tables etc.
+**Raw uploads** contains all the files you’ve uploaded into Genestack -
+FASTQ and BAM files, pdf documents, excel tables etc.
 
 
-.. note:: **What’s the difference between raw uploads and imported files?**
+.. note:: **What is the difference between raw uploads and imported files?**
 
           When you have just started importing your files (in various formats like
-          FASTQ, BAM etc), they all go to the specific storage area (“Raw uploads”
-          folder). During import Genestack will recognize these uploaded files and
+          FASTQ, BAM etc), they all go to the specific storage area (the "Raw uploads"
+          folder). During import, Genestack will recognize these uploaded files and
           allocate them to appropriate biological types (you can also do it
           manually), e.g. sequencing assays, mapped reads etc. These meaningful
-          biological objects is what you work with on our platform and these are
-          located in the “Imported files” folder.
+          biological objects are what you work with on Genestack, and these are
+          located in the "Imported files" folder.
 
-**Exports** folder contains export files with download links. For example,
-sets of exported microarrays. Get more information about Exporting Data from Genestack in
-the Export Data section.
+The **Exports** folder contains data ready for export. See the :ref:`export` section for more information.
 
 Below these four grouped folders, you will see two more: Shared with me
 and Public Data.
 
 **Shared with me** contains all files that other users have shared with
-you or that you shared with other users. Our platform has collaboration
-at its heart, but in order to keep things simple at this point, we’ll
-talk about sharing at the very end of this guide (+ link to the guide
-part about it).
+you or that you shared with other users. See the :ref:`sharing` section for more details.
 
-**Public Data** contains all of the goodies we have preloaded the platform
-with to make life a bit simpler for our users. This folder contains:
+**Public Data** contains all of the goodies we have preloaded on Genestack
+to make life a bit simpler for our users. This folder contains:
 
 |PublicData|
 
@@ -654,21 +610,10 @@ with to make life a bit simpler for our users. This folder contains:
    have preloaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
    ArrayExpress, SRA, and ENA. Currently we have about 100,000
-   experiments in our database. If you want to know more about a specific experiment use the
-   Experiment Viewer app;
+   experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials. To read more on particular analysis types, go to
-   https://genestack.com/tutorials/.
-
-   Currently, we can offer you the following tutorials:
-
--  `Getting Started With Genestack Platform`_
--  `Testing Differential Gene Expression`_
--  `Whole Genome Bisulfite Sequencing Analysis`_
--  `Whole Exome Sequencing Analysis`_
--  `Whole Genome Sequencing Analysis`_
-
-.. _Whole Exome Sequencing Analysis: https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/
+   `<https://genestack.com/tutorials/>`_.
 
 To access the **context menu** for a given file, you can either right or left click
 on the respective entry in the file browser. The topmost entry is the
@@ -708,14 +653,14 @@ These menus will become available when you select a file. 
 
 |MatchingApps|
 
-These apps are “clever” –  when you choose a file, the system will
+These apps are "clever" –  when you choose a file, the system will
 suggest  apps which can work with the specific file type (e.g.
 sequencing assay). However, you still need to think about the nature of
 the data. For instance, if you want to align a raw WGBS sequencing assay
 Genestack will suggest several mappers, but only the Bisulfite
 Sequencing Mapping app will be suitable in this case. To figure out what
 apps are recommended to process WGBS, WES, RNA-seq or other sequencing
-data, go to the “Pipelines and applications” section of this guide.
+data, go to the "Pipelines and applications" section of this guide.
 
 **File search** in the top right corner allows you to search for files using
 their metadata (names, organism, method). To limit the search by file
@@ -727,16 +672,16 @@ triangle inside the search box.
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
 folders. **To add** files to your briefcase hover over each
-individual file and use the special “briefcase” button that appears or
-select several files, right click on them and choose “Add to
-briefcase...”. **To delete** an item from your briefcase hover over it and
-click on the “x” button. **To clear all** items from the briefcase, select
-“Clear all” option.
+individual file and use the special "briefcase" button that appears or
+select several files, right click on them and choose "Add to
+briefcase...". **To delete** an item from your briefcase hover over it and
+click on the "x" button. **To clear all** items from the briefcase, select
+"Clear all" option.
 
 |BriefCase|
 
 If you select a file, **three additional** buttons will show up, allowing
-you to **share**, **delete** the file or **view metainfo** (an “eye”-icon) for
+you to **share**, **delete** the file or **view metainfo** (an "eye"-icon) for
 the file.
 
 |3buttons1|
@@ -785,6 +730,8 @@ permissions.
 .. |NewDF| image:: images/new-df.png
 
 
+.. _metainfo-editor:
+
 Curating Data and Managing Metadata
 -----------------------------------
 
@@ -799,28 +746,13 @@ Cell Ontology and Uberon Ontology, or created by our team.
 Our terminological resources are used not only for curation of public experiments but also
 for editing metadata of created or imported files.
 
-We categorized our terminological resources in the following sets:
-
-- The non-hierarchical controlled vocabularies (to cover e.g. Sex, Method,
-  Platform fields), which are simply lists of terms;
-- The `NCBI Taxonomy`_ is a standard hierarchical nomenclature and
-  classification scheme for organisms;
-- The `Cellosaurus vocabulary`_ used for Cell Line field annotation - is an
-  example of controlled vocabulary which describes all cell lines used in
-  biomedical research;
-- A bunch of ontologies - `ChEBI Ontology`_, `Cell Ontology`_ (to annotate
-  Compound and Cell type fields, respectively), `Uberon Ontology`_ (covering
-  anatomical structures in animals) and other ontologies.
-
-.. _NCBI Taxonomy: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000
-
 Besides, the importance of dictionaries in automated curation of public experiments,
 the controlled terms can be used to fill in and edit metadata for imported
 files or those created with the platform. The use of standardized terms will help to
 reduce confusion and facilitates data browsing and improves the clarity of metadata.
 
 Use **Edit Metainfo** app to work on metadata manually. To access the app select the assays
-of interest, right click on them and in “Manage” section choose Edit Metainfo.
+of interest, right click on them and in "Manage" section choose Edit Metainfo.
 
 |metainfoEditor|
 
@@ -905,11 +837,6 @@ an existing data flow or build a new one using the available applications on the
 
 |runDFfromME|
 
-.. _ChEBI Ontology: https://www.ebi.ac.uk/chebi/
-.. _Cell Ontology: https://bioportal.bioontology.org/ontologies/CL
-.. _Cellosaurus vocabulary: http://web.expasy.org/cellosaurus/description.html
-.. _Uberon Ontology: http://uberon.github.io/about.html
-
 .. |changeTemplate| image:: images/change-template.png
 .. |metainfoEditor| image:: images/metainfo-editor.png
 .. |addAttribute1| image:: images/add-attribute-1.png
@@ -924,6 +851,7 @@ an existing data flow or build a new one using the available applications on the
 .. |runDFfromME| image:: images/run-df-from-me.png
 .. |addAttribute| image:: images/add-attribute.png
 
+.. _sharing:
 
 Sharing Data and Collaboration
 ------------------------------
@@ -973,14 +901,14 @@ top-right corner of any screen and select "Manage Groups".
 
 |profile_manage_groups|
 
-From there, you can create groups using “Create group” button, add or remove
+From there, you can create groups using "Create group" button, add or remove
 people from groups, and change users' privileges within groups. By default, you
 will be a group administrator of any group that is created by your user. Let's
-create a new group “Alpha Corporation release”.
+create a new group "Alpha Corporation release".
 
 |manage_create_groups|
 
-Click “Add member” button to add people to this group. From there you will be
+Click "Add member" button to add people to this group. From there you will be
 prompted for the e-mail of the user you want to add. If they are in your
 organisation, you will be provided with autocomplete:
 
@@ -1014,17 +942,16 @@ Learn more on how to Create and Manage Groups `here`_.
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that the group is setup, you can share your files. In fact, you can share
-everything you do on the platform: data, scripts, results, data flows, and
-import templates. Let's share the imported experiment.
+Now that the group is set up, you can share your files.
+Any file created on Genestack can be shared. Let's share the imported experiment.
 
-Go to the “Imported files” folder in File Manager. Alternatively, you can
+Go to the "Imported files" folder in File Manager. Alternatively, you can
 search for it in the File Search text box, which you can find on the home page,
 in the File Browser and in the right-hand side dock in every window.
 
 Once you find the file you want to share, select it in the File Manager by
 ticking the checkbox next to it, then click the "Share" button in the top bar
-or right-click on the file and “Share” option in the context menu.
+or right-click on the file and "Share" option in the context menu.
 
 |sharing_experiment|
 
@@ -1049,9 +976,9 @@ when they open that folder (which can make it easier for them to find it). If
 you click "No", the file will not be linked into the group folder but the
 group's users will still be able to find the file through the File Search box
 (for instance, if you tell them the accession of the file), in File Provenance
-and through the Experiment Browser.
+and through the :ref:`experiment-browser`.
 
-.. note:: **What is the differance between linking and copying?**
+.. note:: **What is the difference between linking and copying?**
 
           We use the word "linking" and not "copying", because in Genestack,
           adding a file to a folder does not physically create a duplicate of
@@ -1107,10 +1034,10 @@ completed);
 
 – add steps to the file data flow (the pipeline).
 
-Clicking on blue “Add step” button will show you the list of all the
+Clicking on blue "Add step" button will show you the list of all the
 possible apps that can be used to analyse your data – Genestack OS chooses
 this list after checking your data (which, as you remember, is hosted on our
-platform as a meaningful biological object or a “smart file”).
+platform as a meaningful biological object or a "smart file").
 
 Continue adding steps until you have completed building your pipeline. When
 you add each of the steps, you create new files which end up in the created
@@ -1125,7 +1052,7 @@ You can initialize files in different ways:
 1. Using **Start initialization** option in the context menu.
 
 Click on the name of your last created file at the top of the application page
-and select “start initialization”.
+and select "start initialization".
 
 |start_initialization|
 
@@ -1134,17 +1061,17 @@ and select “start initialization”.
 If you want to save the pipeline and specific parameters you used here
 to re-use again on other files you can create a new data flow. You need
 to do this, before you start initialization. Click on the name of the
-last created file, go to Manage and “Create new Data Flow”.
+last created file, go to Manage and "Create new Data Flow".
 
 |create_new_data_flow|
 
 This will take you to the Data Flow Editor where you can introduce any last
-changes to your pipeline. Click on “Run dataflow” button once you are done.
+changes to your pipeline. Click on "Run dataflow" button once you are done.
 
 |data_flow_editor|
 
 This will take you to Data Flow Runner page where you can initialize the
-computations (by clicking “Run Data Flow” in the last cell).
+computations (by clicking "Run Data Flow" in the last cell).
 
 |run_data_flow|
 
@@ -1154,18 +1081,18 @@ computations immediately or "Delay initialization tll later".
 |start_initialization_now|
 
 This data flow, along with all your results (after computations are finished)
-will be stored in the “Created files” folder.
+will be stored in the "Created files" folder.
 
 3. Using **File Initializer** application.
 
 Select the created uninitialized files (from data flow or File Manager), right
-click on them, go to “Manage” and choose the “File Initializer” app.
+click on them, go to "Manage" and choose the "File Initializer" app.
 
 |file_initializer_df|
 
 File Initializer reports the status of the files and allows you to initialize
-those that need to be by clicking on their respective “Go!” buttons, or
-“Initialize all” to do them all at once. Files do not need to be produced by
+those that need to be by clicking on their respective "Go!" buttons, or
+"Initialize all" to do them all at once. Files do not need to be produced by
 the same apps to be initialized together.
 
 |file_initializer|
@@ -1174,7 +1101,7 @@ the same apps to be initialized together.
 
 Alternatively, you can click on the name of the last created file, go to Manage
 and choose File Provenance application. The app displays the pipeline and also
-allows you to run the computation using “Start initialization” button. You’ll
+allows you to run the computation using "Start initialization" button. You’ll
 learn more about this application later in this section.
 
 |file_provenance_init|
@@ -1187,19 +1114,17 @@ Running the Data flows
 ~~~~~~~~~~~~~~~~~~~~~~
 
 There are two apps that can be used to edit and run a data flow. The first one
-you’ll usually see is the Data Flow Editor. This app presents a visual
+you will usually see is the Data Flow Editor. This app presents a visual
 representation of the pipeline and allows you to choose your sources (usually
 sequencing assays) and reference genome. At this stage, no files have been
-created nor initialized. When you click on “Run Data Flow” button, this will
+created nor initialized. When you click on "Run Data Flow" button, this will
 take you to the Data Flow Runner app and create all the relevant files in an
 uninitialized state. On the Data Flow Runner page you can choose whether you
 wish to start initialization of the data flow now, or delay it until later.
 You can also edit the app parameters – by clicking on an app name and on the
-app page going to “Edit parameters”.
+app page going to "Edit parameters".
 
 Remember, to begin computation, you must initialize all files!  
-
-Also, you can create
 
 Public data flows
 ~~~~~~~~~~~~~~~~~
@@ -1221,42 +1146,6 @@ prepared for our users. We cover most of the common analysis types:
 - `Unspliced Mapping`_
 - `Spliced Mapping`_
 
-Clicking on the data flow will take you to the data flow editor where you can
-add source files and reference genomes (we have a wide range of reference
-genomes readily available on the platform). When you have chosen your files,
-click on “Run dataflow” to go to the Data Flow Runner. If you don’t want to
-change any settings, you can click “Start initialization now”. To tweak the
-parameters and settings of the apps, select “Delay initialization until later”.
-To change the settings, click on the name of the app in the data flow. This
-will take you to the app page, where you can select “Edit parameters” and
-introduce your changes. When you are done introducing your changes, go back to
-the data flow and initialize your computations.
-
-File Provenance
-~~~~~~~~~~~~~~~
-**Reproducibility of pipelines**
-
-Complete reproducibility is one of the core strengths of Genestack. For any
-file in the system you can view the file provenance and then replay the same
-exact analysis type on other data.
-
-|file_provenance|
-
-The File Provenance app also allows you to view the text description of the
-pipeline used to create a given file. Clicking the “View as text” button
-allows you to see what parameters and what tool versions were used at each
-analytical step. You can copy this text and e.g. use it in your publication.
-
-|view_as_text|
-
-Clicking “New folder with files” button will create you a folder with all the
-files used in this pipeline.
-
-Later, if you’ll want to reuse the same pipeline on different data, you can
-create the dataflow identical to the pipeline used to create the original file,
-by selecting the file of interest and choosing “Create new Data Flow” from the
-available “Manage” apps.
-
 .. _Single-cell Transcriptomic Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968143%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNEhL4uWcHXHOr1FGZ5tIBY5kYgTXg
 .. _Genetic Variation Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1021590%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532140000&usg=AFQjCNH4ZvdWkHff66-8rHQA5k2oKvuT_g
 .. _Whole Exome Sequencing Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF999236%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532141000&usg=AFQjCNG0Aiv5aOhWP7aOzsAnlMG2VPAuFw
@@ -1270,6 +1159,43 @@ available “Manage” apps.
 .. _Agilent Microarray Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1015659%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNHwRN4S4g8o97lI1jPk0Nl4fFiW5A
 .. _Unspliced Mapping: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF1014279%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532144000&usg=AFQjCNGI7qIqJF-YRl8ucCZ-083HWgXJmw
 .. _Spliced Mapping: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a%3DGSF968220%26action%3DcreateFromSources%26new_page%3Dtrue&sa=D&ust=1480960532145000&usg=AFQjCNFB8P_K2h7NeJkIbyI8ySfN7EhaEA
+
+Clicking on the data flow will take you to the data flow editor where you can
+add source files and reference genomes (we have a range of public reference
+genomes from Ensembl readily available on the platform). When you have chosen your files,
+click on "Run data flow" to go to the Data Flow Runner. If you don’t want to
+change any settings, you can click "Start initialization now". To tweak the
+parameters and settings of the apps, select "Delay initialization until later".
+To change the settings, click on the name of the app in the data flow. This
+will take you to the app page, where you can select "Edit parameters" and
+introduce your changes. When you are done introducing your changes, go back to
+the data flow and initialize your computations.
+
+File Provenance
+~~~~~~~~~~~~~~~
+**Reproducibility of pipelines**
+
+Complete reproducibility is one of the core strengths of Genestack. For any
+file in the system you can view the file provenance and then replay the same
+exact analysis on other data files.
+
+|file_provenance|
+
+The File Provenance app also allows you to view the text description of the
+pipeline used to create a given file. Clicking the "View as text" button
+allows you to see what parameters and what tool versions were used at each
+analytical step. You can copy this text and e.g. use it in your publication.
+
+|view_as_text|
+
+Clicking "New folder with files" button will create you a folder with all the
+files used in this pipeline.
+
+Later, if you’ll want to reuse the same pipeline on different data, you can
+create the dataflow identical to the pipeline used to create the original file,
+by selecting the file of interest and choosing "Create new Data Flow" from the
+available "Manage" apps.
+
 
 .. |pipeline_building| images:: images/pipeline_building.png
 .. |cla_page| image:: images/cla_page.png
@@ -1287,18 +1213,20 @@ available “Manage” apps.
 .. scale: 45%
 ..
 
+.. _task-manager:
+
 Task Manager
 ------------
 
-In the upper right corner you can see a link called Tasks. It will take
-you to the Task Manager, an application which allows you to track the
+In the top-right corner of any page on Genestack, you can see a link called Tasks.
+It will take you to the Task Manager, an application which allows you to track the
 progress of your computations.
 
-<screenshot “Task Manager”>|image26|
+.. image:: images/task-manager.png
 
 All your tasks can be sorted and filtered by file name, accession,
-status, owner, last updated and elapsed time columns. Also you can ‘view
-logs’ for each computation: the error log and the output log. Error logs
+status, owner, last update and elapsed time. You can also view logs
+produced for each computation (error and output log). Error logs
 tell you why your task has failed. Output logs contain information about
 the exact details of what Genestack does with your files during the
 computation process, what specific tools and parameters are used, and so
@@ -1306,50 +1234,31 @@ on.
 
 If the computations finished successfully, error logs will be empty, but
 the logs can provide you with some basic statistics about the output
-data, e.g. mapping statistics from the Unspliced Mapping with Bowtie2
-app.
+data.
 
-<screenshot “Output log in TM”>|image27|
+.. image:: images/task-log.png
 
-If you change your mind about a computation after it has started
+If you change your mind about a computation after it has started,
  remember that you can kill tasks whenever you want by clicking the
-“Cancel” button.
+**Cancel** button, next to the task status.
 
 Statuses in Task Manager help you keep track of your tasks. Let’s look
 what each status means:
 
--  Created: a request for the computation has been  created and the task
-   will be started soon;
--  Starting: the computation process has  started to run;
--  Done:  the task has finished successfully ;
--  Failed: the computation has  failed. To find out  why , click on
-   “View logs”;
+-  Starting: the computation process has started to run
+-  Done:  the task has finished successfully
+-  Failed: the computation has failed. To find out why, click on
+   "View logs"
 -  Queued: the task is waiting for dependencies to complete
-   initialization or for computing resources to become available;
--  Running: your task is in progress;
--  Queueing: to fill
+   initialization
+-  Running: your task is in progress
 -  Blocked by dependency failure: the computation cannot be completed
-   because a dependency has encountered an error
--  Killed: the task has been canceled .
+   because a task on which this one depends has failed
+-  Killed: the task has been canceled by the user
+
+.. _export:
 
 Data Export
 -----------
 
-As you know, once you upload files on Genestack they “lose” their format
-and become meaningful biological objects. This means that you don’t need
-to worry about formats during data analysis.
-
-Export Data For Microarray Assays 
-
-This application allows users to export microarrays from public or
-shared experiments. The app generates a special download link which can
-be sent to your colleagues, even if they are not registered on Genestack.
-
-How to access the app?
-
-You can find it in the Manage section after right-clicking on the files
-you wish to export. \ :sup:``[bb] <#cmnt54>`__`[bc] <#cmnt55>`__`
-
-Complete data export features are currently under development. However,
-you can contact our team to export files on demand.
-
+.. TODO
