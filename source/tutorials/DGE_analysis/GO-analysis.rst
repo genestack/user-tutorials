@@ -3,7 +3,7 @@ GO-based enrichment analysis
 
 To further characterise the biological processes that might be affected
 in trisomic samples, we performed `the downstream gene ontology (GO)
-analysis`_ of the DGE genes. For this, we'll use GO Enrichment Analysis app,
+analysis`_ of the DGE genes. For this, we will use **GO Enrichment Analysis** app,
 which performs the classic `Fisher's exact test`_ based on gene counts,
 against GO annotations. Open the app on one of the completed Differential
 Expression Statistics files:
@@ -13,8 +13,8 @@ Expression Statistics files:
 .. _the downstream gene ontology (GO) analysis: http://geneontology.org/
 .. _Fisher's exact test: https://en.wikipedia.org/wiki/Fisher%27s_exact_test
 
-Changing the group and thresholds criteria in the Filter Options, you can set
-what DE genes can be further used for enrichment analysis. Let's run GO app
+Changing the group and thresholds criteria in the **Filter Options**, you can set
+what DE genes can be further used for enrichment analysis. Let's run GO Enrichment Analysis app
 twice, analysing down- and up-regulated genes separately.
 
 |DGE_GO_filters|
