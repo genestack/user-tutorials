@@ -16,7 +16,7 @@ We have preloaded the platform with hunders of thousands of `publicly available 
 Format-free files
 -----------------
 
-While you browse around all the folders, we’d like to point out a
+While you browse around all the folders, we would like to point out a
 key feature of Genestack Platform:  **all files are format-free objects**.
 Each Genestack file can be considered a container, packing
 several physical files or even a database, with complex and rich
@@ -29,7 +29,7 @@ Take a look at the  "Kind" column. These files are of the  "Reference Genome"
 There is no single, standard, commonly accepted file
 format for storing and exchanging genomic sequence and features:
 sequence can be stored in FASTA, EMBL or GenBank formats. Genomic
-features (introns, exons, etc.) can for example be represented via GFF
+features (introns, exons, etc.) can, for example, be represented via GFF
 or GTF files. Each of these formats themselves have flavours, versions,
 occasionally suffering from incompatibilities and conflicts. In
 Genestack you no longer have to worry or know about file formats
@@ -41,7 +41,7 @@ Genestack file, meaning all reference genomes will behave identically,
 regardless of any differences in the physical formats underneath. You
 can browse reference genomes with our  `Genome
 Browser`_
-you can use them to map raw sequence reads, to analyse variations, to
+you can use them to map raw sequencing reads, to analyse variations, to
 add and manage rich annotations such as Gene Ontology and you never have
 to think about formats again. Of course, not only reference genomes are
 format-free. All files in Genestack Platform are format-free: raw reads,

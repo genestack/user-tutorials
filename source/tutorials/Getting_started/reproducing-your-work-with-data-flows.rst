@@ -23,7 +23,8 @@ have previously created.
 The data flow editor has one
 core goal: to help you create more files using this diagram. To do this
 you will need to make some decisions for boxes in the diagram via
-the **Action** menu. If you want to select different files, go to **Choose another file**. If you want to leave the original file simply don't
+the **Action** menu. If you want to select different files, go to **Choose another file**. If you want
+to leave the original file simply do not
 change anything.
 
 |choose another file|

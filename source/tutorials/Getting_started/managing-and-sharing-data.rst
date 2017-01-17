@@ -32,7 +32,7 @@ organisation to it. You are the group administrator of any groups that
 you create. As group administrator you can add/remove other users to
 your group, make them administrators, or at least make them “sharing” or
 “non-sharing” users. All groups appear as folders under "Shared with me"
-in File Manager, and the moment you add a user to a group they’ll see
+in File Manager, and the moment you add a user to a group they will see
 the group’s folder in their File Manager.
 
 |shared with me folder|
@@ -49,9 +49,9 @@ files.
 |share data|
 
 After you select the group and click  **Share**,
-you’ll need to confirm that you want to share these files by entering
+you will need to confirm that you want to share these files by entering
 your password (the system will remember this authorisation for the next
-five minutes) and then you’ll have the option, which you do not have to
+five minutes) and then you will have the option, which you do not have to
 take, to also add them to the group folder:
 
 |link shared files|
@@ -70,8 +70,9 @@ Sharing with other organisations
 --------------------------------
 
 It is very easy to share data with users in the same organisation. You
-simply create a group and share files; all group members see share data
-immediately. What about sharing across organisations? Say, you work in a
+simply create a group and share files; all group members see shared data
+immediately.
+What about sharing across organisations? Say, you work in a
 hospital research group and have imported some valuable pathogenic
 specimen sequence data into Genestack Platform and want to share it with
 your colleagues in a pharma company who work on some novel drugs to kill
@@ -97,8 +98,8 @@ administrator will see the following in their group management screens:
 |incoming-invitation|
 
 Once they confirm the outgoing invitation, the
-other organisation’s administrator will see the same in their Incoming
-invitations section and will have to confirm it as well. After both
+other organisation’s administrator will see the same in their **Incoming invitations**
+section and will have to confirm it as well. After both
 confirmations, the new group has members from both organisations:
 
 |cross-org-group|
