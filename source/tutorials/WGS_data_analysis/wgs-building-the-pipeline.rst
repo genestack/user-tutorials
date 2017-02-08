@@ -1,6 +1,8 @@
 Building the genetic variants analysis pipeline
 ***********************************************
 
+.. youtube:: https://www.youtube.com/watch?v=N0AVWFwfASg
+
 To start the pipeline,  select the sequencing assays from "Homo sapiens
 Genome sequencing and variation" experiment, right click on them and
 select the first preprocessing app — Trim Adaptors and Contaminants.

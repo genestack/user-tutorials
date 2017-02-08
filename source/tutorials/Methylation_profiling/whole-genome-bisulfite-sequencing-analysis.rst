@@ -8,14 +8,14 @@ Investigating the DNA methylation pattern is extremely valuable because this ep
 regulates gene expression. It is involved in embryonic development, genomic imprinting, X chromosome
 inactivation and cell differentiation. Since methylation takes part in many normal cellular
 functions, aberrant methylation of DNA may be associated with a wide spectrum of human diseases,
-including cancer. Methylation is in strong interplay with other epigenetic systems, providing the
-unique balanced picture of active and supressed genes. Indeed, methylomes of a malignantly
-transformed cell and a healthy one are differ. Moreover, both hyper- and hypomethylation events are
-associated with cancer.
+including cancer. A strong interplay between methylation patterns and other
+epigenetic systems provides a unique  picture of active and supressed genes.
+Indeed, methylomes of a malignant cell and a healthy one are different.
+Moreover, both hyper- and hypomethylation events are associated with cancer.
 
-As methylation model of DNA is reversible and can be modified under the influence of
-the environment, epigenetics open new prospectives in diagnose and therapy of cancers and many other
-severe diseases.
+As methylation patterns of DNA are reversible and can be modified under the
+influence of the environment, epigenetics opens new possibilities in diagnosis
+and therapy of cancers and other severe diseases.
 
 Bisulfite sequencing approaches are currently considered a “gold standard” allowing comprehensive
 understanding of the methylome landscape. Whole-genome bisulfite sequencing (WGBS), provides single-

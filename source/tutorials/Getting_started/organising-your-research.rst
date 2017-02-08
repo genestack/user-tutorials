@@ -1,6 +1,8 @@
 Organising your research
 ************************
 
+.. youtube:: https://www.youtube.com/watch?v=JaEM73GpEXM
+
 So you have created a Genestack Platform account, logged on, and created
 a bunch of users. Let’s now talk about data organisation on Genestack
 platform. From the Welcome Page go to the File Manager and explore it a

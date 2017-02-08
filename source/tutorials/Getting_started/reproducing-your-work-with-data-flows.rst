@@ -1,6 +1,8 @@
 Reproducing your work with data flows
 *************************************
 
+.. youtube:: https://www.youtube.com/watch?v=mjazNS0btd0
+
 So, you learned how to work with files and folders, you even created a
 simple analytical data flow to go from raw sequence to a list of
 variants. Now, let’s talk about reproducibility. We will now show you

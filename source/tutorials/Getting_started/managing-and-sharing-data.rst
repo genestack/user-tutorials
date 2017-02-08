@@ -1,6 +1,8 @@
 Managing and sharing data
 *************************
 
+.. youtube:: https://www.youtube.com/watch?v=ZtTTZyftZKM
+
 To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your **e-mail address** in the upper right corner
 and select "Manage groups" from the administration menu.
