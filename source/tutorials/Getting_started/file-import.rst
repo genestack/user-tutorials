@@ -1,6 +1,8 @@
 Importing data into the Genestack Platform
 ******************************************
 
+.. youtube:: https://www.youtube.com/watch?v=eOl1uabctzI
+
 We have talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you
 can find an **Import data** option, and an **Import** button can be found in the File Manager.
