@@ -9,7 +9,9 @@ are essential for accurate SNP and indels (insertion/deletions)
 identification. The following video illustrates how to start computation
 on this step and analyse mapping results in Genome Browser:
 
-.. youtube:: https://www.youtube.com/watch?v=hCGkOYQfH5g
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/hCGkOYQfH5g" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 When mappings are complete, open all 4 files in Genome browser to compare
 their `read coverage`_. Let's look for specific gene or region, for example,
@@ -48,7 +50,9 @@ mapping separately or run our `Targeted Sequencing Quality Control`_ public
 data flow (with default values) for several samples at once and analyse the
 output reports in `Multiple QC Report app`_:
 
-.. youtube:: https://www.youtube.com/watch?v=_jHrtq_3ya8
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/_jHrtq_3ya8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 In this tutorial, we are looking at three exome enrichment platforms from
 Agilent, Nimblegen and Illumina and assessing their overall targeting
@@ -111,7 +115,9 @@ You can 'generate reports' for each mapping separately or just run `Mapped
 Reads Quality Control`_ data flow for multiple samples and analyse the output
 reports in Multiple QC Report app:
 
-.. youtube:: https://www.youtube.com/watch?v=x_axLlRFznI
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/x_axLlRFznI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Output report includes mapping statistics such as:
 

@@ -8,7 +8,9 @@ understand some relevant properties of raw data, such as quality scores, GC
 content and base distribution, etc. In order to assess the quality of the
 data we'll run the `Raw Reads QC`_ data flow:
 
-.. youtube:: https://www.youtube.com/watch?v=pBoCPytRf68
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/pBoCPytRf68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Genestack FastQC application generates basic statistics and many useful data
 diagnosis plots. Here is some of them for `sample enriched by Aligned
@@ -90,7 +92,9 @@ Our preprocessing procedure will include 'Trim Adaptors and Contaminants'
 step. Once the quality of raw data has been checked, let's start planning and
 building our `Whole Exome Sequencing Analysis`_ data flow:
 
-.. youtube:: https://www.youtube.com/watch?v=5hOGxZWwiWU
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/5hOGxZWwiWU" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 To build any data flow in Genestack, choose one of the samples and start to
 preprocess or analyse it. Each app suggests you to add next analytical step

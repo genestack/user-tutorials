@@ -1,7 +1,9 @@
 Building the genetic variants analysis pipeline
 ***********************************************
 
-.. youtube:: https://www.youtube.com/watch?v=N0AVWFwfASg
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/N0AVWFwfASg" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 To start the pipeline,  select the sequencing assays from "Homo sapiens
 Genome sequencing and variation" experiment, right click on them and

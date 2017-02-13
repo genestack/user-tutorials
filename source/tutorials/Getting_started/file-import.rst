@@ -1,7 +1,9 @@
 Importing data into the Genestack Platform
 ******************************************
 
-.. youtube:: https://www.youtube.com/watch?v=eOl1uabctzI
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/eOl1uabctzI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 We have talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you

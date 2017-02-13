@@ -18,7 +18,9 @@ After duplicate removal, the next step is to identify different genomic
 variants including SNVs, indels, MNVs, etc. For this, we'll use Variant
 Calling application based on samtools mpileup:
 
-.. youtube:: https://www.youtube.com/watch?v=E6KUSq4fXmI
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/E6KUSq4fXmI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 The app automatically scans every position along the genome, computes all the
 possible genotypes from the aligned reads, and calculates the probability

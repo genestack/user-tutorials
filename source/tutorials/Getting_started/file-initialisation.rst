@@ -1,7 +1,9 @@
 Initialising files and various file types
 *****************************************
 
-.. youtube:: https://www.youtube.com/watch?v=XLryiArc6Gc
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/XLryiArc6Gc" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Now that you know how to import data into the platform, we will walk you
 through file initialisation. All files on Genestack are created by

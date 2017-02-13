@@ -1,7 +1,9 @@
 Reproducing your work with data flows
 *************************************
 
-.. youtube:: https://www.youtube.com/watch?v=mjazNS0btd0
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/mjazNS0btd0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 So, you learned how to work with files and folders, you even created a
 simple analytical data flow to go from raw sequence to a list of

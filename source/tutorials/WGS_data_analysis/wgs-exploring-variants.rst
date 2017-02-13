@@ -1,7 +1,9 @@
 Variant calling
 ***************
 
-.. youtube:: https://www.youtube.com/watch?v=rAdVAe3unoI
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/rAdVAe3unoI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Experimental biases could lead to errors in variant calling mimicking
 true genetic variants. Variant calling on multiple samples helps
@@ -40,7 +42,9 @@ one deletion 5bp long (blue).
 Effect prediction
 *****************
 
-.. youtube:: https://www.youtube.com/watch?v=zr7BsDN6RjI
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/zr7BsDN6RjI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 After variants have been identified, we can annotate them and identify
 the effects they produce on known genes with Effect Prediction app. The app
@@ -172,7 +176,9 @@ frequency plots and information on the change rate per chromosome.
 Genetic variants filtering
 **************************
 
-.. youtube:: https://www.youtube.com/watch?v=XmG6xCRKL14
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/XmG6xCRKL14" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Resulting genetic variants files, annotated or not, can be opened in the
 Variant Explorer app. In the Variant Explorer you can interactively explore the

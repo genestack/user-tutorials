@@ -1,7 +1,9 @@
 Managing and sharing data
 *************************
 
-.. youtube:: https://www.youtube.com/watch?v=ZtTTZyftZKM
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/ZtTTZyftZKM" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 To share data, we use  **groups**. Managing groups is similar to
 managing users. Click on your **e-mail address** in the upper right corner

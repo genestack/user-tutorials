@@ -8,7 +8,9 @@ which performs the classic `Fisher's exact test`_ based on gene counts,
 against GO annotations. Open the app on one of the completed Differential
 Expression Statistics files:
 
-.. youtube:: https://www.youtube.com/watch?v=-RalDy631wk
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/-RalDy631wk" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _the downstream gene ontology (GO) analysis: http://geneontology.org/
 .. _Fisher's exact test: https://en.wikipedia.org/wiki/Fisher%27s_exact_test

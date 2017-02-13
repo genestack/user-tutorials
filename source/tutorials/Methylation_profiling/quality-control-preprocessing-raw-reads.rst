@@ -9,7 +9,9 @@ sequencing protocol utilizes sodium bisulfite conversion of unmethylated
 cytosines to thymidines and that reduces the sequence
 complexity resulting in errors during alignment.
 
-.. youtube:: https://www.youtube.com/watch?v=yqnzcVBLUYE
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/yqnzcVBLUYE" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 With our platform you can quickly and easily obtain an interactive FastQC Report
 that covers different quality aspects of raw
@@ -128,7 +130,9 @@ After checking the quality of our data,  we can proceed with
 appropriate steps for improving the original raw data in order to get
 reliable results in the downstream analysis.
 
-.. youtube:: https://www.youtube.com/watch?v=8Id2RQekYfs
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/8Id2RQekYfs" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 The authors analysed two biological replicates for two murine
 phenotypes: wild type (WT) HSCs and conditionally *Dnmt3a* knocked out

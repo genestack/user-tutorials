@@ -1,7 +1,9 @@
 Organising your research
 ************************
 
-.. youtube:: https://www.youtube.com/watch?v=JaEM73GpEXM
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/JaEM73GpEXM" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 So you have created a Genestack Platform account, logged on, and created
 a bunch of users. Let’s now talk about data organisation on Genestack

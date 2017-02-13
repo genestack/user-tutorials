@@ -19,7 +19,9 @@ In this tutorial we will walk you through:
 Creating an account and managing users
 **************************************
 
-.. youtube:: https://www.youtube.com/watch?v=asMhUjD_i68
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/asMhUjD_i68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 It is easy to register on Genestack_.  All you need to do is provide an email
 and set up a password.
