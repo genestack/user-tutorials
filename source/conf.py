@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Genestack User Tutorials'
-copyright = u'2016, Genestack'
+copyright = u'2017, Genestack'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
