@@ -52,7 +52,7 @@ files by clicking on the file name and later selecting **Start initialization**.
 This is the end of
 this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, email us at feedback@genestack.com or
+If you have any questions and comments, email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |create new data flow| image:: images/create-new-data-flow1.png

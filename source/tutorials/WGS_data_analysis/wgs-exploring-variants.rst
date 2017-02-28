@@ -237,7 +237,7 @@ we used Variant Calling application based on SAMtools_ and BCFtools_.  
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at feedback@genestack.com or
+If you have any questions and comments, feel free to email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png
