@@ -1,5 +1,5 @@
-Methylation Profiling Using Genestack Platform
-==============================================
+Whole-genome Bisulfite Sequencing Data Analysis on Genestack Platform
+=====================================================================
 
 .. include:: whole-genome-bisulfite-sequencing-analysis.rst
 .. include:: quality-control-preprocessing-raw-reads.rst
