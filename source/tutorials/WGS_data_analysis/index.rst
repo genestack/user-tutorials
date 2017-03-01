@@ -1,4 +1,4 @@
-Whole Genome Sequencing Data Analysis on Genestack Platform
+Whole-genome Sequencing Data Analysis on Genestack Platform
 ===========================================================
 
 .. include:: wgs-analysis-on-genestack.rst
