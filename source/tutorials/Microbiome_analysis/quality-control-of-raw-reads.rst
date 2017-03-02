@@ -105,7 +105,7 @@ million paired-end sequencing reads were generated.
 
 .. |Microbiome_FastQC_report| image:: images/Microbiome_FastQC_report.png
 .. |Microbiome_basic_statistics| image:: images/Microbiome_basic_statistics.png
-.. |Microbiome_per_sequnce_GC_content| image:: images/Microbiome_per_sequence_GC_content.png
+.. |Microbiome_per_sequence_GC_content| image:: images/Microbiome_per_sequence_GC_content.png
 .. |Microbiome_per_base_sequence_quality| image:: images/Microbiome_per_base_sequence_quality.png
 .. |Microbiome_per_sequence_quality_scores| image:: images/Microbiome_per_sequence_quality_scores.png
 .. |Microbiome_per_base_sequence_content| image:: images/Microbiome_per_base_sequence_content.png

@@ -9,14 +9,21 @@ applications available for raw reads:
 |Microbiome_preprocess_apps|
 
 Once we have checked the quality of the raw reads, let's start building the
-Microbiome Analysis pipeline:.
+Microbiome Data Analysis pipeline:
 
 .. Video - Building Microbiome Analysis pipeline
 .. raw:: html
 
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
+Our preprocessing procedure will include two steps - adaptor trimming and
+filtering out low quality reads. For this, choose all 8 samples in the
+experiment and select "Trim Adaptors and Contaminants" application in
+Preprocess section:
 
+|Microbiome_trim_adaptors_and_contaminants|
+
+This brings you to the appplication page
 
 Trimmed reads are stored in `Trimmed raw reads for Alfano et al (2015)`_
 folder.
@@ -63,7 +70,7 @@ WGS-specific SNVs. We identified variants for each sample separately and put
 them in `Variants for Clark et al (2011)`_ folder.
 
 .. |Microbiome_preprocess_apps| image:: images/Microbiome_preprocess_apps.png
-
+.. |Microbiome_trim_adaptors_and_contaminants| image:: images/Microbiome_trim_adaptors_and_contaminants.png
 
 .. |WES_variant_calling| image:: images/WES_variant_calling.png
 .. |WES_variants_GB| image:: images/WES_variants_GB.png
