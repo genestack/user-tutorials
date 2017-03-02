@@ -1,15 +1,27 @@
-Post-alignment processing
-*************************
+Preprocessing of raw reads
+**************************
 
-After mapping reads to the reference genome, it's recommended to remove
-duplicates before variant calling, with the purpose of eliminating
-PCR-introduced bias due to uneven amplification of DNA fragments. That's
-why we run Remove Duplicated Mapped Reads app:
+FastQC reports help you understand whether it is necessary to improve the
+quality of your data by applying trimming, filtering, adaptor clipping and
+other preprocessing steps. Here is the list of Genestack preprocess
+applications available for raw reads: 
 
-|WES_remove_duplicates|
+|Microbiome_preprocess_apps|
 
-Preprocessed mapped reads are stored in `Filtered mapped reads for Clark et
-al (2011)`_ folder.
+Once we have checked the quality of the raw reads, let's start building the
+Microbiome Analysis pipeline:.
+
+.. Video - Building Microbiome Analysis pipeline
+.. raw:: html
+
+    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
+
+
+Trimmed reads are stored in `Trimmed raw reads for Alfano et al (2015)`_
+folder.
+
+
 
 Variant calling
 ***************
@@ -20,7 +32,7 @@ Calling application based on samtools mpileup:
 
 .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/E6KUSq4fXmI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 The app automatically scans every position along the genome, computes all the
 possible genotypes from the aligned reads, and calculates the probability
@@ -50,7 +62,9 @@ in Genome Browser, you can notice a large amount of both exome WES–specific a
 WGS-specific SNVs. We identified variants for each sample separately and put
 them in `Variants for Clark et al (2011)`_ folder.
 
-.. |WES_remove_duplicates| image:: images/WES_remove_duplicates.png
+.. |Microbiome_preprocess_apps| image:: images/Microbiome_preprocess_apps.png
+
+
 .. |WES_variant_calling| image:: images/WES_variant_calling.png
 .. |WES_variants_GB| image:: images/WES_variants_GB.png
 .. _Filtered mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1

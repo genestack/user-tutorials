@@ -1,13 +1,15 @@
 Quality control of raw reads
 ****************************
 
-Low-quality reads, PCR primers, adaptors, duplicates and other contaminants,
-that can be found in raw sequencing data, may compromise downstream analysis.
-Therefore, quality control (QC) is essential step in your analysis to
-understand some relevant properties of raw data, such as quality scores, GC
-content and base distribution, etc. In order to assess the quality of the
-data we'll run the `Raw Reads QC`_ data flow:
+Garbage in - garbage out. Your analysis is only as good as your data.
+Therefore, the first and very important step in any kind of analysis is quality
+control (QC). It allows to look at some relevant properties of the raw reads,
+such as quality scores, GC content, base distribution, etc, and check
+whether any low-quality reads, PCR primers, adaptors, duplicates and other
+contaminants are present in the samples. In order to assess the quality of
+the data we'll run the `Raw Reads QC`_ data flow:
 
+.. Video - QC step
 .. raw:: html
 
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
@@ -103,7 +105,7 @@ million paired-end sequencing reads were generated.
 
 .. |Microbiome_FastQC_report| image:: images/Microbiome_FastQC_report.png
 .. |Microbiome_basic_statistics| image:: images/Microbiome_basic_statistics.png
-.. |Microbiome_per_sequnce_GC_content| image:: images/Microbiome_per_sequnce_GC_content.png
+.. |Microbiome_per_sequnce_GC_content| image:: images/Microbiome_per_sequence_GC_content.png
 .. |Microbiome_per_base_sequence_quality| image:: images/Microbiome_per_base_sequence_quality.png
 .. |Microbiome_per_sequence_quality_scores| image:: images/Microbiome_per_sequence_quality_scores.png
 .. |Microbiome_per_base_sequence_content| image:: images/Microbiome_per_base_sequence_content.png

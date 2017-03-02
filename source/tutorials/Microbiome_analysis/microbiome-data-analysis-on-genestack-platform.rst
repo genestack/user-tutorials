@@ -6,6 +6,7 @@ developed culture-independent methods based on high-throughput sequencing of
 16S ribosomal RNA gene variable regions enable researchers to identify all
 the microbs in their complex habitats, or in other words, to analyse a microbiome.
 
+.. Video - Introduction to Microbiome data analysis
 .. raw:: html
 
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
