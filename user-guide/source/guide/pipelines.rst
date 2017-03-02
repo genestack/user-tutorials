@@ -1594,8 +1594,8 @@ separate  variation track, further annotated using Effect Prediction
 application, or viewed immediately using Variant Explorer application.
 
 This application is based on
-`SAMtools <https://www.google.com/url?q=http://www.htslib.org/doc/samtools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFwdKm7yBHfHi6jm4j8pH433nu17Q>`__ and
-`BCFtools <https://www.google.com/url?q=http://www.htslib.org/doc/bcftools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFOwJEgoQz7drG9vyiBT7c2nzCelQ>`__.
+`SAMtools <https://www.google.com/url?q=http://www.htslib.org/doc/samtools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFwdKm7yBHfHi6jm4j8pH433nu17Q>`_ and
+`BCFtools <https://www.google.com/url?q=http://www.htslib.org/doc/bcftools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFOwJEgoQz7drG9vyiBT7c2nzCelQ>`_.
 
 Variant effect prediction with SnpEff
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1618,8 +1618,8 @@ corresponding to SNP or insertions, to know number of effects by type
 and region and some other information), just open this output annotated
 Genetic Variations file in View Report application.
 
-This application is based on open source
-`SnpEff <https://www.google.com/url?q=http://snpeff.sourceforge.net/SnpEff_manual.html&sa=D&ust=1480960532059000&usg=AFQjCNFeW4EzcYHgiT0J3ml4QfiSuTPRxg>`__ tool.
+This application is based on the open-source
+`SnpEff <https://www.google.com/url?q=http://snpeff.sourceforge.net/SnpEff_manual.html&sa=D&ust=1480960532059000&usg=AFQjCNFeW4EzcYHgiT0J3ml4QfiSuTPRxg>`_ tool.
 
 Variant Association Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1637,7 +1637,7 @@ Further apps to use: Variant Explorer
 
 The association test is based on comparing allele frequencies in groups
 of samples using two-tailed `Fisher Exact
-Test <https://www.google.com/url?q=http://en.wikipedia.org/wiki/Fisher%2527s_exact_test&sa=D&ust=1480960532062000&usg=AFQjCNF-F7myaweRgSBSsp1oC316tPZ9Xw>`__,
+Test <https://www.google.com/url?q=http://en.wikipedia.org/wiki/Fisher%2527s_exact_test&sa=D&ust=1480960532062000&usg=AFQjCNF-F7myaweRgSBSsp1oC316tPZ9Xw>`_,
 which compares tables of alternative allele count and reference allele
 count in called genotypes.
 
@@ -1650,8 +1650,8 @@ If 'control' file has an additional info of dividing samples into the
 smaller groups, the values will be also calculated for the groups.
 
 For example, to reduce spurious allelic association due to population
-stratification in `1000 Genomes
-Project <https://www.google.com/url?q=http://www.1000genomes.org/&sa=D&ust=1480960532063000&usg=AFQjCNF1ZanVn015hOAQ9yYbMRVrwc4X2g>`__ data,
+stratification in `1000 Genomes Project <https://www.google.com/url?q=http://www.1000genomes
+.org/&sa=D&ust=1480960532063000&usg=AFQjCNF1ZanVn015hOAQ9yYbMRVrwc4X2g>`_ data,
 samples are also divided to the main ancestries groups (American,
 European, East Asian, and African).
 
@@ -1673,8 +1673,8 @@ Variant Explorer
 
 |image51|
 
-
 Good for: Any analysis type dealing with genetic variants
+
 Used to: Interactively explore genetic variations such as SNPs, MNPs,
 and indels at specific genomic positions. The app not only displays the
 information about variants but also allows you to sort and filter by

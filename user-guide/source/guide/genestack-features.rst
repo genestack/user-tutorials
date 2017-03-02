@@ -77,7 +77,7 @@ tool versions, parameters, and source files are recorded in the metadata
 of each file.
 
 This way, you can select any file in Genestack and visualize its "file provenance",
- a graph representing exactly what steps were taken to produce this file, which source
+a graph representing exactly what steps were taken to produce this file, which source
 files and which applications were used to produce it.
 
 Genestack hosts multiple tool versions at any given time in case you want to reproduce past results.

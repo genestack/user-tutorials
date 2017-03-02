@@ -303,7 +303,7 @@ field and choose its type (Text, Integer, etc.):
 
 |add_metainfo_field|
 
-Also, you can choose to apply a naming scheme. This allows you to generate
+You can also choose to apply a naming scheme. This allows you to generate
 file names automatically based on other metainfo attributes.
 
 |naming_scheme|
