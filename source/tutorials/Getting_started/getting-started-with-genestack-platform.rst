@@ -1,4 +1,4 @@
-In this tutorial, we'd like to introduce you to the core features of
+In this tutorial, we would like to introduce you to the core features of
 Genestack Platform. You will learn how our system deals with files, how
 it helps you organise and manage your data and how to share data with
 your colleagues. You will see how easy it is to work on private and
@@ -19,13 +19,17 @@ In this tutorial we will walk you through:
 Creating an account and managing users
 **************************************
 
-It’s easy to register on Genestack_.  All you need to do is provide an email
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/asMhUjD_i68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
+It is easy to register on Genestack_.  All you need to do is provide an email
 and set up a password.
 
 |sign up screen|
 
 You will quickly receive a confirmation email with a link to click on and then
-you'll be able to log in. After you log in, the system will take you to the
+you will be able to log in. After you log in, the system will take you to the
 `Welcome Page <wp-blog_>`_.
 
 |genestack welcome page|
@@ -49,11 +53,11 @@ screen, where your email is displayed.
 |user management|
 
 If you click on  **Manage Users** you will go to the user management screen. Every
-user in Genestack Platform belongs to an organisation. When you signed
+user in Genestack Platform belongs to an **organisation**. When you signed
 up to use Genestack via the sign up dialog, we created a new
 organisation for you, and you have automatically become its first user
 and its administrator. As an organisation administrator you can create
-as many  new users for your organisation as you want. For instance you
+as many  new users for your organisation as you want. For instance, you
 can create accounts for your colleagues. Being in one organisation means
 you can share data without any restrictions. The user management screen
 allows you to get an overview of all users in your organisation. You can

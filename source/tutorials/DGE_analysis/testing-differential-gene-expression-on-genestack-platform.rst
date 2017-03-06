@@ -1,19 +1,21 @@
-One of the most widespread applications of RNA-seq technology is differential
+One of the most widespread applications of RNA-Seq technology is differential
 gene expression (DGE) analysis. By how gene expression levels change across
 different experimental conditions, we can gain clues about gene function and
 learn how genes work together to carry out biological processes.
 
-.. youtube:: https://www.youtube.com/watch?v=aLT-FnZMIls
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/aLT-FnZMIls" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 In this tutorial we will use Genestack applications to identify differentially
 expressed (DE) genes and further annotate them according to biological
 process, molecular function and cellular component.
 The whole analysis includes the following steps:
 
-#. Setting up an RNA-seq experiment
+#. Setting up an RNA-Seq experiment
 #. Quality control of raw reads
 #. Preprocessing of raw reads
-#. Mapping RNA-seq reads onto a reference genome
+#. Mapping RNA-Seq reads onto a reference genome
 #. Quality control of mapped reads
 #. Calculate read coverage for genes
 #. Differential gene expression analysis
@@ -24,8 +26,8 @@ Let’s deal with these steps one by one.
 Setting up an RNA-seq experiment
 ********************************
 
-The first step is to choose RNA-seq dataset. You can open `File Manager`_
-and `upload your own data`_ using 'Import' button:
+The first step is to choose RNA-Seq dataset. You can open `File Manager`_
+and `upload your own data`_ using **Import** button:
 
 .. _File Manager: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=private&action=viewFile
 .. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
@@ -57,7 +59,9 @@ and four replicates from normal iPSCs. They identified down-regulated genes
 expressed in trisomic samples and involved in multiple developmental
 processes, specifically in nervous system development. Genes up-regulated in
 Twin-DS-iPSCs are mostly related to the regulation of transcription and
-different metabolic processes. To reproduce these results, we'll use
+different metabolic processes.
+
+To reproduce these results, we will use
 `Differential Gene Expression Analysis`_ data flow. But before let's check
 the quality of raw reads to decide whether we should improve it or not.
 

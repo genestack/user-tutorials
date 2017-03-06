@@ -4,7 +4,9 @@ Exploring the genome methylation levels in Genome Browser
 We can explore the distribution of genome methylation levels counted for
 both murine phenotypes in `Genome Browser`_.
 
-.. youtube:: https://www.youtube.com/watch?v=juojLSCcrFU
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/juojLSCcrFU" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 As it was mentioned before, "Canyons" are the large unmethylated DNA regions inside of a highly
 methylated locus that often harbour genes, such as *Hoxa9* and *Meis1*, playing a role in hematopoiesis and being deregulated in
@@ -55,7 +57,7 @@ into a research `paper`_, and the data sets can be found in our `Public Experim
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at feedback@genestack.com or
+If you have any questions and comments, feel free to email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References

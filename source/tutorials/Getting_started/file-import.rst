@@ -1,6 +1,10 @@
 Importing data into the Genestack Platform
 ******************************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/eOl1uabctzI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 We have talked about the core concepts of Genestack and the geography of
 the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you
 can find an **Import data** option, and an **Import** button can be found in the File Manager.
@@ -15,16 +19,16 @@ previous uploads.
 |Import_step1|
 
 After data is uploaded and imported, the platform automatically recognizes file
-formats and transforms them into biological data types e.g. raw reads,
-mapped reads, reference genomes and so on. This means you won’t have to
+formats and transforms them into biological data types such as raw reads,
+mapped reads, reference genomes and so on. This means you will not have to
 worry about formats at all and this will most likely save you a lot of
 time. If files are unrecognized, you can manually allocate them to a
-specific data type using drag & drop located at the top of the page.
+specific data type by drag and drop.
 
 |Import_step2|
 
 On the next “Edit metainfo” step, you can describe uploaded data. Using an Excel-like spreadsheet you can
-edit the file metainfo and add new attributes for example cell type or
+edit the file metainfo and add new attributes, for example cell type or
 age.
 
 |Import_step3|
@@ -40,7 +44,7 @@ Additional option of importing your data is using import templates. On
 the Welcome page you can find an `Add import template`_
 option. Import templates allow you to specify required and optional
 metainfo attributes for different file kinds. When you scroll down to
-the bottom of the page, you'll see an **Add import template** button.
+the bottom of the page, you will see an **Add import template** button.
 
 |import welcome page|
 

@@ -3,18 +3,20 @@ GO-based enrichment analysis
 
 To further characterise the biological processes that might be affected
 in trisomic samples, we performed `the downstream gene ontology (GO)
-analysis`_ of the DGE genes. For this, we'll use GO Enrichment Analysis app,
+analysis`_ of the DGE genes. For this, we will use **GO Enrichment Analysis** app,
 which performs the classic `Fisher's exact test`_ based on gene counts,
 against GO annotations. Open the app on one of the completed Differential
 Expression Statistics files:
 
-.. youtube:: https://www.youtube.com/watch?v=-RalDy631wk
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/-RalDy631wk" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _the downstream gene ontology (GO) analysis: http://geneontology.org/
 .. _Fisher's exact test: https://en.wikipedia.org/wiki/Fisher%27s_exact_test
 
-Changing the group and thresholds criteria in the Filter Options, you can set
-what DE genes can be further used for enrichment analysis. Let's run GO app
+Changing the group and thresholds criteria in the **Filter Options**, you can set
+what DE genes can be further used for enrichment analysis. Let's run GO Enrichment Analysis app
 twice, analysing down- and up-regulated genes separately.
 
 |DGE_GO_filters|
@@ -63,7 +65,7 @@ analysis for Hibaoui et al (2013)`_.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at feedback@genestack.com or
+If you have any questions and comments, feel free to email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. _GO enrichment analysis for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967843&action=viewFile

@@ -1,6 +1,10 @@
 Initialising files and various file types
 *****************************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/XLryiArc6Gc" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 Now that you know how to import data into the platform, we will walk you
 through file initialisation. All files on Genestack are created by
 various applications.  When an application creates a new file, it
@@ -15,24 +19,24 @@ hologenome”`_ experiment by Wang et al. Select one of the raw sequencing reads
 called "FS01", right click on it, and select Preprocessing and Trim Low Quality Bases app.
 This created a file “Trimmed FS01” that is not
 initialised yet.  What is special about our system, is that you do
-not have to start initialisation! In fact, you can use this file
+not have to start initialisation right away. In fact, you can use this file
 as input to applications for creating other files.
 
 |trim low quality bases app|
 
-Notice that you can edit the initialisation parameters of
+Notice that you can **edit the parameters** of analysis for
 the new file. You can change them because the file is not yet
 initialised, i.e. the computation – in this case, trimming – has not yet
 been started. After initialisation has completed, these parameters are
 fixed and are there to inform you about how the file was created. They
-can be used to identically reproduce your work. If you wanted to start
-initialisation of this newly created file, click on the name of the file
-and select "Start initialisation".
+can be used to identically reproduce your work. To start
+initialisation of this newly created file click on the name of the file
+and select **Start initialisation**.
 
 |trim low quality bases start initialization|
 
-In this post we will show you how to use this file as
-an input for a different application. The trimmed file can for example
+In this tutorial we will show you how to use this file as
+an input for a different application. The trimmed file can, for example,
 be mapped to a reference genome. In order to do this you should click on
 **add step** and select the Spliced Mapping application. Using the **edit parameters**
 option you can check if the system suggested a correct
@@ -44,12 +48,12 @@ initialised.
 |spliced mapping mouse genome|
 
 This again can be used as an
-input for a different application. As a last step you could for
-example create a genetic variations file by choosing the Variant Calling
+input for a different application. As a last step you could, for
+example, create a genetic variations file by choosing the Variant Calling
 app in the **add step** option. In order to see `the entire data
 flow`_
 we have just created, click on the name of the last created file, go to
-“manage” and “File provenance”.
+“manage” and **File provenance**.
 
 |file provenence|
 
@@ -62,14 +66,14 @@ all of the uninitialised dependencies, simply press **Start initialisation** at 
 |file provenance|
 
 You can track
-the progress of your computations using the Task Manager that can be
+the progress of your computations using **Task Manager** that can be
 found at the top of the page. All the files created in the above example
 are located in the `tutorial
 folder`_.
 
 One additional
 thing we should mention is that if you want to analyse more than one
-file using the same app, it's very easy: just tick all the files you
+file using the same app, it is very easy: just tick all the files you
 want to analyse, right click on them and select the app you wish to use.
 
 |running an app on multiple files|
@@ -90,7 +94,7 @@ Files
 -----
 
 There are many different file types in Genestack Platform. Every file is
-created by an application and there’s a lot of metadata associated with
+created by an application and there is a lot of metadata associated with
 each file. For example, every file has one or more unique accessions, a
 name and a description. Applications use file type and metadata to make
 suggestions about what kinds of analyses a given file can be used in.
@@ -117,7 +121,7 @@ Folders
 -------
 
 Folders in Genestack behave the same as folders in other systems. You
-can put files in folders, and you can remove files from folders. There’s
+can put files in folders, and you can remove files from folders. There is
 one very useful difference, however, from most systems. Each file can be
 added (or, as we sometimes say, “linked”) to multiple folders. No data
 gets copied of course, the file simply appears in multiple locations.

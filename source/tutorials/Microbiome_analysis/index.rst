@@ -1,5 +1,5 @@
-Whole-exome Sequencing Data Analysis on Genestack Platform
-==========================================================
+Whole Exome Sequencing Analysis on Genestack Platform
+=====================================================
 
 .. include:: whole-exome-sequencing-data-analysis-on-genestack-platform.rst
 .. include:: quality-control-of-raw-reads.rst

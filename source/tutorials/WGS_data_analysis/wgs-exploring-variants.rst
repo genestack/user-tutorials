@@ -1,6 +1,10 @@
 Variant calling
 ***************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/rAdVAe3unoI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 Experimental biases could lead to errors in variant calling mimicking
 true genetic variants. Variant calling on multiple samples helps
 increase the accuracy of the analysis by taking the reads from
@@ -37,6 +41,10 @@ one deletion 5bp long (blue).
 
 Effect prediction
 *****************
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/zr7BsDN6RjI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 After variants have been identified, we can annotate them and identify
 the effects they produce on known genes with Effect Prediction app. The app
@@ -168,6 +176,10 @@ frequency plots and information on the change rate per chromosome.
 Genetic variants filtering
 **************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/XmG6xCRKL14" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 Resulting genetic variants files, annotated or not, can be opened in the
 Variant Explorer app. In the Variant Explorer you can interactively explore the
 information about found mutations, as well as sort and filter them by
@@ -225,7 +237,7 @@ we used Variant Calling application based on SAMtools_ and BCFtools_.  
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at feedback@genestack.com or
+If you have any questions and comments, feel free to email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |VarCalling_options| image:: images/VarCalling_options.png

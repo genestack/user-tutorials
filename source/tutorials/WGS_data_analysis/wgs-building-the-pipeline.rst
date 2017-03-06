@@ -1,6 +1,10 @@
 Building the genetic variants analysis pipeline
 ***********************************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/N0AVWFwfASg" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 To start the pipeline,  select the sequencing assays from "Homo sapiens
 Genome sequencing and variation" experiment, right click on them and
 select the first preprocessing app — Trim Adaptors and Contaminants.
@@ -116,4 +120,4 @@ analysis steps we included in the pipeline in greater detail.
 .. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png
 .. |Edit File List BWA| image:: images/Edit-File-List-BWA.png
 .. |Start initial| image:: images/Start-initial.png
-.. _WGS data analysis for Dogan et al. (2014): https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3669358&action=viewFile
+.. _WGS data analysis for Dogan et al. (2014): https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3764338&action=viewFile

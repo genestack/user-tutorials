@@ -19,6 +19,10 @@ to identify SV and CNV that may be missed by WES. Moreover, WGS allows
 to obtain more uniform and reliable coverage. All in all, WGS is a more
 universal method than WES.
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/_bYPBNtkdHk" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 This tutorial will guide you through the genetic variants discovery
 workflow on Genestack. We will analyse a dataset by Dogan *et
 al.* including high coverage (x35) WGS data from a Turkish

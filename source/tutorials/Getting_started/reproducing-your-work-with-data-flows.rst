@@ -1,6 +1,10 @@
 Reproducing your work with data flows
 *************************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/mjazNS0btd0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 So, you learned how to work with files and folders, you even created a
 simple analytical data flow to go from raw sequence to a list of
 variants. Now, let’s talk about reproducibility. We will now show you
@@ -23,7 +27,8 @@ have previously created.
 The data flow editor has one
 core goal: to help you create more files using this diagram. To do this
 you will need to make some decisions for boxes in the diagram via
-the **Action** menu. If you want to select different files, go to **Choose another file**. If you want to leave the original file simply don't
+the **Action** menu. If you want to select different files, go to **Choose another file**. If you want
+to leave the original file simply do not
 change anything.
 
 |choose another file|
@@ -47,7 +52,7 @@ files by clicking on the file name and later selecting **Start initialization**.
 This is the end of
 this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, email us at feedback@genestack.com or
+If you have any questions and comments, email us at support@genestack.com or
 visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |create new data flow| image:: images/create-new-data-flow1.png

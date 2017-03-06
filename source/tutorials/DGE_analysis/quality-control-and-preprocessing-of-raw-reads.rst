@@ -3,16 +3,18 @@ Quality control of raw reads
 
 Raw sequencing reads can include PCR primers, adaptors, low quality bases,
 duplicates and other contaminants coming from the experimental protocols.
-That's why we recommend you to check the quality of your raw data looking at
+That is why we recommend you to check the quality of your raw data looking at
 such aspects as GC percentage, per base sequence quality scores, and other
 quality stаtistics. The easiest way to do this is to run `the Raw Reads QC`_
 data flow:
 
-.. youtube:: https://www.youtube.com/watch?v=cWQa1EET9F4
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/cWQa1EET9F4" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _the Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 
-After generating reports, you'll be able to review various statistics and
+After generating reports, you will be able to review various statistics and
 plots for each sample.
 
 .. _Twin-N-iPSC Rep3: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF968986&action=viewFile
@@ -43,7 +45,7 @@ lines should be almost parallel with each other:
 |DGE_per_base_seq_cont|
 
 There is a bias at the beginning of the reads, which is common for RNA-Seq
-data. This occurs during RNA-seq library preparation, when “random” primers
+data. This occurs during RNA-Seq library preparation, when “random” primers
 are annealed to the start of sequences. These primers are not truly random,
 and it leads to a variation at the  beginning of the reads.
 
@@ -53,11 +55,11 @@ made up of sequences with different duplication levels. Sequences with 1, 2,
 
 |DGE_seq_dupl_lev|
 
-Looking at these plots, you may notice 15 % of sequences duplicated more than
+Looking at these plots, you may notice 15 % of sequences are duplicated more than
 10 times, 6 % of sequences are repeated more than 100 times, etc. The overall
 rate of  duplication is about 40 %. Nevertheless, while analysing
 transcriptome sequencing data, we should not remove these duplicates because
-we don't know whether they represent PCR duplicates or high gene expression
+we do not know whether they represent PCR duplicates or high gene expression
 of our samples.
 
 We have run QC on all the data in the experiment and collected reports in `Raw
@@ -77,7 +79,7 @@ Once the quality of raw data has been checked, we can go back to the main
 
 You can upload your samples directly into the data flow or select them from
 the available datasets. Let's choose sources — 7 sequencing assays from the
-experiment and a human reference genome, and create resulting files in a
+experiment and a human reference genome, - and create resulting files in a
 specific folder.
 
 QC reports can not only provide you with the information on the data
@@ -87,7 +89,7 @@ There are various Genestack applications that allow you to do preprocessing:
 
 |DGE_preprocess_apps|
 
-We'll run Trim Adaptors and Contaminants app:
+We will run **Trim Adaptors and Contaminants** app:
 
 |DGE_trim_ad|
 

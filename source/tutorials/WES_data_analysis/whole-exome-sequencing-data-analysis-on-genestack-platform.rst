@@ -1,11 +1,13 @@
-As one of the widely used targeted sequencing method, whole exome
+As one of the widely used targeted sequencing method, whole-exome
 sequencing (WES) has become more and more popular in clinical and basic
 research. Albeit, the exome (protein-coding regions of the genome) makes
 up ~1 % of the genome, it contains about 85 % of known disease-related variants
 (*van Dijk E.L. et al, 2014*), making whole-exome sequencing a fast and
 cost-effective alternative to whole genome sequencing (WGS).
 
-.. youtube:: https://www.youtube.com/watch?v=Yf5YsWMy3TA
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/Yf5YsWMy3TA" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 In this tutorial we'll provide a comprehensive description of the various
 steps required for WES analysis, explain how to build your own data flow, and
@@ -39,7 +41,7 @@ community in selecting the optimal exome-seq platform for their experiments,
 as well as proving that whole genome experiments benefit from being
 supplemented with WES experiments.
 
-Whole Exome Sequencing data analysis pipeline
+Whole-exome sequencing data analysis pipeline
 *********************************************
 
 A typical data flow of WES analysis consists of the following steps:

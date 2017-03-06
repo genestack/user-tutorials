@@ -52,6 +52,10 @@ reference genome.
 Unspliced mapping reads onto a reference genome
 ***********************************************
 
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/X6aBx7ZrER0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
 To map preprocessed reads to the reference genome we will use the
 Unspliced Mapping with BWA app which with high efficiency and accuracy
 alines sequencing reads against a whole reference genome without
@@ -94,6 +98,10 @@ the "best" copy.
 
 Quality control of mapped reads
 *******************************
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/WjFTazaaamQ" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 As you remember, we run just a part of the pipeline including
 preprocessing, alignment and removing of duplicates to check if the

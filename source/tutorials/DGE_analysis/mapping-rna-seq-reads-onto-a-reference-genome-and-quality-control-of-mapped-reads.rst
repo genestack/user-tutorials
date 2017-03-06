@@ -2,24 +2,26 @@ Mapping RNA-seq reads onto a reference genome
 *********************************************
 
 When all files were created, you can run the whole analysis here, choosing
-Expression Navigator for genes. But first, let’s align RNA-seq reads to the
-reference genome across splicing junctions and then compare mappings in
+Expression Navigator for genes. But first, let’s align RNA-Seq reads to the
+reference genome across splice junctions and then explore mappings in
 Genome Browser.
 
 |DGE_spl_mapping|
 
-Find Spliced Mapping step, click on “7 files”. In “Explore” section choose
-“Genome Browser” and start initialization there.
+Find **Spliced Mapping** step, click on “7 files”. In “Explore” section choose
+**Genome Browser** and start initialization there.
 
-.. youtube:: https://www.youtube.com/watch?v=Uor6cVjjP_A
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/Uor6cVjjP_A" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 We run Spliced Mapping app with default parameters. To change them go to the
-app page and choose "Edit parameters" button. If you want to learn more about
-the app and its options, click on the app name and then on "About application".
+app page and choose **Edit parameters** button. If you want to learn more about
+the app and its options, click on the app name and then on **About application**.
 
 |DGE_spl_map|
 
-Completed Mapped Reads files can be found in `Mapped reads files for Hibaoui
+Find completed Mapped Reads files in `Mapped reads files for Hibaoui
 et al (2013)`_ folder. Let's open some of them in Genome Browser to analyse
 `reads coverage on chromosome 21`_ on the region chr21:30007376-40007694 (10 Mb):
 
@@ -39,12 +41,14 @@ overall up-regulation of chr21 genes in individuals with Down syndrome.
 Quality control of mapped reads
 *******************************
 
-The optional step is to check how mapping went using Mapped Reads QC Report
+The optional step is to check how mapping went using **Mapped Reads QC Report**
 app. You can "generate reports" for each mapping separately or just run
 `Mapped Reads Quality Control`_ data flow for multiple
 samples:
 
-.. youtube:: https://www.youtube.com/watch?v=0C2x9Xm-ji8
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/0C2x9Xm-ji8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
 
