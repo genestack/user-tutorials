@@ -23,7 +23,7 @@ Preprocess section:
 
 |Microbiome_trim_adaptors_and_contaminants|
 
-This brings you to the appplication page
+This brings you to the appplication page 
 
 Trimmed reads are stored in `Trimmed raw reads for Alfano et al (2015)`_
 folder.
