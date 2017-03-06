@@ -1,7 +1,7 @@
 Introduction to Next Generation Sequencing Data Analysis
 ========================================================
 
-NGS technologies, such as WGS, RNA-Seq, WES, WGBS, ChIP-Seq etc,  generate lots of output data.
+NGS technologies, such as WGS, RNA-Seq, WES, WGBS, ChIP-Seq, etc. generate lots of output data.
 Before we start talking about various apps available on Genestack and how to choose appropriate
 ones for your analysis, let’s take a moment to go through the basics of sequencing analysis. To
 help you better understand the processes involved, we will use the example of genetic variant
@@ -9,7 +9,7 @@ analysis for Whole Exome Sequencing data. A typical WES data analysis pipeline i
 reads quality control, preprocessing, mapping, post-alignment processing, variant calling,
 annotation, and prioritization  (`Bao et al., 2010`_).
 
-The first thing you need to do with sequencing data is quality control of raw reads.  Here you
+The first thing you need to do with sequencing data is quality control of raw reads. Here you
 should check metrics such as GC content of sequences, sequence duplication levels,
 overrepresentation of sequences, and so on. After examining the QC report, you need to decide
 whether any preprocessing is needed and if so, what type? For instance, if your sequencing data
@@ -30,12 +30,13 @@ After you have mapped your reads, it’s a good idea to check the mapping qualit
 some of the biases in the data only show up after the mapping step. Similarly to what you’ve
 done before with raw sequencing reads, if you are unsatisfied with the mapping quality, you can
 process the mapped reads and, for instance, remove duplicated mapped reads (which could be PCR
-artifacts). Post-alignment processing is very important, as it can greatly  improve the accuracy
+artifacts). Post-alignment processing is very important, as it can greatly improve the accuracy
 and quality of further variant analysis.
+
 Once the sequence is aligned to a reference genome, the data needs to be analyzed in an experiment-
 specific fashion. Here we will use the WES reads mapped against the reference genome to perform
 variant analysis, including variant calling and predicting the effects  found variants produce
-on known genes (e.g. amino acid changes or  frame shifts). In this step you compare your sequence
+on known genes (e.g. amino acid changes or frame shifts). In this step you compare your sequence
 with the reference sequence, look at all the differences and try to establish how big of an
 influence do these changes have on the gene. For instance, if it’s a synonymous variant, it will
 probably have low influence on the gene as such a change causes a codon that produces the same
