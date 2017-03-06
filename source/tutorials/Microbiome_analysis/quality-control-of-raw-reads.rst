@@ -1,7 +1,7 @@
 Quality control of raw reads
 ****************************
 
-Garbage in - garbage out. Your analysis is only as good as your data.
+Garbage in - garbage out. It means that your analysis is only as good as your data.
 Therefore, the first and very important step in any kind of analysis is quality
 control (QC). It allows to look at some relevant properties of the raw reads,
 such as quality scores, GC content, base distribution, etc, and check
@@ -37,7 +37,7 @@ roughly normal distribution indicates a normal random library.
 |Microbiome_per_sequence_GC_content|
 
 However, as in our case, there are sharp peaks which may usually indicate the
-presentce of adapter, primer or rRNA contamination. To remove possible
+presence of adapter, primer or rRNA contamination. To remove possible
 contaminants, we'll run "Trim Adaptors and Contaminants" application.
 
 **Per base sequence quality** plots show the quality scores across all bases

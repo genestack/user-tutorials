@@ -3,8 +3,9 @@ even micro-animals - it was necessary to grow them in a laboratory. But many
 of the microorganisms that live in complex environments (e.g. gut or saliva),
 have proven difficult or impossible to grow in culture. However, recently
 developed culture-independent methods based on high-throughput sequencing of
-16S ribosomal RNA gene variable regions enable researchers to identify all
-the microbs in their complex habitats, or in other words, to analyse a microbiome.
+16S/18S ribosomal RNA gene variable regions and internal transcribed spacers
+(ITS) enable researchers to identify all the microbes in their complex
+habitats, or in other words, to analyse a microbiome.
 
 .. Video - Introduction to Microbiome data analysis
 .. raw:: html
@@ -28,12 +29,12 @@ open it in `Experiment Viewer`_:
 
 |Microbiome_experiment_viewer|
 
-The researches examined the microbiome composition of different body regions
+The researchers examined the microbiome composition of different body regions
 of two captive koalas: the eye, the mouth and the gut (through both rectal
 swabs and feces). First, since koalas frequently suffer from ocular diseases
 caused by *Chlamydia* infection, scientists examined the eye microbiome and
 found out that it is very diverse, similar to other mammalian ocular
-micromiomes but has a high representation of bacteria from the Phyllobacteriaceae
+microbiomes but has a high representation of bacteria from the Phyllobacteriaceae
 family. Second, authors determined that, despite a highly specialized
 diet consisting almost exclusively of *Eucalyptus* leaves, koala oral and gut
 microbial communities are similar in composition to the microbiomes from the
