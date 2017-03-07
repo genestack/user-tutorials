@@ -18,12 +18,15 @@ Microbiome Data Analysis pipeline:
 
 Our preprocessing procedure will include two steps - adaptor trimming and
 filtering out low quality reads. For this, choose all 8 samples in the
-experiment and select "Trim Adaptors and Contaminants" application in
-Preprocess section:
+experiment and select "Trim Adaptors and Contaminants" in Preprocess section:
 
 |Microbiome_trim_adaptors_and_contaminants|
 
-This brings you to the application page 
+This brings you to the application page. On this step, we will
+
+|Microbiome_trim_adaptors_and_contaminants_page|
+
+
 
 Trimmed reads are stored in `Trimmed raw reads for Alfano et al (2015)`_
 folder.
@@ -32,9 +35,9 @@ folder.
 
 .. |Microbiome_preprocess_apps| image:: images/Microbiome_preprocess_apps.png
 .. |Microbiome_trim_adaptors_and_contaminants| image:: images/Microbiome_trim_adaptors_and_contaminants.png
+.. |Microbiome_trim_adaptors_and_contaminants_page| image:: images/Microbiome_trim_adaptors_and_contaminants_page.png
 
-.. |WES_variant_calling| image:: images/WES_variant_calling.png
-.. |WES_variants_GB| image:: images/WES_variants_GB.png
+
 .. _Filtered mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1
 .. _variants in Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999281&action=viewFile
 .. _Variants for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1.. _

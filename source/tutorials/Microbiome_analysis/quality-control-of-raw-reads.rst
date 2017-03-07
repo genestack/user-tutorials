@@ -24,7 +24,7 @@ type, number of reads, GC content and total sequence length.
 
 |Microbiome_basic_statistics|
 
-Our sample contains 470,459 paired-end reads, which all together give as a
+Our sample contains 470,459 paired-end reads, which all together give us a
 sequence of 236,170,418 bp in length. The GC content is about 49 %.
 
 **Sequence length distribution** module gives us information about read length
