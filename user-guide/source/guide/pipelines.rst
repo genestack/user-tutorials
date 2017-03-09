@@ -939,152 +939,140 @@ This application is based on cuffQuant which is a part of
 `Cufflinks <http://cole-trapnell-lab.github.io/cufflinks/>`_.
 
 Test Differential Gene Expression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************
 
-Good for: Differential Gene Expression Analysis
-
-Input: Mapped Read Counts (from Quantify Raw Coverage in Genestack app)
-
-Action: The app performs differential gene expression analysis between
+**Good for**: Differential Gene Expression Analysis
+**Input**: Mapped Read Counts (from Quantify Raw Coverage in Genestack app)
+**Action**: The app performs differential gene expression analysis between
 groups of samples. You can create these groups manually or apply auto
-grouping when the application helps you to group your samples according
-to experimental factor such as disease, tissue, sex, cell type, cell
-line, treatment, organism, etc.
+grouping when the application helps you to group your samples according to
+experimental factor such as disease, tissue, sex, cell type, cell line,
+treatment, organism, etc.
+**Further apps to use**: Expression Navigator application
 
-Further apps to use: Expression Navigator app
+The application supports two statistical R packages - **DESeq2** and **edgeR**
+to perform normalization across libraries, fit negative binomial distribution
+and likelihood ratio test (LRT) using generalized linear model (GLM). With
+edgeR, one of the following types of dispersion estimate is used, in order of
+priority and depending on the availability of biological replicates: Tagwise,
+Trended, or Common. Also, edgeR is much faster than DESeq2 for fitting GLM
+model, but it takes slightly longer to estimate the dispersion. It is important
+that edgeR gives moderated fold changes for the extremely lowly DE genes which
+DESeq2 discards, showing that the likelihood of a gene being significantly
+differentially expressed is related to how strongly it's expressed. So, choose
+one of the packages according to your desires and run the analysis.
 
-The application supports two statistical R packages - DESeq2 and edgeR
-to perform normalization across libraries, fit negative binomial
-distribution and likelihood ratio test (LRT) using generalized linear
-model (GLM). With edgeR, one of the following types of dispersion
-estimate is used, in order of priority and depending on the availability
-of biological replicates: Tagwise, Trended, or Common. Also, edgeR is
-much faster than DESeq2 for fitting GLM model, but it takes slightly
-longer to estimate the dispersion. It’s important that edgeR gives
-moderated fold changes for the extremely lowly DE genes which DESeq2
-discards, showing that the likelihood of a gene being significantly
-differentially expressed is related to how strongly it's expressed. So,
-choose one of the packages according to your desires and run the
-analysis.
+For each group, a GLM LRT is carried out to find Differentially Expressed (DE)
+genes in this group compared to the average of the other groups. In the case
+of 2 groups, this reduces to the standard analysis of finding genes that are
+differentially expressed between 2 groups. Thus, for N groups, the application
+produces N tables of Top DE genes. Each table shows the corresponding
+Log2(Fold Change), Log2(Counts per Million), P-Value, and False Discovery Rate
+for each gene. Look at all result tables and plots in Expression Navigator
+application.
 
-For each group, a GLM LRT is carried out to find Differentially
-Expressed (DE) genes in this group compared to the average of the other
-groups. In the case of 2 groups, this reduces to the standard analysis
-of finding genes that are differentially expressed between 2 groups.
-Thus, for N groups, the application produces N tables of Top DE genes.
-Each table shows the corresponding Log2(Fold Change), Log2(Counts per
-Million), P-Value, and False Discovery Rate for each gene. Look at all
-result tables and plots in Expression Navigator for Genes application.
+#. **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
+   with control samples. Then, for each gene in sample we know read counts
+   (output of Quantify Raw Coverage in Genes application). If we divide read
+   counts value for gene X (in the tumor sample) by the read counts value for
+   gene X (in the control sample) we’ll get Fold Change value:
 
-1) Log2(Fold Change). Let’s assume, that we have two groups - with tumor
-and with control samples. Then, for each gene in sample we know read
-counts (output of Quantify Raw Coverage in Genes application). If we
-divide read counts value for gene X (in the tumor sample) by the read
-counts value for gene X (in the control sample) we’ll get Fold Change
-value:
+   *Fold Change = tumor/control*
+   
+   And if we apply Log2 transform for this value we’ll get Log2(Fold Change).
 
-Fold Change = tumor/control
+#. **Log2(Counts per Million)**. Dividing each read count by millions yields
+   counts per million (cpm), a simple measure of read abundance that can be
+   compared across libraries of different sizes. And if we apply Log2 transform
+   for this value we’ll get Log2(Counts per Million).
 
-And if we apply Log2 transform for this value we’ll get Log2(Fold
-Change).
+#. **p-value**. The application also counts p-value for each gene. A low
+   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
+   our gene is differentially expressed).
 
-2) Log2(Counts per Million). Dividing each read count by millions yields
-counts per million (cpm), a simple measure of read abundance that can be
-compared across libraries of different sizes. And if we apply
-Log2 transform for this value we’ll get Log2(Counts per Million).
-
-3) p-value. The application also counts p-value for each gene. A low
-p–value is seen as evidence that the null hypothesis may not be true
-(i.e., our gene is differentially expressed).
-
-4) False discovery rate. FDR is the expected proportion of Type I errors
-among the rejected hypotheses.
+#. **False discovery rate**. FDR is the expected proportion of Type I errors
+   among the rejected hypotheses.
 
 Expression Navigator for RNA-seq
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+********************************
 
-Good for: Differential Gene expression analysis, Differential Isoform
+**Good for**: Differential Gene expression analysis, Differential Isoform
 expression analysis.
 
-|image48|Used to: filter and view the results of differential gene
-expression analyses, including isoform expression.
+|expression_navigator_for_RNA-seq|
+
+**Used to**: filter and view the results of differential gene expression
+analyses, including isoform expression.
 
 The Expression navigator page contains 4 sections.
 
-The topmost section, "Groups Information", is a summary of the groups
-available for comparison. Size refers to the number of samples used to
-generate each group. The drop-down selection menu lets you choose which
-groups to compare.
+#. The topmost section, "Groups Information", is a summary of the groups
+   available for comparison. Size refers to the number of samples used to
+   generate each group. The drop-down selection menu lets you choose which
+   groups to compare.
+#. The leftmost section allows you to filter and choose genes for comparison.
+   You can filter by maximum acceptable false discovery rate (FDR), up or down
+   regulation, minimum log fold change (LogFC), and minimum log counts per
+   million (LogCPM).
 
-The leftmost section allows you to filter and choose genes for
-comparison. You can filter by maximum acceptable false discovery rate
-(FDR), up or down regulation, minimum log fold change (LogFC), and
-minimum log counts per million (LogCPM).
+- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
+  and with control samples. Then, for each gene in a sample we know read counts
+  (output of Quantify Raw Coverage in Genes application). If we divide read
+  counts value for gene X (in the tumor sample) by the read counts value for
+  gene X (in the control sample) we’ll get the Fold Change value:
 
-1) Log2(Fold Change). Let’s assume, that we have two groups - with tumor
-and with control samples. Then, for each gene in a sample we know read
-counts (output of Quantify Raw Coverage in Genes application). If we
-divide read counts value for gene X (in the tumor sample) by the read
-counts value for gene X (in the control sample) we’ll get the Fold
-Change value:
+  *Fold Change = tumor/control*
 
-Fold Change = tumor/control
+  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change).
+  Genes with positive Log FC are considered to be up-regulated in the selected
+  group, ones with negative Log FC are down-regulated.
 
-And if we apply a Log2 transform for this value we’ll get Log2(Fold
-Change). Genes with positive Log FC are considered to be up-regulated in
-the selected group, ones with negative Log FC are down-regulated.
+- **Log2(Counts per Million)**. Dividing each read count by millions yields
+  counts per million (cpm), a simple measure of read abundance that can be
+  compared across libraries of different sizes. And if we apply Log2 transform
+  for this value we’ll get Log2(Counts per Million).
 
-2) Log2(Counts per Million). Dividing each read count by millions yields
-counts per million (cpm), a simple measure of read abundance that can be
-compared across libraries of different sizes. And if we apply Log2
-transform for this value we’ll get Log2(Counts per Million).
+  *Counts per Million =  reads(gene)\^106/reads(all genes)*
 
-Counts per Million =  reads(gene)\^106/reads(all genes)
+- **p-value**. The application also counts p-value for each gene. A low
+  p–value is seen as evidence that the null hypothesis may not be true (i.e.,
+  our gene is differentially expressed).
 
-3) p-value. The application also counts p-value for each gene. A low
-p–value is seen as evidence that the null hypothesis may not be true
-(i.e., our gene is differentially expressed).
+- **False discovery rate**. FDR is the expected proportion of Type I errors
+  among the rejected null hypotheses. In other words, it’s the fraction of
+  genes for which a significant variation was identified incorrectly. You
+  can read more about it `here`_.
 
-4) False discovery rate. FDR is the expected proportion of Type I errors
-among the rejected null hypotheses. In other words, it’s the fraction of
-genes for which a significant variation was identified incorrectly. You
-can read more about it
-`here <https://www.google.com/url?q=http://www.cbil.upenn.edu/PaGE/fdr.html&sa=D&ust=1480960531980000&usg=AFQjCNGB8RddgrwvSzTLjucTxGejSMgqEA>`__.
+  The buttons at the bottom of the section allow you to refresh the list
+  based on your filtering criteria or clear your selection.
 
-The buttons at the bottom of the section allow you to refresh the list
-based on your filtering criteria or clear your selection.
+#. The top right section contains a box plots of expression levels. Genes are
+   listed on the x axis with one bar present for each  selected group. Log
+   normalized expression levels are plotted on the y axis.
 
-The top right
-section contains a box
-plots of expression levels. Genes are listed on the x axis with one bar
-present for each  selected group. Log normalized expression levels are
-plotted on the y axis.
+#. The bottom right section contains a search box for genes of interest. You
+   can search for one gene at a time with auto-complete functionality. These
+   genes do not need to be on the filtered list.
 
-The bottom right section contains a search box for genes of interest.
-You can search for one gene at a time with auto-complete functionality.
-These genes do not need to be on the filtered list.
+This application is based on two R packages - `DESeq2`_ and `edgeR`_.
 
-This application is based on two R packages -
-`DESeq2 <https://www.google.com/url?q=http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html&sa=D&ust=1480960531982000&usg=AFQjCNHUCbU9X0qoNDWWc4dqZwMwGZOhNw>`__ and
-`edgeR <https://www.google.com/url?q=http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html&sa=D&ust=1480960531983000&usg=AFQjCNGga-RmFYLwPva_sWSoZyblphb2ig>`__.
-
-You can read more about this app in the following
-`tutorial <https://www.google.com/url?q=https://genestack.com/tutorial/counting-reads-mapped-to-annotated-features/&sa=D&ust=1480960531983000&usg=AFQjCNGnBFzRjgLDGgRvjTDe0umXpihQ1w>`__.
+You can read more about this app in the following `tutorial`_.
 
 References:
+-----------
 
-#. Love MI, Huber W and Anders S. "Moderated estimation of fold change
-   and dispersion for RNA-seq data with DESeq2." Genome Biology. 2014;
-   15(12):550.
-#. Robinson MD, McCarthy DJ and Smyth GK. "edgeR: a Bioconductor package
-   for differential expression analysis of digital gene expression
-   data." Bioinformatics. 2010; 26(1):139-140.
+- Love MI, Huber W and Anders S. "Moderated estimation of fold change
+  and dispersion for RNA-seq data with DESeq2." Genome Biology. 2014;15(12):550.
+- Robinson MD, McCarthy DJ and Smyth GK. "edgeR: a Bioconductor package for
+  differential expression analysis of digital gene expression data."
+  Bioinformatics. 2010; 26(1):139-140.
 
-Links:
-`http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html <https://www.google.com/url?q=http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html&sa=D&ust=1480960531985000&usg=AFQjCNHmLvVJ1fGf6hrnWo7wzwmUMFX5aA>`__ (DESeq2)
-and
-`http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html <https://www.google.com/url?q=http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html&sa=D&ust=1480960531985000&usg=AFQjCNGhfjFBlDDWaXv1rE6MuQhQpFzWrA>`__ (edgeR);
-`http://www.cbil.upenn.edu/PaGE/fdr.html <https://www.google.com/url?q=http://www.cbil.upenn.edu/PaGE/fdr.html&sa=D&ust=1480960531986000&usg=AFQjCNEL6qdg6agmqnsXX1OwJqfeK99CNQ>`__ (FDR)
+.. |expression_navigator_for_RNA-seq| image:: images/expression_navigator_for_RNA-seq.png
+
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
+.. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
+.. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
+.. _tutorial: http://genestack-user-tutorials.readthedocs.io/index.html
 
 Expression Navigator for splice isoforms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
