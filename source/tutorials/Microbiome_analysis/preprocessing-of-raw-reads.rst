@@ -22,10 +22,17 @@ experiment and select "Trim Adaptors and Contaminants" in Preprocess section:
 
 |Microbiome_trim_adaptors_and_contaminants|
 
-This brings you to the application page. On this step, we will
+This brings you to the application page. On this step, we will scan the reads
+for adaptors, and, based on a log-scaled threshold, perform clipping. By
+default, the application 
 
 |Microbiome_trim_adaptors_and_contaminants_page|
 
+
+|Microbiome_trim_adaptors_and_contaminants_about|
+
+
+|Microbiome_trim_adaptors_and_contaminants_next|
 
 
 Trimmed reads are stored in `Trimmed raw reads for Alfano et al (2015)`_
@@ -36,6 +43,8 @@ folder.
 .. |Microbiome_preprocess_apps| image:: images/Microbiome_preprocess_apps.png
 .. |Microbiome_trim_adaptors_and_contaminants| image:: images/Microbiome_trim_adaptors_and_contaminants.png
 .. |Microbiome_trim_adaptors_and_contaminants_page| image:: images/Microbiome_trim_adaptors_and_contaminants_page.png
+.. |Microbiome_trim_adaptors_and_contaminants_about| image:: images/Microbiome_trim_adaptors_and_contaminants_about.png
+.. |Microbiome_trim_adaptors_and_contaminants_next| image:: images/Microbiome_trim_adaptors_and_contaminants_next.png
 
 
 .. _Filtered mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1
