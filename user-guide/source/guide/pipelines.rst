@@ -1803,53 +1803,49 @@ tutorial that can be accessed
 `here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-sequencing-reads-merging-techinical-replicates/&sa=D&ust=1480960532082000&usg=AFQjCNEzDwcTF01UsBP5l0UyOKnKYYJKIA>`__.
 
 Reduced representation bisulfite sequencing mapping with BSMAP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************************************************
 
-The application is based on the
-`BSMAP <https://www.google.com/url?q=https://code.google.com/archive/p/bsmap/&sa=D&ust=1480960532083000&usg=AFQjCNGrxXhzcONteprQELjc63McEx1vhg>`__ tool
-and is used for mapping reduced representation bisulfite sequencing
-reads to the specific digestion sites on the genome. |reduced
-representation bisulfite sequencing mapping|
+The application is based on the `BSMAP`_ tool and is used for mapping reduced
+representation bisulfite sequencing reads to the specific digestion sites on
+the genome.
+
+|reduced_representation_bisulfite_sequencing_mapping|
 
 Let’s talk a bit about various settings:
 
-1)You should set the "Enzyme sequence" which was recognized by by the
- restriction enzyme used to digest genomic DNA in the process of library
-preparation. By default, the application uses the ‘C-CGG’ sequence which
-is recognised in MspI restriction.
-
-2)The option "Number of mismatches" lets you set the maximum number of
-allowed mismatches per read. Decreasing this number you can reduce
-application runtime and percentage of mapped reads. By default the
-application aligns reads to the reference genome with no more than 5
-mismatches.
-
-3)By default the application only reports unique hits for one mappable
-read. You can change the rule for multiple mappings to report one random
-"best" mapping, if your reads are mapped to multiple positions in the
-genome.
-
-4) Choose the BS data generation protocol that was used to construct the
-bisulfite converted library. If it is the Lister protocol [1], than your
-reads will be mapped to two forward strands.  Reads generated using the
-Cokus experimental protocol [2] will be aligned to all four strands.
-
- 
+#. You should set the **Enzyme sequence** which was recognized by by the
+   restriction enzyme used to digest genomic DNA in the process of library
+   preparation. By default, the application uses the *C-CGG* sequence which is
+   recognised in MspI restriction.
+#. The option **Number of mismatches** lets you set the maximum number of allowed
+   mismatches per read. Decreasing this number you can reduce application
+   runtime and percentage of mapped reads. By default the application aligns
+   reads to the reference genome with no more than 5 mismatches.
+#. By default the application only reports unique hits for one mappable read.
+   You can change the **rule for multiple mappings** to report one random "best"
+   mapping, if your reads are mapped to multiple positions in the genome.
+#. Choose the **BS data generation protocol** that was used to construct the
+   bisulfite converted library. If it is the Lister protocol [1], than your
+   reads will be mapped to two forward strands.  Reads generated using the
+   Cokus experimental protocol [2] will be aligned to all four strands.
 
 References:
+-----------
 
-#. `Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini
-   J, Nery JR, Lee L, Ye Z, Ngo Q-M, Edsall L, Antosiewicz-Bourget J,
-   Stewart R, Ruotti V, Millar AH, Thomson JA, Ren B, Ecker JR. "Human
-   DNA methylomes at base resolution show widespread epigenomic
-   differences." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532085000&usg=AFQjCNG66MkWxikJT0StWhOxW1ei40wiWQ>`__`Nature. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532086000&usg=AFQjCNGpU4pwPyy6XnfY0z4BvUuolapZgw>`__`2009
-   462(7271):315-22. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/19829295&sa=D&ust=1480960532086000&usg=AFQjCNGpU4pwPyy6XnfY0z4BvUuolapZgw>`__
-#. `Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD,
-   Pradhan S, Nelson SF, Pellegrini M, Jacobsen SE. "Shotgun bisulphite
-   sequencing of the Arabidopsis genome reveals DNA methylation
-   patterning." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532086000&usg=AFQjCNGTngx6W4ckwk5HLaZRD1DR6crp2A>`__`Nature <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__`.
-   2008
-   452(7184):215–219. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/18278030&sa=D&ust=1480960532087000&usg=AFQjCNF4zsutJJDSCWNBASaorGJJMoBK6Q>`__
+- Lyko F, Foret S, Kucharski R, Wolf S, Falckenhayn C, Maleszka R. "The honey
+  bee epigenomes: differential methylation of brain DNA in queens and workers."
+  PLoS Biol. 2010 Nov 2;8(11):e1000506.
+- Lister R, Pelizzola M, Dowen RH, Hawkins RD, Hon G, Tonti-Filippini J, Nery
+  JR, Lee L, Ye Z, Ngo Q-M, Edsall L, Antosiewicz-Bourget J, Stewart R, Ruotti
+  V, Millar AH, Thomson JA, Ren B, Ecker JR. “Human DNA methylomes at base
+  resolution show widespread epigenomic differences.” Nature. 2009
+  462(7271):315-22.
+- Cokus SJ, Feng S, Zhang X, Chen Z, Merriman B, Haudenschild CD, Pradhan S,
+  Nelson SF, Pellegrini M, Jacobsen SE. “Shotgun bisulphite sequencing of the
+  Arabidopsis genome reveals DNA methylation patterning.” Nature. 2008
+  452(7184):215–219.
+
+.. _BSMAP: https://code.google.com/archive/p/bsmap/
 
 Methylation Ratio Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
