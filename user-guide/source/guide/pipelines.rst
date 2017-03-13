@@ -1,29 +1,26 @@
-
-.. _pipelines:
-
 Pipelines and applications
 ==========================
 
 Applications available on Genestack are grouped into four categories:
 Preprocess, Analyse, Explore and Manage.
 
-Preprocess contains all applications used to process files pre- or
+**Preprocess** contains all applications used to process files pre- or
 post-alignment in order to increase the data quality.
 
-Analyse contains all mappers and all other apps required to analyse
+**Analyse** contains all mappers and all other apps required to analyse
 sequencing data.
 
-Explore contains all interactive graphical interface applications
+**Explore** contains all interactive graphical interface applications
 allowing users to view the results of their
-computations. Apps for visualizing QC reports, the Genome Browser, apps
- for exploring  genomic variants, and many more.
+computations. Apps for visualizing QC reports, the Genome Browser, apps for
+exploring  genomic variants, and many more.
 
-Manage contains apps used to manage your data: apps dealing with data
+**Manage** contains apps used to manage your data: apps dealing with data
 flows, file provenance, export, metadata editing and so on.
 
 An extended version (including information on licensing and references)
 of every application description found in this guide can be found in the
-"About application" text of each of the individual apps.
+**"About application"** text of each of the individual apps.
 
 To view this text for a specific app, click on the application's name at the
 top-left corner of the page, and in the dropdown menu select "About application".
@@ -36,336 +33,365 @@ Sequencing data
 Raw Reads quality control and preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _fastqc:
-
 FastQC report
 ^^^^^^^^^^^^^
 
 .. TODO this is a tutorial on data flows !!!!!!
 
-The usual first step of any NGS data
-analysis is quality control of raw sequencing reads. According to the
-"garbage in, garbage out" rule, if we begin our analysis with poor
-quality reads, we shouldn’t expect great results at the end. Luckily,
-there are a few procedures that can be used to improve the data quality
-if that proves to be unsatisfactory.
+The usual first step of any NGS data analysis is quality control of raw
+sequencing reads. According to the "garbage in, garbage out" rule, if we begin
+our analysis with poor quality reads, we shouldn’t expect great results at the
+end. Luckily, there are a few procedures that can be used to improve the data
+quality if that proves to be unsatisfactory.
 
 How can you check the quality of the data?
 
-The tool used for raw reads quality check is FastQC Report app, based on the
-`FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
+The tool used for raw reads quality check is **FastQC Report** app, based on
+the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 
-The quickest way to perform the quality assessment of your data in
-Genestack is via the public data flow "Raw Reads Quality Control".
+.. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+.. image:: images/fastqc_report.png
 
-In order to use it, select all of your raw reads, right click on them
-and from the dropdown menu select "Run dataflow on selection" and choose
-the appropriate data flow.  Remember you need to initialize the
-computation! On the Data Flow Runner page click on Run Data Flow and
-select Start initialization now
+The quickest way to perform the quality assessment of your data in Genestack
+is via the public data flow `Raw Reads Quality Control`_.
 
-You will have to wait for the results (you can track the progress of
-your tasks in Task Manager). Once they are completed, you can find your
-files in Created Files folder.
+.. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778184&action=viewFile
 
-Since these files were created using a data flow, they will be located
-in one folder (see Platform architecture for more details). To open up
-one of these reports, click on the report and from the dropdown menu
-select FastQC Report app.
+Another way to run the daya flow is to select all of your raw reads,
+right click on them and from the dropdown menu select "Run data flow on
+selection" and choose the appropriate data flow. 
 
-If you don’t want to use a data flow, you can select all of your raw
-reads, right click on them, go to "Explore" and select the appropriate
-app. In this case you’ll also need to wait until the computations are
-done and you will be able to track the progress of your tasks using Task
-Manager.
+.. image:: images/run_dataflow_on_selection.png
 
-On the FastQC Report page you can view both the result and the
-provenance of the report file. At the top of the page you will see the
-file name and the version of the FASTQC app used. The View parameters
-button will show you the command line options used to generate the
-report.  Below that you will see the File Data flow, in this case it
-should only contain two app entries. Finally, the results can be viewed
-in the Reports section. Here you will find  various graphs that
-visualize the quality of your data. We’ll go through all of them one by
-one and tell you:
+Remember you need to initialize the computation! On the Data Flow Runner page
+click on "Run Data Flow" and select "Start initialization now".
 
-a)how they should  look for data of perfect quality; 
+.. image:: images/fastqc_start_initialization_now.png
 
-b)how they may look if there’s something wrong with your data; 
+You will have to wait for the results (you can track the progress of your
+tasks in Task Manager). Once they are completed, you can find your files in
+"Created files" folder.
 
-c)what you can do if the quality is unsatisfactory.
+.. image:: images/created_files_folder_FM.png
+
+Since these files were created using a data flow, they will be located in one
+folder (see Platform architecture for more details). To open up one of these
+reports, click on the report and select FastQC Report application from the
+dropdown menu or in "Explore" section in File Manager.
+
+.. image:: images/select_fastqc.png
+
+On the FastQC Report page you can view both the result and the provenance of
+the report file. At the top of the page you will see the file name and the
+version of the fastQC app used. The "View parameters" button will show you
+source files and the command line options used to generate the report. The
+"Hide parameters" button will hide this technical information. Below that you
+will see the File Dataflow, in this case it should only contain two app entries -
+Experiment Loader and FastQC Report. In other cases, you might see more than
+two applications in this line.
+
+.. image:: images/fastqc_page_source_files.png
+
+Finally, the results can be viewed in the Reports section. Here you will find
+various graphs that visualize the quality of your data. We’ll go through all
+of them one by one and tell you:
+
+1. how they should  look for data of perfect quality; 
+2. how they may look if there’s something wrong with your data;
+3. what you can do if the quality is unsatisfactory.
 
 The metrics table gives you quick indicators as to the status of each of
-the quality metrics calculated.  Warnings: Yellow Triangles
+the quality metrics calculated.
 
-Failures: Red X-es
+- Yellow Triangles - warnings.
+- Red X-es - failures.
+- Green check marks in circles - ok.
 
-Metrics
+1. **Basic statistics**
 
-1) Basic Statistics
+.. image:: images/fastqc_basic_statistics.png
 
-[FastQC 1]|image34|
+Information on type and number of reads, GC content, and total sequence length.
 
-Info on type and number of reads, GC content, and total sequence length.
+2. **Sequence length distribution**
 
-2) Sequence Length Distribution
-
-[FastQC 2]|image35|
+.. image:: images/fastqc_sequence_length_distribution.png
 
 Reports lengths of all sequences.
 
-Warning
+*Warning*
 
-This report will raise an issue if the lengths are not identical, but
-this can usually be ignored, as it is expected for some sequencing
-platforms.
+This report will warnings if the lengths are not identical, but this can
+usually be ignored, as it is expected for some sequencing platforms.
 
-3) Per sequence GC content
+3. **Per sequence GC content**
 
-[FastQC 3]|image36|
+.. image:: images/fastqc_per_sequence_gc_content.png
 
 For data of good quality, the graph will show a normal, bell-shaped
 distribution.
 
-Warning
+*Warning*
 
-It raises a warning when the sum of the deviations from the normal
-distribution represents more than 15% of the reads.
+It raises a warning when the sum of the deviations from the normal distribution
+represents more than 15% of the reads.
 
-Warnings are usually caused by a presence of contaminants. Sharp peaks
-may represent a presence of a very specific contaminant (e.g. an
-adaptor). Broader peaks may indicate contamination with a range of
-contaminants.
+Warnings are usually caused by a presence of contaminants. Sharp peaks may
+represent a presence of a very specific contaminant (e.g. an adaptor). Broader
+peaks may indicate contamination with a range of contaminants.
 
-Improving data quality
+*Improving data quality*
 
-Best solution: Run the Trim Adaptors and Contaminants preprocessing app.
+Best solution: Run "Trim Adaptors and Contaminants" preprocessing app.
 
-4) Per base sequence quality plot
+4. **Per base sequence quality** plot
 
-[FastQC 4]|image37|
+.. image:: images/fastqc_per_base_sequence_quality.png
 
-For data of good quality, the median quality score per
-base (Phred) should not drop below 20.
+For data of good quality, the median quality score per base (Phred) should not
+drop below 20.
 
-Failure 
+*Failure*
 
-A failure will be raised if the lower quartile for quality at any
-base position is less than 5 or if the median for any base is less than
-20.
+A failure will be raised if the lower quartile for quality at any base position
+is less than 5 or if the median for any base is less than 20.
 
-Improving data quality
-Best solution: If the quality of the library falls to a low level over
-the course of a read, the blueprint solution is to perform quality
-trimming of low quality bases or omitting low quality reads. This  can
-be performed using Trim Low Quality Bases or Filter By Quality Score
-apps respectively.
+*Improving data quality*
 
-5) Per sequence quality scores plot 
+Best solution: If the quality of the library falls to a low level over the
+course of a read, the blueprint solution is to perform quality trimming of low
+quality bases or omitting low quality reads. This can be performed using "Trim
+Low Quality Bases" or "Filter by Quality Scores" applications respectively.
 
-[FastQC 5]|image38|
+5. **Per sequence quality scores** plot 
 
-Ideally, we’d want to see a sharp peak at the very end of the graph
-(meaning most frequently observed mean quality scores are above 27)
+.. image:: images/fastqc_per_sequence_quality_scores.png
 
-Warning
+Ideally, we’d want to see a sharp peak at the very end of the graph (meaning
+most frequently observed mean quality scores are above 27)
 
-A warning is raised when the peak is shifted to the left, which means
-the most frequently observed mean quality is below 27. This equals to a
-0.2% error rate.
+*Warning*
 
-Improving data quality
+A warning is raised when the peak is shifted to the left, which means the most
+frequently observed mean quality is below 27. This equals to a 0.2% error rate.
 
-Best solution: Perform quality-based trimming or selection using Trim
-Low Quality Bases or Filter By Quality Score apps respectively.
+*Improving data quality*
 
-6) Per base sequence content
+Best solution: Perform quality-based trimming or selection using "Trim Low
+Quality Bases" or "Filter by Quality Scores" applications respectively.
 
-[FastQC 6]|image39|
+6. **Per base sequence content**
 
- 
+.. image:: images/per_base_sequence_content.png
 
-Ideally, in a random library we would see four parallel lines
-representing the relative base composition. Fluctuations at the
-beginning of reads in the tested sample may be caused by adapter
-sequences or other contaminations of the library.
+Ideally, in a random library we would see four parallel lines representing the
+relative base composition. Fluctuations at the beginning of reads in the tested
+sample may be caused by adapter sequences or other contaminations of the
+library.
 
-A bias at the beginning of the reads is common for RNA-Seq data. This
-occurs during RNA-seq library preparation, when "random" primers are
-annealed to the start of sequences. These primers are not truly random,
-and it leads to a variation at the  beginning of the reads.
+A bias at the beginning of the reads is common for RNA-Seq data. This occurs
+during RNA-seq library preparation, when "random" primers are annealed to the
+start of sequences. These primers are not truly random, and it leads to a
+variation at the  beginning of the reads.
 
-Warning
+*Warning*
 
-A warning will be raised  if the difference between A and T, or G and C
-is greater than 10% at any position.
+A warning will be raised  if the difference between A and T, or G and C is
+greater than 10% at any position.
 
-Improving data quality
+*Improving data quality*
 
-If there is instability at the start of the read the consensus is that
-no QC is necessary. If variation appears over the course of a read the
-Trim to Fixed Length app may be used. If there is persistent variation
-throughout the read it may be best to discard it. Some datasets may
-trigger a warning due to the nature of the sequence. For example,
-bisulfite sequencing data will have almost no Cytosines. Some species
-may be unusually GC rich or poor and therefore also trigger a
-warning.
+If there is instability at the start of the read the consensus is that no QC
+is necessary. If variation appears over the course of a read "Trim to Fixed
+Length" application may be used. If there is persistent variation throughout
+the read it may be best to discard it. Some datasets may trigger a warning due
+to the nature of the sequence. For example, bisulfite sequencing data will have
+almost no Cytosines. Some species may be unusually GC rich or poor and
+therefore also trigger a warning.
 
-7) Sequence duplication levels plots
+7. **Sequence duplication levels** plots
 
-[FastQC 7]|image40|
+.. image:: images/fastqc_sequence_duplication_levels.png
 
-Reports total number of reads, number of distinct reads and mean
-duplication rates.
+Reports total number of reads, number of distinct reads and mean duplication
+rates.
 
-Warning
+*Warning*
 
-This module will issue a warning if non-unique sequences make up more
-than 20% of the total.
+This module will issue a warning if non-unique sequences make up more than 20%
+of the total.
 
-There are two potential types of duplicates in a library: technical
-duplicates arising from PCR artefacts or biological duplicated which are
-natural collisions where different copies of exactly the same sequence
-are randomly selected. From a sequence level there is no way to
-distinguish between these two types and both will be reported as
-duplicates here.
+There are two potential types of duplicates in a library: technical duplicates
+arising from PCR artefacts or biological duplicated which are natural
+collisions where different copies of exactly the same sequence are randomly
+selected. From a sequence level there is no way to distinguish between these
+two types and both will be reported as duplicates here.
 
-Improving data quality
+*Improving data quality*
 
-If the observed duplications are due to primer/adaptor contamination,
-they can be removed using the Trim Adaptors and Contaminants app. Filter
-Duplicated Reads can also be used for DNA sequencing data but will
-distort expression data.
+If the observed duplications are due to primer/adaptor contamination, they can
+be removed using the Trim Adaptors and Contaminants app. "Filter Duplicated
+Reads" application can also be used for DNA sequencing data but will distort
+expression data.
 
-8) Overrepresented Sequences
+8. **Overrepresented sequences**
 
-[FastQC 8]|image41|
+.. image:: images/fastqc_overrepresented_sequences.png
 
-Shows the highly overrepresented sequences (more than 0.1% of total
-sequence) in the sample
+Shows the highly overrepresented sequences (more than 0.1% of total sequence)
+in the sample.
 
-Warning
+*Warning*
 
-A warning will be raised  if any sequence is found to represent more
-than 0.1% of the total.
+A warning will be raised  if any sequence is found to represent more than 0.1%
+of the total.
 
 There are several possible sources of overrepresented sequences:
+- technical biases (one region was sequenced several times; PCR amplification
+  biases);
+- feature of library preparation (e.g. for targeted sequencing);
+- natural reasons (RNA-Seq libraries can naturally present high duplication
+  rates).
 
-–technical biases (one region was sequenced several times; PCR
-amplification biases)
+Overrepresented sequences should only worry you if you think they are present
+due to technical biases.
 
-–feature of library preparation (e.g. for targeted sequencing)
+*Improving data quality*
 
-–natural reasons (RNA-Seq libraries can naturally present high
-duplication rates)
-
-Overrepresented sequences should only worry you if you think they are
-present due to technical biases.
-
-Improving data quality
-
-Procedures and caveats for improving data quality are the same as for
-sequence duplication level.
+Procedures and caveats for improving data quality are the same as for sequence
+duplication level.
 
 Multiple QC Report
 ^^^^^^^^^^^^^^^^^^
 
-You can also display metrics from multiple reports at once using the Multiple QC Report app.
-It accepts as input a collection of FastQC or other types of QC reports.
+You can also display metrics from multiple reports at once using "Multiple QC
+Report" application. It accepts as input a collection of QC reports. For
+example, let's select our FastQC reports in order to compare them in "Multiple
+QC Report":
 
-You can select from a range of QC keys to display on a barplot, you can also select
-which metainfo to display in the plot labels, and you can sort reports by a specified metric.
+.. image:: images/multiple_qc_report.png
 
-Finally, you can select reports by drawing a rectangle over the barplot and subsequently move the
-corresponding files into a separate folder (for instance, to exclude outliers).
+Select from a range of QC keys to display on the plot, e.g. Total nucleotide
+count (mate 1 and 2), Number of reads (mate 1 and 2):
 
-<screenshot>|image42|
+.. image:: images/multiple_qc_report_qc_keys.png
 
-What are the signs that something is wrong with our data?
+You can select which metainfo to display in the plot labels:
 
-GC content that is far from 50% and read counts that are low compared to
-other files in the dataset are ways of identifying which files
-should not be used for further analysis.
+.. image:: images/multiple_qc_report_metinfo.png
+
+Also, samples in the Multiple QC Report can be sorted by metainfo key or
+specified QC metric.
+
+.. image:: images/multiple_qc_report_sorting.png
+
+Finally, you can highlight the interesting reports and put them in a separate
+folder ("New folder with selection" button).
+
+.. image:: images/multiple_qc_report_select_reports.png
+
+
+.. note:: **What are the signs that something is wrong with our data?**
+
+          GC content that is far from 50% and read counts that are low
+          compared to other files in the dataset are ways of identifying which
+          files should not be used for further analysis.
+
+Now, let'smove on to the preprocessing applications. Keep in mind, that after
+completing preprocessing, it’s a good idea to run "FastQC Report" application
+once again on the preprocessed files to see if the quality has improved.
 
 Subsample Reads
 ^^^^^^^^^^^^^^^
 
-Action: used to create a random subset of raw reads.
+**Action**: to create a random subset of raw reads.
 
-The number of reads in the subset can be changed (default: 50,000). It
-is also possible to specify a fraction of the original number of
-reads. Changing the seed value will let you create different
-subsets with the same number of reads. Using the same seed and
-the same number of reads will result in identical subsets.
+The number of reads in the subset can be changed (default: 50,000). Changing
+the seed value will let you create different subsets with the same number of
+reads. Using the same seed and the same number of reads will result in
+identical subsets.
 
 This application is based on Seqtk_.
 
+.. _Seqtk: https://github.com/lh3/seqtk
 
-When the quality of the raw reads is unsatisfactory, several
-preprocessing apps are available on the platform that can increase the
-quality of your raw reads. Here we will walk you through each one and
-give you a checklist to use when deciding which to select. After each of
-the preprocessing steps, you can use the FastQC Report app again to
-compare the quality pre- and post-processing (remember that in order to
-do this, you need to run a different computation, this time inputting
-processed data source files into the data flow).
+When the quality of the raw reads is unsatisfactory, several preprocessing
+applications are available on the platform that can increase the quality of
+your raw reads. Here we will walk you through each one and give you a
+checklist to use when deciding which to select. After each of the
+preprocessing steps, you can use the FastQC Report app again to compare the
+quality pre- and post-processing (remember that in order to do this, you need
+to run a different computation, this time inputting processed data source
+files into the data flow).
 
 Filter Duplicated Reads
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: discards duplicated sequenced fragments from raw reads data. If
-the sequence of two paired reads or a single read occurs multiple times
-in a library, the output will include only one copy of that sequence.
+**Action**: to discard duplicated sequenced fragments from raw reads data. If
+the sequence of two paired reads or a single read occurs multiple times in a
+library, the output will include only one copy of that sequence.
 
-The phred quality scores are created by keeping the highest score across
-all identical reads for each position.
+The phred quality scores are created by keeping the highest score across all
+identical reads for each position.
 
 This tool is based on Tally_.
 
+.. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
 
-If you suspect contamination with primers, or some  other repetitive
-sequence. This should be evident from Sequence duplication levels and
-Overrepresented Sequences of the FastQC report. Keep in mind this app
-should not be used with RNA-seq data as it will remove observed
-differences in expression level.
+If you suspect contamination with primers, or some  other repetitive sequence.
+This should be evident from Sequence duplication levels and Overrepresented
+Sequences of the FastQC report. Keep in mind this app should not be used with
+RNA-seq data as it will remove observed differences in expression level.
 
-Filter By Quality Score
-^^^^^^^^^^^^^^^^^^^^^^^
+Filter by Quality Scores
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: discards reads from a sequencing assay based on Phred33 quality
-scores. You can change the minimum quality score, which is set to 20 by
-default. A score of 20 means that there is a 1% chance that the corresponding
-base was called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an incorrect base call.
+**Action**: to discard reads from a sequencing assay based on Phred33 quality
+scores. The application classifies the sequence as pass/fail calculating
+quality score distribution for each read.
 
-You can also discard reads specifying a minimum percentage of bases to
-be above the minimum quality score.
+You can change the minimum quality score, which is set to 20 by default. A
+score of 20 means that there is a 1% chance that the corresponding base was
+called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an
+incorrect base call.
 
-This tool is based on *fastq\_quality\_filter*, which is part of the
+You can also discard reads specifying a minimum percentage of bases to be above
+the minimum quality score.
+
+This tool is based on *fastq_quality_filter*, which is part of the
 FASTX-Toolkit_.
 
-This app is best used if you have some low quality reads, but others are high-quality.
-You should be able to tell if this is the case from the shape of the Per
-sequence quality scores plot from FastQC. It may also be worth trying
+.. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
+
+This app is best used if you have some low quality reads, but others are of
+high quality. You should be able to tell if this is the case from the shape of
+the Per sequence quality scores plot from FastQC. It may also be worth trying
 this app if the per base sequence quality is low.
 
 Trim Adaptors and Contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: finds and trims adaptors and known contaminating sequences from
+**Action**: to find and trim adaptors and known contaminating sequences from
 raw reads data. It is possible to specify the minimum length of trimmed
 reads. Trimmed reads below the minimum length are discarded.
 
 The app uses an internal list of sequences that can be considered as
-contaminants. This list is based on the possible sequencing technologies
-and platform used. For instance, it contains widely used PCR primers and
-adaptors for Illumina, ABI etc. You can view the full list
-`here <https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt>`_.
+contaminants. This list is based on the possible sequencing technologies and
+platform used. For instance, it contains widely used PCR primers and
+adaptors for Illumina, ABI etc. You can view the full list `here`_. The
+occurance threshold before adapter clipping is set to 25%.
 
-This tool is based on `fastq-mcf`_ , one of the EA-Utils_ utilities.
+.. _here: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
-Best used when you have irregularities in GC content, in base content at the start of
-reads, duplicated reads. Since this QC app relies on sequence matching
-it should be run first if used in conjunction with other QC apps
+This tool is based on fastq-mcf_, one of the EA-Utils_ utilities.
+
+.. _fastq-mcf: https://github.com/ExpressionAnalysis/ea-utils/blob/wiki/FastqMcf.md
+.. _EA-Utils: https://expressionanalysis.github.io/ea-utils/
+
+The application is best used when you have irregularities in GC content, in
+base content at the start of reads, duplicated reads. Since this QC app relies
+on sequence matching it should be run first if used in conjunction with other
+QC applications.
 
 Trim Low Quality Bases
 ^^^^^^^^^^^^^^^^^^^^^^
