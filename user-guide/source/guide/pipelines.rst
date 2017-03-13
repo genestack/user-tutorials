@@ -297,85 +297,101 @@ folder ("New folder with selection" button).
           compared to other files in the dataset are ways of identifying which
           files should not be used for further analysis.
 
+Now, let'smove on to the preprocessing applications. Keep in mind, that after
+completing preprocessing, it’s a good idea to run "FastQC Report" application
+once again on the preprocessed files to see if the quality has improved.
+
 Subsample Reads
 ^^^^^^^^^^^^^^^
 
-Action: used to create a random subset of raw reads.
+**Action**: to create a random subset of raw reads.
 
-The number of reads in the subset can be changed (default: 50,000). It
-is also possible to specify a fraction of the original number of
-reads. Changing the seed value will let you create different
-subsets with the same number of reads. Using the same seed and
-the same number of reads will result in identical subsets.
+The number of reads in the subset can be changed (default: 50,000). Changing
+the seed value will let you create different subsets with the same number of
+reads. Using the same seed and the same number of reads will result in
+identical subsets.
 
 This application is based on Seqtk_.
 
+.. _Seqtk: https://github.com/lh3/seqtk
 
-When the quality of the raw reads is unsatisfactory, several
-preprocessing apps are available on the platform that can increase the
-quality of your raw reads. Here we will walk you through each one and
-give you a checklist to use when deciding which to select. After each of
-the preprocessing steps, you can use the FastQC Report app again to
-compare the quality pre- and post-processing (remember that in order to
-do this, you need to run a different computation, this time inputting
-processed data source files into the data flow).
+When the quality of the raw reads is unsatisfactory, several preprocessing
+applications are available on the platform that can increase the quality of
+your raw reads. Here we will walk you through each one and give you a
+checklist to use when deciding which to select. After each of the
+preprocessing steps, you can use the FastQC Report app again to compare the
+quality pre- and post-processing (remember that in order to do this, you need
+to run a different computation, this time inputting processed data source
+files into the data flow).
 
 Filter Duplicated Reads
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: discards duplicated sequenced fragments from raw reads data. If
-the sequence of two paired reads or a single read occurs multiple times
-in a library, the output will include only one copy of that sequence.
+**Action**: to discard duplicated sequenced fragments from raw reads data. If
+the sequence of two paired reads or a single read occurs multiple times in a
+library, the output will include only one copy of that sequence.
 
-The phred quality scores are created by keeping the highest score across
-all identical reads for each position.
+The phred quality scores are created by keeping the highest score across all
+identical reads for each position.
 
 This tool is based on Tally_.
 
+.. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
 
-If you suspect contamination with primers, or some  other repetitive
-sequence. This should be evident from Sequence duplication levels and
-Overrepresented Sequences of the FastQC report. Keep in mind this app
-should not be used with RNA-seq data as it will remove observed
-differences in expression level.
+If you suspect contamination with primers, or some  other repetitive sequence.
+This should be evident from Sequence duplication levels and Overrepresented
+Sequences of the FastQC report. Keep in mind this app should not be used with
+RNA-seq data as it will remove observed differences in expression level.
 
-Filter By Quality Score
-^^^^^^^^^^^^^^^^^^^^^^^
+Filter by Quality Scores
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: discards reads from a sequencing assay based on Phred33 quality
-scores. You can change the minimum quality score, which is set to 20 by
-default. A score of 20 means that there is a 1% chance that the corresponding
-base was called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an incorrect base call.
+**Action**: to discard reads from a sequencing assay based on Phred33 quality
+scores. The application classifies the sequence as pass/fail calculating
+quality score distribution for each read.
 
-You can also discard reads specifying a minimum percentage of bases to
-be above the minimum quality score.
+You can change the minimum quality score, which is set to 20 by default. A
+score of 20 means that there is a 1% chance that the corresponding base was
+called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an
+incorrect base call.
 
-This tool is based on *fastq\_quality\_filter*, which is part of the
+You can also discard reads specifying a minimum percentage of bases to be above
+the minimum quality score.
+
+This tool is based on *fastq_quality_filter*, which is part of the
 FASTX-Toolkit_.
 
-This app is best used if you have some low quality reads, but others are high-quality.
-You should be able to tell if this is the case from the shape of the Per
-sequence quality scores plot from FastQC. It may also be worth trying
+.. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
+
+This app is best used if you have some low quality reads, but others are of
+high quality. You should be able to tell if this is the case from the shape of
+the Per sequence quality scores plot from FastQC. It may also be worth trying
 this app if the per base sequence quality is low.
 
 Trim Adaptors and Contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: finds and trims adaptors and known contaminating sequences from
+**Action**: to find and trim adaptors and known contaminating sequences from
 raw reads data. It is possible to specify the minimum length of trimmed
 reads. Trimmed reads below the minimum length are discarded.
 
 The app uses an internal list of sequences that can be considered as
-contaminants. This list is based on the possible sequencing technologies
-and platform used. For instance, it contains widely used PCR primers and
-adaptors for Illumina, ABI etc. You can view the full list
-`here <https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt>`_.
+contaminants. This list is based on the possible sequencing technologies and
+platform used. For instance, it contains widely used PCR primers and
+adaptors for Illumina, ABI etc. You can view the full list `here`_. The
+occurance threshold before adapter clipping is set to 25%.
 
-This tool is based on `fastq-mcf`_ , one of the EA-Utils_ utilities.
+.. _here: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
-Best used when you have irregularities in GC content, in base content at the start of
-reads, duplicated reads. Since this QC app relies on sequence matching
-it should be run first if used in conjunction with other QC apps
+This tool is based on fastq-mcf_, one of the EA-Utils_ utilities.
+
+.. _fastq-mcf: https://github.com/ExpressionAnalysis/ea-utils/blob/wiki/FastqMcf.md
+.. _EA-Utils: https://expressionanalysis.github.io/ea-utils/
+
+The application is best used when you have irregularities in GC content, in
+base content at the start of reads, duplicated reads. Since this QC app relies
+on sequence matching it should be run first if used in conjunction with other
+QC applications.
 
 Trim Low Quality Bases
 ^^^^^^^^^^^^^^^^^^^^^^
