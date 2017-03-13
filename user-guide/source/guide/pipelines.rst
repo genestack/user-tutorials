@@ -103,7 +103,7 @@ of them one by one and tell you:
 The metrics table gives you quick indicators as to the status of each of
 the quality metrics calculated.
 
-- Yellow Triangles - warnings.
+- Yellow triangles - warnings.
 - Red X-es - failures.
 - Green check marks in circles - ok.
 
@@ -297,8 +297,9 @@ folder ("New folder with selection" button).
           compared to other files in the dataset are ways of identifying which
           files should not be used for further analysis.
 
-Now, let'smove on to the preprocessing applications. Keep in mind, that after
-completing preprocessing, it’s a good idea to run "FastQC Report" application
+Now, let's move on and look at the preprocessing applications used to improve
+the quality of raw reads. Keep in mind, that after completing the
+preprocessing procedure, it’s a good idea to run "FastQC Report" application
 once again on the preprocessed files to see if the quality has improved.
 
 Subsample Reads
@@ -396,29 +397,44 @@ QC applications.
 Trim Low Quality Bases
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Action: isolate high-quality regions from raw reads
+**Action**: to isolate high-quality regions from raw reads.
 
-Best used when:
-If your per-base quality declines over the course of your reads the Trim
-Low Quality Bases will select the highest quality region for each read.
+"Trim Low Quality Bases" application is based on `Phred algorithm`_. It finds
+the longest subsequence in read where the estimated error rate is below the
+error threshold (which is equal to 0.01 by default).
 
-This tool is based on the `Seqtk tool`_, which uses the Phred algorithm.
+.. _Phred algorithm: http://www.phrap.org/phredphrap/phred.html
+
+So, imagine you have a sequence: CGTAGACT
+Phred quality scores for each base are: 10 20 30 40 30 20 10
+Per base error probabilities are equal: 0.1 0.01 0.001 0.0001 0.0001 0.001 0.01 0.1
+
+The app will find the fragment of the read where the sum of all probability
+errors will not be more than 0.01 (in our case). In this case, the best
+sequence will be "TAGA" (.001*2 + .0001*2 = .0022). Other fragments will have
+the sum of error probabilities more than the cuttoff 0.01.
+
+This tool is based on the `Seqtk`_ tool and uses Phred algorithm to pick out
+the reqions of higest quality.
+
+.. _Seqtk: https://github.com/lh3/seqtk
 
 Trim Reads to Fixed Length
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: trims a specific amount of bases from the extremities of all
+**Action**: to trim a specific amount of bases from the extremities of all
 reads in a sample.
 
-You should specify the first base and the last base that should be
-kept. For example, if you set 5 as the first base to keep and 30 as the
-last base to keep, it means that the application trims all nucleotides
-before the 5th position, and all nucleotides after the 30th base.
+You should specify the first base and the last base that should be kept. For
+example, if you set 5 as the first base to keep and 30 as the last base to
+keep, it means that the application trims all nucleotides before the 5th
+position, and all nucleotides after the 30th base.
 
-This tool is based on fastx_trimmer, which is part of the
-FASTX-Toolkit.
+This tool is based on **fastx_trimmer**, which is part of the `FASTX-Toolkit`_.
 
-Best used when: Trim to fix length is helpful when you want to obtain
+.. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
+
+"Trim Reads to Fixed Length" application is helpful when you want to obtain
 reads of a specific length (regardless of the quality).
 
 Mapped Reads Preprocessing and QC
@@ -427,66 +443,97 @@ Mapped Reads Preprocessing and QC
 Mapped Reads QC Report
 ^^^^^^^^^^^^^^^^^^^^^^
 
-In order to perform the mapped reads QC we follow a similar procedure to
-the one used to generate FastQC reports. After selecting all the mapped
-reads we wish to check the quality of, we can use the Mapped Reads QC
-public data flow, initialize the computations, and then explore the
-results. You can read more about the Mapped Reads QC Report app in the
-"Explore" section of this guide.
+In order to perform the mapped reads QC we follow a similar procedure to the
+one used to generate FastQC reports. After selecting all the mapped reads we
+wish to check the quality of, we can use the `Mapped Reads QC`_ public data
+flow, initialize the computations, and then explore the results. You can read
+more about the Mapped Reads QC Report app in the "Explore" section of this
+guide.
 
-An individual Mapped Reads QC report contains a range of mapping
-statistics including:
+.. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
-#. Mapped reads: total number of reads which mapped to the reference
+An individual Mapped Reads QC report contains some techincal information about
+source data, tools used and data flow.
+
+.. image:: images/mapped_reads_qc_report.png
+
+Also, it includes a range of **Mapping statistics**. For **single reads**,
+you'll calculate these QC metrics:
+
+#. Total number of reads reads used to map to the reference genome;
+#. Unmapped reads: total number of reads which failed to map to the reference
    genome;
-#. Unmapped reads: total reads which failed to map to the reference
-   genome;
-#. Mapped reads with mapped mate: total paired reads where both mates
-   were mapped;
-#. Mapped reads with partially mapped mate: total paired reads where
-   only one mate in the pair was mapped;
-#. Mapped reads with "properly" mapped mate: total paired reads where
-   both mates were mapped with the expected orientation;
-#. Mapped reads with "improperly" mapped mate: total paired reads where
-   one of the mates was mapped with an unexpected orientation.
+#. Mapped reads: total number of reads aligned to the reference genome;
+#. Uniquely mapped reads: total number of reads aligned exactly 1 time to teh
+   reference genome;
+#. Multi-hit mapped reads: total number of reads aligned >1 times to the
+   reference genome.
 
-→ what should we be on a lookout for here?
+In case you analyse **paired-end reads** data, you'll see the following
+statistics:
 
-Large numbers of reads that are not properly mapped.|image43|
+#. Total number of mate pairs used to map to the reference genome;
+#. Mapped mate pairs: total number of paired reads where both mates were
+   mapped;
+#. Partially mapped mate pairs: total number of paired reads where only one
+   mate in the pair was mapped;
+#. Unmapped mate pairs: total number of paired reads which failed to map to the
+   reference genome;
+#. Improperly mapped mate pairs: total number of paired reads where one of the
+   mates was mapped with an unexpected orientation;
+#. Properly mapped mate pairs: total number of paired reads where both mates
+   were mapped with the expected orientation.
 
-As well as two graphs.
+For both types of reads, you'll get **Coverage by chromosome** plot.
 
-1)Coverage by chromosome plot |image44|
+.. image:: images/coverage_by_chromosome.png
 
-This plot shows the percentage of reads covered by at least x reads. The
-amount of coverage you are expecting varies with the experimental
-techniques you are using. Normally you want similar coverage patterns
-across all chromosomes, but this may not be the case if e.g. you are
-dealing with advanced stage cancer. .
+This plot shows the percentage of reads covered by at least x reads. To clear
+it up, let's just imagine that we have a plot which shows coverage only for one
+chromosome and therefore it shows 1 line. If on the x-axis we have e.g 100
+reads, on y-axis - 10% (percentage of chromosome bases covered by 100 reads).
+So, it looks like we have 100-reads coverage for 10% of chromosome.
 
-What should it look like normally?
+The amount of coverage you are expecting varies with the experimental
+techniques you are using. Normally you want similar coverage patterns across
+all chromosomes, but this may not be the case if e.g. you are dealing with
+advanced stage cancer.
 
-What does it look like when data is of poor quality ( + what can we do
-about it)
+.. TODO: What does it look like when data is of poor quality ( + what can we do about it)
 
-let's just imagine that we have a plot which shows coverage only for one
-chromosome --> 1 line. On the x-axis we have the number of reads (e.g
-100), on y-axis - percentage of chromosome bases covered by this number
-of reads (e.g. 10%). So, it looks like we have 100-reads coverage for
-10% of chromosome.
+For paired-end reads, apart from mapping staistics the **Insert Size
+statistics** will be calculated.
 
-2) The insert size distribution plot
+.. note:: **What is the difference between fragment size, insert size and mate
+          inner distance?**
 
-|image45|
+          Mate inner distance is the length between the two sequence reads.
+          Insert size is normally the distance between paired-end adaptors
+          (paired-end reads + mate inner distance). Fragment size is the
+          insert plus both adaptors.
 
-What should it look like normally?
+Insert size statistics are useful to validate library constrauction and include:
 
-What does it look like when data is of poor quality ( + what can we do
-about it)
+#. Median insert size: a middle of a sorted list of insert sizes;
+#. Median absolute deviation: calculated by taking the median of the absolute
+   deviations from the median insert size;
+#. Mean insert size (trimmed): an average of the insert sizes;
+#. Standard deviation of insert size: measures the variation in insert sizes
+   from the mean insert size.
 
-This plot shows the  distribution of insert sizes. Inserts are the
-distance between reads in mate pairs. Insert sizes can show e.g. indel
-mutations if our data is from a specific genomic region.
+And **Insert size distribution** graph will be displayed:
+
+.. image:: images/mapped_reads_qc_report_insert_size_distribution.png
+
+This graph shows the  distribution of insert sizes.
+
+Of course, the expected proportions of these metrics vary depending on the type
+of library preparation used, resulting from technical differences between
+pair-end libraries and mate-pair libraries.
+
+.. TODO: What should "Insert size distribution" plot look like normally?
+
+.. TODO: What does it look like when data is of poor quality ( + what can we do about it)
 
 Targeted Sequencing QC Report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
