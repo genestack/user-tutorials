@@ -97,7 +97,7 @@ various graphs that visualize the quality of your data. We’ll go through all
 of them one by one and tell you:
 
 1. how they should  look for data of perfect quality; 
-2. how they may look if there’s something wrong with your data; 
+2. how they may look if there’s something wrong with your data;
 3. what you can do if the quality is unsatisfactory.
 
 The metrics table gives you quick indicators as to the status of each of
@@ -264,22 +264,38 @@ duplication level.
 Multiple QC Report
 ^^^^^^^^^^^^^^^^^^
 
-You can also display metrics from multiple reports at once using the Multiple QC Report app.
-It accepts as input a collection of FastQC or other types of QC reports.
+You can also display metrics from multiple reports at once using "Multiple QC
+Report" application. It accepts as input a collection of QC reports. For
+example, let's select our FastQC reports in order to compare them in "Multiple
+QC Report":
 
-You can select from a range of QC keys to display on a barplot, you can also select
-which metainfo to display in the plot labels, and you can sort reports by a specified metric.
+.. image:: images/multiple_qc_report.png
 
-Finally, you can select reports by drawing a rectangle over the barplot and subsequently move the
-corresponding files into a separate folder (for instance, to exclude outliers).
+Select from a range of QC keys to display on the plot, e.g. Total nucleotide
+count (mate 1 and 2), Number of reads (mate 1 and 2):
 
-<screenshot>|image42|
+.. image:: images/multiple_qc_report_qc_keys.png
 
-What are the signs that something is wrong with our data?
+You can select which metainfo to display in the plot labels:
 
-GC content that is far from 50% and read counts that are low compared to
-other files in the dataset are ways of identifying which files
-should not be used for further analysis.
+.. image:: images/multiple_qc_report_metinfo.png
+
+Also, samples in the Multiple QC Report can be sorted by metainfo key or
+specified QC metric.
+
+.. image:: images/multiple_qc_report_sorting.png
+
+Finally, you can highlight the interesting reports and put them in a separate
+folder ("New folder with selection" button).
+
+.. image:: images/multiple_qc_report_select_reports.png
+
+
+.. note:: **What are the signs that something is wrong with our data?**
+
+          GC content that is far from 50% and read counts that are low
+          compared to other files in the dataset are ways of identifying which
+          files should not be used for further analysis.
 
 Subsample Reads
 ^^^^^^^^^^^^^^^
