@@ -34,90 +34,22 @@ answer any unanswered questions.
 3)Email: you can email us at support@genestack.com 
 
 
-
-
-
-.. |image0| image:: images/image39.png
-.. |image1| image:: images/image10.png
-.. |image2| image:: images/image27.png
-.. |image3| image:: images/image05.png
-.. |image4| image:: images/image33.png
-.. |image5| image:: images/image01.png
-.. |image6| image:: images/image57.png
-.. |image7| image:: images/image28.png
-.. |image8| image:: images/image34.png
-.. |image9| image:: images/image20.png
-.. |image10| image:: images/image14.png
-.. |image11| image:: images/image56.png
-.. |image12| image:: images/image01.png
-.. |image13| image:: images/image22.png
-.. |image14| image:: images/image16.png
-.. |image15| image:: images/image38.png
-.. |image16| image:: images/image45.png
-.. |image17| image:: images/image50.png
-.. |image18| image:: images/image00.png
-.. |image19| image:: images/image07.png
-.. |image20| image:: images/image44.png
-.. |image21| image:: images/image53.png
-.. |image22| image:: images/image41.png
-.. |Metainfo editor.png| image:: images/image60.png
-.. |managing-and-sharing-tutorial-tick-box-for-write-permissions-in-sharing-popup| image:: images/image08.png
-.. |image25| image:: images/image15.png
-.. |image26| image:: images/image59.png
-.. |image27| image:: images/image25.png
-.. |image28| image:: images/image46.png
-.. |image29| image:: images/image49.png
-.. |image30| image:: images/image17.png
-.. |image31| image:: images/image61.png
-.. |image32| image:: images/image51.png
-.. |image33| image:: images/image32.png
-.. |image34| image:: images/image06.png
-.. |image35| image:: images/image48.png
-.. |image36| image:: images/image13.png
-.. |image37| image:: images/image52.png
-.. |image38| image:: images/image40.png
-.. |image39| image:: images/image29.png
-.. |image40| image:: images/image47.png
-.. |image41| image:: images/image04.png
-.. |image42| image:: images/image23.png
-.. |image43| image:: images/image18.png
-.. |image44| image:: images/image43.png
-.. |image45| image:: images/image55.png
-.. |spliced mapping| image:: images/image35.png
-.. |image47| image:: images/image09.png
-.. |image48| image:: images/image03.png
-.. |unspliced mapping with BWA| image:: images/image26.png
-.. |unspliced mapping with bowtie2| image:: images/image54.png
-.. |image51| image:: images/image21.png
-.. |bisulfite sequencing mapping| image:: images/image31.png
-.. |reduced representation bisulfite sequencing mapping| image:: images/image02.png
-.. |image54| image:: images/image19.png
-.. |image55| image:: images/image11.png
-.. |image56| image:: images/image30.png
-.. |image57| image:: images/image58.png
-.. |image58| image:: images/image12.png
-.. |image59| image:: images/image42.png
-.. |image60| image:: images/image24.png
-.. |image61| image:: images/image37.png
-.. |image62| image:: images/image36.png
-
-
 FAQ
 ====
 
-Where do I find data shared with me?
+***Where do I find data shared with me?***
 
 If they have been linked, you can find them in the corresponding
 group subfolder folder within the "Shared with me" folder. Otherwise,
 they can be found using search.
 
-Where do I find the data flows I have created?
+***Where do I find the data flows I have created?***
 
-How do I reuse a data flow?
+***How do I reuse a data flow?***
 
-Why are my tasks failing?
+***Why are my tasks failing?***
 
-What’s the difference between Data Flow Runner and Data Flow Editor?
+***What’s the difference between Data Flow Runner and Data Flow Editor?***
 
 Data Flow Editor is used to create data flow templates: e.g. selecting
 source files.
@@ -127,9 +59,10 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-How do I initialize the files?
+***How do I initialize the files?***
 
-How do I create a data flow? To create a data flow, select the data you
+***How do I create a data flow?***
+To create a data flow, select the data you
 wish to analyse and choose the first app you wish to use in your
 analysis. On the app page, using the "add step" button, add the rest of
 the desired steps. Once you are done, click on the name of the file (or
@@ -147,7 +80,7 @@ file.
 Read more about data flows in this tutorial_:
 
 
-What’s the difference between BWA and Bowtie2?
+***What’s the difference between BWA and Bowtie2?***
 
 The biggest differences between the two aligners are:
 
@@ -178,7 +111,7 @@ their respective format-free form.as 1 or 2 files. If the platform
 cannot recognise the files automatically, you can allocate the files
 manually.
 
-What’s the difference between an experiment and a folder?
+***What’s the difference between an experiment and a folder?***
 
 The main difference between a folder and an experiment is in the content
 specificity.
@@ -200,7 +133,7 @@ experiments, not folders. Remember you can share both experiments and
 folders with other Genestack users using Groups. You can read more about
 this in our `"Getting Started"`_ tutorial.
 
-What’s the difference between masked and unmasked reference genomes?
+***What’s the difference between masked and unmasked reference genomes?***
 
 In general, when a genomes is "masked" it means that all repeats and low
 complexity regions of your reference genome (detected
@@ -220,11 +153,11 @@ nucleic base.
 "Unmasked" genomes contain all repeats and low complexity regions
 without any changes.
 
-How do I change the name of the file?
+***How do I change the name of the file?***
 
-How do I add files to the briefcase?
+***How do I add files to the briefcase?***
 
-Where can I find the import templates I created?
+***Where can I find the import templates I created?***
 
 
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
