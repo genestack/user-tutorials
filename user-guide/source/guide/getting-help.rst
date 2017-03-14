@@ -21,37 +21,42 @@ Getting in touch with Genestack
 
 There are various ways to get in touch with our team:
 
-1)Chatra: a chat window can be found at the bottom of our homepage.
+1)*Chatra*: a chat window can be found at the bottom of our homepage.
 During our operating hours at least one of us is always available to
 help. Outside of our operating hours, you can leave us a message using
 the chat window and we will get back to you as soon as we can.
 
-2)Forum: when you have a question about the platform, try posting it on
+2)*Forum*: when you have a question about the platform, try posting it on
 our forum: forum.genestack.org. Our community will definitely be keen to
 help you, and if not, our team regularly checks the forum and will
 answer any unanswered questions.
 
-3)Email: you can email us at support@genestack.com 
+3)*Email*: you can email us at support@genestack.com 
 
 
 FAQ
-====
+===
 
-***Where do I find data shared with me?***
+**Where do I find data shared with me?**
 
 If they have been linked, you can find them in the corresponding
 group subfolder folder within the "Shared with me" folder. Otherwise,
 they can be found using search.
 
-***Where do I find the data flows I have created?***
+**Where do I find the data flows I have created?**
 
-***How do I reuse a data flow?***
+All new data flows are automatically saved in the folder "Created Files".
 
-***Why are my tasks failing?***
+**How do I reuse a data flow?**
 
-***What’s the difference between Data Flow Runner and Data Flow Editor?***
+Open a data flow you would like to run in Run Dataflow app. on the app
+page you can set input files and additional files like reference genomes
+that are required for analysis.
 
-Data Flow Editor is used to create data flow templates: e.g. selecting
+
+**What’s the difference between Data Flow Runner and Data Flow Editor?**
+
+Data Flow Editor is used to create data flow templates, e.g. selecting
 source files.
 
 When you want to use the data flow to run your analysis, on the Data
@@ -59,9 +64,13 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-***How do I initialize the files?***
+**How do I initialize the files?**
+You can start initialisation from various places in our system.
+For example, you can use special File Initializer app accepting multiple file, then, you can start initialization when run dataflow.
+Morover, you can right-click file name wherever you are and select "start initialization"
+option in the context menu: on the app page, in File Manger, Task Manager etc.
 
-***How do I create a data flow?***
+**How do I create a data flow?**
 To create a data flow, select the data you
 wish to analyse and choose the first app you wish to use in your
 analysis. On the app page, using the "add step" button, add the rest of
@@ -76,48 +85,41 @@ that file, go to Manage, and select Create New Data Flow.
 Selecting File Provenance instead of Create New Data Flow will show you
 the pipeline (in the form of a data flow) that was used to create this
 file.
+Read more about data flows in this tutorial_.
 
-Read more about data flows in this tutorial_:
 
-
-***What’s the difference between BWA and Bowtie2?***
+**What’s the difference between BWA and Bowtie2?**
 
 The biggest differences between the two aligners are:
 
-1)The way of accepting or rejecting an alignment.
-
-BWA: counts the number of mismatches between the read and the
-corresponding genomic position.
-
-Bowtie2: uses a quality threshold bases on the probability of the
+- the way of accepting or rejecting an alignment:
+BWA counts the number of mismatches between the read and the
+corresponding genomic position. Bowtie2 aligner uses a quality threshold bases on the probability of the
 occurrence of the read sequence given an alignment location.
 
-2)Accepting colorspace data:
+- accepting colorspace data:
+BWA tool does not support data in colorspace data, while Bowtie2 is able to align such files.
 
-BWA: No.
+**How does Genestack process paired-end reads?**
 
-Bowtie2: Yes.
-
-How does Genestack process paired-end reads?
-
-There are three types of raw reads that our platform supports:
+There are three types of raw sequencing reads that our platform supports:
 
 -  single-end (1 file locally, 1 file in Genestack)
 -  paired-end (2 files locally, 1 file in Genestack)
 -  paired-with-unpaired (3 or 4 files locally, 2 files in Genestack)
 
-During import, Genestack recognises these types and imports them in
-their respective format-free form.as 1 or 2 files. If the platform
+During import, Genestack recognises them and imports them in
+their respective format-free form. If the platform
 cannot recognise the files automatically, you can allocate the files
 manually.
 
-***What’s the difference between an experiment and a folder?***
+**What’s the difference between an experiment and a folder?**
 
 The main difference between a folder and an experiment is in the content
 specificity.
 
 Folders work just like folders on your computer and can contain various
-biological objects\ :sup:``[bd] <#cmnt56>`__`\ : your assays, processed
+biological objects such as your assays, processed
 files, output reports, etc.
 
 Experiments contain only sequencing assays, but provide additional
@@ -131,13 +133,13 @@ and find links to public databases.
 All public experiments available on our platform are provided as
 experiments, not folders. Remember you can share both experiments and
 folders with other Genestack users using Groups. You can read more about
-this in our `"Getting Started"`_ tutorial.
+this in our `Getting Started`_ tutorial.
 
-***What’s the difference between masked and unmasked reference genomes?***
+**What’s the difference between masked and unmasked reference genomes?**
 
 In general, when a genomes is "masked" it means that all repeats and low
 complexity regions of your reference genome (detected
-by `RepeatMasker`_ tool)
+by RepeatMasker_ tool)
 are hidden away and replaced with "N"s, so that they will not be aligned
 to.
 
@@ -146,21 +148,22 @@ We do not recommend using a masked genome, as it always  results in a
 to an increase in the number of falsely mapped reads. If you’d like to
 perform filtering, it’s better to do it after the mapping step.
 
-In "soft-masked" genomes, repeated and low complexity regions are still
+In *soft-masked* genomes, repeated and low complexity regions are still
 present, but they have been replaced with lowercased versions of their
 nucleic base.
 
-"Unmasked" genomes contain all repeats and low complexity regions
+*Unmasked* genomes contain all repeats and low complexity regions
 without any changes.
 
-***How do I change the name of the file?***
+**How do I change the name of the file?**
 
-***How do I add files to the briefcase?***
+Click file name and select "Rename" option in the context menu.
 
-***Where can I find the import templates I created?***
+**Where can I find the import templates I created?**
 
+By default they are created in the folder "Created Files".
 
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
-.. _"Getting Started": https://genestack.com/blog/2016/01/06/getting-started/
+.. _Getting Started: https://genestack.com/blog/2016/01/06/getting-started/
 .. _RepeatMasker: http://www.repeatmasker.org/&sa=D&ust=1480960532173000&usg=AFQjCNE4ktR5xI4yZEvRi94d-Tc1QkJnvA
 
