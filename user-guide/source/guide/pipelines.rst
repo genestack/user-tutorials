@@ -730,7 +730,7 @@ Variants Preprocessing
 
 While analysing variants, you also can preprocess them. Just select Genetic
 Variations file and click on "Preprocess" section to see what applications
-Genestack suggests you use.
+are available for you.
 
 Merge Variants
 ^^^^^^^^^^^^^^
@@ -834,7 +834,7 @@ This app is used in the the `Testing Differential Gene Expression tutorial`_.
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
 Spliced Mapping to Transcriptome with STAR
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform gapped read alignment of transcriptomic data (like
 RNA-seq) to a Reference Genome taking into account splice junctions.
@@ -854,7 +854,7 @@ Here is the application page:
 
 .. image:: images/rna-seq_spliced_mapping_star.png
 
-Now, let's look through the applications parameters:
+Now, let's look through the application parameters:
 
 #. "Enable two pass mapping mode" option is recommended for semsitive novel
    junction discovery. The idea is to collect the junctions founded in the
@@ -880,111 +880,108 @@ Now, let's look through the applications parameters:
 Gene Quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-RSEM Report application uses STAR mapper to align reads against
-reference transcripts and applies an expectation-maximization algorithm
-to estimate gene and isoform expression levels from RNA-Seq data.
+**Action**: to use STAR mapper to align reads against reference transcripts
+and apply an `Expectation-Maximization algorithm`_ to estimate gene and
+isoform expression levels from RNA-Seq data.
 
-However, it is important to know the fragment length distribution to
-estimate expression levels from for single-end data accurately. In this
-case, you need to specify the "Estimated average fragment length (for
-single-end reads only)". Typical Illumina libraries produce fragment
-lengths ranging between 180–200 bp. By default the fragment length is set equal to 190. For
-paired-end reads, the average fragment length can be directly estimated
-from the reads.
+.. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 
-You can also set the "Estimated standard deviation of fragment length
-(for single-end reads only)" (the default value is 20). For paired-end
-reads this value will be estimated from the input data.
+Let's look at the application page and discuss the parameters available there.
 
-"The RNA-Seq protocol used to generate the reads is strand specific"? If
-yes, check it. By default, the app considers the reads as
-non-strand-specific.
+.. image:: images/rsem_report.png
 
-When the task is complete, click View report in the Explore section to get
-gene and isoform level expression estimates. The output report
-represents a table with the following main columns:
+“The RNA-Seq protocol used to generate the reads is strand specific”? If yes,
+check it. By default, the app considers the reads as non-strand-specific.
 
--  transcript\_id - name of the transcript;
--  gene\_id - name of the gene which the transcript belongs to. If no
-   gene information is provided, gene\_id and transcript\_id are the
-   same;
--  length - transcript's sequence length (poly(A) tail is not counted);
--  effective\_length - counts only the positions that can generate a
-   valid fragment. If no poly(A) tail is added, effective length is
-   equal to transcript length - mean fragment length + 1. If one
-   transcript's effective length is less than 1, this transcript's both
-   effective length and abundance estimates are set to 0;
--  expected\_count - the sum of the posterior probability of each read
-   comes from this transcript over all reads;
--  TPM - transcripts per million normalized by total transcript count in
-   addition to average transcript length;
--  FPKM - fragments per kilobase of exon per million fragments mapped;
--  IsoPct - the percentage of the transcript's abundance over its parent
-   gene's abundance. If the parent gene has only one isoform or the gene
-   information is not provided, this field will be set to 100.
+It is important to know the fragment length distribution to estimate
+expression levels from for single-end data accurately. In this case, you need
+to specify the "Estimated average fragment length (for single-end reads only)".
+Typical Illumina libraries produce fragment lengths ranging between 180–200 bp.
+By default, the fragment length is set equal to 190. For paired-end reads, the
+average fragment length can be directly estimated from the reads.
 
-The application is based on the `RSEM <http://deweylab.github.io/RSEM/>`_ program
-and the `STAR <https://github.com/alexdobin/STAR>`_ mapper, which are distributed under the GPLv3 license.
+You can also set the "Estimated standard deviation of fragment length (for
+single-end reads only)" (the default value is 20). For paired-end reads this
+value will be estimated from the input data.
 
-References:
+When the task is complete, click "View report" in Explore section to get gene
+and isoform level expression estimates. The output report represents a table
+with the following main columns:
 
-#. Li B and Dewey C N. "RSEM: accurate transcript quantification from
-   RNA-Seq data with or without a reference genome." BMC Bioinformatics
-   2011 12:323, doi: 10.1186/1471-2105-12-323
-#. Dobin A, Davis C A, Schlesinger F, Drenkow J, Zaleski C, Jha S, Batut
-   P, Chaisson M and Gingeras T R. "STAR: ultrafast universal RNA-seq
-   aligner." Bioinformatics 2012 29(1): 15-21.
-#. Do C B and Batzoglou S. "What is the expectation maximization
-   algorithm?" Nature biotechnology, 2008 26(8): 897-899.
+- *transcript_id* - name of the transcript;
+- *gene_id* - name of the gene which the transcript belongs to. If no gene
+  information is provided, gene\_id and transcript\_id are the same;
+- *length* - transcript's sequence length (poly(A) tail is not counted);
+- *effective_length* - counts only the positions that can generate a valid
+  fragment. If no poly(A) tail is added, effective length is equal to
+  transcript length - mean fragment length + 1. If one transcript's effective
+  length is less than 1, this transcript's both effective length and abundance
+  estimates are set to 0;
+- *expected_count* - the sum of the posterior probability of each read comes
+  from this transcript over all reads;
+- *TPM* - transcripts per million normalized by total transcript count in
+  addition to average transcript length;
+- *FPKM* - fragments per kilobase of exon per million fragments mapped;
+- *IsoPct* - the percentage of the transcript's abundance over its parent
+  gene's abundance. If the parent gene has only one isoform or the gene
+  information is not provided, this field will be set to 100.
+
+The application is based on the `RSEM`_ program and the `STAR`_ mapper.
+
+.. _RSEM: http://deweylab.github.io/RSEM/
+.. _STAR: https://github.com/alexdobin/STAR
 
 Gene Quantification with HTSeq-count
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Differential Gene Expression Analysis
+**Action**: to calculate the number of reads overlapped the genes and other
+features. The application accepts Mapped Reads and Reference Genome as inputs
+and generates Mapped Read Counts (containing information about number of reads
+overlapping each gene specified in the reference annotation).
 
-Input: Mapped Reads and Reference Genome
+.. image:: images/htseq_count_app.png
 
-Output: Mapped Read Counts (containing information about number of reads
-overlapping each gene specified in the reference annotation)
+Let's go through the application parameters:
 
-Further apps to use: Test Differential Gene Expression
+#. Depending on your tasks, you should specify the feature type for which
+   overlaps choosing from "exon", "CDS" (coding DNA sequence), "3’UTR" (the 3’ 
+   untranslated region) or "5’UTR" (the 5’ untranslated region). For example,
+   you may consider each exon as a feature in order to check for alternative
+   splicing.
+#. By default, the "gene-id" will be used as a feature identifier. If some
+   features will have the same feature identifier the application will
+   consider all these features as relating to the same feature.
+#. You also need to choose a rule for overlaps that dictates how mapped reads
+   that overlap genomic features will be treated. There are three overlap
+   resolution modes: union, strict-intersection, and non-empty intersection.
+   
+.. image:: images/overlap_resolution_modes.png
 
-Depending on your tasks, you should specify the feature type for which
-overlaps choosing from "exon", "CDS" (coding DNA sequence), "3’UTR" (the
-3’ untranslated region) or "5’UTR" (the 5’ untranslated region). For
-example, you may consider each exon as a feature in order to check for
-alternative splicing.
+   The first one - "union" - is the most recommended. It combines all cases
+   when the read (or read pair) at least partly overlaps the feature. The
+   "strict-intersection" mode is about strict intersection between the
+   feature and the read overlapping this feature. But if you are interested in
+   counting reads that are fully or partly intersected with the feature, you
+   should use the last mode. It’s important that the read will be counted for
+   feature if it overlaps precisely only one feature. If the read overlaps
+   with more than one feature, it will not be counted.
+#. An additional useful option is "Strand-specific reads". The application
+   takes into account the direction of the read and the reference, so that a
+   read from the wrong direction, even if it is mapped to the right place,
+   will not be counted. This option can be useful if your data is
+   strand-specific and you are interested in counting of reads overlapping
+   with feature regarding to whether these reads are mapped to the same or the
+   opposite strand as the feature. Choose "yes", if the reads were mapped to
+   the same strand as the feature and "reverse" - if the reads were mapped on
+   the opposite strand as the feature. Specify "no", if you don’t consider
+   strand-specificity.
 
-By default, the "gene-id" will be used as a feature identifier. If some
-features will have the same feature identifier the application will
-consider all these features as relating to the same feature.
+This application is based on `HTSeq`_ tool and used in `Differential Gene
+Expression Analysis pipeline`_. After calculating read abundance on the gene
+level, you'll be able to run "Test Differential Gene Expression" application.
 
-You also need to choose a rule for overlaps that dictates how mapped
-reads that overlap genomic features will be treated. There are three
-overlap resolution modes: union, strict-intersection, and non-empty
-intersection.
-
-The first one - "union" - is the most recommended. It combines all cases
-when the read (or read pair) at least partly overlaps the feature. The
-"strict-intersection" mode is about strict intersection between the
-feature and the read overlapping this feature. But if you are interested
-in counting reads that are fully or partly intersected with the feature,
-you should use the last mode. It’s important that the read will be
-counted for feature if it overlaps precisely only one feature. If the
-read overlaps with more than one feature, it will not be counted. 
-
-|image47|
-
-An additional useful option is "Strand-specific reads". The application
-takes into account the direction of the read and the reference, so that
-a read from the wrong direction, even if it is mapped to the right
-place, will not be counted. This option can be useful if your data is
-strand-specific and you are interested in counting of reads overlapping
-with feature regarding to whether these reads are mapped to the same or
-the opposite strand as the feature. Choose "yes", if the reads were
-mapped to the same strand as the feature and "reverse" - if the reads
-were mapped on the opposite strand as the feature. Specify "no", if you
-don’t consider strand-specificity.
+.. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
+.. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
 
 Spliced Mapping and quantification with Kallisto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
