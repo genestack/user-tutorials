@@ -658,7 +658,7 @@ thread`_.
 
 .. image:: images/remove_duplicated_mapped_reads.png
 
-Action: goes through all reads in a Mapped Reads file, marking as
+**Action**: to go through all reads in a Mapped Reads file, marking as
 "duplicates" paired or single reads where the orientation and the 5’
 mapping coordinate are the same and discarding all except the "best"
 copy.
@@ -685,103 +685,89 @@ This tool is based on **MarkDuplicates**, part of the `Picard`_ tool.
 Subsample Reads
 ^^^^^^^^^^^^^^^
 
-Best used when: For example, if you want to take a look at what your
-final experimental results will look like, but don’t want to spend time
-processing all your data right away.
+You can use this application if you want to take a look at what your final
+experimental results will look like, but don’t want to spend time processing
+all your data right away.
 
-Action: used to create a random subset of mapped reads.
+**Action**: to create a random subset of mapped reads.
 
-Use subsampling ratio option to set a fraction of mapped reads you’d
-like to extract (default: 50%). Changing random seed value will let you
-produce different subsets with the same number of mapped reads. Using
-the same random seed and the same subsampling ratio will result in
-identical subsets.
+Use "Subsampling ratio" option to set a fraction of mapped reads you’d like to
+extract (default: 50%). Changing "Random seed" value will let you produce
+different subsets with the same number of mapped reads. Using the same random
+seed and the same subsampling ratio will result in identical subsets.
 
-This application is based on
-`SAMtools <https://www.google.com/url?q=http://samtools.sourceforge.net/&sa=D&ust=1480960531916000&usg=AFQjCNFB4gFPcb-Qn-otAuuvXdgQxS-qew>`__.
+This application is based on `SAMtools`_.
+
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Merge Mapped Reads
 ^^^^^^^^^^^^^^^^^^
 
-Best used when: For example, if you have multiple replicates of the same
+The application is useful when you have multiple replicates of the same
 experiment and want to combine them before producing your final result.
 
-Action: used to merge multiple Mapped Reads files, producing one single
+**Action**: to merge multiple Mapped Reads files, producing one single
 output Mapped Reads file.
 
-This application is based on
-`SAMtools <https://www.google.com/url?q=http://samtools.sourceforge.net/&sa=D&ust=1480960531918000&usg=AFQjCNExyI1vxeDPJ4fJDe3oEq6iaUomvA>`__.
+The application is based on `SAMtools`_.
 
-Merge Variants 
-^^^^^^^^^^^^^^^
+.. _SAMtools: http://samtools.sourceforge.net/
 
-Best used when: Merging Genomic Variations files can be useful, when you
-have, for example, one Genetic Variations file for SNPs and another one
-for Indels. After their merging, the result Genetic Variations file will
-separately contain information about SNPs and about Indels.
+Merge Variants
+^^^^^^^^^^^^^^
 
-Action: allows you to merge two or more Genetic Variations files into a
-single file.
+Merging Genomic Variations files can be useful, when you have, for example,
+one Genetic Variations file for SNPs and another one for Indels. After their
+merging, the result Genetic Variations file will separately contain
+information about SNPs and about Indels.
 
-This application is based on
-`BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools
-.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`_.
+**Action**: to merge two or more Genetic Variations files into a single file.
 
-Concatenate Variants 
-^^^^^^^^^^^^^^^^^^^^^
+This application is based on `BCFtools`_.
 
-Best used when: Concatenation would be appropriate if you, for example,
-have separate Genetic Variations files for each chromosome, and simply
-wanted to join them 'end-to-end' into a single Genetic Variations file.
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
-Action: allows you to join two or more Genetic Variations files by
-concatenating them into a larger, single file.
+Concatenate Variants
+^^^^^^^^^^^^^^^^^^^^
 
-The application always allows overlaps so that the first position at the
-start of the second input will be allowed to come before the last
-position of the first input. There is an option to remove duplicated
-variants to make sure that there are no redundant results.
+Concatenation would be appropriate if you, for example, have separate Genetic
+Variations files for each chromosome, and simply wanted to join them
+'end-to-end' into a single Genetic Variations file.
 
-This application is based on `BCFtools <https://www.google.com/url?q=http://samtools.github.io/bcftools/bcftools
-.html&sa=D&ust=1480960531922000&usg=AFQjCNENqYzPwnsR_l1c-R1nKiaEfyV6JA>`_.
+**Action**: to join two or more Genetic Variations files by concatenating them
+into a larger, single file.
 
+The application always allows overlaps so that the first position at the start
+of the second input will be allowed to come before the last position of the
+first input. There is an option to remove duplicated variants to make sure
+that there are no redundant results.
 
-.. _FastQC tool:  http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-.. _Seqtk: https://www.google.com/url?q=https://github.com/lh3/seqtk
-.. _Tally: https://www.google.com/url?q=http://www.ebi.ac.uk/~stijn/reaper/tally.html
-.. _FASTX-Toolkit: https://www.google.com/url?q=http://hannonlab.cshl.edu/fastx_toolkit/
-.. _fastq-mcf: https://code.google.com/p/ea-utils/wiki/FastqMcf
-.. _EA-Utils: https://code.google.com/archive/p/ea-utils/
-.. _Seqtk tool: https://github.com/lh3/seqtk
-.. _BED tools: https://code.google.com/p/bedtools/
-.. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t%3D6854&sa=D&ust=1480960531906000&usg=AFQjCNEf4S1SCRUDkW22TsOHHRxjWD6Bvg
+The application is based on `BCFtools`_.
 
-..|about_app| image:: images/about_app.png
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 RNA-seq
 ~~~~~~~
 
-Mapping (also called alignment) of sequencing reads allows us to detect
-variation in samples by comparing your data to the reference genome. By
-doing this you can begin to analyse the relationship between variations
-in genotype and phenotype in the population. Next generation sequencing
-produces single-end or paired-end reads. For single-end sequence reads,
-the sequencer reads the fragment only from one end and usually stops
-before reaching the other. For paired-end reads, sequencing starts off
-at one end, reads a specified numbers of base pairs, and then starts
-another round of the reading from the opposite end of the fragment.
-Paired-end sequencing improves the ability to detect genetic
-rearrangements (e.g. deletions). This is due to the additional data
-carried by pairing reads - they can only be a certain maximum distance
-away from each other which limits the regions of the genome to which
-they can be mapped. This is particularly useful for regions which are
-repeated throughout the genome.
+Mapping (also called as alignment) of sequencing reads allows us to detect
+variation in samples by comparing your data to the reference genome. By doing
+this you can begin to analyse the relationship between variations in genotype
+and phenotype in the population. Next generation sequencing produces
+single-end or paired-end reads. For single-end sequence reads, the sequencer
+reads the fragment only from one end and usually stops before reaching the
+other. For paired-end reads, sequencing starts off at one end, reads a
+specified numbers of base pairs, and then starts another round of the reading
+from the opposite end of the fragment. Paired-end sequencing improves the
+ability to detect genetic rearrangements (e.g. deletions). This is due to the
+additional data carried by pairing reads - they can only be a certain maximum
+distance away from each other which limits the regions of the genome to which
+they can be mapped. This is particularly useful for regions which are repeated
+throughout the genome.
 
-To compare your data to the reference genome, you need to find a
-corresponding part of that sequence for each of the reads in our data
-– this is the essence of sequence mapping. Following mapping, you will
-be able to look at specific variations (SNPs, InDels etc).
-
+To compare your data to the reference genome, you need to find a corresponding
+part of that sequence for each of the reads in our data – this is the essence
+of sequence mapping. Following mapping, you will be able to look at specific
+variations (SNPs, InDels etc).
 
 Spliced Mapping with TopHat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
