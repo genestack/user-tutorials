@@ -1146,7 +1146,7 @@ Test Differential Isoform Expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform differential isoform expression analysis between groups
-of samples. The application accepts FPKM Isoform Counts (from Quantify FPKM
+of samples. The application accepts FPKM Read Counts (from Quantify FPKM
 Coverage in Isoforms application) and generates Differential Expression
 Statistics file which↵you can view in Expression Navigator application.
 
@@ -1280,190 +1280,166 @@ You can read more about this app in the corresponding `tutorials`_.
 
 .. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
 
-Single cell RNA-seq analysis
+Single-cell RNA-seq analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Single-cell RNA-seq Analyser + Visualiser need to be merged
-
-Good for: Single-cell RNA-seq Analysis
-
-Input: single-cell RNA-seq data
-
-Action: The app identifies heterogeneously-expressed (HE) genes across
-cells, while accounting for technical noise.
-
-Further apps to use : Single-cell RNA-seq Visualiser
+**Action**: to identify heterogeneously-expressed (HE) genes across cells,
+while accounting for technical noise. The application analyses single-cell
+RNA-seq data and accepts several Mapped Read Counts as inputs. The output
+report you can see in Single-cell RNA-seq Visualiser.
 
 The application supports two algorithms for HE analysis. The first uses
-spike-in data (artificially introduced RNAs of known abundance) to
-calibrate a noise model [1]. The second method is a non-parametric
-algorithm based on smoothing splines and doesn’t require the presence of
-spike-in data.
+spike-in data (artificially introduced RNAs of known abundance) to calibrate a
+noise model. The second method is a non-parametric algorithm based on
+smoothing splines and doesn’t require the presence of spike-in data.
 
-To identify highly variable genes you can try different options.
-"Exclude samples with low coverage" option (switched by default) allows
-you to exclude or include for analysis samples with low read
-counts.
+.. image:: images/single-cell_rna-seq_analysis.png
 
-Set significance level for the p-value (-10log₁₀(p)). The application
-will use the default of 1, which corresponds to selecting genes for
-which P is smaller than 0.1.
+To identify highly variable genes you can try different options:
 
-The "Use spike-ins to calibrate noise" option determines whether or not
-spike-in data should be taken into account. If you select only one
-folder before running the app, you will use spike-free algorithm and
-this option will be switched off by default. But if you select two
-folders, one for biological and the other for spike-in data, you can use
-the Brennecke algorithm [1]  which requires this option.  
+#. "Exclude samples with low coverage" option (switched by default) allows you
+   to exclude or include for analysis samples with low read counts.
+#. The "Use spike-ins to calibrate noise" option determines whether or not
+   spike-in data should be taken into account. If you select only one folder
+   before running the app, you will use spike-free algorithm and↵this option
+   will be switched off by default. But if you select two↵folders, one for
+   biological and the other for spike-in data, you can use↵the Brennecke
+   algorithm which requires this option.
+#. Set "Significance level for the p-value (-10log₁₀(p))". The application
+   will use the default of 1, which corresponds to selecting genes for which
+   p is smaller than 0.1.
 
-The next three options will be available if spike-ins are included in
-the experiment and "Use spike-ins to calibrate noise" option is
-switched. You’ll be able to set "Expected
-biological CV" which is the minimum threshold chosen for quantifying the
-level of biological variability (CV - coefficient of variation) expected
-in the null hypothesis of the model. The default value is 0.5.
+The next three options will be available if spike-ins are included in the
+experiment and "Use spike-ins to calibrate noise" option is switched:
 
-The other two options - "Noise fit - proportion of genes with high CV²
-to remove" and "Noise fit - proportion of genes with low mean expression
-to remove" - enable us to exclude a fraction of spike-in genes to fit
-the noise model, because extreme outliers tend to skew the fit. The
-default values for these options are 0 and 0.85, consequently.
+#. You’ll be able to set "Expected biological CV" which is the minimum
+   threshold chosen for quantifying the level of biological variability (CV -
+   coefficient of variation) expected in the null hypothesis of the model. The
+   default value is 0.5.
+#. The other two options - "Noise fit - proportion of genes with high CV² to
+   remove" and "Noise fit - proportion of genes with low mean expression to
+   remove" - enable us to exclude a fraction of spike-in genes to fit the
+   noise model, because extreme outliers tend to skew the fit. The default
+   values for these options are 0 and 0.85, consequently.
 
 To look at the HE analysis results, open the created Single-cell RNA-seq
 Analysis page in  Single-cell RNA-seq visualizer.
 
-This application is based on such `R
-packages <https://www.google.com/url?q=http://cran.r-project.org/&sa=D&ust=1480960532001000&usg=AFQjCNE1yhmhcF9OD882Ld6di-TrSBg14w>`__ as
-DESeq, statmod, ape, flashClust and RSJONIO.
+This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
+`flashClust`_ and `RSJONIO`_.
 
-References:
+.. _DESeq: http://bioconductor.org/packages/release/bioc/html/DESeq.html
+.. _statmod: https://cran.r-project.org/web/packages/statmod/index.html
+.. _ape: https://cran.r-project.org/web/packages/ape/index.html
+.. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
+.. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-#. Brennecke P, Anders S, Kim JK, Kolodziejczyk AA, Zhang X, Proserpio
-   V, Baying B, Benes V, Teichmann SA, Marioni JC, Heisler MG.
-   "Accounting for technical noise in single-cell RNA-seq experiments."
-   Nature Methods. 2013 Sep 22; 10(11):1093–1095.
+Read more about single-cell RNA-seq analysis on Genestack `here`_:
 
-Read more about single-cell RNA-seq analysis on Genestack here:
-`https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/ <https://www.google.com/url?q=https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/&sa=D&ust=1480960532003000&usg=AFQjCNFAjkflTkJ-VOc9Pmyr7WT2N61K8Q>`__
+.. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
 Single-cell RNA-Seq Visualisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Single-cell RNA-seq Analysis
-
-Used to: Explore cell-to-cell variability in gene expression in even
+**Action**: to explore cell-to-cell variability in gene expression in even
 seemingly homogeneous cell populations based on scRNA-Seq datasets.
 
-The application shows basic statistics such as the number of identified
-highly variable genes across the analysed samples. It also provides
-several quality control (QC) plots allowing to check the quality of raw
-sequencing data, estimate and fit technical noise for the
-Brennecke algorithm, and detect the genes with significantly high
-variability in expression. Expression of the highly variable genes
-across all cell samples is represented by an interactive clustered
-heatmap. Finally, several plots in the Samples Visualisation section can
-be used to detect cell subpopulations and identify novel cell
-populations based on gene expression heterogeneity in the single-cell
-transcriptomes.
+The application shows basic statistics such as the number of identified highly
+variable genes across the analysed samples. It also provides several quality
+control (QC) plots allowing to check the quality of raw sequencing data,
+estimate and fit technical noise for the Brennecke algorithm, and detect the
+genes with significantly high variability in expression.
 
-QC plots are adopted from the original paper by Brennecke et al [1]. In
-all the plots described below, gene expression levels are normalized
-using the DESeq normalization procedure [2].
+.. image:: images/qc_plots_in_single_cell_visualizer.png
 
-QC plots are adopted from the original paper by Brennecke et al [1].
+QC plots are adopted from the original `paper by Brennecke et al`_. In all the
+plots described below, gene expression levels are normalized↵using the DESeq
+normalization procedure.
+
+.. _paper by Brennecke et al: http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2645.html
 
 The first plot describing the quality of raw data is the Scatter Plot of
-Normalised Read Counts, which shows the cell-to-cell correlation of
-normalized gene expression levels. Each dot represents a gene, its
-x-coordinate is the normalized gene count in the first cell, and its
-y-coordinate is the normalized gene count in the second cell. If
-spike-ins were used during the analysis, separate plots will be rendered
-for spike-in genes and for sample genes.
+Normalised Read Counts, which shows the cell-to-cell correlation of normalized
+gene expression levels. Each dot represents a gene, its↵x-coordinate is the
+normalized gene count in the first cell, and its↵y-coordinate is the
+normalized gene count in the second cell. If↵spike-ins were used during the
+analysis, separate plots will be rendered↵for spike-in genes and for sample
+genes.
 
-The Technical Noise Fit and Highly Variable Genes plots provide a visual
-summary of the gene expression noise profile in your dataset across all
-cells. They graph the squared coefficient of variation (CV2) against the
-average normalized read counts across samples.  The Gene Expression
-Variability QC plot allows you to visualize the genes whose expression
-significantly varies across cells. A gene is considered as highly
-variable if its coefficient of biological variation is significantly
-higher than 50% (CV2 > 0.25)  and the biological part of its coefficient
-of variation is significantly higher than a user-defined threshold (its
-default value is 50%, and can be modified in the Single-cell
-Analyser). The coefficient of variation is defined as the standard
-deviation divided by the mean. It is thus a standardized measure of
-variance.
+The Technical Noise Fit and Highly Variable Genes plots provide a visual
+summary of the gene expression noise profile in your dataset across all cells.
+They graph the squared coefficient of variation (CV2) against the average
+normalized read counts across samples.  The Gene Expression Variability QC plot
+allows you to visualize the genes whose expression significantly varies across
+cells. A gene is considered as highly variable if its coefficient of biological
+variation is significantly higher than 50% (CV2 > 0.25)  and the biological
+part of its coefficient of variation is significantly higher than a
+user-defined threshold (its default value is 50%, and can be modified in the
+Single-cell Analyser). The coefficient of variation is defined as the standard
+deviation divided by the mean. It is thus a standardized measure of variance.
 
 If spike-ins were used to calibrate technical noise, then the separate
-Technical Noise Fit plot is displayed. On this plot, each dot
-corresponds to a " technical gene" (spike-in gene).It plots the mean
-normalized count across all samples on the x-coordinate and the squared
-coefficient of variation (CV2) of the normalized counts across all
-samples on the y-coordinate. The coefficient of variation is defined as
-the standard deviation divided by the mean. It is thus a standardized
-measure of variance. The plot also represents the fitted noise model as
-a solid red line (with 95% confidence intervals as dotted red lines). It
-allows you to check whether the noise model fits the data reasonably
-well. If it is not the case, you should change the noise fitting
-parameters in the Single-cell Analysis application.
+Technical Noise Fit plot is displayed. On this plot, each dot corresponds to a
+“ technical gene” (spike-in gene).It plots the mean normalized count across all
+samples on the x-coordinate and the squared coefficient of variation (CV2) of
+the normalized counts across all samples on the y-coordinate. The coefficient
+of variation is defined as the standard deviation divided by the mean. It is
+thus a standardized measure of variance. The plot also represents the fitted
+noise model as a solid red line (with 95% confidence intervals as dotted red
+lines). It allows you to check whether the noise model fits the data reasonably
+well. If it is not the case, you should change the noise fitting parameters in
+the Single-cell Analysis application.
+
+Expression of the highly variable genes across all cell samples is represented
+by an interactive clustered heatmap.
+
+.. image:: images/heatmap_single_cell_visualizer.png
 
 The interactive heatmap depicts the log normalised read count of each
 significant highly variable gene (rows) in each cell sample (columns).
-Hierarchical clustering of molecular profiles from cell samples is based
-on the similarity in gene expression of highly expressed genes and
-allows identification of  molecularly distinct cell populations. The
-heatmap is clustered both by columns and by rows, to identify clusters
-of samples with similar gene expression profiles, and clusters of
-potentially co-expressed genes. The bi-clustered heatmap is provided by
-an open source interactive Javascript library
-`InCHlib <https://www.google.com/url?q=http://openscreen.cz/software/inchlib/home/&sa=D&ust=1480960532013000&usg=AFQjCNGnCwLQvBZYAwnvVft_NSwJUYeZrg>`__ (Interactive
-Cluster Heatmap library) [3].
+Hierarchical clustering of molecular profiles from cell samples is based on the
+similarity in gene expression of highly expressed genes and allows
+identification of  molecularly distinct cell populations. The heatmap is
+clustered both by columns and by rows, to identify clusters of samples with
+similar gene expression profiles, and clusters of potentially co-expressed
+genes. The bi-clustered heatmap is provided by an open source interactive
+Javascript library `InCHlib`_ (Interactive Cluster Heatmap library).
 
-The Samples Visualisation section provides interactive plots used to
-cluster cell samples based on expression of highly variable genes.
-Currently, two alternative methods are supported for visualisation and
-clustering of samples: the first one is based on the t-distributed
-Stochastic Neighbour Embedding (t-SNE) algorithm [4] and the second one
-uses Principal Component Analysis (PCA). For automatic cluster
-identification, the k-means clustering algorithm can be used in
-combination with either  t-SNE or PCA.
-K-means clustering requires you to supply
-a number of clusters to look for ("k"). You can either enter it manually
-using the dropdown menu or use the suggested value estimated using the
-"elbow" method (choosing a value of k such that increasing the number of
+.. _InCHlib: http://www.openscreen.cz/software/inchlib/home/
+
+Finally, several plots in the Samples Visualisation section can be used to
+detect cell subpopulations and identify novel cell populations based on gene
+expression heterogeneity in the single-cell transcriptomes.
+
+.. image:: images/clustering_single_cell_visualizer.png
+
+The Samples Visualisation section provides interactive plots used to cluster
+cell samples based on expression of highly variable genes. Currently, two
+alternative methods are supported for visualisation and clustering of samples:
+the first one is based on the t-distributed Stochastic Neighbour Embedding
+(t-SNE) algorithm and the second one uses Principal Component Analysis (PCA).
+
+For automatic cluster identification, the k-means clustering algorithm can be
+used in combination with either  t-SNE or PCA. K-means clustering requires you
+to supply a number of clusters to look for ("k"). You can either enter it
+manually using the dropdown menu or use the suggested value estimated using
+the "elbow" method (choosing a value of k such that increasing the number of
 clusters does not significantly reduce the average "spread" within each
 cluster).
 
-The Interactive Principal Component Analysis (PCA) scatter plot is
-rendered using the
-`NVD3 <https://www.google.com/url?q=http://nvd3.org/&sa=D&ust=1480960532015000&usg=AFQjCNGqXKChcZFjmqBSR5lfGkPjYLtq_A>`__ Javascript
-library. The PCA features and k-means algorithm results are computed
-using R's built-in functions
-`prcomp <https://www.google.com/url?q=https://stat.ethz.ch/R-manual/R-patched/library/stats/html/prcomp.html&sa=D&ust=1480960532015000&usg=AFQjCNG0r7sbyWopaE14KyEE4d1vgwm92A>`__ and
-`knn <https://www.google.com/url?q=https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html&sa=D&ust=1480960532016000&usg=AFQjCNEqyNo-UhfT52yacNJBHNwelCFISA>`__.
-The t-SNE transformation is computed using the
-`Rtsne <https://www.google.com/url?q=http://cran.r-project.org/web/packages/Rtsne/index.html&sa=D&ust=1480960532017000&usg=AFQjCNGbgjxYIH_Ao0k-ARQ5A9JAqJLUwQ>`__ package.
+The Interactive Principal Component Analysis (PCA) scatter plot is rendered
+using the `NVD3`_ Javascript library. The PCA features and k-means algorithm
+results are computed using R's built-in functions `prcomp`_ and `knn`_. The
+t-SNE transformation is computed using the `Rtsne`_ package.
 
-You can read more about the app
-`here <https://www.google.com/url?q=https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/&sa=D&ust=1480960532018000&usg=AFQjCNGwmsnPH2lWurlcrYcwrekhm-9OkQ>`__.
+.. _NVD3: http://nvd3.org/
+.. _prcomp: https://stat.ethz.ch/R-manual/R-patched/library/stats/html/prcomp.html
+.. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
+.. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-References: 
+You can read more about the app and single-cell RNA-seg analysis `here`_.
 
-#. Brennecke P, Anders S, Kim JK, Kołodziejczyk AA, Zhang X, Proserpio
-   V, Baying B, Benes V, Teichmann SA, Marioni JC and Heisler MG.
-   "Accounting for technical noise in single-cell RNA-seq experiments."
-   Nature Methods 2013 10(11), 1093-1095. PMID: 24056876
-#. Anders S and Huber W. "Differential expression analysis for sequence
-   count data". Genome Biology 2010 11:R106  
-#. Škuta C, Bartůněk P and Svozil D. "InCHlib–interactive cluster
-   heatmap for web applications." Journal of Cheminformatics 2014 6(1),
-   1-9.
-#. van der Maaten LJP and Hinton GE. "Visualizing High-Dimensional Data
-   Using t-SNE." Journal of Machine Learning Research 2008 9(11),
-   2579-2605
-
-Read more about single-cell RNA-seq analysis on Genestack here:
-`https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/ <https://www.google.com/url?q=https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/&sa=D&ust=1480960532022000&usg=AFQjCNFHLp_YAJtq-t55uRJlHo1K1NAPwg>`__
+.. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
 .. note:: **Reference Genomes**
 
