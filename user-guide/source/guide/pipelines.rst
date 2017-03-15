@@ -512,6 +512,8 @@ statistics** will be calculated.
           (paired-end reads + mate inner distance). Fragment size is the
           insert plus both adaptors.
 
+.. image:: images/insert.jpg
+
 Insert size statistics are useful to validate library constrauction and include:
 
 #. Median insert size: a middle of a sorted list of insert sizes;
@@ -531,46 +533,69 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
+Mapped Reads QC Report application is based on `BEDtools`_ and `Picard`_ tool.
+
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
+.. _Picard: http://broadinstitute.github.io/picard/
+
 .. TODO: What should "Insert size distribution" plot look like normally?
 
 .. TODO: What does it look like when data is of poor quality ( + what can we do about it)
 
+You can analyse the output for several Mapped Reads QC reports at once using
+our Multiple QC Report application.
+
+.. image:: images/multiple_qc_report_mapped_reads_qc.png
+
+This is helpful, because it allows you to see in comparison, how many reads in
+your experiment are unmapped, partially or improperly mapped.
+
 Targeted Sequencing QC Report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good to use during: Whole Exome Sequencing Analysis
+This application is good to use when analysing Targeted Sequencing data, e.g.
+Whole Exome Sequencing assays.
 
-Besides general quality control of mapped reads, you might also want to
-assess whether the target capture has been successful, i.e. if most of
-the reads actually fell on the target, if the targeted bases reached
-sufficient coverage, etc. To do that, you can use Targeted Sequencing QC
-Report.
+Besides general quality control of mapped reads, you might also want to assess
+whether the target capture has been successful, i.e. if most of the reads
+actually fell on the target, if the targeted bases reached sufficient
+coverage, etc. To do that, you can use "Targeted Sequencing QC Report".
 
-By default the application allows you to compute enrichment statistics
-for reads mapped only on exome. If you go to the app page, change the
-value to "Both exome and target file" and select the appropriate target
-annotation file, you get both exome and/or target enrichment statistics.
+By default, the application allows you to compute enrichment statistics for
+reads mapped only on exome. If you go to the app page, change the value to
+"Both exome and target file" and select the appropriate target annotation
+file, you get both exome and/or target enrichment statistics.
 
 The following enrichment statistics are computed:
 
--  Number and proportion of mapped reads on target
--  Mean coverage on target with at least 2X coverage
--  Target bases with at least 2, 10, 20, 30, 40, and 50 x coverage
+- Number and proportion of mapped reads on target;
+- Mean coverage on target with at least 2X coverage;
+- Target bases with at least 2, 10, 20, 30, 40, and 50 x coverage.
 
-You can generate reports directly by choosing all of the files, right
-clicking on them and choosing an appropriate app or  one of our
-dedicated public data flows (Targeted Sequencing Quality Control public
-data flow).
+You can generate these reports directly by choosing Mapped Reads files, right
+clicking on them and selecting the appropriate app (in Explore section) or
+using "Run data flow on selection..." option and `Targeted Sequencing Quality
+Control`_ public data flow.
 
-You can analyse the output for multiple reports at once using the
-Multiple QC Report app.
+.. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
 
-Watch the video here: https://youtu.be/\_jHrtq\_3ya8
+We have youtube video on how to analyse exome data with Targeted Sequencing QC
+Report application. Watch it here:
 
-This application is based
-on `BED tools`_ ,
-`Picard <https://www.google.com/url?q=http://broadinstitute.github.io/picard/&sa=D&ust=1480960531903000&usg=AFQjCNE7Nx1DN1A6MJS58mdncbZw3paNKQ>`__ `tools <https://www.google.com/url?q=http://broadinstitute.github.io/picard/&sa=D&ust=1480960531904000&usg=AFQjCNHQu-By-46lV8YOZ9fOB5PWZPMzGA>`__,
-and SAMtools.
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://youtu.be/_jHrtq_3ya8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+
+You can analyse the output for multiple reports at once using the Multiple QC
+Report application.
+
+.. image:: images/targeted_sequencing_qc_multiple.png
+
+This application is based on `BEDtools`_ , `Picard`_ tools and `SAMtools`_.
+
+.. _BEDtools: https://code.google.com/archive/p/bedtools/
+.. _Picard: http://broadinstitute.github.io/picard/
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Mark Duplicated Mapped Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
