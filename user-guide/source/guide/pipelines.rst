@@ -983,138 +983,126 @@ level, you'll be able to run "Test Differential Gene Expression" application.
 .. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
 .. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
 
-Spliced Mapping and quantification with Kallisto
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Isoform quantification with Kallisto
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kallisto Report application quantifies abundances of transcripts from
-RNA-Seq data without the need for alignment. It uses an expectation-maximization algorithm
-on "pseudoalignments" to find a set of potential transcripts a read
-could have originated from.
+**Action**: to quantify abundances of transcripts from RNA-Seq data without
+the need for alignment. It uses an `Expectation-Maximization algorithm`_ on
+"pseudoalignments" to find a set of potential transcripts a read could have
+originated from.
 
-Use "Strand-specificity protocol" parameter to specify how to process
-the pseudoalignments. By default, the app does not take into account
-strand specificity ("none" value). To run the app in strand specific
-mode, change this value to "forward" if you are interested only in
-fragments where the first read in the pair is pseudomapped to the forward
-strand of a transcript. If a fragment is pseudomapped to multiple
-transcripts, only the transcripts that are consistent with the first
-read are kept. The "reverse" is the same as "forward" but the first read
-will be pseudomapped to the reverse strand of the transcript.
+.. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
+.. image:: images/kallisto.png
 
-To correct the transcript abundances according to the model of sequences
-specific bias, check "Enable sequence based bias correction" option.
+Let's inspect the application options:
 
-In the case of single-end reads, the "Estimated average fragment length
-(for single-end reads only)" option must be used to specify the average
-fragment length. Typical Illumina libraries produce fragment lengths
-ranging from 180–200 bp. By default it’s equal to 190. For paired-end
-reads, the average fragment length can be directly estimated from the
-reads.
-
-Finally, you can set the "Estimated standard deviation of fragment length
-(for single-end reads only)" (the default value is 20). For paired-end
-reads this value will be estimated from the input data.
+#. Use "Strand-specificity protocol" parameter to specify how to process the
+   pseudoalignments. By default, the app does not take into account strand
+   specificity ("none" value). To run the app in strand specific mode, change
+   this value to "forward" if you are interested only in fragments where the
+   first read in the pair is pseudomapped to the forward strand of a
+   transcript. If a fragment is pseudomapped to multiple transcripts, only the
+   transcripts that are consistent with the first read are kept. The "reverse"
+   is the same as "forward" but the first read will be pseudomapped to the
+   reverse strand of the transcript.
+#. To correct the transcript abundances according to the model of sequences
+   specific bias, check "Enable sequence based bias correction" option.
+#. In the case of single-end reads, the "Estimated average fragment length
+   (for single-end reads only)" option must be used to specify the average
+   fragment length. Typical Illumina libraries produce fragment lengths
+   ranging from 180–200 bp. By default it’s equal to 190. For paired-end
+   reads, the average fragment length can be directly estimated from the reads.
+#. ALso, you can set the "Estimated standard deviation of fragment length (for
+   single-end reads only)" (the default value is 20). For paired-end reads
+   this value will be estimated from the input data.
 
 Use the "View report" app in the Explore section to review the Kallisto output
 report. It contains a table with the following main columns:
 
--  target\_id - feature name, e.g. for transcript, gene;
--  length - feature length;
--  eff\_length - effective feature length, i.e. a scaling of feature
-   length by the fragment length distribution;
--  est\_counts - estimated feature counts;
--  tpm - transcripts per million normalized by total transcript count in
-   addition to average transcript length.
+- *target_id* - feature name, e.g. for transcript, gene;
+- *length* - feature length;
+- *eff_length* - effective feature length, i.e. a scaling of feature length by
+  the fragment length distribution;
+- *est_counts* - estimated feature counts;
+- *tpm* - transcripts per million normalized by total transcript count in
+  addition to average transcript length.
 
-The application is based on `Kallisto <https://pachterlab.github.io/kallisto/>`_.
+The application is based on `Kallisto`_ tool.
 
-References:
+.. _Kallisto: https://pachterlab.github.io/kallisto/
 
-#. Bray N L, Pimentel H, Melsted P and Pachter L. "Near-optimal
-   probabilistic RNA-seq quantification." Nature Biotechnology 2016
-   34:525–527, doi:10.1038/nbt.3519
-#. Do C B and Batzoglou S. "What is the expectation maximization
-   algorithm?" Nature biotechnology, 2008 26(8): 897-899.
-
-
-Isoforms quantification with cuffQuant
+Isoforms quantification with Cuffquant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Differential Isoform Expression Analysis
+Specific genes can produce a range of different transcripts encoding various
+isoforms, i.e. proteins of varying lengths containing different segments of the
+basic gene sequence. Such isoforms can be generated, for example, in the
+process of alternative splicing.
 
-Input: Mapped Reads (corresponding to isoform alignment) and Reference
-Genome
+**Action**: to quanify reads abundance at the isoform level. It accepts Mapped
+Reads (corresponding to isoform alignment) and Reference Genome as inputs. The
+output is a file containing isoform counts. Several such files corresponding to
+samples with different biological conditions and isoforms can be further used
+in "Test Differential Isoforms Expression" application.
 
-Output: Multiple output files corresponding to samples with different
-biological conditions and isoforms, can be further processed together
-for Differential Isoforms Expression analysis.
+.. image:: images/cuffquant.png
 
-Action: The app is used to quantify isoform expression.
+Before running the application, you can choose the following parameters:
 
-Further applications: Test Differential Isoform Expression
-
-Specific genes can produce a range of different transcripts encoding
-various isoforms, i.e. proteins of varying lengths containing different
-segments of the basic gene sequence. Such isoforms can be generated, for
-example, in the process of alternative splicing.
-
-We use this application to calculate expression levels of these
-isoforms. It takes the input Mapped Reads (corresponding to isoform
-alignment) and Reference Genome files. Multiple output files
-corresponding to samples with different biological conditions and
-isoforms, can be further processed together for Differential Isoforms
-Expression analysis using Test Differential Isoform Expression
-application.
-
-Before running the application, you can choose strand-specificity
-protocol used for generating your reads. By default, the application
-takes "none" strand-specific data, but this value can be changed to
-"dUTP" or "RNA-ligation".
-
-Switch the "No correction by effective length" option if you’d like to
-not apply effective length normalization to transcript FPKM (fragments
-per kilo bases of exons for per million mapped reads).
+#. "Strand-specificity protocol" is used for generating your reads. By default,
+   the application takes "none" strand-specific data, but this value can be
+   changed to "dUTP" or "RNA-ligation".
+#. Switch the "No correction by effective length" option if you’d like to not
+   apply effective length normalization to transcript FPKM (fragments per kilo
+   bases of exons for per million mapped reads).
 
 The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
 
-This application is based on cuffQuant which is a part of
-`Cufflinks <http://cole-trapnell-lab.github.io/cufflinks/>`_.
+This application is based on **cuffQuant** (a part of `Cufflinks`_ tool) and
+used in `Differential Isoform Expression Analysis`_ public data flow.
+
+.. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
+.. _Differential Isoform Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778459&action=viewFile
 
 Test Differential Gene Expression
-*********************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Good for**: Differential Gene Expression Analysis
-**Input**: Mapped Read Counts (from Quantify Raw Coverage in Genestack app)
-**Action**: The app performs differential gene expression analysis between
-groups of samples. You can create these groups manually or apply auto
-grouping when the application helps you to group your samples according to
-experimental factor such as disease, tissue, sex, cell type, cell line,
-treatment, organism, etc.
-**Further apps to use**: Expression Navigator application
+**Action**: to perform differential gene expression analysis between groups of
+samples. The application accepts Mapped Read Counts (from Quantify Raw
+Coverage in Genes application) and generates Differential Expression
+Statistics file which↵you can view in Expression Navigator application.
 
-The application supports two statistical R packages - **DESeq2** and **edgeR**
-to perform normalization across libraries, fit negative binomial distribution
-and likelihood ratio test (LRT) using generalized linear model (GLM). With
-edgeR, one of the following types of dispersion estimate is used, in order of
-priority and depending on the availability of biological replicates: Tagwise,
-Trended, or Common. Also, edgeR is much faster than DESeq2 for fitting GLM
-model, but it takes slightly longer to estimate the dispersion. It is important
-that edgeR gives moderated fold changes for the extremely lowly DE genes which
-DESeq2 discards, showing that the likelihood of a gene being significantly
-differentially expressed is related to how strongly it's expressed. So, choose
-one of the packages according to your desires and run the analysis.
+.. image:: images/test_differential_gene_expression.png
 
-For each group, a GLM LRT is carried out to find Differentially Expressed (DE)
-genes in this group compared to the average of the other groups. In the case
-of 2 groups, this reduces to the standard analysis of finding genes that are
-differentially expressed between 2 groups. Thus, for N groups, the application
-produces N tables of Top DE genes. Each table shows the corresponding
-Log2(Fold Change), Log2(Counts per Million), P-Value, and False Discovery Rate
-for each gene. Look at all result tables and plots in Expression Navigator
-application.
+#. You can apply autogrouping ("Group samples by" option) when the application
+   helps you to group your samples according to experimental factor indicated
+   in metainfo for the samples (e.g. disease, tissue, sex, cell type, cell
+   line, treatment, etc).
+#. The application supports two "methods for differential expression" -
+   "DESeq2" and "edgeR" statistical R packages - to perform normalization
+   across libraries, fit negative binomial distribution and likelihood ratio test
+   (LRT) using generalized linear model (GLM).
 
-#. **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
+   With edgeR, one of the following types of dispersion estimate is used, in
+   order of priority and depending on the availability of biological replicates:
+   Tagwise, Trended, or Common. Also, edgeR is much faster than DESeq2 for
+   fitting GLM model, but it takes slightly longer to estimate the dispersion. It
+   is important that edgeR gives moderated fold changes for the extremely lowly
+   Differentially Expressed (DE) genes which DESeq2 discards, showing that the
+   likelihood of a gene being significantly differentially expressed is related
+   to how strongly it's expressed. So, choose one of the packages according to
+   your desires and run the analysis.
+
+   For each group, a GLM LRT is carried out to find DE genes in this group
+   compared to the average of the other groups. In the case of 2 groups, this
+   reduces to the standard analysis of finding genes that are differentially
+   expressed between 2 groups. Thus, for N groups, the application produces N
+   tables of Top DE genes. Each table shows the corresponding Log2(Fold Change),
+   Log2(Counts per Million), P-Value, and False Discovery Rate for each gene.
+   Look at all result tables and plots in Expression Navigator application.
+
+-  **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
    with control samples. Then, for each gene in sample we know read counts
    (output of Quantify Raw Coverage in Genes application). If we divide read
    counts value for gene X (in the tumor sample) by the read counts value for
@@ -1124,30 +1112,42 @@ application.
    
    And if we apply Log2 transform for this value we’ll get Log2(Fold Change).
 
-#. **Log2(Counts per Million)**. Dividing each read count by millions yields
+   *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
+
+   Log transformed values contains the same information as Fold Change but
+   makes it more clear for interpretation because of symmetric values.
+
+-  **Log2(Counts per Million)**. Dividing each read count by millions yields
    counts per million (cpm), a simple measure of read abundance that can be
    compared across libraries of different sizes. And if we apply Log2 transform
    for this value we’ll get Log2(Counts per Million).
 
-#. **p-value**. The application also counts p-value for each gene. A low
+-  **p-value**. The application also counts p-value for each gene. A low
    p–value is seen as evidence that the null hypothesis may not be true (i.e.,
    our gene is differentially expressed).
 
-#. **False discovery rate**. FDR is the expected proportion of Type I errors
+-  **False discovery rate**. FDR is the expected proportion of Type I errors
    among the rejected hypotheses.
 
-Expression Navigator for RNA-seq
-********************************
+This application is based on two statistical R packages - `DESeq2`_ and
+`edgeR`_.
 
-**Good for**: Differential Gene expression analysis, Differential Isoform
-expression analysis.
+.. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
+.. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
 
-|expression_navigator_for_RNA-seq|
+Expression Navigator
+^^^^^^^^^^^^^^^^^^^^
 
-**Used to**: filter and view the results of differential gene expression
-analyses, including isoform expression.
+If you're performing Differential Gene Expression analysis or Differential
+Isoform Expression analysis, the results will be visible in Expression
+Navigator application.
 
-The Expression navigator page contains 4 sections.
+.. image:: images/expression_navigator_for_RNA-seq.png
+
+**Action**: to view and filter the results of differential gene and isoform
+expression analyses.
+
+The Expression Navigator page contains 4 sections:
 
 #. The topmost section, "Groups Information", is a summary of the groups
    available for comparison. Size refers to the number of samples used to
@@ -1167,6 +1167,12 @@ The Expression navigator page contains 4 sections.
   *Fold Change = tumor/control*
 
   And if we apply a Log2 transform for this value we’ll get Log2(Fold Change).
+
+  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
+  
+  Log transformed values contains the same information as Fold Change but
+  makes it more clear for interpretation because of symmetric values.
+  
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
@@ -1186,6 +1192,8 @@ The Expression navigator page contains 4 sections.
   genes for which a significant variation was identified incorrectly. You
   can read more about it `here`_.
 
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
+
   The buttons at the bottom of the section allow you to refresh the list
   based on your filtering criteria or clear your selection.
 
@@ -1201,18 +1209,6 @@ This application is based on two R packages - `DESeq2`_ and `edgeR`_.
 
 You can read more about this app in the following `tutorial`_.
 
-References:
------------
-
-- Love MI, Huber W and Anders S. "Moderated estimation of fold change
-  and dispersion for RNA-seq data with DESeq2." Genome Biology. 2014;15(12):550.
-- Robinson MD, McCarthy DJ and Smyth GK. "edgeR: a Bioconductor package for
-  differential expression analysis of digital gene expression data."
-  Bioinformatics. 2010; 26(1):139-140.
-
-.. |expression_navigator_for_RNA-seq| image:: images/expression_navigator_for_RNA-seq.png
-
-.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
 .. _tutorial: http://genestack-user-tutorials.readthedocs.io/index.html
