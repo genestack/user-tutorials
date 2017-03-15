@@ -26,25 +26,35 @@ After you log in, you will see the **Dashboard**. Let’s cover the basics.
 
 The very top of the page is static and you can always refer to it. Clicking
 on your username (your email address) in the top right corner of the page will
-give you access to your **profile** and log out of the platform.
+give you access to your **profile** and allows to log out of the platform.
 
 .. image:: images/WP_profile.png
+
+Clicking on your username in the top-right corner provides
+access to **your profile**.
+
+In this section you can change your name, password, the name of your
+organisation and your vendor ID. 
+
+.. image:: images/profile.png
+
+Organizations are a way of enforcing group permissions. There are two
+types of user in an organization - administrators and non-administrators. If you are in
+the same organization as another user, you can add them to groups you
+control and share files with them freely. If you are in different
+organizations, administrators from both organizations first need to
+approve adding them to the group. You can learn more about data sharing,
+permissions and groups in the :ref:`sharing` section.
+
+Vendor IDs are used for app development. Apps you have created will be
+marked with your vendor ID. Moreover, here you can specify which page you
+would like to see after login: Welcome Page or File Manager.
 
 **Tasks** links to the Task Manager app, where you can monitor running and
 previous computations.
 
 In the bottom right corner of the page you can see the Chatra **chat window**.
 You can chat with us at any time if you get stuck or if you find a bug.
-
-Wherever you are on the platform, you can also access a **shortcuts menu** by
-clicking on the Genestack logo in the top left corner of any platform page.
-It’s an easy way to reach most commonly used apps and folders. Dashboard,
-Import Data and Import Template Editor, Manage Applications, Manage Groups,
-Experiment Browser, File Manager as well as the folders
-for created and imported files can all be found here. To access the shortcuts
-menu, simply click Genestack logo in the upper-left corner of any page.
-
-.. image:: images/shortcuts_menu.png
 
 Let’s go back to the Dashboard. Here you can find the following sections:
 
@@ -64,32 +74,15 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 6. **Search** across the metadata of all your files using the full-text file
    search text box.
 
-Your Profile
-------------
-
-Clicking on your username (your email) in the top-right corner provides
-access to various applications used to manage your account and your
-groups.
-
-Profile
-~~~~~~~
-
-In this section you can change your name, password, the name of your
-organisation and your vendor ID. 
-
-.. image:: images/profile.png
-
-Organizations are a way of enforcing group permissions. There are two
-types of user in an organization - administrators and non-administrators. If you are in
-the same organization as another user, you can add them to groups you
-control and share files with them freely. If you are in different
-organizations, administrators from both organizations first need to
-approve adding them to the group. You can learn more about data sharing,
-permissions and groups in the :ref:`sharing` section.
-
-Vendor IDs are used for app development. Apps you have created will be
-marked with your vendor ID. Moreover, here you can specify which page you
-would like to see after login: Welcome Page or File Manager.
+Wherever you are on the platform, you can also access a **shortcuts menu** by
+clicking on the Genestack logo in the top left corner of any platform page.
+It’s an easy way to reach most commonly used apps and folders. Dashboard,
+Manage Applications, Manage Groups, Manage Users,
+Import Data and Import Template Editor,
+Experiment Browser, File Manager as well as the folders
+for created and imported files can all be found here. To access the shortcuts
+menu, simply click Genestack logo in the upper-left corner of any page.
+Let's look deeper into each of these items.
 
 Manage Applications
 ~~~~~~~~~~~~~~~~~~~
@@ -107,7 +100,9 @@ an app you want to use.
 
 The **‘bundled’** and **‘minified’** options optimize
 loading of CSS and JS used in the app. You can find more details on
-bundling and minifying here__.
+bundling and minifying here_.
+
+.. _here: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 
 The **Session** and **User** dropdown menus allow you to chose the version of
 the app you want to use for your current log-in session and for your
@@ -146,11 +141,11 @@ Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
 - **Microarray Assay** - Raw microarray data obtained from a microarray
-  experiment (you can import Affymetrix, Agilent or GenePix microarrays)
-- **Sequencing Assay** - Raw sequencing data (FASTQ, SRA or FASTA+QUAL)
+  experiment (you can import Affymetrix, Agilent or GenePix microarrays);
+- **Sequencing Assay** - Raw sequencing data (FASTQ, SRA or FASTA+QUAL);
 - **Microarray Annotation** - Annotation file containing information about
   association of microarray probes to biological entities like genes,
-  transcripts and proteins
+  transcripts and proteins;
 - **Continuous Genomic Data** - Contains information on continuous genome
   statistics, e.g. GC% content;
 - **Discrete Genomic Data** - Information on discrete regions of the genome
@@ -158,9 +153,9 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Mapped Reads** - Reads aligned to a specific reference genome (BAM or CRAM);
 - **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
 - **Reference Genome** - Reference genome sequence for a specific organism
-  with annotation; (FASTA + GTF)
+  with annotation; (FASTA + GTF);
 - **Variation Files** - Genetic Variations files, storing gene sequence
-  variations (VCF)
+  variations (VCF).
 
 When you upload microarrays or sequencing assays onto the platform, they will
 be automatically imported as an experiment.
@@ -434,16 +429,12 @@ description:
 
 .. image:: images/fm_attachments.png
 
-
-
 Browsing Data
 -------------
 
 Efficient data search and browsing are at the core of Genestack. The
 platform provides rapid access to private, shared, and public data
 analyses results.
-
-.. _experiment-browser:
 
 Experiment Browser
 ~~~~~~~~~~~~~~~~~~
@@ -496,8 +487,6 @@ the experiment's name at the top of the page and selecting **Explore > File Mana
 
 .. image:: images/FromMEtoFB.png
 
-.. _file-manager:
-
 File Manager
 ~~~~~~~~~~~~
 
@@ -519,14 +508,14 @@ header of the "Last Update" column.
 date: all files imported at the same time (during one import action)
 will be located in the same folder. 
 
-**Raw uploads** contains all the files you’ve uploaded into Genestack -
+**Uploads** contains all the files you’ve uploaded into Genestack -
 FASTQ and BAM files, pdf documents, excel tables etc.
 
 
-.. note:: **What is the difference between raw uploads and imported files?**
+.. note:: **What is the difference between uploads and imported files?**
 
           When you have just started importing your files (in various formats like
-          FASTQ, BAM etc), they all go to the specific storage area (the "Raw uploads"
+          FASTQ, BAM etc), they all go to the specific storage area (the "Uploads"
           folder). During import, Genestack will recognize these uploaded files and
           allocate them to appropriate biological types (you can also do it
           manually), e.g. sequencing assays, mapped reads etc. These meaningful
@@ -572,8 +561,8 @@ to make life a bit simpler for our users. This folder contains:
    ArrayExpress, SRA, and ENA. Currently we have about 100,000
    experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
-   various tutorials. To read more on particular analysis types, go to
-   `<https://genestack.com/tutorials/>`_.
+   various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
+
 
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
@@ -674,24 +663,21 @@ permissions.
 .. _Whole Genome Sequencing Analysis: https://genestack.com/tutorial/wgs-analysis-on-genestack/
 
 
-Curating Data and Managing Metadata
------------------------------------
+Public Experiments, Automated Data Curation and Managing Metadata
+-----------------------------------------------------------------
 
-**Automate curation**
+Our platform provides you with a huge collection of freely accessible experiments that we
+imported from various well-known repositories, such as GEO NCBI, ENA, SRA and Array Express.
+All the public experiments and assays are accompanied by original metainformation
+describing biological. Generally, this information is not standardized that makes operations
+with biological data, like browsing data and combining assays from several experiments or reproducing some
+analysis, difficult or even impossible without human participation.
+To harmonize raw metadata we apply **automated curation** where we map raw entries to
+controlled terms that we store in special files called **Dictionaries**.
+To prepare these Dictionaries we adopted terms from external ontologies or created them manually.
 
-To handle the increasing volume of biological data we standardize raw data imported from
-public archives by **automated curation**. In the curation process
-raw metadata associated with the **Public Experiments** is
-mapped to standardized terms. For this goal we use special files - **Dictionaries** -
-including unified biological terms adopted from external ontologies, such as
-Cell Ontology and Uberon Ontology, or created by our team.
-Our terminological resources are used not only for curation of public experiments but also
-for editing metadata of created or imported files.
+Our standardized and unified terminology you can also use to describe your own data by yourself .
 
-Besides, the importance of dictionaries in automated curation of public experiments,
-the controlled terms can be used to fill in and edit metadata for imported
-files or those created with the platform. The use of standardized terms will help to
-reduce confusion and facilitates data browsing and improves the clarity of metadata.
 
 Use **Edit Metainfo** app to work on metadata manually. To access the app select the assays
 of interest, right click on them and in "Manage" section choose Edit Metainfo.
