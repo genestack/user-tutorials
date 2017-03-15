@@ -765,8 +765,8 @@ The application is based on `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
-RNA-seq
-~~~~~~~
+RNA-seq Data Analysis
+~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add info about RNA-seq technology
 
@@ -905,8 +905,11 @@ single-end reads only)" (the default value is 20). For paired-end reads this
 value will be estimated from the input data.
 
 When the task is complete, click "View report" in Explore section to get gene
-and isoform level expression estimates. The output report represents a table
-with the following main columns:
+and isoform level expression estimates.
+
+.. image:: images/rsem_output_report.png
+
+The output report represents a table with the following main columns:
 
 - *transcript_id* - name of the transcript;
 - *gene_id* - name of the gene which the transcript belongs to. If no gene
@@ -1017,7 +1020,11 @@ Let's inspect the application options:
    this value will be estimated from the input data.
 
 Use the "View report" app in the Explore section to review the Kallisto output
-report. It contains a table with the following main columns:
+report.
+
+.. image:: images/kallisto_report.png
+
+It contains a table with the following main columns:
 
 - *target_id* - feature name, e.g. for transcript, gene;
 - *length* - feature length;
@@ -1059,7 +1066,7 @@ Before running the application, you can choose the following parameters:
 The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
 
-This application is based on **cuffQuant** (a part of `Cufflinks`_ tool) and
+This application is based on **cuffquant** (a part of `Cufflinks`_ tool) and
 used in `Differential Isoform Expression Analysis`_ public data flow.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
@@ -1135,6 +1142,70 @@ This application is based on two statistical R packages - `DESeq2`_ and
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
 
+Test Differential Isoform Expression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Action**: to perform differential isoform expression analysis between groups
+of samples. The application accepts FPKM Isoform Counts (from Quantify FPKM
+Coverage in Isoforms application) and generates Differential Expression
+Statistics file which↵you can view in Expression Navigator application.
+
+.. image:: images/test_differential_isoform_expression.png
+
+In application options, you can find these ones:
+
+#. You can apply autogrouping ("Group samples by" option) when the application
+   helps you to group your samples according to experimental factor indicated
+   in metainfo for the samples (e.g. disease, tissue, sex, cell type, cell
+   line, treatment, etc).
+#. “Apply fragment bias correction” - if checked, the application runs the
+   bias detection and correction algorithm which can significantly improve
+   accuracy of transcript abundance estimates.
+#. Use “Apply multiple reads correction” option if you’d like to apply the
+   multiple reads correction.
+
+The application finds isoforms that are differentially expressed (DE) between
+several groups of samples and produces tables of Top DE transcripts. Each
+table shows the corresponding Log2(Fold Change), Log2(Counts per Million),
+P-Value, and False Discovery Rate for each isoform. To visualize your results
+use Expression Navigator application.
+
+- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
+  and with control samples. Then, for each transcript in sample we know read
+  counts (output of Quantify FPKM Coverage in Isoforms application). If we
+  divide read counts value for transcript X (in the tumor sample) by the read
+  counts value for transcript X (in the control sample) we’ll get Fold Change
+  value:
+
+  *Fold Change = tumor/control*
+
+  And if we apply Log2 transform for this value we’ll get Log2(Fold Change).
+
+  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
+  
+  Log transformed values contains the same information as Fold Change but
+  makes it more clear for interpretation because of symmetric values.
+
+- **Log2(Counts per Million)**. Dividing each read count by millions yields
+  counts per million (cpm), a simple measure of read abundance that can be
+  compared across libraries of different sizes. And if we apply Log2 transform
+  for this value we’ll get Log2(Counts per Million).
+
+- **p-value**. The application also counts p-value for each isoform. A low
+  p–value is seen as evidence that the null hypothesis may not be true (i.e.,
+  our isoform is differentially expressed).
+
+- **False discovery rate**. FDR is the expected proportion of Type I errors
+  among the rejected hypotheses. In other words, it’s the fraction of isoforms
+  for which a significant variation was identified incorrectly. You can read
+  more about it `here`_.
+
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
+
+This application is based on **cuffdiff** which is a part of `Cufflinks`_.
+
+.. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
+
 Expression Navigator
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -1205,70 +1276,9 @@ The Expression Navigator page contains 4 sections:
    can search for one gene at a time with auto-complete functionality. These
    genes do not need to be on the filtered list.
 
-This application is based on two R packages - `DESeq2`_ and `edgeR`_.
+You can read more about this app in the corresponding `tutorials`_.
 
-You can read more about this app in the following `tutorial`_.
-
-.. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
-.. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
-.. _tutorial: http://genestack-user-tutorials.readthedocs.io/index.html
-
-Expression Navigator for splice isoforms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Good for: Testing Differential Isoform Expression Analysis
-
-Input: Multiple Data files with FPKM isoform counts (produced by
-Quantify FPKM Coverage in Isoforms app)
-
-Action: The app performs differential expression (DE) analysis between
-two groups of samples corresponding to different conditions. You can
-create these groups manually or apply auto grouping when the application
-helps you to group your samples according to experimental factor such as
-disease, tissue, cell type, cell line, treatment etc. It’s important
-that to run DE analysis you need to create only two groups.
-
-Results exploration:  Expression Navigator for Isoforms
-
-In "Program Options" section you can apply two options to run the
-analysis. The first one - "Apply fragment bias correction" - if checked,
-the application runs the bias detection and correction algorithm which
-can significantly improve accuracy of transcript abundance estimates.
-Use the second option "Apply multiple reads correction" if you’d like to
-apply the multiple reads correction.
-
-The application finds isoforms that are differentially expressed between
-2 groups and produces 2 tables of Top DE transcripts. Each table shows
-the corresponding Log2(Fold Change), Log2(Counts per Million), P-Value,
-and False Discovery Rate for each isoform. To visualize your results run
-Expression Navigator for Isoforms application.
-
-1) Log2(Fold Change). Let’s assume, that we have two groups - with tumor
-and with control samples. Then, for each transcript in sample we know
-read counts (output of Quantify Raw Coverage in Genes
- application). If we divide read counts
-value for transcript X (in the tumor sample) by the read counts value
-for transcript X (in the control sample) we’ll get Fold Change value:
-
-Fold Change = tumor/control
-
-And if we apply Log2 transform for this value we’ll get Log2(Fold
-Change).
-
-2) Log2(Counts per Million). Dividing each read count by millions yields
-counts per million (cpm), a simple measure of read abundance that can be
-compared across libraries of different sizes. And if we apply
-Log2 transform for this value we’ll get Log2(Counts per Million).
-
-3) p-value. The application also counts p-value for each isoform. A low
-p–value is seen as evidence that the null hypothesis may not be true
-(i.e., our isoform is differentially expressed).
-
-4) False discovery rate. FDR is the expected proportion of Type I errors
-among the rejected hypotheses.
-
-This application is based on cuffdiff which is a part of
-`Cufflinks <https://www.google.com/url?q=http://cufflinks.cbcb.umd.edu/&sa=D&ust=1480960531994000&usg=AFQjCNH88na23xIz5CUAowl7LLWgSpC31A>`__.
+.. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
 
 Single cell RNA-seq analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
