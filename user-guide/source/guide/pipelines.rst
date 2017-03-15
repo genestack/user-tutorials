@@ -33,6 +33,11 @@ Sequencing data
 Raw Reads quality control and preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Once you have got raw sequencing data in Genestack the next steps are to
+check the quality of the reads and improve it if it is necessary. Let's go
+through the applications developed to assess the quality of the data and do
+preprocessing.
+
 FastQC report
 ^^^^^^^^^^^^^
 
@@ -437,8 +442,12 @@ This tool is based on **fastx_trimmer**, which is part of the `FASTX-Toolkit`_.
 "Trim Reads to Fixed Length" application is helpful when you want to obtain
 reads of a specific length (regardless of the quality).
 
-Mapped Reads Preprocessing and QC
+Mapped Reads QC and Preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you analysing mapped reads, we recommend you check if there are any
+biases taken place during mapping process (e.g. low coverage, experimental
+artifacts, etc) and do preprocessing of mapped reads.
 
 Mapped Reads QC Report
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -597,6 +606,9 @@ This application is based on `BEDtools`_ , `Picard`_ tools and `SAMtools`_.
 .. _Picard: http://broadinstitute.github.io/picard/
 .. _SAMtools: http://samtools.sourceforge.net/
 
+Apart from quality control applications, Genestack suggests you a bunch of
+applications to preprocess mapped reads.
+
 Mark Duplicated Mapped Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -713,6 +725,13 @@ The application is based on `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
+Variants Preprocessing
+~~~~~~~~~~~~~~~~~~~~~~
+
+While analysing variants, you also can preprocess them. Just select Genetic
+Variations file and click on "Preprocess" section to see what applications
+Genestack suggests you use.
+
 Merge Variants
 ^^^^^^^^^^^^^^
 
@@ -749,6 +768,8 @@ The application is based on `BCFtools`_.
 RNA-seq
 ~~~~~~~
 
+.. TODO: Add info about RNA-seq technology
+
 Mapping (also called as alignment) of sequencing reads allows us to detect
 variation in samples by comparing your data to the reference genome. By doing
 this you can begin to analyse the relationship between variations in genotype
@@ -769,56 +790,92 @@ part of that sequence for each of the reads in our data – this is the essence
 of sequence mapping. Following mapping, you will be able to look at specific
 variations (SNPs, InDels etc).
 
-Spliced Mapping with TopHat2
+Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This application is used to map Raw Reads with transcriptomic data like
-RNA-seq to a Reference Genome, taking into account splice junctions.
+**Action**: to map Raw Reads with transcriptomic data like RNA-seq to a
+Reference Genome, taking or not taking into account splice junctions.
 
-Let’s take a look at the app page and talk about various parameters:
+Let’s have a look at the app page and talk about various parameters:
 
-|spliced mapping|
+.. image:: images/rna-seq_spliced_mapping_tophat.png
 
 Details on various settings:
 
-If you are using strand-specific RNA-seq data, the option
-"Strand-specificity protocol" will let you choose between the "dUTP" and
-"ligation" method. If you are not sure whether your RNA-seq data is
-strand-specific or not, you can try using Subsample reads to make a
-small subsample, map it with Spliced Mapping and check the coverage in
-Genome Browser for genes on both strands.
+#. If you are using strand-specific RNA-seq data, the option
+   "Strand-specificity protocol" will let you choose between the "dUTP" and
+   "ligation" method. If you are not sure whether your RNA-seq data is
+   strand-specific or not, you can try using Subsample reads to make a
+   small subsample, map it with Spliced Mapping and check the coverage in
+   Genome Browser for genes on both strands.
+#. By default, the application uses annotated transcripts from the Reference
+   Genome to distinguish between novel and known junctions. Using the option
+   "Rule for mapping over known annotation" you can restrict mappings only
+   across known junctions or infer splice junctions without any reference
+   annotation.
+#. With default settings, the application will report the single best mapping
+   for each read, even if there are multiple valid mapping positions. The
+   option "Number of "best" mappings to report" lets you increase the number
+   of reported mappings. This can be used together with "Rule for filtering
+   mappings" to choose whether to keep reads mapping to uniquely or to
+   multiple positions, e.g. report up to 5 possible mappings, and only for
+   multi-hit reads. If you want to be stricter, you can set the number of
+   allowed mismatches from 2 to 1 or 0.
+#. For paired reads, using the option "Disallow unique mappings of one mate"
+   you can discard pairs of reads where one mate maps uniquely and the other
+   to multiple positions. Selecting "Disallow discordant mappings" will
+   discard all mappings where the two mates map uniquely but with unexpected
+   orientation, or where the distance between two mapped mates differs from
+   and internally estimated fragment length, including mates mapping to
+   different chromosomes.
 
-By default, the application uses annotated transcripts from the
-Reference Genome to distinguish between novel and known junctions. Using
-the option "Rule for mapping over known annotation" you can restrict
-mappings only across known junctions or infer splice junctions without
-any reference annotation.
+This app is used in the the `Testing Differential Gene Expression tutorial`_.
 
-With default settings, the application will report the single best
-mapping for each read, even if there are multiple valid mapping
-positions. The option "Number of "best" mappings to report" lets you
-increase the number of reported mappings. This can be used together with
-"Rule for filtering mappings" to choose whether to keep reads mapping to
-uniquely or to multiple positions, e.g. report up to 5 possible
-mappings, and only for multi-hit reads. If you want to be stricter, you
-can set the number of allowed mismatches from 2 to 1 or 0.
+.. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
-For paired reads, using the option "Disallow unique mappings of one
-mate" you can discard pairs of reads where one mate maps uniquely and
-the other to multiple positions. Selecting "Disallow discordant
-mappings" will discard all mappings where the two mates map uniquely but
-with unexpected orientation, or where the distance between two mapped
-mates differs from and internally estimated fragment length, including
-mates mapping to different chromosomes.
-
-This app is used in the the Testing Differential Gene Expression tutorial
-that can be found
-`here <https://www.google.com/url?q=https://genestack.com/tutorial/mapping-rna-seq-reads-onto-a-reference-genome/&sa=D&ust=1480960531934000&usg=AFQjCNFMSiaZdYZX9Sp1-nzMlTdCUM_5DA>`_
-
-Spliced Mapping with STAR
+Spliced Mapping to Transcriptome with STAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. TODO
+**Action**: to perform gapped read alignment of transcriptomic data (like
+RNA-seq) to a Reference Genome taking into account splice junctions.
+
+In comparison to Tophat, STAR works fast, at the same time being very accurate
+and precise. Moreover, in contrast to all our other mappers, it maps reads onto
+the reference transcriptome, not the genome. Another advantage of the
+application is that it can be used to analyse both: short and long reads,
+making it compatible with various sequencing platforms. What's more, this
+Spliced Mapper supports two-pass alignment strategy when it runs the second
+alignment pass to align reads across the found splice junctions, which improves
+quantification of the novel splice junctions. Taking all these features into
+account, the Spliced Mapping to Transcriptome with STAR app can be a very good
+alternative to other RNA-seq aligners.
+
+Here is the application page:
+
+.. image:: images/rna-seq_spliced_mapping_star.png
+
+Now, let's look through the applications parameters:
+
+#. "Enable two pass mapping mode" option is recommended for semsitive novel
+   junction discovery. The idea is to collect the junctions founded in the
+   first pass, and use them as "annotated" junctions for the 2nd pass mapping.
+#. You can set "maximum number of multiple alignments allowed for a read: if
+   exceeded, the read is considered unmapped" (10 by default).
+#. "Minimum overhang for unannotated junctions" prohibits alignments with very
+   small spilce overhangs for unannotated junctions (overhang is a piece of
+   the read which is spliced apart). It is 5 bp by default.
+#. "Minimum overhang for annotated junctions" option does the same job as
+   "Minimum overhang for unannotated junctions" but for annotated junctions.
+#. Set how many mismatches you allow per pair in "Maximum number of mismatches
+   per pair" parameter.
+#. "Minimum intron length" and "Maximum intron length" are the minimum and
+   maximum intron sizes you consider for the spliced alignments. If you are not
+   sure, `this paper`_ may help you to make a decision.
+#. "Maximum genomic distance between mates" is the max gap between reads from
+   a pair when mapped to the genome. If reads map to the genome farther apart
+   the fragment is considered to be chimeric.
+
+.. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
 
 Gene Quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
