@@ -10,7 +10,6 @@ wait for a confirmation email.
 
 .. _platform.genestack.org: https://platform.genestack.org
 
-
 If you’re just taking Genestack out for a spin, you can also use our platform
 as a guest (by clicking on "Continue as guest" button). However, remember that as a guest,
 you can only create up to 200 files, and your results will disappear after 24h
@@ -673,94 +672,84 @@ describing biological. Generally, this information is not standardized that make
 with biological data, like browsing data and combining assays from several experiments or reproducing some
 analysis, difficult or even impossible without human participation.
 To harmonize raw metadata we apply **automated curation** where we map raw entries to
-controlled terms that we store in special files called **Dictionaries**.
+controlled terms that we store and maintain in special files called **Dictionaries**.
 To prepare these Dictionaries we adopted terms from external ontologies or created them manually.
 
-Our standardized and unified terminology you can also use to describe your own data by yourself .
+Our standardized and unified terminology you can also use to describe your own data
+or analysis results.
 
+Our **Edit Metainfo** app enable you to prepare metadata manually. You can edit metadata on
+the last step of data importing process (see Import section for more information) or
+later from any place of the platform with context menu.
 
-Use **Edit Metainfo** app to work on metadata manually. To access the app select the assays
-of interest, right click on them and in "Manage" section choose Edit Metainfo.
+Regardless the way we access Edit Metainfo app on its page we can see that
+our files are broken down into groups by file type and their metadata are shown in tables where
+rows represents metainfo fields.
 
 .. image:: images/metainfo-editor.png
 
-On the app page you will see that files are categorised according to their biological
-file type and their metadata is represented in **Excel-like table**.
-
-If you imported data without changing template, you will see the metainfo
-attributes from **default template** (learn more about templates in the section Importing data).
-However, on the metainfo editing page you can always change metadata template if it is needed.
-To do so click on the name of the template in the top right corner of
-the page and select **Change template**.
+By default a table is based on **Default Import Template** that, however, you can easily
+replace with a custom one (learn more about templates in the section Importing data).
+To do so click on the template's name, select **Change template**,
+then in the appear pop-up window pick template of interest.
 
 .. image:: images/change-template.png
 
-To edit or enter metainfo go to the corresponding cell and start typing.
-As we mentioned before, we  standartized terminological dictinaries
-It helps to avoid typos and the use of one instead of multiple terms with the same mining.
-You will be suggested use
-However, of course you can use free metadata entries if you wish.
+To edit or enter metadata just start typing in the corresponding cell, you will be
+suggested with terms from our controlled dictionaries when possible. Although, you are free to enter
+any values, we encourage you to use our standartized terminology, that helps you
+to avoid typos and harmonise metadata.
 
 .. image:: images/tissue-dict.png
 
-For example, "human" should be replaced by "Homo sapiens"; The typo in "cancer"
-should be fixed; The key names (column names) do not correspond to the standard
-values defined in the template (respectively Organism and Disease)
-
-Like in Excel, you can write the value in a single cell and drag it down,
-or copy it (Ctrl+C), select the whole column by clicking on the header, and paste it (Ctrl+V).
-
-Use **Add attribute** button to add new metainfo field from our internal list or create custom one.
-
-.. image:: images/add-attribute-1.png
-
-For custom metainfo keys fields be sure that you specifies key type correctly.
-
-.. image:: images/custom-key.png
-
-Click column name to **sort** metadata values or **delete** the column
-
-.. image:: images/sort.png
-
-You can write more than one value in metadata field for each individual assay:
-type in the first value in the cell, then select the cell and click
-the popover button **Add another <item>**
+Furthermore, one metadata field can include several values for each individual assay:
+just enter the first term as usual, click the button **Add another** and either add
+one of the existing fields or create your own one (i. e. custom key).
 
 .. image:: images/add-attribute.png
 
-Using the Metainfo Editor app, you can also retrieve the metadata from a local CSV
-or Excel file and add it to the Genestack assays. Click **import metainfo from spreadsheet**
-button and select a file containing metainfo for you data.
+.. image:: images/add-attribute-1.png
+
+If you create new metadata field, you also need to specify its type:
+for example, for free-text values you should select "Text", and for
+numeric value you should use "Integer" or "Decimal" one.
+
+.. image:: images/custom-key.png
+
+
+Click column name to **sort** metadata alphabetically or **delete** the selected column if needed.
+
+.. image:: images/sort.png
+
+Besides filling metadata manually in the app, you can import it from your local computer.
+Click the **Import data from spreadsheet** button and select a CSV, XLS or XLSX file with metadata
+that you would like to attach.
 
 .. image:: images/from-spreadsheet-1.png
 
-Each row of the imported Excel file should match to one of the assays, based on the "Name"
-column. If some row is not match to any of the imported files, it will be marked in red.
+However, make sure that names of samples in the imported file are the same as
+the ones shown in the column "Name" in Metainfo Editor app. Otherwise, all not matching information in
+the imported file will not be imported. It will be marked in red, so you could easily fix
+it by clicking on "Select file" link.
 
 .. image:: images/from-spreadsheet-2.png
 
-We can specify for each column whether the column should be imported, and if it
-should be mapped to a different metainfo key, by clicking on the column header.
-Columns that are mapped to a key present in the experiment's template will be
-highlighted in green. For instance, we can specify that we want
-the "sequencing platform" column to be mapped to the Genestack key "Platform",
-which is part of our default experiment metadata template.
+During metadata import process you can also decide whether a column should be imported and
+associate it with another metadata field by click on the name of the column.
 
 .. image:: images/from-spreadsheet-3.png
 
-Finally, you can use metadata to create names for your files. Click **Apply naming scheme**
-button and select those metainfo fields values from that you want to see in file names.
-For example, as it shown on the picture below we crete names using values from
-'Organism' and 'Tissue' columns.
+When you complete describing your samples, you can use the metadata to name them.
+Click **Apply naming scheme** button and select metainfo fields that you want to use
+to create names.
 
 .. image:: images/naming-scheme.png
 
-All the changes that are done in the metainfo editor are automatically recorded in the system.
-There is no need to "save changes".
-
-Once you are done with the metadata of your experiment, you can analyse the data by clicking
-the button Use files in data flow at the bottom of the page. From there, you can either use
-an existing data flow or build a new one using the available applications on the platform.
+Once you are happy with the metadata for your files, you can proceed to analyse them by clicking
+the button **Use all N files...**. You can use the suggested visualize apps
+to explore your files, like "FastQC Report" to check the quality of raw sequencing assays, use on of the
+an existing public data flows or build your own pipeline by adding applications ste-by-step.
+Moreover you could share the files with your collaborators and add them to a folder of your choice.
 
 .. image:: images/run-df-from-me.png
 
@@ -854,7 +843,6 @@ Learn more on how to Create and Manage Groups `here`_.
 
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 If you are a sharing user or an administrator of a group, you can share files with that group.
 Any file created on Genestack can be shared.
