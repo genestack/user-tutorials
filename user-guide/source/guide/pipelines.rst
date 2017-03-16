@@ -49,8 +49,6 @@ our analysis with poor quality reads, we shouldn’t expect great results at the
 end. Luckily, there are a few procedures that can be used to improve the data
 quality if that proves to be unsatisfactory.
 
-How can you check the quality of the data?
-
 The tool used for raw reads quality check is **FastQC Report** app, based on
 the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 
@@ -108,8 +106,8 @@ of them one by one and tell you:
 The metrics table gives you quick indicators as to the status of each of
 the quality metrics calculated.
 
-- Yellow triangles - warnings.
-- Red X-es - failures.
+- Yellow triangles - warnings;
+- Red X-es - failures;
 - Green check marks in circles - ok.
 
 1. **Basic statistics**
@@ -147,7 +145,7 @@ peaks may indicate contamination with a range of contaminants.
 
 *Improving data quality*
 
-Best solution: Run "Trim Adaptors and Contaminants" preprocessing app.
+Run "Trim Adaptors and Contaminants" preprocessing app.
 
 4. **Per base sequence quality** plot
 
@@ -163,7 +161,7 @@ is less than 5 or if the median for any base is less than 20.
 
 *Improving data quality*
 
-Best solution: If the quality of the library falls to a low level over the
+If the quality of the library falls to a low level over the
 course of a read, the blueprint solution is to perform quality trimming of low
 quality bases or omitting low quality reads. This can be performed using "Trim
 Low Quality Bases" or "Filter by Quality Scores" applications respectively.
@@ -182,12 +180,12 @@ frequently observed mean quality is below 27. This equals to a 0.2% error rate.
 
 *Improving data quality*
 
-Best solution: Perform quality-based trimming or selection using "Trim Low
+Perform quality-based trimming or selection using "Trim Low
 Quality Bases" or "Filter by Quality Scores" applications respectively.
 
 6. **Per base sequence content**
 
-.. image:: images/per_base_sequence_content.png
+.. image:: images/fastqc_per_base_sequence_content.png
 
 Ideally, in a random library we would see four parallel lines representing the
 relative base composition. Fluctuations at the beginning of reads in the tested
@@ -306,6 +304,8 @@ Now, let's move on and look at the preprocessing applications used to improve
 the quality of raw reads. Keep in mind, that after completing the
 preprocessing procedure, it’s a good idea to run "FastQC Report" application
 once again on the preprocessed files to see if the quality has improved.
+
+.. TODO: add images for each preprocess app
 
 Subsample Reads
 ^^^^^^^^^^^^^^^
@@ -542,7 +542,7 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
-Mapped Reads QC Report application is based on `BEDtools`_ and `Picard`_ tool.
+Mapped Reads QC Report application is based on `BEDtools`__ and `Picard`_ tool.
 
 .. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
@@ -593,14 +593,14 @@ Report application. Watch it here:
 
 .. raw:: html
 
-    <iframe width="640" height="360" src="https://youtu.be/_jHrtq_3ya8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+    <iframe width="640" height="360" src="https://www.youtube.com/watch?v=_jHrtq_3ya8&feature=youtu.be" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 You can analyse the output for multiple reports at once using the Multiple QC
 Report application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
-This application is based on `BEDtools`_ , `Picard`_ tools and `SAMtools`_.
+This application is based on BEDtools_, Picard_ tools and SAMtools_.
 
 .. _BEDtools: https://code.google.com/archive/p/bedtools/
 .. _Picard: http://broadinstitute.github.io/picard/
@@ -708,7 +708,7 @@ extract (default: 50%). Changing "Random seed" value will let you produce
 different subsets with the same number of mapped reads. Using the same random
 seed and the same subsampling ratio will result in identical subsets.
 
-This application is based on `SAMtools`_.
+This application is based on SAMtools_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
@@ -721,7 +721,7 @@ experiment and want to combine them before producing your final result.
 **Action**: to merge multiple Mapped Reads files, producing one single
 output Mapped Reads file.
 
-The application is based on `SAMtools`_.
+The application is based on SAMtools_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
@@ -742,7 +742,7 @@ information about SNPs and about Indels.
 
 **Action**: to merge two or more Genetic Variations files into a single file.
 
-This application is based on `BCFtools`_.
+This application is based on BCFtools_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
@@ -761,7 +761,7 @@ of the second input will be allowed to come before the last position of the
 first input. There is an option to remove duplicated variants to make sure
 that there are no redundant results.
 
-The application is based on `BCFtools`_.
+The application is based on BCFtools_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
@@ -829,6 +829,10 @@ Details on various settings:
    and internally estimated fragment length, including mates mapping to
    different chromosomes.
 
+The app is based on Tophat2_ aligner.
+
+.. _Tophat2: https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36
+
 This app is used in the the `Testing Differential Gene Expression tutorial`_.
 
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
@@ -876,6 +880,10 @@ Now, let's look through the application parameters:
    the fragment is considered to be chimeric.
 
 .. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
+
+The application is based on STAR_ aligner:
+
+.. _STAR: https://github.com/alexdobin/STAR
 
 Gene Quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -946,19 +954,17 @@ overlapping each gene specified in the reference annotation).
 
 Let's go through the application parameters:
 
-#. Depending on your tasks, you should specify the feature type for which
+1. Depending on your tasks, you should specify the feature type for which
    overlaps choosing from "exon", "CDS" (coding DNA sequence), "3’UTR" (the 3’ 
    untranslated region) or "5’UTR" (the 5’ untranslated region). For example,
    you may consider each exon as a feature in order to check for alternative
    splicing.
-#. By default, the "gene-id" will be used as a feature identifier. If some
+2. By default, the "gene-id" will be used as a feature identifier. If some
    features will have the same feature identifier the application will
    consider all these features as relating to the same feature.
-#. You also need to choose a rule for overlaps that dictates how mapped reads
+3. You also need to choose a rule for overlaps that dictates how mapped reads
    that overlap genomic features will be treated. There are three overlap
    resolution modes: union, strict-intersection, and non-empty intersection.
-   
-.. image:: images/overlap_resolution_modes.png
 
    The first one - "union" - is the most recommended. It combines all cases
    when the read (or read pair) at least partly overlaps the feature. The
@@ -968,7 +974,10 @@ Let's go through the application parameters:
    should use the last mode. It’s important that the read will be counted for
    feature if it overlaps precisely only one feature. If the read overlaps
    with more than one feature, it will not be counted.
-#. An additional useful option is "Strand-specific reads". The application
+
+.. image:: images/overlap_resolution_modes.png
+
+4. An additional useful option is "Strand-specific reads". The application
    takes into account the direction of the read and the reference, so that a
    read from the wrong direction, even if it is mapped to the right place,
    will not be counted. This option can be useful if your data is
@@ -1101,13 +1110,13 @@ Statistics file which↵you can view in Expression Navigator application.
    to how strongly it's expressed. So, choose one of the packages according to
    your desires and run the analysis.
 
-   For each group, a GLM LRT is carried out to find DE genes in this group
-   compared to the average of the other groups. In the case of 2 groups, this
-   reduces to the standard analysis of finding genes that are differentially
-   expressed between 2 groups. Thus, for N groups, the application produces N
-   tables of Top DE genes. Each table shows the corresponding Log2(Fold Change),
-   Log2(Counts per Million), P-Value, and False Discovery Rate for each gene.
-   Look at all result tables and plots in Expression Navigator application.
+For each group, a GLM LRT is carried out to find DE genes in this group
+compared to the average of the other groups. In the case of 2 groups, this
+reduces to the standard analysis of finding genes that are differentially
+expressed between 2 groups. Thus, for N groups, the application produces N
+tables of Top DE genes. Each table shows the corresponding Log2(Fold Change),
+Log2(Counts per Million), P-Value, and False Discovery Rate for each gene.
+Look at all result tables and plots in Expression Navigator application.
 
 -  **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
    with control samples. Then, for each gene in sample we know read counts
@@ -1198,7 +1207,7 @@ use Expression Navigator application.
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected hypotheses. In other words, it’s the fraction of isoforms
   for which a significant variation was identified incorrectly. You can read
-  more about it `here`_.
+  more about it here_.
 
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
@@ -1243,7 +1252,6 @@ The Expression Navigator page contains 4 sections:
   
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
-  
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
@@ -1261,9 +1269,9 @@ The Expression Navigator page contains 4 sections:
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected null hypotheses. In other words, it’s the fraction of
   genes for which a significant variation was identified incorrectly. You
-  can read more about it `here`_.
+  can read more about it `on this page`_.
 
-.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
+.. _on this page: http://www.cbil.upenn.edu/PaGE/fdr.html
 
   The buttons at the bottom of the section allow you to refresh the list
   based on your filtering criteria or clear your selection.
@@ -1334,7 +1342,7 @@ This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 .. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
 .. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-Read more about single-cell RNA-seq analysis on Genestack `here`_:
+Read more about single-cell RNA-seq analysis on Genestack here_:
 
 .. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
@@ -1437,91 +1445,111 @@ t-SNE transformation is computed using the `Rtsne`_ package.
 .. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
 .. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-You can read more about the app and single-cell RNA-seg analysis `here`_.
+You can read more about the app and single-cell RNA-seg analysis here_.
 
 .. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
-.. note:: **Reference Genomes**
+Reference Genomes
+-----------------
 
-          One way or another, most bioinformatics analysis pipelines, regardless
-          of the data type analysed, require the use of a reference genome. For
-          instance,  we use reference genomes in `DNA methylation
-          analysis <https://www.google.com/url?q=https://genestack.com/tutorial/whole-genome-bisulfite-sequencing-analysis/&sa=D&ust=1480960532024000&usg=AFQjCNEON1E936WzebWy5w5hCqDobFfbyQ>`__,
-          in `differential gene expression
-          analysis <https://www.google.com/url?q=https://genestack.com/tutorial/testing-differential-gene-expression-on-genestack-platform/&sa=D&ust=1480960532025000&usg=AFQjCNF8iK-m3LAGKdEi3YCpFxG4BQO4jg>`__,
-          and analysis of the `transcriptomic heterogeneity within populations of
-          cells <https://www.google.com/url?q=https://genestack.com/blog/2014/09/24/single-cell-rna-seq-analysis-tutorial/&sa=D&ust=1480960532025000&usg=AFQjCNF8rzNCeKOex8EvDd2Y0DVNHe855A>`__.
-          The choice of a reference genome can increase the quality and accuracy
-          of the downstream analysis or it can have a harmful effect on it. For
-          instance, it has been shown that the choice of a gene annotation has a
-          big impact on RNA-seq data analysis, but also on `variant effect
-          prediction <https://www.google.com/url?q=http://www.intechopen.com/books/references/next-generation-sequencing-advances-applications-and-challenges/impact-of-gene-annotation-on-rna-seq-data-analysis%23B34&sa=D&ust=1480960532026000&usg=AFQjCNHaCNQIeKNrxp0ot4JjVhZTFfN3fA>`__[
-          1, 2].
+One way or another, most bioinformatics analysis pipelines, regardless of the
+data type analysed, require the use of a reference genome. For instance,  we
+use reference genomes in `DNA methylation analysis`_, in `differential gene
+expression analysis`_, and in the `analysis of transcriptomic heterogeneity
+within populations of cells`_. The choice of a reference genome can increase
+the quality and accuracy of the downstream analysis or it can have a harmful
+effect on it. For example, it has been shown that the choice of a gene
+annotation has a big impact on RNA-seq data analysis, but also on `variant
+effect prediction`_.
 
-          On Genestack, you can find `several reference
-          genomes <https://www.google.com/url?q=https://platform.genestack.org/endpoint/application/run/genestack/signin?original_url%3D%252Fendpoint%252Fapplication%252Frun%252Fgenestack%252Ffilebrowser%253Fa%253DGSF000018%2526action%253DviewFile%2526page%253D1&sa=D&ust=1480960532027000&usg=AFQjCNHhglPt1_5NPlkDPhTBlVLosmZJ6A>`__ for
-          some of the most common model organisms. We are adding more and more
-          reference genomes of model organisms to this list regularly.
-           
-          For some organisms we provide several genomes, e.g.  there are 3
-          reference genomes for H. sapiens. What are the differences between these
-          reference genomes? And how do you chose the correct one?  The answer is
-          not so straightforward and depends on several factors – let’s discuss
-          each of them:
+.. _DNA methylation analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
+.. _differential gene expression analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
+.. _analysis of transcriptomic heterogeneity within populations of cells: https://genestack.com/blog/2014/09/24/single-cell-rna-seq-analysis-tutorial/
+.. _variant effect prediction: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
-          1) Versions of the reference genome
+On Genestack, you can find `several reference genomes`_ for some of the most
+common model organisms. We are adding more and more reference genomes of model
+organisms to this list regularly.
 
-          For instance:  Homo sapiens GRCh37.75 (unmasked) vs GRCh38.80 (unmasked)
+.. _several reference genomes: https://platform.genestack.org/endpoint/application/run/genestack/signin?original_url=%2Fendpoint%2Fapplication%2Frun%2Fgenestack%2Ffilebrowser%3Fa%3DGSF000018%26action%3DviewFile%26page%3D1
+ 
+For some organisms we provide several genomes, e.g.  there are a couple of
+reference genomes for *Homo sapiens*.
 
-          The numbers correspond to versions (or "builds") of the reference genome
-          – the higher the number, the more recent the version. We generally
-          recommend you use the latest version possible. One thing to remember is
-          that for the newest genome builds, it’s likely that resources such as
-          genome annotations and functional information will be limited, as it
-          takes time for Ensembl/ UCSC to integrate additional genomic data with
-          the new build. You can read more about it a `blog
-          post <https://www.google.com/url?q=http://genomespot.blogspot.co.uk/2015/06/mapping-ngs-data-which-genome-version.html&sa=D&ust=1480960532030000&usg=AFQjCNFBJPxQvY3k5N-9Vf16-S9qYj1Sqg>`__ from
-          Genome Spot blog and in
-          `this <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__`article <https://www.google.com/url?q=http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html&sa=D&ust=1480960532030000&usg=AFQjCNHF02fY7GpNpuUrkVxx4steDpXYng>`__ from
-          Bio-IT.
+.. image:: images/public_reference_genomes.png
 
-          2) One organism – many strains
+What are the differences between these reference
+genomes? And how do you chose the correct one?  The answer is not so
+straightforward and depends on several factors – let’s discuss each of them:
 
-          K12 and O103:H2 are two different strains of E.coli.
-          `K12 <https://www.google.com/url?q=https://www.genome.wisc.edu/resources/strains.htm&sa=D&ust=1480960532032000&usg=AFQjCNH9An3zJ5ilwpvmVlEVsxbLsRLFFA>`__ is
-          an innocuous strain commonly used in various labs around the world.
-          `O103:H2 <https://www.google.com/url?q=http://aem.asm.org/content/79/23/7502.full&sa=D&ust=1480960532033000&usg=AFQjCNEHcWj9cqdYfeXTHPadk8p4twNGrQ>`__ is
-          a pathogenic strain, commonly isolated from human cases in Europe.
-          Depending on your experiment, you should choose a matching reference
-          genome. 
+1. **Reference genome assembly and release version**
 
-          3) Masked, soft-masked and unmasked genomes
+For instance: "Homo sapiens / GRCh37 release 75" vs "Homo sapiens / GRCh38
+release 86".
 
-          There are three types of Ensembl reference genomes: unmasked,
-          soft-masked and masked.
+The numbers correspond to versions (or “builds”) of the reference genome – the
+higher the number, the more recent the version. We generally recommend you use
+the latest version possible. One thing to remember is that for the newest
+genome builds, it’s likely that resources such as genome annotations and
+functional information will be limited, as it takes time for Ensembl/ UCSC to
+integrate additional genomic data with the new build. You can read more about
+it a `blog post`_ from Genome Spot blog and in `this article`_ from Bio-IT.
 
-          Generally speaking, it’s recommended to use unmasked reference genome
-          builds for alignment.
+.. _blog post: http://genomespot.blogspot.ru/2015/06/mapping-ngs-data-which-genome-version.html
+.. _this article: http://www.bio-itworld.com/2014/1/27/getting-know-new-reference-genome-assembly.html
 
-          Masking is used to detect and conceal interspersed repeats and low
-          complexity DNA regions so that they could be processed properly by
-          alignment tools.
+2. **One organism – many strains**
 
-          Masking can be performed by special tools, like
-          `RepeatMasker <https://www.google.com/url?q=http://www.repeatmasker.org/&sa=D&ust=1480960532035000&usg=AFQjCNHVO50QRN7dUkikjWjvgoLYePqSgg>`__.
-           The tool goes through DNA sequence looking for repeats and
-          low-complexity regions.
+K12 and O103 are two different strains of *E.coli*. K12_ is an innocuous strain
+commonly used in various labs around the world. O103_ is a pathogenic strain,
+commonly isolated from human cases in Europe. Depending on your experiment, you
+should choose a matching reference genome.
 
-          There are two types of masked reference genomes: masked and soft-masked.
+.. _K12: https://www.genome.wisc.edu/resources/strains.htm
+.. _O103: http://aem.asm.org/content/79/23/7502.full
 
-          MASKED
+3. **Toplevel sequence or primary assembly**
 
-          Masked reference genomes are also known as hard-masked DNA sequences.
-          Repetitive and low complexity DNA regions are detected and replaced with
-          ‘N’s. The use of masked genome may adversely affect the analysis
-          results, leading to wrong read mapping and incorrect variant calls.
+- TOPLEVEL SEQUNENCE
+  As a rule, toplevel reference genomes contain all chromosomes, sequence
+  regions not assembled into chromosomes and padded haplotype/patch regions.
 
-          When should you use a masked genome?
+- PRIMARY ASSEMBLY
+  Primary assembly genomes contain all toplevel sequence region excluding
+  haplotypes and patches.
+
+We are stringly recommend to use primary assembly reference genomes, since they
+are best for performing sequence similarity searches while patches and
+haplotypes would confuse analysis.
+
+4. **DNA or cDNA**
+
+- DNA - reference genome contains sequence of genomic DNA;
+- cDNA reference genome consists of all transcripts sequences for actual and
+  possible genes, including pseudogenes.
+
+5. **Masked, soft-masked and unmasked genomes**
+
+There are three types of Ensembl reference genomes: unmasked, soft-masked and
+masked.
+
+Masking is used to detect and conceal interspersed repeats and low complexity
+DNA regions so that they could be processed properly by alignment tools.
+Masking can be performed by special tools, like RepeatMasker_. The tool goes
+through DNA sequence looking for repeats and low-complexity regions.
+
+.. _RepeatMasker: http://www.repeatmasker.org/
+
+There are two types of masked reference genomes: masked and soft-masked.
+
+- MASKED
+  Masked reference genomes are also known as hard-masked DNA sequences.
+  Repetitive and low complexity DNA regions are detected and replaced with
+  ‘N’s. The use of masked genome may adversely affect the analysis
+  results, leading to wrong read mapping and incorrect variant calls.
+
+
+.. note:: **When should you use a masked genome?**
 
           We generally don’t recommend using masked genome, as it relates to the
           loss of information (after mapping, some "unique" sequences may not be
@@ -1529,13 +1557,14 @@ You can read more about the app and single-cell RNA-seg analysis `here`_.
           masking cannot be absolutely perfect). Moreover, it can lead to the
           increase in number of falsely mapped reads.
 
-          SOFT-MASKED  
 
-          In soft-masked reference genomes, repeats and low complexity regions are
-          also detected but in this case they are masked by converting to a
-          lowercase variants of the base (e.g. acgt).
+- SOFT-MASKED
+  In soft-masked reference genomes, repeats and low complexity regions are
+  also detected but in this case they are masked by converting to a lowercase
+  variants of the base (e.g. acgt).
 
-          When should you use a soft-masked genome?
+
+.. note:: **When should you use a soft-masked genome?**
 
           The soft-masked sequence does contain repeats indicated by lowercase
           letters, so the use of soft-masked reference could improve the quality
@@ -1546,35 +1575,40 @@ You can read more about the app and single-cell RNA-seg analysis `here`_.
           there is no actual benefit from the use of soft masked genome in
           comparison with unmasked one.
 
-          Therefore, we recommend you use unmasked genomes when you don’t want to
-          lose any information. If you want to perform some sort of filtering,
-          it’s better to do so  after the mapping step.
 
-          Example:
+We recommend you use UNMASKED genomes when you don’t want to lose any
+information. If you want to perform some sort of filtering, it’s better to do
+so  after the mapping step.
 
-          To perform WES analysis, we recommend you use an unmasked reference
-          genome of the latest releases and assemblies (e.g. Homo sapiens /
-          GRCh38.80 (unmasked) for human samples).
+Usually, reference genome name includes information about all these factors:
+organism, genome assembly, release, primary assembly/toplevel, masking
+procedure and molecule.
 
-          The bioinformatics community is divided on the topic of the use of
-          reference genomes. It is our personal opinion that it is best to always
-          use unmasked genome and perform filtering after the mapping step.
-          However, if you would like to read more on the topic, we suggest taking
-          a look at the following papers:
+For example, Homo sapiens / GRCh38 release 85 (primary assembly, unmasked, DNA)
 
-          #. `McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB,
-             Donnelly P. Choice of transcripts and software has a large effect on
-             variant annotation. Genome Med.
-             2014;6(3):26; <https://www.google.com/url?q=https://genomemedicine.biomedcentral.com/articles/10.1186/gm543&sa=D&ust=1480960532039000&usg=AFQjCNFQKTLLLg3B69W8VzPfoavzieNoow>`__
+*Example*:
 
-          2. `Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D,
-             Petryszak R, et al. Comparison of GENCODE and RefSeq gene annotation
-             and the impact of reference geneset on variant effect prediction. BMC
-             Genomics. 2015;16 (Suppl
-             8):S2 <https://www.google.com/url?q=http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-16-S8-S2&sa=D&ust=1480960532040000&usg=AFQjCNEhK7CXAJi8svzmvtqxfNNceHfm2w>`__
+To perform Whole Exome Sequencing analysis, we recommend you use an unmasked
+reference genome of the latest releases and assemblies (e.g. Homo sapiens /
+GRCh38 release 85 (primary assembly, unmasked, DNA) for human samples).
 
-Genome/ exome sequencing
+The bioinformatics community is divided on the topic of the use of reference
+genomes. It is our personal opinion that it is best to always use unmasked
+genome and perform filtering after the mapping step. However, if you would like
+to read more on the topic, we suggest taking a look at the following papers:
+
+#. McCarthy DJ, Humburg P, Kanapin A, Rivas MA, Gaulton K, Cazier JB, Donnelly P.
+   Choice of transcripts and software has a large effect on variant annotation.
+   Genome Med. 2014;6(3):26. DOI: 10.1186/gm543;
+#. Frankish A, Uszczynska B, Ritchie GR, Gonzalez JM, Pervouchine D, Petryszak R,
+   et al. Comparison of GENCODE and RefSeq gene annotation and the impact of
+   reference geneset on variant effect prediction. BMC Genomics. 2015;16 (Suppl
+   8):S2. DOI: 10.1186/1471-2164-16-S8-S2.
+
+Genome/exome sequencing
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. TODO: add a few words about WGS and WES technologies
 
 Unspliced Mapping with BWA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
