@@ -1,6 +1,8 @@
 Pipelines and applications
 ==========================
 
+.. TODO: Add links on our youtube videos
+
 Applications available on Genestack are grouped into four categories:
 Preprocess, Analyse, Explore and Manage.
 
@@ -1719,8 +1721,6 @@ The application is based on Bowtie2_ aligner.
 Variant Calling with SAMtools and BCFtools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Whole Exome Sequencing Analysis, Whole Genome Sequencing Analysis
-
 **Action**: to identify genomic variants. The application accepts Mapped Reads
 file(s) to call variants. You'll be able to perform variant calling for each
 single Mapped Reads file separately or run Variant Calling application on
@@ -1798,10 +1798,14 @@ The result Genetic Variations file can be opened in Genome Browser as a
 separate  variation track, further annotated using Effect Prediction
 application, or viewed immediately using Variant Explorer application.
 
-This application is based on SAMtools_ and BCFtools_ utilities.
+This application is based on SAMtools_ and BCFtools_ utilities and best used
+when performing `Whole Exome Sequencing Analysis`_ or `Whole Genome Sequencing
+Analysis`.
 
 .. _SAMtools: http://www.htslib.org/doc/samtools-1.1.html
 .. _BCFtools: http://www.htslib.org/doc/bcftools-1.1.html
+.. _Whole Exome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
+.. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Effect Prediction with SnpEff
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1811,8 +1815,9 @@ Analysis
 
 Input: Genetic Variations file
 
-Action: The app annotates these variants based on their genomic
-locations and calculates the effects they produce on known genes.
+**Action**: to annotate variants based on their genomic locations and
+calculate the effects they produce on known genes. The application annotates
+genetic variations that
 
 Further apps to use: Variant Explorer, View Report
 
