@@ -769,9 +769,8 @@ RNA-seq Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add info about RNA-seq technology
-.. TODO: Add info about Spliced Mapping for RNA-seq reads
 
-Mapping (also called as alignment) refers to the process of aligning sequencing
+Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
@@ -791,12 +790,15 @@ two exons, the reference genome might have one exon followed by an intron.
 
 In this case, if you'll use Unspliced Mapper, the reference genome would find
 a matching sequence in only one of the exons, while the rest of the read would
-not match the intron in the reference, so the read can't be properly aligned. A
+not match the intron in the reference, so the read can't be properly aligned.
+When analysing RNA-seq data using unspliced aligner, the reads may be mapped to
+potentially novel exons, however reads spanning splice junctions are likely to
+remain unmapped.
 
-Spliced Mappers would know not to try to align RNA-seq reads to introns, and
-would somehow identify possible downstream exons and try to align to those
-instead ignoring introns altogether. Taking this into account, we recommend you
-use Spliced Mapping applications to analyse RNA-seq data.
+In contrast, Spliced Mappers would know not to try to align RNA-seq reads to
+introns, and would somehow identify possible downstream exons and try to align
+to those instead ignoring introns altogether. Taking this into account, we
+recommend you use Spliced Mapping applications to analyse RNA-seq data.
 
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -807,7 +809,7 @@ Reference Genome, taking or not taking into account splice junctions.
 
 .. note:: **What is splice junction?**
 
-          Splice junctions are exon-intron junctions, at which RNA splicing
+          Splice junctions are exon-intron boundaries, at which RNA splicing
           takes place. For example, to cut an intron (between two exons) you
           need to splice in two places so that two exons might be jointed.
 
@@ -1626,30 +1628,55 @@ Genome/exome sequencing
 
 .. TODO: add a few words about WGS and WES technologies
 
+Mapping (also called alignment) refers to the process of aligning sequencing
+reads to a reference sequence, whether the reference is a complete genome,
+transcriptome, or de novo assembly.
+
+There are at least two types of mapping stratagies - Spliced Mapping and
+Unsplaced Mapping. In contrast to spliced aligners, unspliced read aligners map
+reads to a reference without allowing large gaps such as those arising from
+reads spanning exon boundaries, or splice junctions. When analysing whole
+genome sequencing (WGS) or whole exome sequencing (WES) data, there is no need
+to look for spliced these sites precisely. That's why we recommed use Unspliced
+Mapping applications in such cases.
+
+On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
+and Unspliced Mapping with Bowtie2. You can read about the difference between
+these two application on `our forum`_.
+
+.. _our forum: http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36
+
 Unspliced Mapping with BWA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On Genestack, you will find two Unspliced Mapping applications. This one
-is based on the
-`BWA <https://www.google.com/url?q=http://bio-bwa.sourceforge.net/&sa=D&ust=1480960532041000&usg=AFQjCNFYstLRthqjGP-BtyzLwe9HS6KRLg>`__tool
-and is used to map exome sequencing reads to a Reference Genome. It is
-meant to be used further with our Variant Calling application which is
-in turn based on `samtools
-mpileup <https://www.google.com/url?q=http://samtools.sourceforge.net/mpileup.shtml&sa=D&ust=1480960532042000&usg=AFQjCNGpkrHDwz5QYy5CU1RuQFJoCWqgIQ>`__.
+**Action**: to map WES or WGS data to a reference genome without allowing
+splice junctions. The application generates Mapped Reads which cun be used
+further with our Variant Calling application which is based on samtools mpileup.
 
-|unspliced mapping with BWA|
+Here is the uspliced mapping application page:
 
-BWA’s MEM algorithm will be used to map paired or single-ends reads from
-70 bp up to 1Mbp ("mem" option in command line). For reads up to 70 bp
-the algorithm called BWA-backtrack will be applied. This algorithm is
-implemented with the "aln" command, which produces the suffix array (SA)
-coordinates of the input reads. Then the application converts these SA
-coordinates to chromosome coordinates using the "samse" command (if your
-reads are single-end) or "sampe" (for paired-end reads).
+.. image:: images/unspliced_mapping_with_bwa.png
 
-We used this app in the Whole Exome Sequencing Data Analysis tutorial
-that can be found
-`here <https://www.google.com/url?q=https://genestack.com/tutorial/whole-exome-sequencing-data-analysis-on-genestack-platform/&sa=D&ust=1480960532043000&usg=AFQjCNEgMlyhiYZgyATe8MnVYwl2hoL55Q>`__.
+BWA’s MEM algorithm will be used to map paired or single-ends reads from 70 bp
+up to 1Mbp ("mem" option in command line). For reads up to 70 bp the algorithm
+called BWA-backtrack will be applied. This algorithm is implemented with the
+"aln" command, which produces the suffix array (SA) coordinates of the input
+reads. Then the application converts these SA coordinates to chromosome
+coordinates using the "samse" command (if your reads are single-end) or
+"sampe" (for paired-end reads).
+
+When “Perform targeted mapping” option is selected, a bed file is used to
+specify the genome locations, that the reads should be mapped to. The reference
+genome is altered to only contain those locations, using the bedtools
+"getfasta" command and the reads are then mapped to the altered genome. The
+resulting sam file contains local genome co-ordinates, which are converted back
+to the global coordinates of the reference genome.
+
+The application is based on BWA_ aligner and it's used in `Whole Exome
+Sequencing Data Analysis tutorial`_.
+
+.. _BWA: http://bio-bwa.sourceforge.net/
+.. _Whole Exome Sequencing Data Analysis tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 
 Unspliced Mapping with Bowtie2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
