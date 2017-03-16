@@ -800,6 +800,11 @@ introns, and would somehow identify possible downstream exons and try to align
 to those instead ignoring introns altogether. Taking this into account, we
 recommend you use Spliced Mapping applications to analyse RNA-seq data.
 
+On Genestack, you will find two spliced aligners - Spliced Mapping with
+Tophat2 and Spliced Mapping to Transcriptome with STAR.
+
+.. TODO: Add a forum post on the differences between the two spliced mappers and paste a link on it here.
+
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1406,7 +1411,7 @@ deviation divided by the mean. It is thus a standardized measure of variance.
 
 If spike-ins were used to calibrate technical noise, then the separate
 Technical Noise Fit plot is displayed. On this plot, each dot corresponds to a
-“ technical gene” (spike-in gene).It plots the mean normalized count across all
+“technical gene” (spike-in gene).It plots the mean normalized count across all
 samples on the x-coordinate and the squared coefficient of variation (CV2) of
 the normalized counts across all samples on the y-coordinate. The coefficient
 of variation is defined as the standard deviation divided by the mean. It is
@@ -1642,7 +1647,7 @@ Mapping applications in such cases.
 
 On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
 and Unspliced Mapping with Bowtie2. You can read about the difference between
-these two application on `our forum`_.
+these two applications on `our forum`_.
 
 .. _our forum: http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36
 
@@ -1673,122 +1678,133 @@ resulting sam file contains local genome co-ordinates, which are converted back
 to the global coordinates of the reference genome.
 
 The application is based on BWA_ aligner and it's used in `Whole Exome
-Sequencing Data Analysis tutorial`_.
+Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
+tutorials.
 
 .. _BWA: http://bio-bwa.sourceforge.net/
-.. _Whole Exome Sequencing Data Analysis tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
+.. _Whole Exome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
+.. _Whole Genome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Unspliced Mapping with Bowtie2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This application is based on the
-`Bowtie2 <https://www.google.com/url?q=http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml&sa=D&ust=1480960532044000&usg=AFQjCNFOzcbBeA6op29d_stzX10eJKYp4w>`__tool
-and is used to map sequencing libraries to a Reference Genome. Suitable
-sequencing methods include DNA-seq and ChIP-seq.
+**Action**: to map WES or WGS data to a reference genome without allowing
+splice junctions. The application generates Mapped Reads which cun be used
+further with our Variant Calling application which is based on samtools
+mpileup.
 
-|unspliced mapping with bowtie2|
+Let's look at the application page and the parameters we can use to do mapping:
 
-Let’s talk a bit about the various settings:
+.. image:: images/unspliced_mapping_with_bowtie2.png
 
-1)By default the application will report the best mapping for one
-mappable read. If you are interested in reads mapping to multiple
-positions, switch off this option and set N mappable positions for one
-read in the text box "Limit the number of mappings to search".
+1. By default, the application will report the best mapping for one mappable
+   read. If you are interested in reads mapping to multiple positions, switch
+   off this option and set N mappable positions for one read in the text box
+   "Limit the number of mappings to search".
+2. You can apply a rule for filtering mappings to choose whether to keep reads
+   mapping uniquely or to multiple positions.
+3. If you want to be stricter, you can change the maximum number of allowed
+   mismatches, e.g. if you set it to 1, any mapping with 2 or more mismatches
+   won’t be reported.
+4. For paired reads, using the option "Disallow unique mappings of one mate"
+   you can discard pairs of reads where one mate maps uniquely and the other
+   to multiple positions. Selecting "Disallow discordant mappings" will
+   discard all mappings where the two mates map uniquely but with unexpected
+   orientation or where the distance between two mapped mates differs from and
+   internally estimated fragment length, including mates mapping to different
+   chromosomes.
 
-2)You can apply a rule for filtering mappings to choose whether to keep
-reads mapping uniquely or to multiple positions. If you want to be
-stricter, you can change the maximum number of allowed mismatches, e.g.
-if you set it to 1, any mapping with 2 or more mismatches won’t be
-reported.
+The application is based on Bowtie2_ aligner.
 
-3)For paired reads, using the option "Disallow unique mappings of one
-mate" you can discard pairs of reads where one mate maps uniquely and
-the other to multiple positions. Selecting "Disallow discordant
-mappings" will discard all mappings where the two mates map uniquely but
-with unexpected orientation or where the distance between two mapped
-mates differs from and internally estimated fragment length, including
-mates mapping to different chromosomes.
-
-Read more about differences between BWA and Bowtie2 on our
-`forum <https://www.google.com/url?q=http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36/2&sa=D&ust=1480960532046000&usg=AFQjCNHMGtJKMz1PN9VHw-BLzEMS4G5bYw>`__.
-
-Variant calling with samtools and bcftools
+Variant Calling with SAMtools and BCFtools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Variant Calling, Whole Exome Sequencing Analysis, Whole Genome
-Sequencing Analysis
+Whole Exome Sequencing Analysis, Whole Genome Sequencing Analysis
 
-Input: Mapped Reads
+**Action**: to identify genomic variants. The application accepts Mapped Reads
+file(s) to call variants. You'll be able to perform variant calling for each
+single Mapped Reads file separately or run Variant Calling application on
+multiple mapped reads samples. The last option maybe helpful because you
+increase the accuracy of the analysis by taking the reads from several samples
+into consideration and reducing the probability of calling sequencing errors.
+After the variants are detected you can annotate them running Effect Prediction
+application or/and use Genome Browser and Variant Explorer for exploring the
+results.
 
-Action: identifying genomic variants from Mapped Reads files.
+Here is the Variant Calling page:
 
-Further apps to use:Effect Prediction and Genome Browser or Variant
-Explorer for exploring results
+.. image:: images/variant_calling_app_page_top.png
 
-The app uses samtools mpileup which automatically scans every position
-supported by an aligned read, computes all the possible genotypes
-supported by these reads, and then calculates the probability that each
-of these genotypes is truly present in your sample.
+The app uses samtools mpileup which automatically scans every position
+supported by an aligned read, computes all the possible genotypes supported by
+these reads, and then calculates the probability that each of these genotypes
+is truly present in your sample.
 
-As an example, let’s consider the first 1000 bases in a Reference Genome
-file. Suppose the position 35 (in reference G) will have 27 reads with a
-G base and two reads with a T nucleotide. Total read depth will be 29.
-In this case, the application concludes with high probability that the
-sample has a genotype of G, and the T reads are likely due to sequencing
-errors. In contrast, if the position 400 in reference genome is T, but
-it is covered by 2 reads with a C base and 66 reads with a G (total read
-depth equal to 68), it means that the sample more likely will have G
-genotype.
+As an example, let’s consider the first 1000 bases in a Reference Genome file.
+Suppose the position 35 (in reference G) will have 27 reads with a G base and
+two reads with a T nucleotide. Total read depth will be 29. In this case, the
+application concludes with high probability that the sample has a genotype of
+G, and the T reads are likely due to sequencing errors. In contrast, if the
+position 400 in reference genome is T, but it is covered by 2 reads with a C
+base and 66 reads with a G (total read depth equal to 68), it means that the
+sample more likely will have G genotype.
 
-Then the application executes bcftools call which uses the genotype
-likelihoods generated from the previous step to call genetic variants
-and outputs the all identified variants in the Genetic Variations file.
+Then the application executes bcftools call which uses the genotype likelihoods
+generated from the previous step to call and filter genetic variants and
+outputs the all identified variants in the Genetic Variations file.
 
-By default, the application call both SNPs and indels, but if you’d like
-to report only SNPs change "Variants to report" option to "SNPs only"
-value. Also, you can tell the application to call only multi-allelic
-variants, switching the "Call multi-allelic variants" option. The
-multiallelic calling is recommended for most tasks.
+Let's now look at the command line options more closely:
 
-To skip anomalous read pairs in variant calling, use option "Discard
-anomalous read pairs" checked.
+.. image:: images/variant_calling_command_line_options.png
 
-In some cases, it’ll be interested to report only potential variant
-sites and exclude monomorphic ones (sites without alternate alleles) in
-output Genetic Variation file. For this purpose, switch the option "Only
-report variant sites".
+#. By default, the application call both SNPs and indels, but if you’d like to
+   report only SNPs change "Variants to report" option to "SNPs only" value.
+#. Also, you can tell the application to call only multi-allelic variants,
+   switching the "Call multi-allelic variants" option. The multiallelic
+   calling is recommended for most tasks.
+#. In some cases, it’ll be interested to report only potential variant sites
+   and exclude monomorphic ones (sites without alternate alleles) in output
+   Genetic Variation file. For this purpose, switch the option “Only report
+   variant sites”.
+#. To skip anomalous read pairs in variant calling, use option "Discard
+   anomalous read pairs" checked.
+#. "Maximum per-sample read depth to consider per position" (250 reads by
+   default) option sets the maximum number of reads at the position to
+   consider.
+#. "Minimum number of gapped reads for an INDEL candidate" is equal 1 by
+   default.
+#. "Minimum per-sample depth to call non-variant block" is equal 1 by default.
+#. "Minimum variant quality" is set to 20 by default. The application will
+   ignore the variant with quality score below this value.
+#. "Minimum average mapping quality for a variant" is 20 by default.
+#. "Minimum all-samples read depth for a variant" is a minimum number of reads
+   covering position (it's equal 1 by default).
+#. You are also able to select chromosomes for analysis, using “Chromosome to
+   analyse” option.
+#. Merge samples with the same metainfo key (specify “Key to merge samples)”.
+   This option can be useful for merging technical replicates.
 
-The application allows you to set maximum read depth to consider per
-position and minimum number of gapped reads for an INDEL candidate. The
-default value for the first option is 250 reads at the position per
-input Mapped Reads file. For the second one, value is not set by
-default.
+Moreover, base alignment quality (BAQ) recalculation is turned on by default.
+It helps to rule out false positive SNP calls due to alignment artefacts near
+small indels.
 
-Moreover, base alignment quality (BAQ) recalculation is turned on by
-default. It helps to rule out false positive SNP calls due to alignment
-artefacts near small indels.
-
-The application will always write DP (number of reads covering
-position), DV (number of high-quality variant reads), DP4 (number of
-forward reference, reverse reference, forward non-reference and reverse
-non-reference alleles used in variant calling) and SP (phred-scaled
-strand bias P-value) tags in the output file.
-
-You are also able to select chromosomes for analysis, using "Chromosome
-to analyse" option and merge samples with the same metainfo key
-(specify "Key to merge samples)". The last option can be useful for
-merging technical replicates.
+Also, the application will always write DP (number of reads covering position),
+DV (number of high-quality variant reads), DP4 (number of forward reference,
+reverse reference, forward non-reference and reverse non-reference alleles
+used in variant calling) and SP (phred-scaled strand bias P-value) tags in
+the output file.
 
 The result Genetic Variations file can be opened in Genome Browser as a
 separate  variation track, further annotated using Effect Prediction
 application, or viewed immediately using Variant Explorer application.
 
-This application is based on
-`SAMtools <https://www.google.com/url?q=http://www.htslib.org/doc/samtools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFwdKm7yBHfHi6jm4j8pH433nu17Q>`_ and
-`BCFtools <https://www.google.com/url?q=http://www.htslib.org/doc/bcftools-1.1.html&sa=D&ust=1480960532055000&usg=AFQjCNFOwJEgoQz7drG9vyiBT7c2nzCelQ>`_.
+This application is based on SAMtools_ and BCFtools_ utilities.
 
-Variant effect prediction with SnpEff
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _SAMtools: http://www.htslib.org/doc/samtools-1.1.html
+.. _BCFtools: http://www.htslib.org/doc/bcftools-1.1.html
+
+Effect Prediction with SnpEff
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Whole Exome Sequencing Analysis, Whole Genome Sequencing
 Analysis
