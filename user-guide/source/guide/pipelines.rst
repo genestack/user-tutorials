@@ -769,32 +769,48 @@ RNA-seq Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add info about RNA-seq technology
+.. TODO: Add info about Spliced Mapping for RNA-seq reads
 
-Mapping (also called as alignment) of sequencing reads allows us to detect
-variation in samples by comparing your data to the reference genome. By doing
-this you can begin to analyse the relationship between variations in genotype
-and phenotype in the population. Next generation sequencing produces
-single-end or paired-end reads. For single-end sequence reads, the sequencer
-reads the fragment only from one end and usually stops before reaching the
-other. For paired-end reads, sequencing starts off at one end, reads a
-specified numbers of base pairs, and then starts another round of the reading
-from the opposite end of the fragment. Paired-end sequencing improves the
-ability to detect genetic rearrangements (e.g. deletions). This is due to the
-additional data carried by pairing reads - they can only be a certain maximum
-distance away from each other which limits the regions of the genome to which
-they can be mapped. This is particularly useful for regions which are repeated
-throughout the genome.
+Mapping (also called as alignment) refers to the process of aligning sequencing
+reads to a reference sequence, whether the reference is a complete genome,
+transcriptome, or de novo assembly.
 
-To compare your data to the reference genome, you need to find a corresponding
-part of that sequence for each of the reads in our data – this is the essence
-of sequence mapping. Following mapping, you will be able to look at specific
-variations (SNPs, InDels etc).
+There are at least two types of mapping stratagies - Spliced Mapping and
+Unsplaced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
+so there's typically no introns in the sequence. For example, if the read spans
+two exons, the reference genome might have one exon followed by an intron.
+
+
+.. note:: **What is the diference between exons and introns?**
+
+          Exons and introns are both parts of genes. However, exons code for
+          proteins, whereas introns do not. In RNA splicing, introns are
+          removed and exons are jointed to one another to generate mature
+          messenger RNA (mRNA) which is further used to synthesize proteins.
+
+
+In this case, if you'll use Unspliced Mapper, the reference genome would find
+a matching sequence in only one of the exons, while the rest of the read would
+not match the intron in the reference, so the read can't be properly aligned. A
+
+Spliced Mappers would know not to try to align RNA-seq reads to introns, and
+would somehow identify possible downstream exons and try to align to those
+instead ignoring introns altogether. Taking this into account, we recommend you
+use Spliced Mapping applications to analyse RNA-seq data.
 
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map Raw Reads with transcriptomic data like RNA-seq to a
 Reference Genome, taking or not taking into account splice junctions.
+
+
+.. note:: **What is splice junction?**
+
+          Splice junctions are exon-intron junctions, at which RNA splicing
+          takes place. For example, to cut an intron (between two exons) you
+          need to splice in two places so that two exons might be jointed.
+
 
 Let’s have a look at the app page and talk about various parameters:
 
