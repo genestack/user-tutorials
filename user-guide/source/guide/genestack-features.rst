@@ -4,9 +4,8 @@ Genestack Key Features
 .. TODO: talk about scalability, different deployments and modularity ?
 
 Genestack is a platform to manage, analyse and visualize bioinformatics data, with a
-focus on next-generation sequencing and microarray data.
-
-Genestack was built around several key concepts which are described below.
+focus on next-generation sequencing and microarray data. Genestack was built around
+several key concepts which are described below.
 
 Rich metadata system
 --------------------
@@ -30,11 +29,11 @@ Interactive data analysis and visualisation
 
 On Genestack, you will find many apps to process bioinformatics data, but you will also find
 a range of graphical, interactive apps that help users better understand their data.
-This ranges from our :ref:`fastqc` app
+This ranges from our FastQC Report app
 that visualises the quality of raw or preprocessed sequencing
-reads, to our :ref:`variant-explorer` app, performing real-time interactive
+reads, to our Variant Explorer app, performing real-time interactive
 genomic variant filtering by type, impact, quality, frequency, etc.
-All the Genestack applications are described in the section :ref:`pipelines`.
+All the Genestack applications are described in the section **Pipelines**.
 
 Format-free files
 -----------------
@@ -53,7 +52,6 @@ are done automatically and internally, and you will not have to worry about them
 Therefore, we say that files in Genestack are "format-free" in the sense that, as a
 user of the system, you do not have to think about file format compatibility and
 conversion inside Genestack, because Genestack does that for you.
-
 
 .. note:: **Formatting Hell**
 
@@ -76,7 +74,7 @@ Every file on Genestack "remembers" how it was made: all applications,
 tool versions, parameters, and source files are recorded in the metadata
 of each file.
 
-This way, you can select any file in Genestack and visualize its "file provenance",
+This way, you can select any file in Genestack and visualize its "provenance",
 a graph representing exactly what steps were taken to produce this file, which source
 files and which applications were used to produce it.
 
@@ -99,7 +97,6 @@ Sequencing Assay" (those names may sound funny, but are helpful when
 tracking what apps you used already. Remember you can change the file
 names!).
 
-
 When an application creates a new file, it specifies what should happen
 when it is initialised: a script, a download, indexing, computation.
 However, before the initialization has begun, you can change the
@@ -120,6 +117,5 @@ experiments from major repositories like ArrayExpress, GEO, SRA and ENA,
 as well as numerous reference genomes for multiple organisms from
 Ensembl and UCSC. In practice, this means that the platform can serve as
 a data repository, that allows users to work both on private and public
-data seamlessly.
-
-Public and private data can be browsed by metadata using the :ref:`experiment-browser` app.
+data seamlessly. Our Experiment Browser app will help you to easily find not only
+datasets you are interested in but also analysis results performed on these data.

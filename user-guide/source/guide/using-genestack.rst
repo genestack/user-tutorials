@@ -68,8 +68,7 @@ Let’s go back to the Dashboard. Here you can find the following sections:
    (home), as well as often used folders: Uploaded files, Imported files,
    Created files and Exports.
 4. **Import data** allows you to import your data using either a
-   custom or the default import template. See the section "Import" for more
-    information.
+   custom or the default import template. See the section "Import" for more information.
 5. **Tutorials** explain the most common analysis types in greater detail.
 6. **Search** across the metadata of all your files using the full-text file
    search text box.
