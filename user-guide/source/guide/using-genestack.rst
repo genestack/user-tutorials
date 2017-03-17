@@ -38,16 +38,16 @@ organisation and your vendor ID. 
 .. image:: images/profile.png
 
 Organizations are a way of enforcing group permissions. There are two
-types of user in an organization - administrators and non-administrators. If you are in
+types of user in an organization – administrators and non-administrators. If you are in
 the same organization as another user, you can add them to groups you
 control and share files with them freely. If you are in different
 organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
-permissions and groups in the :ref:`sharing` section.
+permissions and groups in the "Sharing Data and Collaboration" section.
 
 Vendor IDs are used for app development. Apps you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
-would like to see after login: Welcome Page or File Manager.
+would like to see after login: Dashboard or File Manager.
 
 **Tasks** links to the Task Manager app, where you can monitor running and
 previous computations.
@@ -68,7 +68,8 @@ Let’s go back to the Dashboard. Here you can find the following sections:
    (home), as well as often used folders: Uploaded files, Imported files,
    Created files and Exports.
 4. **Import data** allows you to import your data using either a
-   custom or the default import template. See the section :ref:`import`
+   custom or the default import template. See the section "Import" for more
+    information.
 5. **Tutorials** explain the most common analysis types in greater detail.
 6. **Search** across the metadata of all your files using the full-text file
    search text box.
@@ -94,14 +95,14 @@ Here you can view the list of all applications available on the platform
 The **Developer** button will give you the option to choose which version of
 an app you want to use.
 
-.. image:: images/developer-button.png
-    :scale: 35 %
+.. image:: images/developer_button.png
+   :scale: 35 %
 
 The **‘bundled’** and **‘minified’** options optimize
 loading of CSS and JS used in the app. You can find more details on
-bundling and minifying here_.
+bundling and minifying in `blog post by Dino Esposito`_.
 
-.. _here: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
+.. _blog post by Dino Esposito: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 
 The **Session** and **User** dropdown menus allow you to chose the version of
 the app you want to use for your current log-in session and for your
@@ -113,13 +114,13 @@ the version of your choice.
 Manage Groups
 ~~~~~~~~~~~~~
 
-.. image:: images/ManageGroups.png
+.. image:: images/manage_groups.png
 
 In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
 new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users.
-Read more about collaboration on Genestack in :ref:`sharing`.
+Read more about collaboration on Genestack in the "Sharing" section.
 
 Manage Users
 ~~~~~~~~~~~~
@@ -127,7 +128,7 @@ Manage Users
 In this section, you can change password of your users or create new users.
 You can find more about managing users on Genestack from `this video`_.
 
-.. image:: images/manage-users.png
+.. image:: images/manage_users.png
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
 
 Importing Data
@@ -164,7 +165,7 @@ be automatically imported as an experiment.
   microarray assays, Genestack creates an experiment and adds the assays to it.
 
 - **Experiment attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
-  can be uploaded as an experiment attachment. See :ref:`attachments`
+  can be uploaded as an experiment attachment. We will discuss teh use of attachments below.
 
 
 Moreover, when you perform any analysis on Genestack, you can create other data
@@ -359,7 +360,7 @@ stages described above.
 Once you have completed the metainfo editing step, you may see a "Use files in
 data flow" button at the bottom of the page by "Import files". This depends on
 the file type you have imported. Later you can find your files in the "Imported
-files" folder which can be accessed from the Welcome Page and from the File
+files" folder which can be accessed from the Dashboard and from the File
 Manager.
 
 Metadata Import
@@ -422,7 +423,7 @@ metainfo" step:
 
 .. image:: images/exp_attachments.png
 
-Or, add and remove attachments from inside the File manager, when you open an
+Or, add and remove attachments from inside the File Manager, when you open an
 experiment. There is an "attachments" link by the experiment name and
 description:
 
@@ -454,12 +455,12 @@ For instance, you can set the filters 'Access', 'Method'
 and 'Organism' to 'Public', 'RNA-Seq', 'Mus musculus', respectively,
 to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
 
-.. image:: images/ExperimentBrowser.png
+.. image:: images/experiment-browser.png
 
 Click **Save N matching assays** link to explore
 the list of matching assays and save them into one folder.
 
-.. image:: images/SaveMatchingAssays.png
+.. image:: images/save-matching-assays.png
 
 Moreover, Experiment Browser allows you to find bioinformatics analyses results
 associated with raw data. If there are analysis performed on a given experiment,
@@ -468,23 +469,24 @@ then under the experiment name you will see a **View N analysis results** link.
 Clicking it shows you the list of existing resulting files such as, for example, QC reports
 or Genome Browser pages.
 
-.. image:: images/AnalysisResults.png
+.. image:: images/analysis-results.png
 
 Clicking on the name of any of the experiments will take you to
-the **Metainfo editor**, where you can view (and possibly edit) the metadata of this experiment and its assays.
+the **Metainfo editor**, where you can view (and possibly edit) the metadata of this
+experiment and its assays.
 
-.. image:: images/EditMetainfo.png
+.. image:: images/metainfo-editor.png
 
 Besides that, on the Metainfo Editor page you can run the assays through a pipeline via the button
 **Start new data flow with application**. You can either use an existing data flow matching the assays, or build a
 new pipeline step by step.
 
-.. image:: images/NewDF.png
+.. image:: images/new-df.png
 
 From the Metainfo Editor, you can also open the experiment in the **File Manager** by clicking on
 the experiment's name at the top of the page and selecting **Explore > File Manager**.
 
-.. image:: images/FromMEtoFB.png
+.. image:: images/from-ME-to-FB.png
 
 File Manager
 ~~~~~~~~~~~~
@@ -492,7 +494,7 @@ File Manager
 Like on any operating system, the **File Manager** is where you can easily access
 all of your files, organise them into folders, and open them with various applications.
 
-.. image:: images/FileManager.png
+.. image:: images/file-manager.png
 
 The panel (tree view) on the left-hand side is the file system navigator.
 Here you can see many different folders. Some special folders are worth mentioning:
@@ -532,7 +534,7 @@ you or that you shared with other users. See the :ref:`sharing` section for mor
 **Public Data** contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
 
-.. image:: images/PublicData.png
+.. image:: images/public-data.png
 
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
@@ -584,7 +586,7 @@ The **Add to** and **Move to** action allow you to link or move a file to a chos
 current file is linked. The **file accession** is a unique identifier attached to each file.
 Unlike other metainfo attributes, it will never change for any file.
 
-.. image:: images/ParentContainers.png
+.. image:: images/parent-containers.png
 
 Above the file manager pane, you can find the **Import** button. Clicking
 it takes you to the Import app page, where you can upload your files,
@@ -597,13 +599,13 @@ you will be able to create a new folder wherever you want. Another option
 - **New folder with selection** - appears when you have selected files and
 want to put all of them in a separate folder.
 
-.. image:: images/NewFolder.png
+.. image:: images/new-folder.png
 
 The **Preprocess, Analyse, Explore and Manage** menus at the top of the page
 correspond to the four groups of applications that can be used to process and view data.
 These menus will become available when you select a file. 
 
-.. image:: images/MatchingApps.png
+.. image:: images/matching-apps.png
 
 When you choose a file, the system will suggest apps which can work with the specific
 file type (e.g. sequencing assay). However, you still need to think about the nature of
@@ -618,7 +620,7 @@ metadata (names, organism, method). To limit the search by file
 type or whether or not the file is shared with you, click on the arrow
 inside the search box.
 
-.. image:: images/FileSearch.png
+.. image:: images/file-search.png
 
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
@@ -629,15 +631,15 @@ briefcase...". **To delete** an item from your briefcase hover over it and
 click on the "x" button. **To clear all** items from the briefcase, select
 the "Clear all" option.
 
-.. image:: images/BriefCase.png
+.. image:: images/brief-case.png
 
 If you select a file, **three additional** buttons will show up, allowing
 you to **share**, **delete** the file or **view metainfo** (an "eye"-icon) for
 the file.
 
-.. image:: images/3buttons1.png
+.. image:: images/3buttons-1.png
 
-.. image:: images/3buttons2.png
+.. image:: images/3buttons-2.png
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
@@ -674,8 +676,7 @@ analysis, difficult or even impossible without human participation.
 To harmonize raw metadata we apply **automated curation** where we map raw entries to
 controlled terms that we store and maintain in special files called **Dictionaries**.
 To prepare these Dictionaries we adopted terms from external ontologies or created them manually.
-
-Our standardized and unified terminology you can also use to describe your own data
+You can also use our standardized and unified terminology to describe your own data
 or analysis results.
 
 Our **Edit Metainfo** app enable you to prepare metadata manually. You can edit metadata on
@@ -695,15 +696,15 @@ then in the appear pop-up window pick template of interest.
 
 .. image:: images/change-template.png
 
-To edit or enter metadata just start typing in the corresponding cell, you will be
-suggested with terms from our controlled dictionaries when possible. Although, you are free to enter
+When you start typing in the corresponding cell, you will be
+suggested with terms from our controlled dictionaries if possible. Although, you are free to enter
 any values, we encourage you to use our standartized terminology, that helps you
 to avoid typos and harmonise metadata.
 
 .. image:: images/tissue-dict.png
 
-Furthermore, one metadata field can include several values for each individual assay:
-just enter the first term as usual, click the button **Add another** and either add
+Furthermore, you can add several terms to one metadata field for each file. To do so
+enter the first term as usual, click the button **Add another** and either add
 one of the existing fields or create your own one (i. e. custom key).
 
 .. image:: images/add-attribute.png
@@ -717,7 +718,7 @@ numeric value you should use "Integer" or "Decimal" one.
 .. image:: images/custom-key.png
 
 
-Click column name to **sort** metadata alphabetically or **delete** the selected column if needed.
+Click column name to **sort** metadata or **delete** the selected column if needed.
 
 .. image:: images/sort.png
 
@@ -773,7 +774,6 @@ top-right corner of any page.
 
 .. image:: images/profile_menu.png
 
-.. image:: images/metainfo-editor.png
 
 Managing users
 ~~~~~~~~~~~~~~
@@ -837,9 +837,9 @@ By default, newly added users will be granted the lowest permission level
 
 .. TODO I don't like the fact that we are linking to tutorials and videos from here
 
-Learn more on how to Create and Manage Groups `here`_.
+Learn more on how to Create and Manage Groups `in our tutorial`_.
 
-.. _here: https://genestack.com/tutorial/managing-and-sharing-data/
+.. _in our tutorial: https://genestack.com/tutorial/managing-and-sharing-data/
 
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -871,7 +871,7 @@ when they open that folder (which can make it easier for them to find it). If
 you click "No", the file will not be linked into the group folder but the
 group's users will still be able to find the file through the File Search box
 (for instance, if you tell them the accession of the file), in File Provenance
-and through the :ref:`experiment-browser`.
+and through the Experiment Browser.
 
 Each group has an associated group folder which you can access from the File
 Manager under "Shared with me" in the left-hand side panel.
@@ -926,7 +926,7 @@ You can initialize files in different ways:
 Click on the name of your last created file at the top of the application page
 and select "start initialization".
 
-.. image:: images/start_initilozation.png
+.. image:: images/start_initialization.png
 
 2. Clicking **Start initialization now** in Data Flow Runner application.
 
@@ -1053,7 +1053,7 @@ Complete reproducibility is one of the core strengths of Genestack. For any
 file in the system, you can view the file provenance and then replay the same
 exact analysis on other data files.
 
-.. image:: file_provenance.png
+.. image:: images/file_provenance.png
 
 The File Provenance app also allows you to view the text description of the
 pipeline used to create a given file. Clicking the "View as text" button
@@ -1069,8 +1069,8 @@ by selecting the file of interest and choosing "Create new Data Flow" from the
 available "Manage" apps.
 
 
-.. |view_as_text| image:: images/view_as_text.png
-.. scale: 45%
+.. image:: images/view_as_text.png
+   :scale: 45 %
 
 
 Task Manager
@@ -1103,19 +1103,38 @@ If you change your mind about a computation after it has started,
 Statuses in Task Manager help you keep track of your tasks. Let’s look
 what each status means:
 
--  Starting: the computation process has started to run
--  Done:  the task has finished successfully
--  Failed: the computation has failed. To find out why, click on
-   "View logs"
--  Queued: the task is waiting for dependencies to complete
+-  *Starting* - the computation process has started to run
+-  *Done* - the task has finished successfully
+-  *Failed* - the computation has failed. To find out why, click on "View logs"
+-  *Queued* - the task is waiting for dependencies to complete
    initialization
--  Running: your task is in progress
--  Blocked by dependency failure: the computation cannot be completed
+-  *Running* - your task is in progress
+-  *Blocked by dependency failure* - the computation cannot be completed
    because a task on which this one depends has failed
--  Killed: the task has been canceled by the user
+-  *Killed* - the task has been canceled by the user
 
 
 Data Export
 -----------
 
-.. TODO
+Genestack provides secure data storage, and **Export Data** application
+allows to safely download both assays and analysis results together with attached metadata
+to a local machine.
+Select those files you are going to export, right-click on them
+and select **Export Data** app.
+On the app page you will see the status of your files, and if some of them are not
+initialized you will be suggested to initialize them prior to export.
+
+.. image:: images/export1.png
+
+If you change you mind, you can stop exporting process by click on "Cancel" button.
+
+.. image:: images/export2.png
+
+The app creates an Export File that contains a special link to download
+the selected assays, that is accessible until the corresponding Export File is deleted.
+
+.. image:: images/export3.png
+
+Sharing the link enables your collaborator to download data even if they do not have
+a Genestack account. All the Export files are stored in the “Exports” folder.
