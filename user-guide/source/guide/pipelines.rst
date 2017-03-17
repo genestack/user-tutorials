@@ -1768,11 +1768,11 @@ Bisulfite Sequencing Data Analysis
 
 .. TODO Add a few words about bisulfite sequencing technology
 
-Bisulfite sequencing mapping with BSMAP
+Bisulfite Sequencing Mapping with BSMAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map high-throughput bisulfite sequencing (BS) reads at the
-level of the whole genome.
+level of the whole genome. To calculate 
 
 .. image:: images/bisulfite_seq_mapping_app_page.png
 
@@ -1808,7 +1808,7 @@ Bisulfite Sequencing Analysis`_ tutorial.
 .. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
 Reduced Representation Bisulfite Sequencing Mapping with BSMAP
-**************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map reduced representation bisulfite sequencing (RRBS) reads to
 the specific digestion sites on the genome.
@@ -1843,69 +1843,76 @@ The application is based on BSMAP_ aligner.
 Methylation Ratio Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Methylation Profiling
+**Action**: to determine the percent methylation at each ‘C’ base in mapped
+reads. Next, you can view methylation ratios in Genome Browser.
 
-Input: Mapped Reads
+.. image:: images/methratio_app_page.png
 
-Action: The app allows to determine the percent methylation at each ‘C’
-base in the Mapped Reads file.
+Command line options are the following:
 
-Further apps to use: Genome Browser
+1. To get results filtered by depth of coverage use "Minimum coverage" option.
+   By default, this value is not set. But raising it to a higher value (e.g.
+   5) requires that at least five reads will cover the position.
+2. For paired-end mappings, you can trim from 1 to 240 fill-in nucleotides in
+   the DNA fragment end-repairing. By default, this "Trim N end-repairing
+   fill-in bases" option is switched off. For RRBS mappings, the number of
+   fill-in bases could be determined by the distance between cuttings sites on
+   forward and reverse strands. If you analyse WGBS mappings, it’s recommended
+   to set this number between 0~3.
+3. Switch "Report loci with zero methylation ratios" option to report
+   positions with zero methylation. The application doesn’t apply this option
+   by default.
+4. To combine CpG methylation ratio from both strands, set "Combine ratios on
+   both strands" option switched. By default, it is unchecked. If you want to
+   process only unique mappings, check "Only unique mappings" option.
+5. For paired reads, using the option "Discard discordant mappings" you can
+   discard all mappings where the two mates map uniquely but with unexpected
+   orientation, or where the distance between two mapped mates differs from
+   and internally estimated fragment length, including mates mapping to
+   different chromosomes.
+6. Sometimes you need to remove duplicates from your Mapped Reads files. For
+   this purpose, use "Discard duplicated reads" option.
+7. To ignore positions where there is a possible C/T SNPs detected, choose
+   "skip" value for "C/T SNPs filtering" option. If you want to correct the
+   methylation ratio according to the C/T SNP information estimated by the
+   G/A counts on reverse strand, set "correct" value. By default, the
+   application doesn’t consider C/T SNPs ("no-action" value).
 
-To get results filtered by depth of coverage use "Minimum coverage"
-option. By default, this value is not set. But raising it to a higher
-value (e.g. 5) requires that at least five reads will cover the
-position.
+The outputs from Methylation Analysis application can be represented in the
+Genome Browser as *Methylation ratios* track.
 
-For paired-end mappings, you can trim from 1 to 240 fill-in nucleotides
-in the DNA fragment end-repairing. By default, this "Trim N
-end-repairing fill-in bases" option is switched off. For RRBS mappings,
-the number of fill-in bases could be determined by the distance between
-cuttings sites on forward and reverse strands. If you analyse WGBS
-mappings, it’s recommended to set this number between 0~3.
+.. image:: images/methratio_in_gb.png
 
-Switch "Report loci with zero methylation ratios" option to report
-positions with zero methylation. The application doesn’t apply this
-option by default.
+.. note:: **What does the 0-1000 side bar represent?**
 
-To combine CpG methylation ratio from both strands, set "Combine ratios
-on both strands" option switched. By default, it is unchecked. If you
-want to process only unique mappings, check "Only unique mappings"
-option.
+   These bars represent the final methylation frequency. To understand this,
+   take a simple example.
+   Let's imagine, we investigate position 30 in the Chr X. This position has 10
+   reads contributing to the methylation frequency. 7 of these 10 reads reported
+   Cs in this position (i.e. methylated Cs, no bisulfite conversion and Cs do not
+   transform into Ts) and 3 reads showed Ts (unmethylated Cs, bisulfite conversion
+   takes place). Then the final methylation frequency will be calculated as 7/10 =
+   0.7. This value is multiplied by 1000 to get 700 (this is the bar sides you see
+   in Genome Browser).
+   So, it means, that side bars with 0 value represent unmetylated position, and
+   vice versa side bars with 1000 - show max methylation (all reads have
+   methylated Cs in this case).
 
-For paired reads, using the option "Discard discordant mappings" you can
-discard all mappings where the two mates map uniquely but with
-unexpected orientation, or where the distance between two mapped mates
-differs from and internally estimated fragment length, including mates
-mapping to different chromosomes.
+The Methylation Analysis application is based on `methratio.py
+<https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation>`_
+script and used in the `Whole-Genome Bisulfite Sequencing Analysis`_ tutorial.
 
-Sometimes you need to remove duplicates from your Mapped Reads files.
-For this purpose, use "Discard duplicated reads" option.
+.. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
-To ignore positions where there is a possible C/T SNPs detected, choose
-"skip" value for "C/T SNPs filtering" option. If you want to correct the
-methylation ratio according to the C/T SNP information estimated by the
-G/A counts on reverse strand, set "correct" value. By default, the
-application doesn’t consider C/T SNPs ("no-action" value).
-
-This application is based on methratio.py script.
-
-Microbiome Analysis
-~~~~~~~~~~~~~~~~~~~
+Microbiome Data Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Microbiome Analysis with QIIME
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Microbiome Analysis
-
-Input: Targeted Microbiome Sequencing Data
-
-Action: Application report on the recorded microbial species and the
-percentage composition of the sample.
-
-Output: Clinical and Research reports
-
-Further apps to use: None
+**Action**: to identify microbial species and the percentage composition of the
+sample. The application accepts microbial sequencing reads and outputs
+Clinical and Research reports
 
 The application can be used to create a  clinical or research
 microbiology report with abundance plots and microbiological diversity
