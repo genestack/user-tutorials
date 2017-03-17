@@ -253,6 +253,7 @@ A warning will be raised  if any sequence is found to represent more than 0.1%
 of the total.
 
 There are several possible sources of overrepresented sequences:
+
 - technical biases (one region was sequenced several times; PCR amplification
   biases);
 - feature of library preparation (e.g. for targeted sequencing);
@@ -308,7 +309,7 @@ the quality of raw reads. Keep in mind, that after completing the
 preprocessing procedure, it’s a good idea to run "FastQC Report" application
 once again on the preprocessed files to see if the quality has improved.
 
-.. TODO: add images for each preprocess app
+.. TODO add images for each preprocess app
 
 Subsample Reads
 ^^^^^^^^^^^^^^^
@@ -387,10 +388,10 @@ reads. Trimmed reads below the minimum length are discarded.
 The app uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies and
 platform used. For instance, it contains widely used PCR primers and
-adaptors for Illumina, ABI etc. You can view the full list `here`_. The
-occurance threshold before adapter clipping is set to 25%.
+adaptors for Illumina, ABI etc (see the `list of primers and adaptors`_ we
+remove). The occurance threshold before adapter clipping is set to 25%.
 
-.. _here: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
+.. _list of primers and adaptors: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
 This tool is based on fastq-mcf_, one of the EA-Utils_ utilities.
 
@@ -526,7 +527,7 @@ statistics** will be calculated.
 
 .. image:: images/insert.jpg
 
-Insert size statistics are useful to validate library constrauction and include:
+Insert size statistics are useful to validate library constraction and include:
 
 #. Median insert size: a middle of a sorted list of insert sizes;
 #. Median absolute deviation: calculated by taking the median of the absolute
@@ -545,14 +546,13 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
-Mapped Reads QC Report application is based on `BEDtools`__ and `Picard`_ tool.
+Mapped Reads QC Report application is based on `BEDtools
+<http://bedtools.readthedocs.io/en/latest/>`_ and Picard_ tool.
 
-.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
 
-.. TODO: What should "Insert size distribution" plot look like normally?
-
-.. TODO: What does it look like when data is of poor quality ( + what can we do about it)
+.. TODO What should "Insert size distribution" plot look like normally?
+.. TODO What does it look like when data is of poor quality ( + what can we do about it)
 
 You can analyse the output for several Mapped Reads QC reports at once using
 our Multiple QC Report application.
@@ -591,23 +591,16 @@ Control`_ public data flow.
 
 .. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
 
-We have youtube video on how to analyse exome data with Targeted Sequencing QC
-Report application. Watch it here:
-
-.. raw:: html
-
-    <iframe width="640" height="360" src="https://www.youtube.com/watch?v=_jHrtq_3ya8&feature=youtu.be" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
-
 You can analyse the output for multiple reports at once using the Multiple QC
 Report application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
-This application is based on BEDtools_, Picard_ tools and SAMtools_.
+This application is based on `BEDtools
+<https://code.google.com/archive/p/bedtools/>`_, Picard_ tools and `SAMtools
+<http://samtools.sourceforge.net/>`_.
 
-.. _BEDtools: https://code.google.com/archive/p/bedtools/
 .. _Picard: http://broadinstitute.github.io/picard/
-.. _SAMtools: http://samtools.sourceforge.net/
 
 Apart from quality control applications, Genestack suggests you a bunch of
 applications to preprocess mapped reads.
@@ -693,7 +686,7 @@ the internally estimated fragment length, including mates mapping to
 different chromosomes, the application  app cannot identify them but
 will not fail due to inability to find the mate pair for the reads.
 
-This tool is based on **MarkDuplicates**, part of the `Picard`_ tool.
+This tool is based on **MarkDuplicates**, part of the Picard_ tool.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
@@ -711,9 +704,7 @@ extract (default: 50%). Changing "Random seed" value will let you produce
 different subsets with the same number of mapped reads. Using the same random
 seed and the same subsampling ratio will result in identical subsets.
 
-This application is based on SAMtools_.
-
-.. _SAMtools: http://samtools.sourceforge.net/
+This application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
 
 Merge Mapped Reads
 ^^^^^^^^^^^^^^^^^^
@@ -724,9 +715,7 @@ experiment and want to combine them before producing your final result.
 **Action**: to merge multiple Mapped Reads files, producing one single
 output Mapped Reads file.
 
-The application is based on SAMtools_.
-
-.. _SAMtools: http://samtools.sourceforge.net/
+The application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
 
 Variants Preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -745,9 +734,8 @@ information about SNPs and about Indels.
 
 **Action**: to merge two or more Genetic Variations files into a single file.
 
-This application is based on BCFtools_.
-
-.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
+This application is based on `BCFtools
+<http://samtools.github.io/bcftools/bcftools.html>`_.
 
 Concatenate Variants
 ^^^^^^^^^^^^^^^^^^^^
@@ -764,9 +752,8 @@ of the second input will be allowed to come before the last position of the
 first input. There is an option to remove duplicated variants to make sure
 that there are no redundant results.
 
-The application is based on BCFtools_.
-
-.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
+The application is based on `BCFtools
+<http://samtools.github.io/bcftools/bcftools.html>`_.
 
 RNA-seq Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1014,7 +1001,7 @@ Let's go through the application parameters:
    the opposite strand as the feature. Specify "no", if you don’t consider
    strand-specificity.
 
-This application is based on `HTSeq`_ tool and used in `Differential Gene
+This application is based on HTSeq_ tool and used in `Differential Gene
 Expression Analysis pipeline`_. After calculating read abundance on the gene
 level, you'll be able to run "Test Differential Gene Expression" application.
 
@@ -1069,7 +1056,7 @@ It contains a table with the following main columns:
 - *tpm* - transcripts per million normalized by total transcript count in
   addition to average transcript length.
 
-The application is based on `Kallisto`_ tool.
+The application is based on Kallisto_ tool.
 
 .. _Kallisto: https://pachterlab.github.io/kallisto/
 
@@ -1101,7 +1088,7 @@ Before running the application, you can choose the following parameters:
 The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
 
-This application is based on **cuffquant** (a part of `Cufflinks`_ tool) and
+This application is based on **cuffquant** (a part of Cufflinks_ tool) and
 used in `Differential Isoform Expression Analysis`_ public data flow.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
@@ -1233,11 +1220,9 @@ use Expression Navigator application.
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected hypotheses. In other words, it’s the fraction of isoforms
   for which a significant variation was identified incorrectly. You can read
-  more about it here_.
+  more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
 
-.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
-
-This application is based on **cuffdiff** which is a part of `Cufflinks`_.
+This application is based on **cuffdiff** which is a part of Cufflinks_.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
 
@@ -1368,9 +1353,8 @@ This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 .. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
 .. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-Read more about single-cell RNA-seq analysis on Genestack here_:
-
-.. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
+Read more about single-cell RNA-seq analysis on Genestack `here
+<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
 
 Single-cell RNA-Seq Visualisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1437,7 +1421,7 @@ identification of  molecularly distinct cell populations. The heatmap is
 clustered both by columns and by rows, to identify clusters of samples with
 similar gene expression profiles, and clusters of potentially co-expressed
 genes. The bi-clustered heatmap is provided by an open source interactive
-Javascript library `InCHlib`_ (Interactive Cluster Heatmap library).
+Javascript library InCHlib_ (Interactive Cluster Heatmap library).
 
 .. _InCHlib: http://www.openscreen.cz/software/inchlib/home/
 
@@ -1462,18 +1446,17 @@ clusters does not significantly reduce the average "spread" within each
 cluster).
 
 The Interactive Principal Component Analysis (PCA) scatter plot is rendered
-using the `NVD3`_ Javascript library. The PCA features and k-means algorithm
-results are computed using R's built-in functions `prcomp`_ and `knn`_. The
-t-SNE transformation is computed using the `Rtsne`_ package.
+using the NVD3_ Javascript library. The PCA features and k-means algorithm
+results are computed using R's built-in functions prcomp_ and knn_. The
+t-SNE transformation is computed using the Rtsne_ package.
 
 .. _NVD3: http://nvd3.org/
 .. _prcomp: https://stat.ethz.ch/R-manual/R-patched/library/stats/html/prcomp.html
 .. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
 .. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-You can read more about the app and single-cell RNA-seg analysis here_.
-
-.. _here: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
+You can read more about the app and single-cell RNA-seg analysis `here
+<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
 
 Reference Genomes
 -----------------
@@ -1536,11 +1519,13 @@ should choose a matching reference genome.
 
 3. **Toplevel sequence or primary assembly**
 
-- TOPLEVEL SEQUNENCE
+- TOPLEVEL SEQUENCE
+
   As a rule, toplevel reference genomes contain all chromosomes, sequence
   regions not assembled into chromosomes and padded haplotype/patch regions.
 
 - PRIMARY ASSEMBLY
+
   Primary assembly genomes contain all toplevel sequence region excluding
   haplotypes and patches.
 
@@ -1569,6 +1554,7 @@ through DNA sequence looking for repeats and low-complexity regions.
 There are two types of masked reference genomes: masked and soft-masked.
 
 - MASKED
+
   Masked reference genomes are also known as hard-masked DNA sequences.
   Repetitive and low complexity DNA regions are detected and replaced with
   ‘N’s. The use of masked genome may adversely affect the analysis
@@ -1585,6 +1571,7 @@ There are two types of masked reference genomes: masked and soft-masked.
 
 
 - SOFT-MASKED
+
   In soft-masked reference genomes, repeats and low complexity regions are
   also detected but in this case they are masked by converting to a lowercase
   variants of the base (e.g. acgt).
@@ -1609,8 +1596,6 @@ so  after the mapping step.
 Usually, reference genome name includes information about all these factors:
 organism, genome assembly, release, primary assembly/toplevel, masking
 procedure and molecule.
-
-For example, Homo sapiens / GRCh38 release 85 (primary assembly, unmasked, DNA)
 
 *Example*:
 
@@ -1719,6 +1704,8 @@ Let's look at the application page and the parameters we can use to do mapping:
 
 The application is based on Bowtie2_ aligner.
 
+.. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+
 Variant Calling with SAMtools and BCFtools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1799,12 +1786,12 @@ The result Genetic Variations file can be opened in Genome Browser as a
 separate  variation track, further annotated using Effect Prediction
 application, or viewed immediately using Variant Explorer application.
 
-This application is based on SAMtools_ and BCFtools_ utilities and best used
-when performing `Whole Exome Sequencing Analysis`_ and `Whole Genome Sequencing
-Analysis`.
+This application is based on `SAMtools
+<http://www.htslib.org/doc/samtools-1.1.html>`_ and
+`BCFtools <http://www.htslib.org/doc/bcftools-1.1.html>`_ utilities and best
+used when performing `Whole Exome Sequencing Analysis`_ and `Whole Genome
+Sequencing Analysis`_.
 
-.. _SAMtools: http://www.htslib.org/doc/samtools-1.1.html
-.. _BCFtools: http://www.htslib.org/doc/bcftools-1.1.html
 .. _Whole Exome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
@@ -1832,7 +1819,7 @@ variants by chromosome, find out how many variants are corresponding to SNP or
 insertions, to know number of effects by type and region and some other
 information), just open the annotated Genetic Variations file in View Report
 application. Read about the variant annotations and report statisctics in
-Whole Exome Sequencing tutorial, in `Effect annotation` section.
+Whole Exome Sequencing tutorial, in `Effect annotation`_ section.
 
 .. _Effect annotation: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html#effect-annotation
 
@@ -1896,10 +1883,11 @@ that all selected columns will be displayed in Table viewer.
 You can "download filtered data as .tsv" or create new file with filtered
 variants.
 
-You can read more about this app in our tutorials on WES_ and WGS_ analyses.
+Read more about this app in our tutorials on `Whole Exome Sequencing`_ and
+`Whole Genome Sequencing`_ analyses.
 
-.. _WES: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
-.. _WGS: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
+.. _Whole Exome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
+.. _Whole Genome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Intersect Genomic Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1909,24 +1897,27 @@ Mapped Reads files or Genetic Variations files. Depending on the input files,
 the applications generates different outputs, either Mapped Reads or Genetic
 Variations files.
 
-With default settings, the application will report overlapping features
-(see option "Rule for filtering"). For example, you could isolate single
-nucleotide polymorphisms (SNPs) that overlap with SNPs from another
-file. For this, intersect two Genetic Variations files. But there are
-cases when you’d like to know which features don’t overlap with other
-ones. To get such outputs, use "Report non-overlapping features" filter.
+Here is the application page:
 
-The application has also other possibilities. For example, by setting
-minimum overlapping fraction equal to 10 (default value), you can check
-whether a feature of interest has at least 10% of its length overlapping
-another feature.
+.. image:: images/intersect_genomic_features.png
 
-The "Rule for overlap strandedness" option allows you to ignore overlaps
-on the same strand or on the other strand. By default, overlapping
-features are reported without respect to the strandedness.
+Let's look at the options:
 
-This application is based on
-`BEDtools <https://www.google.com/url?q=http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html&sa=D&ust=1480960532075000&usg=AFQjCNGU8dqh1cQxlk22wUALFNLXZK0Llg>`__.
+1. "Rule for filtering". With default settings, the application will report
+   overlapping features. For example, you could isolate single nucleotide
+   polymorphisms (SNPs) that overlap with SNPs from another file. For this,
+   intersect two Genetic Variations files. But there are cases when you’d like
+   to know which features don’t overlap with other ones. To get such outputs,
+   use "Report non-overlapping features" filter.
+2. By setting "Minimum overlapping fraction" equal to 10 (default value), you
+   can check whether a feature of interest has at least 10% of its length
+   overlapping another feature.
+3. The "Rule for overlap strandedness" option allows you to ignore overlaps on
+   the same strand or on the other strand. By default, overlapping features
+   are reported without respect to the strandedness.
+
+This application is based on `BEDtools
+<http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html>`_.
 
 Methylation Analysis
 ~~~~~~~~~~~~~~~~~~~~
