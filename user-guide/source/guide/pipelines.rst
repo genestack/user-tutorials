@@ -309,12 +309,12 @@ the quality of raw reads. Keep in mind, that after completing the
 preprocessing procedure, it’s a good idea to run "FastQC Report" application
 once again on the preprocessed files to see if the quality has improved.
 
-.. TODO add images for each preprocess app
-
 Subsample Reads
 ^^^^^^^^^^^^^^^
 
 **Action**: to create a random subset of raw reads.
+
+.. image:: images/preprocessing_subsample_reads.png
 
 The number of reads in the subset can be changed (default: 50,000). Changing
 the seed value will let you create different subsets with the same number of
@@ -341,6 +341,8 @@ Filter Duplicated Reads
 the sequence of two paired reads or a single read occurs multiple times in a
 library, the output will include only one copy of that sequence.
 
+.. image:: images/preprocessing_filter_duplicated_reads.png
+
 The phred quality scores are created by keeping the highest score across all
 identical reads for each position.
 
@@ -359,6 +361,8 @@ Filter by Quality Scores
 **Action**: to discard reads from a sequencing assay based on Phred33 quality
 scores. The application classifies the sequence as pass/fail calculating
 quality score distribution for each read.
+
+.. image:: images/preprocessing_filter_by_quality_scores.png
 
 You can change the minimum quality score, which is set to 20 by default. A
 score of 20 means that there is a 1% chance that the corresponding base was
@@ -385,6 +389,8 @@ Trim Adaptors and Contaminants
 raw reads data. It is possible to specify the minimum length of trimmed
 reads. Trimmed reads below the minimum length are discarded.
 
+.. image:: images/preprocessing_trim_adaptors_and_contaminants.png
+
 The app uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies and
 platform used. For instance, it contains widely used PCR primers and
@@ -407,6 +413,8 @@ Trim Low Quality Bases
 ^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to isolate high-quality regions from raw reads.
+
+.. image:: images/preprocessing_trim_low_quality_bases.png
 
 "Trim Low Quality Bases" application is based on `Phred algorithm`_. It finds
 the longest subsequence in read where the estimated error rate is below the
@@ -433,6 +441,8 @@ Trim Reads to Fixed Length
 
 **Action**: to trim a specific amount of bases from the extremities of all
 reads in a sample.
+
+.. image:: images/preprocessing_trim_to_fixed_length.png
 
 You should specify the first base and the last base that should be kept. For
 example, if you set 5 as the first base to keep and 30 as the last base to
@@ -688,7 +698,7 @@ the internally estimated fragment length, including mates mapping to
 different chromosomes, the application  app cannot identify them but
 will not fail due to inability to find the mate pair for the reads.
 
-This tool is based on **MarkDuplicates**, part of the Picard_ tool.
+This application is based on **MarkDuplicates**, part of the Picard_ tools.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
@@ -700,6 +710,8 @@ experimental results will look like, but don’t want to spend time processing
 all your data right away.
 
 **Action**: to create a random subset of mapped reads.
+
+.. image:: images/subsample_mapped_reads.png
 
 Use "Subsampling ratio" option to set a fraction of mapped reads you’d like to
 extract (default: 50%). Changing "Random seed" value will let you produce
@@ -717,7 +729,20 @@ experiment and want to combine them before producing your final result.
 **Action**: to merge multiple Mapped Reads files, producing one single
 output Mapped Reads file.
 
+.. image:: images/merge_mapped_reads.png
+
 The application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
+
+Convert to Unaligned Reads
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Action**: to convert mapped reads into unaligned reads.
+
+.. image:: images/convert_to_unaligned_reads.png
+
+This application is based on Picard_ tools.
+
+.. _Picard: http://broadinstitute.github.io/picard/
 
 Variants Preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -736,6 +761,8 @@ information about SNPs and about Indels.
 
 **Action**: to merge two or more Genetic Variations files into a single file.
 
+.. image:: images/merge_variants.png
+
 This application is based on `BCFtools
 <http://samtools.github.io/bcftools/bcftools.html>`_.
 
@@ -749,9 +776,11 @@ Variations files for each chromosome, and simply wanted to join them
 **Action**: to join two or more Genetic Variations files by concatenating them
 into a larger, single file.
 
+.. image:: images/concatenate_variants.png
+
 The application always allows overlaps so that the first position at the start
 of the second input will be allowed to come before the last position of the
-first input. There is an option to remove duplicated variants to make sure
+first input. There is an option to "Remove duplicated variants" to make sure
 that there are no redundant results.
 
 The application is based on `BCFtools
@@ -766,13 +795,13 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-There are at least two types of mapping stratagies - Spliced Mapping and
+There are at least two types of mapping strategies - Spliced Mapping and
 Unsplaced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
 so there's typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
 
-.. note:: **What is the diference between exons and introns?**
+.. note:: **What is the difference between exons and introns?**
 
           Exons and introns are both parts of genes. However, exons code for
           proteins, whereas introns do not. In RNA splicing, introns are
@@ -1231,9 +1260,8 @@ This application is based on **cuffdiff** which is a part of Cufflinks_.
 Expression Navigator
 ^^^^^^^^^^^^^^^^^^^^
 
-If you're performing Differential Gene Expression analysis or Differential
-Isoform Expression analysis, the results will be visible in Expression
-Navigator application.
+**Action**: to visualize results for Differential Gene Expression or Differential
+Isoform Expression analyses.
 
 .. image:: images/expression_navigator_for_RNA-seq.png
 
@@ -1312,7 +1340,7 @@ report you can see in Single-cell RNA-seq Visualiser.
 The application supports two algorithms for HE analysis. The first uses
 spike-in data (artificially introduced RNAs of known abundance) to calibrate a
 noise model. The second method is a non-parametric algorithm based on
-smoothing splines and doesn’t require the presence of spike-in data.
+smoothing splines and does not require the presence of spike-in data.
 
 .. image:: images/single-cell_rna-seq_analysis.png
 
@@ -1469,7 +1497,7 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-There are at least two types of mapping stratagies - Spliced Mapping and
+There are at least two types of mapping strategies - Spliced Mapping and
 Unsplaced Mapping. In contrast to spliced aligners, unspliced read aligners map
 reads to a reference without allowing large gaps such as those arising from
 reads spanning exon boundaries, or splice junctions. When analysing whole
@@ -1944,52 +1972,62 @@ Additional Visualisation Applications
 
 .. TODO think about the proper name for this section
 
-Sequencing Assay Viewer app
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This section includes the applications that can be used in
+various pipelines to view the content of the data (e.g. Sequencing
+Assay Viewer) or to display multiple data types on different
+steps of analyses (e.g Genome Browser).
 
-Use this app to look through the content of a Sequencing Assay or a Raw
-Reads file and search specific nucleotide sequences which can be exact,
+Sequencing Assay Viewer
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**Action**: to show the content of Sequencing Assay or Raw Reads
+file and look for specific nucleotide sequences which can be exact,
 reverse, complement or reverse complement to the sequence of interest.
 
-<Sequencing Assay Viewer> |image33|
+.. image:: images/sequencing_assay_viewer.png
 
-How to access the app?
-
-Select the assay you are interested in, right click on it and from the
-"Explore" section select the name of the app.
-
+To access this application, select the assay you are interested in,
+right click on it and from the "Explore" section select the application.
 
 Genome Browser
 ^^^^^^^^^^^^^^
 
-Good for: Variant Calling, Methylation Profiling, Whole Exome Sequencing
-Analysis, Whole Genome Sequencing Analysis and many more.
-Used to: View and explore different types of genomic data: mapped reads,
+**Action**: to visualize different types of genomic data: mapped reads,
 genetic variants, methylation ratios and others.
+
+.. image:: images/gb_page.png
 
 There are several tracks that can be visualized in Genome Browser:
 
--  Reference genome: displays annotated genes, transcripts, and their
-   coordinates;
+-  *Reference track* displays reference genome, its genes, transcripts,
+   and their coordinates;
 
--  Coverage: represents the sequencing reads coverage for Mapped Reads
+.. image:: images/gb_reference track.png
 
-[Genome browser whole exome sequencing tutorial]];|image54|
+-  *Coverage track*: represents the sequencing reads coverage for mapped reads
 
--  Variation: shows genetic variants (SNPs, insertions etc.), their
+.. image:: images/gb_coverage_track.png
+
+-  *Variation track* shows genetic variants (SNPs, insertions etc.), their
    exact position on the genome, average mapping quality and raw read
    depth;
 
-[genome browser methylation tutorial];|image55|
+.. image:: images/gb_variation_track.png
 
--  DNA methylation ratio: reflects the proportion of methylated and
+-  *Methylation ratios track* reflects the proportion of methylated and
    unmethylated cytosine residues.
+
+.. image:: images/gb_methylation_ratios_track.png
 
 Also you can manage tracks: add new ones, hide or delete them. When
 manipulating with multiple tracks you can use the tracks mentioned above
-to create Combined track or Formula track. On the combined track several
+to create *Combined track* or *Formula track*. On the combined track several
 tracks are imposed and shown together, thereby comparing coverage for
-different samples. Or you can apply some basic mathematical operations
+different samples.
+
+.. image:: images/gb_combined_track.png
+
+Or you can apply some basic mathematical operations
 and create formulas based on your genomic data, for example, quantify
 average value between values corresponding to different samples. The
 results of the computations will be shown on the formula track.
@@ -2008,8 +2046,7 @@ click on the position on the track). When you share the Genome Browser
 page with your collaborators, sticky notes will  help to focus their
 attention on your findings.
 
-You can see the Genome browser in action in this blog
-post_.
+You can see the Genome browser in action in this blog post_.
 
 .. _post: https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-browser/
 
