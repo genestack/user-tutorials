@@ -2002,7 +2002,7 @@ There are several tracks that can be visualized in Genome Browser:
 -  *Reference track* displays reference genome, its genes, transcripts,
    and their coordinates;
 
-.. image:: images/gb_reference track.png
+.. image:: images/gb_reference_track.png
 
 -  *Coverage track*: represents the sequencing reads coverage for mapped reads
 
@@ -2277,22 +2277,6 @@ Link:
 
 -  https://www.bioconductor.org/packages/3.3/bioc/html/affy.html
 -  https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
-
-References:
-
--  `Gautier L, Cope L, Bolstad BM and Irizarry RA (2004). "affy—analysis
-   of Affymetrix GeneChip data at the probe
-   level." <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532113000&usg=AFQjCNFtiT-91LNqFrgRk1EAgdkumx1r9A>`__`Bioinformatics <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`, <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`20 <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__`(3),
-   pp.
-   307–315. <https://www.google.com/url?q=http://www.ncbi.nlm.nih.gov/pubmed/14960456&sa=D&ust=1480960532114000&usg=AFQjCNGv5JUcbSDpTnNCyxm5J-sW76IfVQ>`__
--  `Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK
-   (2015). "limma powers differential expression analyses for
-   RNA-sequencing and microarray
-   studies." <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`Nucleic
-   Acids
-   Research <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`, <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532115000&usg=AFQjCNFI070iNpVwXIIiQQNFN2Yq6-aqMA>`__`43 <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532116000&usg=AFQjCNHHiEdnVuGvopb20Ndrx5PTDAUPkg>`__`(7),
-   pp.
-   e47. <https://www.google.com/url?q=http://europepmc.org/abstract/MED/25605792&sa=D&ust=1480960532116000&usg=AFQjCNHHiEdnVuGvopb20Ndrx5PTDAUPkg>`__
 
 GenePix Microarray Normalisation
 
