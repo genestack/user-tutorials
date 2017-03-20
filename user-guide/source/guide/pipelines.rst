@@ -1938,34 +1938,82 @@ Microbiome Data Analysis
 Microbiome Analysis with QIIME
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. TODO Update this part when the app will be updated
+
 **Action**: to identify microbial species and the percentage composition of the
 sample. The application accepts microbial sequencing reads and outputs
-Clinical and Research reports
-
-The application can be used to create a  clinical or research
-microbiology report with abundance plots and microbiological diversity
+Clinical or Research reports with abundance plots and microbiological diversity
 metrics.
 
-Metrics include:
+.. image:: images/microbiome_analysis.png
 
-– counts for every taxonomic unit (how many reads match to a given
-group)
+Microbiome Analysis application uses Greengenes_ (for bacteria) and UNITE_
+(for fungi) reference databases to estimate the taxonomic composition of the
+microbial communities.
 
-– alpha diversity (within each sample, how rich the sample is e.g.
-number of taxa identified)
+.. _Greengenes: http://greengenes.lbl.gov/cgi-bin/nph-index.cgi↵               
+.. _UNITE: http://www2.dpes.gu.se/project/unite/UNITE_intro.htm↵
 
-– beta diversity (difference between a pair of samples) (heterogeneity
-of samples)
+Let's review the application options:
 
-Microbiome analysis is performed using QIIME (open source tool), using
-"Greengenes 13.8" (for bacteria) and UNITE (for fungi) reference
-databases to estimate the taxonomic composition of the microbial
-communities.
+1. To pick OTUs (Operational Taxomonic Units), the application provides two
+protocols:
 
-The OTU picking step is performed using an open-reference procedure with
-uclust. Taxonomy assignment is done using the blast algorithm. Any reads
-that failed mapping to reference sequence are excluded. Tools used:
-qiime 1.9.1
+.. TODO Add pros and cons of the protocols
+.. TODO Add forum post on pros and cons between the protocols and link on it
+
+- *closed-reference*: reads are clustered against a reference sequence
+  collection and any reads which do not hit a sequence in the reference
+  sequence collection are excluded from downstream analyses
+
+- *open-reference*: reads are clustered against a reference sequence collection
+  and any reads which do not hit the reference sequence collection are
+  subsequently clustered de novo (i.e. against one another without any external
+  reference).
+
+2. Algorithms for open-reference close-reference OTU picking differ. In case
+   open-reference protocol, the application suggests you use uclust or
+   sortmera_sumclust algorithms. If you prefer closed-reference protocol,
+   choose between blast, uclust_ref and sortmera algorithms.
+
+3. A pre-clustering quality filtering step excludes all reads with a similarity
+   level below the default 0.99 from any gene in the reference database.
+
+4. Taxonomy assignment performs using the blust, rdp classifier, rtax, mothur,
+   uclust or sortmerna algorithm (for open-reference approach) or uclust (in
+   case of closed-reference method).
+
+5. As mentioned, when using open-reference protocol, some reads may not hit the
+   reference database.  In such case you can set the percent of failure
+   sequences to include in the subsample to cluster de novo (0.001 by default).
+
+6. If you analyse paired-end reads, you can join them using "Join paired-end
+   reads" option.
+
+Output reports include the following metrics:
+
+– counts for every taxonomic unit (how many reads match to a given group) in
+form of interactive plot:
+
+.. image:: images/microbime_analysis_counts.png
+
+or table:
+
+.. image:: images/microbiome_analysis_table.png
+
+– alpha diversity (within each sample, how rich the sample is e.g. number of
+taxa identified):
+
+.. image:: images/microbiome_analysis_alpha_diversity.png
+
+– beta diversity (difference between a pair of samples)(heterogeneity of
+samples):
+
+.. image:: images/microbiome_analysis_beta_diversity.png
+
+The application is based on QIIME_ open source tool.
+
+.. _QIIME: http://qiime.org/home_static/dataFiles.html
 
 Additional Visualisation Applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2004,7 +2052,7 @@ There are several tracks that can be visualized in Genome Browser:
 
 .. image:: images/gb_reference_track.png
 
--  *Coverage track*: represents the sequencing reads coverage for mapped reads
+-  *Coverage track* represents the sequencing reads coverage for mapped reads
 
 .. image:: images/gb_coverage_track.png
 
