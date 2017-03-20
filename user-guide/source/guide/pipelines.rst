@@ -423,7 +423,9 @@ error threshold (which is equal to 0.01 by default).
 .. _Phred algorithm: http://www.phrap.org/phredphrap/phred.html
 
 So, imagine you have a sequence: CGTAGACT
+
 Phred quality scores for each base are: 10 20 30 40 30 20 10
+
 Per base error probabilities are equal: 0.1 0.01 0.001 0.0001 0.0001 0.001 0.01 0.1
 
 The app will find the fragment of the read where the sum of all probability
@@ -541,11 +543,11 @@ statistics** will be calculated.
 
 Insert size statistics are useful to validate library constraction and include:
 
-#. Median insert size: a middle of a sorted list of insert sizes;
-#. Median absolute deviation: calculated by taking the median of the absolute
+#. Median insert size - a middle of a sorted list of insert sizes;
+#. Median absolute deviation is calculated by taking the median of the absolute
    deviations from the median insert size;
-#. Mean insert size (trimmed): an average of the insert sizes;
-#. Standard deviation of insert size: measures the variation in insert sizes
+#. Mean insert size (trimmed) - an average of the insert sizes;
+#. Standard deviation of insert size measures the variation in insert sizes
    from the mean insert size.
 
 And **Insert size distribution** graph will be displayed:
@@ -942,19 +944,17 @@ Let's look at the application page and discuss the parameters available there.
 
 .. image:: images/rsem_report.png
 
-“The RNA-Seq protocol used to generate the reads is strand specific”? If yes,
-check it. By default, the app considers the reads as non-strand-specific.
-
-It is important to know the fragment length distribution to estimate
-expression levels from for single-end data accurately. In this case, you need
-to specify the "Estimated average fragment length (for single-end reads only)".
-Typical Illumina libraries produce fragment lengths ranging between 180–200 bp.
-By default, the fragment length is set equal to 190. For paired-end reads, the
-average fragment length can be directly estimated from the reads.
-
-You can also set the "Estimated standard deviation of fragment length (for
-single-end reads only)" (the default value is 20). For paired-end reads this
-value will be estimated from the input data.
+#. “The RNA-Seq protocol used to generate the reads is strand specific”? If
+   yes, check it. By default, the app considers the reads as non-strand-specific.
+#. It is important to know the fragment length distribution to estimate
+   expression levels from for single-end data accurately. In this case, you need
+   to specify the "Estimated average fragment length (for single-end reads only)".
+   Typical Illumina libraries produce fragment lengths ranging between 180–200 bp.
+   By default, the fragment length is set equal to 190. For paired-end reads, the
+   average fragment length can be directly estimated from the reads.
+#. You can also set the "Estimated standard deviation of fragment length (for
+   single-end reads only)" (the default value is 20). For paired-end reads this
+   value will be estimated from the input data.
 
 When the task is complete, click "View report" in Explore section to get gene
 and isoform level expression estimates.
@@ -1170,21 +1170,24 @@ Look at all result tables and plots in Expression Navigator application.
 
    *Fold Change = tumor/control*
    
-   And if we apply Log2 transform for this value we’ll get Log2(Fold Change).
+   And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
 
    *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
 
    Log transformed values contains the same information as Fold Change but
    makes it more clear for interpretation because of symmetric values.
 
+
 -  **Log2(Counts per Million)**. Dividing each read count by millions yields
    counts per million (cpm), a simple measure of read abundance that can be
    compared across libraries of different sizes. And if we apply Log2 transform
    for this value we’ll get Log2(Counts per Million).
 
+
 -  **p-value**. The application also counts p-value for each gene. A low
    p–value is seen as evidence that the null hypothesis may not be true (i.e.,
    our gene is differentially expressed).
+
 
 -  **False discovery rate**. FDR is the expected proportion of Type I errors
    among the rejected hypotheses.
@@ -1232,21 +1235,24 @@ use Expression Navigator application.
 
   *Fold Change = tumor/control*
 
-  And if we apply Log2 transform for this value we’ll get Log2(Fold Change).
+  And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
 
   *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
   
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
 
+
 - **Log2(Counts per Million)**. Dividing each read count by millions yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
   for this value we’ll get Log2(Counts per Million).
 
+
 - **p-value**. The application also counts p-value for each isoform. A low
   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
   our isoform is differentially expressed).
+
 
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected hypotheses. In other words, it’s the fraction of isoforms
@@ -1287,7 +1293,7 @@ The Expression Navigator page contains 4 sections:
 
   *Fold Change = tumor/control*
 
-  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change).
+  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change):
 
   *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
   
@@ -1296,6 +1302,7 @@ The Expression Navigator page contains 4 sections:
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
+
 - **Log2(Counts per Million)**. Dividing each read count by millions yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
@@ -1303,9 +1310,11 @@ The Expression Navigator page contains 4 sections:
 
   *Counts per Million =  reads(gene)\^106/reads(all genes)*
 
+
 - **p-value**. The application also counts p-value for each gene. A low
   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
   our gene is differentially expressed).
+
 
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected null hypotheses. In other words, it’s the fraction of
