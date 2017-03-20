@@ -470,12 +470,13 @@ artifacts, etc) and do preprocessing of mapped reads.
 Mapped Reads QC Report
 ^^^^^^^^^^^^^^^^^^^^^^
 
-In order to perform the mapped reads QC we follow a similar procedure to the
-one used to generate FastQC reports. After selecting all the mapped reads we
-wish to check the quality of, we can use the `Mapped Reads QC`_ public data
-flow, initialize the computations, and then explore the results. You can read
-more about the Mapped Reads QC Report app in the "Explore" section of this
-guide.
+**Action**: to perform quality control (QC) of mapped reads.
+
+We follow a similar procedure to the one used to generate FastQC reports.
+After selecting all the mapped reads we wish to check the quality of, we can
+use the `Mapped Reads QC`_ public data flow, initialize the computations, and
+then explore the results. You can read more about the Mapped Reads QC Report
+app in the "Explore" section of this guide.
 
 .. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
@@ -582,10 +583,9 @@ Targeted Sequencing QC Report
 This application is good to use when analysing Targeted Sequencing data, e.g.
 Whole Exome Sequencing assays.
 
-Besides general quality control of mapped reads, you might also want to assess
-whether the target capture has been successful, i.e. if most of the reads
-actually fell on the target, if the targeted bases reached sufficient
-coverage, etc. To do that, you can use "Targeted Sequencing QC Report".
+**Action**: to assess whether the target capture has been successful, i.e. if
+most of the reads actually fell on the target, if the targeted bases reached
+sufficient coverage, etc. To do that, you can use "Targeted Sequencing QC Report".
 
 By default, the application allows you to compute enrichment statistics for
 reads mapped only on exome. If you go to the app page, change the value to
@@ -1177,17 +1177,14 @@ Look at all result tables and plots in Expression Navigator application.
    Log transformed values contains the same information as Fold Change but
    makes it more clear for interpretation because of symmetric values.
 
-
 -  **Log2(Counts per Million)**. Dividing each read count by millions yields
    counts per million (cpm), a simple measure of read abundance that can be
    compared across libraries of different sizes. And if we apply Log2 transform
    for this value we’ll get Log2(Counts per Million).
 
-
 -  **p-value**. The application also counts p-value for each gene. A low
    p–value is seen as evidence that the null hypothesis may not be true (i.e.,
    our gene is differentially expressed).
-
 
 -  **False discovery rate**. FDR is the expected proportion of Type I errors
    among the rejected hypotheses.
@@ -1242,17 +1239,14 @@ use Expression Navigator application.
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
 
-
 - **Log2(Counts per Million)**. Dividing each read count by millions yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
   for this value we’ll get Log2(Counts per Million).
 
-
 - **p-value**. The application also counts p-value for each isoform. A low
   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
   our isoform is differentially expressed).
-
 
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected hypotheses. In other words, it’s the fraction of isoforms
@@ -1302,7 +1296,6 @@ The Expression Navigator page contains 4 sections:
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
-
 - **Log2(Counts per Million)**. Dividing each read count by millions yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
@@ -1310,11 +1303,9 @@ The Expression Navigator page contains 4 sections:
 
   *Counts per Million =  reads(gene)\^106/reads(all genes)*
 
-
 - **p-value**. The application also counts p-value for each gene. A low
   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
   our gene is differentially expressed).
-
 
 - **False discovery rate**. FDR is the expected proportion of Type I errors
   among the rejected null hypotheses. In other words, it’s the fraction of
@@ -2269,49 +2260,76 @@ to read more on the topic, we suggest taking a look at the following papers:
 Microarray data
 ---------------
 
+DNA microarray analysis is one of the fastest-growing technologies in the field
+of genetic research. Scientists are using DNA microarrays to quantify gene
+expression levels on a large scale or to genotype multiple regions of a genome.
+
+.. note:: **What is a DNA Microarray?**
+
+          It is a collection of microscopic DNA spots attached to a solid
+          surface. Each spot contains multiple identical DNA sequences (known
+          as probes or oligos) and represents a gene or other DNA element that
+          are used to hybridize a cDNA or cRNA sample (called target) under
+          high-stringency conditions. Probe-target hybridization is measured by
+          detection of targets labeled with a molecular marker of either
+          radioactive or fluorescent molecules.
+
 Expression arrays
 ~~~~~~~~~~~~~~~~~
 
-Microarray normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^
+The human genome contains approximately 21,000 genes. At any given moment, each
+of our cells has some combination of these genes turned on, and others are
+turned off. To determine the gene activity in biological samples scientists use
+gene expression microarrays.
 
-When investigating differential gene expression using microarrays, it’s
-often the case that the expression levels of genes that should not
-change given different conditions (e.g. housekeeping genes) report an
-expression ratio other than 1. This can be caused by a variety of
-reasons, for instance: variation caused by differential labelling
-efficiency of the two fluorescent dyes used or different amounts of
-starting mRNA. You can read more about this here_.
+When investigating differential gene expression using microarrays, it is often
+the case that the expression levels of genes that should not change given
+different conditions (e.g. housekeeping genes) report an expression ratio
+other than 1. This can be caused by a variety of reasons, for instance:
+variation caused by differential labelling efficiency of the two fluorescent
+dyes used or different amounts of starting mRNA. You can read more about this
+`here <http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf>`_.
 
-Normalisation is a process that eliminates such variations in order to
-allow users to observe the actual biological differences in gene
-expression levels. On Genestack, we have three different Microarray
-Normalisation apps - one for each of the three commonly used chips:
-Affymetrix, Agilent, and GenePix.
+Normalisation is a process that eliminates such variations in order to allow
+users to observe the actual biological differences in gene expression levels.
+On Genestack, we have fout different Microarray Normalisation applications -
+one for each of the four commonly used chips: Affymetrix_, Agilent_, L1000_
+and GenePix_.
 
-Affymetrix Microarray Normalisation.
+.. _Affymetrix: http://www.affymetrix.com/estore/
+.. _Agilent: http://www.agilent.com/home/more-countries?currPageURL=http://www.agilent.com/home
+.. _L1000: http://genometry.com/
+.. _GenePix: https://www.moleculardevices.com/systems/microarray-scanners
 
-Best used: for Affymetrix microarray data
+Affymetrix Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Action: Normalisation of microarray data
+**Action**: to perform normalisation of Affymetrix microarray assays.
 
-Normalisation performed using using RMA.(Robust Multi-array Average).
+.. image:: images/affymetrix_normalization.png
 
-The normalised microarray output can be assessed using the Microarrays
-Quality Control application to detect and remove potential outliers.
-Normalised microarrays that are of good quality can then be processed
-for downstream processing such as Dose Response
-Analysis.
+To normalize affymetrix microarrays the application uses RMA (Robust
+Multi-array Average) method. First, the raw intensity values are background
+corrected, log2 transformed and then quantile normalized. Next a linear model
+is fit to the normalized data to obtain an expression measure for each probe
+set on each array. For more on RMA, see `here
+<https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5>`_.
 
-RMA normalisation is based on the affy R package developed by Gautier L,
-Cope L, Bolstad BM and Irizarry RA (2004), distributed under the GNU
-Lesser General Public License (LGPL) version 2.0 or later license.
+Further, the normalised microarrays can be assessed using the Microarray QC
+Report application to detect and remove potential outliers. Normalised
+microarrays that are of good quality can then be processed for downstream
+processing such as Dose Response Analysis.
 
-Agilent Microarray Normalisation
+The application is based on the affy_ R package.
 
-Best used: for Agilent microarray data
+.. _affy: http://bioconductor.org/packages/release/bioc/html/affy.html
 
-Action: Normalisation of microarray data
+Agilent Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*Action**: to perform normalisation of Agilent microarray assays.
+
+.. image:: images/agilent_normalisation.png
 
 For 1-channel Agilent microarrays, various procedures for background
 correction (e.g. "subtract", "half", "minimum", "normexp"), and
@@ -2320,22 +2338,17 @@ between-array normalisation (e.g. "quantile", "scale"), can be applied.
 For 2-channel Agilent microarrays, procedures for within-array
 normalisation (e.g. "loess", "median") can also be applied.
 
-The normalised microarray output can be assessed using the Microarrays
-Quality Control application to detect and remove potential outliers.
-Normalised microarrays that are of good quality, can then be used for
-downstream processing, such as Dose Response Analysis.
+Further, the normalised microarrays can be assessed using the Microarray QC
+Report application to detect and remove potential outliers. Normalised
+microarrays that are of good quality can then be processed for downstream
+processing such as Dose Response Analysis.
 
-Normalisation procedures for Agilent are based on the limma R package
-developed by Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth
-GK (2015), distributed under GNU General Public License (GPL) version
-2.0 or later.
+The application is based on the limma_ R package.
 
-Link:
+.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
--  https://www.bioconductor.org/packages/3.3/bioc/html/affy.html
--  https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
-
-GenePix Microarray Normalisation
+GenePix Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Best used: for GenePix microarray data
 
