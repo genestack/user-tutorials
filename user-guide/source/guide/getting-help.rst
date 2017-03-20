@@ -21,17 +21,17 @@ Getting in touch with Genestack
 
 There are various ways to get in touch with our team:
 
-1)*Chatra*: a chat window can be found at the bottom of our homepage.
+- *Chatra*: a chat window can be found at the bottom of our homepage.
 During our operating hours at least one of us is always available to
 help. Outside of our operating hours, you can leave us a message using
 the chat window and we will get back to you as soon as we can.
 
-2)*Forum*: when you have a question about the platform, try posting it on
-our forum: forum.genestack.org. Our community will definitely be keen to
+- *Forum*: when you have a question about the platform, try posting it on
+our forum. You can find it here: forum.genestack.org. Our community will definitely be keen to
 help you, and if not, our team regularly checks the forum and will
 answer any unanswered questions.
 
-3)*Email*: you can email us at support@genestack.com 
+- *Email*: you can email us at support@genestack.com 
 
 
 FAQ
@@ -65,12 +65,14 @@ take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
 **How do I initialize the files?**
+
 You can start initialisation from various places in our system.
 For example, you can use special File Initializer app accepting multiple file, then, you can start initialization when run dataflow.
 Morover, you can right-click file name wherever you are and select "start initialization"
 option in the context menu: on the app page, in File Manger, Task Manager etc.
 
 **How do I create a data flow?**
+
 To create a data flow, select the data you
 wish to analyse and choose the first app you wish to use in your
 analysis. On the app page, using the "add step" button, add the rest of
