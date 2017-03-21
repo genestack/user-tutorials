@@ -1329,6 +1329,8 @@ You can read more about this app in the corresponding `tutorials`_.
 
 .. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
 
+.. TODO: add Differential Similarity Search application
+
 Single-cell RNA-seq Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2282,6 +2284,9 @@ of our cells has some combination of these genes turned on, and others are
 turned off. To determine the gene activity in biological samples scientists use
 gene expression microarrays.
 
+Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 When investigating differential gene expression using microarrays, it is often
 the case that the expression levels of genes that should not change given
 different conditions (e.g. housekeeping genes) report an expression ratio
@@ -2302,7 +2307,7 @@ and GenePix_.
 .. _GenePix: https://www.moleculardevices.com/systems/microarray-scanners
 
 Affymetrix Microarrays Normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+************************************
 
 **Action**: to perform normalisation of Affymetrix microarray assays.
 
@@ -2325,7 +2330,7 @@ The application is based on the affy_ R package.
 .. _affy: http://bioconductor.org/packages/release/bioc/html/affy.html
 
 Agilent Microarrays Normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************
 
 **Action**: to perform normalisation of Agilent microarray assays.
 
@@ -2364,7 +2369,7 @@ The application is based on the limma_ R package.
 .. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
 GenePix Microarrays Normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************
 
 **Action**: to perform normalisation of GenePix microarray assays.
 
@@ -2380,7 +2385,7 @@ microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
 L1000 Microarrays Normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************
 
 **Action**: to perform normalisation of L1000 microarray assays.
 
@@ -2395,13 +2400,118 @@ microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
 Microarray Quality Control
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Expression navigator for expression analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As in any statistical analysis, the quality of the data must be checked. The
+goal of this step is to determine if the whole process has worked well enough
+so that the data can be considered reliable.
 
-Compound dose response analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In Genestack, to perform quality assessment of microarrays, select normalised
+microarrays and run Microarray QC application.
+
+.. image:: images/microarray_qc.png
+
+The application will detect possible outliers and generate report containing
+quality metrics based on between-array comparisons, array intensity,
+variance-mean dependence and individual array quality. Some metrics have their
+own labels. It helps to undertsand according to which metric(s) the particular
+microarray is considered to be outlier.
+
+.. image:: images/microarray_gc_report.png
+
+QC metrics are computed for both the unnormalised and normalised microarrays
+and include:
+
+1. **Between array comparison** metrics.
+  
+- Principal Component Analysis (PCA) is a dimension reduction and visualisation
+  technique that is used to project the multivariate data vector of each
+  array into a two-dimensional plot, such that the spatial arrangement of the
+  points in the plot reflects the overall data (dis)similarity between the
+  arrays.
+
+  For example, in the picture below, PCA identifies variance in datasets,
+  which can come from real differences between samples, or, as in our case,
+  from the failed "CD4 T lymphocytes, blood draw (1)" array.
+
+.. image:: images/microarray_qc_pca.png
+
+- Distances between arrays. The application computes the distances between
+  arrays. The distance between two arrays is computed as the mean absolute
+  difference (L1-distance) between the data of the arrays (using the data from
+  all probes without filtering).
+
+  The array will be detected as an outlier if for this array the sum of the
+  distances to all other arrays is extremly large.
+
+.. image:: images/microarrays_qc_distances_between_arrays.png
+
+2. **Array intensity** statistics.
+  
+- Boxplots of signal intensities represents signal intensity distributions of
+  the microarrays. Typically, we expect to see the boxes similar in position
+  and width. If they are different, it may indicate an experimental problem.
+
+.. image:: images/microarray_qc_boxplots_of_signal_intensities.png
+
+- Density plots of signal intensities show density distributions for
+  microarrays. In a typical experiment, we expect these distributions to have
+  similar shapes and ranges. The differences in density distributions can
+  indicate the quality related problems.
+
+.. image:: images/microarray_qc_density_plots_of_signal_intensities.png
+
+3. **Variance mean dependence** metric.
+  
+- "Standard deviation versus mean rank" plot is a density plot of the standard
+  deviation of the intensities across arrays on the y-axis versus the rank of
+  their mean on the x-axis. The red dots, connected by lines, show the running
+  median of the standard deviation.
+
+  After normalisation procedure we typically expect the red line to be almost
+  horizontal. A hump on the right-hand side of the line may indicate a
+  saturation of the intensities.
+
+.. image:: images/microarray_qc_standard_deviation_vs_mean_rank.png
+
+4. **Individual array quality**.
+  
+- MA Plots allow pairewise comparison of log-intensity of each array to a
+  "pseudo"-array (which consists of the median across arrays) and
+  identification of intensity-dependent biases. The Y axis of the plot
+  contains the log-ratio intensity of one array to the median array, which is
+  called 'M' while the X axis contains the average log-intensity of both
+  arrays - called 'A'. Typically, probe levels are not likely to differ a lot
+  so we expect a MA plot centered on the Y=0 axis from low to high intensities.
+
+.. image:: images/microarray_qc_MA_plot.png
+
+Additional Affymetrix-specific metrics are also computed for Affymetrix
+microarrays.
+
+Overall, if you click on "Outlier detection overview" the appication will
+detect apparent outlier arrays, suggest you remove them and re-normalise
+your data or continue Differential Expression or Dose Response analyses.
+
+.. image:: images/microarray_gc_report_outlier.png
+
+The application is based on ArrayQualityMetrics_ R package.
+
+.. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
+
+Differential Gene Expression for Microarrays
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Test Differential Expression for Microarrays
+********************************************
+
+Expression Navigator
+********************
+
+Compound Dose Response Analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Good for: Microarray data analysis
 
@@ -2442,8 +2552,10 @@ package limma).
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
 
-Methylation array normalisation (coming soon)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. TODO comming soon
 
 Methylation array QC (coming soon)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
