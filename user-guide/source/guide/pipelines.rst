@@ -372,7 +372,7 @@ incorrect base call.
 You can also discard reads specifying a minimum percentage of bases to be above
 the minimum quality score.
 
-This tool is based on *fastq_quality_filter*, which is part of the
+This tool is based on **fastq_quality_filter**, which is part of the
 FASTX-Toolkit_.
 
 .. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
@@ -2292,7 +2292,7 @@ dyes used or different amounts of starting mRNA. You can read more about this
 
 Normalisation is a process that eliminates such variations in order to allow
 users to observe the actual biological differences in gene expression levels.
-On Genestack, we have fout different Microarray Normalisation applications -
+On Genestack, we have four different Microarray Normalisation applications -
 one for each of the four commonly used chips: Affymetrix_, Agilent_, L1000_
 and GenePix_.
 
@@ -2318,7 +2318,7 @@ set on each array. For more on RMA, see `here
 Further, the normalised microarrays can be assessed using the Microarray QC
 Report application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis.
+processing such as Dose Response Analysis or Test Differential Expression.
 
 The application is based on the affy_ R package.
 
@@ -2327,21 +2327,37 @@ The application is based on the affy_ R package.
 Agilent Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Action**: to perform normalisation of Agilent microarray assays.
+**Action**: to perform normalisation of Agilent microarray assays.
 
 .. image:: images/agilent_normalisation.png
 
 For 1-channel Agilent microarrays, various procedures for background
-correction (e.g. "subtract", "half", "minimum", "normexp"), and
-between-array normalisation (e.g. "quantile", "scale"), can be applied.
+correction (e.g. "subtract", "half", "minimum", "normexp"), and between-array
+normalisation (e.g. "quantile", "scale"), can be applied.
 
-For 2-channel Agilent microarrays, procedures for within-array
-normalisation (e.g. "loess", "median") can also be applied.
+For 2-channel Agilent microarrays, procedures for within-array normalisation
+(e.g. "loess", "median") can also be applied.
+
+.. note:: **What is the difference between 1-channel and 2-channel microarray?**
+
+          Two-channel (or two-color) microarrays are typically hybridized with
+          cDNA prepared from two samples (or two experimental conditions)
+          that the scientists want to compare, e.g. disseased tissue vs.
+          healthy tissue. These arrays samples are labeled with two different
+          fluorophores, say Cy5 and Cy3 dyes, and will emit signal with
+          different intensuty. Relative intensities of each fluorophore may then
+          be used in ratio-based analysis to identify up-regulated and
+          down-regulated genes
+          
+          In single-channel arrays, also called one-color microarrays, each
+          experimental condition must be applied to a separate chip. They give
+          estimation of the absolute levels of gene expression and only a sigle
+          dye is uded.
 
 Further, the normalised microarrays can be assessed using the Microarray QC
 Report application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis.
+processing such as Dose Response Analysis or Test Differential Expression.
 
 The application is based on the limma_ R package.
 
@@ -2350,22 +2366,36 @@ The application is based on the limma_ R package.
 GenePix Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Best used: for GenePix microarray data
+**Action**: to perform normalisation of GenePix microarray assays.
 
-Action: Normalisation of GenePix microarray data
+.. image:: images/genepix_normalisation.png
 
-For GenePix microarrays, quantile between-array normalisation is
-performed and various procedures for background correction (e.g.
-"subtract", "half", "minimum", "normexp") can be applied.
+For GenePix microarrays, quantile between-array normalisation is performed and
+various procedures for background correction (e.g. "subtract", "half",
+"minimum", "normexp") can be applied.
 
-The normalised microarrays output can be assessed using the Microarrays
-Quality Control application to detect and remove potential outliers.
-Normalised microarrays that are of good quality, can then be processed
-for downstream processing such as Dose Response
-Analysis.
+Further, the normalised microarrays can be assessed using the Microarray QC
+Report application to detect and remove potential outliers. Normalised
+microarrays that are of good quality can then be processed for downstream
+processing such as Dose Response Analysis or Test Differential Expression.
 
-Microarray QC
-~~~~~~~~~~~~~
+L1000 Microarrays Normalisation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Action**: to perform normalisation of L1000 microarray assays.
+
+.. image:: images/l1000_normalisation.png
+
+To normalize L1000 microarrays, the application applys the "quantile" method
+for between-array normalisation.
+
+Further, the normalised microarrays can be assessed using the Microarray QC
+Report application to detect and remove potential outliers. Normalised
+microarrays that are of good quality can then be processed for downstream
+processing such as Dose Response Analysis or Test Differential Expression.
+
+Microarray Quality Control
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Expression navigator for expression analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
