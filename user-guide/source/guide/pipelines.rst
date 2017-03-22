@@ -2510,44 +2510,61 @@ Test Differential Expression for Microarrays
 Expression Navigator
 ********************
 
-Compound Dose Response Analysis
+Compound Dose Response Analyser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Good for: Microarray data analysis
-
-Input: Microarray data
-
-Action: Describes the expression profiles of the significant genes as a
+**Action**: to describe the expression profiles of the significant genes as a
 function of the dose.
 
-Output:
+The application performs dose response analysis on normalized microarrays. It
+requires microarray annotation (you can upload your own or use the publicly
+available one). If you'd like to perform pathway enrichment analysis, choose
+pathways annotation as well.
 
-Further apps to use:
+.. image:: images/dose_response_analysis.png
 
-This application performs dose response analysis on microarray data. It
-identifies differentially expressed genes using the Bioconductor package
-`limma <https://www.google.com/url?q=https://www.bioconductor.org/packages/release/bioc/html/limma.html&sa=D&ust=1480960532122000&usg=AFQjCNG3x6jMZtVXNPxYzOvN8LfePE4Upw>`__.
-It then fits various regression models (linear, quadratic and power) to
-describe the expression profiles of the significant genes as a function
-of the dose.
+To see the results, open Dose Respone Analysis Viewer:
 
-The results are then reported in an interactive table. For each gene, an
-optimal model is suggested based on the Akaike Information Criterion
-(AIC), and the benchmark dose (BMD) is computed for that model. The
-benchmark dose is estimated based on the method described in the
-`Benchmark Dose
-Software <https://www.google.com/url?q=http://www2.epa.gov/bmds/benchmark-dose-software-bmds-user-manual&sa=D&ust=1480960532124000&usg=AFQjCNHr41OQZN2zUawMuYPhF2n_To5Okg>`__` (BMDS)
-user
-manual: <https://www.google.com/url?q=http://www2.epa.gov/bmds/benchmark-dose-software-bmds-user-manual&sa=D&ust=1480960532124000&usg=AFQjCNHr41OQZN2zUawMuYPhF2n_To5Okg>`__
+.. image:: images/dose_response_analysis_report.png
 
-Let m(d) be the expected gene expression at dose d. The BMD then
-satisfies the following equation: \|m(BMD)-m(0)\| = 1.349σ0 . In this
-formula, σ0 is the standard deviation of the response at dose 0, which
-we approximate by the sample standard deviation of the model residuals.
+The application identifies differentially expressed genes and then fits
+various regression models (linear, quadratic and power) to describe the
+expression profiles of the significant genes as a function of the dose.
 
-Link:
- `https://www.bioconductor.org/packages/release/bioc/html/limma.html <https://www.google.com/url?q=https://www.bioconductor.org/packages/release/bioc/html/limma.html&sa=D&ust=1480960532126000&usg=AFQjCNE45BYdIt9VkhhDfo8s1lWXV9K96A>`__ (Bioconductor
-package limma).
+The results are then reported in an interactive table:
+
+- *PROBE ID* - an identifier of the probe which is designed to interrogate a
+  given sequence;
+- *GENE* - a gene interrogated to a particular probe. If you click on the gene
+  name, you'll get a list of Gene Ontology terms representing the properties of
+  the gene product:
+
+.. image:: images/dose_response_analysis_gene_ontology.png
+
+- *BMD* - a benchmark dose (BMD) is computed for gene;
+- *BEST MODEL* - an optimal model for gene suggested based on the Akaike
+  Information Criterion (AIC);
+- *MEAN EXPR* - 
+- *T* - 
+- *P* - 
+- *FDR* - 
+- *B* - 
+
+.. image:: images/dose_response_analysis_one_gene.png
+
+Let *m(d)* be the expected gene expression at dose *d*. The BMD then satisfies
+the following equation: *|m(BMD)-m(0)| = 1.349σ*. In this formula, *σ* is the
+standard deviation of the response at dose 0, which we approximate by the
+sample standard deviation of the model residuals.
+
+.. image:: images/dose_response_analysis_pathways.png
+
+The application is based on limma_ R package. The benchmark dose is estimated
+based on the method described in the `Benchmark Dose Software user manual`_
+(BMDS).
+
+.. _limma: https://www.bioconductor.org/packages/release/bioc/html/limma.html
+.. _Benchmark Dose Software user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
 
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
