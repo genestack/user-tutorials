@@ -2510,61 +2510,105 @@ Test Differential Expression for Microarrays
 Expression Navigator
 ********************
 
-Compound Dose Response Analyser
+Compound Dose Response Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to describe the expression profiles of the significant genes as a
-function of the dose.
+.. TODO Add more info about dose response analysis
 
-The application performs dose response analysis on normalized microarrays. It
-requires microarray annotation (you can upload your own or use the publicly
+Dose Response Analyser
+**********************
+
+**Action**: to identify differentially expressed (DE) genes, fit various dose
+response models (linear, quadratic and Emax), find the optimal model and
+compute benchmark dose and dose response for each gene for this model.
+
+The application performs dose response analysis on normalized microarrays.
+Also, it requires microarray annotation (you can upload your own or use the publicly
 available one). If you'd like to perform pathway enrichment analysis, choose
 pathways annotation as well.
 
 .. image:: images/dose_response_analysis.png
 
-To see the results, open Dose Respone Analysis Viewer:
+Let's look at the options:
+
+- For each gene, `false discovery rate
+  <http://www.cbil.upenn.edu/PaGE/fdr.html>`_ (FDR) is calculated. Set "FDR filter
+  for differentially expressed genes" to say application the genes with what
+  what FDR should be considered as DE (by default, with FDR < 0.1).
+- You need to specify "Metainfo key for dose value". Without this to be done,
+  the application will not work properly. So, if you indicated dose values in
+  metainfo for your data, then just select the appropriate metainfo key here.
+  If not, please open Metainfo Editor aplication on you raw data and fill in
+  this metainfo.
+
+The application is based on `limma
+<https://www.bioconductor.org/packages/release/bioc/html/limma.html>`_ R package. The benchmark dose is estimated
+based on the method described in the `Benchmark Dose Software (BMDS) user manual`_.
+
+.. _Benchmark Dose Software (BMDS) user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
+
+Dose Response Analysis Viewer
+*****************************
+
+**Action**: to describe the expression profiles of the significant genes as a
+function of the dose. If there no significant genes will be found, the
+application will report the genes with the smallest unadjusted p-values.
 
 .. image:: images/dose_response_analysis_report.png
 
-The application identifies differentially expressed genes and then fits
-various regression models (linear, quadratic and power) to describe the
-expression profiles of the significant genes as a function of the dose.
+Various regression models (linear, quadratic and Emax) are fitted for each
+identified DE gene to describe its expression profile as a function of the
+dose. These results are presented in an interactive table.
 
-The results are then reported in an interactive table:
+.. image:: images/dose_response_analysis_table.png
+
+The table includes information about:
 
 - *PROBE ID* - an identifier of the probe which is designed to interrogate a
   given sequence;
 - *GENE* - a gene interrogated to a particular probe. If you click on the gene
   name, you'll get a list of Gene Ontology terms representing the properties of
-  the gene product:
+  the gene product.
 
 .. image:: images/dose_response_analysis_gene_ontology.png
 
-- *BMD* - a benchmark dose (BMD) is computed for gene;
+- *BMD* - a benchmark dose (BMD) is computed for gene and used to estimate
+  acceptable dose levels of exposure;
 - *BEST MODEL* - an optimal model for gene suggested based on the Akaike
   Information Criterion (AIC);
-- *MEAN EXPR* - 
-- *T* - 
-- *P* - 
-- *FDR* - 
-- *B* - 
+- *MEAN EXPR* - a mean gene expression at a given dose level;
+- *T* - the Student’s t-statistic used for comparison between two groups of
+  data;
+- *P* - p-value;
+- *FDR* - false discovey rate value;
+- *B* - a slope parameter, depicting the steepness of the dose-response curve.
+  It will be negative in case of an increasing dose-response relationship.
 
-.. image:: images/dose_response_analysis_one_gene.png
+Here is the dose-response curves (linear and EMax models) for *MCOLN1* gene:
+
+.. image:: images/dose_response_analysis_plot.png
 
 Let *m(d)* be the expected gene expression at dose *d*. The BMD then satisfies
 the following equation: *|m(BMD)-m(0)| = 1.349σ*. In this formula, *σ* is the
 standard deviation of the response at dose 0, which we approximate by the
 sample standard deviation of the model residuals.
 
+If you specified pathways annotation, the application shows you pathways
+enrichment (see in "Pathways" tab).
+
 .. image:: images/dose_response_analysis_pathways.png
 
-The application is based on limma_ R package. The benchmark dose is estimated
-based on the method described in the `Benchmark Dose Software user manual`_
-(BMDS).
+The table includes:
 
-.. _limma: https://www.bioconductor.org/packages/release/bioc/html/limma.html
-.. _Benchmark Dose Software user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
+- *PATHWAY* - pathway name, e.g. "Iron metabolism in placenta";
+- *SIZE* - pathway size, i.e. how many genes are involved in the given pathway;
+- *DE GENES* - how many pathway genes are found to be differentially expressed
+  in our data. Clicking on the specific pathway takes you to the "Genes" tab
+  where you can get expression profiles and regression curves for the DE genes.
+- *P* - p-value;
+- *FDR* - false discovey rate value;
+- *BMD* - a benchmark dose (BMD) is computed for a pathway;
+- *BMD SD* - BMD standard deviation.
 
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
