@@ -1260,21 +1260,18 @@ This application is based on **cuffdiff** which is a part of Cufflinks_.
 Expression Navigator
 ^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to visualize results for Differential Gene Expression or Differential
-Isoform Expression analyses.
-
-.. image:: images/expression_navigator_for_RNA-seq.png
-
 **Action**: to view and filter the results of differential gene and isoform
 expression analyses.
 
+.. image:: images/expression_navigator_for_RNA-seq.png
+
 The Expression Navigator page contains 4 sections:
 
-#. The topmost section, "Groups Information", is a summary of the groups
+1. The topmost section, "Groups Information", is a summary of the groups
    available for comparison. Size refers to the number of samples used to
    generate each group. The drop-down selection menu lets you choose which
    groups to compare.
-#. The leftmost section allows you to filter and choose genes for comparison.
+2. The leftmost section allows you to filter and choose genes for comparison.
    You can filter by maximum acceptable false discovery rate (FDR), up or down
    regulation, minimum log fold change (LogFC), and minimum log counts per
    million (LogCPM).
@@ -1317,11 +1314,11 @@ The Expression Navigator page contains 4 sections:
   The buttons at the bottom of the section allow you to refresh the list
   based on your filtering criteria or clear your selection.
 
-#. The top right section contains a box plots of expression levels. Genes are
+3. The top right section contains a box plots of expression levels. Genes are
    listed on the x axis with one bar present for each  selected group. Log
    normalized expression levels are plotted on the y axis.
 
-#. The bottom right section contains a search box for genes of interest. You
+4. The bottom right section contains a search box for genes of interest. You
    can search for one gene at a time with auto-complete functionality. These
    genes do not need to be on the filtered list.
 
@@ -2406,16 +2403,16 @@ As in any statistical analysis, the quality of the data must be checked. The
 goal of this step is to determine if the whole process has worked well enough
 so that the data can be considered reliable.
 
-In Genestack, to perform quality assessment of microarrays, select normalised
-microarrays and run Microarray QC application.
+**Action**: to perform quality assessment of normalised microarrays and detect
+potential outliers.
 
 .. image:: images/microarray_qc.png
 
-The application will detect possible outliers and generate report containing
-quality metrics based on between-array comparisons, array intensity,
-variance-mean dependence and individual array quality. Some metrics have their
-own labels. It helps to undertsand according to which metric(s) the particular
-microarray is considered to be outlier.
+The application generates report containing quality metrics based on
+between-array comparisons, array intensity, variance-mean dependence and
+individual array quality. Some metrics have their own labels. It helps to
+undertsand according to which metric(s) the particular microarray is
+considered to be outlier.
 
 .. image:: images/microarray_gc_report.png
 
@@ -2502,13 +2499,136 @@ The application is based on ArrayQualityMetrics_ R package.
 Differential Gene Expression for Microarrays
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Expression microarrays can simultaneously measure the expression level of
+thousands of genes between sample groups. For example, to understand the effect
+of a drug we may ask which genes are up-regulated or down-regulated between
+treatment and control groups, i.e. to perform differential expression analysis.
 
+.. note:: **What are up-regulated and down-regulated genes?**
+
+          The up-regulated genes are genes that are more highly expressed
+          compared to the reference ones (i.e wild type). Down-regulated genes
+          are the ones having a decrease in their expression in comparison
+          with the reference expression.
+
+Since the microarrays are normalized, they are ready for the downstream
+Differential Expression Analysis.
 
 Test Differential Expression for Microarrays
 ********************************************
 
+**Action**: to perform differential expression analysis between groups of
+microarrays.
+
+The application requires normalized microarrays to calculate differential
+expression statistics (such as normalized counts, log-fold change, p-value and
+FDR) and microarray annotation to map probe identifiers to the gene symbols.
+
+.. image:: images/test_differential_expression_microarrays.png
+
+Let's look at the options:
+
+1. First, you need to **group samples by** experimental factor or condition you
+   specified in metainfo for samples. For example, if you have 6 samples -
+   three of them are treated by compound X, and the rest three are untreated - the
+   grouping factor will be the treatment procedure. If you do not have any
+   grouping factors here, please open Metainfo Editor application on the raw
+   samples and fill in the corresponding metainfo for them.
+2. If youe experiment uses control group specify it under the **Control group**
+   option.
+
+.. note:: **What is the difference between Control Group and Experimental
+          Group?**
+
+          The difference between a control group and an experimental group is
+          one group is exposed to the experimental conditions (e.g. compound
+          treatment) and the other is not (without compound treatment).
+
+When the analysis in finished, you can explore the results in Expression
+Navigator.
+
+.. image:: images/en_microarrays.png
+
 Expression Navigator
 ********************
+
+**Action**: to view and filter the results of differential gene expression
+analysis.
+
+.. image:: images/en_microarrays_app_page.png
+
+The Expression Navigator page contains 4 sections:
+
+1. **Groups Information** section. It is a summary of the groups available for
+   comparison. Size refers to the number of samples used to generate each
+   group.
+   
+2. **Top Differentially Expressed Genes** section allows you to choose which
+   groups to compare and how to filter and sort identiffied differentially
+   expressed (DE) genes.
+   
+.. image:: images/en_microarrays_DE_genes_table.png
+   
+You can filter DE genes by maximum acceptable false discovery rate (FDR), up
+or down regulation, minimum log fold change (LogFC), and minimum log counts
+per million (LogCPM).
+
+.. image:: images/en_microarrays_filtering.png
+
+Let's look through these statistics:
+
+- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
+  with control samples. Then, for each gene in a sample we know read counts
+  (output of Quantify Raw Coverage in Genes application). If we divide read
+  counts value for gene X (in the tumor sample) by the read counts value for
+  gene X (in the control sample) we’ll get the Fold Change value:
+
+  *Fold Change = tumor/control*
+
+  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change):
+
+  *Log2 Fold Change = Log2 (tumor) - Log2(control)**
+
+  Log transformed values contains the same information as Fold Change but makes
+  it more clear for interpretation because of symmetric values. Genes with
+  positive Log FC are considered to be up-regulated in the selected group, ones
+  with negative Log FC are down-regulated.
+
+- **Log2(Counts per Million)**. Dividing each read count by millions yields counts
+  per million (cpm), a simple measure of read abundance that can be compared
+  across libraries of different sizes. And if we apply Log2 transform for this
+  value we’ll get Log2(Counts per Million).
+
+  *Counts per Million =  reads(gene)^106/reads(all genes)*
+
+- **p-value**. The application also counts p-value for each gene. A low p–value is
+  seen as evidence that the null hypothesis may not be true (i.e., our gene is
+  differentially expressed).
+
+- **False discovery rate**. FDR is the expected proportion of Type I errors among
+  the rejected null hypotheses. In other words, it’s the fraction of genes for
+  which a significant variation was identified incorrectly. You can read more
+  about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+
+Moreover, you can sort the DE genes by these statistics, clicking the small
+arrows near the name of the metric in the table.
+
+.. image:: images/en_microarrays_sorting.png
+
+The buttons at the bottom of the section allow you to refresh the list based on
+your filtering criteria or clear your selection.
+
+3. The top right section contains a **box plots of expression levels**. Genes are
+   listed on the x axis with one bar present for each  selected group. Log
+   normalized expression levels are plotted on the y axis.
+
+.. image:: images/en_microarrays_boxplots.png
+
+4. The bottom right section contains a **search box for genes of interest**. You
+   can search for one gene at a time with auto-complete functionality. These
+   genes do not need to be on the filtered list.
+
+.. image:: images/en_microarrays_search_genes.png
 
 Compound Dose Response Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2531,15 +2651,15 @@ pathways annotation as well.
 
 Let's look at the options:
 
-- For each gene, `false discovery rate
-  <http://www.cbil.upenn.edu/PaGE/fdr.html>`_ (FDR) is calculated. Set "FDR filter
-  for differentially expressed genes" to say application the genes with what
-  what FDR should be considered as DE (by default, with FDR < 0.1).
-- You need to specify "Metainfo key for dose value". Without this to be done,
-  the application will not work properly. So, if you indicated dose values in
-  metainfo for your data, then just select the appropriate metainfo key here.
-  If not, please open Metainfo Editor aplication on you raw data and fill in
-  this metainfo.
+1. For each gene, `false discovery rate
+   <http://www.cbil.upenn.edu/PaGE/fdr.html>`_ (FDR) is calculated. Set "FDR filter
+   for differentially expressed genes" to say application the genes with what
+   what FDR should be considered as DE (by default, with FDR < 0.1).
+2. You need to specify "Metainfo key for dose value". Without this to be done,
+   the application will not work properly. So, if you indicated dose values in
+   metainfo for your data, then just select the appropriate metainfo key here.
+   If not, please open Metainfo Editor aplication on you raw data and fill in
+   this metainfo.
 
 The application is based on `limma
 <https://www.bioconductor.org/packages/release/bioc/html/limma.html>`_ R package. The benchmark dose is estimated
