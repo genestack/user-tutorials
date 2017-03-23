@@ -2551,17 +2551,130 @@ package limma).
 
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
+DNA methylation arrays are a widely-used tool to assess DNA methylation genome-wide.
+The "Illumina HumanMethylation450K" array allow to estimate methylation
+with high coverage and relatively low cost. It makes "450K" a powerful tool for
+epigenome-wide association studies (EWAS) projects. The "Illumina Infinium MethylationEPIC" are
+the next-generation microarrays. While "450K" detects more than 485,000 methylation sites
+per sample at single-nucleotide resolution "EPIC" covers over 850,000 ones.
+
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+**Action**: to perform normalisation of methylation microarray assays.
+
+For methylation microarrays,  normalisation can be performed with either "subsetQuantileWithinArray"
+method or "quantile"and "GenomeStudio" background correction can be applied.
+
+Further, the quality of  normalised microarrays can be checked using the Microarray QC
+Report application to detect and remove potential outliers. Normalised
+microarrays that are of good quality can then be used in "Differential methylation".
+
 
 .. TODO comming soon
 
-Methylation array QC (coming soon)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Methylation array QC
+^^^^^^^^^^^^^^^^^^^^
+**Action**: to asses quality of methylation microarray assays.
 
-Expression navigator for methylation arrays (coming soon)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Currently, there are two methods that are used to estimate DNA methylation level:
+*Beta value* and *M-value*.
 
+The Beta-value is the ratio of the methylated probe intensity and the overall
+intensity (sum of methylated and unmethylated probe intensities);
+The M-value is log2 ratio of the intensities of methylated probe versus unmethylated probe
+(Du P. et al., 2010).
+
+
+Various types of quality control plots are provided by the example of the Infinium 450K microarrays:
+
+1) *Log median intensity* plot in both methylated and unmethylated channels. In general, "good" samples
+tend to cluster together, while "bad" samples tend to separate and have lower median intensities.
+
+.. image:: images/log-median-intensities.png
+
+
+2) Beta-values of the assays are represented by:
+- *Beta density* plot
+
+.. image:: images/qc-beta-density.png
+
+- *Beta density bean*
+
+.. image:: images/qc-beta-density-bean.png
+
+3) Control probes plots
+The Infinium 450K arrays have several internal control probes helping to track
+the quality on different stages of assay preparation:
+
+SAMPLE-INDEPENDENT CONTROLS
+
+#. *Staining control strip* - to estimate the efficiency of the staining step for both the red and green channels.
+They are independent of the hybridization and extension steps.
+
+.. image:: images/qc-staining.png
+
+
+#. *Extension control strip* - test efficiency of single-base extension of the probes that incorporates labeled nucleotides.
+Both red (A andT, labeled with ) and green (C and G labeled with ) channels are considered.
+
+.. image:: images/qc-extension.png
+
+
+#. *Target removal control strip* -
+
+.. image:: images/qc-target-removal.png
+
+#.  *Hybridization control strip* - hybridisation to BeadChip
+
+.. image:: images/qc-hybridisation.png
+
+SAMPLE-DEPENDENT CONTROLS
+
+#. Bisulfite-conversion
+
+To estimate methylation of DNA 450k assay probe preparation involves bisulfite conversion DNA
+when all unmethylated cytosines are converted to uracils, but methylated cytosines are remains as they are.
+
+.. image:: array-bisulfite-conversion.png
+
+(From `"Infnium® HD Assay Methylation Protocol Guide"`_ by Illumina)
+
+.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+
+- *Bisulphite conversion I control strip*
+
+.. image:: images/QC-bisulphite-I.png
+
+- *Bisulphite conversion II control strip*
+
+
+
+- *Specificity I control strip*
+
+.. image:: images/qc-specificity-I.png
+
+- *Specificity II control strip*
+
+
+The app also allows you to download report containing the QC plots in PDF format
+as well as the following files with the following statistic results:
+
+- *Methylation values*
+- *Unmethylation values*
+- *Beta values*
+- *M-values*
+- *Copy number values*
+- *Log median intensity values*
+
+
+Differential methylation analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Epression navigator for methylation arrays (coming soon)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Action**:
+
+- Test Differential Methylation
+- Test Differential Regions Methylation
 
 .. _here: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf
