@@ -46,11 +46,11 @@ FastQC report
 .. TODO this is a tutorial on data flows !!!!!!
 .. TODO tips: depending on the technology (WGS, WES, Microbiome, etc. data) and Organism, you can expect warnings and faiures as well
 
-The usual first step of any NGS data analysis is quality control of raw
-sequencing reads. According to the "garbage in, garbage out" rule, if we begin
-our analysis with poor quality reads, we shouldn’t expect great results at the
-end. Luckily, there are a few procedures that can be used to improve the data
-quality if that proves to be unsatisfactory.
+**Action**: to perform quality control (QC) of raw sequencing reads. According to
+the "garbage in, garbage out" rule, if we begin our analysis with poor quality
+reads, we shouldn’t expect great results at the end. Luckily, there are a few
+procedures that can be used to improve the data quality if that proves to be
+unsatisfactory.
 
 The tool used for raw reads quality check is **FastQC Report** app, based on
 the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
@@ -148,7 +148,7 @@ peaks may indicate contamination with a range of contaminants.
 
 *Improving data quality*
 
-Run "Trim Adaptors and Contaminants" preprocessing app.
+Run **Trim Adaptors and Contaminants** preprocessing application.
 
 4. **Per base sequence quality** plot
 
@@ -166,8 +166,8 @@ is less than 5 or if the median for any base is less than 20.
 
 If the quality of the library falls to a low level over the
 course of a read, the blueprint solution is to perform quality trimming of low
-quality bases or omitting low quality reads. This can be performed using "Trim
-Low Quality Bases" or "Filter by Quality Scores" applications respectively.
+quality bases or omitting low quality reads. This can be performed using **Trim
+Low Quality Bases** or **Filter by Quality Scores** applications respectively.
 
 5. **Per sequence quality scores** plot 
 
@@ -183,8 +183,8 @@ frequently observed mean quality is below 27. This equals to a 0.2% error rate.
 
 *Improving data quality*
 
-Perform quality-based trimming or selection using "Trim Low
-Quality Bases" or "Filter by Quality Scores" applications respectively.
+Perform quality-based trimming or selection using **Trim Low
+Quality Bases** or **Filter by Quality Scores** applications respectively.
 
 6. **Per base sequence content**
 
@@ -208,8 +208,8 @@ greater than 10% at any position.
 *Improving data quality*
 
 If there is instability at the start of the read the consensus is that no QC
-is necessary. If variation appears over the course of a read "Trim to Fixed
-Length" application may be used. If there is persistent variation throughout
+is necessary. If variation appears over the course of a read **Trim to Fixed
+Length** application may be used. If there is persistent variation throughout
 the read it may be best to discard it. Some datasets may trigger a warning due
 to the nature of the sequence. For example, bisulfite sequencing data will have
 almost no Cytosines. Some species may be unusually GC rich or poor and
@@ -236,9 +236,9 @@ two types and both will be reported as duplicates here.
 *Improving data quality*
 
 If the observed duplications are due to primer/adaptor contamination, they can
-be removed using the Trim Adaptors and Contaminants app. "Filter Duplicated
-Reads" application can also be used for DNA sequencing data but will distort
-expression data.
+be removed using the **Trim Adaptors and Contaminants** application. **Filter
+Duplicated Reads** application can also be used for DNA sequencing data but
+will distort expression data.
 
 8. **Overrepresented sequences**
 
@@ -271,10 +271,9 @@ duplication level.
 Multiple QC Report
 ^^^^^^^^^^^^^^^^^^
 
-You can also display metrics from multiple reports at once using "Multiple QC
-Report" application. It accepts as input a collection of QC reports. For
-example, let's select our FastQC reports in order to compare them in "Multiple
-QC Report":
+**Action**: to display metrics from multiple reports at once. It accepts as
+input a collection of QC reports. For example, let's select our FastQC reports
+in order to compare them in **Multiple QC Report**.
 
 .. image:: images/multiple_qc_report.png
 
@@ -297,34 +296,6 @@ folder ("New folder with selection" button).
 
 .. image:: images/multiple_qc_report_select_reports.png
 
-
-.. note:: **What are the signs that something is wrong with our data?**
-
-          GC content that is far from 50% and read counts that are low
-          compared to other files in the dataset are ways of identifying which
-          files should not be used for further analysis.
-
-Now, let's move on and look at the preprocessing applications used to improve
-the quality of raw reads. Keep in mind, that after completing the
-preprocessing procedure, it’s a good idea to run "FastQC Report" application
-once again on the preprocessed files to see if the quality has improved.
-
-Subsample Reads
-^^^^^^^^^^^^^^^
-
-**Action**: to create a random subset of raw reads.
-
-.. image:: images/preprocessing_subsample_reads.png
-
-The number of reads in the subset can be changed (default: 50,000). Changing
-the seed value will let you create different subsets with the same number of
-reads. Using the same seed and the same number of reads will result in
-identical subsets.
-
-This application is based on Seqtk_.
-
-.. _Seqtk: https://github.com/lh3/seqtk
-
 When the quality of the raw reads is unsatisfactory, several preprocessing
 applications are available on the platform that can increase the quality of
 your raw reads. Here we will walk you through each one and give you a
@@ -333,6 +304,27 @@ preprocessing steps, you can use the FastQC Report app again to compare the
 quality pre- and post-processing (remember that in order to do this, you need
 to run a different computation, this time inputting processed data source
 files into the data flow).
+
+Subsample Reads
+^^^^^^^^^^^^^^^
+
+**Action**: to create a random subset of raw reads.
+
+.. image:: images/preprocessing_subsample_reads.png
+
+Let's look at the options:
+
+1. **Random  seed** value will let you create different subsets with the same
+   number of reads. (default: 100)
+2. **Number of reads in subset** tells the application how many reads you
+   expect the output subsample will contain. (default: 50,000)
+
+Using the same seed and the same number of reads will result in identical
+subsets.
+
+This application is based on Seqtk_.
+
+.. _Seqtk: https://github.com/lh3/seqtk
 
 Filter Duplicated Reads
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -359,25 +351,42 @@ Filter by Quality Scores
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to discard reads from a sequencing assay based on Phred33 quality
-scores. The application classifies the sequence as pass/fail calculating
+scores. The application classifies the sequence as pass or fail calculating
 quality score distribution for each read.
 
 .. image:: images/preprocessing_filter_by_quality_scores.png
 
-You can change the minimum quality score, which is set to 20 by default. A
-score of 20 means that there is a 1% chance that the corresponding base was
-called incorrectly by the sequencer. A score of 30 means a 0.1% chance of an
-incorrect base call.
+1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cutt-off
+   value. A score of 20 means that there is a 1% chance that the corresponding
+   base was called incorrectly by the sequencer. A score of 30 means a 0.1%
+   chance of an incorrect base call. (default: 20)
+2. **Percentage of bases to be above the minimum quality score** is number of
+   nucleotides in the reads having quality equal to or higher than the choosen
+   minimum quality score. 100% requiers all bases in the reads to be equal to
+   or hiher than the quality cut-off value. 50% means requires the median of
+   the bases to be at least the quality cut-off value. (default: 80)
 
-You can also discard reads specifying a minimum percentage of bases to be above
-the minimum quality score.
+Let's take an example, to understand how the application works. So, here is our
+read:
+
+.. image:: images/filter_by_quality_scores_example.png
+
+Second line represents nucleotide sequence (10 bases in this case). The forth
+line contains quality scores for each nucleotide in the read.
+
+- If "Minimum quality score" is equal to 30 and "Percentage of bases" is equal
+  to 50, this read will not be discarded, because the median quality of the
+  read is higher than 30.
+- If "Minimum quality score" is equal to 20 and "Percentage of bases" is equal
+  to 100, the read will be discarded, because not all bases have quality equal
+  to or higher than 20.
 
 This tool is based on **fastq_quality_filter**, which is part of the
 FASTX-Toolkit_.
 
 .. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
 
-This app is best used if you have some low quality reads, but others are of
+This application is best used if you have some low quality reads, but others are of
 high quality. You should be able to tell if this is the case from the shape of
 the Per sequence quality scores plot from FastQC. It may also be worth trying
 this app if the per base sequence quality is low.
@@ -386,16 +395,22 @@ Trim Adaptors and Contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to find and trim adaptors and known contaminating sequences from
-raw reads data. It is possible to specify the minimum length of trimmed
-reads. Trimmed reads below the minimum length are discarded.
+raw reads data.
 
 .. image:: images/preprocessing_trim_adaptors_and_contaminants.png
 
-The app uses an internal list of sequences that can be considered as
+1. **Minimum length of the trimmed sequence (bp)**. The application will
+   discard trimmed reads of length below this number. (default: 15)
+
+The occurance threshold before adapter clipping is set to 0.0001. It refers to
+the minimum number of times an adapter needs to be found before clipping is
+considered necessary.
+
+The application uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies and
 platform used. For instance, it contains widely used PCR primers and
 adaptors for Illumina, ABI etc (see the `list of primers and adaptors`_ we
-remove). The occurance threshold before adapter clipping is set to 25%.
+remove).
 
 .. _list of primers and adaptors: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
@@ -416,22 +431,22 @@ Trim Low Quality Bases
 
 .. image:: images/preprocessing_trim_low_quality_bases.png
 
-"Trim Low Quality Bases" application is based on `Phred algorithm`_. It finds
+Trim Low Quality Bases application is based on `Phred algorithm`_. It finds
 the longest subsequence in read where the estimated error rate is below the
 error threshold (which is equal to 0.01 by default).
 
 .. _Phred algorithm: http://www.phrap.org/phredphrap/phred.html
 
-So, imagine you have a sequence: CGTAGACT
+To understand how the application works let's take an example. So, imagine we
+have a sequence:
 
-Phred quality scores for each base are: 10 20 30 40 30 20 10
+.. image:: images/trim_low_quality_bases_example.png
 
-Per base error probabilities are equal: 0.1 0.01 0.001 0.0001 0.0001 0.001 0.01 0.1
-
-The app will find the fragment of the read where the sum of all probability
-errors will not be more than 0.01 (in our case). In this case, the best
-sequence will be "TAGA" (.001*2 + .0001*2 = .0022). Other fragments will have
-the sum of error probabilities more than the cuttoff 0.01.
+The application will find the fragment of the read where the sum of all
+probability errors will not be more than 0.01 (in our case). In this case, the
+best sequence will be "TAGA" (.001*2 + .0001*2 = .0022) and it will be the
+output read. Other fragments will have the sum of error probabilities more
+than the cuttoff 0.01, so they will be ignored.
 
 This tool is based on the `Seqtk`_ tool and uses Phred algorithm to pick out
 the reqions of higest quality.
@@ -446,8 +461,13 @@ reads in a sample.
 
 .. image:: images/preprocessing_trim_to_fixed_length.png
 
-You should specify the first base and the last base that should be kept. For
-example, if you set 5 as the first base to keep and 30 as the last base to
+1. **Keep bases from position** option asks you to specify the first base that
+   should be kept. (default: 1)
+2. **Keep bases to position (set to zero for entire read)**. Indicate the
+   position of the last nucleotide that should be kept in the read. (default:
+   0)
+
+For example, if you set 5 as the first base to keep and 30 as the last base to
 keep, it means that the application trims all nucleotides before the 5th
 position, and all nucleotides after the 30th base.
 
@@ -455,7 +475,7 @@ This tool is based on **fastx_trimmer**, which is part of the `FASTX-Toolkit`_.
 
 .. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
 
-"Trim Reads to Fixed Length" application is helpful when you want to obtain
+Trim Reads to Fixed Length application is helpful when you want to obtain
 reads of a specific length (regardless of the quality).
 
 .. TODO Add info about Merge Raw Reads application (the one without UI)
@@ -488,31 +508,31 @@ source data, tools used and data flow.
 Also, it includes a range of **Mapping statistics**. For **single reads**,
 you'll calculate these QC metrics:
 
-#. Total number of reads reads used to map to the reference genome;
-#. Unmapped reads: total number of reads which failed to map to the reference
+#. *Total number of reads*: how many reads used to map to the reference genome;
+#. *Unmapped reads*: total number of reads which failed to map to the reference
    genome;
-#. Mapped reads: total number of reads aligned to the reference genome;
-#. Uniquely mapped reads: total number of reads aligned exactly 1 time to teh
+#. *Mapped reads*: total number of reads aligned to the reference genome;
+#. *Uniquely mapped reads*: total number of reads aligned exactly 1 time to teh
    reference genome;
-#. Multi-hit mapped reads: total number of reads aligned >1 times to the
+#. *Multi-hit mapped reads*: total number of reads aligned >1 times to the
    reference genome.
 
 In case you analyse **paired-end reads** data, you'll see the following
 statistics:
 
-#. Total number of mate pairs used to map to the reference genome;
-#. Mapped mate pairs: total number of paired reads where both mates were
+#. *Total number of mate pairs*: how many paired-end reads used to map to the reference genome;
+#. *Mapped mate pairs*: total number of paired reads where both mates were
    mapped;
-#. Partially mapped mate pairs: total number of paired reads where only one
+#. *Partially mapped mate pairs*: total number of paired reads where only one
    mate in the pair was mapped;
-#. Unmapped mate pairs: total number of paired reads which failed to map to the
+#. *Unmapped mate pairs*: total number of paired reads which failed to map to the
    reference genome;
-#. Improperly mapped mate pairs: total number of paired reads where one of the
+#. *Improperly mapped mate pairs*: total number of paired reads where one of the
    mates was mapped with an unexpected orientation;
-#. Properly mapped mate pairs: total number of paired reads where both mates
+#. *Properly mapped mate pairs*: total number of paired reads where both mates
    were mapped with the expected orientation.
 
-For both types of reads, you'll get **Coverage by chromosome** plot.
+*Coverage by chromosome* plot is reported for both read types.
 
 .. image:: images/coverage_by_chromosome.png
 
@@ -529,8 +549,7 @@ advanced stage cancer.
 
 .. TODO: What does it look like when data is of poor quality ( + what can we do about it)
 
-For paired-end reads, apart from mapping staistics the **Insert Size
-statistics** will be calculated.
+**Insert Size statistics** will be calculated for paired-end reads only.
 
 .. note:: **What is the difference between fragment size, insert size and mate
           inner distance?**
@@ -544,14 +563,14 @@ statistics** will be calculated.
 
 Insert size statistics are useful to validate library constraction and include:
 
-#. Median insert size - a middle of a sorted list of insert sizes;
-#. Median absolute deviation is calculated by taking the median of the absolute
+#. *Median insert size* - a middle of a sorted list of insert sizes;
+#. *Median absolute deviation* is calculated by taking the median of the absolute
    deviations from the median insert size;
-#. Mean insert size (trimmed) - an average of the insert sizes;
-#. Standard deviation of insert size measures the variation in insert sizes
+#. *Mean insert size (trimmed)* - an average of the insert sizes;
+#. *Standard deviation of insert size* measures the variation in insert sizes
    from the mean insert size.
 
-And **Insert size distribution** graph will be displayed:
+**Insert size distribution** graph is displayed for paired-end reads:
 
 .. image:: images/mapped_reads_qc_report_insert_size_distribution.png
 
@@ -635,7 +654,7 @@ thread`_.
 
 .. image:: images/mark_duplicated_mapped_reads.png
 
-**Action**: to go through all reads in a Mapped Reads file, marking as
+**Action**: to go through all reads in a mapped reads sample, marking as
 "duplicates" for paired or single reads where the orientation and the 5’
 mapping coordinate are the same.
 
@@ -715,10 +734,13 @@ all your data right away.
 
 .. image:: images/subsample_mapped_reads.png
 
-Use "Subsampling ratio" option to set a fraction of mapped reads you’d like to
-extract (default: 50%). Changing "Random seed" value will let you produce
-different subsets with the same number of mapped reads. Using the same random
-seed and the same subsampling ratio will result in identical subsets.
+1. **Subsampling ratio (percentage)** option is used to set a fraction of
+   mapped reads you’d like to extract (default: 50).
+2. **Random seed** value will let you produce different subsets with the same
+   number of mapped reads.
+   
+Using the same random seed and the same subsampling ratio will result in
+identical subsets.
 
 This application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
 
