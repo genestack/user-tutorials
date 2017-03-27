@@ -560,6 +560,8 @@ advanced stage cancer.
           insert plus both adaptors.
 
 .. image:: images/insert.jpg
+   :scale: 50 %
+   :align: center
 
 Insert size statistics are useful to validate library constraction and include:
 
@@ -604,12 +606,13 @@ Whole Exome Sequencing assays.
 
 **Action**: to assess whether the target capture has been successful, i.e. if
 most of the reads actually fell on the target, if the targeted bases reached
-sufficient coverage, etc. To do that, you can use "Targeted Sequencing QC Report".
+sufficient coverage, etc.
 
-By default, the application allows you to compute enrichment statistics for
-reads mapped only on exome. If you go to the app page, change the value to
-"Both exome and target file" and select the appropriate target annotation
-file, you get both exome and/or target enrichment statistics.
+.. image:: images/targeted_sequencing_qc_page.png
+
+1. **Compute enrichment statistics based on** option. The application allows
+   you to compute enrichment statistics for reads mapped only on exome, only
+   on target file, or both exome and target file. (default: Exome)
 
 The following enrichment statistics are computed:
 
@@ -647,16 +650,16 @@ up processing for specific apps, e.g. cariant calling step, where
 processing additional identical reads would lead to early PCR amplification
 effects (jackpotting) contributing noise to the signal.
 
-You can read more about Duplicated Mapped Reads in this excellent `SeqAnswers
+You can read more about duplicated mapped reads in this excellent `SeqAnswers
 thread`_.
 
 .. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t=6854
 
-.. image:: images/mark_duplicated_mapped_reads.png
-
 **Action**: to go through all reads in a mapped reads sample, marking as
 "duplicates" for paired or single reads where the orientation and the 5’
 mapping coordinate are the same.
+
+.. image:: images/mark_duplicated_mapped_reads.png
 
 3’ coordinates are not considered due to two reasons:
 
@@ -672,7 +675,7 @@ chromosomes, the application will not identify or use them but will not fail
 due to inability to find the mate pair for the reads.
 
 Marking duplicated reads can help speed up processing for specific applications,
-e.g. "Variant Calling" application.
+e.g. **Variant Calling** application.
 
 This tool is based on **MarkDuplicates**, part of `Picard`_ tool.
 
@@ -692,17 +695,16 @@ in expression can be up to 10^7, reads are relatively short, and your main
 point of interest is the variation in expression levels, this probably isn’t
 the tool for you.
 
-You can read more about Duplicated Mapped Reads in this excellent `SeqAnswers
+You can read more about duplicated mapped reads in this excellent `SeqAnswers
 thread`_.
 
 .. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t=6854
 
-.. image:: images/remove_duplicated_mapped_reads.png
-
 **Action**: to go through all reads in a Mapped Reads file, marking as
-"duplicates" paired or single reads where the orientation and the 5’
-mapping coordinate are the same and discarding all except the "best"
-copy.
+"duplicates" paired or single reads where the orientation and the 5’ mapping
+coordinate are the same and discarding all except the "best" copy.
+
+.. image:: images/remove_duplicated_mapped_reads.png
 
 3’ coordinates are not considered due to two reasons:
 
@@ -712,7 +714,7 @@ copy.
 #. If reads are trimmed at 3’ low-quality bases before alignment, they will
    have different read lengths resulting in different 3’ mapping coordinates.
 
-The app also takes into account interchromosomal read pairs.
+The application also takes into account interchromosomal read pairs.
 
 In such cases, when the distance between two mapped mates differs from
 the internally estimated fragment length, including mates mapping to
@@ -736,8 +738,8 @@ all your data right away.
 
 1. **Subsampling ratio (percentage)** option is used to set a fraction of
    mapped reads you’d like to extract (default: 50).
-2. **Random seed** value will let you produce different subsets with the same
-   number of mapped reads.
+2. **Random seed** option will let you produce different subsets with the same
+   number of mapped reads. (default: 0)
    
 Using the same random seed and the same subsampling ratio will result in
 identical subsets.
@@ -763,6 +765,10 @@ Convert to Unaligned Reads
 **Action**: to convert mapped reads into unaligned reads.
 
 .. image:: images/convert_to_unaligned_reads.png
+
+The application will be very useful when you're interested in fraction of reads
+that exactly will map to the genome or when you'd like to remap the reads with
+other aligner.
 
 This application is based on Picard_ tools.
 
@@ -804,8 +810,10 @@ into a larger, single file.
 
 The application always allows overlaps so that the first position at the start
 of the second input will be allowed to come before the last position of the
-first input. There is an option to "Remove duplicated variants" to make sure
-that there are no redundant results.
+first input.
+
+1. **Remove duplicated variants** option checks for the duplicated variants and
+   makes sure that there are no redundant results. (default: unchecked)
 
 The application is based on `BCFtools
 <http://samtools.github.io/bcftools/bcftools.html>`_.
@@ -853,8 +861,8 @@ Tophat2 and Spliced Mapping to Transcriptome with STAR.
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to map Raw Reads with transcriptomic data like RNA-seq to a
-Reference Genome, taking or not taking into account splice junctions.
+**Action**: to map raw reads with transcriptomic data like RNA-seq to a
+reference genome, taking or not taking into account splice junctions.
 
 
 .. note:: **What is splice junction?**
@@ -870,18 +878,21 @@ Let’s have a look at the app page and talk about various parameters:
 
 Details on various settings:
 
-#. If you are using strand-specific RNA-seq data, the option
-   "Strand-specificity protocol" will let you choose between the "dUTP" and
-   "ligation" method. If you are not sure whether your RNA-seq data is
-   strand-specific or not, you can try using Subsample reads to make a
-   small subsample, map it with Spliced Mapping and check the coverage in
-   Genome Browser for genes on both strands.
-#. By default, the application uses annotated transcripts from the Reference
-   Genome to distinguish between novel and known junctions. Using the option
-   "Rule for mapping over known annotation" you can restrict mappings only
-   across known junctions or infer splice junctions without any reference
-   annotation.
-#. With default settings, the application will report the single best mapping
+1. **Strand-specificity protocol**. If you are using strand-specific RNA-seq
+   data, this option will let you choose between the "dUTP" and "ligation"
+   method. If you are not sure whether your RNA-seq data is strand-specific
+   or not, you can try using Subsample reads to make a small subsample, map
+   it with Spliced Mapping and check the coverage in Genome Browser for genes
+   on both strands. (default: none)
+2. **Rule for mapping over known annotations**. This option allows you to use
+   annotated transcripts from the reference genome to distinguish between
+   novel and known junctions ("Yes, and discover novel splice junctions").
+   Also, you can restrict mappings only across known junctions ("Yes, without
+   novel splice junctions discovery") or infer splice junctions without any
+   reference annotation ("Do not use known annotations"). (default: Yes, and
+   discover novel splice junctions)
+3. **Rule for filtering multiple mappings**. 
+   With default settings, the application will report the single best mapping
    for each read, even if there are multiple valid mapping positions. The
    option "Number of "best" mappings to report" lets you increase the number
    of reported mappings. This can be used together with "Rule for filtering
@@ -901,7 +912,7 @@ The app is based on Tophat2_ aligner.
 
 .. _Tophat2: https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36
 
-This app is used in the the `Testing Differential Gene Expression tutorial`_.
+This app is used in the `Testing Differential Gene Expression tutorial`_.
 
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
