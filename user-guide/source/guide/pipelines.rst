@@ -9,22 +9,22 @@ Preprocess, Analyse, Explore and Manage.
 **Preprocess** contains all applications used to process files pre- or
 post-alignment in order to increase the data quality.
 
-**Analyse** contains all mappers and all other apps required to analyse
+**Analyse** contains all mappers and all other applications required to analyse
 sequencing data.
 
 **Explore** contains all interactive graphical interface applications
 allowing users to view the results of their
-computations. Apps for visualizing QC reports, the Genome Browser, apps for
-exploring  genomic variants, and many more.
+computations. Applications for visualizing QC reports, the Genome Browser,
+applications for exploring  genomic variants, and many more.
 
-**Manage** contains apps used to manage your data: apps dealing with data
-flows, file provenance, export, metadata editing and so on.
+**Manage** contains applications used to manage your data: applications dealing
+with data flows, file provenance, export, metadata editing and so on.
 
 An extended version (including information on licensing and references)
 of every application description found in this guide can be found in the
-**"About application"** text of each of the individual apps.
+**"About application"** text of each of the individual application.
 
-To view this text for a specific app, click on the application's name at the
+To view this text for a specific application, click on the application's name at the
 top-left corner of the page, and in the dropdown menu select "About application".
 
 .. image:: images/about_app.png
@@ -48,11 +48,11 @@ FastQC report
 
 **Action**: to perform quality control (QC) of raw sequencing reads. According to
 the "garbage in, garbage out" rule, if we begin our analysis with poor quality
-reads, we shouldn’t expect great results at the end. Luckily, there are a few
+reads, we should not expect great results at the end. Luckily, there are a few
 procedures that can be used to improve the data quality if that proves to be
 unsatisfactory.
 
-The tool used for raw reads quality check is **FastQC Report** app, based on
+The tool used for raw reads quality check is **FastQC Report** application, based on
 the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 
 .. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
@@ -63,19 +63,19 @@ is via the public data flow `Raw Reads Quality Control`_.
 
 .. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778184&action=viewFile
 
-Another way to run the daya flow is to select all of your raw reads,
-right click on them and from the dropdown menu select "Run data flow on
-selection" and choose the appropriate data flow. 
+Another way to run the data flow is to select all of your raw reads,
+right click on them and from the dropdown menu select **Run data flow on
+selection** and choose the appropriate data flow.
 
 .. image:: images/run_dataflow_on_selection.png
 
 Remember you need to initialize the computation! On the Data Flow Runner page
-click on "Run Data Flow" and select "Start initialization now".
+click on **Run Data Flow** and select **Start initialization now**.
 
 .. image:: images/fastqc_start_initialization_now.png
 
 You will have to wait for the results (you can track the progress of your
-tasks in Task Manager). Once they are completed, you can find your files in
+tasks in **Task Manager**). Once they are completed, you can find your files in
 "Created files" folder.
 
 .. image:: images/created_files_folder_FM.png
@@ -89,21 +89,21 @@ dropdown menu or in "Explore" section in File Manager.
 
 On the FastQC Report page you can view both the result and the provenance of
 the report file. At the top of the page you will see the file name and the
-version of the fastQC app used. The "View parameters" button will show you
+version of the fastQC application used. The **View parameters** button will show you
 source files and the command line options used to generate the report. The
-"Hide parameters" button will hide this technical information. Below that you
-will see the File Dataflow, in this case it should only contain two app entries -
+**Hide parameters** button will hide this technical information. Below that you
+will see the File Dataflow, in this case it should only contain two application entries -
 Experiment Loader and FastQC Report. In other cases, you might see more than
 two applications in this line.
 
 .. image:: images/fastqc_page_source_files.png
 
-Finally, the results can be viewed in the Reports section. Here you will find
+Finally, the results can be viewed in the "Reports" section. Here you will find
 various graphs that visualize the quality of your data. We’ll go through all
 of them one by one and tell you:
 
 1. how they should  look for data of perfect quality; 
-2. how they may look if there’s something wrong with your data;
+2. how they may look if there is something wrong with your data;
 3. what you can do if the quality is unsatisfactory.
 
 The metrics table gives you quick indicators as to the status of each of
@@ -173,7 +173,7 @@ Low Quality Bases** or **Filter by Quality Scores** applications respectively.
 
 .. image:: images/fastqc_per_sequence_quality_scores.png
 
-Ideally, we’d want to see a sharp peak at the very end of the graph (meaning
+Ideally, we expect to see a sharp peak at the very end of the graph (meaning
 most frequently observed mean quality scores are above 27)
 
 *Warning*
@@ -292,7 +292,7 @@ specified QC metric.
 .. image:: images/multiple_qc_report_sorting.png
 
 Finally, you can highlight the interesting reports and put them in a separate
-folder ("New folder with selection" button).
+folder (**New folder with selection** button).
 
 .. image:: images/multiple_qc_report_select_reports.png
 
@@ -300,7 +300,7 @@ When the quality of the raw reads is unsatisfactory, several preprocessing
 applications are available on the platform that can increase the quality of
 your raw reads. Here we will walk you through each one and give you a
 checklist to use when deciding which to select. After each of the
-preprocessing steps, you can use the FastQC Report app again to compare the
+preprocessing steps, you can use the FastQC Report application again to compare the
 quality pre- and post-processing (remember that in order to do this, you need
 to run a different computation, this time inputting processed data source
 files into the data flow).
@@ -344,7 +344,7 @@ This tool is based on Tally_.
 
 If you suspect contamination with primers, or some  other repetitive sequence.
 This should be evident from Sequence duplication levels and Overrepresented
-Sequences of the FastQC report. Keep in mind this app should not be used with
+Sequences of the FastQC report. Keep in mind this application should not be used with
 RNA-seq data as it will remove observed differences in expression level.
 
 Filter by Quality Scores
@@ -361,9 +361,9 @@ quality score distribution for each read.
    base was called incorrectly by the sequencer. A score of 30 means a 0.1%
    chance of an incorrect base call. (default: 20)
 2. **Percentage of bases to be above the minimum quality score** is number of
-   nucleotides in the reads having quality equal to or higher than the choosen
+   nucleotides in the reads having quality equal to or higher than the chosen
    minimum quality score. 100% requiers all bases in the reads to be equal to
-   or hiher than the quality cut-off value. 50% means requires the median of
+   or higher than the quality cut-off value. 50% means requires the median of
    the bases to be at least the quality cut-off value. (default: 80)
 
 Let's take an example, to understand how the application works. So, here is our
@@ -389,7 +389,7 @@ FASTX-Toolkit_.
 This application is best used if you have some low quality reads, but others are of
 high quality. You should be able to tell if this is the case from the shape of
 the Per sequence quality scores plot from FastQC. It may also be worth trying
-this app if the per base sequence quality is low.
+this application if the per base sequence quality is low.
 
 Trim Adaptors and Contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -399,13 +399,6 @@ raw reads data.
 
 .. image:: images/preprocessing_trim_adaptors_and_contaminants.png
 
-1. **Minimum length of the trimmed sequence (bp)**. The application will
-   discard trimmed reads of length below this number. (default: 15)
-
-The occurance threshold before adapter clipping is set to 0.0001. It refers to
-the minimum number of times an adapter needs to be found before clipping is
-considered necessary.
-
 The application uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible sequencing technologies and
 platform used. For instance, it contains widely used PCR primers and
@@ -414,13 +407,20 @@ remove).
 
 .. _list of primers and adaptors: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
-This tool is based on fastq-mcf_, one of the EA-Utils_ utilities.
+The occurrence threshold before adapter clipping is set to 0.0001. It refers to
+the minimum number of times an adapter needs to be found before clipping is
+considered necessary.
+
+1. **Minimum length of the trimmed sequence (bp)**. The application will
+   discard trimmed reads of length below this number. (default: 15)
+
+his tool is based on fastq-mcf_, one of the EA-Utils_ utilities.
 
 .. _fastq-mcf: https://github.com/ExpressionAnalysis/ea-utils/blob/wiki/FastqMcf.md
 .. _EA-Utils: https://expressionanalysis.github.io/ea-utils/
 
 The application is best used when you have irregularities in GC content, in
-base content at the start of reads, duplicated reads. Since this QC app relies
+base content at the start of reads, duplicated reads. Since this QC application relies
 on sequence matching it should be run first if used in conjunction with other
 QC applications.
 
@@ -449,7 +449,7 @@ output read. Other fragments will have the sum of error probabilities more
 than the cuttoff 0.01, so they will be ignored.
 
 This tool is based on the `Seqtk`_ tool and uses Phred algorithm to pick out
-the reqions of higest quality.
+the reqions of highest quality.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
@@ -485,7 +485,7 @@ Mapped Reads Quality Control and Preprocessing
 
 If you analysing mapped reads, we recommend you check if there are any
 biases taken place during mapping process (e.g. low coverage, experimental
-artifacts, etc) and do preprocessing of mapped reads.
+artifacts, etc.) and do preprocessing of mapped reads.
 
 Mapped Reads QC Report
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -496,11 +496,11 @@ We follow a similar procedure to the one used to generate FastQC reports.
 After selecting all the mapped reads we wish to check the quality of, we can
 use the `Mapped Reads QC`_ public data flow, initialize the computations, and
 then explore the results. You can read more about the Mapped Reads QC Report
-app in the "Explore" section of this guide.
+application in the "Explore" section of this guide.
 
 .. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
-An individual Mapped Reads QC report contains some techincal information about
+An individual Mapped Reads QC report contains some technical information about
 source data, tools used and data flow.
 
 .. image:: images/mapped_reads_qc_report.png
@@ -512,7 +512,7 @@ you'll calculate these QC metrics:
 #. *Unmapped reads*: total number of reads which failed to map to the reference
    genome;
 #. *Mapped reads*: total number of reads aligned to the reference genome;
-#. *Uniquely mapped reads*: total number of reads aligned exactly 1 time to teh
+#. *Uniquely mapped reads*: total number of reads aligned exactly 1 time to the
    reference genome;
 #. *Multi-hit mapped reads*: total number of reads aligned >1 times to the
    reference genome.
@@ -532,13 +532,13 @@ statistics:
 #. *Properly mapped mate pairs*: total number of paired reads where both mates
    were mapped with the expected orientation.
 
-*Coverage by chromosome* plot is reported for both read types.
+**Coverage by chromosome** plot is reported for both read types.
 
 .. image:: images/coverage_by_chromosome.png
 
 This plot shows the percentage of reads covered by at least x reads. To clear
 it up, let's just imagine that we have a plot which shows coverage only for one
-chromosome and therefore it shows 1 line. If on the x-axis we have e.g 100
+chromosome and therefore it shows 1 line. If on the x-axis we have e.g. 100
 reads, on y-axis - 10% (percentage of chromosome bases covered by 100 reads).
 So, it looks like we have 100-reads coverage for 10% of chromosome.
 
@@ -563,7 +563,7 @@ advanced stage cancer.
    :scale: 50 %
    :align: center
 
-Insert size statistics are useful to validate library constraction and include:
+Insert size statistics are useful to validate library construction and include:
 
 #. *Median insert size* - a middle of a sorted list of insert sizes;
 #. *Median absolute deviation* is calculated by taking the median of the absolute
@@ -621,7 +621,7 @@ The following enrichment statistics are computed:
 - Target bases with at least 2, 10, 20, 30, 40, and 50 x coverage.
 
 You can generate these reports directly by choosing Mapped Reads files, right
-clicking on them and selecting the appropriate app (in Explore section) or
+clicking on them and selecting the appropriate application (in "Explore" section) or
 using "Run data flow on selection..." option and `Targeted Sequencing Quality
 Control`_ public data flow.
 
@@ -646,7 +646,7 @@ Mark Duplicated Mapped Reads
 
 Duplicated reads are reads of identical sequence composition and length,
 mapped to the same genomic position. Marking duplicated reads can help speed
-up processing for specific apps, e.g. cariant calling step, where
+up processing for specific applications, e.g. variant calling step, where
 processing additional identical reads would lead to early PCR amplification
 effects (jackpotting) contributing noise to the signal.
 
@@ -692,7 +692,7 @@ sequences are expected to be present in similar amounts, removing duplicated
 reads will reduce processing time and have little deleterious effect on
 analysis. If however you are processing RNA-seq data, where the fold-variation
 in expression can be up to 10^7, reads are relatively short, and your main
-point of interest is the variation in expression levels, this probably isn’t
+point of interest is the variation in expression levels, this probably is not
 the tool for you.
 
 You can read more about duplicated mapped reads in this excellent `SeqAnswers
@@ -718,7 +718,7 @@ The application also takes into account interchromosomal read pairs.
 
 In such cases, when the distance between two mapped mates differs from
 the internally estimated fragment length, including mates mapping to
-different chromosomes, the application  app cannot identify them but
+different chromosomes, the application  application cannot identify them but
 will not fail due to inability to find the mate pair for the reads.
 
 This application is based on **MarkDuplicates**, part of the Picard_ tools.
@@ -729,7 +729,7 @@ Subsample Reads
 ^^^^^^^^^^^^^^^
 
 You can use this application if you want to take a look at what your final
-experimental results will look like, but don’t want to spend time processing
+experimental results will look like, but do not want to spend time processing
 all your data right away.
 
 **Action**: to create a random subset of mapped reads.
@@ -737,7 +737,7 @@ all your data right away.
 .. image:: images/subsample_mapped_reads.png
 
 1. **Subsampling ratio (percentage)** option is used to set a fraction of
-   mapped reads you’d like to extract (default: 50).
+   mapped reads you would like to extract (default: 50).
 2. **Random seed** option will let you produce different subsets with the same
    number of mapped reads. (default: 0)
    
@@ -762,13 +762,13 @@ The application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
 Convert to Unaligned Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The application will be very useful when you are interested in fraction of reads
+that exactly will map to genome or when you'd like to remap the reads with
+other aligner.
+
 **Action**: to convert mapped reads into unaligned reads.
 
 .. image:: images/convert_to_unaligned_reads.png
-
-The application will be very useful when you're interested in fraction of reads
-that exactly will map to the genome or when you'd like to remap the reads with
-other aligner.
 
 This application is based on Picard_ tools.
 
@@ -784,10 +784,10 @@ are available for you.
 Merge Variants
 ^^^^^^^^^^^^^^
 
-Merging Genomic Variations files can be useful, when you have, for example,
-one Genetic Variations file for SNPs and another one for Indels. After their
-merging, the result Genetic Variations file will separately contain
-information about SNPs and about Indels.
+Merging variants can be useful, when you have, for example, one Genetic
+Variations file for SNPs and another one for Indels. After their merging, the
+result Genetic Variations file will separately contain information about SNPs
+and about Indels.
 
 **Action**: to merge two or more Genetic Variations files into a single file.
 
@@ -827,8 +827,25 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
+.. note:: **What is the difference between genome, exome and transcriptome**?
+
+          Genome icludes both coding (genes) and noncoding DNA in a given cell
+          type.
+
+          Exome is the part of the genome formed by exons, i.e it includes all
+          DNA that is transcribed into mRNA.
+
+          Transcriptome is a collection of all mRNAs present in a given cell
+          type. In comparison to the genome, the transcriptome is dynamic in
+          time (within the same cell type) in response to both internal and
+          external stimuli. Thus, the transcriptome derived from any one cell
+          type will not represent the entire exome, i.e. all cells my have
+          essentially the same genome/exome, but not all genes are expressed in
+          a specific cell type.
+
+
 There are at least two types of mapping strategies - Spliced Mapping and
-Unsplaced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
+Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
 so there's typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
@@ -872,7 +889,7 @@ reference genome, taking or not taking into account splice junctions.
           need to splice in two places so that two exons might be jointed.
 
 
-Let’s have a look at the app page and talk about various parameters:
+Let’s have a look at the application page and talk about various parameters:
 
 .. image:: images/rna-seq_spliced_mapping_tophat.png
 
@@ -881,39 +898,41 @@ Details on various settings:
 1. **Strand-specificity protocol**. If you are using strand-specific RNA-seq
    data, this option will let you choose between the "dUTP" and "ligation"
    method. If you are not sure whether your RNA-seq data is strand-specific
-   or not, you can try using Subsample reads to make a small subsample, map
-   it with Spliced Mapping and check the coverage in Genome Browser for genes
-   on both strands. (default: none)
+   or not, you can try using Subsample Reads application to make a small
+   subsample, map it with Spliced Mapping with Tophat2 and check the coverage
+   in Genome Browser for genes on both strands. (default: none)
 2. **Rule for mapping over known annotations**. This option allows you to use
    annotated transcripts from the reference genome to distinguish between
    novel and known junctions ("Yes, and discover novel splice junctions").
    Also, you can restrict mappings only across known junctions ("Yes, without
    novel splice junctions discovery") or infer splice junctions without any
-   reference annotation ("Do not use known annotations"). (default: Yes, and
-   discover novel splice junctions)
-3. **Rule for filtering multiple mappings**. 
-   With default settings, the application will report the single best mapping
-   for each read, even if there are multiple valid mapping positions. The
-   option "Number of "best" mappings to report" lets you increase the number
+   reference annotation ("Do not use known annotations"). (default: "Yes, and
+   discover novel splice junctions")
+3. **Rule for filtering multiple mappings**. If you set "Unique mappings only",
+   the application will report only unique hits for one mappable read. If you
+   are interested in reads mapped to multiple positions in the genome, choose
+   "Multiple mappings only". Select "None", if you would like to get both
+   unique and multiple mappings. (default: None)
+4. **Number of best mappings to report** option lets you increase the number
    of reported mappings. This can be used together with "Rule for filtering
    mappings" to choose whether to keep reads mapping to uniquely or to
    multiple positions, e.g. report up to 5 possible mappings, and only for
-   multi-hit reads. If you want to be stricter, you can set the number of
-   allowed mismatches from 2 to 1 or 0.
-#. For paired reads, using the option "Disallow unique mappings of one mate"
-   you can discard pairs of reads where one mate maps uniquely and the other
-   to multiple positions. Selecting "Disallow discordant mappings" will
-   discard all mappings where the two mates map uniquely but with unexpected
-   orientation, or where the distance between two mapped mates differs from
-   and internally estimated fragment length, including mates mapping to
-   different chromosomes.
+   multi-hit reads. (default: 1)
+5. **Number of allowed mismatches** option lets you set the maximum number of
+   allowed mismatches per read. (default: 2)
+6. **Disallow unique mappings of one mate** option allows you to discard pairs
+   of reads where one mate maps uniquely and the other to multiple positions.
+   (default: unchecked)
+7. **Disallow discordant mappings** will discard all mappings where the two
+   mates map uniquely but with unexpected orientation, or where the distance
+   between two mapped mates differs from and internally estimated fragment
+   length, including mates mapping to different chromosomes. (default:
+   unchecked)
 
-The app is based on Tophat2_ aligner.
+The application is based on Tophat2_ aligner and used in the `Testing
+Differential Gene Expression tutorial`_.
 
 .. _Tophat2: https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36
-
-This app is used in the `Testing Differential Gene Expression tutorial`_.
-
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
 Spliced Mapping to Transcriptome with STAR
@@ -922,7 +941,7 @@ Spliced Mapping to Transcriptome with STAR
 **Action**: to perform gapped read alignment of transcriptomic data (like
 RNA-seq) to a Reference Genome taking into account splice junctions.
 
-In comparison to Tophat, STAR works fast, at the same time being very accurate
+In comparison to Tophat2, STAR works fast, at the same time being very accurate
 and precise. Moreover, in contrast to all our other mappers, it maps reads onto
 the reference transcriptome, not the genome. Another advantage of the
 application is that it can be used to analyse both: short and long reads,
@@ -930,8 +949,8 @@ making it compatible with various sequencing platforms. What's more, this
 Spliced Mapper supports two-pass alignment strategy when it runs the second
 alignment pass to align reads across the found splice junctions, which improves
 quantification of the novel splice junctions. Taking all these features into
-account, the Spliced Mapping to Transcriptome with STAR app can be a very good
-alternative to other RNA-seq aligners.
+account, the Spliced Mapping to Transcriptome with STAR application can be a
+very good alternative to other RNA-seq aligners.
 
 Here is the application page:
 
@@ -939,24 +958,34 @@ Here is the application page:
 
 Now, let's look through the application parameters:
 
-#. "Enable two pass mapping mode" option is recommended for semsitive novel
+1. **Enable two pass mapping mode** option is recommended for sensitive novel
    junction discovery. The idea is to collect the junctions founded in the
    first pass, and use them as "annotated" junctions for the 2nd pass mapping.
-#. You can set "maximum number of multiple alignments allowed for a read: if
-   exceeded, the read is considered unmapped" (10 by default).
-#. "Minimum overhang for unannotated junctions" prohibits alignments with very
+   (default: unchecked)
+2. **Maximum number of multiple alignments allowed for a read: if exceeded,
+   the read is considered unmapped**. This option allows you to set how many
+   mappings you expect for one mappable read if it is mapped in multiple
+   positions of the genome. (default: 10)
+3. **Minimum overhang for unannotated junctions** prohibits alignments with very
    small spilce overhangs for unannotated junctions (overhang is a piece of
-   the read which is spliced apart). It is 5 bp by default.
-#. "Minimum overhang for annotated junctions" option does the same job as
+   the read which is spliced apart). (default: 5)
+4. **Minimum overhang for annotated junctions** option does the same job as
    "Minimum overhang for unannotated junctions" but for annotated junctions.
-#. Set how many mismatches you allow per pair in "Maximum number of mismatches
-   per pair" parameter.
-#. "Minimum intron length" and "Maximum intron length" are the minimum and
-   maximum intron sizes you consider for the spliced alignments. If you are not
-   sure, `this paper`_ may help you to make a decision.
-#. "Maximum genomic distance between mates" is the max gap between reads from
-   a pair when mapped to the genome. If reads map to the genome farther apart
-   the fragment is considered to be chimeric.
+   (default: 3)
+5. **Maximum number of mismatches per pair** parameter sets how many
+   mismatches you allow per pair. (default: 10)
+6. **Minimum intron length** is a minimum intron size for the spliced
+   alignments. Read `this paper`_ in case you are not sure about the value.
+   (default: 21)
+7. **Maximum intron length** is a maximum intron size you consider for the
+   spliced alignments. For example, set 1,000 and the application will take into
+   account the introns of maximum 1,000 bp in size. Note, that the default 0
+   here means the max intron size equal about 590,000 bp. If you are not sure
+   about intron size value, `this paper`_ may help you to make a decision.
+   (default: 0)
+8. **Maximum genomic distance between mates** is the maximum gap between reads
+   from a pair when mapped to the genome. If reads map to the genome farther
+   apart the fragment is considered to be chimeric (default: 0).
 
 .. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
 
@@ -977,19 +1006,21 @@ Let's look at the application page and discuss the parameters available there.
 
 .. image:: images/rsem_report.png
 
-#. “The RNA-Seq protocol used to generate the reads is strand specific”? If
-   yes, check it. By default, the app considers the reads as non-strand-specific.
-#. It is important to know the fragment length distribution to estimate
-   expression levels from for single-end data accurately. In this case, you need
-   to specify the "Estimated average fragment length (for single-end reads only)".
-   Typical Illumina libraries produce fragment lengths ranging between 180–200 bp.
-   By default, the fragment length is set equal to 190. For paired-end reads, the
-   average fragment length can be directly estimated from the reads.
-#. You can also set the "Estimated standard deviation of fragment length (for
-   single-end reads only)" (the default value is 20). For paired-end reads this
-   value will be estimated from the input data.
+1. **The RNA-Seq protocol used to generate the reads is strand specific**. If
+   the reads are strand-specific, check this option. (default: unchecked)
+2. **Estimated average fragment length (for single-end reads only)** option.
+   It is important to know the fragment length distribution to accurately
+   estimate expression levels for single-end data. Typical Illumina libraries
+   produce fragment lengths ranging between 180–200 bp. For paired-end reads,
+   the average fragment length can be directly estimated from the reads.
+   (default: 190)
+3. **Estimated standard deviation of fragment length (for single-end reads
+   only)** option. If you do not know standard deviation of the fragment
+   library, you can probably assume that the standard deviation is 10% of the
+   average fragment length. For paired-end reads this value will be estimated
+   from the input data. (default: 20)
 
-When the task is complete, click "View report" in Explore section to get gene
+When the task is complete, click **View report** in Explore section to get gene
 and isoform level expression estimates.
 
 .. image:: images/rsem_output_report.png
@@ -1023,7 +1054,7 @@ Gene Quantification with HTSeq-count
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to calculate the number of reads overlapped the genes and other
-features. The application accepts Mapped Reads and Reference Genome as inputs
+features. The application accepts mapped reads and reference genome as inputs
 and generates Mapped Read Counts (containing information about number of reads
 overlapping each gene specified in the reference annotation).
 
@@ -1031,39 +1062,36 @@ overlapping each gene specified in the reference annotation).
 
 Let's go through the application parameters:
 
-1. Depending on your tasks, you should specify the feature type for which
-   overlaps choosing from "exon", "CDS" (coding DNA sequence), "3’UTR" (the 3’ 
-   untranslated region) or "5’UTR" (the 5’ untranslated region). For example,
-   you may consider each exon as a feature in order to check for alternative
-   splicing.
-2. By default, the "gene-id" will be used as a feature identifier. If some
-   features will have the same feature identifier the application will
-   consider all these features as relating to the same feature.
-3. You also need to choose a rule for overlaps that dictates how mapped reads
-   that overlap genomic features will be treated. There are three overlap
-   resolution modes: union, strict-intersection, and non-empty intersection.
+1. **Feature type** option. Depending on your tasks, you should specify the
+   feature type for which overlaps choosing from "exon", "CDS" (coding DNA
+   sequence), "3’UTR" (the 3’  untranslated region) or "5’UTR" (the 5’
+   untranslated region). For example, you may consider each exon as a feature
+   in order to check for alternative splicing. By default, the "gene-id" will
+   be used as a feature identifier. (default: exon)
+2. **Rule for overlaps** option dictates how mapped reads that overlap genomic
+   features will be treated. There are three overlap resolution modes: union,
+   strict-intersection, and non-empty intersection. (default: union)
 
    The first one - "union" - is the most recommended. It combines all cases
    when the read (or read pair) at least partly overlaps the feature. The
    "strict-intersection" mode is about strict intersection between the
    feature and the read overlapping this feature. But if you are interested in
    counting reads that are fully or partly intersected with the feature, you
-   should use the last mode. It’s important that the read will be counted for
+   should use the last mode. It is important that the read will be counted for
    feature if it overlaps precisely only one feature. If the read overlaps
    with more than one feature, it will not be counted.
 
 .. image:: images/overlap_resolution_modes.png
 
-4. An additional useful option is "Strand-specific reads". The application
-   takes into account the direction of the read and the reference, so that a
-   read from the wrong direction, even if it is mapped to the right place,
-   will not be counted. This option can be useful if your data is
-   strand-specific and you are interested in counting of reads overlapping
-   with feature regarding to whether these reads are mapped to the same or the
-   opposite strand as the feature. Choose "yes", if the reads were mapped to
-   the same strand as the feature and "reverse" - if the reads were mapped on
-   the opposite strand as the feature. Specify "no", if you don’t consider
-   strand-specificity.
+3. **Strand-specific reads**. The application takes into account the direction
+   of the read and the reference, so that a read from the wrong direction,
+   even if it is mapped to the right place, will not be counted. This option
+   can be useful if your data is strand-specific and you are interested in
+   counting of reads overlapping with feature regarding to whether these reads
+   are mapped to the same or the opposite strand as the feature. Choose "yes",
+   if the reads were mapped to the same strand as the feature and "reverse" -
+   if the reads were mapped on the opposite strand as the feature. Specify
+   "no", if you do not consider strand-specificity. (default: yes)
 
 This application is based on HTSeq_ tool and used in `Differential Gene
 Expression Analysis pipeline`_. After calculating read abundance on the gene
@@ -1075,9 +1103,14 @@ level, you'll be able to run "Test Differential Gene Expression" application.
 Isoform quantification with Kallisto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to quantify abundances of transcripts from RNA-Seq data without
-the need for alignment. It uses an `Expectation-Maximization algorithm`_ on
-"pseudoalignments" to find a set of potential transcripts a read could have
+Specific genes can produce a range of different transcripts encoding various
+isoforms, i.e. proteins of varying lengths containing different segments of the
+basic gene sequence. Such isoforms can be generated, for example, in the
+process of alternative splicing.
+
+**Action**: to quantify abundances of genes and isoforms from RNA-Seq data
+without the need for alignment. It uses an `Expectation-Maximization algorithm`_
+on "pseudoalignments" to find a set of potential transcripts a read could have
 originated from.
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
