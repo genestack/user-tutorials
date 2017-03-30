@@ -356,7 +356,7 @@ quality score distribution for each read.
 
 .. image:: images/preprocessing_filter_by_quality_scores.png
 
-1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cutt-off
+1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cuttoff
    value. A score of 20 means that there is a 1% chance that the corresponding
    base was called incorrectly by the sequencer. A score of 30 means a 0.1%
    chance of an incorrect base call. (default: 20)
@@ -827,12 +827,12 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-.. note:: **What is the difference between genome, exome and transcriptome**?
+.. note:: **What is a difference between genome, exome and transcriptome**?
 
-          Genome icludes both coding (genes) and noncoding DNA in a given cell
+          Genome includes both coding (genes) and noncoding DNA in a given cell
           type.
 
-          Exome is the part of the genome formed by exons, i.e it includes all
+          Exome is a  part of genome formed by exons, i.e it includes all
           DNA that is transcribed into mRNA.
 
           Transcriptome is a collection of all mRNAs present in a given cell
@@ -850,7 +850,7 @@ so there's typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
 
-.. note:: **What is the difference between exons and introns?**
+.. note:: **What is a difference between exons and introns?**
 
           Exons and introns are both parts of genes. However, exons code for
           proteins, whereas introns do not. In RNA splicing, introns are
@@ -900,7 +900,7 @@ Details on various settings:
    method. If you are not sure whether your RNA-seq data is strand-specific
    or not, you can try using Subsample Reads application to make a small
    subsample, map it with Spliced Mapping with Tophat2 and check the coverage
-   in Genome Browser for genes on both strands. (default: none)
+   in Genome Browser for genes on both strands. (default: None)
 2. **Rule for mapping over known annotations**. This option allows you to use
    annotated transcripts from the reference genome to distinguish between
    novel and known junctions ("Yes, and discover novel splice junctions").
@@ -985,11 +985,11 @@ Now, let's look through the application parameters:
    (default: 0)
 8. **Maximum genomic distance between mates** is the maximum gap between reads
    from a pair when mapped to the genome. If reads map to the genome farther
-   apart the fragment is considered to be chimeric (default: 0).
+   apart the fragment is considered to be chimeric. (default: 0)
 
 .. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
 
-The application is based on STAR_ aligner:
+The application is based on STAR_ aligner.
 
 .. _STAR: https://github.com/alexdobin/STAR
 
@@ -1053,10 +1053,10 @@ The application is based on the `RSEM`_ program and the `STAR`_ mapper.
 Gene Quantification with HTSeq-count
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to calculate the number of reads overlapped the genes and other
-features. The application accepts mapped reads and reference genome as inputs
-and generates Mapped Read Counts (containing information about number of reads
-overlapping each gene specified in the reference annotation).
+**Action**: to compute gene counts from mapped reads. The application takes as
+input a mapped reads file, and uses a reference genome to produce a mapped
+reads counts file, indicating how many reads overlap each gene specified in the
+genome's annotation.
 
 .. image:: images/htseq_count_app.png
 
@@ -1088,14 +1088,14 @@ Let's go through the application parameters:
    even if it is mapped to the right place, will not be counted. This option
    can be useful if your data is strand-specific and you are interested in
    counting of reads overlapping with feature regarding to whether these reads
-   are mapped to the same or the opposite strand as the feature. Choose "yes",
-   if the reads were mapped to the same strand as the feature and "reverse" -
+   are mapped to the same or the opposite strand as the feature. Choose "Yes",
+   if the reads were mapped to the same strand as the feature and "Reverse" -
    if the reads were mapped on the opposite strand as the feature. Specify
-   "no", if you do not consider strand-specificity. (default: yes)
+   "No", if you do not consider strand-specificity. (default: Yes)
 
 This application is based on HTSeq_ tool and used in `Differential Gene
 Expression Analysis pipeline`_. After calculating read abundance on the gene
-level, you'll be able to run "Test Differential Gene Expression" application.
+level, you'll be able to run **Test Differential Gene Expression** application.
 
 .. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
 .. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
@@ -1111,35 +1111,39 @@ process of alternative splicing.
 **Action**: to quantify abundances of genes and isoforms from RNA-Seq data
 without the need for alignment. It uses an `Expectation-Maximization algorithm`_
 on "pseudoalignments" to find a set of potential transcripts a read could have
-originated from.
+originated from. Note, that the application accepts reference transcriptome
+(cDNA) not a genome (DNA).
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 .. image:: images/kallisto.png
 
 Let's inspect the application options:
 
-#. Use "Strand-specificity protocol" parameter to specify how to process the
-   pseudoalignments. By default, the app does not take into account strand
-   specificity ("none" value). To run the app in strand specific mode, change
-   this value to "forward" if you are interested only in fragments where the
-   first read in the pair is pseudomapped to the forward strand of a
-   transcript. If a fragment is pseudomapped to multiple transcripts, only the
-   transcripts that are consistent with the first read are kept. The "reverse"
-   is the same as "forward" but the first read will be pseudomapped to the
-   reverse strand of the transcript.
-#. To correct the transcript abundances according to the model of sequences
-   specific bias, check "Enable sequence based bias correction" option.
-#. In the case of single-end reads, the "Estimated average fragment length
-   (for single-end reads only)" option must be used to specify the average
-   fragment length. Typical Illumina libraries produce fragment lengths
-   ranging from 180–200 bp. By default it’s equal to 190. For paired-end
-   reads, the average fragment length can be directly estimated from the reads.
-#. ALso, you can set the "Estimated standard deviation of fragment length (for
-   single-end reads only)" (the default value is 20). For paired-end reads
-   this value will be estimated from the input data.
+1. **Strand-specificity protocol** parameter is used to specify how to process
+   the pseudoalignments. If "None", the application does not take into account
+   strand specificity. To run the application in strand specific mode, change
+   this value to "Forward" if you are interested only in fragments where the
+   first read in the pair is pseudomapped to the forward strand of a transcript.
+   If a fragment is pseudomapped to multiple transcripts, only the transcripts
+   that are consistent with the first read are kept. The "Reverse" is the same
+   as "Forward" but the first read will be pseudomapped to the reverse strand
+   of the transcript. (default: None)
+2. **Enable sequence based bias correction** option will correct the
+   transcript abundances according to the model of sequences specific bias.
+   (default: checked)
+3. **Estimated average fragment length (for single-end reads only)** option
+   must be specified in case of single-end reads. Typical Illumina libraries
+   produce fragment lengths ranging from 180–200 bp. For paired-end reads, the
+   average fragment length can be directly estimated from the reads. (default:
+   190)
+4. **Estimated standard deviation of fragment length (for single-end reads
+   only)** option. If you do not know standard deviation of the fragment
+   library, you can probably assume that the standard deviation is 10% of the
+   average fragment length. For paired-end reads this value will be estimated
+   from the input data. (default: 20)
 
-Use the "View report" app in the Explore section to review the Kallisto output
-report.
+Use the **View report** application in the Explore section to review the
+Kallisto output report.
 
 .. image:: images/kallisto_report.png
 
@@ -1165,22 +1169,22 @@ isoforms, i.e. proteins of varying lengths containing different segments of the
 basic gene sequence. Such isoforms can be generated, for example, in the
 process of alternative splicing.
 
-**Action**: to quanify reads abundance at the isoform level. It accepts Mapped
-Reads (corresponding to isoform alignment) and Reference Genome as inputs. The
+**Action**: to quantify reads abundance at the isoform level. It accepts mapped
+reads (corresponding to isoform alignment) and reference genome as inputs. The
 output is a file containing isoform counts. Several such files corresponding to
 samples with different biological conditions and isoforms can be further used
-in "Test Differential Isoforms Expression" application.
+in **Test Differential Isoforms Expression** application.
 
 .. image:: images/cuffquant.png
 
 Before running the application, you can choose the following parameters:
 
-#. "Strand-specificity protocol" is used for generating your reads. By default,
-   the application takes "none" strand-specific data, but this value can be
-   changed to "dUTP" or "RNA-ligation".
-#. Switch the "No correction by effective length" option if you’d like to not
-   apply effective length normalization to transcript FPKM (fragments per kilo
-   bases of exons for per million mapped reads).
+1. **Strand-specificity protocol** is used for generating your reads. If "None",
+   the application will consider your data as none-strand-specific, but this
+   value can be changed to "dUTP" or "RNA-ligation". (default: None)
+2. **No correction by effective length** option is used if you would like to
+   not apply effective length normalization to transcript FPKM (fragments per
+   kilobases of exons for per million mapped reads). (default: unchecked)
 
 The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
@@ -1197,18 +1201,19 @@ Test Differential Gene Expression
 **Action**: to perform differential gene expression analysis between groups of
 samples. The application accepts Mapped Read Counts (from Quantify Raw
 Coverage in Genes application) and generates Differential Expression
-Statistics file which↵you can view in Expression Navigator application.
+Statistics file which you can view in Expression Navigator application.
 
 .. image:: images/test_differential_gene_expression.png
 
-#. You can apply autogrouping ("Group samples by" option) when the application
-   helps you to group your samples according to experimental factor indicated
-   in metainfo for the samples (e.g. disease, tissue, sex, cell type, cell
-   line, treatment, etc).
-#. The application supports two "methods for differential expression" -
-   "DESeq2" and "edgeR" statistical R packages - to perform normalization
-   across libraries, fit negative binomial distribution and likelihood ratio test
-   (LRT) using generalized linear model (GLM).
+1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+   application helps you to group your samples according to experimental factor
+   indicated in metainfo for the samples (e.g. disease, tissue, sex, cell type,
+   cell line, treatment, etc.). (default: None)
+2. **Methods for differential expression**. The application supports two
+   methods - "DESeq2" and "edgeR" statistical R packages - to perform
+   normalization across libraries, fit negative binomial distribution and
+   likelihood ratio test (LRT) using generalized linear model (GLM). (default:
+   DESeq2)
 
    With edgeR, one of the following types of dispersion estimate is used, in
    order of priority and depending on the availability of biological replicates:
@@ -1243,17 +1248,23 @@ Look at all result tables and plots in Expression Navigator application.
    Log transformed values contains the same information as Fold Change but
    makes it more clear for interpretation because of symmetric values.
 
--  **Log2(Counts per Million)**. Dividing each read count by millions yields
+-  **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
    counts per million (cpm), a simple measure of read abundance that can be
    compared across libraries of different sizes. And if we apply Log2 transform
-   for this value we’ll get Log2(Counts per Million).
+   for this value we will get Log2(Counts per Million).
 
--  **p-value**. The application also counts p-value for each gene. A low
-   p–value is seen as evidence that the null hypothesis may not be true (i.e.,
-   our gene is differentially expressed).
+-  **p-value**. The application also computes a p-value for each gene. A low
+   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+   can be rejected (i.e. the gene is differentially expressed). However, due to
+   the fact that we perform multiple testing, the value that should be looked at
+   to safely assess significance is the false discovery rate.
 
--  **False discovery rate**. FDR is the expected proportion of Type I errors
-   among the rejected hypotheses.
+-  **False discovery rate**. The FDR is a corrected version of the p-value,
+   which accounts for `multiple testing correction`_. Typically, an FDR <
+   0.05 is good evidence that the gene is differentially expressed. You can
+   read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+
+.. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
 This application is based on two statistical R packages - `DESeq2`_ and
 `edgeR`_.
@@ -1273,15 +1284,16 @@ Statistics file which↵you can view in Expression Navigator application.
 
 In application options, you can find these ones:
 
-#. You can apply autogrouping ("Group samples by" option) when the application
-   helps you to group your samples according to experimental factor indicated
-   in metainfo for the samples (e.g. disease, tissue, sex, cell type, cell
-   line, treatment, etc).
-#. “Apply fragment bias correction” - if checked, the application runs the
-   bias detection and correction algorithm which can significantly improve
-   accuracy of transcript abundance estimates.
-#. Use “Apply multiple reads correction” option if you’d like to apply the
-   multiple reads correction.
+1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+   application helps you to group your samples according to experimental
+   factor indicated in metainfo for the samples (e.g. disease, tissue, sex,
+   cell type, cell line, treatment, etc.). (default: None)
+2. **Apply fragment bias correction** option - if checked, the application
+   will run the bias detection and correction algorithm which can
+   significantly improve accuracy of transcript abundance estimates. (default:
+   checked)
+3. **Apply multiple reads correction** option is useful if you would like to
+   apply the multiple reads correction. (default: checked)
 
 The application finds isoforms that are differentially expressed (DE) between
 several groups of samples and produces tables of Top DE transcripts. Each
@@ -1305,19 +1317,23 @@ use Expression Navigator application.
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
 
-- **Log2(Counts per Million)**. Dividing each read count by millions yields
+- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
   for this value we’ll get Log2(Counts per Million).
 
-- **p-value**. The application also counts p-value for each isoform. A low
-  p–value is seen as evidence that the null hypothesis may not be true (i.e.,
-  our isoform is differentially expressed).
+- **p-value**. The application also computes a p-value for each isoform. A low
+  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  can be rejected (i.e. the isoform is differentially expressed). However, due to
+  the fact that we perform multiple testing, the value that should be looked at
+  to safely assess significance is the false discovery rate.
 
-- **False discovery rate**. FDR is the expected proportion of Type I errors
-  among the rejected hypotheses. In other words, it’s the fraction of isoforms
-  for which a significant variation was identified incorrectly. You can read
-  more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+- **False discovery rate**. The FDR is a corrected version of the p-value,
+  which accounts for `multiple testing correction`_. Typically, an FDR <
+  0.05 is good evidence that the isoform is differentially expressed. You can
+  read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+
+.. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
 This application is based on **cuffdiff** which is a part of Cufflinks_.
 
@@ -1333,14 +1349,25 @@ expression analyses.
 
 The Expression Navigator page contains 4 sections:
 
-1. The topmost section, "Groups Information", is a summary of the groups
-   available for comparison. Size refers to the number of samples used to
-   generate each group. The drop-down selection menu lets you choose which
-   groups to compare.
-2. The leftmost section allows you to filter and choose genes for comparison.
-   You can filter by maximum acceptable false discovery rate (FDR), up or down
-   regulation, minimum log fold change (LogFC), and minimum log counts per
-   million (LogCPM).
+1. **Groups Information** section. It is a summary of the groups available for
+   comparison. Size refers to the number of samples used to generate each
+   group.
+
+.. image:: images/expression_navigator_group_information.png
+
+2. **Top Differentially Expressed Genes** section allows you to choose which groups
+   to compare and how to filter and sort identified differentially expressed
+   (DE) genes.
+
+.. image:: image/expression_navigator_top_de_genes.png
+
+You can filter DE genes by maximum acceptable false discovery rate (FDR), up or
+down regulation, minimum log fold change (LogFC), and minimum log counts per
+million (LogCPM).
+
+.. image:: images/expression_navigator_de_genes_filtering.png
+
+Let’s look through these statistics:
 
 - **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
   and with control samples. Then, for each gene in a sample we know read counts
@@ -1359,36 +1386,47 @@ The Expression Navigator page contains 4 sections:
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
-- **Log2(Counts per Million)**. Dividing each read count by millions yields
+- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
   counts per million (cpm), a simple measure of read abundance that can be
   compared across libraries of different sizes. And if we apply Log2 transform
   for this value we’ll get Log2(Counts per Million).
 
-  *Counts per Million =  reads(gene)\^106/reads(all genes)*
+- **p-value**. The application also computes a p-value for each gene. A low
+  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  can be rejected (i.e. the gene is differentially expressed). However, due to
+  the fact that we perform multiple testing, the value that should be
+  looked at to safely assess significance is the false discovery rate.
 
-- **p-value**. The application also counts p-value for each gene. A low
-  p–value is seen as evidence that the null hypothesis may not be true (i.e.,
-  our gene is differentially expressed).
+- **False discovery rate**. The FDR is a corrected version of the p-value,
+  which accounts for `multiple testing correction`_. Typically, an FDR 0.05 is
+  good evidence that the gene is differentially expressed. You can read more
+  about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+  
+.. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
-- **False discovery rate**. FDR is the expected proportion of Type I errors
-  among the rejected null hypotheses. In other words, it’s the fraction of
-  genes for which a significant variation was identified incorrectly. You
-  can read more about it `on this page`_.
+Moreover, you can sort the DE genes by these statistics, clicking the small
+arrows near the name of the metric in the table.
 
-.. _on this page: http://www.cbil.upenn.edu/PaGE/fdr.html
+.. image:: images/expression_navigator_de_genes_sorting.png
 
-  The buttons at the bottom of the section allow you to refresh the list
-  based on your filtering criteria or clear your selection.
+The buttons at the bottom of the section allow you to refresh the list based on
+your filtering criteria or clear your selection.
 
-3. The top right section contains a box plots of expression levels. Genes are
-   listed on the x axis with one bar present for each  selected group. Log
-   normalized expression levels are plotted on the y axis.
+3. The top right section contains **a boxplot of expression levels**. Each
+   colour corresponds to a gene. Each boxplot corresponds to the distribution
+   of a gene's expression levels in a group, and coloured circles represent the
+   expression value of a specific gene in a specific sample.
 
-4. The bottom right section contains a search box for genes of interest. You
-   can search for one gene at a time with auto-complete functionality. These
-   genes do not need to be on the filtered list.
+.. image:: images/expression_navigator_de_boxplots.png
 
-You can read more about this app in the corresponding `tutorials`_.
+4. The bottom-right section contains **a search box** that allows you to look for
+   specific genes of interest. You can look up genes by gene symbol, with
+   autocomplete. You can search for any gene (not only those that are visible
+   with the current filters).
+
+.. image:: images/expression_navigator_de_search_box.png
+
+You can read more about this application in the corresponding `tutorials`_.
 
 .. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
 
