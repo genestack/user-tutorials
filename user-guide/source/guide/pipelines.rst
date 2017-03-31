@@ -1359,7 +1359,7 @@ The Expression Navigator page contains 4 sections:
    to compare and how to filter and sort identified differentially expressed
    (DE) genes.
 
-.. image:: image/expression_navigator_top_de_genes.png
+.. image:: images/expression_navigator_top_de_genes.png
 
 You can filter DE genes by maximum acceptable false discovery rate (FDR), up or
 down regulation, minimum log fold change (LogFC), and minimum log counts per
@@ -1412,7 +1412,7 @@ arrows near the name of the metric in the table.
 The buttons at the bottom of the section allow you to refresh the list based on
 your filtering criteria or clear your selection.
 
-3. The top right section contains **a boxplot of expression levels**. Each
+3. The top-right section contains **a boxplot of expression levels**. Each
    colour corresponds to a gene. Each boxplot corresponds to the distribution
    of a gene's expression levels in a group, and coloured circles represent the
    expression value of a specific gene in a specific sample.
@@ -1449,33 +1449,34 @@ smoothing splines and does not require the presence of spike-in data.
 
 To identify highly variable genes you can try different options:
 
-#. "Exclude samples with low coverage" option (switched by default) allows you
-   to exclude or include for analysis samples with low read counts.
-#. The "Use spike-ins to calibrate noise" option determines whether or not
+1. **Use spike-ins to calibrate noise** option determines whether or not
    spike-in data should be taken into account. If you select only one folder
-   before running the app, you will use spike-free algorithm and↵this option
-   will be switched off by default. But if you select two↵folders, one for
-   biological and the other for spike-in data, you can use↵the Brennecke
+   before running the application, you will use spike-free algorithm and this
+   option will be switched off by default. But if you select two folders, one
+   for biological and the other for spike-in data, you can use the Brennecke
    algorithm which requires this option.
-#. Set "Significance level for the p-value (-10log₁₀(p))". The application
-   will use the default of 1, which corresponds to selecting genes for which
-   p is smaller than 0.1.
+2. **Exclude samples with low coverage** option allows you to exclude or
+   include for analysis samples with low read counts. (default: checked)
+3. **Significance level for the p-value (-10log₁₀(p))**. If you set it equal
+   to 1, the application will select the genes for which p-value is smaller
+   than 0.1. (default: 1)
 
 The next three options will be available if spike-ins are included in the
 experiment and "Use spike-ins to calibrate noise" option is switched:
 
-#. You’ll be able to set "Expected biological CV" which is the minimum
-   threshold chosen for quantifying the level of biological variability (CV -
-   coefficient of variation) expected in the null hypothesis of the model. The
-   default value is 0.5.
-#. The other two options - "Noise fit - proportion of genes with high CV² to
-   remove" and "Noise fit - proportion of genes with low mean expression to
-   remove" - enable us to exclude a fraction of spike-in genes to fit the
-   noise model, because extreme outliers tend to skew the fit. The default
-   values for these options are 0 and 0.85, consequently.
+4. **Expected biological CV** is the minimum threshold chosen for quantifying
+   the level of biological variability (CV - coefficient of variation)
+   expected in the null hypothesis of the model. (default: 0.5)
+5. **Noise fit - proportion of genes with high CV² to remove** option allows
+   you to exclude spike-in genes with high CV² to fit the noise model.
+   (default: 0)
+6. **Noise fit - proportion of genes with low mean expression to remove**
+   option enables you to exclude a fraction of spike-in genes with low mean
+   expression to fit the noise model, because extreme outliers tend to skew
+   the fit. (default: 0.85)
 
 To look at the HE analysis results, open the created Single-cell RNA-seq
-Analysis page in  Single-cell RNA-seq visualizer.
+Analysis page in  Single-cell RNA-seq Visualiser.
 
 This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 `flashClust`_ and `RSJONIO`_.
@@ -1493,37 +1494,47 @@ Single-cell RNA-Seq Visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to explore cell-to-cell variability in gene expression in even
-seemingly homogeneous cell populations based on scRNA-Seq datasets.
+seemingly homogeneous cell populations based on scRNA-seq datasets.
 
 The application shows basic statistics such as the number of identified highly
-variable genes across the analysed samples. It also provides several quality
-control (QC) plots allowing to check the quality of raw sequencing data,
-estimate and fit technical noise for the Brennecke algorithm, and detect the
-genes with significantly high variability in expression.
+variable genes across the analysed samples.
+
+.. image:: images/sc-rna-seq_basic_statistics.png
+   :scale: 50 %
+
+It also provides several quality control (QC) plots allowing to check the
+quality of raw sequencing data, estimate and fit technical noise for the
+Brennecke algorithm, and detect the genes with significantly high variability
+in expression.
 
 .. image:: images/qc_plots_in_single_cell_visualizer.png
 
 QC plots are adopted from the original `paper by Brennecke et al`_. In all the
-plots described below, gene expression levels are normalized↵using the DESeq
+plots described below, gene expression levels are normalized using the DESeq
 normalization procedure.
 
 .. _paper by Brennecke et al: http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2645.html
 
 The first plot describing the quality of raw data is the Scatter Plot of
 Normalised Read Counts, which shows the cell-to-cell correlation of normalized
-gene expression levels. Each dot represents a gene, its↵x-coordinate is the
-normalized gene count in the first cell, and its↵y-coordinate is the
-normalized gene count in the second cell. If↵spike-ins were used during the
-analysis, separate plots will be rendered↵for spike-in genes and for sample
+gene expression levels. Each dot represents a gene, its x-coordinate is the
+normalized gene count in the first cell, and its y-coordinate is the
+normalized gene count in the second cell. If spike-ins were used during the
+analysis, separate plots will be rendered for spike-in genes and for sample
 genes.
+
+.. image:: images/sc-rna-seq_qc_raw.png
 
 The Technical Noise Fit and Highly Variable Genes plots provide a visual
 summary of the gene expression noise profile in your dataset across all cells.
-They graph the squared coefficient of variation (CV2) against the average
+
+.. image:: images/sc-rna-seq_technical_noise_fit_and_variable_genes.png
+
+They graph the squared coefficient of variation (CV²) against the average
 normalized read counts across samples.  The Gene Expression Variability QC plot
 allows you to visualize the genes whose expression significantly varies across
 cells. A gene is considered as highly variable if its coefficient of biological
-variation is significantly higher than 50% (CV2 > 0.25)  and the biological
+variation is significantly higher than 50% (CV² > 0.25)  and the biological
 part of its coefficient of variation is significantly higher than a
 user-defined threshold (its default value is 50%, and can be modified in the
 Single-cell Analyser). The coefficient of variation is defined as the standard
@@ -1532,7 +1543,7 @@ deviation divided by the mean. It is thus a standardized measure of variance.
 If spike-ins were used to calibrate technical noise, then the separate
 Technical Noise Fit plot is displayed. On this plot, each dot corresponds to a
 “technical gene” (spike-in gene).It plots the mean normalized count across all
-samples on the x-coordinate and the squared coefficient of variation (CV2) of
+samples on the x-coordinate and the squared coefficient of variation (CV²) of
 the normalized counts across all samples on the y-coordinate. The coefficient
 of variation is defined as the standard deviation divided by the mean. It is
 thus a standardized measure of variance. The plot also represents the fitted
@@ -1605,7 +1616,7 @@ Unsplaced Mapping. In contrast to spliced aligners, unspliced read aligners map
 reads to a reference without allowing large gaps such as those arising from
 reads spanning exon boundaries, or splice junctions. When analysing whole
 genome sequencing (WGS) or whole exome sequencing (WES) data, there is no need
-to look for spliced these sites precisely. That's why we recommed use Unspliced
+to look for spliced these sites precisely. That's why we reccommed use Unspliced
 Mapping applications in such cases.
 
 On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
