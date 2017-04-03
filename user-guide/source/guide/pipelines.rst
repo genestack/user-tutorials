@@ -1612,11 +1612,11 @@ reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
 There are at least two types of mapping strategies - Spliced Mapping and
-Unsplaced Mapping. In contrast to spliced aligners, unspliced read aligners map
+Unspliced Mapping. In contrast to spliced aligners, unspliced read aligners map
 reads to a reference without allowing large gaps such as those arising from
 reads spanning exon boundaries, or splice junctions. When analysing whole
 genome sequencing (WGS) or whole exome sequencing (WES) data, there is no need
-to look for spliced these sites precisely. That's why we reccommed use Unspliced
+to look for spliced these sites precisely. That's why we recommend use Unspliced
 Mapping applications in such cases.
 
 On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
@@ -1629,7 +1629,7 @@ Unspliced Mapping with BWA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map WES or WGS data to a reference genome without allowing
-splice junctions. The application generates Mapped Reads which cun be used
+splice junctions. The application generates Mapped Reads which can be used
 further with our Variant Calling application which is based on samtools mpileup.
 
 Here is the uspliced mapping application page:
@@ -1663,7 +1663,7 @@ Unspliced Mapping with Bowtie2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map WES or WGS data to a reference genome without allowing
-splice junctions. The application generates Mapped Reads which cun be used
+splice junctions. The application generates Mapped Reads which can be used
 further with our Variant Calling application which is based on samtools
 mpileup.
 
@@ -1671,22 +1671,29 @@ Let's look at the application page and the parameters we can use to do mapping:
 
 .. image:: images/unspliced_mapping_with_bowtie2.png
 
-1. By default, the application will report the best mapping for one mappable
-   read. If you are interested in reads mapping to multiple positions, switch
-   off this option and set N mappable positions for one read in the text box
-   "Limit the number of mappings to search".
-2. You can apply a rule for filtering mappings to choose whether to keep reads
-   mapping uniquely or to multiple positions.
-3. If you want to be stricter, you can change the maximum number of allowed
-   mismatches, e.g. if you set it to 1, any mapping with 2 or more mismatches
-   won’t be reported.
-4. For paired reads, using the option "Disallow unique mappings of one mate"
-   you can discard pairs of reads where one mate maps uniquely and the other
-   to multiple positions. Selecting "Disallow discordant mappings" will
-   discard all mappings where the two mates map uniquely but with unexpected
-   orientation or where the distance between two mapped mates differs from and
-   internally estimated fragment length, including mates mapping to different
-   chromosomes.
+1. **Report the best mapping** option. The application will consider only the
+   best mapping for one mappable read. (default: checked)
+2. **Limit the number of mappings to search** option. If you are interested in
+   reads mapping to multiple positions, switch off "Report the best mapping"
+   option and set N mappable positions for one read in the text box for "Limit
+   the number of mappings to search". (default: 1)
+3. **Rule for filtering mappings**. You can apply a rule for filtering mappings
+   to choose whether to keep reads mapping uniquely or to multiple positions.
+   (default: None)
+4. **Number of allowed mismatches** option. If you want to be stricter, you
+   can change the maximum number of allowed mismatches, e.g. if you set it to
+   1, any mapping with 2 or more mismatches will not be reported (default: 0)
+
+For paired-end reads two more option appears:
+
+5. **Disallow unique mappings of one mate** option allows you to discard pairs
+   of reads where one mate maps uniquely and the other to multiple positions.
+   (default: unchecked)
+6. **Disallow discordant mappings** parameter will discard all mappings where
+   the two mates map uniquely but with unexpected orientation or where the
+   distance between two mapped mates differs from and internally estimated
+   fragment length, including mates mapping to different chromosomes. (default:
+   unchecked)
 
 The application is based on Bowtie2_ aligner.
 
@@ -1696,7 +1703,7 @@ Variant Calling with SAMtools and BCFtools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to identify genomic variants. The application accepts Mapped Reads
-file(s) to call variants. You'll be able to perform variant calling for each
+files to call variants. You will be able to perform variant calling for each
 single Mapped Reads file separately or run Variant Calling application on
 multiple mapped reads samples. The last option maybe helpful because you
 increase the accuracy of the analysis by taking the reads from several samples
@@ -1709,7 +1716,7 @@ Here is the Variant Calling page:
 
 .. image:: images/variant_calling_app_page_top.png
 
-The app uses samtools mpileup which automatically scans every position
+The application uses samtools mpileup which automatically scans every position
 supported by an aligned read, computes all the possible genotypes supported by
 these reads, and then calculates the probability that each of these genotypes
 is truly present in your sample.
@@ -1731,22 +1738,28 @@ Let's now look at the command line options more closely:
 
 .. image:: images/variant_calling_command_line_options.png
 
-#. By default, the application call both SNPs and indels, but if you’d like to
-   report only SNPs change "Variants to report" option to "SNPs only" value.
-#. Also, you can tell the application to call only multi-allelic variants,
-   switching the "Call multi-allelic variants" option. The multiallelic
-   calling is recommended for most tasks.
-#. In some cases, it’ll be interested to report only potential variant sites
-   and exclude monomorphic ones (sites without alternate alleles) in output
-   Genetic Variation file. For this purpose, switch the option “Only report
-   variant sites”.
-#. To skip anomalous read pairs in variant calling, use option "Discard
-   anomalous read pairs" checked.
-#. "Maximum per-sample read depth to consider per position" (250 reads by
-   default) option sets the maximum number of reads at the position to
-   consider.
-#. "Minimum number of gapped reads for an INDEL candidate" is equal 1 by
-   default.
+1. **Variants to report** option. The application can call both "SNPs and
+   INDELs" variants, "SNPs only" or "INDELs only". (default: "SNPs and INDELs")
+2. **Call only multi-allelic variants** option. The multiallelic calling is
+   recommended for most tasks. (default: checked)
+
+.. note:: **What is a multiallelic variant?**
+
+          A multiallelic variant is a genomic variant with two or more
+          observed alleles in the variant locus. In contrast to multiallelic
+          variant, consensus (or biallelic) variant is determined as a single
+          non-reference allele (there are only two possible alleles at the
+          variant site - the reference allele and the consensus one).
+
+3. **Only report variant sites** option. In some cases, it’ll be interested to
+   report only potential variant sites and exclude monomorphic ones (sites
+   without alternate alleles). For this purpose, switch the option “Only report
+   variant sites”. (default: checked)
+4. **Discard anomalous read pairs** option is used to skip anomalous read
+   pairs in variant calling. (default: checked)
+5. **Maximum per-sample read depth to consider per position** option sets the
+   maximum number of reads at the position to consider. (default: 250)
+6. **Minimum number of gapped reads for an INDEL candidate** option. (default: 1)
 #. "Minimum per-sample depth to call non-variant block" is equal 1 by default.
 #. "Minimum variant quality" is set to 20 by default. The application will
    ignore the variant with quality score below this value.
