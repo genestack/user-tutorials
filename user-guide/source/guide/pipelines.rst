@@ -2555,15 +2555,16 @@ DNA methylation arrays are a widely-used tool to assess DNA methylation genome-w
 The "Illumina HumanMethylation450K" array allow to estimate methylation
 with high coverage and relatively low cost. It makes "450K" a powerful tool for
 epigenome-wide association studies (EWAS) projects. The "Illumina Infinium MethylationEPIC" are
-the next-generation microarrays. While "450K" detects more than 485,000 methylation sites
+the next-generation microarrays. While "450K" detects more than 485,000 methylation CpG-sites
 per sample at single-nucleotide resolution "EPIC" covers over 850,000 ones.
+
 
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 **Action**: to perform normalisation of methylation microarray assays.
 
-For methylation microarrays,  normalisation can be performed with either "subsetQuantileWithinArray"
+For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
 method or "quantile"and "GenomeStudio" background correction can be applied.
 
 Further, the quality of  normalised microarrays can be checked using the Microarray QC
@@ -2571,11 +2572,16 @@ Report application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be used in "Differential methylation".
 
 
-.. TODO comming soon
-
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
-**Action**: to asses quality of methylation microarray assays.
+**Action**: to asses quality of methylation microarray assays
+
+Quality control check of microarray data is crucial step in microarray analysis pipeline,
+as it allows to detect and exclude low-quality assays from the further analysis.
+
+A single array with both red and green channels is used to estimate methylation for each
+individual sample. Then, for each CpG locus, both methylated and unmethylated signal
+intensities are measured.
 
 Currently, there are two methods that are used to estimate DNA methylation level:
 *Beta value* and *M-value*.
@@ -2585,16 +2591,25 @@ intensity (sum of methylated and unmethylated probe intensities);
 The M-value is log2 ratio of the intensities of methylated probe versus unmethylated probe
 (Du P. et al., 2010).
 
+The files containing the mentioned statistic results such as
+Methylation and Unmethylation values, Beta values, M-values, Log median intensity values.
+Additionally, you can download and explore "Copy number values" file with
+the sum of the methylated and unmethylated signals.
 
-Various types of quality control plots are provided by the example of the Infinium 450K microarrays:
+Various types of **quality control plots** are provided (by the example of the Infinium 450K microarrays):
 
-1) *Log median intensity* plot in both methylated and unmethylated channels. In general, "good" samples
-tend to cluster together, while "bad" samples tend to separate and have lower median intensities.
+1) *Log median intensity* plot -
+
+The scatterplot represents median of the signal intensities in both methylated and unmethylated channels
+for each array.
+
+In general, samples of good quality tend to cluster together,
+while "bad" samples tend to separate. They also have lower median intensities.
 
 .. image:: images/log-median-intensities.png
 
-
 2) Beta-values of the assays are represented by:
+
 - *Beta density* plot
 
 .. image:: images/qc-beta-density.png
@@ -2608,33 +2623,36 @@ The Infinium 450K arrays have several internal control probes helping to track
 the quality on different stages of assay preparation:
 
 SAMPLE-INDEPENDENT CONTROLS
+Thsese controls allows to assess quality of each step.
 
-#. *Staining control strip* - to estimate the efficiency of the staining step for both the red and green channels.
-They are independent of the hybridization and extension steps.
+- *Staining control strip* - to estimate the efficiency of the staining step
+for both the red and green channels. They are independent of the hybridization
+and extension steps.
 
 .. image:: images/qc-staining.png
 
-
-#. *Extension control strip* - test efficiency of single-base extension of the probes that incorporates labeled nucleotides.
-Both red (A andT, labeled with ) and green (C and G labeled with ) channels are considered.
+- *Extension control strip* - test efficiency of single-base extension of the probes
+that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
+and green (C and G labeled with biotin) channels are considered.
 
 .. image:: images/qc-extension.png
 
 
-#. *Target removal control strip* -
+- *Target removal control strip* -
 
 .. image:: images/qc-target-removal.png
 
-#.  *Hybridization control strip* - hybridisation to BeadChip
+- *Hybridization control strip* - hybridisation to BeadChip
 
 .. image:: images/qc-hybridisation.png
 
 SAMPLE-DEPENDENT CONTROLS
 
-#. Bisulfite-conversion
+- Bisulfite-conversion
 
-To estimate methylation of DNA 450k assay probe preparation involves bisulfite conversion DNA
-when all unmethylated cytosines are converted to uracils, but methylated cytosines are remains as they are.
+To estimate methylation of DNA 450k assay probe preparation involves
+bisulfite conversion DNA when all unmethylated cytosines are converted
+to uracils, but methylated cytosines are remains as they are.
 
 .. image:: array-bisulfite-conversion.png
 
@@ -2648,24 +2666,13 @@ when all unmethylated cytosines are converted to uracils, but methylated cytosin
 
 - *Bisulphite conversion II control strip*
 
-
-
 - *Specificity I control strip*
 
 .. image:: images/qc-specificity-I.png
 
 - *Specificity II control strip*
 
-
-The app also allows you to download report containing the QC plots in PDF format
-as well as the following files with the following statistic results:
-
-- *Methylation values*
-- *Unmethylation values*
-- *Beta values*
-- *M-values*
-- *Copy number values*
-- *Log median intensity values*
+The app also allows you to download report containing the QC-plots in PDF format.
 
 
 Differential methylation analysis
