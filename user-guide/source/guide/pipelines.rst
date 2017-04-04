@@ -1644,12 +1644,13 @@ reads. Then the application converts these SA coordinates to chromosome
 coordinates using the "samse" command (if your reads are single-end) or
 "sampe" (for paired-end reads).
 
-When “Perform targeted mapping” option is selected, a bed file is used to
-specify the genome locations, that the reads should be mapped to. The reference
-genome is altered to only contain those locations, using the bedtools
-"getfasta" command and the reads are then mapped to the altered genome. The
-resulting sam file contains local genome co-ordinates, which are converted back
-to the global coordinates of the reference genome.
+1. **Perform targeted mapping** option. If this parameter is selected, a bed
+   file is used to specify the genome locations, that the reads should be
+   mapped to. The reference genome is altered to only contain those locations,
+   using the bedtools "getfasta" command and the reads are then mapped to the
+   altered genome. The resulting sam file contains local genome co-ordinates,
+   which are converted back to the global coordinates of the reference genome.
+   (default: unchecked)
 
 The application is based on BWA_ aligner and it's used in `Whole Exome
 Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
@@ -1759,17 +1760,27 @@ Let's now look at the command line options more closely:
    pairs in variant calling. (default: checked)
 5. **Maximum per-sample read depth to consider per position** option sets the
    maximum number of reads at the position to consider. (default: 250)
-6. **Minimum number of gapped reads for an INDEL candidate** option. (default: 1)
-#. "Minimum per-sample depth to call non-variant block" is equal 1 by default.
-#. "Minimum variant quality" is set to 20 by default. The application will
-   ignore the variant with quality score below this value.
-#. "Minimum average mapping quality for a variant" is 20 by default.
-#. "Minimum all-samples read depth for a variant" is a minimum number of reads
-   covering position (it's equal 1 by default).
-#. You are also able to select chromosomes for analysis, using “Chromosome to
-   analyse” option.
-#. Merge samples with the same metainfo key (specify “Key to merge samples)”.
-   This option can be useful for merging technical replicates.
+6. **Minimum number of gapped reads for an INDEL candidate** option. Typically,
+   gapped alignments (like the ones from Unspliced with Bowtie2) can be used to
+   identify indels (about 1-10 bases in length). The greatest indel sensitivity
+   can be achieved by generating indel candidate from mapped reads. (default:
+   1)
+7. **Minimum per-sample depth to call non-variant block** option. A non-variant
+   block is all variants, describing a segment of nonvariant calls. Specify,
+   what minimum read depth value you expect to observe among all sites
+   encompassed by the non-variant block. (default: 1)
+8. **Minimum variant quality** option. The application will ignore the variant
+   with quality score below this value. (default: 20)
+9. **Minimum average mapping quality for a variant** parameter is used to
+   discard all variants with average mapping quality value less than specified.
+   (default: 20)
+10. **Minimum all-samples read depth for a variant** is a minimum number of
+    reads covering position. (default: 1)
+11. **Chromosome to analyse** option allows you to choose specific chromosomes
+    to analyse. (default: All)
+12. **“Key to merge samples** is a metainfo key you need to specify in order
+    you would like to merge the samples. This option can be useful for merging
+    technical replicates.
 
 Moreover, base alignment quality (BAQ) recalculation is turned on by default.
 It helps to rule out false positive SNP calls due to alignment artefacts near
@@ -1781,9 +1792,9 @@ reverse reference, forward non-reference and reverse non-reference alleles
 used in variant calling) and SP (phred-scaled strand bias P-value) tags in
 the output file.
 
-The result Genetic Variations file can be opened in Genome Browser as a
-separate  variation track, further annotated using Effect Prediction
-application, or viewed immediately using Variant Explorer application.
+The result Genetic Variations can be explored in **Genome Browser** as a
+separate  variation track, further annotated using **Effect Prediction**
+application, or viewed immediately using **Variant Explorer** application.
 
 This application is based on `SAMtools
 <http://www.htslib.org/doc/samtools-1.1.html>`_ and
@@ -1806,23 +1817,23 @@ Genetic Variations and adds annotations for them.
 The annotated variants can be further explored in Genome Browser, Variant
 Explorer or View Report applications.
 
-In Genome Browser, the *Variation track* shows the genetic variants (SNPs,
+In **Genome Browser**, the *Variation track* shows the genetic variants (SNPs,
 insertions etc.), their exact position on genome, average mapping quality and
 raw read depth.
 
 .. image:: images/gb_annotated_variants.png
 
-If you’d like to see the whole list of effects and annotations for variants as
-well as to get some general statistics (for example, to know number of
+If you would like to see the whole list of effects and annotations for variants
+as well as to get some general statistics (for example, to know number of
 variants by chromosome, find out how many variants are corresponding to SNP or
 insertions, to know number of effects by type and region and some other
-information), just open the annotated Genetic Variations file in View Report
-application. Read about the variant annotations and report statisctics in
+information), just open the annotated Genetic Variations file in **View
+Report** application. Read about the variant annotations and report statistics in
 Whole Exome Sequencing tutorial, in `Effect annotation`_ section.
 
 .. _Effect annotation: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html#effect-annotation
 
-Use Variant Explorer application to know what effect is generated by each
+Use **Variant Explorer** application to know what effect is generated by each
 separate variant as well as to sort and filter the variants by various fields,
 such as mutation type, quality, locus, etc.
 
@@ -1841,20 +1852,20 @@ Variant Explorer
 .. TODO add description for "File info" tab, "Filters summary" and "Filters history"
 
 **Action**: to interactively explore genetic variations such as SNPs, MNPs,
-and indels at specific genomic positions. The app not only displays the
+and indels at specific genomic positions. The application not only displays the
 information about variants but also allows you to sort and filter by various
 fields, such as mutation type, quality, locus, etc.
 
 .. image:: images/variant_explorer_app_page.png
 
 Variant Explorer takes as input a  Genetic Variations file which can be
-imported or generated with the Variant Calling app. If you open it in the app,
-you’ll see default DP (Raw read depth) and MQ (Average mapping quality)
-columns ("Other" tab in "Columns" section).
+imported or generated with the Variant Calling application. If you open it in
+the application, you will see default DP (Raw read depth) and MQ (Average
+mapping quality) columns ("Other" tab in "Columns" section).
 
 .. image:: images/variant_explorer_other.png
 
-Variants can be annotated with the Effect Prediction app that analyzes genomic
+Variants can be annotated with the Effect Prediction application that analyses genomic
 position of the variants and reveals the effects they produce on known genes
 (such as amino acid changes, synonymous and nonsynonymous mutations, etc.).
 For such variants the following information will be shown (find it in "Effect
@@ -1867,7 +1878,7 @@ prediction" tab).
 -  Functional class - functional class of a region, annotated by SnpEff
    tool.
 
-Moreover, the app calculates "Additional metrics" such as genotype
+Moreover, the application calculates "Additional metrics" such as genotype
 frequencies for homozygous samples with reference and alteration alleles
 (GF HOM REF and GF HOM ALT columns correspondingly), reads depth for
 homozygous samples with alteration allele (DP HOM ALT) and reads depth
@@ -1882,7 +1893,7 @@ that all selected columns will be displayed in Table viewer.
 You can "download filtered data as .tsv" or create new file with filtered
 variants.
 
-Read more about this app in our tutorials on `Whole Exome Sequencing`_ and
+Read more about this application in our tutorials on `Whole Exome Sequencing`_ and
 `Whole Genome Sequencing`_ analyses.
 
 .. _Whole Exome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
@@ -1902,18 +1913,19 @@ Here is the application page:
 
 Let's look at the options:
 
-1. "Rule for filtering". With default settings, the application will report
-   overlapping features. For example, you could isolate single nucleotide
-   polymorphisms (SNPs) that overlap with SNPs from another file. For this,
-   intersect two Genetic Variations files. But there are cases when you’d like
-   to know which features don’t overlap with other ones. To get such outputs,
-   use "Report non-overlapping features" filter.
-2. By setting "Minimum overlapping fraction" equal to 10 (default value), you
-   can check whether a feature of interest has at least 10% of its length
-   overlapping another feature.
-3. The "Rule for overlap strandedness" option allows you to ignore overlaps on
-   the same strand or on the other strand. By default, overlapping features
-   are reported without respect to the strandedness.
+1. **Rule for filtering** option. The application can "Report overlapping
+   features". For example, you could isolate single nucleotide polymorphisms
+   (SNPs) that overlap with SNPs from another file. For this, intersect two
+   Genetic Variations files. But there are cases when you would like to know
+   which features do not overlap with other ones (use "Report non-overlapping
+   features" filter). (default: Report overlapping features)
+2. **Minimum overlapping fraction** option allows you check whether a feature
+   of interest has a specified fraction of its length overlapping another
+   feature. (default: 10)
+3. **Rule for overlap strandedness** option allows you to ignore overlaps on
+   the same strand ("Discard overlaps on the same strand"), on the other
+   strand ("Discard overlaps on the other strand") or expect overlapping
+   without respect to the strandedness ("None"). (default: None)
 
 This application is based on `BEDtools
 <http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html>`_.
@@ -1933,23 +1945,24 @@ level of the whole genome. To calculate
 
 Let’s talk a bit about various settings:
 
-1. "Number of mismatches" option lets you set the maximum number of allowed
+1. **Number of mismatches** option lets you set the maximum number of allowed
    mismatches per read. Changing this number you can affect application
    runtime and percentage of mapped reads. There is an increase in the
    percentage of mapped reads and in the application runtime when increasing
    this value. For example, by default the read could be mapped to the genome
-   with no more than 5 mismatches.
-2. By default, the application only reports unique hits for one mappable read.
-   But if your reads are mapped to multiple positions in the genome, than you
-   can change "Rule for multiple mappings" to report one random "best"
-   mapping. This stops duplicated genome regions from being omitted altogether.
-3. Depending on the "BS data generation protocol" that was used to construct
-   the bisulfite converted library, BS reads need to  be analysed in different
-   ways.
+   with no more than 5 mismatches. (default: 5)
+2. **Rule for multiple mappings** option. The application can "only reports
+   unique hits" for one mappable read or if your reads are mapped to multiple
+   positions in the genome, "report 1 random "best" mapping". In the last case,
+   it stops duplicated genome regions from being omitted altogether. (default:
+   Report 1 random "best" mapping)
+3. **BS data generation protocol** option enables you to specify what library
+   preparation method was used to construct the bisulfite converted library.
+   (default: Lister)
 
    If  the "Lister" protocol was used, your reads will be mapped to two
    forward strands. You can read more about this protocol in `Lister et al`_.
-   If you Choose the "Cokus" protocol the application will align your reads to
+   If you choose the "Cokus" protocol the application will align your reads to
    all four strands. You can find more details about this protocol in the
    original study by `Cokus et al`_.
 
@@ -1972,24 +1985,30 @@ the specific digestion sites on the genome.
 
 Let’s talk a bit about various settings:
 
-1. You should set the "Enzyme sequence" which was recognized by by the
-   restriction enzyme used to digest genomic DNA in the process of library
-   preparation. By default, the application uses the *C-CGG* sequence which is
-   recognised in MspI restriction.
-2. The option "Number of mismatches" lets you set the maximum number of allowed
+1. **Enzyme sequence** option is important. It specify what sequence is
+   recognized by by the restriction enzyme and used to digest genomic DNA in
+   the process of library preparation. By default, the application uses the
+   *C-CGG* sequence which is recognised in MspI restriction. (default: "C-CGG")
+2. **Number of mismatches** option lets you set the maximum number of allowed
    mismatches per read. Decreasing this number you can reduce application
-   runtime and percentage of mapped reads. By default the application aligns
-   reads to the reference genome with no more than 5 mismatches.
-3. By default the application only reports unique hits for one mappable read.
-   You can change the "Rule for multiple mappings" to report one random "best"
-   mapping, if your reads are mapped to multiple positions in the genome.
-4. Choose the "BS data generation protocol" that was used to construct the
-   bisulfite converted library. If it is the `Lister protocol`_, than your
-   reads will be mapped to two forward strands.  Reads generated using the
-   `Cokus experimental protocol`_ will be aligned to all four strands.
+   runtime and percentage of mapped reads. (default: 5)
+3. **Rule for multiple mappings** option. The application can "only reports
+   unique hits" for one mappable read or if your reads are mapped to multiple
+   positions in the genome, "report 1 random "best" mapping". In the last case,
+   it stops duplicated genome regions from being omitted altogether. (default:
+   Report 1 random "best" mapping)
+3. **BS data generation protocol** option enables you to specify what library
+   preparation method was used to construct the bisulfite converted library.
+   (default: Lister)
 
-.. _Lister protocol: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
-.. _Cokus experimental protocol: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
+   If  the "Lister" protocol was used, your reads will be mapped to two
+   forward strands. You can read more about this protocol in `Lister et al`_.
+   If you choose the "Cokus" protocol the application will align your reads to
+   all four strands. You can find more details about this protocol in the
+   original study by `Cokus et al`_.
+
+.. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
+.. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
 
 The application is based on BSMAP_ aligner.
 
@@ -2005,26 +2024,28 @@ reads. Next, you can view methylation ratios in Genome Browser.
 
 Command line options are the following:
 
-1. To get results filtered by depth of coverage use "Minimum coverage" option.
-   By default, this value is not set. But raising it to a higher value (e.g.
-   5) requires that at least five reads will cover the position.
-2. For paired-end mappings, you can trim from 1 to 240 fill-in nucleotides in
-   the DNA fragment end-repairing. By default, this "Trim N end-repairing
-   fill-in bases" option is switched off. For RRBS mappings, the number of
-   fill-in bases could be determined by the distance between cuttings sites on
-   forward and reverse strands. If you analyse WGBS mappings, it’s recommended
-   to set this number between 0~3.
-3. Switch "Report loci with zero methylation ratios" option to report
-   positions with zero methylation. The application doesn’t apply this option
-   by default.
-4. To combine CpG methylation ratio from both strands, set "Combine ratios on
-   both strands" option switched. By default, it is unchecked. If you want to
-   process only unique mappings, check "Only unique mappings" option.
-5. For paired reads, using the option "Discard discordant mappings" you can
-   discard all mappings where the two mates map uniquely but with unexpected
-   orientation, or where the distance between two mapped mates differs from
-   and internally estimated fragment length, including mates mapping to
-   different chromosomes.
+1. **Minimum coverage** option allows you to get results filtered by depth
+   of coverage. But raising it to a higher value (e.g. 5) requires that at
+   least five reads will cover the position. (default: not set)
+2. **Trim N end-repairing fill-in bases** option. For paired-end mappings, you
+   can trim from 1 to 240 fill-in nucleotides in the DNA fragment end-repairing.
+   For RRBS mappings, the number of fill-in bases could be determined by the
+   distance between cuttings sites on forward and reverse strands. If you
+   analyse WGBS mappings, it is recommended to set this number between 0~3.
+   (default: not set)
+3. **Report loci with zero methylation ratios** option is used to report
+   positions with zero methylation. (default: unchecked)
+4. **Combine ratios on both strands** option allows you to combine CpG
+   methylation ratio from both strands. (default: unchecked)
+5. **Only unique mappings** parameter is checked in case you would like to
+   process only unique mappings. (default: checked)
+
+If you analyse paired reads two more options appear:
+
+6. **Discard discordant mappings** parameter to discard all mappings where the
+   two mates map uniquely but with unexpected orientation, or where the
+   distance between two mapped mates differs from and internally estimated
+   fragment length, including mates mapping to different chromosomes.
 6. Sometimes you need to remove duplicates from your Mapped Reads files. For
    this purpose, use "Discard duplicated reads" option.
 7. To ignore positions where there is a possible C/T SNPs detected, choose
