@@ -2039,23 +2039,23 @@ Command line options are the following:
    methylation ratio from both strands. (default: unchecked)
 5. **Only unique mappings** parameter is checked in case you would like to
    process only unique mappings. (default: checked)
+6. **Discard duplicated reads** option is used to remove duplicates from mapped
+   reads. (default: checked)
+7. **C/T SNPs filtering** option. To ignore positions where there is a possible
+   C/T SNPs detected, choose "skip" value. If you want to correct the
+   methylation ratio according to the C/T SNP information estimated by the G/A
+   counts on reverse strand, set "correct" value. Or, let the application do
+   not consider C/T SNPs ("no-action" value). (default: no-action)
 
-If you analyse paired reads two more options appear:
+If you analyse paired reads one more option appears:
 
-6. **Discard discordant mappings** parameter to discard all mappings where the
+8. **Discard discordant mappings** parameter is used to discard all mappings where the
    two mates map uniquely but with unexpected orientation, or where the
    distance between two mapped mates differs from and internally estimated
    fragment length, including mates mapping to different chromosomes.
-6. Sometimes you need to remove duplicates from your Mapped Reads files. For
-   this purpose, use "Discard duplicated reads" option.
-7. To ignore positions where there is a possible C/T SNPs detected, choose
-   "skip" value for "C/T SNPs filtering" option. If you want to correct the
-   methylation ratio according to the C/T SNP information estimated by the
-   G/A counts on reverse strand, set "correct" value. By default, the
-   application doesn’t consider C/T SNPs ("no-action" value).
 
 The outputs from Methylation Analysis application can be represented in the
-Genome Browser as *Methylation ratios* track.
+**Genome Browser** as *Methylation ratios* track.
 
 .. image:: images/methratio_in_gb.png
 
@@ -2088,24 +2088,24 @@ Microbiome Analysis with QIIME
 
 .. TODO Update this part when the app will be updated
 
-**Action**: to identify microbial species and the percentage composition of the
-sample. The application accepts microbial sequencing reads and outputs
+**Action**: to identify microbial species and their abundances in microbiome
+samples. The application accepts microbial sequencing reads and outputs
 Clinical or Research reports with abundance plots and microbiological diversity
 metrics.
 
 .. image:: images/microbiome_analysis.png
 
-Microbiome Analysis application uses Greengenes_ (for bacteria) and UNITE_
+The microbiome analysis can use either Greengenes_ (for bacteria) or UNITE_
 (for fungi) reference databases to estimate the taxonomic composition of the
 microbial communities.
 
-.. _Greengenes: http://greengenes.lbl.gov/cgi-bin/nph-index.cgi↵               
-.. _UNITE: http://www2.dpes.gu.se/project/unite/UNITE_intro.htm↵
+.. _Greengenes: http://greengenes.lbl.gov/cgi-bin/nph-index.cgi
+.. _UNITE: http://www2.dpes.gu.se/project/unite/UNITE_intro.html
 
 Let's review the application options:
 
-1. To pick OTUs (Operational Taxomonic Units), the application provides two
-protocols:
+1. **OTU  picking** option. To pick OTUs (Operational Taxomonic Units), the
+   application provides two protocols (default: open-reference):
 
 .. TODO Add pros and cons of the protocols
 .. TODO Add forum post on pros and cons between the protocols and link on it
@@ -2119,24 +2119,24 @@ protocols:
   subsequently clustered de novo (i.e. against one another without any external
   reference).
 
-2. Algorithms for open-reference close-reference OTU picking differ. In case
-   open-reference protocol, the application suggests you use uclust or
-   sortmera_sumclust algorithms. If you prefer closed-reference protocol,
-   choose between blast, uclust_ref and sortmera algorithms.
+2. **Algorithm** used for clustering. In case open-reference protocol, the
+   application suggests you use uclust (by default) or sortmera_sumclust
+   algorithms. If you prefer closed-reference protocol, choose between blast
+   (by default), uclust_ref and sortmera algorithms.
+3. **Quality filter for pre-clustering step** option will remove any low
+   quality or ambiguous reads before clustering. (default: 0)
+4. **Join paired-end reads (for paired reads only)** option will join
+   paired-end reads before the clustering. (default: unchecked)
 
-3. A pre-clustering quality filtering step excludes all reads with a similarity
-   level below the default 0.99 from any gene in the reference database.
+The next two options are available only for open-reference protocol:
 
-4. Taxonomy assignment performs using the blust, rdp classifier, rtax, mothur,
-   uclust or sortmerna algorithm (for open-reference approach) or uclust (in
-   case of closed-reference method).
-
-5. As mentioned, when using open-reference protocol, some reads may not hit the
-   reference database.  In such case you can set the percent of failure
-   sequences to include in the subsample to cluster de novo (0.001 by default).
-
-6. If you analyse paired-end reads, you can join them using "Join paired-end
-   reads" option.
+5. **Taxonomy assignment** will be performed using the blust, rdp,
+   rtax, mothur, uclust or sortmerna algorithm. In case of closed-reference
+   method, taxonomy assignment will always be performed by uclust algorithm.
+   (default: blust)
+6. **Percent of reads to cluster de novo** option is applied for reads that
+   will not hit the reference database and will be cluster de novo. (default:
+   0,001)
 
 Output reports include the following metrics:
 
@@ -2145,7 +2145,7 @@ form of interactive plot:
 
 .. image:: images/microbime_analysis_counts.png
 
-or table:
+and table:
 
 .. image:: images/microbiome_analysis_table.png
 
@@ -2159,7 +2159,7 @@ samples):
 
 .. image:: images/microbiome_analysis_beta_diversity.png
 
-The application is based on QIIME_ open source tool.
+The application is based on the open-source tool QIIME_.
 
 .. _QIIME: http://qiime.org/home_static/dataFiles.html
 
@@ -2171,7 +2171,7 @@ Additional Visualisation Applications
 This section includes the applications that can be used in
 various pipelines to view the content of the data (e.g. Sequencing
 Assay Viewer) or to display multiple data types on different
-steps of analyses (e.g Genome Browser).
+steps of analyses (e.g. Genome Browser).
 
 Sequencing Assay Viewer
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -2287,7 +2287,7 @@ release 86".
 The numbers correspond to versions (or “builds”) of the reference genome – the
 higher the number, the more recent the version. We generally recommend you use
 the latest version possible. One thing to remember is that for the newest
-genome builds, it’s likely that resources such as genome annotations and
+genome builds, it is likely that resources such as genome annotations and
 functional information will be limited, as it takes time for Ensembl/ UCSC to
 integrate additional genomic data with the new build. You can read more about
 it a `blog post`_ from Genome Spot blog and in `this article`_ from Bio-IT.
@@ -2307,17 +2307,17 @@ should choose a matching reference genome.
 
 3. **Toplevel sequence or primary assembly**
 
-- TOPLEVEL SEQUENCE
+- Toplevel sequence
 
   As a rule, toplevel reference genomes contain all chromosomes, sequence
   regions not assembled into chromosomes and padded haplotype/patch regions.
 
-- PRIMARY ASSEMBLY
+- Primary assembly
 
   Primary assembly genomes contain all toplevel sequence region excluding
   haplotypes and patches.
 
-We are stringly recommend to use primary assembly reference genomes, since they
+We are strongly recommend to use primary assembly reference genomes, since they
 are best for performing sequence similarity searches while patches and
 haplotypes would confuse analysis.
 
@@ -2377,8 +2377,8 @@ There are two types of masked reference genomes: masked and soft-masked.
           comparison with unmasked one.
 
 
-We recommend you use UNMASKED genomes when you don’t want to lose any
-information. If you want to perform some sort of filtering, it’s better to do
+We recommend you use UNMASKED genomes when you do not want to lose any
+information. If you want to perform some sort of filtering, it is better to do
 so  after the mapping step.
 
 Usually, reference genome name includes information about all these factors:
@@ -2404,7 +2404,6 @@ to read more on the topic, we suggest taking a look at the following papers:
    reference geneset on variant effect prediction. BMC Genomics. 2015;16 (Suppl
    8):S2. DOI: 10.1186/1471-2164-16-S8-S2.
 
-
 Microarray data
 ---------------
 
@@ -2422,13 +2421,9 @@ expression levels on a large scale or to genotype multiple regions of a genome.
           detection of targets labeled with a molecular marker of either
           radioactive or fluorescent molecules.
 
+
 Expression arrays
 ~~~~~~~~~~~~~~~~~
-
-The human genome contains approximately 21,000 genes. At any given moment, each
-of our cells has some combination of these genes turned on, and others are
-turned off. To determine the gene activity in biological samples scientists use
-gene expression microarrays.
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2466,8 +2461,8 @@ is fit to the normalized data to obtain an expression measure for each probe
 set on each array. For more on RMA, see `here
 <https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5>`_.
 
-Further, the normalised microarrays can be assessed using the Microarray QC
-Report application to detect and remove potential outliers. Normalised
+As a next step, the normalised microarray samples can be assessed using the
+**Microarray Quality Control** application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
@@ -2489,7 +2484,7 @@ normalisation (e.g. "quantile", "scale"), can be applied.
 For 2-channel Agilent microarrays, procedures for within-array normalisation
 (e.g. "loess", "median") can also be applied.
 
-.. note:: **What is the difference between 1-channel and 2-channel microarray?**
+.. note:: **What is the difference between 1-channel and 2-channel microarrays?**
 
           Two-channel (or two-color) microarrays are typically hybridized with
           cDNA prepared from two samples (or two experimental conditions)
@@ -2505,14 +2500,13 @@ For 2-channel Agilent microarrays, procedures for within-array normalisation
           estimation of the absolute levels of gene expression and only a sigle
           dye is uded.
 
-Further, the normalised microarrays can be assessed using the Microarray QC
-Report application to detect and remove potential outliers. Normalised
+As a next step, the normalised microarray samples can be assessed using the
+**Microarray Quality Control** application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
-The application is based on the limma_ R package.
-
-.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
+The application is based on the `limma
+<https://www.bioconductor.org/packages/3.3/bioc/html/limma.html>`_ R package.
 
 GenePix Microarrays Normalisation
 *********************************
@@ -2525,8 +2519,8 @@ For GenePix microarrays, quantile between-array normalisation is performed and
 various procedures for background correction (e.g. "subtract", "half",
 "minimum", "normexp") can be applied.
 
-Further, the normalised microarrays can be assessed using the Microarray QC
-Report application to detect and remove potential outliers. Normalised
+As a next step, the normalised microarray samples can be assessed using the
+**Microarray Quality Control** application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
@@ -2540,8 +2534,8 @@ L1000 Microarrays Normalisation
 To normalize L1000 microarrays, the application applys the "quantile" method
 for between-array normalisation.
 
-Further, the normalised microarrays can be assessed using the Microarray QC
-Report application to detect and remove potential outliers. Normalised
+As a next step, the normalised microarray samples can be assessed using the **Microarray
+Quality Control** application to detect and remove potential outliers. Normalised
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
@@ -2560,7 +2554,7 @@ potential outliers.
 The application generates report containing quality metrics based on
 between-array comparisons, array intensity, variance-mean dependence and
 individual array quality. Some metrics have their own labels. It helps to
-undertsand according to which metric(s) the particular microarray is
+understand according to which metric(s) the particular microarray is
 considered to be outlier.
 
 .. image:: images/microarray_gc_report.png
@@ -2569,7 +2563,7 @@ QC metrics are computed for both the unnormalised and normalised microarrays
 and include:
 
 1. **Between array comparison** metrics.
-  
+
 - Principal Component Analysis (PCA) is a dimension reduction and visualisation
   technique that is used to project the multivariate data vector of each
   array into a two-dimensional plot, such that the spatial arrangement of the
@@ -2588,12 +2582,12 @@ and include:
   all probes without filtering).
 
   The array will be detected as an outlier if for this array the sum of the
-  distances to all other arrays is extremly large.
+  distances to all other arrays is extremely large.
 
 .. image:: images/microarrays_qc_distances_between_arrays.png
 
 2. **Array intensity** statistics.
-  
+
 - Boxplots of signal intensities represents signal intensity distributions of
   the microarrays. Typically, we expect to see the boxes similar in position
   and width. If they are different, it may indicate an experimental problem.
@@ -2608,7 +2602,7 @@ and include:
 .. image:: images/microarray_qc_density_plots_of_signal_intensities.png
 
 3. **Variance mean dependence** metric.
-  
+
 - "Standard deviation versus mean rank" plot is a density plot of the standard
   deviation of the intensities across arrays on the y-axis versus the rank of
   their mean on the x-axis. The red dots, connected by lines, show the running
@@ -2621,7 +2615,7 @@ and include:
 .. image:: images/microarray_qc_standard_deviation_vs_mean_rank.png
 
 4. **Individual array quality**.
-  
+
 - MA Plots allow pairewise comparison of log-intensity of each array to a
   "pseudo"-array (which consists of the median across arrays) and
   identification of intensity-dependent biases. The Y axis of the plot
@@ -2635,13 +2629,13 @@ and include:
 Additional Affymetrix-specific metrics are also computed for Affymetrix
 microarrays.
 
-Overall, if you click on "Outlier detection overview" the appication will
+Overall, if you click on "Outlier detection overview" the application will
 detect apparent outlier arrays, suggest you remove them and re-normalise
-your data or continue Differential Expression or Dose Response analyses.
+your data or continue differential expression or dose response analyses.
 
 .. image:: images/microarray_gc_report_outlier.png
 
-The application is based on ArrayQualityMetrics_ R package.
+The application is based on the ArrayQualityMetrics_ R package.
 
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
 
@@ -2653,48 +2647,39 @@ thousands of genes between sample groups. For example, to understand the effect
 of a drug we may ask which genes are up-regulated or down-regulated between
 treatment and control groups, i.e. to perform differential expression analysis.
 
-.. note:: **What are up-regulated and down-regulated genes?**
-
-          The up-regulated genes are genes that are more highly expressed
-          compared to the reference ones (i.e wild type). Down-regulated genes
-          are the ones having a decrease in their expression in comparison
-          with the reference expression.
-
-Since the microarrays are normalized, they are ready for the downstream
-Differential Expression Analysis.
+Once your microarray samples have been normalised, you can use them as inputs
+for differential expression analysis.
 
 Test Differential Expression for Microarrays
 ********************************************
 
 **Action**: to perform differential expression analysis between groups of
-microarrays.
+microarray samples.
 
 The application requires normalized microarrays to calculate differential
-expression statistics (such as normalized counts, log-fold change, p-value and
+expression statistics (such as log-expr, log-fold change, p-value and
 FDR) and microarray annotation to map probe identifiers to the gene symbols.
 
 .. image:: images/test_differential_expression_microarrays.png
 
 Let's look at the options:
 
-1. First, you need to **group samples by** experimental factor or condition you
-   specified in metainfo for samples. For example, if you have 6 samples -
+1. **Group samples by** an experimental factor or condition that was specified
+   in the metainfo of the samples. For example, if you have 6 samples -
    three of them are treated by compound X, and the rest three are untreated - the
-   grouping factor will be the treatment procedure. If you do not have any
-   grouping factors here, please open Metainfo Editor application on the raw
-   samples and fill in the corresponding metainfo for them.
-2. If youe experiment uses control group specify it under the **Control group**
-   option.
+   grouping factor will be the treatment procedure. If no grouping factor is
+   available here, you should open your microarray assays in Metainfo Editor
+   and specify a grouping factor in a new column.
+2. **Control group** option. If you specify a control group, each group will be
+   compared separately to that control group. If you do not specify a control
+   group, each group will be compared against the average of all the other groups.
 
-.. note:: **What is the difference between Control Group and Experimental
-          Group?**
+Currently, only single-factor comparisons are supported. More complex
+experimental designs (confounding factors, batch effects, multi-factor analysis,
+etc.) will be supported in later versions of the application.
 
-          The difference between a control group and an experimental group is
-          one group is exposed to the experimental conditions (e.g. compound
-          treatment) and the other is not (without compound treatment).
-
-When the analysis in finished, you can explore the results in Expression
-Navigator.
+When the analysis in finished, you can explore the results in **Expression
+Navigator**.
 
 .. image:: images/en_microarrays.png
 
@@ -2711,13 +2696,13 @@ The Expression Navigator page contains 4 sections:
 1. **Groups Information** section. It is a summary of the groups available for
    comparison. Size refers to the number of samples used to generate each
    group.
-   
+
 2. **Top Differentially Expressed Genes** section allows you to choose which
-   groups to compare and how to filter and sort identiffied differentially
+   groups to compare and how to filter and sort identified differentially
    expressed (DE) genes.
-   
+
 .. image:: images/en_microarrays_DE_genes_table.png
-   
+
 You can filter DE genes by maximum acceptable false discovery rate (FDR), up
 or down regulation, minimum log fold change (LogFC), and minimum log counts
 per million (LogCPM).
@@ -2791,24 +2776,29 @@ Dose Response Analyser
 response models (linear, quadratic and Emax), find the optimal model and
 compute benchmark dose and dose response for each gene for this model.
 
-The application performs dose response analysis on normalized microarrays.
-Also, it requires microarray annotation (you can upload your own or use the publicly
-available one). If you'd like to perform pathway enrichment analysis, choose
-pathways annotation as well.
+This application takes as input normalised microarray data and performs dose
+response analysis. It requires a microarray annotation file to map probe
+identifiers to gene symbols (you can upload your own or use a publicly
+available one). It also requires a pathway annotation file to perform pathway
+enrichment analysis. Pathway files from Wikipathways are pre-loaded in the
+system.
 
 .. image:: images/dose_response_analysis.png
 
-Let's look at the options:
+The first step of the analysis is to identify genes that are significantly
+differentially expressed across doses. Once these are detected, multiple dose
+response models are fitted to each significant genes and statistics are
+recorded about the fits.
 
-1. For each gene, `false discovery rate
-   <http://www.cbil.upenn.edu/PaGE/fdr.html>`_ (FDR) is calculated. Set "FDR filter
-   for differentially expressed genes" to say application the genes with what
-   what FDR should be considered as DE (by default, with FDR < 0.1).
-2. You need to specify "Metainfo key for dose value". Without this to be done,
-   the application will not work properly. So, if you indicated dose values in
-   metainfo for your data, then just select the appropriate metainfo key here.
-   If not, please open Metainfo Editor aplication on you raw data and fill in
-   this metainfo.
+The following options can be configured in the app:
+
+1. **FDR filter for differentially expressed genes** specifies the false
+   discovery rate above which genes should be discarded from the analysis
+   (default: FDR < 0.1)
+2. **Metainfo key for dose value**. This specifies the metainfo key storing the
+   dose corresponding to each sample, as a numeric value. If no such attribute
+   is present in your data, you need to open your microarray assays in the
+   Metainfo Editor and add it there.
 
 The application is based on `limma
 <https://www.bioconductor.org/packages/release/bioc/html/limma.html>`_ R package. The benchmark dose is estimated
@@ -2819,9 +2809,11 @@ based on the method described in the `Benchmark Dose Software (BMDS) user manual
 Dose Response Analysis Viewer
 *****************************
 
-**Action**: to describe the expression profiles of the significant genes as a
-function of the dose. If there no significant genes will be found, the
-application will report the genes with the smallest unadjusted p-values.
+**Action**: to display dose response curves and benchmark doses for
+differentially expressed (DE) genes and enriched pathways. Note that if no
+gene passed the FDR threshold specified in the dose response analysis
+application, the application will report the 1,000 genes with the smallest
+unadjusted p-values.
 
 .. image:: images/dose_response_analysis_report.png
 
@@ -2833,38 +2825,48 @@ dose. These results are presented in an interactive table.
 
 The table includes information about:
 
-- *PROBE ID* - an identifier of the probe which is designed to interrogate a
-  given sequence;
-- *GENE* - a gene interrogated to a particular probe. If you click on the gene
-  name, you'll get a list of Gene Ontology terms representing the properties of
-  the gene product.
+- *PROBE ID* - chip-specific identifier of the microarray probe;
+- *GENE* - the gene symbol corresponding to that probe (according to the
+  microarray annotation file). Clicking on the gene name will show you a list
+  of associated gene ontology (GO) terms;
 
 .. image:: images/dose_response_analysis_gene_ontology.png
 
-- *BMD* - a benchmark dose (BMD) is computed for gene and used to estimate
-  acceptable dose levels of exposure;
-- *BEST MODEL* - an optimal model for gene suggested based on the Akaike
-  Information Criterion (AIC);
-- *MEAN EXPR* - a mean gene expression at a given dose level;
-- *T* - the Student’s t-statistic used for comparison between two groups of
-  data;
-- *P* - p-value;
-- *FDR* - false discovey rate value;
-- *B* - a slope parameter, depicting the steepness of the dose-response curve.
-  It will be negative in case of an increasing dose-response relationship.
+- *BMD* - the benchmark dose, corresponding to the dose above which the
+  corresponding gene shows a significant change in expression, according to the
+  best-fitting of the 3 models used. It is calculated using the following
+  formula:
 
-Here is the dose-response curves (linear and EMax models) for *MCOLN1* gene:
+  Let m(d) be the expected gene expression at dose d. The BMD then satisfies
+  the following equation: |m(BMD)-m(0)| = 1.349*σ. In this formula, σ is the
+  standard deviation of the response at dose 0, which we approximate by the
+  sample standard deviation of the model residuals.
 
+- *BEST MODEL* - the model with the optimal Akaike Information Criterion (AIC)
+  among the 3 models that were fitted for the gene ; the AIC rewards models
+  with small residuals and penalizes models with many coefficients, to avoid
+  overfitting;
+- *MEAN EXPR* - average expression of the gene across all doses;
+- *T* - the moderated t-statistic computed by limma to test for differential
+  expression of the gene;
+- *P* - unadjusted p-value testing for differential expression of the gene
+  across doses;
+- *FDR* - false discovery rate (p-value, adjusted for multiple testing);
+- *B* - B statistic computed by limma to test for differential expression of
+  the gene. Mathematically, this can be interpreted as the log-odds that the
+  gene is differentially expressed.
+
+Here are examples of dose response curves as they are displayed in the
+application:
+
+.. TODO
 .. image:: images/dose_response_analysis_plot.png
 
-Let *m(d)* be the expected gene expression at dose *d*. The BMD then satisfies
-the following equation: *|m(BMD)-m(0)| = 1.349σ*. In this formula, *σ* is the
-standard deviation of the response at dose 0, which we approximate by the
-sample standard deviation of the model residuals.
+In the "Pathways" tab, you can see a list of significantly enriched pathways,
+based on the detected differentially expressed genes and the pathway annotation
+file supplied to the analysis application.
 
-If you specified pathways annotation, the application shows you pathways
-enrichment (see in "Pathways" tab).
-
+.. TODO
 .. image:: images/dose_response_analysis_pathways.png
 
 The table includes:
