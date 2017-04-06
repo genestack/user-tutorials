@@ -2425,6 +2425,9 @@ expression levels on a large scale or to genotype multiple regions of a genome.
 Expression arrays
 ~~~~~~~~~~~~~~~~~
 
+Microarrays are useful in a wide variety of studies with a wide variety of
+objectives. In this section we will look at expression microarrays.
+
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2712,14 +2715,14 @@ per million (LogCPM).
 Let's look through these statistics:
 
 - **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
-  with control samples. Then, for each gene in a sample we know read counts
-  (output of Quantify Raw Coverage in Genes application). If we divide read
-  counts value for gene X (in the tumor sample) by the read counts value for
-  gene X (in the control sample) we’ll get the Fold Change value:
+  with control samples. We know the raw expression levels of each gene in tumor
+  and in control samples. If we divide these two intensities for a given gene X
+  we’ll get the Fold Change value:
 
   *Fold Change = tumor/control*
 
-  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change):
+  And if we apply a Log2 transform for these raw expression ratios we will get
+  log-transformed fold change:
 
   *Log2 Fold Change = Log2 (tumor) - Log2(control)**
 
@@ -2728,21 +2731,19 @@ Let's look through these statistics:
   positive Log FC are considered to be up-regulated in the selected group, ones
   with negative Log FC are down-regulated.
 
-- **Log2(Counts per Million)**. Dividing each read count by millions yields counts
-  per million (cpm), a simple measure of read abundance that can be compared
-  across libraries of different sizes. And if we apply Log2 transform for this
-  value we’ll get Log2(Counts per Million).
+- **Log2(EXPR)**. It is a log-transformed relative expression for gene.
 
-  *Counts per Million =  reads(gene)^106/reads(all genes)*
+- **p-value**. The application also computes a p-value for each gene. A low
+  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  can be rejected (i.e. the gene is differentially expressed). However, due to
+  the fact that we perform multiple testing, the value that should be looked at
+  to safely assess significance is the false discovery rate.
 
-- **p-value**. The application also counts p-value for each gene. A low p–value is
-  seen as evidence that the null hypothesis may not be true (i.e., our gene is
-  differentially expressed).
+- **False discovery rate**. The FDR is a corrected version of the p-value,
+  which accounts for `multiple testing correction`_. Typically, an FDR <
+  0.05 is good evidence that the gene is differentially expressed.
 
-- **False discovery rate**. FDR is the expected proportion of Type I errors among
-  the rejected null hypotheses. In other words, it’s the fraction of genes for
-  which a significant variation was identified incorrectly. You can read more
-  about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+.. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
 Moreover, you can sort the DE genes by these statistics, clicking the small
 arrows near the name of the metric in the table.
@@ -2752,15 +2753,17 @@ arrows near the name of the metric in the table.
 The buttons at the bottom of the section allow you to refresh the list based on
 your filtering criteria or clear your selection.
 
-3. The top right section contains a **box plots of expression levels**. Genes are
-   listed on the x axis with one bar present for each  selected group. Log
-   normalized expression levels are plotted on the y axis.
+3. The top right section contains a **boxplot of expression levels**. Each
+   colour corresponds to a gene. Each boxplot corresponds to the distribution
+   of a gene's expression levels in a group, and coloured circles represent the
+   expression value of a specific gene in a specific sample.
 
 .. image:: images/en_microarrays_boxplots.png
 
-4. The bottom right section contains a **search box for genes of interest**. You
-   can search for one gene at a time with auto-complete functionality. These
-   genes do not need to be on the filtered list.
+4. The bottom-right section contains a **search box** that allows you to look
+   for specific genes of interest. You can look up genes by gene symbol, with
+   autocomplete. You can search for any gene (not only those that are visible
+   with the current filters).
 
 .. image:: images/en_microarrays_search_genes.png
 
@@ -2878,7 +2881,9 @@ The table includes:
   where you can get expression profiles and regression curves for the DE genes.
 - *P* - p-value;
 - *FDR* - false discovey rate value;
-- *BMD* - a benchmark dose (BMD) is computed for a pathway;
+- *BMD* - the pathway BMD is computed as the average of the BMDs of the
+  significant genes involved in this pathway, computed with the model yielding
+  the best AIC;
 - *BMD SD* - BMD standard deviation.
 
 Methylation arrays
