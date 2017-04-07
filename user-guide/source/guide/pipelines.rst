@@ -2571,6 +2571,9 @@ Further, the quality of normalised microarrays can be checked using the **Microa
 app to detect and remove potential outliers. Normalised
 microarrays that are of good quality can, then, be used in **Differential methylation analysis**.
 
+The app is based on minfi_ Biocundctor package.
+
+.. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
@@ -2687,6 +2690,11 @@ extended.
 
 .. image:: images/bis-conversion-I.png
 
+(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+
+.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+
+
 .. image:: images/qc-bis-conversion-I.png
 
 *Bisulphite conversion II control strip*
@@ -2697,6 +2705,10 @@ If there is some unconverted DNA, the guanin base is incorporated, resulting to
 signal in the green channel.
 
 .. image:: images/bis-conversion-II.png
+
+(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+
+.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 .. image:: images/qc-bis-conversion-II.png
 
@@ -2721,6 +2733,11 @@ select those samples that pass QC-check, then click **Remove outliers and re-nor
 
 Then, if you are happy with quality of re-normalized arrays, you can proceed to the following
 step - **Differential Methylation Analysis**.
+
+The "Methylation array QC" app is based on minfi_ and shinyMethyl_ Biocundctor packages.
+
+.. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
+.. _shinyMethyl: https://f1000research.com/articles/3-175/v2
 
 .. Differential methylation analysis (coming soon)
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
