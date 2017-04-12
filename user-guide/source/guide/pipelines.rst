@@ -2551,13 +2551,13 @@ package limma).
 
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
-DNA methylation arrays are a widely-used tool to assess DNA methylation genome-wide.
-The "Illumina HumanMethylation450K" array allow to estimate methylation
-with high coverage and relatively low cost. It makes "450K" a powerful tool for
-epigenome-wide association studies (EWAS) projects. The "Illumina Infinium MethylationEPIC" are
-the next-generation microarrays. While "450K" detects more than 485,000 methylation CpG-sites
-per sample at single-nucleotide resolution "EPIC" covers over 850,000 ones.
-
+DNA methylation arrays are a widely-used tool to assess genome-wide DNA methylation.
+The "Illumina HumanMethylation450K" array permits us to estimate of methylation
+with high coverage and relatively low cost. This makes it a powerful tool for
+epigenome-wide association studies (EWAS) projects. The "Illumina Infinium MethylationEPIC"
+chip represents the next-generation of microarrays. While the "450K" detects more than 485,000
+methylation CpG-sites per sample at single-nucleotide resolution, "EPIC" covers more than
+850,000.
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2566,28 +2566,29 @@ Microarrays Normalisation
 .. image:: images/microarray-normalization.png
 
 For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
-method or "quantile", besides that, "GenomeStudio" background correction can be applied.
+or "quantile" method, and in addition, "genomeStudio" background correction may be applied.
 
 Further, the quality of normalised microarrays can be checked using the **Microarray QC Report**
-app to detect and remove potential outliers. Normalised
-microarrays that are of good quality can, then, be used in **Differential methylation analysis**.
+application to detect and remove potential outliers. Normalised microarrays that are of good quality
+may then be used in **Differential methylation analysis**.
 
-The application is based on minfi_ Biocundctor package.
+The application is based on the minfi_ Bioconductor package.
 
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
 Quality control check of microarray data is a crucial step in microarray analysis pipeline,
-as it allows to detect and exclude low-quality assays from the further analysis.
+as it allows us to detect and exclude low-quality assays from the further analysis.
 
 A single array with both red and green channels is used to estimate methylation for each
 individual sample. Then, for each CpG locus, both methylated and unmethylated signal
 intensities are measured.
 
-Currently, there are two methods that are used to estimate DNA methylation level:
-*Beta-value* and *M-value*. The Beta-value is the ratio of the methylated probe intensity and the overall
-intensity (sum of methylated and unmethylated probe intensities) (Du P. et al., 2010):
+Currently, there are two primary methods used to estimate DNA methylation level:
+*Beta-value* and *M-value*. The Beta-value is the ratio of the methylated probe intensity against the
+overall intensity (sum of methylated and unmethylated probe intensities) plus a constant (Du P. et al.,
+2010):
 
 .. image:: images/qc-betaval.png
 
@@ -2596,12 +2597,13 @@ The M-value is log2 ratio of the intensities of methylated probe versus unmethyl
 
 .. image:: images/qc-mval.png
 
-**Action**: to asses quality of methylation microarray assays
+**Action**: to assess quality of methylation microarray assays.
 
 .. image:: images/methylation-qc-page.png
 
-Methylation array QC application allows to export files containing methylation and unmethylation values,
-as well as Beta-values, M-values and Log median intensity values.
+The Methylation array QC application allows the user to export files containing methylation and
+unmethylation values, as well as Beta-values, M-values and Log median intensity values.
+
 Additionally, you can download and explore "Copy number values" file with
 the sum of the methylated and unmethylated signals.
 
@@ -2612,13 +2614,13 @@ Let's explore QC-report for the Infinium 450K microarrays:
 
 The scatterplot represents a log median of the signal intensities in both methylated and unmethylated channels
 for each array. In general, samples of good quality cluster together,
-while "bad" samples tend to separate and they also have lower median intensities.
+while "bad" samples tend to separate, typically with lower median intensities.
 
 .. image:: images/log-median-intensities.png
 
 **2) Beta-values of the assays are represented by two plots:**
 
-- *Beta density* plot represents methylation Beta-value densities of the samples.
+- *Beta density* plot represents the Beta-value densities of samples
 
 .. image:: images/qc-beta-density.png
 
@@ -2629,15 +2631,16 @@ while "bad" samples tend to separate and they also have lower median intensities
 **3) Control probes plots:**
 
 The Infinium 450K arrays have several internal control probes helping to track
-the quality on different stages of assay preparation (based on Illumina's `Infnium® HD Assay Methylation Protocol Guide`_):
+the quality on different stages of assay preparation (based on Illumina's `Infinium® HD Assay Methylation Protocol Guide`_):
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 **Sample-independent controls**
 
-Several sample-independent controls allow to monitor different steps of the of microarray assay preparation and include:
+Several sample-independent controls allow the monitoring different steps of the of microarray
+assay preparation and include:
 
-- *Staining control strip*, which to estimate the efficiency of the staining step for both the red and green channels. They are independent of the hybridization
+- *Staining control strip*, which estimate the efficiency of the staining step for both the red and green channels. They are independent of the hybridization
 and extension steps.
 
 .. image:: images/qc-staining.png
@@ -2721,9 +2724,9 @@ and test whether there is any nonspecific methylation signal detected over unmet
 
 .. image:: images/qc-specificity-II.png
 
-All the QC-plots shown on the application page could be downloaded in PDF format (see *Minfi PDF Report*).
+All the QC-plots shown on the application page may be downloaded in PDF format (see *Minfi PDF Report*).
 
-Finally, based on the QC-results you can decide if some samples should be considered as outliers,
+Finally, based on the QC-results you can exclude particular samples as outliers,
 remove them, and re-normalize the rest of the assays together. To do so, click *Sample list* and
 select those samples that pass QC-check, then click **Remove outliers and re-normalise button**.
 
@@ -2732,7 +2735,7 @@ select those samples that pass QC-check, then click **Remove outliers and re-nor
 Then, if you are happy with quality of re-normalized arrays, you can proceed to the following
 step - **Differential Methylation Analysis**.
 
-The "Methylation array QC" application is based on minfi_ and shinyMethyl_ Biocundctor packages.
+The "Methylation array QC" application is based on minfi_ and shinyMethyl_ Bioconductor packages.
 
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 .. _shinyMethyl: https://f1000research.com/articles/3-175/v2
