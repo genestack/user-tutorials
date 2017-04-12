@@ -2559,28 +2559,25 @@ the next-generation microarrays. While "450K" detects more than 485,000 methylat
 per sample at single-nucleotide resolution "EPIC" covers over 850,000 ones.
 
 
-
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 **Action**: to perform normalisation of methylation microarray assays.
 
+.. image:: images/microarray-normalization.png
+
 For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
-method or "quantile", besides thath, "GenomeStudio" background correction can be applied.
+method or "quantile", besides that, "GenomeStudio" background correction can be applied.
 
 Further, the quality of normalised microarrays can be checked using the **Microarray QC Report**
 app to detect and remove potential outliers. Normalised
 microarrays that are of good quality can, then, be used in **Differential methylation analysis**.
 
-The app is based on minfi_ Biocundctor package.
+The application is based on minfi_ Biocundctor package.
 
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
-**Action**: to asses quality of methylation microarray assays
-
-.. image:: images/methylation-qc-page.png
-
 Quality control check of microarray data is a crucial step in microarray analysis pipeline,
 as it allows to detect and exclude low-quality assays from the further analysis.
 
@@ -2599,12 +2596,16 @@ The M-value is log2 ratio of the intensities of methylated probe versus unmethyl
 
 .. image:: images/qc-mval.png
 
-Methylation array QC app allows to export files containing methylation and unmethylation values,
+**Action**: to asses quality of methylation microarray assays
+
+.. image:: images/methylation-qc-page.png
+
+Methylation array QC application allows to export files containing methylation and unmethylation values,
 as well as Beta-values, M-values and Log median intensity values.
 Additionally, you can download and explore "Copy number values" file with
 the sum of the methylated and unmethylated signals.
 
-Methylation array QC app provides various types of **quality control plots**.
+Methylation array QC application provides various types of **quality control plots**.
 Let's explore QC-report for the Infinium 450K microarrays:
 
 **1) Log median intensity plot**
@@ -2617,11 +2618,11 @@ while "bad" samples tend to separate and they also have lower median intensities
 
 **2) Beta-values of the assays are represented by two plots:**
 
-- *Beta density* plot represents methylation Beta-value densities of the samples
+- *Beta density* plot represents methylation Beta-value densities of the samples.
 
 .. image:: images/qc-beta-density.png
 
-- *Beta density bean* plot
+- *Beta density bean* plot also shows methylation Beta-values.
 
 .. image:: images/qc-beta-density-bean.png
 
@@ -2634,17 +2635,14 @@ the quality on different stages of assay preparation (based on Illumina's `Infni
 
 **Sample-independent controls**
 
-Several sample-independent controls allow to monitor different steps of the of microarray
-assay preparation and include:
+Several sample-independent controls allow to monitor different steps of the of microarray assay preparation and include:
 
-- *Staining control strip*, which to estimate the efficiency of the staining step
-for both the red and green channels. They are independent of the hybridization
+- *Staining control strip*, which to estimate the efficiency of the staining step for both the red and green channels. They are independent of the hybridization
 and extension steps.
 
 .. image:: images/qc-staining.png
 
-- *Extension control strip*, which tests efficiency of single-base extension of the probes
-that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
+- *Extension control strip*, which tests efficiency of single-base extension of the probes that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
 and green (C and G labeled with biotin) channels are considered.
 
 .. image:: images/qc-extension.png
@@ -2675,9 +2673,9 @@ to uracils, while methylated cytosines are remains as they are.
 
 .. image:: images/array-bis-conversion.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 *Bisulphite conversion I control strip*
 
@@ -2690,9 +2688,9 @@ extended.
 
 .. image:: images/bis-conversion-I.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 
 .. image:: images/qc-bis-conversion-I.png
@@ -2701,12 +2699,12 @@ extended.
 
 This control uses Infinium I chemistry technology. If the bisulphite conversion
 went well, the adenin base is added, generating signal in the red channel.
-If there is some unconverted DNA, the guanin base is incorporated, resulting to
+If there is some unconverted DNA, the guanine base is incorporated, resulting to
 signal in the green channel.
 
 .. image:: images/bis-conversion-II.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
 .. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
@@ -2723,7 +2721,7 @@ and test whether there is any nonspecific methylation signal detected over unmet
 
 .. image:: images/qc-specificity-II.png
 
-All the QC-plots shown on the app page could be downloaded in PDF format (see *Minfi PDF Report*).
+All the QC-plots shown on the application page could be downloaded in PDF format (see *Minfi PDF Report*).
 
 Finally, based on the QC-results you can decide if some samples should be considered as outliers,
 remove them, and re-normalize the rest of the assays together. To do so, click *Sample list* and
@@ -2734,7 +2732,7 @@ select those samples that pass QC-check, then click **Remove outliers and re-nor
 Then, if you are happy with quality of re-normalized arrays, you can proceed to the following
 step - **Differential Methylation Analysis**.
 
-The "Methylation array QC" app is based on minfi_ and shinyMethyl_ Biocundctor packages.
+The "Methylation array QC" application is based on minfi_ and shinyMethyl_ Biocundctor packages.
 
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 .. _shinyMethyl: https://f1000research.com/articles/3-175/v2
@@ -2742,6 +2740,5 @@ The "Methylation array QC" app is based on minfi_ and shinyMethyl_ Biocundctor p
 .. Differential methylation analysis (coming soon)
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. Expression navigator for methylation arrays (coming soon)
-..^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _here: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf
