@@ -1997,7 +1997,7 @@ Let’s talk a bit about various settings:
    positions in the genome, "report 1 random "best" mapping". In the last case,
    it stops duplicated genome regions from being omitted altogether. (default:
    Report 1 random "best" mapping)
-3. **BS data generation protocol** option enables you to specify what library
+4. **BS data generation protocol** option enables you to specify what library
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
@@ -2195,8 +2195,8 @@ genetic variants, methylation ratios and others.
 
 There are several tracks that can be visualized in Genome Browser:
 
--  *Reference track* displays reference genome, its genes, transcripts,
-   and their coordinates;
+-  *Reference track* displays reference genome, its genes (green boxes),
+  transcripts, and their coordinates;
 
 .. image:: images/gb_reference_track.png
 
@@ -2307,14 +2307,10 @@ should choose a matching reference genome.
 
 3. **Toplevel sequence or primary assembly**
 
-- Toplevel sequence
+- **Toplevel** reference genomes contain all chromosomes, sequence regions not
+  assembled into chromosomes and padded haplotype/patch regions.
 
-  As a rule, toplevel reference genomes contain all chromosomes, sequence
-  regions not assembled into chromosomes and padded haplotype/patch regions.
-
-- Primary assembly
-
-  Primary assembly genomes contain all toplevel sequence region excluding
+- **Primary assembly** genomes contain all toplevel sequence region excluding
   haplotypes and patches.
 
 We are strongly recommend to use primary assembly reference genomes, since they
@@ -2323,8 +2319,8 @@ haplotypes would confuse analysis.
 
 4. **DNA or cDNA**
 
-- DNA - reference genome contains sequence of genomic DNA;
-- cDNA reference genome consists of all transcripts sequences for actual and
+- **DNA** - reference genome contains sequence of genomic DNA;
+- **cDNA** reference genome consists of all transcripts sequences for actual and
   possible genes, including pseudogenes.
 
 5. **Masked, soft-masked and unmasked genomes**
@@ -2341,9 +2337,7 @@ through DNA sequence looking for repeats and low-complexity regions.
 
 There are two types of masked reference genomes: masked and soft-masked.
 
-- MASKED
-
-  Masked reference genomes are also known as hard-masked DNA sequences.
+- **Masked** reference genomes are also known as hard-masked DNA sequences.
   Repetitive and low complexity DNA regions are detected and replaced with
   ‘N’s. The use of masked genome may adversely affect the analysis
   results, leading to wrong read mapping and incorrect variant calls.
@@ -2351,16 +2345,14 @@ There are two types of masked reference genomes: masked and soft-masked.
 
 .. note:: **When should you use a masked genome?**
 
-          We generally don’t recommend using masked genome, as it relates to the
+          We generally do not recommend using masked genome, as it relates to the
           loss of information (after mapping, some "unique" sequences may not be
           truly unique) and does not guarantee 100% accuracy and sensitivity (e.g.
           masking cannot be absolutely perfect). Moreover, it can lead to the
           increase in number of falsely mapped reads.
 
 
-- SOFT-MASKED
-
-  In soft-masked reference genomes, repeats and low complexity regions are
+- In **soft-masked** reference genomes, repeats and low complexity regions are
   also detected but in this case they are masked by converting to a lowercase
   variants of the base (e.g. acgt).
 
@@ -2377,9 +2369,9 @@ There are two types of masked reference genomes: masked and soft-masked.
           comparison with unmasked one.
 
 
-We recommend you use UNMASKED genomes when you do not want to lose any
-information. If you want to perform some sort of filtering, it is better to do
-so  after the mapping step.
+- We recommend you use **unmasked** genomes when you do not want to lose any
+  information. If you want to perform some sort of filtering, it is better to do
+  so  after the mapping step.
 
 Usually, reference genome name includes information about all these factors:
 organism, genome assembly, release, primary assembly/toplevel, masking
