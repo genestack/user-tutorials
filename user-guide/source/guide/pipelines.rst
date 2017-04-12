@@ -2563,6 +2563,8 @@ Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 **Action**: to perform normalisation of methylation microarray assays.
 
+.. image:: images/microarray-normalization.png
+
 For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
 or "quantile" method, and in addition, "genomeStudio" background correction may be applied.
 
@@ -2576,10 +2578,6 @@ The application is based on the minfi_ Bioconductor package.
 
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
-**Action**: to assess quality of methylation microarray assays.
-
-.. image:: images/methylation-qc-page.png
-
 Quality control check of microarray data is a crucial step in microarray analysis pipeline,
 as it allows us to detect and exclude low-quality assays from the further analysis.
 
@@ -2599,8 +2597,13 @@ The M-value is log2 ratio of the intensities of methylated probe versus unmethyl
 
 .. image:: images/qc-mval.png
 
+**Action**: to assess quality of methylation microarray assays.
+
+.. image:: images/methylation-qc-page.png
+
 The Methylation array QC application allows the user to export files containing methylation and
 unmethylation values, as well as Beta-values, M-values and Log median intensity values.
+
 Additionally, you can download and explore "Copy number values" file with
 the sum of the methylated and unmethylated signals.
 
@@ -2621,30 +2624,28 @@ while "bad" samples tend to separate, typically with lower median intensities.
 
 .. image:: images/qc-beta-density.png
 
-- *Beta density bean* plot
+- *Beta density bean* plot also shows methylation Beta-values.
 
 .. image:: images/qc-beta-density-bean.png
 
 **3) Control probes plots:**
 
-Infinium 450K arrays have several internal control probes helping to track
-the quality on different stages of assay preparation (based on Illumina's `Infinium® HD Assay Methylation Protocol Guide`_ ):
+The Infinium 450K arrays have several internal control probes helping to track
+the quality on different stages of assay preparation (based on Illumina's `Infinium® HD Assay Methylation Protocol Guide`_):
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 **Sample-independent controls**
 
 Several sample-independent controls allow the monitoring different steps of the of microarray
 assay preparation and include:
 
-- *Staining control strip*, which estimate the efficiency of the staining step
-for both the red and green channels. They are independent of the hybridization
+- *Staining control strip*, which estimate the efficiency of the staining step for both the red and green channels. They are independent of the hybridization
 and extension steps.
 
 .. image:: images/qc-staining.png
 
-- *Extension control strip*, which tests efficiency of single-base extension of the probes
-that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
+- *Extension control strip*, which tests efficiency of single-base extension of the probes that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
 and green (C and G labeled with biotin) channels are considered.
 
 .. image:: images/qc-extension.png
@@ -2675,9 +2676,9 @@ to uracils, while methylated cytosines are remains as they are.
 
 .. image:: images/array-bis-conversion.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 *Bisulphite conversion I control strip*
 
@@ -2690,9 +2691,9 @@ extended.
 
 .. image:: images/bis-conversion-I.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
+.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 
 .. image:: images/qc-bis-conversion-I.png
@@ -2701,12 +2702,12 @@ extended.
 
 This control uses Infinium I chemistry technology. If the bisulphite conversion
 went well, the adenin base is added, generating signal in the red channel.
-If there is some unconverted DNA, the guanin base is incorporated, resulting to
+If there is some unconverted DNA, the guanine base is incorporated, resulting to
 signal in the green channel.
 
 .. image:: images/bis-conversion-II.png
 
-(From `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina)
+Adapted from `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina.
 
 .. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
@@ -2742,6 +2743,5 @@ The "Methylation array QC" application is based on minfi_ and shinyMethyl_ Bioco
 .. Differential methylation analysis (coming soon)
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. Expression navigator for methylation arrays (coming soon)
-..^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _here: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf
