@@ -2629,7 +2629,7 @@ while "bad" samples tend to separate and they also have lower median intensities
 **3) Control probes plots:**
 
 The Infinium 450K arrays have several internal control probes helping to track
-the quality on different stages of assay preparation (based on Illumina's `Infnium® HD Assay Methylation Protocol Guide`_ ):
+the quality on different stages of assay preparation (based on Illumina's `Infnium® HD Assay Methylation Protocol Guide`_):
 
 .. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
