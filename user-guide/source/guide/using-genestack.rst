@@ -15,7 +15,6 @@ as a guest (by clicking on "Continue as guest" button). However, remember that 
 you can only create up to 200 files, and your results will disappear after 24h
 of inactivity.
 
-
 Dashboard
 ---------
 
@@ -43,7 +42,7 @@ the same organization as another user, you can add them to groups you
 control and share files with them freely. If you are in different
 organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
-permissions and groups in the "Sharing Data and Collaboration" section.
+permissions and groups in the `Sharing Data and Collaboration`_ section.
 
 Vendor IDs are used for application development. Applications you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
@@ -120,7 +119,7 @@ In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
 new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users.
-Read more about collaboration on Genestack in the "Sharing" section.
+Read more about collaboration on Genestack in the `Sharing Data and Collaboration`_ section.
 
 Manage Users
 ~~~~~~~~~~~~
@@ -142,20 +141,21 @@ Supported file types
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
-- **Microarray Assay** - Raw microarray data obtained from a microarray
-  experiment (you can import Affymetrix, Agilent or GenePix microarrays);
-- **Sequencing Assay** - Raw sequencing data (FASTQ, SRA or FASTA+QUAL);
-- **Microarray Annotation** - Annotation file containing information about
+- **Microarray Assay** - raw microarray data obtained from a microarray
+  experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
+- **Infinium Microarray Assay** - raw intensity data files for Illumina Infinium Microarrays (IDAT);
+- **Sequencing Assay** - raw sequencing data (FASTQ, SRA or FASTA+QUAL);
+- **Microarray Annotation** - annotation file containing information about
   association of microarray probes to biological entities like genes,
   transcripts and proteins;
-- **Continuous Genomic Data** - Contains information on continuous genome
-  statistics, e.g. GC% content;
-- **Discrete Genomic Data** - Information on discrete regions of the genome
-  with an exact start and end position;
-- **Mapped Reads** - Reads aligned to a specific reference genome (BAM or CRAM);
+- **Continuous Genomic Data** - contains information on continuous genome
+  statistics, e.g. GC% content (WIGGLE, WIG);
+- **Discrete Genomic Data** - information on discrete regions of the genome
+  with an exact start and end position (BED);
+- **Mapped Reads** - reads aligned to a specific reference genome (BAM or CRAM);
 - **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
 - **Reference Genome** - Reference genome sequence for a specific organism
-  with annotation; (FASTA + GTF);
+  with annotation; (FASTA and GTF/GFF);
 - **Variation Files** - Genetic Variations files, storing gene sequence
   variations (VCF).
 
@@ -235,7 +235,6 @@ resume unfinished uploads later.
 .. image:: images/resumed_uploads.png
    :scale: 85 %
 
-
 Click the **Import files** button to proceed.
 
 Step 2: Format recognition
@@ -293,7 +292,8 @@ ChEBI_ for chemical compounds, and the `Cell ontology`_.
 .. _Cell ontology: http://www.obofoundry.org/ontology/cl.html
 
 We also created our own controlled vocabularies to cover the Sex, Method and Platform fields.
-You can find out more about ontologies in the :ref:`metainfo-editor` section.
+You can find out more about ontologies in the
+`Public Experiments, Automated Data Curation and Managing Metadata`_ section.
 
 Finally, you can also create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
@@ -345,7 +345,7 @@ required and what is its metainfo type (e.g. text, yes/no, integer).
 .. image:: images/metainfo_type_editor.png
 
 If you are using a file kind that is not yet listed, you can add a new one by
-clicking on the "Add File Kind" button at the bottom of the page and
+clicking on the **Add File Kind** button at the bottom of the page and
 specifying the required metainfo attributes. Keep in mind that file kinds are
 defined in Genestack - you will not be able to create a template entry for a
 file kind that is not used on the platform.
@@ -364,8 +364,8 @@ Metadata Import
 ~~~~~~~~~~~~~~~
 
 Apart from importing data, you can also import and validate the
-metainfo attached to the assays and to the experiment. The **Import data from
-spreadsheet** button allows you to retrieve the metainfo from a local CSV or
+metainfo attached to the assays and to the experiment. The **Import data from spreadsheet**
+button allows you to retrieve the metainfo from a local CSV or
 Excel file and map it to the Genestack assays:
 
 .. image:: images/import_from_spreadsheet.png
@@ -520,13 +520,13 @@ FASTQ and BAM files, pdf documents, excel tables etc.
           biological objects are what you work with on Genestack, and these are
           located in the "Imported files" folder.
 
-The **Exports** folder contains data ready for export. See the :ref:`export` section for more information.
+The **Exports** folder contains data ready for export. See the `Data Export`_ section for more information.
 
 Below these four grouped folders, you will see two more: Shared with me
 and Public Data.
 
 **Shared with me** contains all files that other users have shared with
-you or that you shared with other users. See the :ref:`sharing` section for more details.
+you or that you shared with other users. See the `Sharing Data and Collaboration`_ section for more details.
 
 **Public Data** contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
@@ -561,7 +561,6 @@ to make life a bit simpler for our users. This folder contains:
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
 
-
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
 application that was used to generate this file, or the application that should be used
@@ -589,7 +588,7 @@ Above the file manager pane, you can find the **Import** button. Clicking
 it takes you to the Import application page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 
-.. image:: images/import.png
+.. image:: images/import-button.png
 
 Next to the Import button, you can see a **New Folder** button. Using it
 you will be able to create a new folder wherever you want. Another option
@@ -635,12 +634,11 @@ you to **share**, **delete** the file or **view metainfo** (an "eye"-icon) for
 the file.
 
 .. image:: images/3buttons-1.png
-
 .. image:: images/3buttons-2.png
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
-Read more about sharing on Genestack in the section :ref:`sharing`.
+Read more about sharing on Genestack in the section `Sharing Data and Collaboration`_.
 
 .. image:: images/share.png
 
@@ -878,8 +876,8 @@ will be located in that folder.
 
 .. TODO rewrite this section
 
-Building pipeline
------------------
+Building pipelines
+------------------
 Select the assays you wish to analyse and from the menu on top of
 the page or from the dropdown menu, select the first application you wish to see
 in your pipeline. Application on The Platform are divided in several categories
@@ -1072,7 +1070,6 @@ You can track the progress of this task in Task Manager. Doing this will begin
 initialization of all the files (including intermediate files) you have
 created whilst building this pipeline.
 
-
 Task Manager
 ------------
 
@@ -1134,5 +1131,5 @@ the selected assays, that is accessible until the corresponding Export File is d
 
 .. image:: images/export3.png
 
-Sharing the link enables your collaborator to download data even if they do not have
+**Sharing the link** enables your collaborator to download data even if they do not have
 a Genestack account. All the Export files are stored in the “Exports” folder.
