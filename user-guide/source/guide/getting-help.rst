@@ -19,19 +19,18 @@ You can find all of our tutorials here: https://genestack.com/tutorial/
 Getting in touch with Genestack 
 -------------------------------
 
-There are various ways to get in touch with our team:
+There are various ways to get in touch with our team.
 
-- *Chatra*: a chat window can be found at the bottom of our homepage.
-During our operating hours at least one of us is always available to
-help. Outside of our operating hours, you can leave us a message using
-the chat window and we will get back to you as soon as we can.
+*Chatra*: a chat window can be found at the bottom of our homepage.
+During our operating hours at least one of us is always available to help.
+Outside of our operating hours, you can leave us a message using the chat
+window and we will get back to you as soon as we can.
 
-- *Forum*: when you have a question about the platform, try posting it on
-our forum. You can find it here: forum.genestack.org. Our community will definitely be keen to
-help you, and if not, our team regularly checks the forum and will
-answer any unanswered questions.
+*Forum*: when you have a question about the platform, try posting
+it on our forum. You can find it on forum.genestack.org. Our community
+will definitely be keen to help you, and if not, our team regularly checks the forum and will answer any unanswered questions.
 
-- *Email*: you can email us at support@genestack.com 
+*Email*: you can email us at support@genestack.com 
 
 
 FAQ
@@ -64,12 +63,18 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-**How do I initialize the files?**
+**How can I initialize the files?**
 
-You can start initialisation from various places in our system.
-For example, you can use special File Initializer app accepting multiple file, then, you can start initialization when run dataflow.
-Morover, you can right-click file name wherever you are and select "start initialization"
-option in the context menu: on the app page, in File Manger, Task Manager etc.
+Generally speaking, there are many ways to initialize files in Genestack.
+Firstly, you can use File Initializer app that can accept
+multiple files. To do so, select files of your interest, right-click on them
+and go to Manage section. Then, you can start initialization when run data flow.
+On the "Data Flow Runner" page
+when all inputs are set, all files are created and you are happy with parameters of each app,
+you will be suggested to start computations right away or delay it.
+Finally, you can right-click file name wherever you are in the platform (on Data Flow Runner,
+File Manger, Task Manager, any bioinformatic app etc.) and select "Start initialization"
+option in the context menu.
 
 **How do I create a data flow?**
 
@@ -80,7 +85,7 @@ the desired steps. Once you are done, click on the name of the file (or
 files) at the top of the page, go to Manage, and click on Create New
 Data Flow. Your new data flow can be found in the Created Files folder
 
-If you don’t want to create a data flow from scratch, but rather re-use
+If you do not want to create a data flow from scratch, but rather re-use
 the same analysis pipeline used to create a file, click on the name of
 that file, go to Manage, and select Create New Data Flow.
 
@@ -137,7 +142,7 @@ experiments, not folders. Remember you can share both experiments and
 folders with other Genestack users using Groups. You can read more about
 this in our `Getting Started`_ tutorial.
 
-**What’s the difference between masked and unmasked reference genomes?**
+**What is the difference between masked and unmasked reference genomes?**
 
 In general, when a genomes is "masked" it means that all repeats and low
 complexity regions of your reference genome (detected
@@ -161,9 +166,9 @@ without any changes.
 
 Click file name and select "Rename" option in the context menu.
 
-**Where can I find the import templates I created?**
+**Where can I find the file I created like Import templates, Mapped reads or analysis results?**
 
-By default they are created in the folder "Created Files".
+All the files that you create in Genestack go to your "Created files" folder.
 
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
 .. _Getting Started: https://genestack.com/blog/2016/01/06/getting-started/
