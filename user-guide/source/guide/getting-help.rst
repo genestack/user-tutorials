@@ -6,7 +6,7 @@ Tutorials
 
 In our tutorials we take you through examples based on public
 experiments, re-analysing the data to demonstrate the features of
-particular apps. All files used (from raw sequencing reads and reference
+particular applications. All files used (from raw sequencing reads and reference
 genomes to results and data visualisations) are stored on the platform
 in the "Tutorials" folder.
 
@@ -33,7 +33,6 @@ answer any unanswered questions.
 
 - *Email*: you can email us at support@genestack.com 
 
-
 FAQ
 ===
 
@@ -49,10 +48,9 @@ All new data flows are automatically saved in the folder "Created Files".
 
 **How do I reuse a data flow?**
 
-Open a data flow you would like to run in Run Dataflow app. on the app
-page you can set input files and additional files like reference genomes
+Open a data flow you would like to run in Run Dataflow application. On the
+application page you can set input files and additional files like reference genomes
 that are required for analysis.
-
 
 **What’s the difference between Data Flow Runner and Data Flow Editor?**
 
@@ -67,28 +65,26 @@ and parameters, but also start initialization of your files.
 **How do I initialize the files?**
 
 You can start initialisation from various places in our system.
-For example, you can use special File Initializer app accepting multiple file, then, you can start initialization when run dataflow.
-Morover, you can right-click file name wherever you are and select "start initialization"
-option in the context menu: on the app page, in File Manger, Task Manager etc.
+For example, you can use special File Initializer application accepting multiple file, then, you can start initialization when run dataflow.
+Moreover, you can right-click file name wherever you are and select "start initialization"
+option in the context menu: on the application page, in File Manger, Task Manager etc.
 
 **How do I create a data flow?**
 
 To create a data flow, select the data you
-wish to analyse and choose the first app you wish to use in your
-analysis. On the app page, using the "add step" button, add the rest of
+wish to analyse and choose the first application you wish to use in your
+analysis. On the application page, using the "add step" button, add the rest of
 the desired steps. Once you are done, click on the name of the file (or
 files) at the top of the page, go to Manage, and click on Create New
 Data Flow. Your new data flow can be found in the Created Files folder
 
-If you don’t want to create a data flow from scratch, but rather re-use
+If you do not want to create a data flow from scratch, but rather re-use
 the same analysis pipeline used to create a file, click on the name of
 that file, go to Manage, and select Create New Data Flow.
 
 Selecting File Provenance instead of Create New Data Flow will show you
 the pipeline (in the form of a data flow) that was used to create this
-file.
-Read more about data flows in this tutorial_.
-
+file. Read more about data flows in this tutorial_.
 
 **What’s the difference between BWA and Bowtie2?**
 
@@ -125,7 +121,7 @@ biological objects such as your assays, processed
 files, output reports, etc.
 
 Experiments contain only sequencing assays, but provide additional
-features for storing experimental details, e.g. attached pdfs with
+features for storing experimental details, e.g. attached PDF documents with
 experiment notes. When you upload raw reads onto Genestack, they will
 automatically be imported as one experiment. On the experiment page, you
 can click on "View details" to read the summary of the experiment, get
@@ -147,8 +143,8 @@ to.
 
 We do not recommend using a masked genome, as it always  results in a
  loss of information. Masking can never be 100% accurate, and can lead
-to an increase in the number of falsely mapped reads. If you’d like to
-perform filtering, it’s better to do it after the mapping step.
+to an increase in the number of falsely mapped reads. If you would like to
+perform filtering, it is better to do it after the mapping step.
 
 In *soft-masked* genomes, repeated and low complexity regions are still
 present, but they have been replaced with lowercased versions of their
@@ -168,4 +164,3 @@ By default they are created in the folder "Created Files".
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
 .. _Getting Started: https://genestack.com/blog/2016/01/06/getting-started/
 .. _RepeatMasker: http://www.repeatmasker.org/&sa=D&ust=1480960532173000&usg=AFQjCNE4ktR5xI4yZEvRi94d-Tc1QkJnvA
-

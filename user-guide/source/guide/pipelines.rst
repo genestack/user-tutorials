@@ -2196,7 +2196,7 @@ genetic variants, methylation ratios and others.
 There are several tracks that can be visualized in Genome Browser:
 
 -  *Reference track* displays reference genome, its genes (green boxes),
-  transcripts, and their coordinates;
+   transcripts, and their coordinates;
 
 .. image:: images/gb_reference_track.png
 
@@ -2493,7 +2493,7 @@ For 2-channel Agilent microarrays, procedures for within-array normalisation
           In single-channel arrays, also called one-color microarrays, each
           experimental condition must be applied to a separate chip. They give
           estimation of the absolute levels of gene expression and only a sigle
-          dye is uded.
+          dye is used.
 
 As a next step, the normalised microarray samples can be assessed using the
 **Microarray Quality Control** application to detect and remove potential outliers. Normalised
@@ -2833,7 +2833,7 @@ The table includes information about:
   formula:
 
   Let m(d) be the expected gene expression at dose d. The BMD then satisfies
-  the following equation: |m(BMD)-m(0)| = 1.349*σ. In this formula, σ is the
+  the following equation: | m(BMD)-m(0) | = 1.349*σ. In this formula, σ is the
   standard deviation of the response at dose 0, which we approximate by the
   sample standard deviation of the model residuals.
 
@@ -2891,6 +2891,3 @@ Methylation array QC (coming soon)
 
 Expression navigator for methylation arrays (coming soon)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-.. _here: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf

@@ -45,11 +45,11 @@ organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
 permissions and groups in the "Sharing Data and Collaboration" section.
 
-Vendor IDs are used for app development. Apps you have created will be
+Vendor IDs are used for application development. Applications you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
 would like to see after login: Dashboard or File Manager.
 
-**Tasks** links to the Task Manager app, where you can monitor running and
+**Tasks** links to the Task Manager application, where you can monitor running and
 previous computations.
 
 In the bottom right corner of the page you can see the Chatra **chat window**.
@@ -62,12 +62,12 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 2. **Recent Results** shows you the files you have recently created with 
    their initialization or completion status.
 3. **Browse data** section allows you to browse through public, private and
-   shared data with Experiment Browser app which allows you to search through
+   shared data with Experiment Browser application which allows you to search through
    the wealth of your data using complex queries.
    In the Browse Data section, you’ll also find a link to the File Manager
    (home), as well as often used folders: Uploaded files, Imported files,
    Created files and Exports.
-4. **Import data** allows you to import your data using either a
+4. **Import data** allows you to import your data using either a
    custom or the default import template. See the section "Import" for more information.
 5. **Tutorials** explain the most common analysis types in greater detail.
 6. **Search** across the metadata of all your files using the full-text file
@@ -75,7 +75,7 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 
 Wherever you are on the platform, you can also access a **shortcuts menu** by
 clicking on the Genestack logo in the top left corner of any platform page.
-It’s an easy way to reach most commonly used apps and folders. Dashboard,
+It is an easy way to reach most commonly used applications and folders. Dashboard,
 Manage Applications, Manage Groups, Manage Users,
 Import Data and Import Template Editor,
 Experiment Browser, File Manager as well as the folders
@@ -92,19 +92,19 @@ Here you can view the list of all applications available on the platform
 – both ones you have written as well as public ones.
 
 The **Developer** button will give you the option to choose which version of
-an app you want to use.
+an application you want to use.
 
 .. image:: images/developer_button.png
    :scale: 35 %
 
 The **‘bundled’** and **‘minified’** options optimize
-loading of CSS and JS used in the app. You can find more details on
+loading of CSS and JS used in the application. You can find more details on
 bundling and minifying in `blog post by Dino Esposito`_.
 
 .. _blog post by Dino Esposito: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 
 The **Session** and **User** dropdown menus allow you to chose the version of
-the app you want to use for your current log-in session and for your
+the application you want to use for your current log-in session and for your
 current user account respectively. **Inherit** is the default option and the
 order of version choice inheritance is Global → User → Session. If you
 change the version of an application, you also need to **reload** it to run
@@ -114,6 +114,7 @@ Manage Groups
 ~~~~~~~~~~~~~
 
 .. image:: images/manage_groups.png
+   :scale: 50 %
 
 In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
@@ -128,6 +129,8 @@ In this section, you can change password of your users or create new users.
 You can find more about managing users on Genestack from `this video`_.
 
 .. image:: images/manage_users.png
+   :scale: 50 %
+
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
 
 Importing Data
@@ -164,7 +167,7 @@ be automatically imported as an experiment.
   microarray assays, Genestack creates an experiment and adds the assays to it.
 
 - **Experiment attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
-  can be uploaded as an experiment attachment. We will discuss teh use of attachments below.
+  can be uploaded as an experiment attachment. We will discuss the use of attachments below.
 
 
 Moreover, when you perform any analysis on Genestack, you can create other data
@@ -174,7 +177,7 @@ types, which cannot be imported. They include:
   normalized Affymetrix/Agilent/GenePix microarrays data;
 - **Differential Expression Statistics** - expression statistics for
   change in expression of individual genes or other genomic features between groups of samples,
-  such as fold-changes, p-values, FDR, etc;
+  such as fold-changes, p-values, FDR, etc.;
 - **Genome Annotations** - A technical file used for matching GO terms and
   gene symbols to gene coordinates;
 - **Mapped Read Counts** - The number of reads mapped to each feature of a reference
@@ -194,11 +197,6 @@ There are several ways you can access the **Import** application:
 - clicking the **Import** button in the File Manager;
 
 .. image:: images/FM_import.png
-
-- clicking **Upload** button when you choose sources in the dataflow you'd like
-  to run;
-
-.. image:: images/DF_import.png
 
 - using an **import template**. We’ll describe what import template is and how to
   use it later in the guide.
@@ -238,7 +236,7 @@ resume unfinished uploads later.
    :scale: 85 %
 
 
-Click the "Import files" button to proceed.
+Click the **Import files** button to proceed.
 
 Step 2: Format recognition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -246,7 +244,7 @@ Step 2: Format recognition
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
 reference genomes, etc. Format conversions will be handled internally by
-Genestack. You won’t have to worry about formats at all.
+Genestack. You will not have to worry about formats at all.
 
 .. image:: images/file_recognition.png
 
@@ -260,7 +258,7 @@ Choose the data type you find suitable:
 
 .. image:: images/file_types_box.png
 
-Click the "Edit metainfo" button to proceed.
+Click the **Edit metainfo** button to proceed.
 
 Step 3: Editing metainfo
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -274,7 +272,7 @@ offering to share the data:
 .. image:: images/import_edit_metainfo.png
 
 By default, you see all metainfo fields available for files, you can fill them
-or create new custom columns. Click the "Add column" button, name new metainfo
+or create new custom columns. Click the **Add column** button, name new metainfo
 field and choose its type (Text, Integer, etc.):
 
 .. image:: images/add_metainfo_field.png
@@ -312,7 +310,7 @@ platform as OWL, OBO or CSV file and attach it to the import template.
 You can select which import template to use in two ways: from the Welcome
 Page, or during the 3rd step of the import process by right-clicking on the
 import template name ("Default template" is for the public one). You can add
-new import templates using the **Import Template Editor** app, which can be
+new import templates using the **Import Template Editor** application, which can be
 found by clicking "Add import template" from the Welcome Page or from the
 "Manage" submenu when you right click on an import template.
 
@@ -337,19 +335,19 @@ see, the system controls what type of information can you put into your
 metainfo fields. In this case, for tissue the system will map your entries to
 the Uberon ontology and the metainfo type must be text. You can edit
 existing templates by right-clicking on a template and selecting the **Import
-Template Editor** app from the "Manage" submenu.
+Template Editor** application from the "Manage" submenu.
 
 If you wanted to add other metainfo fields that are not included in the table
 already, you can do this at the bottom of the table where there are blank
 spaces. For each entry, you must specify whether or not this field is
-required and what is it’s metainfo type (e.g. text, yes/no, integer).
+required and what is its metainfo type (e.g. text, yes/no, integer).
 
 .. image:: images/metainfo_type_editor.png
 
 If you are using a file kind that is not yet listed, you can add a new one by
 clicking on the "Add File Kind" button at the bottom of the page and
 specifying the required metainfo attributes. Keep in mind that file kinds are
-defined in Genestack - you won’t be able to create a template entry for a
+defined in Genestack - you will not be able to create a template entry for a
 file kind that is not used on the platform.
 
 When you’re done, click on the blue "Import data using this template" button.
@@ -409,7 +407,7 @@ they get lost on your computer.
 **How to upload an attachment?**
 
 The attachment are uploaded together with the experiment data. In the "Upload"
-section of the Import app, choose the attachments from your computer along
+section of the Import application, choose the attachments from your computer along
 with your experiment data. On the "Import" step, the platform will
 recognize the raw data and the fact that you have uploaded unrecognisable
 files.
@@ -508,7 +506,7 @@ header of the "Last Update" column.
 date: all files imported at the same time (during one import action)
 will be located in the same folder. 
 
-**Uploads** contains all the files you’ve uploaded into Genestack -
+**Uploads** contains all the files you have uploaded into Genestack -
 FASTQ and BAM files, pdf documents, excel tables etc.
 
 
@@ -537,7 +535,7 @@ to make life a bit simpler for our users. This folder contains:
 
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
-   etc;
+   etc.;
 #. **Dictionaries**: used for metainfo editing and curation, e.g. sex,
    sequencing platform, NCBI taxonomy. Read more about dictionaries in
    "Data and Metainfo Management" section;
@@ -566,9 +564,9 @@ to make life a bit simpler for our users. This folder contains:
 
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
-app that was used to generate this file, or the app that should be used
+application that was used to generate this file, or the application that should be used
 to view it. The next four entries are submenus for each of the four different
-types of apps that can be used on the file. Further down are options for
+types of applications that can be used on the file. Further down are options for
 viewing and re-using the pipeline used to generate the file. The final
 section allows you to manage file locations and names. For folders,
 left-clicking opens the folder, while right-clicking opens the menu.
@@ -588,7 +586,7 @@ Unlike other metainfo attributes, it will never change for any file.
 .. image:: images/parent-containers.png
 
 Above the file manager pane, you can find the **Import** button. Clicking
-it takes you to the Import app page, where you can upload your files,
+it takes you to the Import application page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 
 .. image:: images/import.png
@@ -606,12 +604,12 @@ These menus will become available when you select a file. 
 
 .. image:: images/matching-apps.png
 
-When you choose a file, the system will suggest apps which can work with the specific
+When you choose a file, the system will suggest applications which can work with the specific
 file type (e.g. sequencing assay). However, you still need to think about the nature of
 the data. For instance, if you want to align a raw WGBS sequencing assay,
 Genestack will suggest several mappers, but only the Bisulfite
-Sequencing Mapping app will be suitable in this case. To figure out what
-apps are recommended to process WGBS, WES, RNA-seq or other sequencing
+Sequencing Mapping application will be suitable in this case. To figure out what
+applications are recommended to process WGBS, WES, RNA-seq or other sequencing
 data, go to the :ref:`pipelines` section of this guide.
 
 **File search** in the top-right corner allows you to search for files by
@@ -678,11 +676,11 @@ To prepare these Dictionaries we adopted terms from external ontologies or creat
 You can also use our standardized and unified terminology to describe your own data
 or analysis results.
 
-Our **Edit Metainfo** app enable you to prepare metadata manually. You can edit metadata on
+Our **Edit Metainfo** application enable you to prepare metadata manually. You can edit metadata on
 the last step of data importing process (see Import section for more information) or
 later from any place of the platform with context menu.
 
-Regardless the way we access Edit Metainfo app on its page we can see that
+Regardless the way we access Edit Metainfo application on its page we can see that
 our files are broken down into groups by file type and their metadata are shown in tables where
 rows represents metainfo fields.
 
@@ -704,7 +702,7 @@ to avoid typos and harmonise metadata.
 
 Furthermore, you can add several terms to one metadata field for each file. To do so
 enter the first term as usual, click the button **Add another** and either add
-one of the existing fields or create your own one (i. e. custom key).
+one of the existing fields or create your own one (i.e. custom key).
 
 .. image:: images/add-attribute.png
 
@@ -716,19 +714,18 @@ numeric value you should use "Integer" or "Decimal" one.
 
 .. image:: images/custom-key.png
 
-
 Click column name to **sort** metadata or **delete** the selected column if needed.
 
 .. image:: images/sort.png
 
-Besides filling metadata manually in the app, you can import it from your local computer.
+Besides filling metadata manually in the application, you can import it from your local computer.
 Click the **Import data from spreadsheet** button and select a CSV, XLS or XLSX file with metadata
 that you would like to attach.
 
 .. image:: images/from-spreadsheet-1.png
 
 However, make sure that names of samples in the imported file are the same as
-the ones shown in the column "Name" in Metainfo Editor app. Otherwise, all not matching information in
+the ones shown in the column "Name" in Metainfo Editor application. Otherwise, all not matching information in
 the imported file will not be imported. It will be marked in red, so you could easily fix
 it by clicking on "Select file" link.
 
@@ -746,13 +743,12 @@ to create names.
 .. image:: images/naming-scheme.png
 
 Once you are happy with the metadata for your files, you can proceed to analyse them by clicking
-the button **Use all N files...**. You can use the suggested visualize apps
-to explore your files, like "FastQC Report" to check the quality of raw sequencing assays, use on of the
-an existing public data flows or build your own pipeline by adding applications ste-by-step.
+the button **Use all N files...**. You can use the suggested visualize
+applications to explore your files, like "FastQC Report" to check the quality of raw sequencing assays, use on of the
+existing public data flows or build your own pipeline by adding applications step-by-step.
 Moreover you could share the files with your collaborators and add them to a folder of your choice.
 
 .. image:: images/run-df-from-me.png
-
 
 Sharing Data and Collaboration
 ------------------------------
@@ -773,7 +769,6 @@ top-right corner of any page.
 
 .. image:: images/profile_menu.png
 
-
 Managing users
 ~~~~~~~~~~~~~~
 
@@ -786,6 +781,7 @@ the organisation's user management page.
 From there, administrators can add or disable users, and reset passwords.
 
 .. image:: images/pr_manage_users.png
+   :scale: 45 %
 
 Sharing in Genestack is done through groups: every user can create any
 number of groups, and add other users to them. Each file in the system can
@@ -795,8 +791,8 @@ be shared with any number of groups, who are granted different permissions
 Managing groups
 ~~~~~~~~~~~~~~~
 
-To manage your groups, click on your email address at the
-top-right corner of any screen and select "Manage Groups".
+To manage your groups, click on your email address at the top-right corner of
+any screen and select "Manage Groups".
 
 .. image:: images/profile_manage_groups.png
 
@@ -880,14 +876,12 @@ Manager under "Shared with me" in the left-hand side panel.
 All files you share with other people, along with all files shared with you,
 will be located in that folder.
 
-
-
 .. TODO rewrite this section
 
 Building pipeline
 -----------------
 Select the assays you wish to analyse and from the menu on top of
-the page or from the dropdown menu, select the first app you wish to see
+the page or from the dropdown menu, select the first application you wish to see
 in your pipeline. Application on The Platform are divided in several categories
 such as *Preprocess* to prepare the data for actual analysis, *Analyse* perform
 various kinds of analysis, *Explore* to visualise QC check or analysis results
@@ -897,17 +891,17 @@ its type and metadata.
 
 .. image:: images/pipeline_building.png
 
-This will take you to the app page where you can:
+This will take you to the application page where you can:
 
 - learn more about the application;
-– view and edit app parameters;
+– view and edit application parameters;
 – explore your results;
 – add further steps to the file data flow (the pipeline).
 
 .. image:: images/cla_page.png
 
 To proceed click on **Add step** button that will show you the list of all the
-matching apps.
+matching applications.
 
 Continue adding steps until you have completed building your pipeline. When
 you add each of the steps, you create new files which end up in the **Created files**
@@ -920,12 +914,12 @@ Reproducing your work
 Complete reproducibility is one of the core strengths of Genestack. For any
 file in the system, you can view its provenance and then replay the same
 exact analysis on other data files. Select assay which history you wish
-to explore and open it with **File Provenance** app
+to explore and open it with **File Provenance** application
 located in the Manage section.
 
 .. image:: images/file_provenance.png
 
-Besides that, the File Provenance app allows you to view the text description of the
+Besides that, the File Provenance application allows you to view the text description of the
 pipeline used to create a given file. Clicking the **View as text** button
 allows you to see what parameters and what tool versions were used at each
 analytical step. You can copy this text and use it in a publication or a report.
@@ -939,12 +933,12 @@ files used in this pipeline.
 If you want to reuse the same pipeline on different data, you can
 create the data flow identical to the pipeline used to create the original file,
 by selecting the file of interest and choosing **Create new Data Flow** from the
-available "Manage" apps.
+available "Manage" applications.
 
 .. image:: images/data-flow-editor-1.png
 
-This will open **Data Flow Editor** app - one of apps in our system that are
-used to work on data flows. Data Flow Editor app gives a visual
+This will open **Data Flow Editor** application - one of applications in our system that are
+used to work on data flows. Data Flow Editor application gives a visual
 representation of the pipeline and allows you to choose your input files, for example
 sequencing assays, and a reference genome. We would like to highlight here also that
 a range of public reference genomes have already imported from Ensembl and readily
@@ -952,11 +946,11 @@ available on the platform. To add new inputs to the created data flow click choo
 
  .. image:: images/data-flow-editor-2.png
 
- At this stage, no files have been created nor initialized.
+At this stage, no files have been created nor initialized.
 
 .. image:: images/data-flow-editor-3.png
 
-When you click on "Run Data Flow" button, this will take you to the **Data Flow Runner** app.
+When you click on "Run Data Flow" button, this will take you to the **Data Flow Runner** application.
 Click **Run dataflow** button to create all the relevant files in an
 uninitialized state.
 
@@ -973,14 +967,13 @@ or delay it till later.
 .. image:: images/data-flow-runner-3.png
 
 Remember, that you can check and change parameters if needed only before computations started.
-To do so, click app name in the corresponding node of the data flow.
+To do so, click application name in the corresponding node of the data flow.
 However just as initialization process started, any changes of files are forbidden.
 
 Finally, whether you decide to start the computation or not, you will be suggested with
-a list of matching app to explore results or continue analysis.
+a list of matching application to explore results or continue analysis.
 
 .. image:: images/data-flow-runner-4.png
-
 
 Public data flows
 -----------------
@@ -991,9 +984,9 @@ prepared for our users. We cover most of the common analysis types:
 - Single-cell Transcriptomic Analysis
 - Genetic Variation Analysis
 - Whole Exome Sequencing Analysis
-- Differential Isoform Expression Analysis
+- Isoform Expression Statistics
 - Whole Genome Methylation Analysis
-- Differential Gene Expression Analysis
+- Gene Expression Statistics
 - Affymetrix Microarray Quality Control
 - Targeted Sequencing Quality Control
 - Mapped Reads Quality Control
@@ -1004,11 +997,11 @@ prepared for our users. We cover most of the common analysis types:
 
 Clicking on the data flow will take you to the Data Flow Editor where you can
 add source files and reference genomes. When you have chosen your files,
-click on "Run data flow" to go to the Data Flow Runner. If you don’t want to
+click on "Run data flow" to go to the Data Flow Runner. If you do not want to
 change any settings, you can click "Start initialization now". To tweak the
-parameters and settings of the apps, select "Delay initialization until later".
-To change the settings, click on the name of the app in the data flow. This
-will take you to the app page, where you can select "Edit parameters" and
+parameters and settings of the applications, select "Delay initialization until later".
+To change the settings, click on the name of the application in the data flow. This
+will take you to the application page, where you can select "Edit parameters" and
 introduce your changes. When you are done introducing your changes, go back to
 the data flow and initialize your computations.
 
@@ -1034,7 +1027,7 @@ last created file, go to Manage and **Create new Data Flow**.
 .. image:: images/create_new_data_flow.png
 
 This will take you to the Data Flow Editor where you can introduce any last
-changes to your pipeline. Click on "Run dataflow" button once you are done.
+changes to your pipeline. Click on **Run dataflow** button once you are done.
 
 .. image:: images/data_flow_editor.png
 
@@ -1055,21 +1048,21 @@ will be stored in the "Created files" folder.
 3. Using **File Initializer** application.
 
 Select the created uninitialized files (from data flow or File Manager), right
-click on them, go to "Manage" and choose the "File Initializer" app.
+click on them, go to "Manage" and choose the "File Initializer" application.
 
 .. image:: images/file_initializer_df.png
 
 File Initializer reports the status of the files and allows you to initialize
 those that need to be by clicking on their respective "Go!" buttons, or
 "Initialize all" to do them all at once. Files do not need to be produced by
-the same apps to be initialized together.
+the same applications to be initialized together.
 
 .. image:: images/file_initializer.png
 
 4. Using **Start initialization** button in File Provenance.
 
 Alternatively, you can click on the name of the last created file, go to Manage
-and choose File Provenance application. The app displays the pipeline and also
+and choose File Provenance application. The application displays the pipeline and also
 allows you to run the computation using "Start initialization" button. You’ll
 learn more about this application later in this section.
 
@@ -1094,8 +1087,7 @@ status, owner, last update and elapsed time. You can also view logs
 produced for each computation (error and output log). Error logs
 tell you why your task has failed. Output logs contain information about
 the exact details of what Genestack does with your files during the
-computation process, what specific tools and parameters are used, and so
-on.
+computation process, what specific tools and parameters are used, and so on.
 
 If the computations finished successfully, error logs will be empty, but
 the logs can provide you with some basic statistics about the output
@@ -1120,7 +1112,6 @@ what each status means:
    because a task on which this one depends has failed
 -  *Killed* - the task has been canceled by the user
 
-
 Data Export
 -----------
 
@@ -1128,17 +1119,17 @@ Genestack provides secure data storage, and **Export Data** application
 allows to safely download both assays and analysis results together with attached metadata
 to a local machine.
 Select those files you are going to export, right-click on them
-and select **Export Data** app.
-On the app page you will see the status of your files, and if some of them are not
+and select **Export Data** application.
+On the application page you will see the status of your files, and if some of them are not
 initialized you will be suggested to initialize them prior to export.
 
 .. image:: images/export1.png
 
-If you change you mind, you can stop exporting process by click on "Cancel" button.
+If you change you mind, you can stop exporting process by click on **Cancel** button.
 
 .. image:: images/export2.png
 
-The app creates an Export File that contains a special link to download
+The application creates an Export File that contains a special link to download
 the selected assays, that is accessible until the corresponding Export File is deleted.
 
 .. image:: images/export3.png
