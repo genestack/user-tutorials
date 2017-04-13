@@ -95,12 +95,14 @@ file. Read more about data flows in this tutorial_.
 
 The biggest differences between the two aligners are:
 
-- the way of accepting or rejecting an alignment:
+- the way of accepting or rejecting an alignment;
+
 BWA counts the number of mismatches between the read and the
 corresponding genomic position. Bowtie2 aligner uses a quality threshold bases on the probability of the
 occurrence of the read sequence given an alignment location.
 
-- accepting colorspace data:
+- accepting colorspace data;
+
 BWA tool does not support data in colorspace data, while Bowtie2 is able to align such files.
 
 **How does Genestack process paired-end reads?**
