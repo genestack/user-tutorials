@@ -2810,7 +2810,6 @@ gene passed the FDR threshold specified in the dose response analysis
 application, the application will report the 1,000 genes with the smallest
 unadjusted p-values.
 
-.. TODO
 .. image:: images/dose_response_analysis_report.png
 
 Various regression models (linear, quadratic and Emax) are fitted for each
@@ -2855,14 +2854,12 @@ The table includes information about:
 Here are examples of dose response curves as they are displayed in the
 application:
 
-.. TODO
 .. image:: images/dose_response_analysis_plot.png
 
 In the "Pathways" tab, you can see a list of significantly enriched pathways,
 based on the detected differentially expressed genes and the pathway annotation
 file supplied to the analysis application.
 
-.. TODO
 .. image:: images/dose_response_analysis_pathways.png
 
 The table includes:
