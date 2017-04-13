@@ -779,7 +779,7 @@ the organisation's user management page.
 From there, administrators can add or disable users, and reset passwords.
 
 .. image:: images/pr_manage_users.png
-   :scale: 45 %
+   :scale: 70 %
 
 Sharing in Genestack is done through groups: every user can create any
 number of groups, and add other users to them. Each file in the system can
@@ -892,8 +892,11 @@ its type and metadata.
 This will take you to the application page where you can:
 
 - learn more about the application;
+
 – view and edit application parameters;
+
 – explore your results;
+
 – add further steps to the file data flow (the pipeline).
 
 .. image:: images/cla_page.png

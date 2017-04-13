@@ -2964,30 +2964,36 @@ the quality on different stages of assay preparation (based on Illumina's `Infin
 
 **Sample-independent controls**
 
-Several sample-independent controls allow the monitoring different steps of the of microarray
-assay preparation and include:
+Several sample-independent controls allow the monitoring different steps of
+the of microarray assay preparation and include:
 
-- *Staining control strip*, which estimate the efficiency of the staining step for both the red and green channels. They are independent of the hybridization
-and extension steps.
+- *Staining control strip*, which estimate the efficiency of the staining step
+  for both the red and green channels. They are independent of the hybridization
+  and extension steps.
 
 .. image:: images/qc-staining.png
 
-- *Extension control strip*, which tests efficiency of single-base extension of the probes that incorporates labeled nucleotides. Both red (A and T, labeled with dinitrophenyl)
-and green (C and G labeled with biotin) channels are considered.
+- *Extension control strip*, which tests efficiency of single-base extension
+  of the probes that incorporates labeled nucleotides. Both red (A and T,
+  labeled with dinitrophenyl) and green (C and G labeled with biotin) channels
+  are considered.
 
 .. image:: images/qc-extension.png
 
-- *Hybridization control strip*, which estimates entire performance of the microarray assay.
+- *Hybridization control strip*, which estimates entire performance of the
+  microarray assay.
+
 This kind of controls uses synthetic targets that are complementary to the array probe sequence.
 Extension of the target provides signal.
 The higher concentration of the target is used, the higher signal intensity will be registered.
 
 .. image:: images/qc-hybridisation.png
 
-- *Target removal control strip*, which tests whether all targets are removed after extension step.
-During extension reaction the sequence on the array is used as template to extend the control oligos.
-The probe sequences, however, are not extendable.
-The signal is expected to be low in comparison to the signal of hybridization control.
+- *Target removal control strip*, which tests whether all targets are removed
+  after extension step. During extension reaction the sequence on the array is
+  used as template to extend the control oligos. The probe sequences, however,
+  are not extendable. The signal is expected to be low in comparison to the
+  signal of hybridization control.
 
 .. image:: images/qc-target-removal.png
 
