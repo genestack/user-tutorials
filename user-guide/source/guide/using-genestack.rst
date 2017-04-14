@@ -113,7 +113,7 @@ Manage Groups
 ~~~~~~~~~~~~~
 
 .. image:: images/manage_groups.png
-   :scale: 50 %
+   :scale: 35 %
 
 In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
@@ -128,7 +128,7 @@ In this section, you can change password of your users or create new users.
 You can find more about managing users on Genestack from `this video`_.
 
 .. image:: images/manage_users.png
-   :scale: 50 %
+   :scale: 70 %
 
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
 
@@ -926,7 +926,7 @@ allows you to see what parameters and what tool versions were used at each
 analytical step. You can copy this text and use it in a publication or a report.
 
 .. image:: images/view_as_text.png
-   :scale: 65 %
+   :scale: 75 %
 
 Clicking the **New folder with files** button will create a folder with all the
 files used in this pipeline.
@@ -1041,7 +1041,7 @@ Choose **Start initialization now** option if you'd like to run the
 computations immediately or **Delay initialization till later**.
 
 .. image:: images/start_initialization_now.png
-   :scale: 45 %
+   :scale: 65 %
 
 This data flow, along with all your results (after computations are finished)
 will be stored in the "Created files" folder.
