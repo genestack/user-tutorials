@@ -449,7 +449,7 @@ You can search relevant data with **a free-text query**, and you can further
 filter down experiments by **metadata attributes** using the checkboxes
 on the left. These attributes are generated based on the metadata available for experiments.
 For instance, you can set the filters 'Access', 'Method'
-and 'Organism' to 'Public', 'RNA-Seq', 'Mus musculus', respectively,
+and 'Organism' to 'Public', 'Whole Genome Sequencing', 'Mus musculus', respectively,
 to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
 
 .. image:: images/experiment-browser.png
