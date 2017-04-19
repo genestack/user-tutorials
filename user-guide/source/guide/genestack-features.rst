@@ -86,32 +86,28 @@ Data flows and Delayed Initialization
 .. TODO: I don't like this section
 
 Data flows on Genestack are visual representations of bioinformatics
-pipelines.
-When you build a bioinformatic pipeline manually, you pick up raw assays and then you
-sequentially include various preprocess and analyse applications.
+pipelines. When you build a bioinformatic pipeline manually, you pick up raw assays and, then, you
+sequentially add various preprocess and analyse applications.
 Automatically a separate file is created for each processing step of each individual initial input.
 However, no computations are being started so far. To run the analysis you will have
-to start initialization (for more information, please, see the section
-**Initialising files** in **Using Genestack**).
+to start initialization (for more information, please, see the section **Using Genestack**).
 
 If you intend to reproduce the analysis using different files, there is no need to build the pipeline again.
-What you need to do is to crete a data flow with Data Flow Editor app. With data flows, you not only
+What you need to do is to create a data flow with Data Flow Editor app. With data flows, you not only
 be able to re-run the analysis over and over again, you can also modify
-options of applications being included into the pipeline (learn more about data flows in
-the corresponding sections in **Using Genestack**).
-
-However, before the initialization has begun, you can change the
-parameters, replace source files, or add more files to the pipeline.
-In practice this  means that uninitialized files are cheap and quick to
+options of applications being included into the pipeline (learn more about data flows from
+the corresponding sections in **Using Genestack**). Indeed, before the initialization has begun,
+you can change the parameters, replace source files, or add more files to
+the pipeline. In practice this  means that uninitialized files are cheap and quick to
 create, can be reconfigured, used as inputs to applications to create
 other files, and later computed all at once. Remember – you always need
 to initialize your files to view your results (same rule goes for data
 flows). However, once you do, any further changes become impossible.
 
-However, in our system you can also use existing public data flows allowing to either check quality
+Furthermore, in our system you can also use existing public data flows allowing to either check quality
 of data or perform some comprehensive bioinformatic analysis, namely test
 differential expression, analyse methylation pattern of DNA, identify and characterise genetic
-variations etc.
+variations etc..
 
 Public data
 -----------
