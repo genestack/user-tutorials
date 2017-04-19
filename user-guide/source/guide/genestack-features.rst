@@ -123,6 +123,7 @@ Ensembl_ and UCSC_. In practice, this means that the platform can serve as
 a data repository, that allows users to work both on private and public
 data seamlessly. Our Experiment Browser application will help you to easily find not only
 datasets you are interested in but also analysis results performed on these data.
+
 .. _ArrayExpress: https://www.ebi.ac.uk/arrayexpress/
 .. _GEO: https://www.ncbi.nlm.nih.gov/geo/
 .. _SRA: https://www.ncbi.nlm.nih.gov/sra/
