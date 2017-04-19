@@ -30,11 +30,11 @@ interpretation.
 
 In this guide, we will talk about the basic concepts of sequencing
 analysis, the steps involved and how to interpret your data. Look out
-for the green paragraphs in this guide - they will introduce you to the
+for the green paragraphs in this guide — they will introduce you to the
 basic concepts of Next Generation Sequencing (NGS) data analysis.
 
 If you want more information on the concepts and history of
-bioinformatics, we’d like to refer you to this awesome article_ by N.M.
+bioinformatics, we would like to refer you to this awesome article_ by N.M.
 Luscombe, D. Greenbaum and M. Gerstein (2001)
 
 .. _article: https://www.ebi.ac.uk/luscombe/docs/imia_review.pdf
