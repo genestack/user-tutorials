@@ -25,9 +25,12 @@ using 'Import' button or search through all the available experiments using
 from `Alfano et al. 2015`_. Let's look up this experiment in the platform and
 open it in `Experiment Viewer`_:
 
-.. __: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF2062097&action=viewFile
+.. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
+.. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
+.. _Alfano et al. 2015: https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP049712
+.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF2062097&action=viewFile
 
-|Microbiome_experiment_viewer|
+.. image:: images/Microbiome_experiment_viewer.png
 
 The researchers examined the microbiome composition of different body regions
 of two captive koalas: the eye, the mouth and the gut (through both rectal
@@ -54,9 +57,3 @@ A typical data flow for Microbiome analysis consists of the following steps:
 #. Microbiome analysis
 
 Let’s go through each step to get a better idea of what it really means.
-
-.. |Microbiome_experiment_viewer| image:: images/Microbiome_experiment_viewer.png
-.. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
-.. _Alfano et al. 2015: https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP049712
-.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF2062097&action=viewFile
