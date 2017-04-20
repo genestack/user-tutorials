@@ -1,5 +1,5 @@
 Quality control of raw reads
-****************************
+============================
 
 Garbage in - garbage out. It means that your analysis is only as good as your data.
 Therefore, the first and very important step in any kind of analysis is quality
@@ -54,8 +54,9 @@ the red cross near the metric).
 .. image:: images/Microbiome_per_base_sequence_quality.png
 
 In our sample, the second mates in paired-end reads have bases of bad quality
-at the end of the sequences. To get rid of these bases we'll run "Filter by
-Quality Scores" application.
+at the end of the sequences. To get rid of these bases and improve the reads
+quality we'll run "Trim Adaptors and Contaminants" and "Filter by Quality
+Scores" applications.
 
 **Per sequence quality scores** report allows you to see frequencies of
 quality values in a sample. The reads are of good quality if the peak on the
@@ -64,7 +65,8 @@ plot is shifted to the right, to the maximum quality score.
 .. image:: images/Microbiome_per_sequence_quality_scores.png
 
 In our example, first and second mate reads differ by quality score, but still
-almost all of them are of good quality (>30).
+almost all of them are of good quality (>30). We will improve the reads quality
+by running "Filter by Quality Scores" application.
 
 **Per base sequence content** plots show nucleotide frequencies for each base
 position in the reads. In a random library, there could be only a little

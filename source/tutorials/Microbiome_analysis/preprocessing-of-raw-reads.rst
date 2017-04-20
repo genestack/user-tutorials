@@ -1,10 +1,10 @@
 Preprocessing of raw reads
-**************************
+==========================
 
 FastQC reports help you understand whether it is necessary to improve the
 quality of your data by applying trimming, filtering, adaptor clipping and
 other preprocessing steps. Here is the list of Genestack preprocess
-applications available for raw reads: 
+applications available for raw reads:
 
 .. image:: images/Microbiome_preprocess_apps.png
 
@@ -55,12 +55,45 @@ the application name at the top of the page and choose "About application".
 Trimmed reads for our 8 samples are stored in `Trimmed raw reads for Alfano et
 al (2015)`_ folder.
 
-Now, let's continue our preprocessing procedure and add our next step - "Filter
+.. _Trimmed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3773384&action=viewFile&page=1
+
+2. Filter by quality scores
+***************************
+
+Let's continue our preprocessing procedure and add our next step - "Filter
 by Quality Scores":
 
 .. image:: images/Microbiome_trim_adaptors_and_contaminants_next.png
 
+This application will filter out the reads based on their quality scores. For
+this purpose, we need to specify "Minimum quality score" and "Percentage of
+bases to be above the minimum quality score".
 
-.. _Filtered mapped reads for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999208&action=viewFile&page=1
-.. _variants in Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999281&action=viewFile
-.. _Variants for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999229&action=viewFile&page=1.. _
+.. image:: images/Microbiome_filter_by_quality_scores.png
+
+According to the paper_, only reads with at least 75% of read length with
+quality score above 30 were kept for the future analysis. Let's use the same
+settings: 30 for minimum quality score and 75% for percentage threshold.
+
+.. _paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4426690/
+
+Learn more about the application work in "About application" section.
+
+All 8 samples after this filtering are collected in `Filtered trimmed raw reads
+for Alfano et al (2015)` folder.
+
+.. _Filtered trimmed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3773385&action=viewFile&page=1
+
+Quality control of preprocessed reads
+=====================================
+
+After preprocessing steps, we will use the "FastQC Report" application again to
+compare the quality of raw and preprocessing reads and to make sure that we
+improved reads quality and our data is ready for the downstream analysis.
+
+
+
+All FastQC reports for preprocessed reads you can find in `QC reports of
+preprocessed raw reads for Alfano et al (2015)` folder.
+
+.. _QC reports of preprocessed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3775110&action=viewFile&page=1
