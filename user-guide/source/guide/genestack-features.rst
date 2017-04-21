@@ -107,7 +107,7 @@ flows). However, once you do, any further changes become impossible.
 Furthermore, in our system you can also use existing public data flows allowing to either check quality
 of data or perform some comprehensive bioinformatic analysis, namely test
 differential expression, analyse methylation pattern of DNA, identify and characterise genetic
-variations etc..
+variations etc.
 
 Public data
 -----------

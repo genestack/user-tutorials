@@ -51,7 +51,7 @@ Open a data flow you would like to run in Run Dataflow application. On the
 application page you can set input files and additional files like reference genomes
 that are required for analysis.
 
-**What’s the difference between Data Flow Runner and Data Flow Editor?**
+**What is the difference between Data Flow Runner and Data Flow Editor?**
 
 Data Flow Editor is used to create data flow templates, e.g. selecting
 source files.
@@ -91,7 +91,7 @@ Selecting File Provenance instead of Create New Data Flow will show you
 the pipeline (in the form of a data flow) that was used to create this
 file. Read more about data flows in this tutorial_.
 
-**What’s the difference between BWA and Bowtie2?**
+**What is the difference between BWA and Bowtie2?**
 
 The biggest differences between the two aligners are:
 
@@ -118,7 +118,7 @@ their respective format-free form. If the platform
 cannot recognise the files automatically, you can allocate the files
 manually.
 
-**What’s the difference between an experiment and a folder?**
+**What is the difference between an experiment and a folder?**
 
 The main difference between a folder and an experiment is in the content
 specificity.

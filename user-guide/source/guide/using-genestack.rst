@@ -4,7 +4,7 @@ Using Genestack
 Registering
 -----------
 
-If you haven't done so already, you can create an account on Genestack.
+If you have not done so already, you can create an account on Genestack.
 Go to `platform.genestack.org`_, click on "Sign Up", fill in the form and
 wait for a confirmation email.
 
@@ -448,8 +448,8 @@ Browser either from the **Dashboard** or the **Shortcuts Menu** on the left-hand
 You can search relevant data with **a free-text query**, and you can further
 filter down experiments by **metadata attributes** using the checkboxes
 on the left. These attributes are generated based on the metadata available for experiments.
-For instance, you can set the filters 'Access', 'Method'
-and 'Organism' to 'Public', 'Whole Genome Sequencing', 'Mus musculus', respectively,
+For instance, you can set the filters "Access", "Method"
+and "Organism" to "Public", "Whole Genome Sequencing", "Mus musculus", respectively,
 to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
 
 .. image:: images/experiment-browser.png
@@ -1037,7 +1037,7 @@ computations (by clicking "Run Data Flow" in the last cell).
 
 .. image:: images/run_data_flow.png
 
-Choose **Start initialization now** option if you'd like to run the
+Choose **Start initialization now** option if you would like to run the
 computations immediately or **Delay initialization till later**.
 
 .. image:: images/start_initialization_now.png

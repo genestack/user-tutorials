@@ -506,7 +506,7 @@ source data, tools used and data flow.
 .. image:: images/mapped_reads_qc_report.png
 
 Also, it includes a range of **Mapping statistics**. For **single reads**,
-you'll calculate these QC metrics:
+you will calculate these QC metrics:
 
 #. *Total number of reads*: how many reads used to map to the reference genome;
 #. *Unmapped reads*: total number of reads which failed to map to the reference
@@ -517,7 +517,7 @@ you'll calculate these QC metrics:
 #. *Multi-hit mapped reads*: total number of reads aligned >1 times to the
    reference genome.
 
-In case you analyse **paired-end reads** data, you'll see the following
+In case you analyse **paired-end reads** data, you will see the following
 statistics:
 
 #. *Total number of mate pairs*: how many paired-end reads used to map to the reference genome;
@@ -763,7 +763,7 @@ Convert to Unaligned Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The application will be very useful when you are interested in fraction of reads
-that exactly will map to genome or when you'd like to remap the reads with
+that exactly will map to genome or when you would like to remap the reads with
 other aligner.
 
 **Action**: to convert mapped reads into unaligned reads.
@@ -801,7 +801,7 @@ Concatenate Variants
 
 Concatenation would be appropriate if you, for example, have separate Genetic
 Variations files for each chromosome, and simply wanted to join them
-'end-to-end' into a single Genetic Variations file.
+"end-to-end" into a single Genetic Variations file.
 
 **Action**: to join two or more Genetic Variations files by concatenating them
 into a larger, single file.
@@ -846,7 +846,7 @@ transcriptome, or de novo assembly.
 
 There are at least two types of mapping strategies - Spliced Mapping and
 Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
-so there's typically no introns in the sequence. For example, if the read spans
+so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
 
@@ -858,9 +858,9 @@ two exons, the reference genome might have one exon followed by an intron.
           messenger RNA (mRNA) which is further used to synthesize proteins.
 
 
-In this case, if you'll use Unspliced Mapper, the reference genome would find
+In this case, if you will use Unspliced Mapper, the reference genome would find
 a matching sequence in only one of the exons, while the rest of the read would
-not match the intron in the reference, so the read can't be properly aligned.
+not match the intron in the reference, so the read cannot be properly aligned.
 When analysing RNA-seq data using unspliced aligner, the reads may be mapped to
 potentially novel exons, however reads spanning splice junctions are likely to
 remain unmapped.
@@ -1222,7 +1222,7 @@ Statistics file which you can view in Expression Navigator application.
    is important that edgeR gives moderated fold changes for the extremely lowly
    Differentially Expressed (DE) genes which DESeq2 discards, showing that the
    likelihood of a gene being significantly differentially expressed is related
-   to how strongly it's expressed. So, choose one of the packages according to
+   to how strongly it is expressed. So, choose one of the packages according to
    your desires and run the analysis.
 
 For each group, a GLM LRT is carried out to find DE genes in this group
@@ -1616,7 +1616,7 @@ Unspliced Mapping. In contrast to spliced aligners, unspliced read aligners map
 reads to a reference without allowing large gaps such as those arising from
 reads spanning exon boundaries, or splice junctions. When analysing whole
 genome sequencing (WGS) or whole exome sequencing (WES) data, there is no need
-to look for spliced these sites precisely. That's why we recommend use Unspliced
+to look for spliced these sites precisely. That is why we recommend use Unspliced
 Mapping applications in such cases.
 
 On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
@@ -1652,7 +1652,7 @@ coordinates using the "samse" command (if your reads are single-end) or
    which are converted back to the global coordinates of the reference genome.
    (default: unchecked)
 
-The application is based on BWA_ aligner and it's used in `Whole Exome
+The application is based on BWA_ aligner and it is used in `Whole Exome
 Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
 tutorials.
 
@@ -2615,8 +2615,8 @@ and include:
   "pseudo"-array (which consists of the median across arrays) and
   identification of intensity-dependent biases. The Y axis of the plot
   contains the log-ratio intensity of one array to the median array, which is
-  called 'M' while the X axis contains the average log-intensity of both
-  arrays - called 'A'. Typically, probe levels are not likely to differ a lot
+  called "M" while the X axis contains the average log-intensity of both
+  arrays - called "A". Typically, probe levels are not likely to differ a lot
   so we expect a MA plot centered on the Y=0 axis from low to high intensities.
 
 .. image:: images/microarray_qc_MA_plot.png
@@ -3003,7 +3003,7 @@ A number of sample-dependent controls are provided to assess quality across samp
 
 - Bisulfite-conversion controls
 
-To estimate methylation of DNA, 450k assay probe preparation involves
+To estimate methylation of DNA, the 450k assay probe preparation involves
 bisulfite conversion of DNA when all unmethylated cytosines are converted
 to uracils, while methylated cytosines are remains as they are.
 
@@ -3019,7 +3019,7 @@ sample has some unconverted DNA, the unconverted probes get extended.
 
 *Bisulphite conversion II control strip*
 
-This control uses Infinium I chemistry technology. If the bisulphite conversion
+This control uses the Infinium I chemistry technology. If the bisulphite conversion
 went well, the adenin base is added, generating signal in the red channel.
 If there is some unconverted DNA, the guanine base is incorporated, resulting to
 signal in the green channel.
@@ -3028,7 +3028,7 @@ signal in the green channel.
 
 - Specificity controls, which monitor potential non-specific primer extension.
 
-*Specificity I control strip* is used to assess allele-specific extention for Infinium I chemistry assays.
+*Specificity I control strip* is used to assess allele-specific extention for the Infinium I chemistry assays.
 
 .. image:: images/qc-specificity-I.png
 
@@ -3048,7 +3048,7 @@ select those samples that pass QC-check, then click **Remove outliers and re-nor
 Then, if you are happy with quality of re-normalized arrays, you can proceed to the following
 step - **Differential Methylation Analysis**.
 
-The "Methylation array QC" application is based on minfi_ and shinyMethyl_ Bioconductor packages.
+The "Methylation array QC" application is based on the minfi_ and the shinyMethyl_ Bioconductor packages.
 
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 .. _shinyMethyl: https://f1000research.com/articles/3-175/v2
