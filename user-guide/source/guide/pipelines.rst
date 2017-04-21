@@ -2228,7 +2228,7 @@ and create formulas based on your genomic data, for example, quantify
 average value between values corresponding to different samples. The
 results of the computations will be shown on the formula track.
 
-Moreover, each track can be personalised by changing its properties
+Moreover, each track can be customised by changing its properties
 (track color, normalized values, show only SNPs, maximum and minimum
 values to be shown on a track, etc.). Use "Edit" button to change
 properties for multiple tracks at once.
@@ -2249,9 +2249,8 @@ You can see the Genome browser in action in this blog post_.
 Reference Genomes
 -----------------
 
-One way or another, most bioinformatics analysis pipelines, regardless of the
-data type analysed, require the use of a reference genome. For instance,  we
-use reference genomes in `DNA methylation analysis`_, in `differential gene
+One way or another, many bioinformatics analysis pipelines rely on the use of a reference genome.
+For instance,  we use reference genomes in `DNA methylation analysis`_, in `differential gene
 expression analysis`_, and in the `analysis of transcriptomic heterogeneity
 within populations of cells`_. The choice of a reference genome can increase
 the quality and accuracy of the downstream analysis or it can have a harmful
@@ -2399,8 +2398,7 @@ to read more on the topic, we suggest taking a look at the following papers:
 Microarray data
 ---------------
 
-DNA microarray analysis is one of the fastest-growing technologies in the field
-of genetic research. Scientists are using DNA microarrays to quantify gene
+Scientists are using DNA microarrays to quantify gene
 expression levels on a large scale or to genotype multiple regions of a genome.
 
 .. note:: **What is a DNA Microarray?**
@@ -2449,7 +2447,7 @@ Affymetrix Microarrays Normalisation
 
 .. image:: images/affymetrix_normalization.png
 
-To normalize affymetrix microarrays the application uses RMA (Robust
+To normalize Affymetrix microarrays the application uses RMA (Robust
 Multi-array Average) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
@@ -2709,7 +2707,7 @@ Let's look through these statistics:
 - **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
   with control samples. We know the raw expression levels of each gene in tumor
   and in control samples. If we divide these two intensities for a given gene X
-  we’ll get the Fold Change value:
+  we will get the Fold Change value:
 
   *Fold Change = tumor/control*
 
@@ -2723,10 +2721,10 @@ Let's look through these statistics:
   positive Log FC are considered to be up-regulated in the selected group, ones
   with negative Log FC are down-regulated.
 
-- **Log2(EXPR)**. It is a log-transformed relative expression for gene.
+- **log-expression**: log-transformed and normalised measure of gene expression.
 
 - **p-value**. The application also computes a p-value for each gene. A low
-  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  p-value (typically, ≤ 0.05) is viewed as evidence that the null hypothesis
   can be rejected (i.e. the gene is differentially expressed). However, due to
   the fact that we perform multiple testing, the value that should be looked at
   to safely assess significance is the false discovery rate.
@@ -2879,12 +2877,6 @@ The table includes:
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
 DNA methylation arrays are a widely-used tool to assess genome-wide DNA methylation.
-The "Illumina HumanMethylation450K" array permits us to estimate of methylation
-with high coverage and relatively low cost. This makes it a powerful tool for
-epigenome-wide association studies (EWAS) projects. The "Illumina Infinium MethylationEPIC"
-chip represents the next-generation of microarrays. While the "450K" detects more than 485,000
-methylation CpG-sites per sample at single-nucleotide resolution, "EPIC" covers more than
-850,000.
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2914,12 +2906,12 @@ intensities are measured.
 
 Currently, there are two primary methods used to estimate DNA methylation level:
 *Beta-value* and *M-value*. The Beta-value is the ratio of the methylated probe intensity against the
-overall intensity (sum of methylated and unmethylated probe intensities) plus a constant (Du P. et al.,
+overall intensity (sum of the methylated and the unmethylated probe intensities) plus a constant (Du P. et al.,
 2010):
 
 .. image:: images/qc-betaval.png
 
-The M-value is log2 ratio of the intensities of methylated probe versus unmethylated probe
+The M-value is the log2 ratio of the intensities of the methylated probe versus the unmethylated probe
 (Du P. et al., 2010):
 
 .. image:: images/qc-mval.png
@@ -2929,7 +2921,7 @@ The M-value is log2 ratio of the intensities of methylated probe versus unmethyl
 .. image:: images/methylation-qc-page.png
 
 The Methylation array QC application allows the user to export files containing methylation and
-unmethylation values, as well as Beta-values, M-values and Log median intensity values.
+unmethylation values, as well as the Beta-values, the M-values and Log median intensity values.
 
 Additionally, you can download and explore "Copy number values" file with
 the sum of the methylated and unmethylated signals.
@@ -2939,7 +2931,7 @@ Let's explore QC-report for the Infinium 450K microarrays:
 
 **1) Log median intensity plot**
 
-The scatterplot represents a log median of the signal intensities in both methylated and unmethylated channels
+The scatterplot represents the log median of the signal intensities in both methylated and unmethylated channels
 for each array. In general, samples of good quality cluster together,
 while "bad" samples tend to separate, typically with lower median intensities.
 
@@ -2951,7 +2943,7 @@ while "bad" samples tend to separate, typically with lower median intensities.
 
 .. image:: images/qc-beta-density.png
 
-- *Beta density bean* plot also shows methylation Beta-values.
+- *Beta density bean* plot also shows methylation the Beta-values.
 
 .. image:: images/qc-beta-density-bean.png
 
