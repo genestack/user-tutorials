@@ -609,7 +609,7 @@ the data. For instance, if you want to align a raw WGBS sequencing assay,
 Genestack will suggest several mappers, but only the Bisulfite
 Sequencing Mapping application will be suitable in this case. To figure out what
 applications are recommended to process WGBS, WES, RNA-seq or other sequencing
-data, go to the :ref:`pipelines` section of this guide.
+data, go to the :ref:`pipelines-and-applications-label` section of this guide.
 
 **File search** in the top-right corner allows you to search for files by
 metadata (names, organism, method). To limit the search by file

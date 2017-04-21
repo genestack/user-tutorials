@@ -22,9 +22,8 @@ applications for exploring  genomic variants, and many more.
 **Manage** contains applications used to manage your data: applications dealing
 with data flows, file provenance, export, metadata editing and so on.
 
-An extended version (including information on licensing and references)
-of every application description found in this guide can be found in the
-**"About application"** text of each of the individual application.
+An extended version of each application's description can be found in the
+"About application" text for that application.
 
 To view this text for a specific application, click on the application's name at the
 top-left corner of the page, and in the dropdown menu select "About application".
@@ -862,8 +861,8 @@ two exons, the reference genome might have one exon followed by an intron.
 
           Exons and introns are both parts of genes. However, exons code for
           proteins, whereas introns do not. In RNA splicing, introns are
-          removed and exons are jointed to one another to generate mature
-          messenger RNA (mRNA) which is further used to synthesize proteins.
+          removed and exons are jointed to produce mature messenger RNA (mRNA)
+          which is further used to synthesize proteins.
 
 
 In this case, if you'll use Unspliced Mapper, the reference genome would find
@@ -928,7 +927,7 @@ Details on various settings:
    multi-hit reads. (default: 1)
 5. **Number of allowed mismatches** option lets you set the maximum number of
    allowed mismatches per read. (default: 2)
-6. **Disallow unique mappings of one mate** option allows you to discard pairs
+6. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
 7. **Disallow discordant mappings** will discard all mappings where the two
@@ -1209,11 +1208,11 @@ Test Differential Gene Expression
 **Action**: to perform differential gene expression analysis between groups of
 samples. The application accepts Mapped Read Counts (from Quantify Raw
 Coverage in Genes application) and generates Differential Expression
-Statistics file which you can view in Expression Navigator application.
+Statistics file which you can view with the Expression Navigator application.
 
 .. image:: images/test_differential_gene_expression.png
 
-1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+1. The "**Group samples by**" option allows you to apply autogrouping, i.e. when the
    application helps you to group your samples according to experimental factor
    indicated in metainfo for the samples (e.g. disease, tissue, sex, cell type,
    cell line, treatment, etc.). (default: None)
@@ -1223,59 +1222,51 @@ Statistics file which you can view in Expression Navigator application.
    likelihood ratio test (LRT) using generalized linear model (GLM). (default:
    DESeq2)
 
-   With edgeR, one of the following types of dispersion estimate is used, in
-   order of priority and depending on the availability of biological replicates:
-   Tagwise, Trended, or Common. Also, edgeR is much faster than DESeq2 for
-   fitting GLM model, but it takes slightly longer to estimate the dispersion. It
-   is important that edgeR gives moderated fold changes for the extremely lowly
-   Differentially Expressed (DE) genes which DESeq2 discards, showing that the
-   likelihood of a gene being significantly differentially expressed is related
-   to how strongly it's expressed. So, choose one of the packages according to
-   your desires and run the analysis.
+With edgeR, one of the following types of dispersion estimate is used, in
+order of priority and depending on the availability of biological replicates:
+Tagwise, Trended, or Common. Also, edgeR is much faster than DESeq2 for
+fitting GLM model, but it takes slightly longer to estimate the dispersion. It
+is important that edgeR gives moderated fold changes for the extremely lowly
+Differentially Expressed (DE) genes which DESeq2 discards, showing that the
+likelihood of a gene being significantly differentially expressed is related
+to how strongly it's expressed. So, choose one of the packages according to
+your desires and run the analysis.
 
 For each group, a GLM LRT is carried out to find DE genes in this group
 compared to the average of the other groups. In the case of 2 groups, this
 reduces to the standard analysis of finding genes that are differentially
 expressed between 2 groups. Thus, for N groups, the application produces N
 tables of Top DE genes. Each table shows the corresponding Log2(Fold Change),
-Log2(Counts per Million), P-Value, and False Discovery Rate for each gene.
+Log2(Counts per Million), p-value, and False Discovery Rate for each gene.
 Look at all result tables and plots in Expression Navigator application.
 
--  **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
-   with control samples. Then, for each gene in sample we know read counts
-   (output of Quantify Raw Coverage in Genes application). If we divide read
-   counts value for gene X (in the tumor sample) by the read counts value for
-   gene X (in the control sample) we’ll get Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-   *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-   And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
-   *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
+- **p-value**. The application also computes a p-value for each gene. A low
+  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  can be rejected (i.e. the gene is differentially expressed). However, due to
+  the fact that we perform multiple testing, the value that should be looked at
+  to safely assess significance is the false discovery rate.
 
-   Log transformed values contains the same information as Fold Change but
-   makes it more clear for interpretation because of symmetric values.
-
--  **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-   counts per million (cpm), a simple measure of read abundance that can be
-   compared across libraries of different sizes. And if we apply Log2 transform
-   for this value we will get Log2(Counts per Million).
-
--  **p-value**. The application also computes a p-value for each gene. A low
-   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
-   can be rejected (i.e. the gene is differentially expressed). However, due to
-   the fact that we perform multiple testing, the value that should be looked at
-   to safely assess significance is the false discovery rate.
-
--  **False discovery rate**. The FDR is a corrected version of the p-value,
-   which accounts for `multiple testing correction`_. Typically, an FDR <
-   0.05 is good evidence that the gene is differentially expressed. You can
-   read more about it `here`_.
+- **False discovery rate**. The FDR is a corrected version of the p-value,
+  which accounts for `multiple testing correction`_. Typically, an FDR < 0.05
+  is good evidence that the gene is differentially expressed. You can read
+  more about it `here`_.
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on two statistical R packages - `DESeq2`_ and
+This application is based on two R packages - `DESeq2`_ and
 `edgeR`_.
 
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
@@ -1291,9 +1282,9 @@ Statistics file which↵you can view in Expression Navigator application.
 
 .. image:: images/test_differential_isoform_expression.png
 
-In application options, you can find these ones:
+The application has the following options:
 
-1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+1. The "**Group samples by**" option allows you to apply autogrouping, i.e. when the
    application helps you to group your samples according to experimental
    factor indicated in metainfo for the samples (e.g. disease, tissue, sex,
    cell type, cell line, treatment, etc.). (default: None)
@@ -1307,29 +1298,20 @@ In application options, you can find these ones:
 The application finds isoforms that are differentially expressed (DE) between
 several groups of samples and produces tables of Top DE transcripts. Each
 table shows the corresponding Log2(Fold Change), Log2(Counts per Million),
-P-Value, and False Discovery Rate for each isoform. To visualize your results
-use Expression Navigator application.
+p-value, and False Discovery Rate for each isoform. Use the Expression
+Navigator to visualize the results.
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
-  and with control samples. Then, for each transcript in sample we know read
-  counts (output of Quantify FPKM Coverage in Isoforms application). If we
-  divide read counts value for transcript X (in the tumor sample) by the read
-  counts value for transcript X (in the control sample) we’ll get Fold Change
-  value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-  And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
-
-  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
-  
-  Log transformed values contains the same information as Fold Change but
-  makes it more clear for interpretation because of symmetric values.
-
-- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-  counts per million (cpm), a simple measure of read abundance that can be
-  compared across libraries of different sizes. And if we apply Log2 transform
-  for this value we’ll get Log2(Counts per Million).
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
 - **p-value**. The application also computes a p-value for each isoform. A low
   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
@@ -1379,27 +1361,22 @@ million (LogCPM).
 
 Let’s look through these statistics:
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
-  and with control samples. Then, for each gene in a sample we know read counts
-  (output of Quantify Raw Coverage in Genes application). If we divide read
-  counts value for gene X (in the tumor sample) by the read counts value for
-  gene X (in the control sample) we’ll get the Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change):
-
-  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
-  
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
-- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-  counts per million (cpm), a simple measure of read abundance that can be
-  compared across libraries of different sizes. And if we apply Log2 transform
-  for this value we’ll get Log2(Counts per Million).
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
 - **p-value**. The application also computes a p-value for each gene. A low
   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
@@ -1408,8 +1385,15 @@ Let’s look through these statistics:
   looked at to safely assess significance is the false discovery rate.
 
 - **False discovery rate**. The FDR is a corrected version of the p-value,
-  which accounts for `multiple testing correction`_. Typically, an FDR 0.05 is
-  good evidence that the gene is differentially expressed. You can read more
+  which accounts for `multiple testing correction`_. Typically, an FDR < 0.05 is
+  good evidence that the gene is differentially expressed. You can read m- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
+
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
+  
+-ore
   about it `here`_.
   
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
@@ -1466,10 +1450,10 @@ To identify highly variable genes you can try different options:
    option will be switched off by default. But if you select two folders, one
    for biological and the other for spike-in data, you can use the Brennecke
    algorithm which requires this option.
-2. **Exclude samples with low coverage** option allows you to exclude or
+2. The **Exclude samples with low coverage** option allows you to exclude or
    include for analysis samples with low read counts. (default: checked)
 3. **Significance level for the p-value (-10log₁₀(p))**. If you set it equal
-   to 1, the application will select the genes for which p-value is smaller
+   to 1, the application will select the genes for which the p-value is smaller
    than 0.1. (default: 1)
 
 The next three options will be available if spike-ins are included in the
@@ -1657,15 +1641,15 @@ reads. Then the application converts these SA coordinates to chromosome
 coordinates using the "samse" command (if your reads are single-end) or
 "sampe" (for paired-end reads).
 
-1. **Perform targeted mapping** option. If this parameter is selected, a bed
-   file is used to specify the genome locations, that the reads should be
-   mapped to. The reference genome is altered to only contain those locations,
-   using the bedtools "getfasta" command and the reads are then mapped to the
-   altered genome. The resulting sam file contains local genome co-ordinates,
-   which are converted back to the global coordinates of the reference genome.
-   (default: unchecked)
+1. **Perform targeted mapping** option. If this parameter is selected, a BED
+   file is used to restrict mapping of the reads to specific locations in the
+   genome, that the reads should be mapped to. The reference genome is altered
+   to only contain those locations, using the bedtools "getfasta" command and
+   the reads are then mapped to the altered genome. The resulting sam file
+   contains local genome co-ordinates, which are converted back to the global
+   coordinates of the reference genome. (default: unchecked)
 
-The application is based on BWA_ aligner and `BEDtools`_. The application is
+The application is based on the BWA_ aligner and `BEDtools`_. The application is
 used in `Whole Exome Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
 tutorials.
 
@@ -1701,7 +1685,7 @@ Let's look at the application page and the parameters we can use to do mapping:
 
 For paired-end reads two more option appears:
 
-5. **Disallow unique mappings of one mate** option allows you to discard pairs
+5. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
 6. **Disallow discordant mappings** parameter will discard all mappings where
@@ -1710,7 +1694,7 @@ For paired-end reads two more option appears:
    fragment length, including mates mapping to different chromosomes. (default:
    unchecked)
 
-The application is based on Bowtie2_ aligner.
+The application is based on the Bowtie2_ aligner.
 
 .. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
@@ -1790,9 +1774,9 @@ Let's now look at the command line options more closely:
    (default: 20)
 10. **Minimum all-samples read depth for a variant** is a minimum number of
     reads covering position. (default: 1)
-11. **Chromosome to analyse** option allows you to choose specific chromosomes
+11. The **Chromosome to analyse** option allows you to choose specific chromosomes
     to analyse. (default: All)
-12. **“Key to merge samples** is a metainfo key you need to specify in order
+12. **Key to merge samples** is a metainfo key you need to specify in order
     you would like to merge the samples. This option can be useful for merging
     technical replicates.
 
@@ -1803,7 +1787,7 @@ small indels.
 Also, the application will always write DP (number of reads covering position),
 DV (number of high-quality variant reads), DP4 (number of forward reference,
 reverse reference, forward non-reference and reverse non-reference alleles
-used in variant calling) and SP (phred-scaled strand bias P-value) tags in
+used in variant calling) and SP (phred-scaled strand bias p-value) tags in
 the output file.
 
 The result Genetic Variations can be explored in **Genome Browser** as a
@@ -1904,7 +1888,7 @@ To change the default columns or add more columns, choose them in the
 corresponding tabs in "Columns" section and "Save" your changes. After
 that all selected columns will be displayed in Table viewer.
 
-You can "download filtered data as .tsv" or create new file with filtered
+You can "download filtered data as .tsv" or create a new file with filtered
 variants.
 
 Read more about this application in our tutorials on `Whole Exome Sequencing`_ and
@@ -1933,10 +1917,10 @@ Let's look at the options:
    Genetic Variations files. But there are cases when you would like to know
    which features do not overlap with other ones (use "Report non-overlapping
    features" filter). (default: Report overlapping features)
-2. **Minimum overlapping fraction** option allows you check whether a feature
+2. The **Minimum overlapping fraction** option allows you check whether a feature
    of interest has a specified fraction of its length overlapping another
    feature. (default: 10)
-3. **Rule for overlap strandedness** option allows you to ignore overlaps on
+3. The **Rule for overlap strandedness** option allows you to ignore overlaps on
    the same strand ("Discard overlaps on the same strand"), on the other
    strand ("Discard overlaps on the other strand") or expect overlapping
    without respect to the strandedness ("None"). (default: None)
@@ -1975,11 +1959,11 @@ Let’s talk a bit about various settings:
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
-   If  the "Lister" protocol was used, your reads will be mapped to two
-   forward strands. You can read more about this protocol in `Lister et al`_.
-   If you choose the "Cokus" protocol the application will align your reads to
-   all four strands. You can find more details about this protocol in the
-   original study by `Cokus et al`_.
+If  the "Lister" protocol was used, your reads will be mapped to two
+forward strands. You can read more about this protocol in `Lister et al`_.
+If you choose the "Cokus" protocol the application will align your reads to
+all four strands. You can find more details about this protocol in the
+original study by `Cokus et al`_.
 
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
@@ -2016,11 +2000,11 @@ Let’s talk a bit about various settings:
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
-   If  the "Lister" protocol was used, your reads will be mapped to two
-   forward strands. You can read more about this protocol in `Lister et al`_.
-   If you choose the "Cokus" protocol the application will align your reads to
-   all four strands. You can find more details about this protocol in the
-   original study by `Cokus et al`_.
+If  the "Lister" protocol was used, your reads will be mapped to two
+forward strands. You can read more about this protocol in `Lister et al`_.
+If you choose the "Cokus" protocol the application will align your reads to
+all four strands. You can find more details about this protocol in the
+original study by `Cokus et al`_.
 
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
@@ -2039,7 +2023,7 @@ reads. Next, you can view methylation ratios in Genome Browser.
 
 Command line options are the following:
 
-1. **Minimum coverage** option allows you to get results filtered by depth
+1. The **Minimum coverage** option allows you to get results filtered by depth
    of coverage. But raising it to a higher value (e.g. 5) requires that at
    least five reads will cover the position. (default: not set)
 2. **Trim N end-repairing fill-in bases** option. For paired-end mappings, you
@@ -2050,7 +2034,7 @@ Command line options are the following:
    (default: not set)
 3. **Report loci with zero methylation ratios** option is used to report
    positions with zero methylation. (default: unchecked)
-4. **Combine ratios on both strands** option allows you to combine CpG
+4. The **Combine ratios on both strands** option allows you to combine CpG
    methylation ratio from both strands. (default: unchecked)
 5. **Only unique mappings** parameter is checked in case you would like to
    process only unique mappings. (default: checked)
@@ -2125,14 +2109,14 @@ Let's review the application options:
 .. TODO Add pros and cons of the protocols
 .. TODO Add forum post on pros and cons between the protocols and link on it
 
-- *closed-reference*: reads are clustered against a reference sequence
-  collection and any reads which do not hit a sequence in the reference
-  sequence collection are excluded from downstream analyses
+*closed-reference*: reads are clustered against a reference sequence
+collection and any reads which do not hit a sequence in the reference
+sequence collection are excluded from downstream analyses
 
-- *open-reference*: reads are clustered against a reference sequence collection
-  and any reads which do not hit the reference sequence collection are
-  subsequently clustered de novo (i.e. against one another without any external
-  reference).
+*open-reference*: reads are clustered against a reference sequence collection
+and any reads which do not hit the reference sequence collection are
+subsequently clustered de novo (i.e. against one another without any external
+reference).
 
 2. **Algorithm** used for clustering. In case open-reference protocol, the
    application suggests you use uclust (by default) or sortmera_sumclust
@@ -2725,17 +2709,12 @@ per million (LogCPM).
 
 Let's look through these statistics:
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
-  with control samples. We know the raw expression levels of each gene in tumor
-  and in control samples. If we divide these two intensities for a given gene X
-  we’ll get the Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
-
-  And if we apply a Log2 transform for these raw expression ratios we will get
-  log-transformed fold change:
-
-  *Log2 Fold Change = Log2 (tumor) - Log2(control)**
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
   Log transformed values contains the same information as Fold Change but makes
   it more clear for interpretation because of symmetric values. Genes with
