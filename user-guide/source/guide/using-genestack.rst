@@ -892,12 +892,9 @@ its type and metadata.
 This will take you to the application page where you can:
 
 - learn more about the application;
-
-– view and edit application parameters;
-
-– explore your results;
-
-– add further steps to the file data flow (the pipeline).
+- view and edit application parameters;
+- explore your results;
+- add further steps to the file data flow (the pipeline).
 
 .. image:: images/cla_page.png
 

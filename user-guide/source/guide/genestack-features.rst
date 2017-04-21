@@ -33,7 +33,7 @@ This ranges from our FastQC Report application
 that visualises the quality of raw or preprocessed sequencing
 reads, to our Variant Explorer application, performing real-time interactive
 genomic variant filtering by type, impact, quality, frequency, etc.
-All the Genestack applications are described in the section **Pipelines and applications**.
+All the Genestack applications are described in the section  :ref:`pipelines-and-applications-label`.
 
 Format-free files
 -----------------
@@ -93,7 +93,7 @@ However, no computations are being started so far. To run the analysis you will 
 to start initialization (for more information, please, see the section **Using Genestack**).
 
 If you intend to reproduce the analysis using different files, there is no need to build the pipeline again.
-What you need to do is to create a data flow with Data Flow Editor app. With data flows, you not only
+What you need to do is to create a data flow with Data Flow Editor application. With data flows, you not only
 be able to re-run the analysis over and over again, you can also modify
 options of applications being included into the pipeline (learn more about data flows from
 the corresponding sections in **Using Genestack**). Indeed, before the initialization has begun,
@@ -107,7 +107,7 @@ flows). However, once you do, any further changes become impossible.
 Furthermore, in our system you can also use existing public data flows allowing to either check quality
 of data or perform some comprehensive bioinformatic analysis, namely test
 differential expression, analyse methylation pattern of DNA, identify and characterise genetic
-variations etc..
+variations etc.
 
 Public data
 -----------

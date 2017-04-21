@@ -1,3 +1,5 @@
+.. _pipelines-and-applications-label:
+
 Pipelines and applications
 ==========================
 
@@ -582,9 +584,9 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
-Mapped Reads QC Report application is based on `BEDtools
-<http://bedtools.readthedocs.io/en/latest/>`_ and Picard_ tool.
+Mapped Reads QC Report application is based on `BEDtools`_ and Picard_ tool.
 
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
 
 .. TODO What should "Insert size distribution" plot look like normally?
@@ -632,11 +634,11 @@ Report application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
-This application is based on `BEDtools
-<https://code.google.com/archive/p/bedtools/>`_, Picard_ tools and `SAMtools
-<http://samtools.sourceforge.net/>`_.
+This application is based on `BEDtools`_, Picard_ tools and `SAMtools`_.
 
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Apart from quality control applications, Genestack suggests you a bunch of
 applications to preprocess mapped reads.
@@ -744,7 +746,9 @@ all your data right away.
 Using the same random seed and the same subsampling ratio will result in
 identical subsets.
 
-This application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
+This application is based on `SAMtools`_.
+
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Merge Mapped Reads
 ^^^^^^^^^^^^^^^^^^
@@ -757,7 +761,9 @@ output Mapped Reads file.
 
 .. image:: images/merge_mapped_reads.png
 
-The application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
+The application is based on `SAMtools`_.
+
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Convert to Unaligned Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -793,8 +799,9 @@ and about Indels.
 
 .. image:: images/merge_variants.png
 
-This application is based on `BCFtools
-<http://samtools.github.io/bcftools/bcftools.html>`_.
+This application is based on `BCFtools`_.
+
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 Concatenate Variants
 ^^^^^^^^^^^^^^^^^^^^
@@ -815,8 +822,9 @@ first input.
 1. **Remove duplicated variants** option checks for the duplicated variants and
    makes sure that there are no redundant results. (default: unchecked)
 
-The application is based on `BCFtools
-<http://samtools.github.io/bcftools/bcftools.html>`_.
+The application is based on `BCFtools`_.
+
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 RNA-seq Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~
@@ -827,7 +835,7 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-.. note:: **What is a difference between genome, exome and transcriptome**?
+.. note:: **What is the difference between genome, exome and transcriptome**?
 
           Genome includes both coding (genes) and noncoding DNA in a given cell
           type.
@@ -850,7 +858,7 @@ so there's typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
 
-.. note:: **What is a difference between exons and introns?**
+.. note:: **What is the difference between exons and introns?**
 
           Exons and introns are both parts of genes. However, exons code for
           proteins, whereas introns do not. In RNA splicing, introns are
@@ -1262,9 +1270,10 @@ Look at all result tables and plots in Expression Navigator application.
 -  **False discovery rate**. The FDR is a corrected version of the p-value,
    which accounts for `multiple testing correction`_. Typically, an FDR <
    0.05 is good evidence that the gene is differentially expressed. You can
-   read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+   read more about it `here`_.
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
 This application is based on two statistical R packages - `DESeq2`_ and
 `edgeR`_.
@@ -1331,9 +1340,10 @@ use Expression Navigator application.
 - **False discovery rate**. The FDR is a corrected version of the p-value,
   which accounts for `multiple testing correction`_. Typically, an FDR <
   0.05 is good evidence that the isoform is differentially expressed. You can
-  read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+  read more about it `here`_.
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
 This application is based on **cuffdiff** which is a part of Cufflinks_.
 
@@ -1400,9 +1410,10 @@ Let’s look through these statistics:
 - **False discovery rate**. The FDR is a corrected version of the p-value,
   which accounts for `multiple testing correction`_. Typically, an FDR 0.05 is
   good evidence that the gene is differentially expressed. You can read more
-  about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+  about it `here`_.
   
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
 Moreover, you can sort the DE genes by these statistics, clicking the small
 arrows near the name of the metric in the table.
@@ -1487,8 +1498,9 @@ This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 .. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
 .. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-Read more about single-cell RNA-seq analysis on Genestack `here
-<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
+Read more about `single-cell RNA-seq analysis`_ on Genestack.
+
+.. _single-cell RNA-seq analysis: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
 Single-cell RNA-Seq Visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1599,8 +1611,9 @@ t-SNE transformation is computed using the Rtsne_ package.
 .. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
 .. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-You can read more about the app and single-cell RNA-seg analysis `here
-<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
+Read `our blog post`_ about the application and single-cell RNA-seg analysis.
+
+.. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_
 
 Genome/Exome Sequencing Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1652,11 +1665,12 @@ coordinates using the "samse" command (if your reads are single-end) or
    which are converted back to the global coordinates of the reference genome.
    (default: unchecked)
 
-The application is based on BWA_ aligner and it's used in `Whole Exome
-Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
+The application is based on BWA_ aligner and `BEDtools`_. The application is
+used in `Whole Exome Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
 tutorials.
 
 .. _BWA: http://bio-bwa.sourceforge.net/
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Whole Exome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
@@ -1796,12 +1810,12 @@ The result Genetic Variations can be explored in **Genome Browser** as a
 separate  variation track, further annotated using **Effect Prediction**
 application, or viewed immediately using **Variant Explorer** application.
 
-This application is based on `SAMtools
-<http://www.htslib.org/doc/samtools-1.1.html>`_ and
-`BCFtools <http://www.htslib.org/doc/bcftools-1.1.html>`_ utilities and best
-used when performing `Whole Exome Sequencing Analysis`_ and `Whole Genome
-Sequencing Analysis`_.
+This application is based on `SAMtools`_ and
+`BCFtools`_ utilities and best used when performing `Whole Exome Sequencing
+Analysis`_ and `Whole Genome Sequencing Analysis`_.
 
+.. _SAMtools: http://samtools.sourceforge.net/
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 .. _Whole Exome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
@@ -1927,8 +1941,9 @@ Let's look at the options:
    strand ("Discard overlaps on the other strand") or expect overlapping
    without respect to the strandedness ("None"). (default: None)
 
-This application is based on `BEDtools
-<http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html>`_.
+This application is based on `BEDtools`_.
+
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 
 Bisulfite Sequencing Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2429,7 +2444,9 @@ different conditions (e.g. housekeeping genes) report an expression ratio
 other than 1. This can be caused by a variety of reasons, for instance:
 variation caused by differential labelling efficiency of the two fluorescent
 dyes used or different amounts of starting mRNA. You can read more about this
-`here <http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf>`_.
+`in this document`_.
+
+.. _in this document: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf
 
 Normalisation is a process that eliminates such variations in order to allow
 users to observe the actual biological differences in gene expression levels.
@@ -2453,8 +2470,9 @@ To normalize affymetrix microarrays the application uses RMA (Robust
 Multi-array Average) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
-set on each array. For more on RMA, see `here
-<https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5>`_.
+set on each array. For more on RMA, see `this paper`_.
+
+.. _ths paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
 
 As a next step, the normalised microarray samples can be assessed using the
 **Microarray Quality Control** application to detect and remove potential outliers. Normalised
@@ -2500,8 +2518,9 @@ As a next step, the normalised microarray samples can be assessed using the
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
-The application is based on the `limma
-<https://www.bioconductor.org/packages/3.3/bioc/html/limma.html>`_ R package.
+The application is based on the `limma`_ R package.
+
+.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
 GenePix Microarrays Normalisation
 *********************************
@@ -2795,10 +2814,10 @@ The following options can be configured in the application:
    is present in your data, you need to open your microarray assays in the
    Metainfo Editor and add it there.
 
-The application is based on `limma
-<https://www.bioconductor.org/packages/release/bioc/html/limma.html>`_ R package. The benchmark dose is estimated
+The application is based on the `limma`_ R package. The benchmark dose is estimated
 based on the method described in the `Benchmark Dose Software (BMDS) user manual`_.
 
+.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 .. _Benchmark Dose Software (BMDS) user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
 
 Dose Response Analysis Viewer

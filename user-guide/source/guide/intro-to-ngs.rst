@@ -43,7 +43,7 @@ probably have low influence on the gene as such a change causes a codon that pro
 amino acid. However, if it is a large deletion, you can assume that it will have a large effect
 on the gene function.
 
-When it comes to **visualising** your data: the standard tool for viewing of mapped reads and
+When it comes to **visualising** your data: the standard tool for visualisation of mapped reads and
 identified variants is a Genome Browser. Since visualization is one of the concepts at the core
 of our platform, on Genestack you will find a range of other useful tools that will help you
 better understand your data considering their nature. For example for WES or WGS data we suggest
