@@ -1,3 +1,5 @@
+.. _pipelines-and-applications-label:
+
 Pipelines and applications
 ==========================
 
@@ -20,9 +22,8 @@ applications for exploring  genomic variants, and many more.
 **Manage** contains applications used to manage your data: applications dealing
 with data flows, file provenance, export, metadata editing and so on.
 
-An extended version (including information on licensing and references)
-of every application description found in this guide can be found in the
-**"About application"** text of each of the individual application.
+An extended version of each application's description can be found in the
+"About application" text for that application.
 
 To view this text for a specific application, click on the application's name at the
 top-left corner of the page, and in the dropdown menu select "About application".
@@ -582,9 +583,9 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
-Mapped Reads QC Report application is based on `BEDtools
-<http://bedtools.readthedocs.io/en/latest/>`_ and Picard_ tool.
+Mapped Reads QC Report application is based on `BEDtools`_ and Picard_ tool.
 
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
 
 .. TODO What should "Insert size distribution" plot look like normally?
@@ -632,11 +633,11 @@ Report application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
-This application is based on `BEDtools
-<https://code.google.com/archive/p/bedtools/>`_, Picard_ tools and `SAMtools
-<http://samtools.sourceforge.net/>`_.
+This application is based on `BEDtools`_, Picard_ tools and `SAMtools`_.
 
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Apart from quality control applications, Genestack suggests you a bunch of
 applications to preprocess mapped reads.
@@ -744,7 +745,9 @@ all your data right away.
 Using the same random seed and the same subsampling ratio will result in
 identical subsets.
 
-This application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
+This application is based on `SAMtools`_.
+
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Merge Mapped Reads
 ^^^^^^^^^^^^^^^^^^
@@ -757,7 +760,9 @@ output Mapped Reads file.
 
 .. image:: images/merge_mapped_reads.png
 
-The application is based on `SAMtools <http://samtools.sourceforge.net/>`_.
+The application is based on `SAMtools`_.
+
+.. _SAMtools: http://samtools.sourceforge.net/
 
 Convert to Unaligned Reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -793,8 +798,9 @@ and about Indels.
 
 .. image:: images/merge_variants.png
 
-This application is based on `BCFtools
-<http://samtools.github.io/bcftools/bcftools.html>`_.
+This application is based on `BCFtools`_.
+
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 Concatenate Variants
 ^^^^^^^^^^^^^^^^^^^^
@@ -815,8 +821,9 @@ first input.
 1. **Remove duplicated variants** option checks for the duplicated variants and
    makes sure that there are no redundant results. (default: unchecked)
 
-The application is based on `BCFtools
-<http://samtools.github.io/bcftools/bcftools.html>`_.
+The application is based on `BCFtools`_.
+
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 RNA-seq Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~
@@ -827,7 +834,7 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-.. note:: **What is a difference between genome, exome and transcriptome**?
+.. note:: **What is the difference between genome, exome and transcriptome**?
 
           Genome includes both coding (genes) and noncoding DNA in a given cell
           type.
@@ -850,12 +857,12 @@ so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
 
-.. note:: **What is a difference between exons and introns?**
+.. note:: **What is the difference between exons and introns?**
 
           Exons and introns are both parts of genes. However, exons code for
           proteins, whereas introns do not. In RNA splicing, introns are
-          removed and exons are jointed to one another to generate mature
-          messenger RNA (mRNA) which is further used to synthesize proteins.
+          removed and exons are jointed to produce mature messenger RNA (mRNA)
+          which is further used to synthesize proteins.
 
 
 In this case, if you will use Unspliced Mapper, the reference genome would find
@@ -920,7 +927,7 @@ Details on various settings:
    multi-hit reads. (default: 1)
 5. **Number of allowed mismatches** option lets you set the maximum number of
    allowed mismatches per read. (default: 2)
-6. **Disallow unique mappings of one mate** option allows you to discard pairs
+6. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
 7. **Disallow discordant mappings** will discard all mappings where the two
@@ -1201,11 +1208,11 @@ Test Differential Gene Expression
 **Action**: to perform differential gene expression analysis between groups of
 samples. The application accepts Mapped Read Counts (from Quantify Raw
 Coverage in Genes application) and generates Differential Expression
-Statistics file which you can view in Expression Navigator application.
+Statistics file which you can view with the Expression Navigator application.
 
 .. image:: images/test_differential_gene_expression.png
 
-1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+1. The "**Group samples by**" option allows you to apply autogrouping, i.e. when the
    application helps you to group your samples according to experimental factor
    indicated in metainfo for the samples (e.g. disease, tissue, sex, cell type,
    cell line, treatment, etc.). (default: None)
@@ -1230,43 +1237,36 @@ compared to the average of the other groups. In the case of 2 groups, this
 reduces to the standard analysis of finding genes that are differentially
 expressed between 2 groups. Thus, for N groups, the application produces N
 tables of Top DE genes. Each table shows the corresponding Log2(Fold Change),
-Log2(Counts per Million), P-Value, and False Discovery Rate for each gene.
+Log2(Counts per Million), p-value, and False Discovery Rate for each gene.
 Look at all result tables and plots in Expression Navigator application.
 
--  **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
-   with control samples. Then, for each gene in sample we know read counts
-   (output of Quantify Raw Coverage in Genes application). If we divide read
-   counts value for gene X (in the tumor sample) by the read counts value for
-   gene X (in the control sample) we’ll get Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-   *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-   And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
-   *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
+- **p-value**. The application also computes a p-value for each gene. A low
+  p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
+  can be rejected (i.e. the gene is differentially expressed). However, due to
+  the fact that we perform multiple testing, the value that should be looked at
+  to safely assess significance is the false discovery rate.
 
-   Log transformed values contains the same information as Fold Change but
-   makes it more clear for interpretation because of symmetric values.
-
--  **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-   counts per million (cpm), a simple measure of read abundance that can be
-   compared across libraries of different sizes. And if we apply Log2 transform
-   for this value we will get Log2(Counts per Million).
-
--  **p-value**. The application also computes a p-value for each gene. A low
-   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
-   can be rejected (i.e. the gene is differentially expressed). However, due to
-   the fact that we perform multiple testing, the value that should be looked at
-   to safely assess significance is the false discovery rate.
-
--  **False discovery rate**. The FDR is a corrected version of the p-value,
-   which accounts for `multiple testing correction`_. Typically, an FDR <
-   0.05 is good evidence that the gene is differentially expressed. You can
-   read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+- **False discovery rate**. The FDR is a corrected version of the p-value,
+  which accounts for `multiple testing correction`_. Typically, an FDR < 0.05
+  is good evidence that the gene is differentially expressed. You can read
+  more about it `here`_.
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on two statistical R packages - `DESeq2`_ and
+This application is based on two R packages - `DESeq2`_ and
 `edgeR`_.
 
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
@@ -1282,9 +1282,9 @@ Statistics file which↵you can view in Expression Navigator application.
 
 .. image:: images/test_differential_isoform_expression.png
 
-In application options, you can find these ones:
+The application has the following options:
 
-1. **Group samples by** option allows you to apply autogrouping, i.e. when the
+1. The "**Group samples by**" option allows you to apply autogrouping, i.e. when the
    application helps you to group your samples according to experimental
    factor indicated in metainfo for the samples (e.g. disease, tissue, sex,
    cell type, cell line, treatment, etc.). (default: None)
@@ -1298,29 +1298,20 @@ In application options, you can find these ones:
 The application finds isoforms that are differentially expressed (DE) between
 several groups of samples and produces tables of Top DE transcripts. Each
 table shows the corresponding Log2(Fold Change), Log2(Counts per Million),
-P-Value, and False Discovery Rate for each isoform. To visualize your results
-use Expression Navigator application.
+p-value, and False Discovery Rate for each isoform. Use the Expression
+Navigator to visualize the results.
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
-  and with control samples. Then, for each transcript in sample we know read
-  counts (output of Quantify FPKM Coverage in Isoforms application). If we
-  divide read counts value for transcript X (in the tumor sample) by the read
-  counts value for transcript X (in the control sample) we’ll get Fold Change
-  value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-  And if we apply Log2 transform for this value we’ll get Log2(Fold Change):
-
-  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
-  
-  Log transformed values contains the same information as Fold Change but
-  makes it more clear for interpretation because of symmetric values.
-
-- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-  counts per million (cpm), a simple measure of read abundance that can be
-  compared across libraries of different sizes. And if we apply Log2 transform
-  for this value we’ll get Log2(Counts per Million).
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
 - **p-value**. The application also computes a p-value for each isoform. A low
   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
@@ -1331,9 +1322,10 @@ use Expression Navigator application.
 - **False discovery rate**. The FDR is a corrected version of the p-value,
   which accounts for `multiple testing correction`_. Typically, an FDR <
   0.05 is good evidence that the isoform is differentially expressed. You can
-  read more about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+  read more about it `here`_.
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
 This application is based on **cuffdiff** which is a part of Cufflinks_.
 
@@ -1369,27 +1361,22 @@ million (LogCPM).
 
 Let’s look through these statistics:
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor
-  and with control samples. Then, for each gene in a sample we know read counts
-  (output of Quantify Raw Coverage in Genes application). If we divide read
-  counts value for gene X (in the tumor sample) by the read counts value for
-  gene X (in the control sample) we’ll get the Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
-  And if we apply a Log2 transform for this value we’ll get Log2(Fold Change):
-
-  *Log2 Fold Change =  Log2 (tumor) - Log2(control)*
-  
   Log transformed values contains the same information as Fold Change but
   makes it more clear for interpretation because of symmetric values.
   Genes with positive Log FC are considered to be up-regulated in the selected
   group, ones with negative Log FC are down-regulated.
 
-- **Log2(Counts per Million)**. Dividing each read count by 10^6 yields
-  counts per million (cpm), a simple measure of read abundance that can be
-  compared across libraries of different sizes. And if we apply Log2 transform
-  for this value we’ll get Log2(Counts per Million).
+- **log-counts per million**: dividing each read count by the total read counts in
+  the sample, and multiplying by 10^6 gives counts per million (CPM).
+  log-counts per million are obtained by taking the logarithm of this value in
+  base 2.
 
 - **p-value**. The application also computes a p-value for each gene. A low
   p-value (typically, < 0.005) is viewed as evidence that the null hypothesis
@@ -1398,11 +1385,19 @@ Let’s look through these statistics:
   looked at to safely assess significance is the false discovery rate.
 
 - **False discovery rate**. The FDR is a corrected version of the p-value,
-  which accounts for `multiple testing correction`_. Typically, an FDR 0.05 is
-  good evidence that the gene is differentially expressed. You can read more
-  about it `here <http://www.cbil.upenn.edu/PaGE/fdr.html>`_.
+  which accounts for `multiple testing correction`_. Typically, an FDR < 0.05 is
+  good evidence that the gene is differentially expressed. You can read m- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
+
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
+  
+-ore
+  about it `here`_.
   
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
+.. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
 Moreover, you can sort the DE genes by these statistics, clicking the small
 arrows near the name of the metric in the table.
@@ -1455,10 +1450,10 @@ To identify highly variable genes you can try different options:
    option will be switched off by default. But if you select two folders, one
    for biological and the other for spike-in data, you can use the Brennecke
    algorithm which requires this option.
-2. **Exclude samples with low coverage** option allows you to exclude or
+2. The **Exclude samples with low coverage** option allows you to exclude or
    include for analysis samples with low read counts. (default: checked)
 3. **Significance level for the p-value (-10log₁₀(p))**. If you set it equal
-   to 1, the application will select the genes for which p-value is smaller
+   to 1, the application will select the genes for which the p-value is smaller
    than 0.1. (default: 1)
 
 The next three options will be available if spike-ins are included in the
@@ -1487,8 +1482,9 @@ This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 .. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
 .. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-Read more about single-cell RNA-Seq analysis on Genestack `here
-<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
+Read more about `single-cell RNA-seq analysis`_ on Genestack.
+
+.. _single-cell RNA-seq analysis: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
 Single-cell RNA-Seq Visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1599,8 +1595,9 @@ t-SNE transformation is computed using the Rtsne_ package.
 .. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
 .. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-You can read more about the app and single-cell RNA-seg analysis `here
-<https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
+Read `our blog post`_ about the application and single-cell RNA-seg analysis.
+
+.. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_
 
 Genome/Exome Sequencing Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1644,19 +1641,20 @@ reads. Then the application converts these SA coordinates to chromosome
 coordinates using the "samse" command (if your reads are single-end) or
 "sampe" (for paired-end reads).
 
-1. **Perform targeted mapping** option. If this parameter is selected, a bed
-   file is used to specify the genome locations, that the reads should be
-   mapped to. The reference genome is altered to only contain those locations,
-   using the bedtools "getfasta" command and the reads are then mapped to the
-   altered genome. The resulting sam file contains local genome co-ordinates,
-   which are converted back to the global coordinates of the reference genome.
-   (default: unchecked)
+1. **Perform targeted mapping** option. If this parameter is selected, a BED
+   file is used to restrict mapping of the reads to specific locations in the
+   genome, that the reads should be mapped to. The reference genome is altered
+   to only contain those locations, using the bedtools "getfasta" command and
+   the reads are then mapped to the altered genome. The resulting sam file
+   contains local genome co-ordinates, which are converted back to the global
+   coordinates of the reference genome. (default: unchecked)
 
 The application is based on BWA_ aligner and it is used in `Whole Exome
 Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
 tutorials.
 
 .. _BWA: http://bio-bwa.sourceforge.net/
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Whole Exome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
@@ -1687,7 +1685,7 @@ Let's look at the application page and the parameters we can use to do mapping:
 
 For paired-end reads two more option appears:
 
-5. **Disallow unique mappings of one mate** option allows you to discard pairs
+5. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
 6. **Disallow discordant mappings** parameter will discard all mappings where
@@ -1696,7 +1694,7 @@ For paired-end reads two more option appears:
    fragment length, including mates mapping to different chromosomes. (default:
    unchecked)
 
-The application is based on Bowtie2_ aligner.
+The application is based on the Bowtie2_ aligner.
 
 .. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
@@ -1776,9 +1774,9 @@ Let's now look at the command line options more closely:
    (default: 20)
 10. **Minimum all-samples read depth for a variant** is a minimum number of
     reads covering position. (default: 1)
-11. **Chromosome to analyse** option allows you to choose specific chromosomes
+11. The **Chromosome to analyse** option allows you to choose specific chromosomes
     to analyse. (default: All)
-12. **“Key to merge samples** is a metainfo key you need to specify in order
+12. **Key to merge samples** is a metainfo key you need to specify in order
     you would like to merge the samples. This option can be useful for merging
     technical replicates.
 
@@ -1789,19 +1787,19 @@ small indels.
 Also, the application will always write DP (number of reads covering position),
 DV (number of high-quality variant reads), DP4 (number of forward reference,
 reverse reference, forward non-reference and reverse non-reference alleles
-used in variant calling) and SP (phred-scaled strand bias P-value) tags in
+used in variant calling) and SP (phred-scaled strand bias p-value) tags in
 the output file.
 
 The result Genetic Variations can be explored in **Genome Browser** as a
 separate  variation track, further annotated using **Effect Prediction**
 application, or viewed immediately using **Variant Explorer** application.
 
-This application is based on `SAMtools
-<http://www.htslib.org/doc/samtools-1.1.html>`_ and
-`BCFtools <http://www.htslib.org/doc/bcftools-1.1.html>`_ utilities and best
-used when performing `Whole Exome Sequencing Analysis`_ and `Whole Genome
-Sequencing Analysis`_.
+This application is based on `SAMtools`_ and
+`BCFtools`_ utilities and best used when performing `Whole Exome Sequencing
+Analysis`_ and `Whole Genome Sequencing Analysis`_.
 
+.. _SAMtools: http://samtools.sourceforge.net/
+.. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 .. _Whole Exome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
@@ -1890,7 +1888,7 @@ To change the default columns or add more columns, choose them in the
 corresponding tabs in "Columns" section and "Save" your changes. After
 that all selected columns will be displayed in Table viewer.
 
-You can "download filtered data as .tsv" or create new file with filtered
+You can "download filtered data as .tsv" or create a new file with filtered
 variants.
 
 Read more about this application in our tutorials on `Whole Exome Sequencing`_ and
@@ -1919,16 +1917,17 @@ Let's look at the options:
    Genetic Variations files. But there are cases when you would like to know
    which features do not overlap with other ones (use "Report non-overlapping
    features" filter). (default: Report overlapping features)
-2. **Minimum overlapping fraction** option allows you check whether a feature
+2. The **Minimum overlapping fraction** option allows you check whether a feature
    of interest has a specified fraction of its length overlapping another
    feature. (default: 10)
-3. **Rule for overlap strandedness** option allows you to ignore overlaps on
+3. The **Rule for overlap strandedness** option allows you to ignore overlaps on
    the same strand ("Discard overlaps on the same strand"), on the other
    strand ("Discard overlaps on the other strand") or expect overlapping
    without respect to the strandedness ("None"). (default: None)
 
-This application is based on `BEDtools
-<http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html>`_.
+This application is based on `BEDtools`_.
+
+.. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 
 Bisulfite Sequencing Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1960,11 +1959,11 @@ Let’s talk a bit about various settings:
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
-   If  the "Lister" protocol was used, your reads will be mapped to two
-   forward strands. You can read more about this protocol in `Lister et al`_.
-   If you choose the "Cokus" protocol the application will align your reads to
-   all four strands. You can find more details about this protocol in the
-   original study by `Cokus et al`_.
+If  the "Lister" protocol was used, your reads will be mapped to two
+forward strands. You can read more about this protocol in `Lister et al`_.
+If you choose the "Cokus" protocol the application will align your reads to
+all four strands. You can find more details about this protocol in the
+original study by `Cokus et al`_.
 
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
@@ -2001,11 +2000,11 @@ Let’s talk a bit about various settings:
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
-   If  the "Lister" protocol was used, your reads will be mapped to two
-   forward strands. You can read more about this protocol in `Lister et al`_.
-   If you choose the "Cokus" protocol the application will align your reads to
-   all four strands. You can find more details about this protocol in the
-   original study by `Cokus et al`_.
+If  the "Lister" protocol was used, your reads will be mapped to two
+forward strands. You can read more about this protocol in `Lister et al`_.
+If you choose the "Cokus" protocol the application will align your reads to
+all four strands. You can find more details about this protocol in the
+original study by `Cokus et al`_.
 
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
@@ -2024,7 +2023,7 @@ reads. Next, you can view methylation ratios in Genome Browser.
 
 Command line options are the following:
 
-1. **Minimum coverage** option allows you to get results filtered by depth
+1. The **Minimum coverage** option allows you to get results filtered by depth
    of coverage. But raising it to a higher value (e.g. 5) requires that at
    least five reads will cover the position. (default: not set)
 2. **Trim N end-repairing fill-in bases** option. For paired-end mappings, you
@@ -2035,7 +2034,7 @@ Command line options are the following:
    (default: not set)
 3. **Report loci with zero methylation ratios** option is used to report
    positions with zero methylation. (default: unchecked)
-4. **Combine ratios on both strands** option allows you to combine CpG
+4. The **Combine ratios on both strands** option allows you to combine CpG
    methylation ratio from both strands. (default: unchecked)
 5. **Only unique mappings** parameter is checked in case you would like to
    process only unique mappings. (default: checked)
@@ -2110,14 +2109,14 @@ Let's review the application options:
 .. TODO Add pros and cons of the protocols
 .. TODO Add forum post on pros and cons between the protocols and link on it
 
-- *closed-reference*: reads are clustered against a reference sequence
-  collection and any reads which do not hit a sequence in the reference
-  sequence collection are excluded from downstream analyses
+*closed-reference*: reads are clustered against a reference sequence
+collection and any reads which do not hit a sequence in the reference
+sequence collection are excluded from downstream analyses
 
-- *open-reference*: reads are clustered against a reference sequence collection
-  and any reads which do not hit the reference sequence collection are
-  subsequently clustered de novo (i.e. against one another without any external
-  reference).
+*open-reference*: reads are clustered against a reference sequence collection
+and any reads which do not hit the reference sequence collection are
+subsequently clustered de novo (i.e. against one another without any external
+reference).
 
 2. **Algorithm** used for clustering. In case open-reference protocol, the
    application suggests you use uclust (by default) or sortmera_sumclust
@@ -2427,7 +2426,9 @@ different conditions (e.g. housekeeping genes) report an expression ratio
 other than 1. This can be caused by a variety of reasons, for instance:
 variation caused by differential labelling efficiency of the two fluorescent
 dyes used or different amounts of starting mRNA. You can read more about this
-`here <http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf>`_.
+`in this document`_.
+
+.. _in this document: http://www.mrc-lmb.cam.ac.uk/genomes/madanm/microarray/chapter-final.pdf
 
 Normalisation is a process that eliminates such variations in order to allow
 users to observe the actual biological differences in gene expression levels.
@@ -2451,8 +2452,9 @@ To normalize Affymetrix microarrays the application uses RMA (Robust
 Multi-array Average) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
-set on each array. For more on RMA, see `here
-<https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5>`_.
+set on each array. For more on RMA, see `this paper`_.
+
+.. _ths paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
 
 As a next step, the normalised microarray samples can be assessed using the
 **Microarray Quality Control** application to detect and remove potential outliers. Normalised
@@ -2498,8 +2500,9 @@ As a next step, the normalised microarray samples can be assessed using the
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
-The application is based on the `limma
-<https://www.bioconductor.org/packages/3.3/bioc/html/limma.html>`_ R package.
+The application is based on the `limma`_ R package.
+
+.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
 GenePix Microarrays Normalisation
 *********************************
@@ -2704,17 +2707,12 @@ per million (LogCPM).
 
 Let's look through these statistics:
 
-- **Log2(Fold Change)**. Let’s assume, that we have two groups - with tumor and
-  with control samples. We know the raw expression levels of each gene in tumor
-  and in control samples. If we divide these two intensities for a given gene X
-  we will get the Fold Change value:
+- **log-fold change**: the fold-change in expression of a gene between two
+  groups A and B is the average expression of the gene in group A divided by
+  the average expression of the gene in group B.
 
-  *Fold Change = tumor/control*
-
-  And if we apply a Log2 transform for these raw expression ratios we will get
-  log-transformed fold change:
-
-  *Log2 Fold Change = Log2 (tumor) - Log2(control)**
+  The log-fold change is obtained by taking the logarithm of the fold change in
+  base 2.
 
   Log transformed values contains the same information as Fold Change but makes
   it more clear for interpretation because of symmetric values. Genes with
@@ -2793,10 +2791,10 @@ The following options can be configured in the application:
    is present in your data, you need to open your microarray assays in the
    Metainfo Editor and add it there.
 
-The application is based on `limma
-<https://www.bioconductor.org/packages/release/bioc/html/limma.html>`_ R package. The benchmark dose is estimated
+The application is based on the `limma`_ R package. The benchmark dose is estimated
 based on the method described in the `Benchmark Dose Software (BMDS) user manual`_.
 
+.. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 .. _Benchmark Dose Software (BMDS) user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
 
 Dose Response Analysis Viewer
