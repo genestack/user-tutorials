@@ -3007,12 +3007,6 @@ To estimate methylation of DNA, 450k assay probe preparation involves
 bisulfite conversion of DNA when all unmethylated cytosines are converted
 to uracils, while methylated cytosines are remains as they are.
 
-.. image:: images/array-bis-conversion.png
-
-Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
-
-.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
-
 *Bisulphite conversion I control strip*
 
 This control uses Infinium I assay chemistry. There are two types of probes in this control:
@@ -3020,12 +3014,6 @@ bisulphite-converted and bisulphite-unconverted ones.
 If the bisulphite conversion was successful, the converted
 probes matches the converted DNA, and are extended. If the
 sample has some unconverted DNA, the unconverted probes get extended.
-
-.. image:: images/bis-conversion-I.png
-
-Adapted from `Infinium® HD Assay Methylation Protocol Guide`_ by Illumina.
-
-.. _Infinium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 .. image:: images/qc-bis-conversion-I.png
 
@@ -3035,12 +3023,6 @@ This control uses Infinium I chemistry technology. If the bisulphite conversion
 went well, the adenin base is added, generating signal in the red channel.
 If there is some unconverted DNA, the guanine base is incorporated, resulting to
 signal in the green channel.
-
-.. image:: images/bis-conversion-II.png
-
-Adapted from `Infnium® HD Assay Methylation Protocol Guide`_ by Illumina.
-
-.. _Infnium® HD Assay Methylation Protocol Guide: https://support.illumina.com/downloads/infinium_hd_methylation_assay_protocol_guide_(15019519_b).html
 
 .. image:: images/qc-bis-conversion-II.png
 
