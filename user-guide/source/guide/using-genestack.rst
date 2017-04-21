@@ -608,7 +608,7 @@ file type (e.g. sequencing assay). However, you still need to think about the na
 the data. For instance, if you want to align a raw WGBS sequencing assay,
 Genestack will suggest several mappers, but only the Bisulfite
 Sequencing Mapping application will be suitable in this case. To figure out what
-applications are recommended to process WGBS, WES, RNA-seq or other sequencing
+applications are recommended to process WGBS, WES, RNA-Seq or other sequencing
 data, go to the :ref:`pipelines` section of this guide.
 
 **File search** in the top-right corner allows you to search for files by
@@ -906,7 +906,7 @@ matching applications.
 
 Continue adding steps until you have completed building your pipeline. When
 you add each of the steps, you create new files which end up in the **Created files**
-folder. However, these files are not yet ready to use - they need to be
+folder. However, these files are not yet ready to use — they need to be
 initialized first.
 
 Reproducing your work
@@ -938,7 +938,7 @@ available "Manage" applications.
 
 .. image:: images/data-flow-editor-1.png
 
-This will open **Data Flow Editor** application - one of applications in our system that are
+This will open **Data Flow Editor** application — one of applications in our system that are
 used to work on data flows. Data Flow Editor application gives a visual
 representation of the pipeline and allows you to choose your input files, for example
 sequencing assays, and a reference genome. We would like to highlight here also that
@@ -1102,15 +1102,15 @@ If you change your mind about a computation after it has started,
 Statuses in Task Manager help you keep track of your tasks. Let’s look
 what each status means:
 
--  *Starting* - the computation process has started to run
--  *Done* - the task has finished successfully
--  *Failed* - the computation has failed. To find out why, click on "View logs"
--  *Queued* - the task is waiting for dependencies to complete
+-  *Starting* — the computation process has started to run
+-  *Done* — the task has finished successfully
+-  *Failed* — the computation has failed. To find out why, click on "View logs"
+-  *Queued* — the task is waiting for dependencies to complete
    initialization
--  *Running* - your task is in progress
--  *Blocked by dependency failure* - the computation cannot be completed
+-  *Running* — your task is in progress
+-  *Blocked by dependency failure* — the computation cannot be completed
    because a task on which this one depends has failed
--  *Killed* - the task has been canceled by the user
+-  *Killed* — the task has been canceled by the user
 
 Data Export
 -----------

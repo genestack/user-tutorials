@@ -196,7 +196,7 @@ sample may be caused by adapter sequences or other contaminations of the
 library.
 
 A bias at the beginning of the reads is common for RNA-Seq data. This occurs
-during RNA-seq library preparation, when "random" primers are annealed to the
+during RNA-Seq library preparation, when "random" primers are annealed to the
 start of sequences. These primers are not truly random, and it leads to a
 variation at the  beginning of the reads.
 
@@ -345,7 +345,7 @@ This tool is based on Tally_.
 If you suspect contamination with primers, or some  other repetitive sequence.
 This should be evident from Sequence duplication levels and Overrepresented
 Sequences of the FastQC report. Keep in mind this application should not be used with
-RNA-seq data as it will remove observed differences in expression level.
+RNA-Seq data as it will remove observed differences in expression level.
 
 Filter by Quality Scores
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -690,7 +690,7 @@ duplicate mapped reads depends on the type of data you have. If you are
 dealing with whole-genome sequencing data where expected coverage is low and
 sequences are expected to be present in similar amounts, removing duplicated
 reads will reduce processing time and have little deleterious effect on
-analysis. If however you are processing RNA-seq data, where the fold-variation
+analysis. If however you are processing RNA-Seq data, where the fold-variation
 in expression can be up to 10^7, reads are relatively short, and your main
 point of interest is the variation in expression levels, this probably is not
 the tool for you.
@@ -845,7 +845,7 @@ transcriptome, or de novo assembly.
 
 
 There are at least two types of mapping strategies - Spliced Mapping and
-Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
+Unspliced Mapping. In case of RNA-Seq data, reads are derived from mature mRNA,
 so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
@@ -861,14 +861,14 @@ two exons, the reference genome might have one exon followed by an intron.
 In this case, if you will use Unspliced Mapper, the reference genome would find
 a matching sequence in only one of the exons, while the rest of the read would
 not match the intron in the reference, so the read cannot be properly aligned.
-When analysing RNA-seq data using unspliced aligner, the reads may be mapped to
+When analysing RNA-Seq data using unspliced aligner, the reads may be mapped to
 potentially novel exons, however reads spanning splice junctions are likely to
 remain unmapped.
 
-In contrast, Spliced Mappers would know not to try to align RNA-seq reads to
+In contrast, Spliced Mappers would know not to try to align RNA-Seq reads to
 introns, and would somehow identify possible downstream exons and try to align
 to those instead ignoring introns altogether. Taking this into account, we
-recommend you use Spliced Mapping applications to analyse RNA-seq data.
+recommend you use Spliced Mapping applications to analyse RNA-Seq data.
 
 On Genestack, you will find two spliced aligners - Spliced Mapping with
 Tophat2 and Spliced Mapping to Transcriptome with STAR.
@@ -878,7 +878,7 @@ Tophat2 and Spliced Mapping to Transcriptome with STAR.
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to map raw reads with transcriptomic data like RNA-seq to a
+**Action**: to map raw reads with transcriptomic data like RNA-Seq to a
 reference genome, taking or not taking into account splice junctions.
 
 
@@ -895,9 +895,9 @@ Let’s have a look at the application page and talk about various parameters:
 
 Details on various settings:
 
-1. **Strand-specificity protocol**. If you are using strand-specific RNA-seq
+1. **Strand-specificity protocol**. If you are using strand-specific RNA-Seq
    data, this option will let you choose between the "dUTP" and "ligation"
-   method. If you are not sure whether your RNA-seq data is strand-specific
+   method. If you are not sure whether your RNA-Seq data is strand-specific
    or not, you can try using Subsample Reads application to make a small
    subsample, map it with Spliced Mapping with Tophat2 and check the coverage
    in Genome Browser for genes on both strands. (default: None)
@@ -939,7 +939,7 @@ Spliced Mapping to Transcriptome with STAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform gapped read alignment of transcriptomic data (like
-RNA-seq) to a Reference Genome taking into account splice junctions.
+RNA-Seq) to a Reference Genome taking into account splice junctions.
 
 In comparison to Tophat2, STAR works fast, at the same time being very accurate
 and precise. Moreover, in contrast to all our other mappers, it maps reads onto
@@ -950,7 +950,7 @@ Spliced Mapper supports two-pass alignment strategy when it runs the second
 alignment pass to align reads across the found splice junctions, which improves
 quantification of the novel splice junctions. Taking all these features into
 account, the Spliced Mapping to Transcriptome with STAR application can be a
-very good alternative to other RNA-seq aligners.
+very good alternative to other RNA-Seq aligners.
 
 Here is the application page:
 
@@ -1432,13 +1432,13 @@ You can read more about this application in the corresponding `tutorials`_.
 
 .. TODO: add Differential Similarity Search application
 
-Single-cell RNA-seq Analysis
+Single-cell RNA-Seq Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to identify heterogeneously-expressed (HE) genes across cells,
 while accounting for technical noise. The application analyses single-cell
-RNA-seq data and accepts several Mapped Read Counts as inputs. The output
-report you can see in Single-cell RNA-seq Visualiser.
+RNA-Seq data and accepts several Mapped Read Counts as inputs. The output
+report you can see in Single-cell RNA-Seq Visualiser.
 
 The application supports two algorithms for HE analysis. The first uses
 spike-in data (artificially introduced RNAs of known abundance) to calibrate a
@@ -1475,8 +1475,8 @@ experiment and "Use spike-ins to calibrate noise" option is switched:
    expression to fit the noise model, because extreme outliers tend to skew
    the fit. (default: 0.85)
 
-To look at the HE analysis results, open the created Single-cell RNA-seq
-Analysis page in  Single-cell RNA-seq Visualiser.
+To look at the HE analysis results, open the created Single-cell RNA-Seq
+Analysis page in  Single-cell RNA-Seq Visualiser.
 
 This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 `flashClust`_ and `RSJONIO`_.
@@ -1487,14 +1487,14 @@ This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 .. _flashClust: https://cran.r-project.org/web/packages/flashClust/index.html
 .. _RSJONIO: https://cran.r-project.org/web/packages/RJSONIO/RJSONIO.pdf
 
-Read more about single-cell RNA-seq analysis on Genestack `here
+Read more about single-cell RNA-Seq analysis on Genestack `here
 <https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_.
 
 Single-cell RNA-Seq Visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to explore cell-to-cell variability in gene expression in even
-seemingly homogeneous cell populations based on scRNA-seq datasets.
+seemingly homogeneous cell populations based on scRNA-Seq datasets.
 
 The application shows basic statistics such as the number of identified highly
 variable genes across the analysed samples.
@@ -2255,7 +2255,7 @@ expression analysis`_, and in the `analysis of transcriptomic heterogeneity
 within populations of cells`_. The choice of a reference genome can increase
 the quality and accuracy of the downstream analysis or it can have a harmful
 effect on it. For example, it has been shown that the choice of a gene
-annotation has a big impact on RNA-seq data analysis, but also on `variant
+annotation has a big impact on RNA-Seq data analysis, but also on `variant
 effect prediction`_.
 
 .. _DNA methylation analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
