@@ -82,8 +82,8 @@ tasks in **Task Manager**). Once they are completed, you can find your files in
 .. image:: images/created_files_folder_FM.png
 
 Since these files were created using a data flow, they will be located in one
-folder (see Platform architecture for more details). To open up one of these
-reports, click on the report and select FastQC Report application from the
+folder (see :ref:`using-genestack-label` for more details). To open up one of these
+reports, click on the report and select the FastQC Report application from the
 dropdown menu or in "Explore" section in File Manager.
 
 .. image:: images/select_fastqc.png
@@ -128,7 +128,7 @@ Reports lengths of all sequences.
 
 *Warning*
 
-This report will warnings if the lengths are not identical, but this can
+This report will get warnings if the lengths are not identical, but this can
 usually be ignored, as it is expected for some sequencing platforms.
 
 3. **Per sequence GC content**
@@ -175,7 +175,7 @@ Low Quality Bases** or **Filter by Quality Scores** applications respectively.
 .. image:: images/fastqc_per_sequence_quality_scores.png
 
 Ideally, we expect to see a sharp peak at the very end of the graph (meaning
-most frequently observed mean quality scores are above 27)
+most frequently observed mean quality scores are above 27).
 
 *Warning*
 
@@ -203,7 +203,7 @@ variation at the  beginning of the reads.
 
 *Warning*
 
-A warning will be raised  if the difference between A and T, or G and C is
+A warning will be raised if the difference between A and T, or G and C is
 greater than 10% at any position.
 
 *Improving data quality*
@@ -229,7 +229,7 @@ This module will issue a warning if non-unique sequences make up more than 20%
 of the total.
 
 There are two potential types of duplicates in a library: technical duplicates
-arising from PCR artefacts or biological duplicated which are natural
+arising from PCR artefacts or biological duplicates which are natural
 collisions where different copies of exactly the same sequence are randomly
 selected. From a sequence level there is no way to distinguish between these
 two types and both will be reported as duplicates here.
@@ -315,15 +315,15 @@ Subsample Reads
 
 Let's look at the options:
 
-1. **Random  seed** value will let you create different subsets with the same
+1. The **Random  seed** value will let you create different subsets with the same
    number of reads. (default: 100)
-2. **Number of reads in subset** tells the application how many reads you
-   expect the output subsample will contain. (default: 50,000)
+2. The **Number of reads in subset** option tells the application how many
+   reads you expect the output subsample will contain. (default: 50,000)
 
 Using the same seed and the same number of reads will result in identical
 subsets.
 
-This application is based on Seqtk_.
+This application is based on the Seqtk_.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
@@ -331,7 +331,7 @@ Filter Duplicated Reads
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to discard duplicated sequenced fragments from raw reads data. If
-the sequence of two paired reads or a single read occurs multiple times in a
+a sequence of two paired reads or a single read occurs multiple times in a
 library, the output will include only one copy of that sequence.
 
 .. image:: images/preprocessing_filter_duplicated_reads.png
@@ -339,13 +339,13 @@ library, the output will include only one copy of that sequence.
 The phred quality scores are created by keeping the highest score across all
 identical reads for each position.
 
-This tool is based on Tally_.
+This tool is based on the Tally_.
 
 .. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
 
 If you suspect contamination with primers, or some  other repetitive sequence.
-This should be evident from Sequence duplication levels and Overrepresented
-Sequences of the FastQC report. Keep in mind this application should not be used with
+This should be evident from the "Sequence duplication levels" and the "Overrepresented
+Sequences" modules of the FastQC report. Keep in mind this application should not be used with
 RNA-Seq data as it will remove observed differences in expression level.
 
 Filter by Quality Scores
@@ -372,13 +372,13 @@ read:
 
 .. image:: images/filter_by_quality_scores_example.png
 
-Second line represents nucleotide sequence (10 bases in this case). The forth
+Second line represents nucleotide sequence (10 bases in this case). The fourth
 line contains quality scores for each nucleotide in the read.
 
-- If "Minimum quality score" is equal to 30 and "Percentage of bases" is equal
+- If the "Minimum quality score" is equal to 30 and the "Percentage of bases" is equal
   to 50, this read will not be discarded, because the median quality of the
   read is higher than 30.
-- If "Minimum quality score" is equal to 20 and "Percentage of bases" is equal
+- If the "Minimum quality score" is equal to 20 and the "Percentage of bases" is equal
   to 100, the read will be discarded, because not all bases have quality equal
   to or higher than 20.
 
@@ -389,8 +389,8 @@ FASTX-Toolkit_.
 
 This application is best used if you have some low quality reads, but others are of
 high quality. You should be able to tell if this is the case from the shape of
-the Per sequence quality scores plot from FastQC. It may also be worth trying
-this application if the per base sequence quality is low.
+the "Per sequence quality scores" plot from the FastQC application. It may also
+be worth trying this application if the per base sequence quality is low.
 
 Trim Adaptors and Contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -401,10 +401,10 @@ raw reads data.
 .. image:: images/preprocessing_trim_adaptors_and_contaminants.png
 
 The application uses an internal list of sequences that can be considered as
-contaminants. This list is based on the possible sequencing technologies and
-platform used. For instance, it contains widely used PCR primers and
-adaptors for Illumina, ABI etc. (see the `list of primers and adaptors`_ we
-remove).
+contaminants. This list is based on the possible primers and adaptors which the
+most popular sequencing technologies and platforms uses. For instance, it
+contains widely used PCR primers and adaptors for Illumina, ABI etc. (see the
+`list of primers and adaptors`_ we remove).
 
 .. _list of primers and adaptors: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
@@ -415,7 +415,7 @@ considered necessary.
 1. **Minimum length of the trimmed sequence (bp)**. The application will
    discard trimmed reads of length below this number. (default: 15)
 
-This application is based on fastq-mcf_, one of the EA-Utils_ utilities.
+This application is based on the fastq-mcf_, one of the EA-Utils_ utilities.
 
 .. _fastq-mcf: https://github.com/ExpressionAnalysis/ea-utils/blob/wiki/FastqMcf.md
 .. _EA-Utils: https://expressionanalysis.github.io/ea-utils/
@@ -432,7 +432,7 @@ Trim Low Quality Bases
 
 .. image:: images/preprocessing_trim_low_quality_bases.png
 
-Trim Low Quality Bases application is based on `Phred algorithm`_. It finds
+Trim Low Quality Bases application is based on the `Phred algorithm`_. It finds
 the longest subsequence in read where the estimated error rate is below the
 error threshold (which is equal to 0.01 by default).
 
@@ -449,8 +449,8 @@ best sequence will be "TAGA" (.001*2 + .0001*2 = .0022) and it will be the
 output read. Other fragments will have the sum of error probabilities more
 than the cuttoff 0.01, so they will be ignored.
 
-This tool is based on the `Seqtk`_ tool and uses Phred algorithm to pick out
-the reqions of highest quality.
+This tool is based on the `Seqtk`_ tool and uses the Phred algorithm to pick out
+the regions of highest quality.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
@@ -462,7 +462,7 @@ reads in a sample.
 
 .. image:: images/preprocessing_trim_to_fixed_length.png
 
-1. **Keep bases from position** option asks you to specify the first base that
+1. The **Keep bases from position** option asks you to specify the first base that
    should be kept. (default: 1)
 2. **Keep bases to position (set to zero for entire read)**. Indicate the
    position of the last nucleotide that should be kept in the read. (default:
@@ -472,7 +472,7 @@ For example, if you set 5 as the first base to keep and 30 as the last base to
 keep, it means that the application trims all nucleotides before the 5th
 position, and all nucleotides after the 30th base.
 
-This tool is based on **fastx_trimmer**, which is part of the `FASTX-Toolkit`_.
+This tool is based on the **fastx_trimmer**, which is part of the `FASTX-Toolkit`_.
 
 .. _FASTX-Toolkit: http://hannonlab.cshl.edu/fastx_toolkit/
 
@@ -496,8 +496,7 @@ Mapped Reads QC Report
 We follow a similar procedure to the one used to generate FastQC reports.
 After selecting all the mapped reads we wish to check the quality of, we can
 use the `Mapped Reads QC`_ public data flow, initialize the computations, and
-then explore the results. You can read more about the Mapped Reads QC Report
-application in the "Explore" section of this guide.
+then explore the results.
 
 .. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
@@ -583,7 +582,8 @@ Of course, the expected proportions of these metrics vary depending on the type
 of library preparation used, resulting from technical differences between
 pair-end libraries and mate-pair libraries.
 
-Mapped Reads QC Report application is based on `BEDtools`_ and Picard_ tool.
+Mapped Reads QC Report application is based on the `BEDtools`_ and the Picard_
+tools.
 
 .. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
@@ -619,11 +619,11 @@ The following enrichment statistics are computed:
 
 - Number and proportion of mapped reads on target;
 - Mean coverage on target with at least 2X coverage;
-- Target bases with at least 2, 10, 20, 30, 40, and 50 x coverage.
+- Target bases with at least 2X, 10X, 20X, 30X, 40X, and 50X coverage.
 
 You can generate these reports directly by choosing Mapped Reads files, right
 clicking on them and selecting the appropriate application (in "Explore" section) or
-using "Run data flow on selection..." option and `Targeted Sequencing Quality
+using the "Run data flow on selection..." option and `Targeted Sequencing Quality
 Control`_ public data flow.
 
 .. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
@@ -633,7 +633,7 @@ Report application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
-This application is based on `BEDtools`_, Picard_ tools and `SAMtools`_.
+This application is based on the `BEDtools`_, Picard_ and `SAMtools`_.
 
 .. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 .. _Picard: http://broadinstitute.github.io/picard/
@@ -678,7 +678,7 @@ due to inability to find the mate pair for the reads.
 Marking duplicated reads can help speed up processing for specific applications,
 e.g. **Variant Calling** application.
 
-This tool is based on **MarkDuplicates**, part of `Picard`_ tool.
+This tool is based on the **MarkDuplicates**, part of the `Picard`_ tool.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
@@ -715,14 +715,13 @@ coordinate are the same and discarding all except the "best" copy.
 #. If reads are trimmed at 3’ low-quality bases before alignment, they will
    have different read lengths resulting in different 3’ mapping coordinates.
 
-The application also takes into account interchromosomal read pairs.
+The application also takes into account interchromosomal read pairs. In such
+cases, when the distance between two mapped mates differs from the internally
+estimated fragment length, including mates mapping to different chromosomes,
+the application cannot identify them but will not fail due to inability to
+find the mate pair for the reads.
 
-In such cases, when the distance between two mapped mates differs from
-the internally estimated fragment length, including mates mapping to
-different chromosomes, the application  application cannot identify them but
-will not fail due to inability to find the mate pair for the reads.
-
-This application is based on **MarkDuplicates**, part of the Picard_ tools.
+This application is based on the **MarkDuplicates**, part of the Picard_ tools.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
@@ -737,15 +736,15 @@ all your data right away.
 
 .. image:: images/subsample_mapped_reads.png
 
-1. **Subsampling ratio (percentage)** option is used to set a fraction of
+1. The **Subsampling ratio (percentage)** option is used to set a fraction of
    mapped reads you would like to extract (default: 50).
-2. **Random seed** option will let you produce different subsets with the same
+2. The **Random seed** option will let you produce different subsets with the same
    number of mapped reads. (default: 0)
 
 Using the same random seed and the same subsampling ratio will result in
 identical subsets.
 
-This application is based on `SAMtools`_.
+This application is based on the `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
@@ -760,7 +759,7 @@ output Mapped Reads file.
 
 .. image:: images/merge_mapped_reads.png
 
-The application is based on `SAMtools`_.
+The application is based on the `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
@@ -775,7 +774,7 @@ other aligner.
 
 .. image:: images/convert_to_unaligned_reads.png
 
-This application is based on Picard_ tools.
+This application is based on the Picard_ tool.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
@@ -798,7 +797,7 @@ and about Indels.
 
 .. image:: images/merge_variants.png
 
-This application is based on `BCFtools`_.
+This application is based on the `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
@@ -818,10 +817,10 @@ The application always allows overlaps so that the first position at the start
 of the second input will be allowed to come before the last position of the
 first input.
 
-1. **Remove duplicated variants** option checks for the duplicated variants and
+1. The **Remove duplicated variants** option checks for the duplicated variants and
    makes sure that there are no redundant results. (default: unchecked)
 
-The application is based on `BCFtools`_.
+The application is based on the `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
@@ -889,7 +888,7 @@ Spliced Mapping with Tophat2
 reference genome, taking or not taking into account splice junctions.
 
 
-.. note:: **What is splice junction?**
+.. note:: **What is splice junctions?**
 
           Splice junctions are exon-intron boundaries, at which RNA splicing
           takes place. For example, to cut an intron (between two exons) you
@@ -920,23 +919,23 @@ Details on various settings:
    are interested in reads mapped to multiple positions in the genome, choose
    "Multiple mappings only". Select "None", if you would like to get both
    unique and multiple mappings. (default: None)
-4. **Number of best mappings to report** option lets you increase the number
+4. The **Number of best mappings to report** option lets you increase the number
    of reported mappings. This can be used together with "Rule for filtering
    mappings" to choose whether to keep reads mapping to uniquely or to
    multiple positions, e.g. report up to 5 possible mappings, and only for
    multi-hit reads. (default: 1)
-5. **Number of allowed mismatches** option lets you set the maximum number of
+5. The **Number of allowed mismatches** option lets you set the maximum number of
    allowed mismatches per read. (default: 2)
 6. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
-7. **Disallow discordant mappings** will discard all mappings where the two
+7. The **Disallow discordant mappings** will discard all mappings where the two
    mates map uniquely but with unexpected orientation, or where the distance
    between two mapped mates differs from and internally estimated fragment
    length, including mates mapping to different chromosomes. (default:
    unchecked)
 
-The application is based on Tophat2_ aligner and used in the `Testing
+The application is based on the Tophat2_ aligner and used in the `Testing
 Differential Gene Expression tutorial`_.
 
 .. _Tophat2: https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36
@@ -945,8 +944,8 @@ Differential Gene Expression tutorial`_.
 Spliced Mapping to Transcriptome with STAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to perform gapped read alignment of transcriptomic data (like
-RNA-Seq) to a Reference Genome taking into account splice junctions.
+**Action**: to perform gapped read alignment of transcriptomic data to a
+Reference Genome taking into account splice junctions.
 
 In comparison to Tophat2, STAR works fast, at the same time being very accurate
 and precise. Moreover, in contrast to all our other mappers, it maps reads onto
@@ -956,7 +955,7 @@ making it compatible with various sequencing platforms. What's more, this
 Spliced Mapper supports two-pass alignment strategy when it runs the second
 alignment pass to align reads across the found splice junctions, which improves
 quantification of the novel splice junctions. Taking all these features into
-account, the Spliced Mapping to Transcriptome with STAR application can be a
+account, the "Spliced Mapping to Transcriptome with STAR" application can be a
 very good alternative to other RNA-Seq aligners.
 
 Here is the application page:
@@ -965,7 +964,7 @@ Here is the application page:
 
 Now, let's look through the application parameters:
 
-1. **Enable two pass mapping mode** option is recommended for sensitive novel
+1. The **Enable two pass mapping mode** option is recommended for sensitive novel
    junction discovery. The idea is to collect the junctions founded in the
    first pass, and use them as "annotated" junctions for the 2nd pass mapping.
    (default: unchecked)
@@ -973,13 +972,13 @@ Now, let's look through the application parameters:
    the read is considered unmapped**. This option allows you to set how many
    mappings you expect for one mappable read if it is mapped in multiple
    positions of the genome. (default: 10)
-3. **Minimum overhang for unannotated junctions** prohibits alignments with very
-   small spilce overhangs for unannotated junctions (overhang is a piece of
-   the read which is spliced apart). (default: 5)
-4. **Minimum overhang for annotated junctions** option does the same job as
+3. The **Minimum overhang for unannotated junctions** option prohibits alignments
+   with very small spilce overhangs for unannotated junctions (overhang is a
+   piece of the read which is spliced apart). (default: 5)
+4. The **Minimum overhang for annotated junctions** option does the same job as
    "Minimum overhang for unannotated junctions" but for annotated junctions.
    (default: 3)
-5. **Maximum number of mismatches per pair** parameter sets how many
+5. The **Maximum number of mismatches per pair** parameter sets how many
    mismatches you allow per pair. (default: 10)
 6. **Minimum intron length** is a minimum intron size for the spliced
    alignments. Read `this paper`_ in case you are not sure about the value.
@@ -990,13 +989,13 @@ Now, let's look through the application parameters:
    here means the max intron size equal about 590,000 bp. If you are not sure
    about intron size value, `this paper`_ may help you to make a decision.
    (default: 0)
-8. **Maximum genomic distance between mates** is the maximum gap between reads
+8. **Maximum genomic distance between mates** is a maximum gap between reads
    from a pair when mapped to the genome. If reads map to the genome farther
    apart the fragment is considered to be chimeric. (default: 0)
 
 .. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
 
-The application is based on STAR_ aligner.
+The application is based on the STAR_ aligner.
 
 .. _STAR: https://github.com/alexdobin/STAR
 
@@ -1004,7 +1003,7 @@ Gene Quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to use STAR mapper to align reads against reference transcripts
-and apply an `Expectation-Maximization algorithm`_ to estimate gene and
+and apply the `Expectation-Maximization algorithm`_ to estimate gene and
 isoform expression levels from RNA-Seq data.
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
@@ -1075,7 +1074,7 @@ Let's go through the application parameters:
    untranslated region). For example, you may consider each exon as a feature
    in order to check for alternative splicing. By default, the "gene-id" will
    be used as a feature identifier. (default: exon)
-2. **Rule for overlaps** option dictates how mapped reads that overlap genomic
+2. The **Rule for overlaps** option dictates how mapped reads that overlap genomic
    features will be treated. There are three overlap resolution modes: union,
    strict-intersection, and non-empty intersection. (default: union)
 
@@ -1100,7 +1099,7 @@ Let's go through the application parameters:
    if the reads were mapped on the opposite strand as the feature. Specify
    "No", if you do not consider strand-specificity. (default: Yes)
 
-This application is based on HTSeq_ tool and used in `Differential Gene
+This application is based on the HTSeq_ tool and used in `Differential Gene
 Expression Analysis pipeline`_. After calculating read abundance on the gene
 level, you'll be able to run **Test Differential Gene Expression** application.
 
@@ -1116,7 +1115,7 @@ basic gene sequence. Such isoforms can be generated, for example, in the
 process of alternative splicing.
 
 **Action**: to quantify abundances of genes and isoforms from RNA-Seq data
-without the need for alignment. It uses an `Expectation-Maximization algorithm`_
+without the need for alignment. It uses the `Expectation-Maximization algorithm`_
 on "pseudoalignments" to find a set of potential transcripts a read could have
 originated from. Note, that the application accepts reference transcriptome
 (cDNA) not a genome (DNA).
@@ -1126,7 +1125,7 @@ originated from. Note, that the application accepts reference transcriptome
 
 Let's inspect the application options:
 
-1. **Strand-specificity protocol** parameter is used to specify how to process
+1. The **Strand-specificity protocol** parameter is used to specify how to process
    the pseudoalignments. If "None", the application does not take into account
    strand specificity. To run the application in strand specific mode, change
    this value to "Forward" if you are interested only in fragments where the
@@ -1135,10 +1134,10 @@ Let's inspect the application options:
    that are consistent with the first read are kept. The "Reverse" is the same
    as "Forward" but the first read will be pseudomapped to the reverse strand
    of the transcript. (default: None)
-2. **Enable sequence based bias correction** option will correct the
+2. The **Enable sequence based bias correction** option will correct the
    transcript abundances according to the model of sequences specific bias.
    (default: checked)
-3. **Estimated average fragment length (for single-end reads only)** option
+3. The **Estimated average fragment length (for single-end reads only)** option
    must be specified in case of single-end reads. Typical Illumina libraries
    produce fragment lengths ranging from 180–200 bp. For paired-end reads, the
    average fragment length can be directly estimated from the reads. (default:
@@ -1164,7 +1163,7 @@ It contains a table with the following main columns:
 - *tpm* - transcripts per million normalized by total transcript count in
   addition to average transcript length.
 
-The application is based on Kallisto_ tool.
+The application is based on the Kallisto_ tool.
 
 .. _Kallisto: https://pachterlab.github.io/kallisto/
 
@@ -1186,17 +1185,17 @@ in **Test Differential Isoforms Expression** application.
 
 Before running the application, you can choose the following parameters:
 
-1. **Strand-specificity protocol** is used for generating your reads. If "None",
+1. The **Strand-specificity protocol** is used for generating your reads. If "None",
    the application will consider your data as none-strand-specific, but this
    value can be changed to "dUTP" or "RNA-ligation". (default: None)
-2. **No correction by effective length** option is used if you would like to
+2. The **No correction by effective length** option is used if you would like to
    not apply effective length normalization to transcript FPKM (fragments per
    kilobases of exons for per million mapped reads). (default: unchecked)
 
 The application always makes an initial estimation procedure to more
 accurately weight reads mapping to multiple places in the genome.
 
-This application is based on **cuffquant** (a part of Cufflinks_ tool) and
+This application is based on the **cuffquant** (a part of the Cufflinks_ tool) and
 used in `Differential Isoform Expression Analysis`_ public data flow.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
@@ -1206,8 +1205,8 @@ Test Differential Gene Expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform differential gene expression analysis between groups of
-samples. The application accepts Mapped Read Counts (from Quantify Raw
-Coverage in Genes application) and generates Differential Expression
+samples. The application accepts Mapped Read Counts (from the "Quantify Raw
+Coverage in Genes" application) and generates Differential Expression
 Statistics file which you can view with the Expression Navigator application.
 
 .. image:: images/test_differential_gene_expression.png
@@ -1222,15 +1221,15 @@ Statistics file which you can view with the Expression Navigator application.
    likelihood ratio test (LRT) using generalized linear model (GLM). (default:
    DESeq2)
 
-   With edgeR, one of the following types of dispersion estimate is used, in
-   order of priority and depending on the availability of biological replicates:
-   Tagwise, Trended, or Common. Also, edgeR is much faster than DESeq2 for
-   fitting GLM model, but it takes slightly longer to estimate the dispersion. It
-   is important that edgeR gives moderated fold changes for the extremely lowly
-   Differentially Expressed (DE) genes which DESeq2 discards, showing that the
-   likelihood of a gene being significantly differentially expressed is related
-   to how strongly it is expressed. So, choose one of the packages according to
-   your desires and run the analysis.
+With edgeR, one of the following types of dispersion estimate is used, in
+order of priority and depending on the availability of biological replicates:
+Tagwise, Trended, or Common. Also, edgeR is much faster than DESeq2 for
+fitting GLM model, but it takes slightly longer to estimate the dispersion. It
+is important that edgeR gives moderated fold changes for the extremely lowly
+Differentially Expressed (DE) genes which DESeq2 discards, showing that the
+likelihood of a gene being significantly differentially expressed is related
+to how strongly it is expressed. So, choose one of the packages according to
+your desires and run the analysis.
 
 For each group, a GLM LRT is carried out to find DE genes in this group
 compared to the average of the other groups. In the case of 2 groups, this
@@ -1266,8 +1265,7 @@ Look at all result tables and plots in Expression Navigator application.
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on two R packages - `DESeq2`_ and
-`edgeR`_.
+This application is based on two R packages - `DESeq2`_ and `edgeR`_.
 
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
@@ -1292,7 +1290,7 @@ The application has the following options:
    will run the bias detection and correction algorithm which can
    significantly improve accuracy of transcript abundance estimates. (default:
    checked)
-3. **Apply multiple reads correction** option is useful if you would like to
+3. The **Apply multiple reads correction** option is useful if you would like to
    apply the multiple reads correction. (default: checked)
 
 The application finds isoforms that are differentially expressed (DE) between
@@ -1327,7 +1325,8 @@ Navigator to visualize the results.
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on **cuffdiff** which is a part of Cufflinks_.
+This application is based on the **cuffdiff** which is a part of the Cufflinks_
+tool.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
 
@@ -1347,7 +1346,7 @@ The Expression Navigator page contains 4 sections:
 
 .. image:: images/expression_navigator_group_information.png
 
-2. **Top Differentially Expressed Genes** section allows you to choose which groups
+2. The **Top Differentially Expressed Genes** section allows you to choose which groups
    to compare and how to filter and sort identified differentially expressed
    (DE) genes.
 
@@ -1368,10 +1367,10 @@ Let’s look through these statistics:
   The log-fold change is obtained by taking the logarithm of the fold change in
   base 2.
 
-  Log transformed values contains the same information as Fold Change but
+  Log transformed values contains the same information as fold change but
   makes it more clear for interpretation because of symmetric values.
-  Genes with positive Log FC are considered to be up-regulated in the selected
-  group, ones with negative Log FC are down-regulated.
+  Genes with positive log FC are considered to be up-regulated in the selected
+  group, ones with negative log FC are down-regulated.
 
 - **log-counts per million**: dividing each read count by the total read counts in
   the sample, and multiplying by 10^6 gives counts per million (CPM).
@@ -1386,14 +1385,7 @@ Let’s look through these statistics:
 
 - **False discovery rate**. The FDR is a corrected version of the p-value,
   which accounts for `multiple testing correction`_. Typically, an FDR < 0.05 is
-  good evidence that the gene is differentially expressed. You can read m- **log-fold change**: the fold-change in expression of a gene between two
-  groups A and B is the average expression of the gene in group A divided by
-  the average expression of the gene in group B.
-
-  The log-fold change is obtained by taking the logarithm of the fold change in
-  base 2.
-  
--ore
+  good evidence that the gene is differentially expressed. You can read more
   about it `here`_.
   
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
@@ -1444,7 +1436,7 @@ smoothing splines and does not require the presence of spike-in data.
 
 To identify highly variable genes you can try different options:
 
-1. **Use spike-ins to calibrate noise** option determines whether or not
+1. The **Use spike-ins to calibrate noise** option determines whether or not
    spike-in data should be taken into account. If you select only one folder
    before running the application, you will use spike-free algorithm and this
    option will be switched off by default. But if you select two folders, one
@@ -1459,13 +1451,13 @@ To identify highly variable genes you can try different options:
 The next three options will be available if spike-ins are included in the
 experiment and "Use spike-ins to calibrate noise" option is switched:
 
-4. **Expected biological CV** is the minimum threshold chosen for quantifying
+4. The **Expected biological CV** is the minimum threshold chosen for quantifying
    the level of biological variability (CV - coefficient of variation)
    expected in the null hypothesis of the model. (default: 0.5)
-5. **Noise fit - proportion of genes with high CV² to remove** option allows
+5. The **Noise fit - proportion of genes with high CV² to remove** option allows
    you to exclude spike-in genes with high CV² to fit the noise model.
    (default: 0)
-6. **Noise fit - proportion of genes with low mean expression to remove**
+6. The **Noise fit - proportion of genes with low mean expression to remove**
    option enables you to exclude a fraction of spike-in genes with low mean
    expression to fit the noise model, because extreme outliers tend to skew
    the fit. (default: 0.85)
@@ -1649,8 +1641,8 @@ coordinates using the "samse" command (if your reads are single-end) or
    contains local genome co-ordinates, which are converted back to the global
    coordinates of the reference genome. (default: unchecked)
 
-The application is based on BWA_ aligner and it is used in `Whole Exome
-Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
+The application is based on the BWA_ aligner and BEDtools_. The application is
+used in `Whole Exome Sequencing Data Analysis`_ and `Whole Genome Sequencing Data Analysis`_
 tutorials.
 
 .. _BWA: http://bio-bwa.sourceforge.net/
@@ -1688,7 +1680,7 @@ For paired-end reads two more option appears:
 5. The **Disallow unique mappings of one mate** option allows you to discard pairs
    of reads where one mate maps uniquely and the other to multiple positions.
    (default: unchecked)
-6. **Disallow discordant mappings** parameter will discard all mappings where
+6. The **Disallow discordant mappings** parameter will discard all mappings where
    the two mates map uniquely but with unexpected orientation or where the
    distance between two mapped mates differs from and internally estimated
    fragment length, including mates mapping to different chromosomes. (default:
@@ -1754,9 +1746,9 @@ Let's now look at the command line options more closely:
    report only potential variant sites and exclude monomorphic ones (sites
    without alternate alleles). For this purpose, switch the option “Only report
    variant sites”. (default: checked)
-4. **Discard anomalous read pairs** option is used to skip anomalous read
+4. The **Discard anomalous read pairs** option is used to skip anomalous read
    pairs in variant calling. (default: checked)
-5. **Maximum per-sample read depth to consider per position** option sets the
+5. The **Maximum per-sample read depth to consider per position** option sets the
    maximum number of reads at the position to consider. (default: 250)
 6. **Minimum number of gapped reads for an INDEL candidate** option. Typically,
    gapped alignments (like the ones from Unspliced with Bowtie2) can be used to
@@ -1769,10 +1761,10 @@ Let's now look at the command line options more closely:
    encompassed by the non-variant block. (default: 1)
 8. **Minimum variant quality** option. The application will ignore the variant
    with quality score below this value. (default: 20)
-9. **Minimum average mapping quality for a variant** parameter is used to
+9. The **Minimum average mapping quality for a variant** parameter is used to
    discard all variants with average mapping quality value less than specified.
    (default: 20)
-10. **Minimum all-samples read depth for a variant** is a minimum number of
+10. The **Minimum all-samples read depth for a variant** is a minimum number of
     reads covering position. (default: 1)
 11. The **Chromosome to analyse** option allows you to choose specific chromosomes
     to analyse. (default: All)
@@ -1794,9 +1786,9 @@ The result Genetic Variations can be explored in **Genome Browser** as a
 separate  variation track, further annotated using **Effect Prediction**
 application, or viewed immediately using **Variant Explorer** application.
 
-This application is based on `SAMtools`_ and
-`BCFtools`_ utilities and best used when performing `Whole Exome Sequencing
-Analysis`_ and `Whole Genome Sequencing Analysis`_.
+This application is based on the `SAMtools`_ and `BCFtools`_ utilities and
+best used when performing `Whole Exome Sequencing Analysis`_ or `Whole Genome
+Sequencing Analysis`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
@@ -1925,7 +1917,7 @@ Let's look at the options:
    strand ("Discard overlaps on the other strand") or expect overlapping
    without respect to the strandedness ("None"). (default: None)
 
-This application is based on `BEDtools`_.
+This application is based on the `BEDtools`_.
 
 .. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 
@@ -1938,13 +1930,13 @@ Bisulfite Sequencing Mapping with BSMAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map high-throughput bisulfite sequencing (BS) reads at the
-level of the whole genome. To calculate 
+level of the whole genome.
 
 .. image:: images/bisulfite_seq_mapping_app_page.png
 
 Let’s talk a bit about various settings:
 
-1. **Number of mismatches** option lets you set the maximum number of allowed
+1. The **Number of mismatches** option lets you set the maximum number of allowed
    mismatches per read. Changing this number you can affect application
    runtime and percentage of mapped reads. There is an increase in the
    percentage of mapped reads and in the application runtime when increasing
@@ -1955,7 +1947,7 @@ Let’s talk a bit about various settings:
    positions in the genome, "report 1 random "best" mapping". In the last case,
    it stops duplicated genome regions from being omitted altogether. (default:
    Report 1 random "best" mapping)
-3. **BS data generation protocol** option enables you to specify what library
+3. The **BS data generation protocol** option enables you to specify what library
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
@@ -1968,7 +1960,7 @@ original study by `Cokus et al`_.
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
 
-The application is based on BSMAP_ aligner and used in the `Whole-Genome
+The application is based on the BSMAP_ aligner and it is used in the `Whole-Genome
 Bisulfite Sequencing Analysis`_ tutorial.
 
 .. _BSMAP: https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation
@@ -1988,7 +1980,7 @@ Let’s talk a bit about various settings:
    recognized by by the restriction enzyme and used to digest genomic DNA in
    the process of library preparation. By default, the application uses the
    *C-CGG* sequence which is recognised in MspI restriction. (default: "C-CGG")
-2. **Number of mismatches** option lets you set the maximum number of allowed
+2. The **Number of mismatches** option lets you set the maximum number of allowed
    mismatches per read. Decreasing this number you can reduce application
    runtime and percentage of mapped reads. (default: 5)
 3. **Rule for multiple mappings** option. The application can "only reports
@@ -1996,7 +1988,7 @@ Let’s talk a bit about various settings:
    positions in the genome, "report 1 random "best" mapping". In the last case,
    it stops duplicated genome regions from being omitted altogether. (default:
    Report 1 random "best" mapping)
-4. **BS data generation protocol** option enables you to specify what library
+4. The **BS data generation protocol** option enables you to specify what library
    preparation method was used to construct the bisulfite converted library.
    (default: Lister)
 
@@ -2009,7 +2001,7 @@ original study by `Cokus et al`_.
 .. _Lister et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2857523/
 .. _Cokus et al: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2377394/
 
-The application is based on BSMAP_ aligner.
+The application is based on the BSMAP_ aligner.
 
 .. _BSMAP: https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation
 
@@ -2032,13 +2024,13 @@ Command line options are the following:
    distance between cuttings sites on forward and reverse strands. If you
    analyse WGBS mappings, it is recommended to set this number between 0~3.
    (default: not set)
-3. **Report loci with zero methylation ratios** option is used to report
+3. The **Report loci with zero methylation ratios** option is used to report
    positions with zero methylation. (default: unchecked)
 4. The **Combine ratios on both strands** option allows you to combine CpG
    methylation ratio from both strands. (default: unchecked)
 5. **Only unique mappings** parameter is checked in case you would like to
    process only unique mappings. (default: checked)
-6. **Discard duplicated reads** option is used to remove duplicates from mapped
+6. The **Discard duplicated reads** option is used to remove duplicates from mapped
    reads. (default: checked)
 7. **C/T SNPs filtering** option. To ignore positions where there is a possible
    C/T SNPs detected, choose "skip" value. If you want to correct the
@@ -2048,7 +2040,7 @@ Command line options are the following:
 
 If you analyse paired reads one more option appears:
 
-8. **Discard discordant mappings** parameter is used to discard all mappings where the
+8. The **Discard discordant mappings** parameter is used to discard all mappings where the
    two mates map uniquely but with unexpected orientation, or where the
    distance between two mapped mates differs from and internally estimated
    fragment length, including mates mapping to different chromosomes.
@@ -2073,9 +2065,9 @@ The outputs from Methylation Analysis application can be represented in the
    vice versa side bars with 1000 - show max methylation (all reads have
    methylated Cs in this case).
 
-The Methylation Analysis application is based on `methratio.py
+The Methylation Analysis application is based on the `methratio.py
 <https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation>`_
-script and used in the `Whole-Genome Bisulfite Sequencing Analysis`_ tutorial.
+script and it is used in the `Whole-Genome Bisulfite Sequencing Analysis`_ tutorial.
 
 .. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
@@ -2122,9 +2114,9 @@ reference).
    application suggests you use uclust (by default) or sortmera_sumclust
    algorithms. If you prefer closed-reference protocol, choose between blast
    (by default), uclust_ref and sortmera algorithms.
-3. **Quality filter for pre-clustering step** option will remove any low
+3. The **Quality filter for pre-clustering step** option will remove any low
    quality or ambiguous reads before clustering. (default: 0)
-4. **Join paired-end reads (for paired reads only)** option will join
+4. The **Join paired-end reads (for paired reads only)** option will join
    paired-end reads before the clustering. (default: unchecked)
 
 The next two options are available only for open-reference protocol:
@@ -2133,7 +2125,7 @@ The next two options are available only for open-reference protocol:
    rtax, mothur, uclust or sortmerna algorithm. In case of closed-reference
    method, taxonomy assignment will always be performed by uclust algorithm.
    (default: blust)
-6. **Percent of reads to cluster de novo** option is applied for reads that
+6. The **Percent of reads to cluster de novo** option is applied for reads that
    will not hit the reference database and will be cluster de novo. (default:
    0,001)
 
@@ -2167,22 +2159,21 @@ Additional Visualisation Applications
 
 .. TODO think about the proper name for this section
 
-This section includes the applications that can be used in
-various pipelines to view the content of the data (e.g. Sequencing
-Assay Viewer) or to display multiple data types on different
-steps of analyses (e.g. Genome Browser).
+This section includes the applications that can be used in various pipelines
+to view the content of the data (e.g. Sequencing Assay Viewer) or to display
+multiple data types on different steps of analyses (e.g. Genome Browser).
 
 Sequencing Assay Viewer
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to show the content of Sequencing Assay or Raw Reads
-file and look for specific nucleotide sequences which can be exact,
-reverse, complement or reverse complement to the sequence of interest.
+**Action**: to show the content of Sequencing Assay or Raw Reads file and look
+for specific nucleotide sequences which can be exact, reverse, complement or
+reverse complement to the sequence of interest.
 
 .. image:: images/sequencing_assay_viewer.png
 
-To access this application, select the assay you are interested in,
-right click on it and from the "Explore" section select the application.
+To access this application, select the assay you are interested in, right click
+on it and from the "Explore" section select the application.
 
 Genome Browser
 ^^^^^^^^^^^^^^
@@ -2222,24 +2213,22 @@ different samples.
 
 .. image:: images/gb_combined_track.png
 
-Or you can apply some basic mathematical operations
-and create formulas based on your genomic data, for example, quantify
-average value between values corresponding to different samples. The
-results of the computations will be shown on the formula track.
+Or you can apply some basic mathematical operations and create formulas based
+on your genomic data, for example, quantify average value between values
+corresponding to different samples. The results of the computations will be
+shown on the formula track.
 
-Moreover, each track can be customised by changing its properties
-(track color, normalized values, show only SNPs, maximum and minimum
-values to be shown on a track, etc.). Use "Edit" button to change
-properties for multiple tracks at once.
+Moreover, each track can be customised by changing its properties (track color,
+normalized values, show only SNPs, maximum and minimum values to be shown on a
+track, etc.). Use "Edit" button to change properties for multiple tracks at once.
 
-Genome Browser allows you to browse either a specific genomic position
-(search by coordinates) or a specific feature (search by feature name).
-You can navigate through the data to find a feature of interest or
-explore regions surrounding the feature, and zoom in to nucleotide
-resolution. The found feature can be marked with sticky notes (Shift +
-click on the position on the track). When you share the Genome Browser
-page with your collaborators, sticky notes will  help to focus their
-attention on your findings.
+Genome Browser allows you to browse either a specific genomic position (search
+by coordinates) or a specific feature (search by feature name). You can navigate
+through the data to find a feature of interest or explore regions surrounding
+the feature, and zoom in to nucleotide resolution. The found feature can be
+marked with sticky notes (Shift + click on the position on the track). When you
+share the Genome Browser page with your collaborators, sticky notes will  help
+to focus their attention on your findings.
 
 You can see the Genome browser in action in this blog post_.
 
@@ -2693,7 +2682,7 @@ The Expression Navigator page contains 4 sections:
    comparison. Size refers to the number of samples used to generate each
    group.
 
-2. **Top Differentially Expressed Genes** section allows you to choose which
+2. The **Top Differentially Expressed Genes** section allows you to choose which
    groups to compare and how to filter and sort identified differentially
    expressed (DE) genes.
 
@@ -2714,10 +2703,10 @@ Let's look through these statistics:
   The log-fold change is obtained by taking the logarithm of the fold change in
   base 2.
 
-  Log transformed values contains the same information as Fold Change but makes
+  Log transformed values contains the same information as fold change but makes
   it more clear for interpretation because of symmetric values. Genes with
-  positive Log FC are considered to be up-regulated in the selected group, ones
-  with negative Log FC are down-regulated.
+  positive log FC are considered to be up-regulated in the selected group, ones
+  with negative log FC are down-regulated.
 
 - **log-expression**: log-transformed and normalised measure of gene expression.
 
@@ -2783,7 +2772,7 @@ recorded about the fits.
 
 The following options can be configured in the application:
 
-1. **FDR filter for differentially expressed genes** specifies the false
+1. The **FDR filter for differentially expressed genes** specifies the false
    discovery rate above which genes should be discarded from the analysis
    (default: FDR < 0.1)
 2. **Metainfo key for dose value**. This specifies the metainfo key storing the
@@ -2874,10 +2863,12 @@ The table includes:
 
 Methylation arrays
 ~~~~~~~~~~~~~~~~~~
+
 DNA methylation arrays are a widely-used tool to assess genome-wide DNA methylation.
 
 Microarrays Normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
 **Action**: to perform normalisation of methylation microarray assays.
 
 .. image:: images/microarray-normalization.png
@@ -2895,6 +2886,7 @@ The application is based on the minfi_ Bioconductor package.
 
 Methylation array QC
 ^^^^^^^^^^^^^^^^^^^^
+
 Quality control check of microarray data is a crucial step in microarray analysis pipeline,
 as it allows us to detect and exclude low-quality assays from the further analysis.
 

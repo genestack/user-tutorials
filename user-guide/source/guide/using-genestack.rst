@@ -1,3 +1,5 @@
+.. _using-genestack-label:
+
 Using Genestack
 ===============
 
