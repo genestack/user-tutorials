@@ -11,7 +11,7 @@ applications available for raw reads:
 Once we have checked the quality of the raw reads, let's start building the
 Microbiome Data Analysis pipeline:
 
-.. Video - Building Microbiome Analysis pipeline
+.. Video - Preprocessing pipeline
 .. raw:: html
 
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
@@ -88,12 +88,25 @@ Quality control of preprocessed reads
 =====================================
 
 After preprocessing steps, we will use the "FastQC Report" application again to
-compare the quality of raw and preprocessing reads and to make sure that we
-improved reads quality and our data is ready for the downstream analysis.
+compare the quality of raw and preprocessed reads and to make sure that we
+improved reads quality.
 
+Here is the FastQC report for "Mouth of Pci_SN265" sample before preprocessing:
 
+.. image:: images/Microbiome_mouth_of_pci_sn265_raw.png
 
-All FastQC reports for preprocessed reads you can find in `QC reports of
+The "Per base sequence quality" plots depict low quality bases at the ends of
+the second mate reads. After trimming and filtering, the overall quality of reads
+has improved (see the "Per base sequence quality" and "Per sequence sequence
+content" modules). We also expect warnings for "Sequence length distribution"
+since the length of the reads has changed during preprocessing.
+
+.. image:: images/Microbiome_mouth_of_pci_sn265_preprocessed.png
+
+You can find all FastQC reports for preprocessed reads in `QC reports of
 preprocessed raw reads for Alfano et al (2015)` folder.
 
 .. _QC reports of preprocessed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3775110&action=viewFile&page=1
+
+All in all, we can notice that the quality of the reads has improved after
+preprocessing, and our samples are ready for the downstream Microbiome Analysis.
