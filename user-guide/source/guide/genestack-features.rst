@@ -59,7 +59,7 @@ conversion inside Genestack, because Genestack does that for you.
           is such a big deal. In the current landscape of bioinformatics there
           seems to be a never-ending number of formats your data might be saved
           in. There are a few prominent formats used in NGS data analysis, like
-          FastQ, BAM and VCF. But very often new programs come with
+          FASTQ, BAM and VCF. But very often new programs come with
           new formats. Bioinformaticians say they spend almost 80% of their time
           worrying about data grooming and file reformatting and only 20% on
           actual data analysis. Now, that’s insane, isn’t it? On Genestack you

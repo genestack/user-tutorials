@@ -8,11 +8,12 @@ Pipelines and applications
 Applications available on Genestack are grouped into four categories:
 Preprocess, Analyse, Explore and Manage.
 
-**Preprocess** contains all applications used to process files pre- or
-post-alignment in order to increase the data quality.
+**Preprocess** applications cover tasks such as data prefiltering, subsampling
+or normalisation, which typically need to be performed before getting into the
+"heavy-lifting" part of data analysis.
 
-**Analyse** contains all mappers and all other applications required to analyse
-sequencing data.
+**Analyse** applications include key analysis steps like sequence alignment,
+variant calling, expression quantification, etc.
 
 **Explore** contains all interactive graphical interface applications
 allowing users to view the results of their
@@ -49,17 +50,16 @@ FastQC report
 
 **Action**: to perform quality control (QC) of raw sequencing reads. According to
 the "garbage in, garbage out" rule, if we begin our analysis with poor quality
-reads, we should not expect great results at the end. Luckily, there are a few
-procedures that can be used to improve the data quality if that proves to be
-unsatisfactory.
+reads, we should not expect great results at the end. This is why QC is the essential
+first step of any analysis.
 
-The tool used for raw reads quality check is **FastQC Report** application, based on
+The **FastQC Report** application is based on
 the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 
 .. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 .. image:: images/fastqc_report.png
 
-The quickest way to perform the quality assessment of your data in Genestack
+The quickest way to perform quality assessment of your data in Genestack
 is via the public data flow `Raw Reads Quality Control`_.
 
 .. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778184&action=viewFile
@@ -140,7 +140,7 @@ distribution.
 
 *Warning*
 
-It raises a warning when the sum of the deviations from the normal distribution
+A warning is raised when the sum of the deviations from the normal distribution
 represents more than 15% of the reads.
 
 Warnings are usually caused by a presence of contaminants. Sharp peaks may
@@ -196,8 +196,8 @@ relative base composition. Fluctuations at the beginning of reads in the tested
 sample may be caused by adapter sequences or other contaminations of the
 library.
 
-A bias at the beginning of the reads is common for RNA-Seq data. This occurs
-during RNA-Seq library preparation, when "random" primers are annealed to the
+A bias at the beginning of the reads is common for RNA-seq data. This occurs
+during RNA-seq library preparation, when "random" primers are annealed to the
 start of sequences. These primers are not truly random, and it leads to a
 variation at the  beginning of the reads.
 
@@ -258,7 +258,7 @@ There are several possible sources of overrepresented sequences:
 - technical biases (one region was sequenced several times; PCR amplification
   biases);
 - feature of library preparation (e.g. for targeted sequencing);
-- natural reasons (RNA-Seq libraries can naturally present high duplication
+- natural reasons (RNA-seq libraries can naturally present high duplication
   rates).
 
 Overrepresented sequences should only worry you if you think they are present
@@ -346,7 +346,7 @@ This tool is based on the Tally_.
 If you suspect contamination with primers, or some  other repetitive sequence.
 This should be evident from the "Sequence duplication levels" and the "Overrepresented
 Sequences" modules of the FastQC report. Keep in mind this application should not be used with
-RNA-Seq data as it will remove observed differences in expression level.
+RNA-seq data as it will remove observed differences in expression level.
 
 Filter by Quality Scores
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -367,12 +367,12 @@ quality score distribution for each read.
    or higher than the quality cut-off value. 50% means requires the median of
    the bases to be at least the quality cut-off value. (default: 80)
 
-Let's take an example, to understand how the application works. So, here is our
+Let's take an example to understand how the application works. So, here is our
 read:
 
 .. image:: images/filter_by_quality_scores_example.png
 
-Second line represents nucleotide sequence (10 bases in this case). The fourth
+The second line represents the nucleotide sequence (10 bases in this case). The fourth
 line contains quality scores for each nucleotide in the read.
 
 - If the "Minimum quality score" is equal to 30 and the "Percentage of bases" is equal
@@ -485,7 +485,7 @@ Mapped Reads Quality Control and Preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you analysing mapped reads, we recommend you check if there are any
-biases taken place during mapping process (e.g. low coverage, experimental
+biases taken place during the mapping process (e.g. low coverage, experimental
 artifacts, etc.) and do preprocessing of mapped reads.
 
 Mapped Reads QC Report
@@ -691,7 +691,7 @@ duplicate mapped reads depends on the type of data you have. If you are
 dealing with whole-genome sequencing data where expected coverage is low and
 sequences are expected to be present in similar amounts, removing duplicated
 reads will reduce processing time and have little deleterious effect on
-analysis. If however you are processing RNA-Seq data, where the fold-variation
+analysis. If however you are processing RNA-seq data, where the fold-variation
 in expression can be up to 10^7, reads are relatively short, and your main
 point of interest is the variation in expression levels, this probably is not
 the tool for you.
@@ -851,7 +851,7 @@ transcriptome, or de novo assembly.
 
 
 There are at least two types of mapping strategies - Spliced Mapping and
-Unspliced Mapping. In case of RNA-Seq data, reads are derived from mature mRNA,
+Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
 so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
@@ -867,14 +867,14 @@ two exons, the reference genome might have one exon followed by an intron.
 In this case, if you will use Unspliced Mapper, the reference genome would find
 a matching sequence in only one of the exons, while the rest of the read would
 not match the intron in the reference, so the read cannot be properly aligned.
-When analysing RNA-Seq data using unspliced aligner, the reads may be mapped to
+When analysing RNA-seq data using unspliced aligner, the reads may be mapped to
 potentially novel exons, however reads spanning splice junctions are likely to
 remain unmapped.
 
-In contrast, Spliced Mappers would know not to try to align RNA-Seq reads to
+In contrast, Spliced Mappers would know not to try to align RNA-seq reads to
 introns, and would somehow identify possible downstream exons and try to align
 to those instead ignoring introns altogether. Taking this into account, we
-recommend you use Spliced Mapping applications to analyse RNA-Seq data.
+recommend you use Spliced Mapping applications to analyse RNA-seq data.
 
 On Genestack, you will find two spliced aligners - Spliced Mapping with
 Tophat2 and Spliced Mapping to Transcriptome with STAR.
@@ -884,7 +884,7 @@ Tophat2 and Spliced Mapping to Transcriptome with STAR.
 Spliced Mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Action**: to map raw reads with transcriptomic data like RNA-Seq to a
+**Action**: to map raw reads with transcriptomic data like RNA-seq to a
 reference genome, taking or not taking into account splice junctions.
 
 
@@ -901,9 +901,9 @@ Let’s have a look at the application page and talk about various parameters:
 
 Details on various settings:
 
-1. **Strand-specificity protocol**. If you are using strand-specific RNA-Seq
+1. **Strand-specificity protocol**. If you are using strand-specific RNA-seq
    data, this option will let you choose between the "dUTP" and "ligation"
-   method. If you are not sure whether your RNA-Seq data is strand-specific
+   method. If you are not sure whether your RNA-seq data is strand-specific
    or not, you can try using Subsample Reads application to make a small
    subsample, map it with Spliced Mapping with Tophat2 and check the coverage
    in Genome Browser for genes on both strands. (default: None)
@@ -956,7 +956,7 @@ Spliced Mapper supports two-pass alignment strategy when it runs the second
 alignment pass to align reads across the found splice junctions, which improves
 quantification of the novel splice junctions. Taking all these features into
 account, the "Spliced Mapping to Transcriptome with STAR" application can be a
-very good alternative to other RNA-Seq aligners.
+very good alternative to other RNA-seq aligners.
 
 Here is the application page:
 
@@ -1004,7 +1004,7 @@ Gene Quantification with RSEM
 
 **Action**: to use STAR mapper to align reads against reference transcripts
 and apply the `Expectation-Maximization algorithm`_ to estimate gene and
-isoform expression levels from RNA-Seq data.
+isoform expression levels from RNA-seq data.
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 
@@ -1012,7 +1012,7 @@ Let's look at the application page and discuss the parameters available there.
 
 .. image:: images/rsem_report.png
 
-1. **The RNA-Seq protocol used to generate the reads is strand specific**. If
+1. **The RNA-seq protocol used to generate the reads is strand specific**. If
    the reads are strand-specific, check this option. (default: unchecked)
 2. **Estimated average fragment length (for single-end reads only)** option.
    It is important to know the fragment length distribution to accurately
@@ -1114,7 +1114,7 @@ isoforms, i.e. proteins of varying lengths containing different segments of the
 basic gene sequence. Such isoforms can be generated, for example, in the
 process of alternative splicing.
 
-**Action**: to quantify abundances of genes and isoforms from RNA-Seq data
+**Action**: to quantify abundances of genes and isoforms from RNA-seq data
 without the need for alignment. It uses the `Expectation-Maximization algorithm`_
 on "pseudoalignments" to find a set of potential transcripts a read could have
 originated from. Note, that the application accepts reference transcriptome
@@ -1303,7 +1303,7 @@ Navigator to visualize the results.
   groups A and B is the average expression of the gene in group A divided by
   the average expression of the gene in group B.
 
-  The log-fold change is obtained by taking the logarithm of the fold change in
+  The log-fold change is obtained by taking the logarithm of the fold-change in
   base 2.
 
 - **log-counts per million**: dividing each read count by the total read counts in
@@ -1391,12 +1391,12 @@ Let’s look through these statistics:
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-Moreover, you can sort the DE genes by these statistics, clicking the small
-arrows near the name of the metric in the table.
+Moreover, you can sort the DE genes by these statistics by clicking the
+arrows next to the name of the metrics in the table headers.
 
 .. image:: images/expression_navigator_de_genes_sorting.png
 
-The buttons at the bottom of the section allow you to refresh the list based on
+The buttons at the bottom of the section allow you to update the list based on
 your filtering criteria or clear your selection.
 
 3. The top-right section contains **a boxplot of expression levels**. Each
@@ -1419,15 +1419,15 @@ You can read more about this application in the corresponding `tutorials`_.
 
 .. TODO: add Differential Similarity Search application
 
-Single-cell RNA-Seq Analysis
+Single-cell RNA-seq Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to identify heterogeneously-expressed (HE) genes across cells,
 while accounting for technical noise. The application analyses single-cell
-RNA-Seq data and accepts several Mapped Read Counts as inputs. The output
-report you can see in Single-cell RNA-Seq Visualiser.
+RNA-seq data and accepts several Mapped Read Counts as inputs. The output
+report can be opened in Single-cell RNA-seq Visualiser.
 
-The application supports two algorithms for HE analysis. The first uses
+The application supports two algorithms for heterogeneity analysis. The first uses
 spike-in data (artificially introduced RNAs of known abundance) to calibrate a
 noise model. The second method is a non-parametric algorithm based on
 smoothing splines and does not require the presence of spike-in data.
@@ -1462,8 +1462,8 @@ experiment and "Use spike-ins to calibrate noise" option is switched:
    expression to fit the noise model, because extreme outliers tend to skew
    the fit. (default: 0.85)
 
-To look at the HE analysis results, open the created Single-cell RNA-Seq
-Analysis page in  Single-cell RNA-Seq Visualiser.
+To look at the HE analysis results, open the created Single-cell RNA-seq
+Analysis page in  Single-cell RNA-seq Visualiser.
 
 This application is based on such R packages as `DESeq`_, `statmod`_, `ape`_,
 `flashClust`_ and `RSJONIO`_.
@@ -1478,11 +1478,11 @@ Read more about `single-cell RNA-seq analysis`_ on Genestack.
 
 .. _single-cell RNA-seq analysis: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
-Single-cell RNA-Seq Visualiser
+Single-cell RNA-seq Visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to explore cell-to-cell variability in gene expression in even
-seemingly homogeneous cell populations based on scRNA-Seq datasets.
+seemingly homogeneous cell populations based on scRNA-seq datasets.
 
 The application shows basic statistics such as the number of identified highly
 variable genes across the analysed samples.
@@ -1492,7 +1492,7 @@ variable genes across the analysed samples.
 
 It also provides several quality control (QC) plots allowing to check the
 quality of raw sequencing data, estimate and fit technical noise for the
-Brennecke algorithm, and detect the genes with significantly high variability
+Brennecke algorithm, and detect genes with significantly high variability
 in expression.
 
 .. image:: images/qc_plots_in_single_cell_visualizer.png
@@ -2243,7 +2243,7 @@ expression analysis`_, and in the `analysis of transcriptomic heterogeneity
 within populations of cells`_. The choice of a reference genome can increase
 the quality and accuracy of the downstream analysis or it can have a harmful
 effect on it. For example, it has been shown that the choice of a gene
-annotation has a big impact on RNA-Seq data analysis, but also on `variant
+annotation has a big impact on RNA-seq data analysis, but also on `variant
 effect prediction`_.
 
 .. _DNA methylation analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
@@ -2700,13 +2700,8 @@ Let's look through these statistics:
   groups A and B is the average expression of the gene in group A divided by
   the average expression of the gene in group B.
 
-  The log-fold change is obtained by taking the logarithm of the fold change in
+  The log-fold change is obtained by taking the logarithm of the fold-change in
   base 2.
-
-  Log transformed values contains the same information as fold change but makes
-  it more clear for interpretation because of symmetric values. Genes with
-  positive log FC are considered to be up-regulated in the selected group, ones
-  with negative log FC are down-regulated.
 
 - **log-expression**: log-transformed and normalised measure of gene expression.
 

@@ -1,7 +1,7 @@
 Introduction to Next Generation Sequencing Data Analysis
 ========================================================
 
-NGS technologies, such as WGS, RNA-Seq, WES, WGBS, ChIP-Seq, etc. generate lots of output data.
+NGS technologies, such as WGS, RNA-Seq, WES, WGBS, ChIP-Seq, etc. generate significant amounts of output data.
 Before we start talking about various applications available on Genestack and how to choose appropriate
 ones for your analysis, let’s take a moment to go through the basics of sequencing analysis. To
 help you better understand the processes involved, we will use the example of genetic variant

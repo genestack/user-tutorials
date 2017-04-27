@@ -408,22 +408,22 @@ they get lost on your computer.
 
 **How to upload an attachment?**
 
-The attachment are uploaded together with the experiment data. In the "Upload"
+Attachments should be uploaded together with the experiment data. In the "Upload"
 section of the Import application, choose the attachments from your computer along
 with your experiment data. On the "Import" step, the platform will
-recognize the raw data and the fact that you have uploaded unrecognisable
-files.
+recognize the raw data, and all additional files that were unrecognised will
+be added to the experiment as attachments.
 
 .. image:: images/attachments.png
 
 All the unrecognised uploads will be stored as attachments to your
-experiment. You can also upload more or remove attachments later on the "Edit
+experiment. You can also upload more attachments, or remove attachments at the "Edit
 metainfo" step:
 
 .. image:: images/exp_attachments.png
 
-Or, add and remove attachments from inside the File Manager, when you open an
-experiment. There is an "attachments" link by the experiment name and
+You can also add and remove attachments from inside the File Manager, when you open an
+experiment. There is an "attachments" link next to the experiment name and
 description:
 
 .. image:: images/fm_attachments.png
@@ -433,13 +433,13 @@ Browsing Data
 
 Efficient data search and browsing are at the core of Genestack. The
 platform provides rapid access to private, shared, and public data
-analyses results.
+and analysis results.
 
 Experiment Browser
 ~~~~~~~~~~~~~~~~~~
 
 Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
-and ArrayExpress. Data is synchronizes regularly from these databases, keeping
+and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
 100,000 public experiments indexed in Genestack.
 

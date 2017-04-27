@@ -1,27 +1,14 @@
 Genestack User Guide
 ####################
 
-We work hard to make Genestack Platform the most intuitive and
-user-friendly bioinformatics software. That being said, bioinformatics
-is always going to be challenging at times and anyone doing any type of
-NGS data analysis has hundreds of questions running through their head.
+Welcome to the Genestack user guide!
 
-In this guide we will answer any questions you might have, help you
-troubleshoot problems and eventually teach you how to make the most out
-of our platform.
+Genestack is a platform to manage, process and visualize biological data,
+with a focus on next-generation sequencing (NGS) and microarray data.
 
-We wrote this guide for everyone: whether it is your first or hundredth
-time doing bioinformatics you will find something useful here. We will
-cover general aspects of bioinformatics and talk about the specifics of
-our platform.
-
-Before we begin, we would like to remind you that the community edition of
-Genestack Platform is meant to be used by academic and non-commercial
-users. The Enterprise edition is designed for our commercial users who
-will benefit from features such as a broad range of customization
-options, tech support or running the platform on or off the cloud, to
-name a few things. If you have any further questions, please get in
-touch with our team at contact@genestack.com
+This guide is intended for end-users of the platform. It covers the key
+concepts of the platform, a detailed walkthrough of the user interface
+and of the different bioinformatics pipelines available on Genestack.
 
 .. toctree::
    :maxdepth: 2

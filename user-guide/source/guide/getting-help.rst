@@ -21,9 +21,9 @@ Getting in touch with Genestack
 
 There are various ways to get in touch with our team.
 
-*Chatra*: a chat window can be found at the bottom of our homepage.
-During our operating hours at least one of us is always available to help.
-Outside of our operating hours, you can leave us a message using the chat
+*Chatra*: a chat window is available at the bottom of every page on the website.
+During our working hours, at least one of us will be always available to help.
+Outside of working hours, you can leave us a message using the chat
 window and we will get back to you as soon as we can.
 
 *Forum*: when you have a question about the platform, try posting
@@ -35,20 +35,16 @@ will definitely be keen to help you, and if not, our team regularly checks the f
 FAQ
 ===
 
-**Where do I find data shared with me?**
+**Where do I find data that was shared with me?**
 
-If they have been linked, you can find them in the corresponding
-group subfolder folder within the "Shared with me" folder. Otherwise,
-they can be found using search.
-
-**Where do I find the data flows I have created?**
-
-All new data flows are automatically saved in the folder "Created Files".
+If the files were linked into the group folder, you will find them there.
+You can access the group folder from the file browser, under the "Shared with me" section. 
+Otherwise, the files can be found via search, if you know their name or accession.
 
 **How do I reuse a data flow?**
 
-Open a data flow you would like to run in Run Dataflow application. On the
-application page you can set input files and additional files like reference genomes
+Open a data flow you would like to run in the "Run Dataflow" application. On the
+application page you can set input files and additional files (e.g. reference genome)
 that are required for analysis.
 
 **What is the difference between Data Flow Runner and Data Flow Editor?**
@@ -61,18 +57,11 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-**How can I initialize the files?**
+**How can I initialize multiple files at once?**
 
-Generally speaking, there are many ways to initialize files in Genestack.
-Firstly, you can use File Initializer app that can accept
-multiple files. To do so, select files of your interest, right-click on them
-and go to Manage section. Then, you can start initialization when run data flow.
-On the "Data Flow Runner" page
-when all inputs are set, all files are created and you are happy with parameters of each app,
-you will be suggested to start computations right away or delay it.
-Finally, you can right-click file name wherever you are in the platform (on Data Flow Runner,
-File Manger, Task Manager, any bioinformatic app etc.) and select "Start initialization"
-option in the context menu.
+You can use the File Initializer application for this.
+Select the files you want to initialize in File Browser, right-click on them
+and go to Manage > File Initializer. From there, click the button "Initialize all"*[]:
 
 **How do I create a data flow?**
 
@@ -120,25 +109,8 @@ manually.
 
 **What is the difference between an experiment and a folder?**
 
-The main difference between a folder and an experiment is in the content
-specificity.
-
-Folders work just like folders on your computer and can contain various
-biological objects such as your assays, processed
-files, output reports, etc.
-
-Experiments contain only sequencing assays, but provide additional
-features for storing experimental details, e.g. attached PDF documents with
-experiment notes. When you upload raw reads onto Genestack, they will
-automatically be imported as one experiment. On the experiment page, you
-can click on "View details" to read the summary of the experiment, get
-more information about overall design and experiment type, contributors,
-and find links to public databases.
-
-All public experiments available on our platform are provided as
-experiments, not folders. Remember you can share both experiments and
-folders with other Genestack users using Groups. You can read more about
-this in our `Getting Started`_ tutorial.
+Experiments are a special kind of folder, which can only contain
+assays, e.g. "raw" experimental data.
 
 **What is the difference between masked and unmasked reference genomes?**
 
@@ -160,13 +132,15 @@ nucleic base.
 *Unmasked* genomes contain all repeats and low complexity regions
 without any changes.
 
-**How do I change the name of the file?**
+**How can I rename a file?**
 
-Click file name and select "Rename" option in the context menu.
+In the File Browser, click on the file name and select the "Rename" option in the context menu.
 
-**Where can I find the file I created like Import templates, Mapped reads or analysis results?**
+**I've created a file. Where can I find it?**
 
-All the files that you create in Genestack go to your "Created files" folder.
+All the files that you create within Genestack go to your "Created files" folder.
+Files that you import to Genestack go into your "Imported files" folder.
+Both folders are accessible from the dashboard and the file browser.
 
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
 .. _Getting Started: https://genestack.com/blog/2016/01/06/getting-started/
