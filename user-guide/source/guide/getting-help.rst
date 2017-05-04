@@ -60,12 +60,18 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-How can I initialize multiple files at once?
-********************************************
+How can I initialize files?
+***************************
 
-You can use the File Initializer application for this.
-Select the files you want to initialize in File Browser, right-click on them
-and go to Manage > File Initializer. From there, click the button "Initialize all"*[]:
+Generally speaking, there are many ways to initialize files in Genestack.
+Firstly, you can use File Initializer app that can accept multiple files.
+To do so, select files of your interest, right-click on them and go to Manage section.
+Then, you can start initialization when run data flow. On the “Data Flow Runner”
+page when all inputs are set, all files are created and you are happy with
+parameters of each app, you will be suggested to start computations right away or delay it.
+Finally, you can right-click file name wherever you are in the platform (on Data Flow Runner,
+File Manger, Task Manager, any bioinformatic app etc.) and select “Start initialization”
+option in the context menu.
 
 How do I create a data flow?
 ****************************
@@ -124,7 +130,7 @@ are hidden away and replaced with "N"s, so that they will not be aligned
 to.
 
 We do not recommend using a masked genome, as it always  results in a
- loss of information. Masking can never be 100% accurate, and can lead
+loss of information. Masking can never be 100% accurate, and can lead
 to an increase in the number of falsely mapped reads. If you would like to
 perform filtering, it is better to do it after the mapping step.
 
