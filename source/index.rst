@@ -18,5 +18,6 @@ and of the different bioinformatics pipelines available on Genestack.
    guide/using-genestack
    guide/intro-to-ngs
    guide/pipelines
+   tutorials/index
    guide/getting-help
    guide/references
