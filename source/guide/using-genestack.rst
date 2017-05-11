@@ -3,6 +3,8 @@
 Using Genestack
 ===============
 
+.. TODO: Split the file. It's too big!
+
 Registering
 -----------
 
@@ -686,31 +688,31 @@ rows represents metainfo fields.
 
 .. image:: images/metainfo-editor.png
 
-By default a table is based on **Default Import Template** that, however, you can easily
-replace with a custom one (learn more about templates in the section Importing data).
-To do so click on the template's name, select **Change template**,
-then in the appear pop-up window pick template of interest.
+By default a table is based on **Default Import Template** that, however, you
+can easily replace with a custom one (learn more about templates in the section
+Importing data). To do so click on the template's name, select **Change
+template**, then in the appear pop-up window pick template of interest.
 
 .. image:: images/change-template.png
 
-When you start typing in the corresponding cell, you will be
-suggested with terms from our controlled dictionaries if possible. Although, you are free to enter
-any values, we encourage you to use our standartized terminology, that helps you
-to avoid typos and harmonise metadata.
+When you start typing in the corresponding cell, you will be suggested with
+terms from our controlled dictionaries if possible. Although, you are free to
+enter any values, we encourage you to use our standartized terminology, that
+helps you to avoid typos and harmonise metadata.
 
 .. image:: images/tissue-dict.png
 
-Furthermore, you can add several terms to one metadata field for each file. To do so
-enter the first term as usual, click the button **Add another** and either add
-one of the existing fields or create your own one (i.e. custom key).
+Furthermore, you can add several terms to one metadata field for each file. To
+do so enter the first term as usual, click the button **Add another** and
+either add one of the existing fields or create your own one (i.e. custom key).
 
 .. image:: images/add-attribute.png
 
 .. image:: images/add-attribute-1.png
 
-If you create new metadata field, you also need to specify its type:
-for example, for free-text values you should select "Text", and for
-numeric value you should use "Integer" or "Decimal" one.
+If you create new metadata field, you also need to specify its type: for
+example, for free-text values you should select "Text", and for numeric value
+you should use "Integer" or "Decimal" one.
 
 .. image:: images/custom-key.png
 
@@ -718,16 +720,16 @@ Click column name to **sort** metadata or **delete** the selected column if need
 
 .. image:: images/sort.png
 
-Besides filling metadata manually in the application, you can import it from your local computer.
-Click the **Import data from spreadsheet** button and select a CSV, XLS or XLSX file with metadata
-that you would like to attach.
+Besides filling metadata manually in the application, you can import it from
+your local computer. Click the **Import data from spreadsheet** button and
+select a CSV, XLS or XLSX file with metadata that you would like to attach.
 
 .. image:: images/from-spreadsheet-1.png
 
 However, make sure that names of samples in the imported file are the same as
-the ones shown in the column "Name" in Metainfo Editor application. Otherwise, all not matching information in
-the imported file will not be imported. It will be marked in red, so you could easily fix
-it by clicking on "Select file" link.
+the ones shown in the column "Name" in Metainfo Editor application. Otherwise,
+all not matching information in the imported file will not be imported. It will
+be marked in red, so you could easily fix it by clicking on "Select file" link.
 
 .. image:: images/from-spreadsheet-2.png
 
@@ -736,17 +738,19 @@ associate it with another metadata field by click on the name of the column.
 
 .. image:: images/from-spreadsheet-3.png
 
-When you complete describing your samples, you can use the metadata to name them.
-Click **Apply naming scheme** button and select metainfo fields that you want to use
-to create names.
+When you complete describing your samples, you can use the metadata to name
+them. Click **Apply naming scheme** button and select metainfo fields that you
+want to use to create names.
 
 .. image:: images/naming-scheme.png
 
-Once you are happy with the metadata for your files, you can proceed to analyse them by clicking
-the button **Use all N files...**. You can use the suggested visualize
-applications to explore your files, like "FastQC Report" to check the quality of raw sequencing assays, use on of the
-existing public data flows or build your own pipeline by adding applications step-by-step.
-Moreover you could share the files with your collaborators and add them to a folder of your choice.
+Once you are happy with the metadata for your files, you can proceed to analyse
+them by clicking the button **Use all N files...**. You can use the suggested
+visualize applications to explore your files, like "FastQC Report" to check the
+quality of raw sequencing assays, use on of the existing public data flows or
+build your own pipeline by adding applications step-by-step. Moreover, you
+could share the files with your collaborators and add them to a folder of your
+choice.
 
 .. image:: images/run-df-from-me.png
 
@@ -783,10 +787,10 @@ From there, administrators can add or disable users, and reset passwords.
 .. image:: images/pr_manage_users.png
    :scale: 70 %
 
-Sharing in Genestack is done through groups: every user can create any
-number of groups, and add other users to them. Each file in the system can
-be shared with any number of groups, who are granted different permissions
-(read-only, read and write, etc.).
+Sharing in Genestack is done through groups: every user can create any number
+of groups, and add other users to them. Each file in the system can be shared
+with any number of groups, who are granted different permissions (read-only,
+read and write, etc.).
 
 Managing groups
 ~~~~~~~~~~~~~~~
@@ -803,9 +807,9 @@ will be a group administrator of any group that is created by your user.
 .. image:: images/manage_create_groups.png
 
 If you are an administrator of a group, you can click the "Add member" button
-to add people to a group. From there you will be
-prompted for the e-mail of the user you want to add. If they are in your
-organisation, you will be provided with autocomplete
+to add people to a group. From there you will be prompted for the e-mail of the
+user you want to add. If they are in your organisation, you will be provided
+with autocomplete.
 
 .. image:: images/group_add_member.png
 
@@ -839,12 +843,12 @@ Learn more on how to Create and Manage Groups `in our tutorial`_.
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a sharing user or an administrator of a group, you can share files with that group.
-Any file created on Genestack can be shared.
+If you are a sharing user or an administrator of a group, you can share files
+with that group. Any file created on Genestack can be shared.
 
-To share a file, you can select it in the File Manager by
-ticking the checkbox next to it, then clicking the "Share" button in the top bar.
-Alternatively you can right-click on the file and select the "Share" option in the context menu.
+To share a file, you can select it in the File Manager by ticking the checkbox
+next to it, then clicking the "Share" button in the top bar. Alternatively you
+can right-click on the file and select the "Share" option in the context menu.
 
 .. image:: images/sharing_experiment.png
 
@@ -950,9 +954,9 @@ At this stage, no files have been created nor initialized.
 
 .. image:: images/data-flow-editor-3.png
 
-When you click on "Run Data Flow" button, this will take you to the **Data Flow Runner** application.
-Click **Run dataflow** button to create all the relevant files in an
-uninitialized state.
+When you click on "Run Data Flow" button, this will take you to the **Data Flow
+Runner** application. Click **Run dataflow** button to create all the relevant
+files in an uninitialized state.
 
 .. image:: images/data-flow-runner-1.png
 
@@ -978,8 +982,8 @@ a list of matching application to explore results or continue analysis.
 Public data flows
 -----------------
 
-On our platform, you can find a range of public data flows we have
-prepared for our users. We cover most of the common analysis types:
+On our platform, you can find a range of public data flows we have prepared for
+our users. We cover most of the common analysis types:
 
 - Single-cell Transcriptomic Analysis
 - Genetic Variation Analysis
@@ -999,11 +1003,11 @@ Clicking on the data flow will take you to the Data Flow Editor where you can
 add source files and reference genomes. When you have chosen your files,
 click on "Run data flow" to go to the Data Flow Runner. If you do not want to
 change any settings, you can click "Start initialization now". To tweak the
-parameters and settings of the applications, select "Delay initialization until later".
-To change the settings, click on the name of the application in the data flow. This
-will take you to the application page, where you can select "Edit parameters" and
-introduce your changes. When you are done introducing your changes, go back to
-the data flow and initialize your computations.
+parameters and settings of the applications, select "Delay initialization until
+later". To change the settings, click on the name of the application in the
+data flow. This will take you to the application page, where you can select
+"Edit parameters" and introduce your changes. When you are done introducing
+your changes, go back to the data flow and initialize your computations.
 
 Initialising files
 ------------------
@@ -1062,9 +1066,9 @@ the same applications to be initialized together.
 4. Using **Start initialization** button in File Provenance.
 
 Alternatively, you can click on the name of the last created file, go to Manage
-and choose File Provenance application. The application displays the pipeline and also
-allows you to run the computation using "Start initialization" button. You’ll
-learn more about this application later in this section.
+and choose File Provenance application. The application displays the pipeline
+and also allows you to run the computation using "Start initialization" button.
+You’ll learn more about this application later in this section.
 
 .. image:: images/file_provenance_init.png
 
@@ -1075,63 +1079,66 @@ created whilst building this pipeline.
 Task Manager
 ------------
 
-In the top-right corner of any page on Genestack, you can see a link called Tasks.
-It will take you to the Task Manager, an application which allows you to track the
-progress of your computations.
+In the top-right corner of any page on Genestack, you can see a link called
+Tasks. It will take you to the Task Manager, an application which allows you to
+track the progress of your computations.
 
 .. image:: images/task-manager.png
 
-All your tasks can be sorted and filtered by file name, accession,
-status, owner, last update and elapsed time. You can also view logs
-produced for each computation (error and output log). Error logs
-tell you why your task has failed. Output logs contain information about
-the exact details of what Genestack does with your files during the
-computation process, what specific tools and parameters are used, and so on.
+All your tasks can be sorted and filtered by file name, accession, status,
+owner, last update and elapsed time. You can also view logs produced for each
+computation (error and output log). Error logs tell you why your task has
+failed. Output logs contain information about the exact details of what
+Genestack does with your files during the computation process, what specific
+tools and parameters are used, and so on.
 
-If the computations finished successfully, error logs will be empty, but
-the logs can provide you with some basic statistics about the output
-data.
+If the computations finished successfully, error logs will be empty, but the
+logs can provide you with some basic statistics about the output data.
 
 .. image:: images/task-log.png
 
-If you change your mind about a computation after it has started,
- remember that you can kill tasks whenever you want by clicking the
-**Cancel** button, next to the task status.
+If you change your mind about a computation after it has started, remember that
+you can kill tasks whenever you want by clicking the **Cancel** button, next to
+the task status.
 
-Statuses in Task Manager help you keep track of your tasks. Let’s look
-what each status means:
+Statuses in Task Manager help you keep track of your tasks. Let’s look what
+each status means:
 
--  *Starting* — the computation process has started to run
--  *Done* — the task has finished successfully
--  *Failed* — the computation has failed. To find out why, click on "View logs"
--  *Queued* — the task is waiting for dependencies to complete
-   initialization
--  *Running* — your task is in progress
+-  *Starting* — the computation process has started to run;
+-  *Done* — the task has finished successfully;
+-  *Failed* — the computation has failed. To find out why, click on "View logs";
+-  *Queued* — the task is waiting for dependencies to complete initialization;
+-  *Running* — your task is in progress;
 -  *Blocked by dependency failure* — the computation cannot be completed
-   because a task on which this one depends has failed
--  *Killed* — the task has been canceled by the user
+   because a task on which this one depends has failed;
+-  *Killed* — the task has been canceled by the user.
 
 Data Export
 -----------
 
 Genestack provides secure data storage, and **Export Data** application
-allows to safely download both assays and analysis results together with attached metadata
-to a local machine.
-Select those files you are going to export, right-click on them
-and select **Export Data** application.
-On the application page you will see the status of your files, and if some of them are not
-initialized you will be suggested to initialize them prior to export.
+allows to safely download both assays and analysis results together with
+attached metadata to a local machine.
+
+Select those files you are going to export, right-click on them and select
+**Export Data** application.
+
+On the application page you will see the status of your files, and if some of
+them are not initialized you will be suggested to initialize them prior to export.
 
 .. image:: images/export1.png
 
-If you change you mind, you can stop exporting process by click on **Cancel** button.
+If you change you mind, you can stop exporting process by click on **Cancel**
+button.
 
 .. image:: images/export2.png
 
 The application creates an Export File that contains a special link to download
-the selected assays, that is accessible until the corresponding Export File is deleted.
+the selected assays, that is accessible until the corresponding Export File is
+deleted.
 
 .. image:: images/export3.png
 
-**Sharing the link** enables your collaborator to download data even if they do not have
-a Genestack account. All the Export files are stored in the “Exports” folder.
+**Sharing the link** enables your collaborator to download data even if they
+do not have a Genestack account. All the Export files are stored in the
+“Exports” folder.

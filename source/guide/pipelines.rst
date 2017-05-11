@@ -3,6 +3,7 @@
 Pipelines and applications
 ==========================
 
+.. TODO: Split the file. It's too big!
 .. TODO Add links on our youtube videos
 
 Applications available on Genestack are grouped into four categories:
@@ -114,80 +115,74 @@ the quality metrics calculated.
 - Red X-es - failures;
 - Green check marks in circles - ok.
 
-1. **Basic statistics**
+1. Basic statistics
+*******************
 
 .. image:: images/fastqc_basic_statistics.png
 
 Information on type and number of reads, GC content, and total sequence length.
 
-2. **Sequence length distribution**
+2. Sequence length distribution
+*******************************
 
 .. image:: images/fastqc_sequence_length_distribution.png
 
 Reports lengths of all sequences.
 
-*Warning*
+*Warning*: this report will get warnings if the lengths are not identical, but
+this can usually be ignored, as it is expected for some sequencing platforms.
 
-This report will get warnings if the lengths are not identical, but this can
-usually be ignored, as it is expected for some sequencing platforms.
-
-3. **Per sequence GC content**
+3. Per sequence GC content
+**************************
 
 .. image:: images/fastqc_per_sequence_gc_content.png
 
 For data of good quality, the graph will show a normal, bell-shaped
 distribution.
 
-*Warning*
-
-A warning is raised when the sum of the deviations from the normal distribution
-represents more than 15% of the reads.
+*Warning*: when the sum of the deviations from the normal distribution
+represents more than 15% of the reads, the report will raise a warning.
 
 Warnings are usually caused by a presence of contaminants. Sharp peaks may
 represent a presence of a very specific contaminant (e.g. an adaptor). Broader
 peaks may indicate contamination with a range of contaminants.
 
-*Improving data quality*
+*Improving data quality*: run **Trim Adaptors and Contaminants** preprocessing
+application.
 
-Run **Trim Adaptors and Contaminants** preprocessing application.
-
-4. **Per base sequence quality** plot
+4. Per base sequence quality
+****************************
 
 .. image:: images/fastqc_per_base_sequence_quality.png
 
 For data of good quality, the median quality score per base (Phred) should not
 drop below 20.
 
-*Failure*
+*Failure*: the report will get failures if the lower quartile for quality at
+any base position is less than 5 or if the median for any base is less than 20.
 
-A failure will be raised if the lower quartile for quality at any base position
-is less than 5 or if the median for any base is less than 20.
-
-*Improving data quality*
-
-If the quality of the library falls to a low level over the
+*Improving data quality*: if the quality of the library falls to a low level over the
 course of a read, the blueprint solution is to perform quality trimming of low
 quality bases or omitting low quality reads. This can be performed using **Trim
 Low Quality Bases** or **Filter by Quality Scores** applications respectively.
 
-5. **Per sequence quality scores** plot 
+5. Per sequence quality scores
+******************************
 
 .. image:: images/fastqc_per_sequence_quality_scores.png
 
 Ideally, we expect to see a sharp peak at the very end of the graph (meaning
 most frequently observed mean quality scores are above 27).
 
-*Warning*
+*Warning*: the report will get warnings when the peak is shifted to the left,
+which means the most frequently observed mean quality is below 27. This equals
+to a 0.2% error rate.
 
-A warning is raised when the peak is shifted to the left, which means the most
-frequently observed mean quality is below 27. This equals to a 0.2% error rate.
+*Improving data quality*: perform quality-based trimming or selection using
+**Trim Low Quality Bases** or **Filter by Quality Scores** applications respectively.
 
-*Improving data quality*
-
-Perform quality-based trimming or selection using **Trim Low
-Quality Bases** or **Filter by Quality Scores** applications respectively.
-
-6. **Per base sequence content**
+6. Per base sequence content
+****************************
 
 .. image:: images/fastqc_per_base_sequence_content.png
 
@@ -201,32 +196,27 @@ during RNA-seq library preparation, when "random" primers are annealed to the
 start of sequences. These primers are not truly random, and it leads to a
 variation at the  beginning of the reads.
 
-*Warning*
+*Warning*: a warning will be raised if the difference between A and T, or G
+and C is greater than 10% at any position.
 
-A warning will be raised if the difference between A and T, or G and C is
-greater than 10% at any position.
+*Improving data quality*: if there is instability at the start of the read the
+consensus is that no QC is necessary. If variation appears over the course of
+a read **Trim to Fixed Length** application may be used. If there is persistent
+variation throughout the read it may be best to discard it. Some datasets may
+trigger a warning due to the nature of the sequence. For example, bisulfite
+sequencing data will have almost no Cytosines. Some species may be unusually
+GC rich or poor and therefore also trigger a warning.
 
-*Improving data quality*
-
-If there is instability at the start of the read the consensus is that no QC
-is necessary. If variation appears over the course of a read **Trim to Fixed
-Length** application may be used. If there is persistent variation throughout
-the read it may be best to discard it. Some datasets may trigger a warning due
-to the nature of the sequence. For example, bisulfite sequencing data will have
-almost no Cytosines. Some species may be unusually GC rich or poor and
-therefore also trigger a warning.
-
-7. **Sequence duplication levels** plots
+7. Sequence duplication levels
+******************************
 
 .. image:: images/fastqc_sequence_duplication_levels.png
 
 Reports total number of reads, number of distinct reads and mean duplication
 rates.
 
-*Warning*
-
-This module will issue a warning if non-unique sequences make up more than 20%
-of the total.
+*Warning*: this module will issue a warning if non-unique sequences make up
+more than 20% of the total.
 
 There are two potential types of duplicates in a library: technical duplicates
 arising from PCR artefacts or biological duplicates which are natural
@@ -234,24 +224,21 @@ collisions where different copies of exactly the same sequence are randomly
 selected. From a sequence level there is no way to distinguish between these
 two types and both will be reported as duplicates here.
 
-*Improving data quality*
+*Improving data quality*: if the observed duplications are due to primer/adaptor
+contamination, they can be removed using the **Trim Adaptors and Contaminants**
+application. **Filter Duplicated Reads** application can also be used for DNA
+sequencing data but will distort expression data.
 
-If the observed duplications are due to primer/adaptor contamination, they can
-be removed using the **Trim Adaptors and Contaminants** application. **Filter
-Duplicated Reads** application can also be used for DNA sequencing data but
-will distort expression data.
-
-8. **Overrepresented sequences**
+8. Overrepresented sequences
+****************************
 
 .. image:: images/fastqc_overrepresented_sequences.png
 
 Shows the highly overrepresented sequences (more than 0.1% of total sequence)
 in the sample.
 
-*Warning*
-
-A warning will be raised  if any sequence is found to represent more than 0.1%
-of the total.
+*Warning*: if any sequence is found to represent more than 0.1% of the total, a
+warning will raised.
 
 There are several possible sources of overrepresented sequences:
 
@@ -264,10 +251,8 @@ There are several possible sources of overrepresented sequences:
 Overrepresented sequences should only worry you if you think they are present
 due to technical biases.
 
-*Improving data quality*
-
-Procedures and caveats for improving data quality are the same as for sequence
-duplication level.
+*Improving data quality*: procedures and caveats for improving data quality
+are the same as for sequence duplication level.
 
 Multiple QC Report
 ^^^^^^^^^^^^^^^^^^
@@ -412,8 +397,8 @@ The occurrence threshold before adapter clipping is set to 0.0001. It refers to
 the minimum number of times an adapter needs to be found before clipping is
 considered necessary.
 
-1. **Minimum length of the trimmed sequence (bp)**. The application will
-   discard trimmed reads of length below this number. (default: 15)
+**Minimum length of the trimmed sequence (bp)**. The application will discard
+trimmed reads of length below this number. (default: 15)
 
 This application is based on the fastq-mcf_, one of the EA-Utils_ utilities.
 
