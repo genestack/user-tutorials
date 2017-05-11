@@ -81,7 +81,7 @@ Analysis tools and databases
   experiments. <http://www.natue.com/nmeth/journal/v10/n11/abs/nmeth.2645.html>`_
   Nature Methods. 2013; 10(11): 1093–1095
 - Caporaso J.G. `QIIME allows analysis of high-throughput community sequencing
-  data <http://www.nature.comnmeth/journal/v7/n5/full/nmeth.f.303.html>`_
+  data. <http://www.nature.comnmeth/journal/v7/n5/full/nmeth.f.303.html>`_
   Nature Methods. 2010; 7(5): 335-336
 - Cingolani P. et al. `A program for annotating and predicting the effects of
   single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila
@@ -110,7 +110,7 @@ Analysis tools and databases
   data with or without a reference genome. <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-323>`_
   BMC Bioinformatics. 2011; 12(1), 323
 - Li H. and Durbin R., `Fast and accurate short read alignment with
-  Burrows-Wheeler Transform <https://academic.oup.com/bioinformatics/article/25/14/1754/225615/Fast-and-accurate-short-read-alignment-with>`_
+  Burrows-Wheeler Transform. <https://academic.oup.com/bioinformatics/article/25/14/1754/225615/Fast-and-accurate-short-read-alignment-with>`_
   Bioinformatics. 2009; 25:1754-60
 - Lister R., et al. `Human DNA methylomes at base resolution show widespread
   epigenomic differences. <http://www.nature.com/nature/journal/v462/n7271/abs/nature08514.html>`_
