@@ -1,23 +1,6 @@
 Getting Help
 ============
 
-Tutorials 
----------
-
-In our tutorials we take you through examples based on public
-experiments, re-analysing the data to demonstrate the features of
-particular applications. All files used (from raw sequencing reads and reference
-genomes to results and data visualisations) are stored on the platform
-in the "Tutorials" folder.
-
-We have prepared tutorials on Differential Gene Expression, Methylation
-Profiling, Whole Exome Sequencing, and Whole Genome Sequencing and we
-plan to add more in the future.
-
-You can find all of our tutorials `on this page`_.
-
-.. _`on this page`: http://genestack-user-tutorials.readthedocs.io/
-
 Getting in touch with Genestack 
 -------------------------------
 
