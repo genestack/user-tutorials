@@ -589,7 +589,7 @@ tools.
 .. _Picard: http://broadinstitute.github.io/picard/
 
 .. TODO What should "Insert size distribution" plot look like normally?
-.. TODO What does it look like when data is of poor quality ( + what can we do about it)
+.. TODO What does it look like when data is of poor quality (+ what can we do about it)
 
 You can analyse the output for several Mapped Reads QC reports at once using
 our Multiple QC Report application.
@@ -888,7 +888,7 @@ Spliced Mapping with Tophat2
 reference genome, taking or not taking into account splice junctions.
 
 
-.. note:: **What is splice junctions?**
+.. note:: **What is a splice junction?**
 
           Splice junctions are exon-intron boundaries, at which RNA splicing
           takes place. For example, to cut an intron (between two exons) you
@@ -1241,10 +1241,8 @@ Look at all result tables and plots in Expression Navigator application.
 
 - **log-fold change**: the fold-change in expression of a gene between two
   groups A and B is the average expression of the gene in group A divided by
-  the average expression of the gene in group B.
-
-  The log-fold change is obtained by taking the logarithm of the fold change in
-  base 2.
+  the average expression of the gene in group B. The log-fold change is
+  obtained by taking the logarithm of the fold change in base 2.
 
 - **log-counts per million**: dividing each read count by the total read counts in
   the sample, and multiplying by 10^6 gives counts per million (CPM).
@@ -1301,10 +1299,8 @@ Navigator to visualize the results.
 
 - **log-fold change**: the fold-change in expression of a gene between two
   groups A and B is the average expression of the gene in group A divided by
-  the average expression of the gene in group B.
-
-  The log-fold change is obtained by taking the logarithm of the fold-change in
-  base 2.
+  the average expression of the gene in group B. The log-fold change is
+  obtained by taking the logarithm of the fold-change in base 2.
 
 - **log-counts per million**: dividing each read count by the total read counts in
   the sample, and multiplying by 10^6 gives counts per million (CPM).
@@ -1363,10 +1359,8 @@ Let’s look through these statistics:
 - **log-fold change**: the fold-change in expression of a gene between two
   groups A and B is the average expression of the gene in group A divided by
   the average expression of the gene in group B.
-
   The log-fold change is obtained by taking the logarithm of the fold change in
   base 2.
-
   Log transformed values contains the same information as fold change but
   makes it more clear for interpretation because of symmetric values.
   Genes with positive log FC are considered to be up-regulated in the selected
@@ -1417,6 +1411,7 @@ You can read more about this application in the corresponding `tutorials`_.
 
 .. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
 
+.. TODO: add GO Enrichment Analysis application
 .. TODO: add Differential Similarity Search application
 
 Single-cell RNA-seq Analysis
@@ -1589,7 +1584,7 @@ t-SNE transformation is computed using the Rtsne_ package.
 
 Read `our blog post`_ about the application and single-cell RNA-seg analysis.
 
-.. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/>`_
+.. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/`_
 
 Genome/Exome Sequencing Data Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1876,6 +1871,30 @@ for heterozygous samples (DP HET).
 
 .. image:: images/variant_explorer_additional_metrics.png
 
+.. note:: **How many raw reads match to the reference and alternative alleles?**
+
+          DP and DP4 fields may help.
+
+          **DP** is about raw read depth.
+          **DP4** refers to the reads covering the reference forward, reference
+          reverse, alternate forward, alternate reverse bases. For example,
+          DP4=0,0,1,2 means 1 read is the alternate base forward strand, 2
+          alternate base reverse strand, and no covering reads have a reference
+          at that position. The sum of DP4 will not always equal to the DP
+          value due to some reads being of too low quality.
+
+
+.. note:: **How can I find out an allele frequiency for a variant?**
+
+          Have a look at allele frequency (**RAF** column) which is a
+          fraction of reads supporting alternate allele (that information
+          is provided in DP4 field). Our Variant Calling application is
+          forced to fit the model of categorical allele frequencies, e.g.
+          0 (homozygous reference), ~0.5 (heterozygote, carrying 1 copy
+          of each of the reference and alternate alleles) or 1 (homozygous
+          alternate).
+
+
 To change the default columns or add more columns, choose them in the
 corresponding tabs in "Columns" section and "Save" your changes. After
 that all selected columns will be displayed in Table viewer.
@@ -2101,14 +2120,14 @@ Let's review the application options:
 .. TODO Add pros and cons of the protocols
 .. TODO Add forum post on pros and cons between the protocols and link on it
 
-*closed-reference*: reads are clustered against a reference sequence
-collection and any reads which do not hit a sequence in the reference
-sequence collection are excluded from downstream analyses
+- *closed-reference*: reads are clustered against a reference sequence
+  collection and any reads which do not hit a sequence in the reference
+  sequence collection are excluded from downstream analyses.
 
-*open-reference*: reads are clustered against a reference sequence collection
-and any reads which do not hit the reference sequence collection are
-subsequently clustered de novo (i.e. against one another without any external
-reference).
+- *open-reference*: reads are clustered against a reference sequence collection
+  and any reads which do not hit the reference sequence collection are
+  subsequently clustered de novo (i.e. against one another without any external
+  reference).
 
 2. **Algorithm** used for clustering. In case open-reference protocol, the
    application suggests you use uclust (by default) or sortmera_sumclust
@@ -2698,10 +2717,8 @@ Let's look through these statistics:
 
 - **log-fold change**: the fold-change in expression of a gene between two
   groups A and B is the average expression of the gene in group A divided by
-  the average expression of the gene in group B.
-
-  The log-fold change is obtained by taking the logarithm of the fold-change in
-  base 2.
+  the average expression of the gene in group B. The log-fold change is
+  obtained by taking the logarithm of the fold-change in base 2.
 
 - **log-expression**: log-transformed and normalised measure of gene expression.
 
