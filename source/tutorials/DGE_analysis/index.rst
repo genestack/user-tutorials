@@ -1,5 +1,5 @@
-Testing Differential Gene Expression on Genestack Platform
-==========================================================
+Testing differential gene expression
+====================================
 
 .. include:: testing-differential-gene-expression-on-genestack-platform.rst
 .. include:: quality-control-and-preprocessing-of-raw-reads.rst

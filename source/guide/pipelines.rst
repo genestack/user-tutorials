@@ -35,7 +35,7 @@ top-left corner of the page, and in the dropdown menu select "About application"
 Sequencing data
 ---------------
 
-Raw Reads Quality Control and Preprocessing
+Raw reads quality control and preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have got raw sequencing data in Genestack the next steps are to
@@ -254,7 +254,7 @@ due to technical biases.
 *Improving data quality*: procedures and caveats for improving data quality
 are the same as for sequence duplication level.
 
-Multiple QC Report
+Multiple QC report
 ^^^^^^^^^^^^^^^^^^
 
 **Action**: to display metrics from multiple reports at once. It accepts as
@@ -291,7 +291,7 @@ quality pre- and post-processing (remember that in order to do this, you need
 to run a different computation, this time inputting processed data source
 files into the data flow).
 
-Subsample Reads
+Subsample reads
 ^^^^^^^^^^^^^^^
 
 **Action**: to create a random subset of raw reads.
@@ -312,7 +312,7 @@ This application is based on the Seqtk_.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
-Filter Duplicated Reads
+Filter duplicated reads
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to discard duplicated sequenced fragments from raw reads data. If
@@ -333,7 +333,7 @@ This should be evident from the "Sequence duplication levels" and the "Overrepre
 Sequences" modules of the FastQC report. Keep in mind this application should not be used with
 RNA-seq data as it will remove observed differences in expression level.
 
-Filter by Quality Scores
+Filter by quality scores
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to discard reads from a sequencing assay based on Phred33 quality
@@ -377,7 +377,7 @@ high quality. You should be able to tell if this is the case from the shape of
 the "Per sequence quality scores" plot from the FastQC application. It may also
 be worth trying this application if the per base sequence quality is low.
 
-Trim Adaptors and Contaminants
+Trim adaptors and contaminants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to find and trim adaptors and known contaminating sequences from
@@ -410,7 +410,7 @@ base content at the start of reads, duplicated reads. Since this QC application 
 on sequence matching it should be run first if used in conjunction with other
 QC applications.
 
-Trim Low Quality Bases
+Trim low quality bases
 ^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to isolate high-quality regions from raw reads.
@@ -439,7 +439,7 @@ the regions of highest quality.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
-Trim Reads to Fixed Length
+Trim reads to fixed length
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to trim a specific amount of bases from the extremities of all
@@ -466,14 +466,14 @@ reads of a specific length (regardless of the quality).
 
 .. TODO Add info about Merge Raw Reads application (the one without UI)
 
-Mapped Reads Quality Control and Preprocessing
+Mapped reads quality control and preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you analysing mapped reads, we recommend you check if there are any
 biases taken place during the mapping process (e.g. low coverage, experimental
 artifacts, etc.) and do preprocessing of mapped reads.
 
-Mapped Reads QC Report
+Mapped reads QC report
 ^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform quality control (QC) of mapped reads.
@@ -584,7 +584,7 @@ our Multiple QC Report application.
 This is helpful, because it allows you to see in comparison, how many reads in
 your experiment are unmapped, partially or improperly mapped.
 
-Targeted Sequencing QC Report
+Targeted sequencing QC report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This application is good to use when analysing Targeted Sequencing data, e.g.
@@ -627,7 +627,7 @@ This application is based on the `BEDtools`_, Picard_ and `SAMtools`_.
 Apart from quality control applications, Genestack suggests you a bunch of
 applications to preprocess mapped reads.
 
-Mark Duplicated Mapped Reads
+Mark duplicated mapped reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Duplicated reads are reads of identical sequence composition and length,
@@ -667,7 +667,7 @@ This tool is based on the **MarkDuplicates**, part of the `Picard`_ tool.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
-Remove Duplicated Mapped Reads
+Remove duplicated mapped reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The point of removing duplicated mapped reads is to try to limit the influence
@@ -710,7 +710,7 @@ This application is based on the **MarkDuplicates**, part of the Picard_ tools.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
-Subsample Reads
+Subsample reads
 ^^^^^^^^^^^^^^^
 
 You can use this application if you want to take a look at what your final
@@ -733,7 +733,7 @@ This application is based on the `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
-Merge Mapped Reads
+Merge mapped reads
 ^^^^^^^^^^^^^^^^^^
 
 The application is useful when you have multiple replicates of the same
@@ -748,7 +748,7 @@ The application is based on the `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
 
-Convert to Unaligned Reads
+Convert to unaligned reads
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The application will be very useful when you are interested in fraction of reads
@@ -763,14 +763,14 @@ This application is based on the Picard_ tool.
 
 .. _Picard: http://broadinstitute.github.io/picard/
 
-Variants Preprocessing
+Variants preprocessing
 ~~~~~~~~~~~~~~~~~~~~~~
 
 While analysing variants, you also can preprocess them. Just select Genetic
 Variations file and click on "Preprocess" section to see what applications
 are available for you.
 
-Merge Variants
+Merge variants
 ^^^^^^^^^^^^^^
 
 Merging variants can be useful, when you have, for example, one Genetic
@@ -786,7 +786,7 @@ This application is based on the `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
-Concatenate Variants
+Concatenate variants
 ^^^^^^^^^^^^^^^^^^^^
 
 Concatenation would be appropriate if you, for example, have separate Genetic
@@ -809,7 +809,7 @@ The application is based on the `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
-RNA-seq Data Analysis
+RNA-seq data analysis
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add info about RNA-seq technology
@@ -866,7 +866,7 @@ Tophat2 and Spliced Mapping to Transcriptome with STAR.
 
 .. TODO: Add a forum post on the differences between the two spliced mappers and paste a link on it here.
 
-Spliced Mapping with Tophat2
+Spliced mapping with Tophat2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map raw reads with transcriptomic data like RNA-seq to a
@@ -926,7 +926,7 @@ Differential Gene Expression tutorial`_.
 .. _Tophat2: https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
-Spliced Mapping to Transcriptome with STAR
+Spliced mapping to transcriptome with STAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform gapped read alignment of transcriptomic data to a
@@ -984,7 +984,7 @@ The application is based on the STAR_ aligner.
 
 .. _STAR: https://github.com/alexdobin/STAR
 
-Gene Quantification with RSEM
+Gene quantification with RSEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to use STAR mapper to align reads against reference transcripts
@@ -1041,7 +1041,7 @@ The application is based on the `RSEM`_ program and the `STAR`_ mapper.
 .. _RSEM: http://deweylab.github.io/RSEM/
 .. _STAR: https://github.com/alexdobin/STAR
 
-Gene Quantification with HTSeq-count
+Gene quantification with HTSeq-count
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to compute gene counts from mapped reads. The application takes as
@@ -1186,7 +1186,7 @@ used in `Differential Isoform Expression Analysis`_ public data flow.
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
 .. _Differential Isoform Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778459&action=viewFile
 
-Test Differential Gene Expression
+Test differential gene expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform differential gene expression analysis between groups of
@@ -1253,7 +1253,7 @@ This application is based on two R packages - `DESeq2`_ and `edgeR`_.
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
 
-Test Differential Isoform Expression
+Test differential isoform expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform differential isoform expression analysis between groups
@@ -1311,7 +1311,7 @@ tool.
 
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
 
-Expression Navigator
+Expression navigator
 ^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to view and filter the results of differential gene and isoform
@@ -1399,7 +1399,7 @@ You can read more about this application in the corresponding `tutorials`_.
 .. TODO: add GO Enrichment Analysis application
 .. TODO: add Differential Similarity Search application
 
-Single-cell RNA-seq Analysis
+Single-cell RNA-seq analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to identify heterogeneously-expressed (HE) genes across cells,
@@ -1458,7 +1458,7 @@ Read more about `single-cell RNA-seq analysis`_ on Genestack.
 
 .. _single-cell RNA-seq analysis: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
-Single-cell RNA-seq Visualiser
+Single-cell RNA-seq visualiser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to explore cell-to-cell variability in gene expression in even
@@ -1571,7 +1571,7 @@ Read `our blog post`_ about the application and single-cell RNA-seg analysis.
 
 .. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/`_
 
-Genome/Exome Sequencing Data Analysis
+Genome/exome sequencing data analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: add a few words about WGS and WES technologies
@@ -1594,7 +1594,7 @@ these two applications on `our forum`_.
 
 .. _our forum: http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36
 
-Unspliced Mapping with BWA
+Unspliced mapping with BWA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map WES or WGS data to a reference genome without allowing
@@ -1630,7 +1630,7 @@ tutorials.
 .. _Whole Exome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
-Unspliced Mapping with Bowtie2
+Unspliced mapping with Bowtie2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map WES or WGS data to a reference genome without allowing
@@ -1670,7 +1670,7 @@ The application is based on the Bowtie2_ aligner.
 
 .. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
-Variant Calling with SAMtools and BCFtools
+Variant calling with SAMtools and BCFtools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to identify genomic variants. The application accepts Mapped Reads
@@ -1775,7 +1775,7 @@ Sequencing Analysis`_.
 .. _Whole Exome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
-Effect Prediction with SnpEff
+Effect prediction with SnpEff
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to annotate variants based on their genomic locations and
@@ -1816,7 +1816,7 @@ This application is based on the open-source SnpEff_ tool and best used in
 .. _Whole Exome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
-Variant Explorer
+Variant explorer
 ^^^^^^^^^^^^^^^^
 
 .. TODO add description for "File info" tab, "Filters summary" and "Filters history"
@@ -1893,7 +1893,7 @@ Read more about this application in our tutorials on `Whole Exome Sequencing`_ a
 .. _Whole Exome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html
 .. _Whole Genome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
-Intersect Genomic Features
+Intersect genomic features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform an intersection between several feature files such as
@@ -1925,12 +1925,12 @@ This application is based on the `BEDtools`_.
 
 .. _BEDtools: http://bedtools.readthedocs.io/en/latest/
 
-Bisulfite Sequencing Data Analysis
+Bisulfite sequencing data analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO Add a few words about bisulfite sequencing technology
 
-Bisulfite Sequencing Mapping with BSMAP
+Bisulfite sequencing mapping with BSMAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map high-throughput bisulfite sequencing (BS) reads at the
@@ -1970,7 +1970,7 @@ Bisulfite Sequencing Analysis`_ tutorial.
 .. _BSMAP: https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation
 .. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
-Reduced Representation Bisulfite Sequencing Mapping with BSMAP
+Reduced representation bisulfite sequencing mapping with BSMAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to map reduced representation bisulfite sequencing (RRBS) reads to
@@ -2009,7 +2009,7 @@ The application is based on the BSMAP_ aligner.
 
 .. _BSMAP: https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation
 
-Methylation Ratio Analysis
+Methylation ratio analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to determine the percent methylation at each ‘C’ base in mapped
@@ -2075,10 +2075,10 @@ script and it is used in the `Whole-Genome Bisulfite Sequencing Analysis`_ tutor
 
 .. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
-Microbiome Data Analysis
+Microbiome data analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Microbiome Analysis with QIIME
+Microbiome analysis with QIIME
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. TODO Update this part when the app will be updated
@@ -2158,7 +2158,7 @@ The application is based on the open-source tool QIIME_.
 
 .. _QIIME: http://qiime.org/home_static/dataFiles.html
 
-Additional Visualisation Applications
+Additional visualisation applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO think about the proper name for this section
@@ -2167,7 +2167,7 @@ This section includes the applications that can be used in various pipelines
 to view the content of the data (e.g. Sequencing Assay Viewer) or to display
 multiple data types on different steps of analyses (e.g. Genome Browser).
 
-Sequencing Assay Viewer
+Sequencing assay viewer
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to show the content of Sequencing Assay or Raw Reads file and look
@@ -2179,7 +2179,7 @@ reverse complement to the sequence of interest.
 To access this application, select the assay you are interested in, right click
 on it and from the "Explore" section select the application.
 
-Genome Browser
+Genome browser
 ^^^^^^^^^^^^^^
 
 **Action**: to visualize different types of genomic data: mapped reads,
@@ -2238,7 +2238,7 @@ You can see the Genome browser in action in this blog post_.
 
 .. _post: https://genestack.com/blog/2015/05/28/navigation-in-genestack-genome-browser/
 
-Reference Genomes
+Reference genomes
 -----------------
 
 One way or another, many bioinformatics analysis pipelines rely on the use of a reference genome.
@@ -2410,7 +2410,7 @@ Expression arrays
 Microarrays are useful in a wide variety of studies with a wide variety of
 objectives. In this section we will look at expression microarrays.
 
-Microarrays Normalisation
+Microarrays normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When investigating differential gene expression using microarrays, it is often
@@ -2434,7 +2434,7 @@ and GenePix_.
 .. _L1000: http://genometry.com/
 .. _GenePix: https://www.moleculardevices.com/systems/microarray-scanners
 
-Affymetrix Microarrays Normalisation
+Affymetrix microarrays normalisation
 ************************************
 
 **Action**: to perform normalisation of Affymetrix microarray assays.
@@ -2458,7 +2458,7 @@ The application is based on the affy_ R package.
 
 .. _affy: http://bioconductor.org/packages/release/bioc/html/affy.html
 
-Agilent Microarrays Normalisation
+Agilent microarrays normalisation
 *********************************
 
 **Action**: to perform normalisation of Agilent microarray assays.
@@ -2497,7 +2497,7 @@ The application is based on the `limma`_ R package.
 
 .. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 
-GenePix Microarrays Normalisation
+GenePix microarrays normalisation
 *********************************
 
 **Action**: to perform normalisation of GenePix microarray assays.
@@ -2513,7 +2513,7 @@ As a next step, the normalised microarray samples can be assessed using the
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
-L1000 Microarrays Normalisation
+L1000 microarrays normalisation
 *******************************
 
 **Action**: to perform normalisation of L1000 microarray assays.
@@ -2528,7 +2528,7 @@ Quality Control** application to detect and remove potential outliers. Normalis
 microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
-Microarray Quality Control
+Microarray quality control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As in any statistical analysis, the quality of the data must be checked. The
@@ -2628,7 +2628,7 @@ The application is based on the ArrayQualityMetrics_ R package.
 
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
 
-Differential Gene Expression for Microarrays
+Differential gene expression for microarrays
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Expression microarrays can simultaneously measure the expression level of
@@ -2639,7 +2639,7 @@ treatment and control groups, i.e. to perform differential expression analysis.
 Once your microarray samples have been normalised, you can use them as inputs
 for differential expression analysis.
 
-Test Differential Expression for Microarrays
+Test differential expression for microarrays
 ********************************************
 
 **Action**: to perform differential expression analysis between groups of
@@ -2672,7 +2672,7 @@ Navigator**.
 
 .. image:: images/en_microarrays.png
 
-Expression Navigator
+Expression navigator
 ********************
 
 **Action**: to view and filter the results of differential gene expression
@@ -2741,12 +2741,12 @@ your filtering criteria or clear your selection.
 
 .. image:: images/en_microarrays_search_genes.png
 
-Compound Dose Response Analysis
+Compound dose response analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. TODO Add more info about dose response analysis
 
-Dose Response Analyser
+Dose response analyser
 **********************
 
 **Action**: to identify differentially expressed (DE) genes, fit various dose
@@ -2783,7 +2783,7 @@ based on the method described in the `Benchmark Dose Software (BMDS) user manual
 .. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 .. _Benchmark Dose Software (BMDS) user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
 
-Dose Response Analysis Viewer
+Dose response analysis viewer
 *****************************
 
 **Action**: to display dose response curves and benchmark doses for
@@ -2863,7 +2863,7 @@ Methylation arrays
 
 DNA methylation arrays are a widely-used tool to assess genome-wide DNA methylation.
 
-Microarrays Normalisation
+Microarrays normalisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Action**: to perform normalisation of methylation microarray assays.

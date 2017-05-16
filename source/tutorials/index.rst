@@ -1,4 +1,4 @@
-Genestack User Tutorials
+Genestack user tutorials
 ########################
 
 .. toctree::

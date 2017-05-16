@@ -1,5 +1,5 @@
-Whole-genome Bisulfite Sequencing Data Analysis on Genestack Platform
-=====================================================================
+Whole-genome bisulfite sequencing data analysis
+===============================================
 
 .. include:: whole-genome-bisulfite-sequencing-analysis.rst
 .. include:: quality-control-preprocessing-raw-reads.rst

@@ -86,7 +86,7 @@ for created and imported files can all be found here. To access the shortcuts
 menu, simply click Genestack logo in the upper-left corner of any page.
 Let's look deeper into each of these items.
 
-Manage Applications
+Manage applications
 ~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/manage_app.png
@@ -113,7 +113,7 @@ order of version choice inheritance is Global → User → Session. If you
 change the version of an application, you also need to **reload** it to run
 the version of your choice.
 
-Manage Groups
+Manage groups
 ~~~~~~~~~~~~~
 
 .. image:: images/manage_groups.png
@@ -125,7 +125,7 @@ new ones and invite other users to join. You can also view and accept
 all the invitations you have received from other users.
 Read more about collaboration on Genestack in the `Sharing Data and Collaboration`_ section.
 
-Manage Users
+Manage users
 ~~~~~~~~~~~~
 
 In this section, you can change password of your users or create new users.
@@ -136,7 +136,7 @@ You can find more about managing users on Genestack from `this video`_.
 
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
 
-Importing Data
+Importing data
 --------------
 
 Supported file types
@@ -189,7 +189,7 @@ types, which cannot be imported. They include:
 - **Raw Reads** - Raw sequencing data that does not need to be associated with
   an experiment (as opposed to a sequencing assay);
 
-Data Import
+Data import
 ~~~~~~~~~~~
 
 There are several ways you can access the **Import** application:
@@ -364,7 +364,7 @@ the file type you have imported. Later you can find your files in the "Imported
 files" folder which can be accessed from the Dashboard and from the File
 Manager.
 
-Metadata Import
+Metadata import
 ~~~~~~~~~~~~~~~
 
 Apart from importing data, you can also import and validate the
@@ -430,14 +430,14 @@ description:
 
 .. image:: images/fm_attachments.png
 
-Browsing Data
+Browsing data
 -------------
 
 Efficient data search and browsing are at the core of Genestack. The
 platform provides rapid access to private, shared, and public data
 and analysis results.
 
-Experiment Browser
+Experiment browser
 ~~~~~~~~~~~~~~~~~~
 
 Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
@@ -489,7 +489,7 @@ the experiment's name at the top of the page and selecting **Explore > File Mana
 
 .. image:: images/from-ME-to-FB.png
 
-File Manager
+File manager
 ~~~~~~~~~~~~
 
 Like on any operating system, the **File Manager** is where you can easily access
@@ -663,7 +663,7 @@ permissions.
 .. _Whole Genome Sequencing Analysis: https://genestack.com/tutorial/wgs-analysis-on-genestack/
 
 
-Public Experiments, Automated Data Curation and Managing Metadata
+Public experiments, automated data curation and managing metadata
 -----------------------------------------------------------------
 
 Our platform provides you with a huge collection of freely accessible experiments that we
@@ -754,7 +754,7 @@ choice.
 
 .. image:: images/run-df-from-me.png
 
-Sharing Data and Collaboration
+Sharing data and collaboration
 ------------------------------
 
 Access control model
@@ -1076,7 +1076,7 @@ You can track the progress of this task in Task Manager. Doing this will begin
 initialization of all the files (including intermediate files) you have
 created whilst building this pipeline.
 
-Task Manager
+Task manager
 ------------
 
 In the top-right corner of any page on Genestack, you can see a link called
@@ -1113,7 +1113,7 @@ each status means:
    because a task on which this one depends has failed;
 -  *Killed* — the task has been canceled by the user.
 
-Data Export
+Data export
 -----------
 
 Genestack provides secure data storage, and **Export Data** application

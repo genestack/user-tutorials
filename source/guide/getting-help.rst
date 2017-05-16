@@ -1,4 +1,4 @@
-Getting Help
+Getting help
 ============
 
 Getting in touch with Genestack 

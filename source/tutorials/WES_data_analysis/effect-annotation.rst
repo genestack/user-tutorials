@@ -182,7 +182,7 @@ We annotated the variants calculating the effects they produced on known
 genes and put them in `Variants with predicted effects for Clark et al (2011)`_
 folder.
 
-Variant prioritisation in Variant Explorer
+Variant prioritisation in Variant explorer
 ******************************************
 
 The variants can be also interactively analysed in Genestack Variant Explorer

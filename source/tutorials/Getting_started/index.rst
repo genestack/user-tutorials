@@ -1,4 +1,4 @@
-Getting Started with Genestack Platform
+Getting started with Genestack Platform
 =======================================
 
 .. include:: getting-started-with-genestack-platform.rst

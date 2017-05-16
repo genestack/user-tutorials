@@ -1,4 +1,4 @@
-Exploring the genome methylation levels in Genome Browser
+Exploring the genome methylation levels in Genome browser
 *********************************************************
 
 We can explore the distribution of genome methylation levels counted for
