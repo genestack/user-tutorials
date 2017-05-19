@@ -6,7 +6,7 @@ Variations file and click on "Preprocess" section to see what applications
 are available for you.
 
 Merge variants
-^^^^^^^^^^^^^^
+++++++++++++++
 
 Merging variants can be useful, when you have, for example, one Genetic
 Variations file for SNPs and another one for Indels. After their merging, the
@@ -22,7 +22,7 @@ This application is based on the `BCFtools`_.
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
 
 Concatenate variants
-^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++
 
 Concatenation would be appropriate if you, for example, have separate Genetic
 Variations files for each chromosome, and simply wanted to join them

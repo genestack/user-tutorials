@@ -210,7 +210,7 @@ There are several ways you can access the **Import** application:
 Import data includes three steps:
 
 Step 1: Uploading files
-^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++
 
 There are two ways to upload data into the platform:
 
@@ -242,7 +242,7 @@ resume unfinished uploads later.
 Click the **Import files** button to proceed.
 
 Step 2: Format recognition
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
@@ -264,7 +264,7 @@ Choose the data type you find suitable:
 Click the **Edit metainfo** button to proceed.
 
 Step 3: Editing metainfo
-^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++
 
 In this step, you can describe uploaded data using an Excel-like spreadsheet.
 Importantly, during this step, the import has already completed - you will

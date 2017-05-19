@@ -6,7 +6,7 @@ biases taken place during the mapping process (e.g. low coverage, experimental
 artifacts, etc.) and do preprocessing of mapped reads.
 
 Mapped reads QC report
-^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++
 
 **Action**: to perform quality control (QC) of mapped reads.
 
@@ -117,7 +117,7 @@ This is helpful, because it allows you to see in comparison, how many reads in
 your experiment are unmapped, partially or improperly mapped.
 
 Targeted sequencing QC report
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++
 
 This application is good to use when analysing Targeted Sequencing data, e.g.
 Whole Exome Sequencing assays.
@@ -160,7 +160,7 @@ Apart from quality control applications, Genestack suggests you a bunch of
 applications to preprocess mapped reads.
 
 Mark duplicated mapped reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++
 
 Duplicated reads are reads of identical sequence composition and length,
 mapped to the same genomic position. Marking duplicated reads can help speed
@@ -200,7 +200,7 @@ This tool is based on the **MarkDuplicates**, part of the `Picard`_ tool.
 .. _Picard: http://broadinstitute.github.io/picard/
 
 Remove duplicated mapped reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 The point of removing duplicated mapped reads is to try to limit the influence
 of early PCR selection (jackpotting). Whether or not you should remove
@@ -243,7 +243,7 @@ This application is based on the **MarkDuplicates**, part of the Picard_ tools.
 .. _Picard: http://broadinstitute.github.io/picard/
 
 Subsample reads
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 You can use this application if you want to take a look at what your final
 experimental results will look like, but do not want to spend time processing
@@ -266,7 +266,7 @@ This application is based on the `SAMtools`_.
 .. _SAMtools: http://samtools.sourceforge.net/
 
 Merge mapped reads
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 The application is useful when you have multiple replicates of the same
 experiment and want to combine them before producing your final result.
@@ -281,7 +281,7 @@ The application is based on the `SAMtools`_.
 .. _SAMtools: http://samtools.sourceforge.net/
 
 Convert to unaligned reads
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 The application will be very useful when you are interested in fraction of reads
 that exactly will map to genome or when you would like to remap the reads with

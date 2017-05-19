@@ -2,7 +2,7 @@ Microbiome data analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Microbiome analysis with QIIME
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 .. TODO Update this part when the app will be updated
 

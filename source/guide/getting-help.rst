@@ -21,21 +21,21 @@ FAQ
 ---
 
 Where do I find data that was shared with me?
-*********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the files were linked into the group folder, you will find them there.
 You can access the group folder from the file browser, under the "Shared with me" section. 
 Otherwise, the files can be found via search, if you know their name or accession.
 
 How do I reuse a data flow?
-***************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open a data flow you would like to run in the "Run Dataflow" application. On the
 application page you can set input files and additional files (e.g. reference genome)
 that are required for analysis.
 
 What is the difference between Data Flow Runner and Data Flow Editor?
-*********************************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data Flow Editor is used to create data flow templates, e.g. selecting
 source files.
@@ -46,7 +46,7 @@ take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
 How can I initialize files?
-***************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Generally speaking, there are many ways to initialize files in Genestack.
 Firstly, you can use File Initializer app that can accept multiple files.
@@ -59,7 +59,7 @@ File Manger, Task Manager, any bioinformatic app etc.) and select “Start initi
 option in the context menu.
 
 How do I create a data flow?
-****************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create a data flow, select the data you
 wish to analyse and choose the first application you wish to use in your
@@ -77,7 +77,7 @@ the pipeline (in the form of a data flow) that was used to create this
 file. Read more about data flows in this tutorial_.
 
 What is the difference between BWA and Bowtie2?
-***********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The biggest differences between the two aligners are:
 
@@ -92,7 +92,7 @@ The biggest differences between the two aligners are:
     align such files.
 
 How does Genestack process paired-end reads?
-********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are three types of raw sequencing reads that our platform supports:
 
@@ -106,13 +106,13 @@ cannot recognise the files automatically, you can allocate the files
 manually.
 
 What is the difference between an experiment and a folder?
-**********************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Experiments are a special kind of folder, which can only contain
 assays, e.g. "raw" experimental data.
 
 What is the difference between masked and unmasked reference genomes?
-*********************************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In general, when a genomes is "masked" it means that all repeats and low
 complexity regions of your reference genome (detected
@@ -133,12 +133,12 @@ nucleic base.
 without any changes.
 
 How can I rename a file?
-************************
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the File Browser, click on the file name and select the "Rename" option in the context menu.
 
 I've created a file. Where can I find it?
-*****************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All the files that you create within Genestack go to your "Created files" folder.
 Files that you import to Genestack go into your "Imported files" folder.

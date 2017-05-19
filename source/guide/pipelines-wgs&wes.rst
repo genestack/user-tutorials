@@ -22,7 +22,7 @@ these two applications on `our forum`_.
 .. _our forum: http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36
 
 Unspliced mapping with BWA
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 **Action**: to map WES or WGS data to a reference genome without allowing
 splice junctions. The application generates Mapped Reads which can be used
@@ -58,7 +58,7 @@ tutorials.
 .. _Whole Genome Sequencing Data Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Unspliced mapping with Bowtie2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 **Action**: to map WES or WGS data to a reference genome without allowing
 splice junctions. The application generates Mapped Reads which can be used
@@ -98,7 +98,7 @@ The application is based on the Bowtie2_ aligner.
 .. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
 Variant calling with SAMtools and BCFtools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++
 
 **Action**: to identify genomic variants. The application accepts Mapped Reads
 files to call variants. You will be able to perform variant calling for each
@@ -203,7 +203,7 @@ Sequencing Analysis`_.
 .. _Whole Genome Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Effect prediction with SnpEff
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++
 
 **Action**: to annotate variants based on their genomic locations and
 calculate the effects they produce on known genes. The application accepts
@@ -244,7 +244,7 @@ This application is based on the open-source SnpEff_ tool and best used in
 .. _Whole Genome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Variant explorer
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 .. TODO add description for "File info" tab, "Filters summary" and "Filters history"
 
@@ -321,7 +321,7 @@ Read more about this application in our tutorials on `Whole Exome Sequencing`_ a
 .. _Whole Genome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WGS_data_analysis/index.html
 
 Intersect genomic features
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 **Action**: to perform an intersection between several feature files such as
 Mapped Reads files or Genetic Variations files. Depending on the input files,

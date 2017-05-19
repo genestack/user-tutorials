@@ -56,7 +56,7 @@ Tophat2 and Spliced Mapping to Transcriptome with STAR.
 .. TODO: Add a forum post on the differences between the two spliced mappers and paste a link on it here.
 
 Spliced mapping with Tophat2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++
 
 **Action**: to map raw reads with transcriptomic data like RNA-seq to a
 reference genome, taking or not taking into account splice junctions.
@@ -116,7 +116,7 @@ Differential Gene Expression tutorial`_.
 .. _Testing Differential Gene Expression tutorial: http://genestack-user-tutorials.readthedocs.io/tutorials/DGE_analysis/index.html
 
 Spliced mapping to transcriptome with STAR
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++
 
 **Action**: to perform gapped read alignment of transcriptomic data to a
 Reference Genome taking into account splice junctions.
@@ -174,7 +174,7 @@ The application is based on the STAR_ aligner.
 .. _STAR: https://github.com/alexdobin/STAR
 
 Gene quantification with RSEM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++
 
 **Action**: to use STAR mapper to align reads against reference transcripts
 and apply the `Expectation-Maximization algorithm`_ to estimate gene and
@@ -231,7 +231,7 @@ The application is based on the `RSEM`_ program and the `STAR`_ mapper.
 .. _STAR: https://github.com/alexdobin/STAR
 
 Gene quantification with HTSeq-count
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++
 
 **Action**: to compute gene counts from mapped reads. The application takes as
 input a mapped reads file, and uses a reference genome to produce a mapped
@@ -281,7 +281,7 @@ level, you'll be able to run **Test Differential Gene Expression** application.
 .. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
 
 Isoform quantification with Kallisto
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++
 
 Specific genes can produce a range of different transcripts encoding various
 isoforms, i.e. proteins of varying lengths containing different segments of the
@@ -342,7 +342,7 @@ The application is based on the Kallisto_ tool.
 .. _Kallisto: https://pachterlab.github.io/kallisto/
 
 Isoforms quantification with Cuffquant
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++
 
 Specific genes can produce a range of different transcripts encoding various
 isoforms, i.e. proteins of varying lengths containing different segments of the
@@ -376,7 +376,7 @@ used in `Differential Isoform Expression Analysis`_ public data flow.
 .. _Differential Isoform Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778459&action=viewFile
 
 Test differential gene expression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++
 
 **Action**: to perform differential gene expression analysis between groups of
 samples. The application accepts Mapped Read Counts (from the "Quantify Raw
@@ -443,7 +443,7 @@ This application is based on two R packages - `DESeq2`_ and `edgeR`_.
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
 
 Test differential isoform expression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++
 
 **Action**: to perform differential isoform expression analysis between groups
 of samples. The application accepts FPKM Read Counts (from Quantify FPKM
@@ -501,7 +501,7 @@ tool.
 .. _Cufflinks: http://cole-trapnell-lab.github.io/cufflinks/
 
 Expression navigator
-^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++
 
 **Action**: to view and filter the results of differential gene and isoform
 expression analyses.
@@ -589,7 +589,7 @@ You can read more about this application in the corresponding `tutorials`_.
 .. TODO: add Differential Similarity Search application
 
 Single-cell RNA-seq analysis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++
 
 **Action**: to identify heterogeneously-expressed (HE) genes across cells,
 while accounting for technical noise. The application analyses single-cell
@@ -648,7 +648,7 @@ Read more about `single-cell RNA-seq analysis`_ on Genestack.
 .. _single-cell RNA-seq analysis: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/
 
 Single-cell RNA-seq visualiser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 **Action**: to explore cell-to-cell variability in gene expression in even
 seemingly homogeneous cell populations based on scRNA-seq datasets.

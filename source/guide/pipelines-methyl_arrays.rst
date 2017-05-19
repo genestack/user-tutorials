@@ -4,7 +4,7 @@ Methylation arrays
 DNA methylation arrays are a widely-used tool to assess genome-wide DNA methylation.
 
 Microarrays normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++
 
 **Action**: to perform normalisation of methylation microarray assays.
 
@@ -22,7 +22,7 @@ The application is based on the minfi_ Bioconductor package.
 .. _minfi: https://academic.oup.com/bioinformatics/article/30/10/1363/267584/Minfi-a-flexible-and-comprehensive-Bioconductor
 
 Methylation array QC
-^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++
 
 Quality control check of microarray data is a crucial step in microarray analysis pipeline,
 as it allows us to detect and exclude low-quality assays from the further analysis.

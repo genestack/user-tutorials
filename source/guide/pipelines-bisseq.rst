@@ -4,7 +4,7 @@ Bisulfite sequencing data analysis
 .. TODO Add a few words about bisulfite sequencing technology
 
 Bisulfite sequencing mapping with BSMAP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++
 
 **Action**: to map high-throughput bisulfite sequencing (BS) reads at the
 level of the whole genome.
@@ -44,7 +44,7 @@ Bisulfite Sequencing Analysis`_ tutorial.
 .. _Whole-Genome Bisulfite Sequencing Analysis: http://genestack-user-tutorials.readthedocs.io/tutorials/Methylation_profiling/index.html
 
 Reduced representation bisulfite sequencing mapping with BSMAP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Action**: to map reduced representation bisulfite sequencing (RRBS) reads to
 the specific digestion sites on the genome.
@@ -83,7 +83,7 @@ The application is based on the BSMAP_ aligner.
 .. _BSMAP: https://sites.google.com/a/brown.edu/bioinformatics-in-biomed/bsmap-for-methylation
 
 Methylation ratio analysis
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 **Action**: to determine the percent methylation at each ‘C’ base in mapped
 reads. Next, you can view methylation ratios in Genome Browser.

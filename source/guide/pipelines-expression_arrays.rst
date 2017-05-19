@@ -22,7 +22,7 @@ Microarrays are useful in a wide variety of studies with a wide variety of
 objectives. In this section we will look at expression microarrays.
 
 Microarrays normalisation
-^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++
 
 When investigating differential gene expression using microarrays, it is often
 the case that the expression levels of genes that should not change given
@@ -140,7 +140,7 @@ microarrays that are of good quality can then be processed for downstream
 processing such as Dose Response Analysis or Test Differential Expression.
 
 Microarray quality control
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 As in any statistical analysis, the quality of the data must be checked. The
 goal of this step is to determine if the whole process has worked well enough
@@ -240,7 +240,7 @@ The application is based on the ArrayQualityMetrics_ R package.
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
 
 Differential gene expression for microarrays
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++
 
 Expression microarrays can simultaneously measure the expression level of
 thousands of genes between sample groups. For example, to understand the effect
@@ -353,7 +353,7 @@ your filtering criteria or clear your selection.
 .. image:: images/en_microarrays_search_genes.png
 
 Compound dose response analysis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++
 
 .. TODO Add more info about dose response analysis
 

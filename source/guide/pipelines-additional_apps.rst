@@ -8,7 +8,7 @@ to view the content of the data (e.g. Sequencing Assay Viewer) or to display
 multiple data types on different steps of analyses (e.g. Genome Browser).
 
 Sequencing assay viewer
-^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++
 
 **Action**: to show the content of Sequencing Assay or Raw Reads file and look
 for specific nucleotide sequences which can be exact, reverse, complement or
@@ -20,7 +20,7 @@ To access this application, select the assay you are interested in, right click
 on it and from the "Explore" section select the application.
 
 Genome browser
-^^^^^^^^^^^^^^
+++++++++++++++
 
 **Action**: to visualize different types of genomic data: mapped reads,
 genetic variants, methylation ratios and others.
