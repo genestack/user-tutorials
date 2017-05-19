@@ -1,5 +1,5 @@
 Reference genomes
------------------
+~~~~~~~~~~~~~~~~~
 
 One way or another, many bioinformatics analysis pipelines rely on the use of a reference genome.
 For instance,  we use reference genomes in `DNA methylation analysis`_, in `differential gene

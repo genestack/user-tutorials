@@ -44,7 +44,7 @@ through the applications developed to assess the quality of the data and do
 preprocessing.
 
 FastQC report
-^^^^^^^^^^^^^
++++++++++++++
 
 .. TODO this is a tutorial on data flows !!!!!!
 .. TODO tips: depending on the technology (WGS, WES, Microbiome, etc. data) and Organism, you can expect warnings and faiures as well
@@ -255,7 +255,7 @@ due to technical biases.
 are the same as for sequence duplication level.
 
 Multiple QC report
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 **Action**: to display metrics from multiple reports at once. It accepts as
 input a collection of QC reports. For example, let's select our FastQC reports
@@ -292,7 +292,7 @@ to run a different computation, this time inputting processed data source
 files into the data flow).
 
 Subsample reads
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **Action**: to create a random subset of raw reads.
 
@@ -313,7 +313,7 @@ This application is based on the Seqtk_.
 .. _Seqtk: https://github.com/lh3/seqtk
 
 Filter duplicated reads
-^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++
 
 **Action**: to discard duplicated sequenced fragments from raw reads data. If
 a sequence of two paired reads or a single read occurs multiple times in a
@@ -334,7 +334,7 @@ Sequences" modules of the FastQC report. Keep in mind this application should no
 RNA-seq data as it will remove observed differences in expression level.
 
 Filter by quality scores
-^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++
 
 **Action**: to discard reads from a sequencing assay based on Phred33 quality
 scores. The application classifies the sequence as pass or fail calculating
@@ -378,7 +378,7 @@ the "Per sequence quality scores" plot from the FastQC application. It may also
 be worth trying this application if the per base sequence quality is low.
 
 Trim adaptors and contaminants
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 **Action**: to find and trim adaptors and known contaminating sequences from
 raw reads data.
@@ -411,7 +411,7 @@ on sequence matching it should be run first if used in conjunction with other
 QC applications.
 
 Trim low quality bases
-^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++
 
 **Action**: to isolate high-quality regions from raw reads.
 
@@ -440,7 +440,7 @@ the regions of highest quality.
 .. _Seqtk: https://github.com/lh3/seqtk
 
 Trim reads to fixed length
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++
 
 **Action**: to trim a specific amount of bases from the extremities of all
 reads in a sample.
@@ -465,3 +465,14 @@ Trim Reads to Fixed Length application is helpful when you want to obtain
 reads of a specific length (regardless of the quality).
 
 .. TODO Add info about Merge Raw Reads application (the one without UI)
+
+.. include:: pipelines-mappedQC&preprocessing.rst
+.. include:: pipelines-variants_preprocessing.rst
+.. include:: pipelines-rnaseq.rst
+.. include:: pipelines-wgs&wes.rst
+.. include:: pipelines-bisseq.rst
+.. include:: pipelines-microbiome.rst
+.. include:: pipelines-additional_apps.rst
+.. include:: pipelines-ref-genomes.rst
+.. include:: pipelines-expression_arrays.rst
+.. include:: pipelines-methyl_arrays.rst
