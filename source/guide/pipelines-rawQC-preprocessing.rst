@@ -466,7 +466,7 @@ reads of a specific length (regardless of the quality).
 
 .. TODO Add info about Merge Raw Reads application (the one without UI)
 
-.. include:: pipelines-mappedQC&preprocessing.rst
+.. include:: pipelines-mappedQC-preprocessing.rst
 .. include:: pipelines-variants_preprocessing.rst
 .. include:: pipelines-rnaseq.rst
 .. include:: pipelines-wgs&wes.rst
