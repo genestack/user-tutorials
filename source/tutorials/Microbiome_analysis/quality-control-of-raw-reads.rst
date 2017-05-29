@@ -1,5 +1,5 @@
 Quality control of raw reads
-============================
+****************************
 
 Garbage in - garbage out. It means that your analysis is only as good as your data.
 Therefore, the first and very important step in any kind of analysis is quality
@@ -104,7 +104,7 @@ We have run QC on all the data in the experiment and put the reports in `Raw
 reads QC reports for Alfano et al (2015)`_ folder, so that you can open all of
 them in `Multiple QC Report application`_ to analyse results:
 
-.. image:: images/Microbiome_multiple_raw.png
+.. image:: images/Microbiome_multiple_raw_reads.png
 
 .. _Raw reads QC reports for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3772057&action=viewFile&page=1
 .. _Multiple QC Report application: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF3772056&action=viewFile

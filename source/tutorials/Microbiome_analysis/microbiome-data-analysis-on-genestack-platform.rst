@@ -54,6 +54,7 @@ A typical data flow for Microbiome analysis consists of the following steps:
 
 #. Quality control of raw reads
 #. Preprocessing of raw reads
+#. Quality control of preprocessed reads
 #. Microbiome analysis
 
 Let’s go through each step to get a better idea of what it really means.

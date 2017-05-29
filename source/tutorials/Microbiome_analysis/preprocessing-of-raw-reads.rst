@@ -1,5 +1,5 @@
 Preprocessing of raw reads
-==========================
+**************************
 
 FastQC reports help you understand whether it is necessary to improve the
 quality of your data by applying trimming, filtering, adaptor clipping and
@@ -19,8 +19,7 @@ Microbiome Data Analysis pipeline:
 Our preprocessing procedure will include two steps - adaptor trimming and
 filtering out low quality reads.
 
-1. Trim adaptors and contaminants
-*********************************
+1. **Trim adaptors and contaminants**
 
 For this, choose all 8 samples in the experiment and select "Trim Adaptors and
 Contaminants" in Preprocess section:
@@ -32,7 +31,7 @@ scan the reads for adaptors, primers, N bases or any poor quality nucleotides
 at the ends of reads, and, based on a log-scaled threshold, will perform
 clipping.
 
-.. image:: images/images/Microbiome_trim_adaptors_and_contaminants_page.png
+.. image:: images/Microbiome_trim_adaptors_and_contaminants_page.png
 
 By default, the application uses an `internal list`_ of widely used PCR
 primers and adaptors that can be considered as possible contaminants. The
@@ -57,8 +56,7 @@ al (2015)`_ folder.
 
 .. _Trimmed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3773384&action=viewFile&page=1
 
-2. Filter by quality scores
-***************************
+2. **Filter by quality scores**
 
 Let's continue our preprocessing procedure and add our next step - "Filter
 by Quality Scores":
@@ -80,33 +78,6 @@ settings: 30 for minimum quality score and 75% for percentage threshold.
 Learn more about the application work in "About application" section.
 
 All 8 samples after this filtering are collected in `Filtered trimmed raw reads
-for Alfano et al (2015)` folder.
+for Alfano et al (2015)`_ folder.
 
 .. _Filtered trimmed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3773385&action=viewFile&page=1
-
-Quality control of preprocessed reads
-=====================================
-
-After preprocessing steps, we will use the "FastQC Report" application again to
-compare the quality of raw and preprocessed reads and to make sure that we
-improved reads quality.
-
-Here is the FastQC report for "Mouth of Pci_SN265" sample before preprocessing:
-
-.. image:: images/Microbiome_mouth_of_pci_sn265_raw.png
-
-The "Per base sequence quality" plots depict low quality bases at the ends of
-the second mate reads. After trimming and filtering, the overall quality of reads
-has improved (see the "Per base sequence quality" and "Per sequence sequence
-content" modules). We also expect warnings for "Sequence length distribution"
-since the length of the reads has changed during preprocessing.
-
-.. image:: images/Microbiome_mouth_of_pci_sn265_preprocessed.png
-
-You can find all FastQC reports for preprocessed reads in `QC reports of
-preprocessed raw reads for Alfano et al (2015)` folder.
-
-.. _QC reports of preprocessed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3775110&action=viewFile&page=1
-
-All in all, we can notice that the quality of the reads has improved after
-preprocessing, and our samples are ready for the downstream Microbiome Analysis.
