@@ -180,36 +180,36 @@ Test differential methylation
 .. Maybe rename the app as "Test differential methylation in CpG sites" or "Analysis of DMRs"?
 
 **Action:** to identify differential methylation in single CpG sites ('a differentially
-methylated positions (DMP)') across groups of microarray assays from the normalized data using linear models.
+methylated positions (DMP)') across groups of normalized microarray assays using linear models.
 Currently, 450k and EPIC Illumina's Methylation arrays are supported.
 
-The input data for this app is Infinium Methylation Normalization file obtained with
+The input data for this application is Infinium Methylation Normalization file obtained with
 the "Infinium Methylation Normalization” application.
 
 .. Wrong file type! See the ticket https://trac.genestack.com/ticket/8099
 .. As a result, the application generates Differential Expression Statistics file that you can further explore
 .. with the Methylation Navigator for Sites.
 
-The analysis includes annotating data when the app determines genomic position of the methylated
+The analysis includes annotating data when the application determines genomic position of the methylated
 loci and its location relatively to various genomic features. Differential methylation analysis application
 supports custom Methylation Array Annotation that you can upload with Import app.
 
 .. image:: images/test-diff-meth.png
 
-The app computes differential
+The application computes differential
 methylation statistics for each CpG site for the selected group compared to
 the average of the other groups. Besides, you can assess differential methylation
 for each group compared to a control one.
 
 The application has the following options:
 
-1. **Group samples by** option allows to group assays for comparison automatically:
+1. **"Group samples by"** option allows to group assays for comparison automatically:
 the application helps you to group your samples according to experimental
 factor indicated in metainfo for the microarray assays such as disease, tissue or treatment, etc.
 (default: None)
 
 2. **Control group** option allows to consider one of the created groups as a control one. In this  case
-the app performs differential methylation analysis for each CpG site in the group against the control one.
+the application performs differential methylation analysis for each CpG site in the group against the control one.
 (default: No control group)
 
 .. image:: images/diff-meth-options.png
@@ -223,10 +223,10 @@ Test differential regions methylation
 +++++++++++++++++++++++++++++++++++++
 
 **Action:** to determine and analyse contiguous regions which are differentially
-methylated across groups of assays from the normalized microarray data. Currently, 450k and EPIC Illumina's
+methylated across groups of normalized microarray assays. Currently, 450k and EPIC Illumina's
 Methylation arrays are supported.
 
-As an input the app takes "Infinium Methylation Normalization" file with normalised microarray assays and returns
+As an input the application takes "Infinium Methylation Normalization" file with normalised microarray assays and returns
 Differential Expression Statistics file that you can further explore
 with the Methylation Navigator.
 Differential methylation analysis application supports custom methylation chip annotations
@@ -236,12 +236,12 @@ that you can upload with Import app.
 
 The application has the following options:
 
-1. **Group samples by** option allows to automatically group assays based on according to experimental
+1. **"Group samples by"** option allows to automatically group assays based on according to experimental
 factor indicated in metainfo for the assays such as disease, tissue or treatment, etc.
 (default: None)
 
 2. **Control group** option allows to consider one of the created groups as a control one. In this  case
-the app performs differential methylation analysis for each region in the group against the control one.
+the application performs differential methylation analysis for each region in the group against the control one.
 (default: No control group)
 
 .. image:: images/diff-meth-options.png
@@ -258,13 +258,15 @@ Explore the output with interactive **Methylation Navigator**.
 Methylation navigator for sites
 +++++++++++++++++++++++++++++++
 
+.. REDO pictures on tutorial's files (GSF21398704, i-dev).
+
 **Action**: to view, sort and filter the results of analysis of differential methylation positions (DMPs).
 
 .. image:: images/MN-sites.png
 
 The Methylation Navigator page contains four sections:
 
-1. **Groups Information** section summarise the information on the created groups of samples to be tested
+1. **Groups Information** section summarise the information on the created groups of samples to be tested.
 
 2. **Top Differentially Methylated Sites** table lists all the detected sites that are
 differentially methylated in the selected group compared to either the average of the other groups
@@ -290,7 +292,7 @@ up or down regulation, minimum log fold change (LogFC), and minimum log counts p
 You can reduce the list of DMPs by filtering the data in the table based on the following criteria:
 
 - *Max FDR* (maximum acceptable false discovery rate) — only shows sites with FDR below the set threshold;
-- *Methylation All/ Down/ Up* — to show all sites or just those that are hypo- or hipermethylated;
+- *Methylation All/ Down/ Up* — to show all sites or just those that are hypo- or hypermethylated;
 - *Min Delta Beta* — only shows sites with absolute value of Delta Beta of at least this threshold;
 - *Min Average Beta* — only shows sites with average Beta value of at least this threshold.
 
@@ -324,13 +326,15 @@ and **Download filtered data for current comparison as .tsv** options, respectiv
 Methylation navigator for regions
 +++++++++++++++++++++++++++++++++
 
+.. REDO pictures on tutorial's files (GSF21398704, i-dev).
+
 **Action**: to view, sort and filter the results of analysis of differential methylation regions (DMRs).
 
 .. image:: images/MN-regions.png
 
 The Methylation Navigator page contains the following sections:
 
-1. **Groups Information** section summarise the information on the created groups of samples to be tested
+1. **Groups Information** section summarise the information on the created groups of samples to be tested.
 
 .. image:: images/MN-regions-group-info.png
 
@@ -344,9 +348,11 @@ You can further reduce the list of identified DMRs and exclude those regions tha
 filtering criteria. The following filters can be applied:
 
 - *Max FDR* (maximum acceptable Stouffer-transformed false discovery rate) — only shows regions with Stouffer-transformed FDR values below the set threshold;
-- *Methylation* (Down/All/Up) — shows all regions or only hypo- or hypomethylated ones;
+- *Methylation* (Down/All/Up) — shows all regions or only hypo- or hypermethylated ones;
 - *Min BetaFC* (minimum fold changes (FC) represented in percent methylation change (beta) in DNA methylation levels between considered groups) — only shows regions having BetaFC below the threshold;
-- *Min significant CPG sites count* — <?>.
+- *Min significant CPG sites count*
+
+.. add description for the option
 
 .. image:: images/MN-regions-filters.png
 
