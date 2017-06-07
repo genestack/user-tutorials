@@ -8,10 +8,12 @@ Microarrays normalisation
 
 **Action**: to perform normalisation of methylation microarray assays.
 
-.. image:: images/microarray-normalization.png
+.. image:: images/meth-array-normalization.png
 
 For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
 or "quantile" method, and in addition, "genomeStudio" background correction may be applied.
+
+.. image:: images/meth-array-normalization-options.png
 
 Further, the quality of normalised microarrays can be checked using the **Microarray QC Report**
 application to detect and remove potential outliers. Normalised microarrays that are of good quality
@@ -178,7 +180,7 @@ Test differential methylation
 .. Maybe rename the app as "Test differential methylation in CpG sites" or "Analysis of DMRs"?
 
 **Action:** to identify differential methylation in single CpG sites ('a differentially
-methylated positions (DMP)') across groups of microarray assays from the normalized data.
+methylated positions (DMP)') across groups of microarray assays from the normalized data using linear models.
 Currently, 450k and EPIC Illumina's Methylation arrays are supported.
 
 The input data for this app is Infinium Methylation Normalization file obtained with
@@ -210,11 +212,11 @@ factor indicated in metainfo for the microarray assays such as disease, tissue o
 the app performs differential methylation analysis for each CpG site in the group against the control one.
 (default: No control group)
 
-.. image:: images/test-diff-meth-options.png
+.. image:: images/diff-meth-options.png
 
 Explore the output with interactive **Methylation Navigator**.
 
-The application is based on the minfi_, limma_ packages.
+The application is based on the minfi_, limma_ Bioconductor packages.
 
 
 Test differential regions methylation
@@ -242,7 +244,7 @@ factor indicated in metainfo for the assays such as disease, tissue or treatment
 the app performs differential methylation analysis for each region in the group against the control one.
 (default: No control group)
 
-.. image:: images/diff-regions-meth-options.png
+.. image:: images/diff-meth-options.png
 
 The Test Differential Regions Methylation application is based on the minfi_ and DMRcate_ packages.
 
