@@ -302,7 +302,7 @@ Sort the list of probes by clicking the arrows next to the name of the statistic
 
 .. image:: images/MN-sites-sort.png
 
-1. **A boxplot of methylation levels**
+3. **A boxplot of methylation levels**
 
 Each color corresponds to an individual probe you selected; each circle represents an assay belonging to
 the tested group. Each boxplot represents the distribution of a methylation in a given group.
@@ -310,7 +310,7 @@ The y-axis shows Beta values, while the x-axis shows probe IDs.
 
 .. image:: images/MN-sites-boxplot.png
 
-2. The bottom-right section contains **a search box** that allows you to explore the results for a particular
+4. The bottom-right section contains **a search box** that allows you to explore the results for a particular
 probe. Start typing a probe ID and select the probe of interest in the appeared drop-down
 list of possible variants.
 
