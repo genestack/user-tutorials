@@ -236,8 +236,8 @@ that you can upload with Import app.
 
 The application has the following options:
 
-1. **"Group samples by"** option allows to automatically group assays based on according to experimental
-factor indicated in metainfo for the assays such as disease, tissue or treatment, etc.
+1. **"Group samples by"** option allows to automatically group assays according to an experimental
+factor indicated in metainfo for the selected microarray assays such as disease, tissue or treatment, etc.
 (default: None)
 
 2. **Control group** option allows to consider one of the created groups as a control one. In this  case
