@@ -11,10 +11,6 @@ During our working hours, at least one of us will be always available to help.
 Outside of working hours, you can leave us a message using the chat
 window and we will get back to you as soon as we can.
 
-*Forum*: when you have a question about the platform, try posting
-it on our forum. You can find it on forum.genestack.org. Our community
-will definitely be keen to help you, and if not, our team regularly checks the forum and will answer any unanswered questions.
-
 *Email*: you can email us at support@genestack.com 
 
 FAQ

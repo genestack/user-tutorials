@@ -16,10 +16,7 @@ to look for spliced these sites precisely. That is why we recommend use Unsplice
 Mapping applications in such cases.
 
 On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
-and Unspliced Mapping with Bowtie2. You can read about the difference between
-these two applications on `our forum`_.
-
-.. _our forum: http://forum.genestack.org/t/unspliced-mapping-with-bwa-app-vs-unspliced-mapping-with-bowtie2-app/36
+and Unspliced Mapping with Bowtie2.
 
 Unspliced mapping with BWA
 ++++++++++++++++++++++++++
