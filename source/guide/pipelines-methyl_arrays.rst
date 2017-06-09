@@ -293,7 +293,7 @@ You can reduce the list of DMPs by filtering the data in the table based on the 
 
 - *Max FDR* (maximum acceptable false discovery rate) — only shows sites with FDR below the set threshold.
 - *Methylation All/ Down/ Up* — to show all sites or just those that are hypo- or hypermethylated.
-- *Min Delta Beta* — delta Beta represents the difference between the Beta values in the groups being compared; the filter allows to filter out only sites with absolute Delta Beta value of at least this threshold.
+- *Min Delta Beta* — delta Beta represents the difference between the Beta values in the groups being compared; this filter can be used to get only sites with absolute Delta Beta value of at least this threshold.
 - *Min Average Beta* — only shows sites with average Beta value of at least this threshold.
 
 .. image:: images/MN-sites-filter.png
@@ -347,10 +347,13 @@ groups or a control group (if it is set).
 You can further reduce the list of identified DMRs and exclude those regions that do not meet set
 filtering criteria. The following filters can be applied:
 
-- *Max FDR* (maximum acceptable Stouffer-transformed false discovery rate) — only shows regions with Stouffer-transformed FDR values below the set threshold. Learn more about Stouffer-test from the paper by `Kim S.C. (2013).`_
+- *Max FDR* (maximum acceptable Stouffer-transformed false discovery rate) — the FDR is statistical certainty that the given region is differentially methylated. This filter only shows regions with the FDR values below the set threshold. Learn more about Stouffer-test from the paper by `Kim S.C. (2013).`_
 - *Methylation* (Down/All/Up) — shows all regions or only hypo- or hypermethylated ones.
-- *Min BetaFC* (minimum fold changes represented in percent methylation change (beta) in DNA methylation levels between considered groups) — only shows regions having BetaFC below the threshold.
-- *Min significant CPG sites count*.
+- *Min BetaFC* (minimum mean beta fold change within the region) — for every DNA region, each probe has its Beta value, which is defined as relative methylation of the region (B1, B2 etc.). BetaFC, in this case, can be defined as mean Beta fold change; apply the filter to show only regions having BetaFC below the threshold.
+- *Min significant CPG sites count* — minimum number of CpG sites inside the genomic region.
+
+.. Suggestion: rename the filter 'Min BetaFC' to 'Min mean BetaFC'
+.. Suggestion: rename the filter 'Min significant CPG sites count” to “Min CPG sites count”'
 
 .. _Kim S.C. (2013).: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3653960/
 

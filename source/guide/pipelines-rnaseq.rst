@@ -155,19 +155,19 @@ Now, let's look through the application parameters:
 5. The **Maximum number of mismatches per pair** parameter sets how many
    mismatches you allow per pair. (default: 10)
 6. **Minimum intron length** is a minimum intron size for the spliced
-   alignments. Read `this paper`_ in case you are not sure about the value.
+   alignments. Read `the paper`_ in case you are not sure about the value.
    (default: 21)
 7. **Maximum intron length** is a maximum intron size you consider for the
    spliced alignments. For example, set 1,000 and the application will take into
    account the introns of maximum 1,000 bp in size. Note, that the default 0
    here means the max intron size equal about 590,000 bp. If you are not sure
-   about intron size value, `this paper`_ may help you to make a decision.
+   about intron size value, `the paper`_ may help you to make a decision.
    (default: 0)
 8. **Maximum genomic distance between mates** is a maximum gap between reads
    from a pair when mapped to the genome. If reads map to the genome farther
    apart the fragment is considered to be chimeric. (default: 0)
 
-.. _this paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
+.. _the paper: https://www.ncbi.nlm.nih.gov/pubmed/10454621
 
 The application is based on the STAR_ aligner.
 
