@@ -158,8 +158,7 @@ ChEBI_ for chemical compounds, and the `Cell ontology`_.
 .. _Cell ontology: http://www.obofoundry.org/ontology/cl.html
 
 We also created our own controlled vocabularies to cover the Sex, Method and Platform fields.
-You can find out more about ontologies in the
-`Public Experiments, Automated Data Curation and Managing Metadata`_ section.
+You can find out more about ontologies in the :ref:`public-experiment-label` section.
 
 Finally, you can also create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.

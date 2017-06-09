@@ -1,3 +1,5 @@
+.. _public-experiment-label:
+
 Public experiments, automated data curation and managing metadata
 -----------------------------------------------------------------
 

@@ -46,7 +46,7 @@ the same organization as another user, you can add them to groups you
 control and share files with them freely. If you are in different
 organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
-permissions and groups in the `Sharing Data and Collaboration`_ section.
+permissions and groups in the :ref:`sharing-label-1` section.
 
 Vendor IDs are used for application development. Applications you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
@@ -67,7 +67,7 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 3. **Browse data** section allows you to browse through public, private and
    shared data with Experiment Browser application which allows you to search through
    the wealth of your data using complex queries.
-   In the Browse Data section, you’ll also find a link to the File Manager
+   In the Browse Data section, you will also find a link to the File Manager
    (home), as well as often used folders: Uploaded files, Imported files,
    Created files and Exports.
 4. **Import data** allows you to import your data using either a

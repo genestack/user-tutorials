@@ -92,13 +92,13 @@ FASTQ and BAM files, pdf documents, excel tables etc.
           biological objects are what you work with on Genestack, and these are
           located in the "Imported files" folder.
 
-The **Exports** folder contains data ready for export. See the `Data Export`_ section for more information.
+The **Exports** folder contains data ready for export. See the :ref:`data-export-label` section for more information.
 
 Below these four grouped folders, you will see two more: Shared with me
 and Public Data.
 
 **Shared with me** contains all files that other users have shared with
-you or that you shared with other users. See the `Sharing Data and Collaboration`_ section for more details.
+you or that you shared with other users. See the :ref:`sharing-label-1` section for more details.
 
 **Public Data** contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
@@ -164,7 +164,7 @@ import them into the platform and edit their metainfo. 
 
 Next to the Import button, you can see a **New Folder** button. Using it
 you will be able to create a new folder wherever you want. Another option
-- **New folder with selection** - appears when you have selected files and
+— **New folder with selection** — appears when you have selected files and
 want to put all of them in a separate folder.
 
 .. image:: images/new-folder.png
@@ -210,7 +210,7 @@ the file.
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
-Read more about sharing on Genestack in the section `Sharing Data and Collaboration`_.
+Read more about sharing on Genestack in the section :ref:`sharing-label-2`.
 
 .. image:: images/share.png
 

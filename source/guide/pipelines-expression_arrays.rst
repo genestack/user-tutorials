@@ -58,7 +58,7 @@ corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
 set on each array. For more on RMA, see `this paper`_.
 
-.. _ths paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
+.. _this paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
 
 As a next step, the normalised microarray samples can be assessed using the
 **Microarray Quality Control** application to detect and remove potential outliers. Normalised
