@@ -266,9 +266,9 @@ Methylation navigator for sites
 
 The Methylation Navigator page contains four sections:
 
-1. **Groups Information** section summarise the information on the created groups of samples to be tested.
+1. The **Groups Information** section summarise the information on the created groups of samples to be tested.
 
-2. **Top Differentially Methylated Sites** table lists all the detected sites that are
+2. The **Top Differentially Methylated Sites** table lists all the detected sites that are
 differentially methylated in the selected group compared to either the average of the other groups
 or a control group (if it is set).
 
@@ -291,9 +291,9 @@ up or down regulation, minimum log fold change (LogFC), and minimum log counts p
 
 You can reduce the list of DMPs by filtering the data in the table based on the following criteria:
 
-- *Max FDR* (maximum acceptable false discovery rate) — only shows sites with FDR below the set threshold;
-- *Methylation All/ Down/ Up* — to show all sites or just those that are hypo- or hypermethylated;
-- *Min Delta Beta* — only shows sites with absolute value of Delta Beta of at least this threshold;
+- *Max FDR* (maximum acceptable false discovery rate) — only shows sites with FDR below the set threshold.
+- *Methylation All/ Down/ Up* — to show all sites or just those that are hypo- or hypermethylated.
+- *Min Delta Beta* — delta Beta represents the difference between the Beta values in the groups being compared; the filter allows to filter out only sites with absolute Delta Beta value of at least this threshold.
 - *Min Average Beta* — only shows sites with average Beta value of at least this threshold.
 
 .. image:: images/MN-sites-filter.png
@@ -334,11 +334,11 @@ Methylation navigator for regions
 
 The Methylation Navigator page contains the following sections:
 
-1. **Groups Information** section summarise the information on the created groups of samples to be tested.
+1. The **Groups Information** section summarise the information on the created groups of samples to be tested.
 
 .. image:: images/MN-regions-group-info.png
 
-2. **Top Differentially Methylated Regions** table shows all the detected regions that are
+2. The **Top Differentially Methylated Regions** table shows all the detected regions that are
 differentially methylated in the selected group compared to either the average of the other
 groups or a control group (if it is set).
 
@@ -347,10 +347,12 @@ groups or a control group (if it is set).
 You can further reduce the list of identified DMRs and exclude those regions that do not meet set
 filtering criteria. The following filters can be applied:
 
-- *Max FDR* (maximum acceptable Stouffer-transformed false discovery rate) — only shows regions with Stouffer-transformed FDR values below the set threshold;
-- *Methylation* (Down/All/Up) — shows all regions or only hypo- or hypermethylated ones;
-- *Min BetaFC* (minimum fold changes (FC) represented in percent methylation change (beta) in DNA methylation levels between considered groups) — only shows regions having BetaFC below the threshold;
-- *Min significant CPG sites count*
+- *Max FDR* (maximum acceptable Stouffer-transformed false discovery rate) — only shows regions with Stouffer-transformed FDR values below the set threshold. Learn more about Stouffer-test from the paper by `Kim S.C. (2013).`_
+- *Methylation* (Down/All/Up) — shows all regions or only hypo- or hypermethylated ones.
+- *Min BetaFC* (minimum fold changes represented in percent methylation change (beta) in DNA methylation levels between considered groups) — only shows regions having BetaFC below the threshold.
+- *Min significant CPG sites count*.
+
+.. _Kim S.C. (2013).: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3653960/
 
 .. add description for the option
 
@@ -361,8 +363,8 @@ the statistical metrics in the table.
 
 .. image:: images/MN-regions-sort.png
 
-Finally, you can export not only the complete table of top differential methylated regions
-for all the groups (**Export Data (for all comparisons, as .tsv)**) but also the list of
+Finally, you can export both the complete table of top differential methylated regions
+for all the groups (**Export Data (for all comparisons, as .tsv)**) and the list of
 regions with associated statistics for the one comparison in TSV format
 (**Download filtered data for current comparison as .tsv**).
 
