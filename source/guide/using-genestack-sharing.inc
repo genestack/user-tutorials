@@ -1,6 +1,4 @@
-.. _sharing-label-1:
-
-.. _sharing-label-2:
+.. _sharing-label:
 
 Sharing data and collaboration
 ------------------------------

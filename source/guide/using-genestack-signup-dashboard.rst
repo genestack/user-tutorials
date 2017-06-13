@@ -46,7 +46,7 @@ the same organization as another user, you can add them to groups you
 control and share files with them freely. If you are in different
 organizations, administrators from both organizations first need to
 approve adding them to the group. You can learn more about data sharing,
-permissions and groups in the :ref:`sharing-label-1` section.
+permissions and groups in the :ref:`sharing-label` section.
 
 Vendor IDs are used for application development. Applications you have created will be
 marked with your vendor ID. Moreover, here you can specify which page you
@@ -140,11 +140,11 @@ You can find more about managing users on Genestack from `this video`_.
 
 .. include:: using-genestack-import.rst
 .. include:: using-genestack-browse-data.rst
-.. include:: using-genestack-public-data.rst
-.. include:: using-genestack-sharing.rst
+.. include:: using-genestack-public-data.inc
+.. include:: using-genestack-sharing.inc
 .. include:: using-genestack-building-pipelines.rst
 .. include:: using-genestack-run-DF.rst
 .. include:: using-genestack-public-DF.rst
 .. include:: using-genestack-initialization.rst
 .. include:: using-genestack-task-manager.rst
-.. include:: using-genestack-export.rst
+.. include:: using-genestack-export.inc

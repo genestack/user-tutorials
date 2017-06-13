@@ -98,7 +98,7 @@ Below these four grouped folders, you will see two more: Shared with me
 and Public Data.
 
 **Shared with me** contains all files that other users have shared with
-you or that you shared with other users. See the :ref:`sharing-label-1` section for more details.
+you or that you shared with other users. See the :ref:`sharing-label` section for more details.
 
 **Public Data** contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
@@ -210,7 +210,7 @@ the file.
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
-Read more about sharing on Genestack in the section :ref:`sharing-label-2`.
+Read more about sharing on Genestack in the section :ref:`sharing-label`.
 
 .. image:: images/share.png
 
