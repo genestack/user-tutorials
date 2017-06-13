@@ -140,11 +140,11 @@ You can find more about managing users on Genestack from `this video`_.
 
 .. include:: using-genestack-import.rst
 .. include:: using-genestack-browse-data.rst
-.. include:: using-genestack-public-data.inc
-.. include:: using-genestack-sharing.inc
+.. include:: using-genestack-public-data.rst
+.. include:: using-genestack-sharing.rst
 .. include:: using-genestack-building-pipelines.rst
 .. include:: using-genestack-run-DF.rst
 .. include:: using-genestack-public-DF.rst
 .. include:: using-genestack-initialization.rst
 .. include:: using-genestack-task-manager.rst
-.. include:: using-genestack-export.inc
+.. include:: using-genestack-export.rst
