@@ -138,13 +138,13 @@ You can find more about managing users on Genestack from `this video`_.
 
 
 
-.. include:: using-genestack-import.rst
-.. include:: using-genestack-browse-data.rst
-.. include:: using-genestack-public-data.inc
-.. include:: using-genestack-sharing.inc
-.. include:: using-genestack-building-pipelines.rst
-.. include:: using-genestack-run-DF.rst
-.. include:: using-genestack-public-DF.rst
-.. include:: using-genestack-initialization.rst
-.. include:: using-genestack-task-manager.rst
-.. include:: using-genestack-export.inc
+.. include:: using-genestack-import_include.rst
+.. include:: using-genestack-browse-data_include.rst
+.. include:: using-genestack-public-data_include.rst
+.. include:: using-genestack-sharing_include.rst
+.. include:: using-genestack-building-pipelines_include.rst
+.. include:: using-genestack-run-DF_include.rst
+.. include:: using-genestack-public-DF_include.rst
+.. include:: using-genestack-initialization_include.rst
+.. include:: using-genestack-task-manager_include.rst
+.. include:: using-genestack-export_include.rst
