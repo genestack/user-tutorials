@@ -60,17 +60,29 @@ However, in comparison to the paper, authors used principal coordinate analysis
 
 .. image:: images/Microbiome_PCoA.png
 
+Both PCA and PCoA are used to visualize the data, but different mathematical
+approaches are applied to the data.
 
+.. note:: **What is the difference between the PCA and PCoA?**
 
-What is the difference between the PCA and PCoA? Both
-methods are used to visualize the data, but different mathematical approaches
-are applied to the data. The purpose of PCA is to represent as much of the
-variation as possible in the first few axes. For this, first, the variables are
-centred to have a mean of zero and then the axes are rotated (and re-scaled).
-In the end, we have two axes: the first one contains as much variation as
-possible, the second one contains as much of the remaining variation as
-possible, etc.
+          The purpose of PCA is to represent as much of the variation as
+          possible in the first few axes. For this, first, the variables are
+          centred to have a mean of zero and then the axes are rotated (and
+          re-scaled). In the end, we have two axes: the first one contains as
+          much variation as possible, the second one contains as much of the
+          remaining variation as possible, etc.
 
+          The PCoA takes uses a different approach, the one based on the
+          distance between data points. First, the PCoA projects the distances
+          into Euclidean space in a larger number of dimensions (we need n-1
+          dimensions for n data points). PCoA puts the fisrt point at the
+          origin, the second one along the first axis, then adds the third one
+          so that the distance to the first two is correct (it means adding the
+          second axis) ans so on, until all the points are added. To get back
+          to two dimensions, we apply a PCA on the newly constructed points and
+          capture the largest amount of variation from the n-1 dimensional
+          space.
 
+!!!
 
 Congratulations! You've just gone through the entire tutorial!
