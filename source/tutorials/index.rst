@@ -1,9 +1,5 @@
-Genestack User Tutorials
+Genestack user tutorials
 ########################
-
-
-Table of Contents
-*****************
 
 .. toctree::
    :maxdepth: 2

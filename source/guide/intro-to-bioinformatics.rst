@@ -1,4 +1,4 @@
-Introduction to Bioinformatics
+Introduction to bioinformatics
 ==============================
 
 Bioinformatics can be defined as the application of computational

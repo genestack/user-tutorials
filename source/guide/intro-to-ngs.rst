@@ -1,4 +1,4 @@
-Introduction to Next Generation Sequencing Data Analysis
+Introduction to Next Generation Sequencing data analysis
 ========================================================
 
 NGS technologies, such as WGS, RNA-Seq, WES, WGBS, ChIP-Seq, etc. generate significant amounts of output data.

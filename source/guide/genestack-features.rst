@@ -1,4 +1,4 @@
-Genestack Key Features
+Genestack key features
 ======================
 
 .. TODO: talk about scalability, different deployments and modularity ?
@@ -80,7 +80,7 @@ files and which applications were used to produce it.
 
 Genestack hosts multiple tool versions at any given time in case you want to reproduce past results.
 
-Data flows and Delayed Initialization
+Data flows and delayed initialization
 -------------------------------------
 
 .. TODO: I don't like this section

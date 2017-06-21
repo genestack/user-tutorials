@@ -129,7 +129,7 @@ This is very handy for organising your work. For example, you can
 collect into one folder files from multiple experiments and work on them
 as if they were all part of one experiment.
 
-Experiments, Assays, and Assay Groups
+Experiments, assays, and assay groups
 -------------------------------------
 
 An  **experiment** is a very special kind of folder. It contains only
