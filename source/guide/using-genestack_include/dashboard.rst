@@ -1,10 +1,3 @@
-.. _using-genestack-label:
-
-Using Genestack
-===============
-
-.. TODO: Split the file. It's too big!
-
 Registering
 -----------
 
@@ -135,16 +128,3 @@ You can find more about managing users on Genestack from `this video`_.
    :scale: 70 %
 
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
-
-
-
-.. include:: using-genestack-import_include.rst
-.. include:: using-genestack-browse-data_include.rst
-.. include:: using-genestack-public-data_include.rst
-.. include:: using-genestack-sharing_include.rst
-.. include:: using-genestack-building-pipelines_include.rst
-.. include:: using-genestack-run-DF_include.rst
-.. include:: using-genestack-public-DF_include.rst
-.. include:: using-genestack-initialization_include.rst
-.. include:: using-genestack-task-manager_include.rst
-.. include:: using-genestack-export_include.rst
