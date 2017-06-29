@@ -64,7 +64,7 @@ There are several ways you can access the **Import** application:
 
 .. image:: images/FM_import.png
 
-- using an **import template**. We’ll describe what import template is and how to
+- using an **import template**. We will describe what import template is and how to
   use it later in the guide.
 
 .. image:: images/IT_import.png
@@ -85,6 +85,7 @@ There are two ways to upload data into the platform:
 
 .. image:: images/URL_import.png
 
+
 The **Use previous uploads** option allows you to avoid uploading the data a
 second time.
 
@@ -101,7 +102,7 @@ resume unfinished uploads later.
 .. image:: images/resumed_uploads.png
    :scale: 85 %
 
-Click the **Import files** button to proceed.
+Click the **Create files** button to proceed.
 
 Step 2: Format recognition
 ++++++++++++++++++++++++++
@@ -123,7 +124,7 @@ Choose the data type you find suitable:
 
 .. image:: images/file_types_box.png
 
-Click the **Edit metainfo** button to proceed.
+Click the **Create files** button to proceed.
 
 Step 3: Editing metainfo
 ++++++++++++++++++++++++
