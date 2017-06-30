@@ -26,14 +26,14 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   variations (VCF).
 
 When you upload microarrays or sequencing assays onto the platform, they will
-be automatically imported as an experiment.
+be automatically imported as a dataset.
 
-- **Experiment** - An experiment is a special type of folder that can only
+- **Dataset** - A dataset is a special type of folder that can only
   contain assays. When you import files that are detected as raw sequencing or
-  microarray assays, Genestack creates an experiment and adds the assays to it.
+  microarray assays, Genestack creates a dataset and adds the assays to it.
 
-- **Experiment attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
-  can be uploaded as an experiment attachment. We will discuss the use of attachments below.
+- **Dataset attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
+  can be uploaded as an attachment to a dataset. We will discuss the use of attachments below.
 
 
 Moreover, when you perform any analysis on Genestack, you can create other data
@@ -230,7 +230,7 @@ Metadata import
 ~~~~~~~~~~~~~~~
 
 Apart from editing metainformation manually, you can also import and validate the metainfo attached to the assays and
-to the experiment on the platform.
+to the dataset on the platform.
 
 .. image:: images/import_from_spreadsheet.png
 
@@ -250,7 +250,7 @@ file.
 
 .. image:: images/import_metainfo-select-file.png
 
-Columns that are mapped to a metainfo field from the experiment's
+Columns that are mapped to a metainfo field from the dataset's
 template (by default data are imported with "Default" template) are highlighted in green.
 
 .. image:: images/import_metainfo_table-green.png
@@ -272,33 +272,31 @@ For instance, in this case we added new column
 Attachments
 ~~~~~~~~~~~
 
-While importing an experiment into Genestack (just to remind you, an
-experiment is a special folder that is created when you import sequencing or
+While importing a dataset into Genestack (just to remind you, an
+dataset is a special folder that is created when you import sequencing or
 microarray assays) you can choose to attach various files to it. For
 example, you could include a PDF file with the experiment plan, an R script
 that you used to process your data, etc. When you open your newly-imported
-experiment, all of the attachments will accompany it. They will be safely
+datasets, all of the attachments will accompany it. They will be safely
 stored on Genestack, so later you can download them from the platform, in case
 they get lost on your computer.
 
 **How to upload an attachment?**
 
-Attachments should be uploaded together with the experiment data. In the "Upload"
-section of the Import application, choose the attachments from your computer along
-with your experiment data. On the "Import" step, the platform will
+Attachments should be uploaded together with the dataset. In the the Import application, choose
+the attachments from your computer along with your dataset. The platform will
 recognize the raw data, and all additional files that were unrecognised will
-be added to the experiment as attachments.
+be added to the dataset as attachments.
 
 .. image:: images/attachments.png
 
 All the unrecognised uploads will be stored as attachments to your
-experiment. You can also upload more attachments, or remove attachments at the "Edit
-metainfo" step:
+dataset. You can also upload more attachments, or remove attachments at the last step of import — edit
+metainfo.
 
 .. image:: images/exp_attachments.png
 
-You can also add and remove attachments from inside the File Manager, when you open an
-experiment. There is an "attachments" link next to the experiment name and
-description:
+You can also add and remove attachments from inside the File Manager, when you open a dataset.
+There is an "attachments" link next to the dataset name and description.
 
 .. image:: images/fm_attachments.png
