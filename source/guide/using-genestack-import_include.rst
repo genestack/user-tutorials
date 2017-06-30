@@ -229,41 +229,45 @@ Manager.
 Metadata import
 ~~~~~~~~~~~~~~~
 
-Apart from importing data, you can also import and validate the
-metainfo attached to the assays and to the experiment. The **Import data from spreadsheet**
-button allows you to retrieve the metainfo from a local CSV or
-Excel file and map it to the Genestack assays:
+Apart from editing metainformation manually, you can also import and validate the metainfo attached to the assays and
+to the experiment on the platform.
 
 .. image:: images/import_from_spreadsheet.png
 
-Click "Import data from spreadsheet" and drag the file with metainfo:
+Click **Import data from spreadsheet** button and select a local CSV or
+Excel file containing metadata you would like to associate with the imported assays.
 
 .. image:: images/import_metainfo.png
 
-You should see something like this:
+Note that names in the first column in the file with metadata should exactly match names of the data
+samples on the platform, based on the first "Name" column. For example, in our case metainfo
+for the second sample does not match to any assays and is highlighted in red.
 
-.. image:: images/import_metainfo_table.png
+.. image:: images/import_metainfo_table_red.png
 
-.. image:: images/import_metainfo_table-2.png
+Use the **Select file** option to manually allocate the imported metadata to an appropriate
+file.
 
-.. image:: images/import_metainfo_table-3.png
+.. image:: images/import_metainfo-select-file.png
 
-.. image:: images/import_metainfo_table-4.png
+Columns that are mapped to a metainfo field from the experiment's
+template (by default data are imported with "Default" template) are highlighted in green.
 
+.. image:: images/import_metainfo_table-green.png
 
-Each row of the Excel file was matched to one of the assays, based on the
-"Name" column. We can see that the last row did not match to any of the
-imported files. Columns that are mapped to a key present in the experiment's
-template will be highlighted in green.
+On this step for each column you can specify whether it should be imported or not, and if it
+should be mapped to some metainfo key from the import template, by clicking on the column header.
 
-We can specify for each column whether the column should be imported, and if it
-should be mapped to a different metainfo key, by clicking on the column header.
-Click "Import" when you finish editing the table:
+.. image:: images/metainfo-import-matching.png
 
-.. image:: images/import_metadata.png
+Click **Import** when you finish editing the table. As a result, the table on the Metainfo Editor
+page is filled in with metadata from the Excel-file.
 
-For instance, in this case we added new column "Age" and filled "Organism",
-"Sex", "Tissue" and "Disease" columns that came from the default template.
+.. image:: images/import_metainfo_complete.png
+
+For instance, in this case we added new column
+"Age" and filled "Organism", "Sex", "Tissue" and "Platform" columns that came from the default template.
+
 
 Attachments
 ~~~~~~~~~~~
