@@ -7,28 +7,28 @@ Supported file types
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
-- **Microarray Assay** - raw microarray data obtained from a microarray
+- **Microarray Assay** — raw microarray data obtained from a microarray
   experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
-- **Infinium Microarray Assay** - raw intensity data files for Illumina Infinium Microarrays (IDAT);
-- **Sequencing Assay** - raw sequencing data (FASTQ, SRA or FASTA+QUAL);
-- **Microarray Annotation** - annotation file containing information about
+- **Infinium Microarray Assay** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
+- **Sequencing Assay** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
+- **Microarray Annotation** — annotation file containing information about
   association of microarray probes to biological entities like genes,
   transcripts and proteins;
-- **Continuous Genomic Data** - contains information on continuous genome
+- **Continuous Genomic Data** — contains information on continuous genome
   statistics, e.g. GC% content (WIGGLE, WIG);
-- **Discrete Genomic Data** - information on discrete regions of the genome
+- **Discrete Genomic Data** — information on discrete regions of the genome
   with an exact start and end position (BED);
-- **Mapped Reads** - reads aligned to a specific reference genome (BAM or CRAM);
-- **Ontology Files** - OWL, OBO or CSV files used to annotate metainfo;
-- **Reference Genome** - Reference genome sequence for a specific organism
+- **Mapped Reads** — reads aligned to a specific reference genome (BAM or CRAM);
+- **Ontology Files** — OWL, OBO or CSV files used to annotate metainfo;
+- **Reference Genome** — Reference genome sequence for a specific organism
   with annotation; (FASTA and GTF/GFF);
-- **Variation Files** - Genetic Variations files, storing gene sequence
+- **Variation Files** — Genetic Variations files, storing gene sequence
   variations (VCF).
 
 When you upload microarrays or sequencing assays onto the platform, they will
 be automatically imported as a dataset.
 
-- **Dataset** - A dataset is a special type of folder that can only
+- **Dataset** — A dataset is a special type of folder that can only
   contain assays. When you import files that are detected as raw sequencing or
   microarray assays, Genestack creates a dataset and adds the assays to it.
 
@@ -39,16 +39,16 @@ be automatically imported as a dataset.
 Moreover, when you perform any analysis on Genestack, you can create other data
 types, which cannot be imported. They include:
 
-- **Affymetrix/Agilent/GenePix Microarrays Normalisation** - File with
+- **Affymetrix/Agilent/GenePix Microarrays Normalisation** — File with
   normalized Affymetrix/Agilent/GenePix microarrays data;
-- **Differential Expression Statistics** - expression statistics for
+- **Differential Expression Statistics** — expression statistics for
   change in expression of individual genes or other genomic features between groups of samples,
   such as fold-changes, p-values, FDR, etc.;
-- **Genome Annotations** - A technical file used for matching GO terms and
+- **Genome Annotations** — A technical file used for matching GO terms and
   gene symbols to gene coordinates;
-- **Mapped Read Counts** - The number of reads mapped to each feature of a reference
+- **Mapped Read Counts** — The number of reads mapped to each feature of a reference
   sequence. Produced from Mapped Reads files;
-- **Raw Reads** - Raw sequencing data that does not need to be associated with
+- **Raw Reads** — Raw sequencing data that does not need to be associated with
   an experiment (as opposed to a sequencing assay);
 
 Data import
@@ -76,11 +76,11 @@ Step 1: Uploading files
 
 There are two ways to upload data into the platform:
 
-1. **Use data from your computer** - select or drag-and-drop files.
+1. **Use data from your computer** — select or drag-and-drop files.
 
 .. image:: images/import_start.png
 
-2. **Upload from URLs (FTP or HTTP/HTTPS)** - specify URLs for separate files or
+2. **Upload from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
    directories.
 
 .. image:: images/URL_import.png
