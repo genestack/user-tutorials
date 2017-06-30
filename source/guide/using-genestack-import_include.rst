@@ -295,8 +295,3 @@ dataset. You can also upload more attachments, or remove attachments at the last
 metainfo.
 
 .. image:: images/exp_attachments.png
-
-You can also add and remove attachments from inside the File Manager, when you open a dataset.
-There is an "attachments" link next to the dataset name and description.
-
-.. image:: images/fm_attachments.png
