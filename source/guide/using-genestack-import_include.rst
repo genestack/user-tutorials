@@ -244,6 +244,13 @@ You should see something like this:
 
 .. image:: images/import_metainfo_table.png
 
+.. image:: images/import_metainfo_table-2.png
+
+.. image:: images/import_metainfo_table-3.png
+
+.. image:: images/import_metainfo_table-4.png
+
+
 Each row of the Excel file was matched to one of the assays, based on the
 "Name" column. We can see that the last row did not match to any of the
 imported files. Columns that are mapped to a key present in the experiment's
