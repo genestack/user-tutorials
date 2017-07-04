@@ -5,57 +5,46 @@ Efficient data search and browsing are at the core of Genestack. The
 platform provides rapid access to private, shared, and public data
 and analysis results.
 
-Experiment browser
-~~~~~~~~~~~~~~~~~~
+Data browser
+~~~~~~~~~~~~
 
-Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
+Genestack Platform provides a rich collection of public datasets from SRA, ENA, GEO
 and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
-100,000 public experiments indexed in Genestack.
+100,000 public datasets indexed in Genestack.
 
-The Experiment Browser allows to browse these public datasets, as well as your private
-experiments or the ones shared with you on Genestack. You can access the Experiment
-Browser either from the **Dashboard** or the **Shortcuts Menu** on the left-hand side.
+The Data Browser allows to browse these public datasets, as well as your private
+data and the data shared with you on Genestack. You can access the Data
+Browser either from the **Dashboard** or the **Shortcuts menu** on the left-hand side.
 
 You can search relevant data with **a free-text query**, and you can further
-filter down experiments by **metadata attributes** using the checkboxes
-on the left. These attributes are generated based on the metadata available for experiments.
+filter down datasets by **metadata attributes** using the checkboxes
+on the left. These attributes are generated based on the metadata available for datasets.
 For instance, you can set the filters "Access", "Method"
-and "Organism" to "Public", "Whole Genome Sequencing", "Mus musculus", respectively,
-to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
+and "Organism" to "Public", "Whole Exome Sequencing", "Mus musculus", respectively,
+to filter out publicly accessible data on mice obtained from mouse WES data.
 
-.. image:: images/experiment-browser.png
+.. image:: images/data-browser.png
 
-Click **Save N matching assays** link to explore
-the list of matching assays and save them into one folder.
-
-.. image:: images/save-matching-assays.png
-
-Moreover, Experiment Browser allows you to find bioinformatics analyses results
-associated with raw data. If there are analysis performed on a given experiment,
+Data Browser allows you to find bioinformatics analyses results
+associated with raw data. If there are analysis performed on a given dataset,
 and you have access to these results (i.e. they are yours, or they are shared with you),
-then under the experiment name you will see a **View N analysis results** link.
-Clicking it shows you the list of existing resulting files such as, for example, QC reports
-or Genome Browser pages.
+then you will find both intermediate results and reports in the column **Downstream**.
 
 .. image:: images/analysis-results.png
 
-Clicking on the name of any of the experiments will take you to
+Clicking on the name of any of the datasets will take you to
 the **Metainfo editor**, where you can view (and possibly edit) the metadata of this
-experiment and its assays.
+dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-Besides that, on the Metainfo Editor page you can run the assays through a pipeline via the button
-**Start new data flow with application**. You can either use an existing data flow matching the assays, or build a
+Besides that, on the Metainfo editor page you can run the assays through a pipeline via the button
+**Use dataset...**. You can either use an existing data flow matching the assays, or build a
 new pipeline step by step.
 
 .. image:: images/new-df.png
 
-From the Metainfo Editor, you can also open the experiment in the **File Manager** by clicking on
-the experiment's name at the top of the page and selecting **Explore > File Manager**.
-
-.. image:: images/from-ME-to-FB.png
 
 File manager
 ~~~~~~~~~~~~
