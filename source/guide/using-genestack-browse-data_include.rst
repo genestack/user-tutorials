@@ -59,22 +59,18 @@ Here you can see many different folders. Some special folders are worth mentioni
 
 **Created files** is the folder where any new file created by an application on Genestack goes.
 
-The files are organized by date, with oldest ones on top; however, you
-can change this order to show the most recent ones - just click on the
-header of the "Last Update" column.
-
 **Imported files** is where imported data goes, organized by
 date: all files imported at the same time (during one import action)
 will be located in the same folder. 
 
-**Uploads** contains all the files you have uploaded into Genestack -
+**Uploads** contains all the files you have uploaded into Genestack —
 FASTQ and BAM files, pdf documents, excel tables etc.
 
 
 .. note:: **What is the difference between uploads and imported files?**
 
           When you have just started importing your files (in various formats like
-          FASTQ, BAM etc), they all go to the specific storage area (the "Uploads"
+          FASTQ, BAM etc.), they all go to the specific storage area (the "Uploads"
           folder). During import, Genestack will recognize these uploaded files and
           allocate them to appropriate biological types (you can also do it
           manually), e.g. sequencing assays, mapped reads etc. These meaningful
@@ -83,13 +79,10 @@ FASTQ and BAM files, pdf documents, excel tables etc.
 
 The **Exports** folder contains data ready for export. See the :ref:`data-export-label` section for more information.
 
-Below these four grouped folders, you will see two more: Shared with me
-and Public Data.
-
-**Shared with me** contains all files that other users have shared with
+**Shared with me** give access to all files that other users have shared with
 you or that you shared with other users. See the :ref:`sharing-label` section for more details.
 
-**Public Data** contains all of the goodies we have preloaded on Genestack
+**Public Data** folder contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
 
 .. image:: images/public-data.png
@@ -97,27 +90,26 @@ to make life a bit simpler for our users. This folder contains:
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
    etc.;
-#. **Dictionaries**: used for metainfo editing and curation, e.g. sex,
-   sequencing platform, NCBI taxonomy. Read more about dictionaries in
-   "Data and Metainfo Management" section;
+#. **Dictionaries**: dictionaries include terms from external ontologies and are used to
+   curate and harmonize metainfo, e.g. sex, platform, NCBI taxonomy.
 #. **Example results**: so you can play around with our platform and see
    what types of visualizations are available;
-#. **External databases**: sets of sequences with associated annotation;
-   e.g. greengenes for 16S rRNA;
+#. **External databases**: sets of sequences with associated annotation,
+   e.g. Greengenes for 16S rRNA;
 #. **Genome annotations**: for a range of different organisms and platforms
-    (for WES Analysis);
+   (for WES analysis);
 #. **Microarray annotations**: annotation lists to be used as the
    translation table to link probes and common public domain sequences;
 #. **Public analyses**: all files created during re-analysis of previously
-   published data sets;
+   published datasets;
 #. **Reference genomes**: various reference genomes for the most commonly
    analysed organisms;
 #. **Public data flows**: all data flows available to our users, including
-   tutorial data flows and the ones found on the Welcome page;
-#. **Public experiments**: this is a feature we’re particularly proud of. We
+   tutorial data flows and the ones found on the Dashboard;
+#. **Public experiments**: this is a feature we are particularly proud of
    have pre-loaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
-   ArrayExpress, SRA, and ENA. Currently we have about 100,000
+   ArrayExpress, SRA, and ENA. Currently we have more than 110,000
    experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
