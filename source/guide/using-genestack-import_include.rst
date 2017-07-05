@@ -10,7 +10,7 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Microarray Assay** — raw microarray data obtained from a microarray
   experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
 - **Infinium Microarray Assay** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
-- **Sequencing Assay** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
+- **Raw Reads** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
 - **Microarray Annotation** — annotation file containing information about
   association of microarray probes to biological entities like genes,
   transcripts and proteins;
@@ -47,9 +47,7 @@ types, which cannot be imported. They include:
 - **Genome Annotations** — A technical file used for matching GO terms and
   gene symbols to gene coordinates;
 - **Mapped Read Counts** — The number of reads mapped to each feature of a reference
-  sequence. Produced from Mapped Reads files;
-- **Raw Reads** — Raw sequencing data that does not need to be associated with
-  an experiment (as opposed to a sequencing assay);
+  sequence. Produced from Mapped Reads files.
 
 Data import
 ~~~~~~~~~~~
