@@ -173,21 +173,24 @@ inside the search box.
 
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
-folders. **To add** files to your briefcase, hover over each
-individual file and use the special "briefcase" button that appears or
-select several files, right-click on them and choose "Add to
-briefcase...". **To delete** an item from your briefcase hover over it and
+folders. **To delete** an item from your briefcase hover over it and
 click on the "x" button. **To clear all** items from the briefcase, select
 the "Clear all" option.
 
-.. image:: images/brief-case.png
+.. image:: images/brief-case-1.png
+
+**To add** files to your briefcase, hover over each
+individual file and use the special "briefcase" button that appears or
+select several files, right-click on them and choose "Add to
+briefcase...".
+
+.. image:: images/brief-case-2.png
 
 If you select a file, **three additional** buttons will show up, allowing
 you to **share**, **delete** the file or **view metainfo** (an "eye"-icon) for
 the file.
 
-.. image:: images/3buttons-1.png
-.. image:: images/3buttons-2.png
+.. image:: images/3buttons.png
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).
