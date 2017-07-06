@@ -82,7 +82,7 @@ By default, newly added users will be granted the lowest permission level
 
 .. TODO I don't like the fact that we are linking to tutorials and videos from here
 
-Learn more on how to Create and Manage Groups `in our tutorial`_.
+Learn more on how to create and manage groups `in our tutorial`_.
 
 .. _in our tutorial: https://genestack.com/tutorial/managing-and-sharing-data/
 
@@ -105,7 +105,7 @@ giving members the ability to edit the files in addition to just viewing them.
 
 .. image:: images/sharing_dialog.png
 
-Once you click the blue "Share" button, you will be prompted for your password,
+Once you click the blue **Share** button, you will be prompted for your password,
 and then asked whether you would like to link the file into the group's shared
 folder.
 
@@ -125,3 +125,14 @@ Manager under "Shared with me" in the left-hand side panel.
 
 All files you share with other people, along with all files shared with you,
 will be located in that folder.
+
+It is also possible to share files directly from the application pages;
+for example to share FastQC Report with your collaborators you should click the QC-report
+name and select Share option in the drop-down list.
+
+.. image:: images/share-in-bioapp.png
+
+Besides, you can share your datasets from the Metainfo editor page with the button Share.
+
+.. image:: images/share-in-ME.png
+
