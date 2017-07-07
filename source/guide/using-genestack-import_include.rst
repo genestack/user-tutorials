@@ -7,9 +7,9 @@ Supported file types
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
-- **Microarray Assay** — raw microarray data obtained from a microarray
+- **Microarray Data** — raw microarray data obtained from a microarray
   experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
-- **Infinium Microarray Assay** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
+- **Infinium Microarray Data** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
 - **Raw Reads** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
 - **Microarray Annotation** — annotation file containing information about
   association of microarray probes to biological entities like genes,
@@ -24,6 +24,12 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   with annotation; (FASTA and GTF/GFF);
 - **Variation Files** — Genetic Variations files, storing gene sequence
   variations (VCF).
+
+.. Gene Expression Signature
+- Gene List
+- Infinium Methylation Beta Values
+- Methylation Array Annotation
+- Ontology Files
 
 When you upload microarrays or sequencing assays onto the platform, they will
 be automatically imported as a dataset.
