@@ -59,7 +59,7 @@ the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
 .. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 .. image:: images/fastqc_report.png
 
-One way to start the analysis is to manually run the FastQC Report app. To do so you can
+One way to start the analysis is to manually run the FastQC Report. To do so you can
 select the dataset to be analysed, then on the Metainfo Editor page pick up raw reads, click
 **Use dataset** button and from the dropdown menu choose **FastQC Report** as shown in the picture below.
 
@@ -249,19 +249,20 @@ due to technical biases.
 *Improving data quality*: procedures and caveats for improving data quality
 are the same as for sequence duplication level.
 
+.. move Multiple QC before exploring a single QC report
 
-You can explore all the generated reports at the same time on one page with **Multiple QC report** application.
+You can explore all the generated FastQC reports at the same time and on one page
+with **Multiple QC report** application. All the FastQC reports are kept together in
+a "FastQC Report" dataset in the "My Datasets" folder.
 
 Multiple QC report
 ++++++++++++++++++
 
 **Action**: to display metrics from multiple reports at once. It accepts as
-input a collection of QC reports. For example, let's select our FastQC report
-in order to compare them in **Multiple QC Report**.
-
-.. image:: images/multiple_qc_report.png
+input a dataset of QC reports.
 
 Select from a range of QC keys to display on the plot, e.g. Total nucleotide
+count (mate 1 and 2), Number of reads (mate 1 and 2):
 count (mate 1 and 2), Number of reads (mate 1 and 2):
 
 .. image:: images/multiple_qc_report_qc_keys.png
@@ -294,9 +295,7 @@ Subsample reads
 
 **Action**: to create a random subset of raw reads.
 
-.. image:: images/preprocessing_subsample_reads.png
-
-Let's look at the options:
+**Command line options**:
 
 1. The **Random  seed** value will let you create different subsets with the same
    number of reads. (default: 100)
@@ -317,8 +316,6 @@ Filter duplicated reads
 a sequence of two paired reads or a single read occurs multiple times in a
 library, the output will include only one copy of that sequence.
 
-.. image:: images/preprocessing_filter_duplicated_reads.png
-
 The phred quality scores are created by keeping the highest score across all
 identical reads for each position.
 
@@ -334,11 +331,11 @@ RNA-seq data as it will remove observed differences in expression level.
 Filter by quality scores
 ++++++++++++++++++++++++
 
-**Action**: to discard reads from a sequencing assay based on Phred33 quality
+**Action**: to discard reads from a Raw reads file based on Phred33 quality
 scores. The application classifies the sequence as pass or fail calculating
 quality score distribution for each read.
 
-.. image:: images/preprocessing_filter_by_quality_scores.png
+**Command line options**:
 
 1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cuttoff
    value. A score of 20 means that there is a 1% chance that the corresponding
@@ -381,8 +378,6 @@ Trim adaptors and contaminants
 **Action**: to find and trim adaptors and known contaminating sequences from
 raw reads data.
 
-.. image:: images/preprocessing_trim_adaptors_and_contaminants.png
-
 The application uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible primers and adaptors which the
 most popular sequencing technologies and platforms uses. For instance, it
@@ -394,6 +389,8 @@ contains widely used PCR primers and adaptors for Illumina, ABI etc. (see the
 The occurrence threshold before adapter clipping is set to 0.0001. It refers to
 the minimum number of times an adapter needs to be found before clipping is
 considered necessary.
+
+**Command line options**:
 
 **Minimum length of the trimmed sequence (bp)**. The application will discard
 trimmed reads of length below this number. (default: 15)
@@ -412,8 +409,6 @@ Trim low quality bases
 ++++++++++++++++++++++
 
 **Action**: to isolate high-quality regions from raw reads.
-
-.. image:: images/preprocessing_trim_low_quality_bases.png
 
 Trim Low Quality Bases application is based on the `Phred algorithm`_. It finds
 the longest subsequence in read where the estimated error rate is below the
@@ -443,7 +438,7 @@ Trim reads to fixed length
 **Action**: to trim a specific amount of bases from the extremities of all
 reads in a sample.
 
-.. image:: images/preprocessing_trim_to_fixed_length.png
+**Command line options**:
 
 1. The **Keep bases from position** option asks you to specify the first base that
    should be kept. (default: 1)
