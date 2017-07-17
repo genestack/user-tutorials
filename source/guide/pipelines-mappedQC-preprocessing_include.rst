@@ -11,9 +11,8 @@ Mapped reads QC report
 **Action**: to perform quality control (QC) of mapped reads.
 
 We follow a similar procedure to the one used to generate FastQC reports.
-After selecting all the mapped reads we wish to check the quality of, we can
-use the `Mapped Reads QC`_ public data flow, initialize the computations, and
-then explore the results.
+After selecting the mapped reads we wish to check the quality of, we can
+run the `Mapped Reads QC`_ public data flow.
 
 .. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
@@ -54,7 +53,7 @@ statistics:
 This plot shows the percentage of reads covered by at least x reads. To clear
 it up, let's just imagine that we have a plot which shows coverage only for one
 chromosome and therefore it shows 1 line. If on the x-axis we have e.g. 100
-reads, on y-axis - 10% (percentage of chromosome bases covered by 100 reads).
+reads, on y-axis — 10% (percentage of chromosome bases covered by 100 reads).
 So, it looks like we have 100-reads coverage for 10% of chromosome.
 
 The amount of coverage you are expecting varies with the experimental
@@ -136,15 +135,13 @@ The following enrichment statistics are computed:
 - Mean coverage on target with at least 2X coverage;
 - Target bases with at least 2X, 10X, 20X, 30X, 40X, and 50X coverage.
 
-You can generate these reports directly by choosing Mapped Reads files, right
+You can generate these reports directly by choosing Mapped Reads datasets, right
 clicking on them and selecting the appropriate application (in "Explore" section) or
-using the "Run data flow on selection..." option and `Targeted Sequencing Quality
-Control`_ public data flow.
+using the `Targeted Sequencing Quality Control`_ public data flow.
 
 .. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
 
-You can analyse the output for multiple reports at once using the Multiple QC
-Report application.
+You can analyse the output for multiple reports at once using the **Multiple QC Report** application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
@@ -169,7 +166,7 @@ duplicated mapped reads in this excellent `SeqAnswers thread`_.
 
 .. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t=6854
 
-**Action**: to go through all reads in a mapped reads sample, marking as
+**Action**: to go through all reads in a mapped reads file, marking as
 "duplicates" for paired or single reads where the orientation and the 5’
 mapping coordinate are the same.
 
@@ -235,7 +232,7 @@ This application is based on the **MarkDuplicates**, part of the Picard_ tools.
 Subsample reads
 +++++++++++++++
 
-You can use this application if you want to take a look at what your final
+You can use this application, for example, if you want to take a look at what your final
 experimental results will look like, but do not want to spend time processing
 all your data right away.
 
@@ -277,6 +274,6 @@ other aligner.
 
 **Action**: to convert mapped reads into unaligned reads.
 
-This application is based on the Picard_ tool.
+This application is based on the Picard_ toolkit.
 
 .. _Picard: http://broadinstitute.github.io/picard/
