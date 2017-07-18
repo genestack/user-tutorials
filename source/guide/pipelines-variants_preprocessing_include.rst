@@ -15,8 +15,6 @@ and about Indels.
 
 **Action**: to merge two or more Genetic Variations files into a single file.
 
-.. image:: images/merge_variants.png
-
 This application is based on the `BCFtools`_.
 
 .. _BCFtools: http://samtools.github.io/bcftools/bcftools.html
@@ -31,11 +29,11 @@ Variations files for each chromosome, and simply wanted to join them
 **Action**: to join two or more Genetic Variations files by concatenating them
 into a larger, single file.
 
-.. image:: images/concatenate_variants.png
-
 The application always allows overlaps so that the first position at the start
 of the second input will be allowed to come before the last position of the
 first input.
+
+**Command line options:**
 
 1. The **Remove duplicated variants** option checks for the duplicated variants and
    makes sure that there are no redundant results. (default: unchecked)
