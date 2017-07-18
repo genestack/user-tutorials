@@ -24,7 +24,7 @@ transcriptome, or de novo assembly.
           a specific cell type.
 
 
-There are at least two types of mapping strategies - Spliced Mapping and
+There are at least two types of mapping strategies — Spliced Mapping and
 Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
 so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
