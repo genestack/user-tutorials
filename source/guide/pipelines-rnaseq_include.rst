@@ -9,13 +9,13 @@ transcriptome, or de novo assembly.
 
 .. note:: **What is the difference between genome, exome and transcriptome**?
 
-          Genome includes both coding (genes) and noncoding DNA in a given cell
+          *Genome* includes both coding (genes) and noncoding DNA in a given cell
           type.
 
-          Exome is a  part of genome formed by exons, i.e it includes all
+          *Exome* is a  part of genome formed by exons, i.e it includes all
           DNA that is transcribed into mRNA.
 
-          Transcriptome is a collection of all mRNAs present in a given cell
+          *Transcriptome* is a collection of all mRNAs present in a given cell
           type. In comparison to the genome, the transcriptome is dynamic in
           time (within the same cell type) in response to both internal and
           external stimuli. Thus, the transcriptome derived from any one cell
@@ -24,8 +24,8 @@ transcriptome, or de novo assembly.
           a specific cell type.
 
 
-There are at least two types of mapping strategies — Spliced Mapping and
-Unspliced Mapping. In case of RNA-seq data, reads are derived from mature mRNA,
+There are at least two types of mapping strategies — spliced mapping and
+unspliced mapping. In case of RNA-seq data, reads are derived from mature mRNA,
 so there is typically no introns in the sequence. For example, if the read spans
 two exons, the reference genome might have one exon followed by an intron.
 
@@ -38,20 +38,20 @@ two exons, the reference genome might have one exon followed by an intron.
           which is further used to synthesize proteins.
 
 
-In this case, if you will use Unspliced Mapper, the reference genome would find
+In this case, if you will use Unspliced mapper, the reference genome would find
 a matching sequence in only one of the exons, while the rest of the read would
 not match the intron in the reference, so the read cannot be properly aligned.
 When analysing RNA-seq data using unspliced aligner, the reads may be mapped to
 potentially novel exons, however reads spanning splice junctions are likely to
 remain unmapped.
 
-In contrast, Spliced Mappers would know not to try to align RNA-seq reads to
+In contrast, Spliced mappers would know not to try to align RNA-seq reads to
 introns, and would somehow identify possible downstream exons and try to align
 to those instead ignoring introns altogether. Taking this into account, we
-recommend you use Spliced Mapping applications to analyse RNA-seq data.
+recommend you use Spliced mapping applications to analyse RNA-seq data.
 
-On Genestack, you will find two spliced aligners - Spliced Mapping with
-Tophat2 and Spliced Mapping to Transcriptome with STAR.
+On Genestack, you will find two spliced aligners - "Spliced mapping with
+Tophat2" and "Spliced mapping to transcriptome with STAR".
 
 .. TODO: Add a forum post on the differences between the two spliced mappers and paste a link on it here.
 
@@ -67,11 +67,6 @@ reference genome, taking or not taking into account splice junctions.
           Splice junctions are exon-intron boundaries, at which RNA splicing
           takes place. For example, to cut an intron (between two exons) you
           need to splice in two places so that two exons might be jointed.
-
-
-Let’s have a look at the application page and talk about various parameters:
-
-.. image:: images/rna-seq_spliced_mapping_tophat.png
 
 Details on various settings:
 
@@ -132,10 +127,6 @@ quantification of the novel splice junctions. Taking all these features into
 account, the "Spliced Mapping to Transcriptome with STAR" application can be a
 very good alternative to other RNA-seq aligners.
 
-Here is the application page:
-
-.. image:: images/rna-seq_spliced_mapping_star.png
-
 Now, let's look through the application parameters:
 
 1. The **Enable two pass mapping mode** option is recommended for sensitive novel
@@ -182,9 +173,7 @@ isoform expression levels from RNA-seq data.
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 
-Let's look at the application page and discuss the parameters available there.
-
-.. image:: images/rsem_report.png
+**Command line options**:
 
 1. **The RNA-seq protocol used to generate the reads is strand specific**. If
    the reads are strand-specific, check this option. (default: unchecked)
@@ -208,20 +197,20 @@ and isoform level expression estimates.
 The output report represents a table with the following main columns:
 
 - *transcript_id* - name of the transcript;
-- *gene_id* - name of the gene which the transcript belongs to. If no gene
+- *gene_id* — name of the gene which the transcript belongs to. If no gene
   information is provided, gene\_id and transcript\_id are the same;
-- *length* - transcript's sequence length (poly(A) tail is not counted);
-- *effective_length* - counts only the positions that can generate a valid
+- *length* — transcript's sequence length (poly(A) tail is not counted);
+- *effective_length* — counts only the positions that can generate a valid
   fragment. If no poly(A) tail is added, effective length is equal to
-  transcript length - mean fragment length + 1. If one transcript's effective
+  transcript length — mean fragment length + 1. If one transcript's effective
   length is less than 1, this transcript's both effective length and abundance
   estimates are set to 0;
-- *expected_count* - the sum of the posterior probability of each read comes
+- *expected_count* — the sum of the posterior probability of each read comes
   from this transcript over all reads;
-- *TPM* - transcripts per million normalized by total transcript count in
+- *TPM* — transcripts per million normalized by total transcript count in
   addition to average transcript length;
-- *FPKM* - fragments per kilobase of exon per million fragments mapped;
-- *IsoPct* - the percentage of the transcript's abundance over its parent
+- *FPKM* — fragments per kilobase of exon per million fragments mapped;
+- *IsoPct* — the percentage of the transcript's abundance over its parent
   gene's abundance. If the parent gene has only one isoform or the gene
   information is not provided, this field will be set to 100.
 
@@ -238,14 +227,12 @@ input a mapped reads file, and uses a reference genome to produce a mapped
 reads counts file, indicating how many reads overlap each gene specified in the
 genome's annotation.
 
-.. image:: images/htseq_count_app.png
-
 Let's go through the application parameters:
 
 1. **Feature type** option. Depending on your tasks, you should specify the
    feature type for which overlaps choosing from "exon", "CDS" (coding DNA
-   sequence), "3’UTR" (the 3’  untranslated region) or "5’UTR" (the 5’
-   untranslated region). For example, you may consider each exon as a feature
+   sequence), "3’UTR" (the 3’ untranslated region) or "5’UTR" (the 5’untranslated region).
+   For example, you may consider each exon as a feature
    in order to check for alternative splicing. By default, the "gene-id" will
    be used as a feature identifier. (default: exon)
 2. The **Rule for overlaps** option dictates how mapped reads that overlap genomic
@@ -269,13 +256,13 @@ Let's go through the application parameters:
    can be useful if your data is strand-specific and you are interested in
    counting of reads overlapping with feature regarding to whether these reads
    are mapped to the same or the opposite strand as the feature. Choose "Yes",
-   if the reads were mapped to the same strand as the feature and "Reverse" -
+   if the reads were mapped to the same strand as the feature and "Reverse" —
    if the reads were mapped on the opposite strand as the feature. Specify
    "No", if you do not consider strand-specificity. (default: Yes)
 
 This application is based on the HTSeq_ tool and used in `Differential Gene
 Expression Analysis pipeline`_. After calculating read abundance on the gene
-level, you'll be able to run **Test Differential Gene Expression** application.
+level, you will be able to run **Test Differential Gene Expression** application.
 
 .. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
 .. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
@@ -295,7 +282,6 @@ originated from. Note, that the application accepts reference transcriptome
 (cDNA) not a genome (DNA).
 
 .. _Expectation-Maximization algorithm: https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
-.. image:: images/kallisto.png
 
 Let's inspect the application options:
 
@@ -329,12 +315,12 @@ Kallisto output report.
 
 It contains a table with the following main columns:
 
-- *target_id* - feature name, e.g. for transcript, gene;
-- *length* - feature length;
-- *eff_length* - effective feature length, i.e. a scaling of feature length by
+- *target_id* — feature name, e.g. for transcript, gene;
+- *length* — feature length;
+- *eff_length* — effective feature length, i.e. a scaling of feature length by
   the fragment length distribution;
-- *est_counts* - estimated feature counts;
-- *tpm* - transcripts per million normalized by total transcript count in
+- *est_counts* — estimated feature counts;
+- *tpm* — transcripts per million normalized by total transcript count in
   addition to average transcript length.
 
 The application is based on the Kallisto_ tool.
@@ -354,8 +340,6 @@ reads (corresponding to isoform alignment) and reference genome as inputs. The
 output is a file containing isoform counts. Several such files corresponding to
 samples with different biological conditions and isoforms can be further used
 in **Test Differential Isoforms Expression** application.
-
-.. image:: images/cuffquant.png
 
 Before running the application, you can choose the following parameters:
 
@@ -383,14 +367,14 @@ samples. The application accepts Mapped Read Counts (from the "Quantify Raw
 Coverage in Genes" application) and generates Differential Expression
 Statistics file which you can view with the Expression Navigator application.
 
-.. image:: images/test_differential_gene_expression.png
+Options:
 
 1. The "**Group samples by**" option allows you to apply autogrouping, i.e. when the
    application helps you to group your samples according to experimental factor
    indicated in metainfo for the samples (e.g. disease, tissue, sex, cell type,
    cell line, treatment, etc.). (default: None)
-2. **Methods for differential expression**. The application supports two
-   methods - "DESeq2" and "edgeR" statistical R packages - to perform
+2. **Method for differential expression**. The application supports two
+   methods — "DESeq2" and "edgeR" statistical R packages — to perform
    normalization across libraries, fit negative binomial distribution and
    likelihood ratio test (LRT) using generalized linear model (GLM). (default:
    DESeq2)
@@ -437,7 +421,7 @@ Look at all result tables and plots in Expression Navigator application.
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on two R packages - `DESeq2`_ and `edgeR`_.
+This application is based on`DESeq2`_ and `edgeR`_ R packages.
 
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
@@ -448,9 +432,7 @@ Test differential isoform expression
 **Action**: to perform differential isoform expression analysis between groups
 of samples. The application accepts FPKM Read Counts (from Quantify FPKM
 Coverage in Isoforms application) and generates Differential Expression
-Statistics file which↵you can view in Expression Navigator application.
-
-.. image:: images/test_differential_isoform_expression.png
+Statistics file which you can view in Expression Navigator application.
 
 The application has the following options:
 
@@ -508,7 +490,7 @@ expression analyses.
 
 .. image:: images/expression_navigator_for_RNA-seq.png
 
-The Expression Navigator page contains 4 sections:
+The Expression Navigator page contains four sections:
 
 1. **Groups Information** section. It is a summary of the groups available for
    comparison. Size refers to the number of samples used to generate each
@@ -542,7 +524,7 @@ Let’s look through these statistics:
 
 - **log-counts per million**: dividing each read count by the total read counts in
   the sample, and multiplying by 10^6 gives counts per million (CPM).
-  log-counts per million are obtained by taking the logarithm of this value in
+  Log-counts per million are obtained by taking the logarithm of this value in
   base 2.
 
 - **p-value**. The application also computes a p-value for each gene. A low
@@ -601,8 +583,6 @@ spike-in data (artificially introduced RNAs of known abundance) to calibrate a
 noise model. The second method is a non-parametric algorithm based on
 smoothing splines and does not require the presence of spike-in data.
 
-.. image:: images/single-cell_rna-seq_analysis.png
-
 To identify highly variable genes you can try different options:
 
 1. The **Use spike-ins to calibrate noise** option determines whether or not
@@ -621,7 +601,7 @@ The next three options will be available if spike-ins are included in the
 experiment and "Use spike-ins to calibrate noise" option is switched:
 
 4. The **Expected biological CV** is the minimum threshold chosen for quantifying
-   the level of biological variability (CV - coefficient of variation)
+   the level of biological variability (CV — coefficient of variation)
    expected in the null hypothesis of the model. (default: 0.5)
 5. The **Noise fit - proportion of genes with high CV² to remove** option allows
    you to exclude spike-in genes with high CV² to fit the noise model.
@@ -756,6 +736,6 @@ t-SNE transformation is computed using the Rtsne_ package.
 .. _knn: https://stat.ethz.ch/R-manual/R-devel/library/class/html/knn.html
 .. _Rtsne: https://cran.r-project.org/web/packages/Rtsne/index.html
 
-Read `our blog post`_ about the application and single-cell RNA-seg analysis.
+Read `our blog post`_ about the application and single-cell RNA-seq analysis.
 
 .. _our blog post: https://genestack.com/blog/2016/02/22/visualisation-clustering-methods-single-cell-rna-seq-data/`_
