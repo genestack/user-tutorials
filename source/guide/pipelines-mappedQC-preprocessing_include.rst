@@ -272,7 +272,7 @@ The application will be very useful when you are interested in fraction of reads
 that exactly will map to genome or when you would like to remap the reads with
 other aligner.
 
-**Action**: to convert mapped reads into raw reads.
+**Action**: to convert a Mapped reads file to raw reads.
 
 This application is based on the Picard_ toolkit.
 

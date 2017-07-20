@@ -123,8 +123,6 @@ outputs the all identified variants in the Genetic Variations file.
 
 Let's now look at the command line options more closely:
 
-.. image:: images/variant_calling_command_line_options.png
-
 1. **Variants to report** option. The application can call both "SNPs and
    INDELs" variants, "SNPs only" or "INDELs only". (default: "SNPs and INDELs")
 2. **Call only multi-allelic variants** option. The multiallelic calling is
@@ -293,6 +291,8 @@ for heterozygous samples (DP HET).
           of each of the reference and alternate alleles) or 1 (homozygous
           alternate).
 
+
+.. How to annotate found human variants to dbNSFP (1000 genomes data)
 
 To change the default columns or add more columns, choose them in the
 corresponding tabs in "Columns" section and "Save" your changes. After

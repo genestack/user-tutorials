@@ -4,7 +4,7 @@ Microarray data
 Scientists are using DNA microarrays to quantify gene
 expression levels on a large scale or to genotype multiple regions of a genome.
 
-.. note:: **What is a DNA Microarray?**
+.. note:: **What is a DNA microarray?**
 
           It is a collection of microscopic DNA spots attached to a solid
           surface. Each spot contains multiple identical DNA sequences (known
@@ -50,8 +50,6 @@ Affymetrix microarrays normalisation
 
 **Action**: to perform normalisation of Affymetrix microarray assays.
 
-.. image:: images/affymetrix_normalization.png
-
 To normalize Affymetrix microarrays the application uses RMA (Robust
 Multi-array Average) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
@@ -73,8 +71,6 @@ Agilent microarrays normalisation
 *********************************
 
 **Action**: to perform normalisation of Agilent microarray assays.
-
-.. image:: images/agilent_normalisation.png
 
 For 1-channel Agilent microarrays, various procedures for background
 correction (e.g. "subtract", "half", "minimum", "normexp"), and between-array
@@ -131,7 +127,7 @@ L1000 microarrays normalisation
 
 .. image:: images/l1000_normalisation.png
 
-To normalize L1000 microarrays, the application applys the "quantile" method
+To normalize L1000 microarrays, the application uses the "quantile" method
 for between-array normalisation.
 
 As a next step, the normalised microarray samples can be assessed using the **Microarray
@@ -148,8 +144,6 @@ so that the data can be considered reliable.
 
 **Action**: to perform quality assessment of normalised microarrays and detect
 potential outliers.
-
-.. image:: images/microarray_qc.png
 
 The application generates report containing quality metrics based on
 between-array comparisons, array intensity, variance-mean dependence and
@@ -413,14 +407,14 @@ dose. These results are presented in an interactive table.
 
 The table includes information about:
 
-- *PROBE ID* - chip-specific identifier of the microarray probe;
-- *GENE* - the gene symbol corresponding to that probe (according to the
+- *PROBE ID* – chip-specific identifier of the microarray probe;
+- *GENE* – the gene symbol corresponding to that probe (according to the
   microarray annotation file). Clicking on the gene name will show you a list
   of associated gene ontology (GO) terms;
 
 .. image:: images/dose_response_analysis_gene_ontology.png
 
-- *BMD* - the benchmark dose, corresponding to the dose above which the
+- *BMD* – the benchmark dose, corresponding to the dose above which the
   corresponding gene shows a significant change in expression, according to the
   best-fitting of the 3 models used. It is calculated using the following
   formula:
@@ -430,17 +424,17 @@ The table includes information about:
   standard deviation of the response at dose 0, which we approximate by the
   sample standard deviation of the model residuals.
 
-- *BEST MODEL* - the model with the optimal Akaike Information Criterion (AIC)
+- *BEST MODEL* – the model with the optimal Akaike Information Criterion (AIC)
   among the 3 models that were fitted for the gene ; the AIC rewards models
   with small residuals and penalizes models with many coefficients, to avoid
   overfitting;
-- *MEAN EXPR* - average expression of the gene across all doses;
-- *T* - the moderated t-statistic computed by limma to test for differential
+- *MEAN EXPR* – average expression of the gene across all doses;
+- *T* – the moderated t-statistic computed by limma to test for differential
   expression of the gene;
-- *P* - unadjusted p-value testing for differential expression of the gene
+- *P* – unadjusted p-value testing for differential expression of the gene
   across doses;
-- *FDR* - false discovery rate (p-value, adjusted for multiple testing);
-- *B* - B statistic computed by limma to test for differential expression of
+- *FDR* – false discovery rate (p-value, adjusted for multiple testing);
+- *B* – B statistic computed by limma to test for differential expression of
   the gene. Mathematically, this can be interpreted as the log-odds that the
   gene is differentially expressed.
 
@@ -457,14 +451,14 @@ file supplied to the analysis application.
 
 The table includes:
 
-- *PATHWAY* - pathway name, e.g. "Iron metabolism in placenta";
-- *SIZE* - pathway size, i.e. how many genes are involved in the given pathway;
-- *DE GENES* - how many pathway genes are found to be differentially expressed
+- *PATHWAY* – pathway name, e.g. "Iron metabolism in placenta";
+- *SIZE* – pathway size, i.e. how many genes are involved in the given pathway;
+- *DE GENES* – how many pathway genes are found to be differentially expressed
   in our data. Clicking on the specific pathway takes you to the "Genes" tab
   where you can get expression profiles and regression curves for the DE genes.
-- *P* - p-value;
-- *FDR* - false discovey rate value;
-- *BMD* - the pathway BMD is computed as the average of the BMDs of the
+- *P* – p-value;
+- *FDR* – false discovey rate value;
+- *BMD* – the pathway BMD is computed as the average of the BMDs of the
   significant genes involved in this pathway, computed with the model yielding
   the best AIC;
-- *BMD SD* - BMD standard deviation.
+- *BMD SD* – BMD standard deviation.
