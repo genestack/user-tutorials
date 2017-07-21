@@ -14,7 +14,6 @@ expression levels on a large scale or to genotype multiple regions of a genome.
           detection of targets labeled with a molecular marker of either
           radioactive or fluorescent molecules.
 
-
 Expression arrays
 ~~~~~~~~~~~~~~~~~
 
@@ -109,8 +108,6 @@ GenePix microarrays normalisation
 
 **Action**: to perform normalisation of GenePix microarray assays.
 
-.. image:: images/genepix_normalisation.png
-
 For GenePix microarrays, quantile between-array normalisation is performed and
 various procedures for background correction (e.g. "subtract", "half",
 "minimum", "normexp") can be applied.
@@ -124,8 +121,6 @@ L1000 microarrays normalisation
 *******************************
 
 **Action**: to perform normalisation of L1000 microarray assays.
-
-.. image:: images/l1000_normalisation.png
 
 To normalize L1000 microarrays, the application uses the "quantile" method
 for between-array normalisation.
@@ -215,7 +210,7 @@ and include:
   identification of intensity-dependent biases. The Y axis of the plot
   contains the log-ratio intensity of one array to the median array, which is
   called "M" while the X axis contains the average log-intensity of both
-  arrays - called "A". Typically, probe levels are not likely to differ a lot
+  arrays — called "A". Typically, probe levels are not likely to differ a lot
   so we expect a MA plot centered on the Y=0 axis from low to high intensities.
 
 .. image:: images/microarray_qc_MA_plot.png
@@ -259,8 +254,6 @@ The application requires normalized microarrays to calculate differential
 expression statistics (such as log-expr, log-fold change, p-value and
 FDR) and microarray annotation to map probe identifiers to the gene symbols.
 
-.. image:: images/test_differential_expression_microarrays.png
-
 Let's look at the options:
 
 1. **Group samples by** an experimental factor or condition that was specified
@@ -290,7 +283,7 @@ analysis.
 
 .. image:: images/en_microarrays_app_page.png
 
-The Expression Navigator page contains 4 sections:
+The Expression Navigator page contains four sections:
 
 1. **Groups Information** section. It is a summary of the groups available for
    comparison. Size refers to the number of samples used to generate each
@@ -298,11 +291,11 @@ The Expression Navigator page contains 4 sections:
 
 2. The **Top Differentially Expressed Genes** section allows you to choose which
    groups to compare and how to filter and sort identified differentially
-   expressed (DE) genes.
+   expressed genes.
 
 .. image:: images/en_microarrays_DE_genes_table.png
 
-You can filter DE genes by maximum acceptable false discovery rate (FDR), up
+You can filter differentially expressed genes by maximum acceptable false discovery rate (FDR), up
 or down regulation, minimum log fold change (LogFC), and minimum log counts
 per million (LogCPM).
 
@@ -329,7 +322,7 @@ Let's look through these statistics:
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
-Moreover, you can sort the DE genes by these statistics, clicking the small
+Moreover, you can sort the differentially expressed genes by these statistics, clicking the small
 arrows near the name of the metric in the table.
 
 .. image:: images/en_microarrays_sorting.png
@@ -405,7 +398,7 @@ unadjusted p-values.
 .. image:: images/dose_response_analysis_report.png
 
 Various regression models (linear, quadratic and Emax) are fitted for each
-identified DE gene to describe its expression profile as a function of the
+identified differentially expressed gene to describe its expression profile as a function of the
 dose. These results are presented in an interactive table.
 
 .. image:: images/dose_response_analysis_table.png
@@ -430,7 +423,7 @@ The table includes information about:
   sample standard deviation of the model residuals.
 
 - *BEST MODEL* – the model with the optimal Akaike Information Criterion (AIC)
-  among the 3 models that were fitted for the gene ; the AIC rewards models
+  among the 3 models that were fitted for the gene; the AIC rewards models
   with small residuals and penalizes models with many coefficients, to avoid
   overfitting;
 - *MEAN EXPR* – average expression of the gene across all doses;
@@ -460,7 +453,7 @@ The table includes:
 - *SIZE* – pathway size, i.e. how many genes are involved in the given pathway;
 - *DE GENES* – how many pathway genes are found to be differentially expressed
   in our data. Clicking on the specific pathway takes you to the "Genes" tab
-  where you can get expression profiles and regression curves for the DE genes.
+  where you can get expression profiles and regression curves for the differentially genes.
 - *P* – p-value;
 - *FDR* – false discovey rate value;
 - *BMD* – the pathway BMD is computed as the average of the BMDs of the
