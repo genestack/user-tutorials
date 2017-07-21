@@ -10,8 +10,9 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Microarray Data** — raw microarray data obtained from a microarray
   experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
 - **Infinium Microarray Data** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
-- **Infinium Methylation Beta Values** - methylation data matrices contained Beta-values (methylation ratios) for
-Illumina Infinium Microarrays (.tsv, .txt);
+- **Infinium Methylation Beta Values** - methylation data matrices contained Beta-values
+  (methylation ratios) for Illumina Infinium Microarrays (.tsv, .txt);
+
 .. need to verify **Methylation Array Annotation**
 
 - **Methylation Array Annotation** - methylation chip annotation containing information about
@@ -32,7 +33,7 @@ Illumina Infinium Microarrays (.tsv, .txt);
   variations (VCF);
 - **Gene List** - the file includes the list of genes for a specific organism (.gpr, .txt, .tsv);
 - **Gene Expression Signature** - the file includes the list of genes with expression pattern
- specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv).
+  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv).
 
 When you upload microarrays or sequencing assays onto the platform, they will
 be automatically imported as a dataset.
