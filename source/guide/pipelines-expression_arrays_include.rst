@@ -48,20 +48,20 @@ and GenePix_.
 Affymetrix microarrays normalisation
 ************************************
 
-**Action**: to perform normalisation of Affymetrix microarray assays.
+**Action**: to perform normalisation of Affymetrix microarray data.
 
-To normalize Affymetrix microarrays the application uses RMA (Robust
-Multi-array Average) method. First, the raw intensity values are background
+To normalize Affymetrix microarrays the application uses Robust
+Multi-array Average (RMA) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
 set on each array. For more on RMA, see `this paper`_.
 
 .. _this paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 The application is based on the affy_ R package.
 
@@ -95,10 +95,10 @@ For 2-channel Agilent microarrays, procedures for within-array normalisation
           estimation of the absolute levels of gene expression and only a sigle
           dye is used.
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 The application is based on the `limma`_ R package.
 
@@ -115,10 +115,10 @@ For GenePix microarrays, quantile between-array normalisation is performed and
 various procedures for background correction (e.g. "subtract", "half",
 "minimum", "normexp") can be applied.
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 L1000 microarrays normalisation
 *******************************
@@ -130,10 +130,10 @@ L1000 microarrays normalisation
 To normalize L1000 microarrays, the application uses the "quantile" method
 for between-array normalisation.
 
-As a next step, the normalised microarray samples can be assessed using the **Microarray
-Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 Microarray quality control
 ++++++++++++++++++++++++++
@@ -232,6 +232,11 @@ your data or continue differential expression or dose response analyses.
 The application is based on the ArrayQualityMetrics_ R package.
 
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
+
+.. add information about icons:
+On the left panel, you can see which symbols correspond to which QC criteria
+(e.g. the barcode symbol corresponds to distribution of signal intensitities).
+If a sample fails a QC criterion, the corresponding symbol will be attached to it
 
 Differential gene expression for microarrays
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -354,7 +359,7 @@ Compound dose response analysis
 Dose response analyser
 **********************
 
-**Action**: to identify differentially expressed (DE) genes, fit various dose
+**Action**: to identify differentially expressed genes, fit various dose
 response models (linear, quadratic and Emax), find the optimal model and
 compute benchmark dose and dose response for each gene for this model.
 
@@ -392,7 +397,7 @@ Dose response analysis viewer
 *****************************
 
 **Action**: to display dose response curves and benchmark doses for
-differentially expressed (DE) genes and enriched pathways. Note that if no
+differentially expressed genes and enriched pathways. Note that if no
 gene passed the FDR threshold specified in the dose response analysis
 application, the application will report the 1,000 genes with the smallest
 unadjusted p-values.
