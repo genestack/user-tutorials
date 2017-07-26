@@ -363,8 +363,6 @@ available one). It also requires a pathway annotation file to perform pathway
 enrichment analysis. Pathway files from Wikipathways are pre-loaded in the
 system.
 
-.. image:: images/dose_response_analysis.png
-
 The first step of the analysis is to identify genes that are significantly
 differentially expressed across doses. Once these are detected, multiple dose
 response models are fitted to each significant genes and statistics are
