@@ -181,11 +181,15 @@ platform as OWL, OBO or CSV file and attach it to the import template.
           Variations, etc.). Of course, if you’re only importing mapped reads, you don’t
           need to specify metainfo attributes for other data types.
 
-You can select which import template to use in two ways: from the Welcome
-Page, or during the 3rd step of the import process by right-clicking on the
-import template name ("Default template" is for the public one). You can add
-new import templates using the **Import Template Editor** application, which can be
-found by clicking "Add import template" from the Welcome Page or from the
+You can select which import template to use in two ways: from the Dashboard,
+or during the 3rd step of the import process by right-clicking on the
+import template name ("Default template" is for the public one). You can create a copy of existed
+import templates with **Make a copy** option in the context menu.
+
+.. image:: images/copy-import-template.png
+
+You can add new import templates using the **Import Template Editor** application, which can be
+found by clicking "Add import template" from the Dashboard or from the
 "Manage" submenu when you right click on an import template.
 
 .. image:: images/import_templates.png
@@ -224,7 +228,7 @@ specifying the required metainfo attributes. Keep in mind that file kinds are
 defined in Genestack - you will not be able to create a template entry for a
 file kind that is not used on the platform.
 
-When you’re done, click on the blue "Import data using this template" button.
+When you are done, click on the blue "Import data using this template" button.
 This will take you to the import page, where you can go through three import
 stages described above.
 
