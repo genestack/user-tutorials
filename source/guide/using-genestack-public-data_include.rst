@@ -6,7 +6,7 @@ Public experiments, automated data curation and managing metadata
 Our platform provides you with a huge collection of freely accessible experiments that we
 imported from various well-known repositories, such as GEO NCBI, ENA, SRA and Array Express.
 All the public experiments and assays are accompanied by original metainformation
-describing biological. Generally, this information is not standardized that makes operations
+describing biological data. Generally, this information is not standardized that makes operations
 with biological data, like browsing data and combining assays from several experiments or reproducing some
 analysis, difficult or even impossible without human participation.
 To harmonize raw metadata we apply **automated curation** where we map raw entries to
