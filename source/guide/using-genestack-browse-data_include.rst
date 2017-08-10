@@ -13,13 +13,13 @@ and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
 100,000 public datasets indexed in Genestack.
 
-The Data Browser allows to browse these public datasets, as well as your private
+The Data browser allows to browse these public datasets, as well as your private
 data and the data shared with you on Genestack. You can access the Data
 Browser either from the **Dashboard** or the **Shortcuts menu** on the left-hand side.
 
 You can search relevant data with **a free-text query**, and you can further
 filter down datasets by **metadata attributes** using the checkboxes
-on the left. These attributes are generated based on the metadata available for datasets.
+on the left. These attributes are generated based on the metadata associated with datasets.
 For instance, you can set the filters "Access", "Method"
 and "Organism" to "Public", "Whole Exome Sequencing", "Mus musculus", respectively,
 to filter out publicly accessible data on mice obtained from mouse WES data.
@@ -33,6 +33,13 @@ then you will find both intermediate results and reports in the column **Downstr
 
 .. image:: images/analysis-results.png
 
+If not all the samples meet your searching criteria, feel free to crete a subset of a dataset
+with matching samples and process the separately. To do so, click a link showing the number
+of matching files in the Data Browser column *Matched*, then, click
+**Make a subset with a matching files** button to save files matching to the set filters.
+
+.. image:: images/subset-in-databrowser.png
+
 Clicking on the name of any of the datasets will take you to
 the **Metainfo editor**, where you can view (and possibly edit) the metadata of this
 dataset and its assays.
@@ -43,7 +50,36 @@ Besides that, on the Metainfo editor page you can run the assays through a pipel
 **Use dataset...**. You can either use an existing data flow matching the assays, or build a
 new pipeline step by step.
 
+.. update img: use GSF802958 as an example
+
 .. image:: images/new-df.png
+
+What's more, you can analyse not only the entire dataset but also a part of it by
+selecting samples and clicking the **make a subset** button of the dataset (by default all subsets
+are created in the folder **My datasets**).
+
+.. image:: images/make-subset-ME.png
+
+Click a subset name to open it with Metainfo Editor
+application and edit its metainformation if it is needed.
+
+.. image:: images/subset-edit-metainfo.png
+
+If you are an owner of a given dataset, you can add more samples to your dataset by clicking
+on **Upload more files** button.
+
+.. image:: images/dataset-upload-more.png
+
+Besides, you can remove files from a dataset: select files you want to exclude and click
+**Remove files from dataset** button.
+
+.. image:: images/dataset-remove-1.png
+
+And if you are sure, confirm removing of the data by click **Remove** button. Remember that if
+the files you are going to exclude from a dataset are not used anywhere, they will be
+deleted from the platform without any possibility to restore.
+
+.. image:: images/dataset-remove-2.png
 
 
 File manager
