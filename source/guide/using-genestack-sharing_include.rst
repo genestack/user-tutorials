@@ -22,11 +22,11 @@ top-right corner of any page.
 Managing users
 ~~~~~~~~~~~~~~
 
-**If you are an administrator of your organisation**, the menu under your email
-address will also have an additional item, "Manage Users", which takes you to
+**If you are an administrator of your organisation**, the shortcut menu appeared when click on
+the Genestack logo will also have an additional item, "Manage Users", which takes you to
 the organisation's user management page.
 
-.. image:: images/profile_manage_users.png
+.. image:: images/shortcuts_manage_users.png
 
 From there, administrators can add or disable users, and reset passwords.
 
@@ -41,18 +41,18 @@ read and write, etc.).
 Managing groups
 ~~~~~~~~~~~~~~~
 
-To manage your groups, click on your email address at the top-right corner of
-any screen and select "Manage Groups".
+To manage your groups, click on the Genestack logo at the top-left corner of
+any screen and select **Manage groups**.
 
-.. image:: images/profile_manage_groups.png
+.. image:: images/shortcuts_manage_groups.png
 
-From there, you can create groups using the "Create group" button, add or remove
+From there, you can create groups using the **Create group** button, add or remove
 people from groups, and change users' privileges within groups. By default, you
 will be a group administrator of any group that is created by your user.
 
 .. image:: images/manage_create_groups.png
 
-If you are an administrator of a group, you can click the "Add member" button
+If you are an administrator of a group, you can click the **Add member** button
 to add people to a group. From there you will be prompted for the e-mail of the
 user you want to add. If they are in your organisation, you will be provided
 with autocomplete.
@@ -93,7 +93,7 @@ If you are a sharing user or an administrator of a group, you can share files
 with that group. Any file created on Genestack can be shared.
 
 To share a file, you can select it in the File Manager by ticking the checkbox
-next to it, then clicking the "Share" button in the top bar. Alternatively you
+next to it, then clicking the **Share** button in the top bar. Alternatively you
 can right-click on the file and select the "Share" option in the context menu.
 
 .. image:: images/sharing_experiment.png

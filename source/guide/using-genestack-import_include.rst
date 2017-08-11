@@ -10,12 +10,9 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Microarray Data** — raw microarray data obtained from a microarray
   experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
 - **Infinium Microarray Data** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
-- **Infinium Methylation Beta Values** - methylation data matrices contained Beta-values
+- **Infinium Methylation Beta Values** — methylation data matrices contained Beta-values
   (methylation ratios) for Illumina Infinium Microarrays (.tsv, .txt);
-
-.. need to verify **Methylation Array Annotation**
-
-- **Methylation Array Annotation** - methylation chip annotation containing information about
+- **Methylation Array Annotation** — methylation chip annotation containing information about
   association of microarray probes to known genes (.tsv);
 - **Raw Reads** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
 - **Microarray Annotation** — annotation file containing information about
@@ -27,44 +24,44 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   with an exact start and end position (BED);
 - **Mapped Reads** — reads aligned to a specific reference genome (BAM or CRAM);
 - **Ontology Files** — OWL, OBO or CSV files used to annotate metainfo;
-- **Reference Genome** — Reference genome sequence for a specific organism
-  with annotation; (FASTA and GTF/GFF);
-- **Variation Files** — Genetic Variations files, storing gene sequence
+- **Reference Genomes** — reference genome sequence for a specific organism
+  with annotation; (FASTA and GFF/GTF/GFF3);
+- **Variation Files** — Genetic variations files, storing gene sequence
   variations (VCF);
-- **Gene List** - the file includes the list of genes for a specific organism (.gpr, .txt, .tsv);
-- **Gene Expression Signature** - the file includes the list of genes with expression pattern
-  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv).
+- **Gene List** — the file includes the list of genes for a specific organism (.gpr, .txt, .tsv);
+- **Gene Expression Signature** — the file includes the list of genes with expression pattern
+  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv);
+- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
 
-When you upload microarrays or sequencing assays onto the platform, they will
-be automatically imported as a dataset.
+When you import files that are detected as raw sequencing or microarray data,
+Genestack automatically creates a **dataset**, a special type of folder, and adds the assays to it.
+Additional documents in any format (e.g. PDF, Word, text, etc.)
+can be imported as **attachments** to a dataset. We will discuss the use of attachments below.
+Some types of files, namely Reference Genome, Gene List, Gene Expression Signature,
+Gene Signature Database, Genetic Variations, Ontology Files, Dictionary, Microarray Annotation,
+Methylation Array Annotation, Infinium Beta Values, are not wrapped in
+datasets on import because they are rarely uploaded and processed as batches.
 
-- **Dataset** — A dataset is a special type of folder that can only
-  contain assays. When you import files that are detected as raw sequencing or
-  microarray assays, Genestack creates a dataset and adds the assays to it.
+When you perform any analysis on Genestack, other data types, which cannot be imported, can be created such as:
 
-- **Dataset attachments** additional documents in any file format (e.g. PDF, Word, text, etc.)
-  can be uploaded as an attachment to a dataset. We will discuss the use of attachments below.
-
-
-Moreover, when you perform any analysis on Genestack, you can create other data
-types, which cannot be imported. They include:
-
-- **Affymetrix/Agilent/GenePix Microarrays Normalisation** — File with
+- **Affymetrix/Agilent/GenePix Microarrays Normalisation** — file with
   normalized Affymetrix/Agilent/GenePix microarrays data;
 - **Differential Expression Statistics** — expression statistics for
   change in expression of individual genes or other genomic features between groups of samples,
   such as fold-changes, p-values, FDR, etc.;
-- **Genome Annotations** — A technical file used for matching GO terms and
+- **Genome Annotations** — a technical file used for matching GO terms and
   gene symbols to gene coordinates;
-- **Mapped Read Counts** — The number of reads mapped to each feature of a reference
-  sequence. Produced from Mapped Reads files.
+- **Mapped Read Counts** — file is produced Mapped reads and contains the number of reads mapped to each feature of a reference
+  sequence.
+
+.. verify
 
 Data import
 ~~~~~~~~~~~
 
 There are several ways you can access the **Import** application:
 
-- using the **Import data** link on the Welcome Page;
+- using the **Import data** link on the Dashboard;
 
 .. image:: images/WP_import.png
 
@@ -77,7 +74,7 @@ There are several ways you can access the **Import** application:
 
 .. image:: images/IT_import.png
 
-Import data includes three steps:
+Import data includes the following steps:
 
 Step 1: Uploading files
 +++++++++++++++++++++++
@@ -138,7 +135,7 @@ Step 3: Editing metainfo
 ++++++++++++++++++++++++
 
 In this step, you can describe uploaded data using an Excel-like spreadsheet.
-Importantly, during this step, the import has already completed - you will
+Importantly, during this step, the import has already completed — you will
 notice a message at the top of the page with the name of the folder where
 the imported files are located (named "Imported on <date> <time>"), and
 offering to share the data:
@@ -157,16 +154,16 @@ file names automatically based on other metainfo attributes.
 .. image:: images/naming_scheme.png
 
 Metainfo fields can be associated with specific dictionaries and
-ontologies. We pre-uploaded some public dictionaries such as the
-`NCBI Taxonomy`_ (for the Organism field), Cellosaurus_ (for Cell Line),
-ChEBI_ for chemical compounds, and the `Cell ontology`_.
+ontologies. We pre-uploaded some public dictionaries such as
+the `NCBI Taxonomy`_ database for the "Organism" field, the Cellosaurus_ (a resource on cell lines),
+the ChEBI_ for chemical compounds, and the `Cell Ontology`_ (cell types in animals).
 
 .. _NCBI Taxonomy: https://www.ncbi.nlm.nih.gov/taxonomy
 .. _Cellosaurus: http://web.expasy.org/cellosaurus/description.html
 .. _ChEBI: https://www.ebi.ac.uk/chebi
-.. _Cell ontology: http://www.obofoundry.org/ontology/cl.html
+.. _Cell Ontology: http://www.obofoundry.org/ontology/cl.html
 
-We also created our own controlled vocabularies to cover the Sex, Method and Platform fields.
+We also created our own controlled vocabularies to cover Sex, Method and Platform fields.
 You can find out more about ontologies in the :ref:`public-experiment-label` section.
 
 Finally, you can also create your own custom dictionary by importing it into the
@@ -177,7 +174,7 @@ platform as OWL, OBO or CSV file and attach it to the import template.
           Import templates allow you to select what metainfo attributes of your imported
           files will be tightly controlled (so you don’t lose any information in the
           process). Import templates allow you to set default fields for file metadata
-          based on file type (e.g. Experiments, Discrete Genomic Data, Genetic
+          based on file type (e.g. Datasets, Discrete Genomic Data, Genetic
           Variations, etc.). Of course, if you’re only importing mapped reads, you don’t
           need to specify metainfo attributes for other data types.
 
@@ -188,14 +185,7 @@ import templates with **Make a copy** option in the context menu.
 
 .. image:: images/copy-import-template.png
 
-You can add new import templates using the **Import Template Editor** application, which can be
-found by clicking "Add import template" from the Dashboard or from the
-"Manage" submenu when you right click on an import template.
-
-.. image:: images/import_templates.png
-   :scale: 45 %
-
-Genestack will attempt to fill these fields automatically, but you can always
+Genestack will attempt to fill metainfo fields automatically, but you can always
 edit the contents manually during the import process. By using metainfo
 templates you can make sure that all of your files will be adequately and
 consistently described so you will not lose any valuable information. For
@@ -204,18 +194,30 @@ Reference Genome data:
 
 .. image:: images/default_import_template.png
 
-Now let’s say you wish to create an import template where you want to control
-the metainfo attributes of sequencing assays (e.g. you always need to know the
-tissue and sex of your samples). In order to do this, click on "Add import
-template", then look for the table related to Sequencing Assays and for the
-fields "tissue" and "sex", change the required fields to ‘Yes’. As you can
+**Import template editor** application allows to modify existing import templates and create
+new ones with proper metainfo fields, requirements and controlled vocabularies. To access
+the app right-click on a template's name and select the **Import template editor** from
+the "Manage" submenu. To create new template on the basis of the default one you can also click
+**Add import template** one the Dashboard.
+
+.. image:: images/import_templates.png
+   :scale: 45 %
+
+Now let’s say you wish to create an import template to control
+the metainfo attributes of raw reads (e.g. you always need to know the
+tissue and sex of your samples). In order to do this, click on **Add import template**,
+then look for the table related to Raw Reads and for the
+fields "tissue" and "sex", change the required fields to *Yes*. As you can
 see, the system controls what type of information can you put into your
 metainfo fields. In this case, for tissue the system will map your entries to
-the Uberon ontology and the metainfo type must be text. You can edit
-existing templates by right-clicking on a template and selecting the **Import
-Template Editor** application from the "Manage" submenu.
+the Uberon_ ontology (an integrative multi-species anatomy ontology) and
+the metainfo type must be text.
 
-If you wanted to add other metainfo fields that are not included in the table
+.. _Uberon: http://uberon.github.io
+
+.. image:: images/edit-template.png
+
+If you want to **add other metainfo fields** that are not included in the table
 already, you can do this at the bottom of the table where there are blank
 spaces. For each entry, you must specify whether or not this field is
 required and what is its metainfo type (e.g. text, yes/no, integer).
@@ -225,16 +227,14 @@ required and what is its metainfo type (e.g. text, yes/no, integer).
 If you are using a file kind that is not yet listed, you can add a new one by
 clicking on the **Add File Kind** button at the bottom of the page and
 specifying the required metainfo attributes. Keep in mind that file kinds are
-defined in Genestack - you will not be able to create a template entry for a
+defined in Genestack — you will not be able to create a template entry for a
 file kind that is not used on the platform.
 
-When you are done, click on the blue "Import data using this template" button.
-This will take you to the import page, where you can go through three import
-stages described above.
+.. image:: images/template-add-file-kind.png
 
-Once you have completed the metainfo editing step, you may see a "Use files in
-data flow" button at the bottom of the page by "Import files". This depends on
-the file type you have imported. Later you can find your files in the "Imported
+When you are done, click on the blue **Import data using this template** button.
+This will take you to the **Data import** app import page, where you can go through the three import
+steps described above. You can find all the imported files in the "Imported
 files" folder which can be accessed from the Dashboard and from the File
 Manager.
 
