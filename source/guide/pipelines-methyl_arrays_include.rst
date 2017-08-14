@@ -8,8 +8,6 @@ Microarrays normalisation
 
 **Action**: to perform normalisation of methylation microarray assays.
 
-.. image:: images/meth-array-normalization.png
-
 For methylation microarrays, normalisation can be performed with either "subsetQuantileWithinArray"
 or "quantile" method, and in addition, "genomeStudio" background correction may be applied.
 
@@ -46,8 +44,6 @@ The M-value is the log2 ratio of the intensities of the methylated probe versus 
 .. image:: images/qc-mval.png
 
 **Action**: to assess quality of methylation microarray assays.
-
-.. image:: images/methylation-qc-page.png
 
 The Methylation array QC application allows the user to export files containing methylation and
 unmethylation values, as well as the Beta-values, the M-values and Log median intensity values.
@@ -192,9 +188,7 @@ the "Infinium Methylation Normalization” application.
 
 The analysis includes annotating data when the application determines genomic position of the methylated
 loci and its location relatively to various genomic features. Differential methylation analysis application
-supports custom Methylation Array Annotation that you can upload with Import app.
-
-.. image:: images/test-diff-meth.png
+supports custom Methylation Array Annotation that you can upload with Import Data application.
 
 The application computes differential
 methylation statistics for each CpG site for the selected group compared to
@@ -230,9 +224,7 @@ As an input the application takes "Infinium Methylation Normalization" file with
 Differential Expression Statistics file that you can further explore
 with the Methylation Navigator.
 Differential methylation analysis application supports custom methylation chip annotations
-that you can upload with Import app.
-
-.. image:: images/diff-regions-meth.png
+that you can upload with Import Data application.
 
 The application has the following options:
 

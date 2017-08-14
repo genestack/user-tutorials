@@ -10,7 +10,7 @@ multiple data types on different steps of analyses (e.g. Genome Browser).
 Sequencing assay viewer
 +++++++++++++++++++++++
 
-**Action**: to show the content of Sequencing Assay or Raw Reads file and look
+**Action**: to show the content of Raw Reads file and look
 for specific nucleotide sequences which can be exact, reverse, complement or
 reverse complement to the sequence of interest.
 

@@ -7,15 +7,15 @@ Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.
 
-There are at least two types of mapping strategies - Spliced Mapping and
+There are at least two types of mapping strategies — Spliced Mapping and
 Unspliced Mapping. In contrast to spliced aligners, unspliced read aligners map
 reads to a reference without allowing large gaps such as those arising from
 reads spanning exon boundaries, or splice junctions. When analysing whole
 genome sequencing (WGS) or whole exome sequencing (WES) data, there is no need
-to look for spliced these sites precisely. That is why we recommend use Unspliced
-Mapping applications in such cases.
+to look for spliced these sites precisely. That is why we recommend use unspliced
+mapping applications in such cases.
 
-On Genestack, you will find two unspliced aligners - Unspliced Mapping with BWA
+On Genestack, you will find two unspliced aligners — Unspliced Mapping with BWA
 and Unspliced Mapping with Bowtie2.
 
 Unspliced mapping with BWA
@@ -25,10 +25,6 @@ Unspliced mapping with BWA
 splice junctions. The application generates Mapped Reads which can be used
 further with our Variant Calling application which is based on samtools mpileup.
 
-Here is the uspliced mapping application page:
-
-.. image:: images/unspliced_mapping_with_bwa.png
-
 BWA’s MEM algorithm will be used to map paired or single-ends reads from 70 bp
 up to 1Mbp ("mem" option in command line). For reads up to 70 bp the algorithm
 called BWA-backtrack will be applied. This algorithm is implemented with the
@@ -37,8 +33,10 @@ reads. Then the application converts these SA coordinates to chromosome
 coordinates using the "samse" command (if your reads are single-end) or
 "sampe" (for paired-end reads).
 
+Command line options:
+
 1. **Perform targeted mapping** option. If this parameter is selected, a BED
-   file is used to restrict mapping of the reads to specific locations in the
+   file ("Target region" source file) is used to restrict mapping of the reads to specific locations in the
    genome, that the reads should be mapped to. The reference genome is altered
    to only contain those locations, using the bedtools "getfasta" command and
    the reads are then mapped to the altered genome. The resulting sam file
@@ -62,9 +60,7 @@ splice junctions. The application generates Mapped Reads which can be used
 further with our Variant Calling application which is based on samtools
 mpileup.
 
-Let's look at the application page and the parameters we can use to do mapping:
-
-.. image:: images/unspliced_mapping_with_bowtie2.png
+Let's look at the parameters we can use to do mapping:
 
 1. **Report the best mapping** option. The application will consider only the
    best mapping for one mappable read. (default: checked)
@@ -107,10 +103,6 @@ After the variants are detected you can annotate them running Effect Prediction
 application or/and use Genome Browser and Variant Explorer for exploring the
 results.
 
-Here is the Variant Calling page:
-
-.. image:: images/variant_calling_app_page_top.png
-
 The application uses samtools mpileup which automatically scans every position
 supported by an aligned read, computes all the possible genotypes supported by
 these reads, and then calculates the probability that each of these genotypes
@@ -130,8 +122,6 @@ generated from the previous step to call and filter genetic variants and
 outputs the all identified variants in the Genetic Variations file.
 
 Let's now look at the command line options more closely:
-
-.. image:: images/variant_calling_command_line_options.png
 
 1. **Variants to report** option. The application can call both "SNPs and
    INDELs" variants, "SNPs only" or "INDELs only". (default: "SNPs and INDELs")
@@ -206,8 +196,6 @@ Effect prediction with SnpEff
 calculate the effects they produce on known genes. The application accepts
 Genetic Variations and adds annotations for them.
 
-.. image:: images/effect_prediction_app.png
-
 The annotated variants can be further explored in Genome Browser, Variant
 Explorer or View Report applications.
 
@@ -267,9 +255,9 @@ prediction" tab).
 
 .. image:: images/variant_explorer_effect_prediction_tab.png
 
--  Effect - effect predicted by SnpEff tool;
--  Impact - impact predicted by SnpEff tool;
--  Functional class - functional class of a region, annotated by SnpEff
+-  *Effect* — effect predicted by SnpEff tool;
+-  *Impact* — impact predicted by SnpEff tool;
+-  *Functional class* — functional class of a region, annotated by SnpEff
    tool.
 
 Moreover, the application calculates "Additional metrics" such as genotype
@@ -304,6 +292,8 @@ for heterozygous samples (DP HET).
           alternate).
 
 
+.. How to annotate found human variants to dbNSFP (1000 genomes data)
+
 To change the default columns or add more columns, choose them in the
 corresponding tabs in "Columns" section and "Save" your changes. After
 that all selected columns will be displayed in Table viewer.
@@ -325,11 +315,7 @@ Mapped Reads files or Genetic Variations files. Depending on the input files,
 the applications generates different outputs, either Mapped Reads or Genetic
 Variations files.
 
-Here is the application page:
-
-.. image:: images/intersect_genomic_features.png
-
-Let's look at the options:
+Let's look at the command line options:
 
 1. **Rule for filtering** option. The application can "Report overlapping
    features". For example, you could isolate single nucleotide polymorphisms

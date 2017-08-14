@@ -5,57 +5,82 @@ Efficient data search and browsing are at the core of Genestack. The
 platform provides rapid access to private, shared, and public data
 and analysis results.
 
-Experiment browser
-~~~~~~~~~~~~~~~~~~
+Data browser
+~~~~~~~~~~~~
 
-Genestack Platform provides a rich collection of public experiments from SRA, ENA, GEO
+Genestack Platform provides a rich collection of public datasets from SRA, ENA, GEO
 and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
-100,000 public experiments indexed in Genestack.
+100,000 public datasets indexed in Genestack.
 
-The Experiment Browser allows to browse these public datasets, as well as your private
-experiments or the ones shared with you on Genestack. You can access the Experiment
-Browser either from the **Dashboard** or the **Shortcuts Menu** on the left-hand side.
+The Data browser allows to browse these public datasets, as well as your private
+data and the data shared with you on Genestack. You can access the Data
+Browser either from the **Dashboard** or the **Shortcuts menu** on the left-hand side.
 
 You can search relevant data with **a free-text query**, and you can further
-filter down experiments by **metadata attributes** using the checkboxes
-on the left. These attributes are generated based on the metadata available for experiments.
+filter down datasets by **metadata attributes** using the checkboxes
+on the left. These attributes are generated based on the metadata associated with datasets.
 For instance, you can set the filters "Access", "Method"
-and "Organism" to "Public", "Whole Genome Sequencing", "Mus musculus", respectively,
-to filter out publicly accessible data on mice obtained from mouse RNA-Seq data.
+and "Organism" to "Public", "Whole Exome Sequencing", "Mus musculus", respectively,
+to filter out publicly accessible data on mice obtained from mouse WES data.
 
-.. image:: images/experiment-browser.png
+.. image:: images/data-browser.png
 
-Click **Save N matching assays** link to explore
-the list of matching assays and save them into one folder.
-
-.. image:: images/save-matching-assays.png
-
-Moreover, Experiment Browser allows you to find bioinformatics analyses results
-associated with raw data. If there are analysis performed on a given experiment,
+Data Browser allows you to find bioinformatics analyses results
+associated with raw data. If there are analysis performed on a given dataset,
 and you have access to these results (i.e. they are yours, or they are shared with you),
-then under the experiment name you will see a **View N analysis results** link.
-Clicking it shows you the list of existing resulting files such as, for example, QC reports
-or Genome Browser pages.
+then you will find both intermediate results and reports in the column **Downstream**.
 
 .. image:: images/analysis-results.png
 
-Clicking on the name of any of the experiments will take you to
+If not all the samples meet your searching criteria, feel free to crete a subset of a dataset
+with matching samples and process the separately. To do so, click a link showing the number
+of matching files in the Data Browser column *Matched*, then, click
+**Make a subset with a matching files** button to save files matching to the set filters.
+
+.. image:: images/subset-in-databrowser.png
+
+Clicking on the name of any of the datasets will take you to
 the **Metainfo editor**, where you can view (and possibly edit) the metadata of this
-experiment and its assays.
+dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-Besides that, on the Metainfo Editor page you can run the assays through a pipeline via the button
-**Start new data flow with application**. You can either use an existing data flow matching the assays, or build a
+Besides that, on the Metainfo editor page you can run the assays through a pipeline via the button
+**Use dataset...**. You can either use an existing data flow matching the assays, or build a
 new pipeline step by step.
+
+.. update img: use GSF802958 as an example
 
 .. image:: images/new-df.png
 
-From the Metainfo Editor, you can also open the experiment in the **File Manager** by clicking on
-the experiment's name at the top of the page and selecting **Explore > File Manager**.
+What's more, you can analyse not only the entire dataset but also a part of it by
+selecting samples and clicking the **make a subset** button of the dataset (by default all subsets
+are created in the folder **My datasets**).
 
-.. image:: images/from-ME-to-FB.png
+.. image:: images/make-subset-ME.png
+
+Click a subset name to open it with Metainfo Editor
+application and edit its metainformation if it is needed.
+
+.. image:: images/subset-edit-metainfo.png
+
+If you are an owner of a given dataset, you can add more samples to your dataset by clicking
+on **Upload more files** button.
+
+.. image:: images/dataset-upload-more.png
+
+Besides, you can remove files from a dataset: select files you want to exclude and click
+**Remove files from dataset** button.
+
+.. image:: images/dataset-remove-1.png
+
+And if you are sure, confirm removing of the data by click **Remove** button. Remember that if
+the files you are going to exclude from a dataset are not used anywhere, they will be
+deleted from the platform without any possibility to restore.
+
+.. image:: images/dataset-remove-2.png
+
 
 File manager
 ~~~~~~~~~~~~
@@ -70,22 +95,18 @@ Here you can see many different folders. Some special folders are worth mentioni
 
 **Created files** is the folder where any new file created by an application on Genestack goes.
 
-The files are organized by date, with oldest ones on top; however, you
-can change this order to show the most recent ones - just click on the
-header of the "Last Update" column.
-
 **Imported files** is where imported data goes, organized by
 date: all files imported at the same time (during one import action)
 will be located in the same folder. 
 
-**Uploads** contains all the files you have uploaded into Genestack -
+**Uploads** contains all the files you have uploaded into Genestack —
 FASTQ and BAM files, pdf documents, excel tables etc.
 
 
 .. note:: **What is the difference between uploads and imported files?**
 
           When you have just started importing your files (in various formats like
-          FASTQ, BAM etc), they all go to the specific storage area (the "Uploads"
+          FASTQ, BAM etc.), they all go to the specific storage area (the "Uploads"
           folder). During import, Genestack will recognize these uploaded files and
           allocate them to appropriate biological types (you can also do it
           manually), e.g. sequencing assays, mapped reads etc. These meaningful
@@ -94,13 +115,10 @@ FASTQ and BAM files, pdf documents, excel tables etc.
 
 The **Exports** folder contains data ready for export. See the :ref:`data-export-label` section for more information.
 
-Below these four grouped folders, you will see two more: Shared with me
-and Public Data.
-
-**Shared with me** contains all files that other users have shared with
+**Shared with me** give access to all files that other users have shared with
 you or that you shared with other users. See the :ref:`sharing-label` section for more details.
 
-**Public Data** contains all of the goodies we have preloaded on Genestack
+**Public Data** folder contains all of the goodies we have preloaded on Genestack
 to make life a bit simpler for our users. This folder contains:
 
 .. image:: images/public-data.png
@@ -108,27 +126,26 @@ to make life a bit simpler for our users. This folder contains:
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
    etc.;
-#. **Dictionaries**: used for metainfo editing and curation, e.g. sex,
-   sequencing platform, NCBI taxonomy. Read more about dictionaries in
-   "Data and Metainfo Management" section;
+#. **Dictionaries**: dictionaries include terms from external ontologies and are used to
+   curate and harmonize metainfo, e.g. sex, platform, NCBI taxonomy.
 #. **Example results**: so you can play around with our platform and see
    what types of visualizations are available;
-#. **External databases**: sets of sequences with associated annotation;
-   e.g. greengenes for 16S rRNA;
+#. **External databases**: sets of sequences with associated annotation,
+   e.g. Greengenes for 16S rRNA;
 #. **Genome annotations**: for a range of different organisms and platforms
-    (for WES Analysis);
+   (for WES analysis);
 #. **Microarray annotations**: annotation lists to be used as the
    translation table to link probes and common public domain sequences;
 #. **Public analyses**: all files created during re-analysis of previously
-   published data sets;
+   published datasets;
 #. **Reference genomes**: various reference genomes for the most commonly
    analysed organisms;
 #. **Public data flows**: all data flows available to our users, including
-   tutorial data flows and the ones found on the Welcome page;
-#. **Public experiments**: this is a feature we’re particularly proud of. We
+   tutorial data flows and the ones found on the Dashboard;
+#. **Public experiments**: this is a feature we are particularly proud of
    have pre-loaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
-   ArrayExpress, SRA, and ENA. Currently we have about 100,000
+   ArrayExpress, SRA, and ENA. Currently we have more than 110,000
    experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
@@ -192,21 +209,24 @@ inside the search box.
 
 Below the search box is a button to access your **briefcase**. Your
 briefcase is a place where you can temporarily store files from various
-folders. **To add** files to your briefcase, hover over each
-individual file and use the special "briefcase" button that appears or
-select several files, right-click on them and choose "Add to
-briefcase...". **To delete** an item from your briefcase hover over it and
+folders. **To delete** an item from your briefcase hover over it and
 click on the "x" button. **To clear all** items from the briefcase, select
 the "Clear all" option.
 
-.. image:: images/brief-case.png
+.. image:: images/brief-case-1.png
+
+**To add** files to your briefcase, hover over each
+individual file and use the special "briefcase" button that appears or
+select several files, right-click on them and choose "Add to
+briefcase...".
+
+.. image:: images/brief-case-2.png
 
 If you select a file, **three additional** buttons will show up, allowing
 you to **share**, **delete** the file or **view metainfo** (an "eye"-icon) for
 the file.
 
-.. image:: images/3buttons-1.png
-.. image:: images/3buttons-2.png
+.. image:: images/3buttons.png
 
 Use the **Share** button to share your data with colleagues (the share button
 will not be available if you are using a guest account).

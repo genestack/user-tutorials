@@ -11,16 +11,13 @@ Mapped reads QC report
 **Action**: to perform quality control (QC) of mapped reads.
 
 We follow a similar procedure to the one used to generate FastQC reports.
-After selecting all the mapped reads we wish to check the quality of, we can
-use the `Mapped Reads QC`_ public data flow, initialize the computations, and
-then explore the results.
+After selecting the mapped reads we wish to check the quality of, we can
+run the `Mapped Reads QC`_ public data flow.
 
 .. _Mapped Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778257&action=viewFile
 
 An individual Mapped Reads QC report contains some technical information about
 source data, tools used and data flow.
-
-.. image:: images/mapped_reads_qc_report.png
 
 Also, it includes a range of **Mapping statistics**. For **single reads**,
 you will calculate these QC metrics:
@@ -56,7 +53,7 @@ statistics:
 This plot shows the percentage of reads covered by at least x reads. To clear
 it up, let's just imagine that we have a plot which shows coverage only for one
 chromosome and therefore it shows 1 line. If on the x-axis we have e.g. 100
-reads, on y-axis - 10% (percentage of chromosome bases covered by 100 reads).
+reads, on y-axis — 10% (percentage of chromosome bases covered by 100 reads).
 So, it looks like we have 100-reads coverage for 10% of chromosome.
 
 The amount of coverage you are expecting varies with the experimental
@@ -126,7 +123,7 @@ Whole Exome Sequencing assays.
 most of the reads actually fell on the target, if the targeted bases reached
 sufficient coverage, etc.
 
-.. image:: images/targeted_sequencing_qc_page.png
+**Options**:
 
 1. **Compute enrichment statistics based on** option. The application allows
    you to compute enrichment statistics for reads mapped only on exome, only
@@ -138,15 +135,13 @@ The following enrichment statistics are computed:
 - Mean coverage on target with at least 2X coverage;
 - Target bases with at least 2X, 10X, 20X, 30X, 40X, and 50X coverage.
 
-You can generate these reports directly by choosing Mapped Reads files, right
+You can generate these reports directly by choosing Mapped Reads datasets, right
 clicking on them and selecting the appropriate application (in "Explore" section) or
-using the "Run data flow on selection..." option and `Targeted Sequencing Quality
-Control`_ public data flow.
+using the `Targeted Sequencing Quality Control`_ public data flow.
 
 .. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
 
-You can analyse the output for multiple reports at once using the Multiple QC
-Report application.
+You can analyse the output for multiple reports at once using the **Multiple QC Report** application.
 
 .. image:: images/targeted_sequencing_qc_multiple.png
 
@@ -166,18 +161,14 @@ Duplicated reads are reads of identical sequence composition and length,
 mapped to the same genomic position. Marking duplicated reads can help speed
 up processing for specific applications, e.g. variant calling step, where
 processing additional identical reads would lead to early PCR amplification
-effects (jackpotting) contributing noise to the signal.
-
-You can read more about duplicated mapped reads in this excellent `SeqAnswers
-thread`_.
+effects (jackpotting) contributing noise to the signal. You can read more about
+duplicated mapped reads in this excellent `SeqAnswers thread`_.
 
 .. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t=6854
 
-**Action**: to go through all reads in a mapped reads sample, marking as
+**Action**: to go through all reads in a mapped reads file, marking as
 "duplicates" for paired or single reads where the orientation and the 5’
 mapping coordinate are the same.
-
-.. image:: images/mark_duplicated_mapped_reads.png
 
 3’ coordinates are not considered due to two reasons:
 
@@ -211,9 +202,7 @@ reads will reduce processing time and have little deleterious effect on
 analysis. If however you are processing RNA-seq data, where the fold-variation
 in expression can be up to 10^7, reads are relatively short, and your main
 point of interest is the variation in expression levels, this probably is not
-the tool for you.
-
-You can read more about duplicated mapped reads in this excellent `SeqAnswers
+the tool for you. You can read more about duplicated mapped reads in this excellent `SeqAnswers
 thread`_.
 
 .. _SeqAnswers thread: http://seqanswers.com/forums/showthread.php?t=6854
@@ -221,8 +210,6 @@ thread`_.
 **Action**: to go through all reads in a Mapped Reads file, marking as
 "duplicates" paired or single reads where the orientation and the 5’ mapping
 coordinate are the same and discarding all except the "best" copy.
-
-.. image:: images/remove_duplicated_mapped_reads.png
 
 3’ coordinates are not considered due to two reasons:
 
@@ -245,13 +232,13 @@ This application is based on the **MarkDuplicates**, part of the Picard_ tools.
 Subsample reads
 +++++++++++++++
 
-You can use this application if you want to take a look at what your final
+You can use this application, for example, if you want to take a look at what your final
 experimental results will look like, but do not want to spend time processing
 all your data right away.
 
 **Action**: to create a random subset of mapped reads.
 
-.. image:: images/subsample_mapped_reads.png
+**Command line options**
 
 1. The **Subsampling ratio (percentage)** option is used to set a fraction of
    mapped reads you would like to extract (default: 50).
@@ -274,8 +261,6 @@ experiment and want to combine them before producing your final result.
 **Action**: to merge multiple Mapped Reads files, producing one single
 output Mapped Reads file.
 
-.. image:: images/merge_mapped_reads.png
-
 The application is based on the `SAMtools`_.
 
 .. _SAMtools: http://samtools.sourceforge.net/
@@ -287,10 +272,8 @@ The application will be very useful when you are interested in fraction of reads
 that exactly will map to genome or when you would like to remap the reads with
 other aligner.
 
-**Action**: to convert mapped reads into unaligned reads.
+**Action**: to convert a Mapped reads file to raw reads.
 
-.. image:: images/convert_to_unaligned_reads.png
-
-This application is based on the Picard_ tool.
+This application is based on the Picard_ toolkit.
 
 .. _Picard: http://broadinstitute.github.io/picard/

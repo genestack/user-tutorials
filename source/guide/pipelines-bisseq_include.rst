@@ -6,10 +6,8 @@ Bisulfite sequencing data analysis
 Bisulfite sequencing mapping with BSMAP
 +++++++++++++++++++++++++++++++++++++++
 
-**Action**: to map high-throughput bisulfite sequencing (BS) reads at the
+**Action**: to map high-throughput bisulfite sequencing reads at the
 level of the whole genome.
-
-.. image:: images/bisulfite_seq_mapping_app_page.png
 
 Let’s talk a bit about various settings:
 
@@ -49,8 +47,6 @@ Reduced representation bisulfite sequencing mapping with BSMAP
 **Action**: to map reduced representation bisulfite sequencing (RRBS) reads to
 the specific digestion sites on the genome.
 
-.. image:: images/RRBS_mapping_app_page.png
-
 Let’s talk a bit about various settings:
 
 1. **Enzyme sequence** option is important. It specify what sequence is
@@ -87,8 +83,6 @@ Methylation ratio analysis
 
 **Action**: to determine the percent methylation at each ‘C’ base in mapped
 reads. Next, you can view methylation ratios in Genome Browser.
-
-.. image:: images/methratio_app_page.png
 
 Command line options are the following:
 
@@ -139,7 +133,7 @@ The outputs from Methylation Analysis application can be represented in the
    0.7. This value is multiplied by 1000 to get 700 (this is the bar sides you see
    in Genome Browser).
    So, it means, that side bars with 0 value represent unmetylated position, and
-   vice versa side bars with 1000 - show max methylation (all reads have
+   vice versa side bars with 1000 — show max methylation (all reads have
    methylated Cs in this case).
 
 The Methylation Analysis application is based on the `methratio.py

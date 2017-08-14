@@ -4,7 +4,7 @@ Microarray data
 Scientists are using DNA microarrays to quantify gene
 expression levels on a large scale or to genotype multiple regions of a genome.
 
-.. note:: **What is a DNA Microarray?**
+.. note:: **What is a DNA microarray?**
 
           It is a collection of microscopic DNA spots attached to a solid
           surface. Each spot contains multiple identical DNA sequences (known
@@ -13,7 +13,6 @@ expression levels on a large scale or to genotype multiple regions of a genome.
           high-stringency conditions. Probe-target hybridization is measured by
           detection of targets labeled with a molecular marker of either
           radioactive or fluorescent molecules.
-
 
 Expression arrays
 ~~~~~~~~~~~~~~~~~
@@ -48,22 +47,20 @@ and GenePix_.
 Affymetrix microarrays normalisation
 ************************************
 
-**Action**: to perform normalisation of Affymetrix microarray assays.
+**Action**: to perform normalisation of Affymetrix microarray data.
 
-.. image:: images/affymetrix_normalization.png
-
-To normalize Affymetrix microarrays the application uses RMA (Robust
-Multi-array Average) method. First, the raw intensity values are background
+To normalize Affymetrix microarrays the application uses Robust
+Multi-array Average (RMA) method. First, the raw intensity values are background
 corrected, log2 transformed and then quantile normalized. Next a linear model
 is fit to the normalized data to obtain an expression measure for each probe
 set on each array. For more on RMA, see `this paper`_.
 
 .. _this paper: https://jhu.pure.elsevier.com/en/publications/exploration-normalization-and-summaries-of-high-density-oligonucl-5
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 The application is based on the affy_ R package.
 
@@ -73,8 +70,6 @@ Agilent microarrays normalisation
 *********************************
 
 **Action**: to perform normalisation of Agilent microarray assays.
-
-.. image:: images/agilent_normalisation.png
 
 For 1-channel Agilent microarrays, various procedures for background
 correction (e.g. "subtract", "half", "minimum", "normexp"), and between-array
@@ -99,10 +94,10 @@ For 2-channel Agilent microarrays, procedures for within-array normalisation
           estimation of the absolute levels of gene expression and only a sigle
           dye is used.
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 The application is based on the `limma`_ R package.
 
@@ -113,31 +108,27 @@ GenePix microarrays normalisation
 
 **Action**: to perform normalisation of GenePix microarray assays.
 
-.. image:: images/genepix_normalisation.png
-
 For GenePix microarrays, quantile between-array normalisation is performed and
 various procedures for background correction (e.g. "subtract", "half",
 "minimum", "normexp") can be applied.
 
-As a next step, the normalised microarray samples can be assessed using the
-**Microarray Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 L1000 microarrays normalisation
 *******************************
 
 **Action**: to perform normalisation of L1000 microarray assays.
 
-.. image:: images/l1000_normalisation.png
-
-To normalize L1000 microarrays, the application applys the "quantile" method
+To normalize L1000 microarrays, the application uses the "quantile" method
 for between-array normalisation.
 
-As a next step, the normalised microarray samples can be assessed using the **Microarray
-Quality Control** application to detect and remove potential outliers. Normalised
-microarrays that are of good quality can then be processed for downstream
-processing such as Dose Response Analysis or Test Differential Expression.
+The normalised data can be assessed with the **Microarray quality control** application 
+enabling you to detect potential outliers and probably remove them from the
+downstream analysis. Good quality data can be further processed with **Dose response analysis**
+or **Test differential expression for microarrays** applications.
 
 Microarray quality control
 ++++++++++++++++++++++++++
@@ -148,8 +139,6 @@ so that the data can be considered reliable.
 
 **Action**: to perform quality assessment of normalised microarrays and detect
 potential outliers.
-
-.. image:: images/microarray_qc.png
 
 The application generates report containing quality metrics based on
 between-array comparisons, array intensity, variance-mean dependence and
@@ -221,7 +210,7 @@ and include:
   identification of intensity-dependent biases. The Y axis of the plot
   contains the log-ratio intensity of one array to the median array, which is
   called "M" while the X axis contains the average log-intensity of both
-  arrays - called "A". Typically, probe levels are not likely to differ a lot
+  arrays — called "A". Typically, probe levels are not likely to differ a lot
   so we expect a MA plot centered on the Y=0 axis from low to high intensities.
 
 .. image:: images/microarray_qc_MA_plot.png
@@ -238,6 +227,11 @@ your data or continue differential expression or dose response analyses.
 The application is based on the ArrayQualityMetrics_ R package.
 
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
+
+.. add information about icons:
+On the left panel, you can see which symbols correspond to which QC criteria
+(e.g. the barcode symbol corresponds to distribution of signal intensitities).
+If a sample fails a QC criterion, the corresponding symbol will be attached to it
 
 Differential gene expression for microarrays
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -259,8 +253,6 @@ microarray samples.
 The application requires normalized microarrays to calculate differential
 expression statistics (such as log-expr, log-fold change, p-value and
 FDR) and microarray annotation to map probe identifiers to the gene symbols.
-
-.. image:: images/test_differential_expression_microarrays.png
 
 Let's look at the options:
 
@@ -291,7 +283,7 @@ analysis.
 
 .. image:: images/en_microarrays_app_page.png
 
-The Expression Navigator page contains 4 sections:
+The Expression Navigator page contains four sections:
 
 1. **Groups Information** section. It is a summary of the groups available for
    comparison. Size refers to the number of samples used to generate each
@@ -299,11 +291,11 @@ The Expression Navigator page contains 4 sections:
 
 2. The **Top Differentially Expressed Genes** section allows you to choose which
    groups to compare and how to filter and sort identified differentially
-   expressed (DE) genes.
+   expressed genes.
 
 .. image:: images/en_microarrays_DE_genes_table.png
 
-You can filter DE genes by maximum acceptable false discovery rate (FDR), up
+You can filter differentially expressed genes by maximum acceptable false discovery rate (FDR), up
 or down regulation, minimum log fold change (LogFC), and minimum log counts
 per million (LogCPM).
 
@@ -330,7 +322,7 @@ Let's look through these statistics:
 
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 
-Moreover, you can sort the DE genes by these statistics, clicking the small
+Moreover, you can sort the differentially expressed genes by these statistics, clicking the small
 arrows near the name of the metric in the table.
 
 .. image:: images/en_microarrays_sorting.png
@@ -360,7 +352,7 @@ Compound dose response analysis
 Dose response analyser
 **********************
 
-**Action**: to identify differentially expressed (DE) genes, fit various dose
+**Action**: to identify differentially expressed genes, fit various dose
 response models (linear, quadratic and Emax), find the optimal model and
 compute benchmark dose and dose response for each gene for this model.
 
@@ -370,8 +362,6 @@ identifiers to gene symbols (you can upload your own or use a publicly
 available one). It also requires a pathway annotation file to perform pathway
 enrichment analysis. Pathway files from Wikipathways are pre-loaded in the
 system.
-
-.. image:: images/dose_response_analysis.png
 
 The first step of the analysis is to identify genes that are significantly
 differentially expressed across doses. Once these are detected, multiple dose
@@ -398,7 +388,7 @@ Dose response analysis viewer
 *****************************
 
 **Action**: to display dose response curves and benchmark doses for
-differentially expressed (DE) genes and enriched pathways. Note that if no
+differentially expressed genes and enriched pathways. Note that if no
 gene passed the FDR threshold specified in the dose response analysis
 application, the application will report the 1,000 genes with the smallest
 unadjusted p-values.
@@ -406,21 +396,21 @@ unadjusted p-values.
 .. image:: images/dose_response_analysis_report.png
 
 Various regression models (linear, quadratic and Emax) are fitted for each
-identified DE gene to describe its expression profile as a function of the
+identified differentially expressed gene to describe its expression profile as a function of the
 dose. These results are presented in an interactive table.
 
 .. image:: images/dose_response_analysis_table.png
 
 The table includes information about:
 
-- *PROBE ID* - chip-specific identifier of the microarray probe;
-- *GENE* - the gene symbol corresponding to that probe (according to the
+- *PROBE ID* – chip-specific identifier of the microarray probe;
+- *GENE* – the gene symbol corresponding to that probe (according to the
   microarray annotation file). Clicking on the gene name will show you a list
   of associated gene ontology (GO) terms;
 
 .. image:: images/dose_response_analysis_gene_ontology.png
 
-- *BMD* - the benchmark dose, corresponding to the dose above which the
+- *BMD* – the benchmark dose, corresponding to the dose above which the
   corresponding gene shows a significant change in expression, according to the
   best-fitting of the 3 models used. It is calculated using the following
   formula:
@@ -430,17 +420,17 @@ The table includes information about:
   standard deviation of the response at dose 0, which we approximate by the
   sample standard deviation of the model residuals.
 
-- *BEST MODEL* - the model with the optimal Akaike Information Criterion (AIC)
-  among the 3 models that were fitted for the gene ; the AIC rewards models
+- *BEST MODEL* – the model with the optimal Akaike Information Criterion (AIC)
+  among the 3 models that were fitted for the gene; the AIC rewards models
   with small residuals and penalizes models with many coefficients, to avoid
   overfitting;
-- *MEAN EXPR* - average expression of the gene across all doses;
-- *T* - the moderated t-statistic computed by limma to test for differential
+- *MEAN EXPR* – average expression of the gene across all doses;
+- *T* – the moderated t-statistic computed by limma to test for differential
   expression of the gene;
-- *P* - unadjusted p-value testing for differential expression of the gene
+- *P* – unadjusted p-value testing for differential expression of the gene
   across doses;
-- *FDR* - false discovery rate (p-value, adjusted for multiple testing);
-- *B* - B statistic computed by limma to test for differential expression of
+- *FDR* – false discovery rate (p-value, adjusted for multiple testing);
+- *B* – B statistic computed by limma to test for differential expression of
   the gene. Mathematically, this can be interpreted as the log-odds that the
   gene is differentially expressed.
 
@@ -457,14 +447,14 @@ file supplied to the analysis application.
 
 The table includes:
 
-- *PATHWAY* - pathway name, e.g. "Iron metabolism in placenta";
-- *SIZE* - pathway size, i.e. how many genes are involved in the given pathway;
-- *DE GENES* - how many pathway genes are found to be differentially expressed
+- *PATHWAY* – pathway name, e.g. "Iron metabolism in placenta";
+- *SIZE* – pathway size, i.e. how many genes are involved in the given pathway;
+- *DE GENES* – how many pathway genes are found to be differentially expressed
   in our data. Clicking on the specific pathway takes you to the "Genes" tab
-  where you can get expression profiles and regression curves for the DE genes.
-- *P* - p-value;
-- *FDR* - false discovey rate value;
-- *BMD* - the pathway BMD is computed as the average of the BMDs of the
+  where you can get expression profiles and regression curves for the differentially genes.
+- *P* – p-value;
+- *FDR* – false discovey rate value;
+- *BMD* – the pathway BMD is computed as the average of the BMDs of the
   significant genes involved in this pathway, computed with the model yielding
   the best AIC;
-- *BMD SD* - BMD standard deviation.
+- *BMD SD* – BMD standard deviation.

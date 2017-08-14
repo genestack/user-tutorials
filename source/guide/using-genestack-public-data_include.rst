@@ -6,7 +6,7 @@ Public experiments, automated data curation and managing metadata
 Our platform provides you with a huge collection of freely accessible experiments that we
 imported from various well-known repositories, such as GEO NCBI, ENA, SRA and Array Express.
 All the public experiments and assays are accompanied by original metainformation
-describing biological. Generally, this information is not standardized that makes operations
+describing biological data. Generally, this information is not standardized that makes operations
 with biological data, like browsing data and combining assays from several experiments or reproducing some
 analysis, difficult or even impossible without human participation.
 To harmonize raw metadata we apply **automated curation** where we map raw entries to
@@ -82,9 +82,9 @@ want to use to create names.
 .. image:: images/naming-scheme.png
 
 Once you are happy with the metadata for your files, you can proceed to analyse
-them by clicking the button **Use all N files...**. You can use the suggested
+them by clicking the button **Use dataset**. You can use the suggested
 visualize applications to explore your files, like "FastQC Report" to check the
-quality of raw sequencing assays, use on of the existing public data flows or
+quality of raw reads, use on of the existing public data flows or
 build your own pipeline by adding applications step-by-step. Moreover, you
 could share the files with your collaborators and add them to a folder of your
 choice.

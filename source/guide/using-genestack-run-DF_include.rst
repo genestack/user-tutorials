@@ -3,13 +3,13 @@ Reproducing your work
 
 Complete reproducibility is one of the core strengths of Genestack. For any
 file in the system, you can view its provenance and then replay the same
-exact analysis on other data files. Select assay which history you wish
-to explore and open it with **File Provenance** application
+exact analysis on other data files. Select an assay which history you wish
+to explore and open it with **File provenance** application
 located in the Manage section.
 
 .. image:: images/file_provenance.png
 
-Besides that, the File Provenance application allows you to view the text description of the
+Besides that, the File provenance application allows you to view the text description of the
 pipeline used to create a given file. Clicking the **View as text** button
 allows you to see what parameters and what tool versions were used at each
 analytical step. You can copy this text and use it in a publication or a report.
