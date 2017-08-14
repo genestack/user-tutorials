@@ -17,7 +17,7 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Raw Reads** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
 - **Microarray Annotation** — annotation file containing information about
   association of microarray probes to biological entities like genes,
-  transcripts and proteins;
+  transcripts and proteins (.txt, .csv);
 - **Continuous Genomic Data** — contains information on continuous genome
   statistics, e.g. GC% content (WIGGLE, WIG);
 - **Discrete Genomic Data** — information on discrete regions of the genome
