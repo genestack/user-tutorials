@@ -267,6 +267,22 @@ level, you will be able to run **Test Differential Gene Expression** application
 .. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
 .. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
 
+Isoform quantification with Salmon
+++++++++++++++++++++++++++++++++++
+
+Specific genes can produce a range of different transcripts encoding various
+isoforms, i.e. proteins of varying lengths containing different segments of
+the basic gene sequence. Such isoforms can be generated, for example, in the
+process of alternative splicing.
+
+**Action**: to quantify abundances of transcripts from RNA-seq data. The
+application requires a set of reference transcripts and uses the concept of
+quasi-mapping to provide accurate expression estimates very quickly.
+
+The application is based on the Salmon_ tool.
+
+.. _Salmon: https://combine-lab.github.io/salmon/
+
 Isoform quantification with Kallisto
 ++++++++++++++++++++++++++++++++++++
 
