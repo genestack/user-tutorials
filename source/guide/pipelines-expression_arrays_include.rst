@@ -397,16 +397,16 @@ using the Benjamini-Hochberg correction FDR.
 For *a gene expression signature* the application compares the Log FC values performing equivalence
 test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
 
-Furthermore, the application performs compound search by similarity of chemical structures.
+Furthermore, the application performs *compound search by similarity of chemical structures*.
 If a Chebi structure of a compound is available in metainfo for both the input and target files,
-the `**Tanimoto coefficient**`_ for each structure is computed.
+the `Tanimoto coefficient`_ for each structure is computed.
 This coefficient shows how many common structural features two chemical
 structures have based on their chemical fingerprints. The fingerprint is
 a 2D chemical structure converted so that presence of a particular structural feature is indicated.
 A Tanimoto score ranges from 0 to 1, and the value equal to 1 indicates that the two structures
 are very similar.
 
-.. _**Tanimoto coefficient**: https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance
+.. _Tanimoto coefficient: https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance
 
 .. Don't understand this statement form the Chebi manual. What is "path depth of eight"?:
 However, as
@@ -416,23 +416,23 @@ might not be very structurally similar.
 
 The results are represented by an interactive table including the following information:
 
-- *File* links to a gene signature or a dataset. Moreover, it also may include the derived
-differential expression and dose response results (if available);
+- *File* links to a gene signature or a dataset. Moreover, it also may include the derived differential expression and dose response results (if available);
+
 - *Compound* shows the compound name and its ChEBI chemical structure (if available);
-- *Assays* column shows how many case and control samples participated in the differential
-expression analysis;
-- *Group* provides the name of the differential expression analysis contrast (e.g. dose 30µM vs dose 0µM).
-Hover over to learn more about each group;
-- *Genes* shows the number of genes of the input signature that overlap with the found gene
-signature. Click the number to explore sortable table with statistics for each found gene,
-such as LogFC, Log Expr and FDR;
-- *FDR(TOST or Fisher)* columns includes adjusted p-values  representing the significance of
-similarity between contrasts being tested;
+
+- *Assays* column shows how many case and control samples participated in the differential expression analysis;
+
+- *Group* provides the name of the differential expression analysis contrast (e.g. dose 30µM vs dose 0µM). Hover over to learn more about each group;
+
+- *Genes* shows the number of genes of the input signature that overlap with the found gene signature. Click the number to explore sortable table with statistics for each found gene, such as LogFC, Log Expr and FDR;
+
+- *FDR(TOST or Fisher)* columns includes adjusted p-values  representing the significance of similarity between contrasts being tested;
+
 - *Corr* columns reflects correlation of the signatures (if log-fold change values are available);
-- *ChemSim* shows chemical similarity score comparing the chemical structure of the target
-and query compounds, if applicable (0 means no similarity, and 1 means identical chemical structure).
-- *A bar chart*  that represents log-fold change values for the found signatures, where blues
-colour is used for up-regulation, while red represents down-regulation.
+
+- *ChemSim* shows chemical similarity score comparing the chemical structure of the target and query compounds, if applicable (0 means no similarity, and 1 means identical chemical structure);
+
+- *A bar chart*  that represents log-fold change values for the found signatures, where blues colour is used for up-regulation, while red represents down-regulation.
 
 The results can then be sorted and filtered by **Max FDR** (maximum FDR), **Min Abs Corr**
 (minimum absolute correlation), **Min ChemSim** (minimum chemical similarity), and
