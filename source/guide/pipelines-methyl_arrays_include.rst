@@ -208,6 +208,14 @@ the application performs differential methylation analysis for each CpG site in 
 
 .. image:: images/diff-meth-options.png
 
+If you specify one or more confounding factors, you can identify differentially methylated sites
+between tested groups of samples, while taking into account potential confounders, such as sex,
+age, laboratory, etc. In this case the detected methylation changes are only caused by the factor
+of interest, for example treatment, while any possible effects of confounding factors are excluded.
+As confounding factors must be chosen according to metainfo keys common to all samples, remember
+to specify the relevant information for all the samples.
+
+
 Explore the output with interactive **Methylation Navigator**.
 
 The application is based on the minfi_, limma_ Bioconductor packages.
@@ -221,7 +229,7 @@ methylated across groups of normalized microarray assays. Currently, 450k and EP
 Methylation arrays are supported.
 
 As an input the application takes "Infinium Methylation Normalization" file with normalised microarray assays and returns
-Differential Expression Statistics file that you can further explore
+Differential Methylation Statistics file that you can further explore
 with the Methylation Navigator.
 Differential methylation analysis application supports custom methylation chip annotations
 that you can upload with Import Data application.
@@ -237,6 +245,14 @@ the application performs differential methylation analysis for each region in th
 (default: No control group)
 
 .. image:: images/diff-meth-options.png
+
+If you specify one or more confounding factors, you can identify differentially methylated
+regions between tested groups of samples, while taking into account potential confounders,
+such as sex, age, laboratory, etc. In this case the detected methylation changes are only
+caused by the factor of interest, for example treatment, while any possible effects of
+confounding factors are excluded. As confounding factors must be chosen according to metainfo
+keys common to all samples, remember to specify the relevant information for all the samples.
+
 
 The Test Differential Regions Methylation application is based on the minfi_ and DMRcate_ packages.
 
