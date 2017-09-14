@@ -399,7 +399,7 @@ test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
 
 Furthermore, the application performs *compound search by similarity of chemical structures*.
 If a Chebi structure of a compound is available in metainfo for both the input and target files,
-the `Tanimoto coefficient`_ for each structure is computed.
+the `Tanimoto coefficient`_ between the structures is computed.
 This coefficient shows how many common structural features two chemical
 structures have based on their chemical fingerprints. The fingerprint is
 a 2D chemical structure converted so that presence of a particular structural feature is indicated.
