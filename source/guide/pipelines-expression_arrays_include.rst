@@ -267,17 +267,16 @@ Let's look at the options:
    group, each group will be compared against the average of all the other groups.
 
 If you specify one or more **confounding factors**, you can identify differentially
-expressed genes between tested groups of samples, while taking into account potential
+expressed genes between the tested groups of samples, while taking into account potential
 confounders, such as sex, age, laboratory, etc. In this case the detected gene
 expression changes are only caused by the factor of interest, for example treatment,
-while any possible effects of confounding factors are excluded. As confounding factors
-must be chosen according to metadata.
+while any possible effects of confounding factors are excluded. Specify confounding factors by choosing the corresponding metainfo keys.
 
 Currently, only single-factor comparisons are supported. More complex
 experimental designs (batch effects, multi-factor analysis,
 etc.) will be supported in later versions of the application.
 
-When the analysis in finished, you can explore the results in **Expression navigator**.
+When the analysis is done, you can explore the results in **Expression navigator**.
 
 .. image:: images/en_microarrays.png
 
@@ -355,41 +354,30 @@ Differential expression similarity search
 +++++++++++++++++++++++++++++++++++++++++
 
 **Action**: to find existing differential expression results with similar differential expression patterns.
+This is useful, for example, to infer the effects of new experiments (e.g. investigations of
+compound toxicity or drug effectiveness) using existing knowledge of other experiments.
 
-To run the application select one of the following inputs:
 
-1. **Gene List** — a file containing list of genes in .grp, .tsv, .txt, .xls formats.
+The application accepts two kinds of gene signatures as input:
 
-2. **Gene Expression Signature** — a list of genes with expression pattern specific to a phenotype (cell type or disease) and represented by LogFC values.
-The gene expression signature files can be used for more accurate similarity
-comparisons. The Gene Expression Signatures can be imported in .tsv, .txt or .xls.
+- **A gene list** This can be entered *manually* or by supplying an imported *Gene List* file in .grp, .tsv, .txt, .xls formats.
+- **A gene expression signature**. This can be supplied by selecting genes from a *Differential Expression File* (differential expression analysis results) in the platform or by supplying an imported *Gene Expression Signature* file in .tsv, .txt or .xls formats. Unlike gene lists, gene expression signatures store quantitative data about expression changes specific to a phenotype such as cell type or disease and represented by LogFC values. Gene expression signatures can be used for more accurate similarity comparisons.
 
-Genes in the imported files can be represented by any standard identifier such as Ensembl or Entrez,
+If you import source file, note that genes in the imported files can be represented by any standard identifier such as Ensembl or Entrez,
 or by gene names. Make sure that organism is specified in the metadata so that the
 right dictionary for species is applied because the same gene names can be used for different organism species.
-Annotations can be also imported together with Gene list or Gene Expression Signature.
+Annotations can be also imported together with Gene list or Gene Expression Signature. Besides, Gene list or Gene Expression Signature may include other annotation columns (in the .tsv/.txt/.xls files) on top of the columns containing the gene names and LogFC values.
 
-3. **Differential Expression Statistics** — existing differential expression analysis results.
-
-Click **Get genes from file** button to select a file including the list of genes that will
-be used to find a match for an input file. Gene list, Gene Expression Signature or
-Differential Expression Statistics file can be used. Then, pick up one or more genes which
-differential expression pattern you are interested in.
-
-The application compares the selected input to the existing transcriptomic patterns obtained
-for chemical compounds in different concentrations based on the genes. For each contrast, it estimates the significance
-of similarity by calculating a p-value, and adjusted p-value for multiple hypothesis testing
-(FDR, False Discovery Rate). Specify **Max FDR** to filter out insignificant results
-(default value is 0,1). A gene is considered as differentially expressed if its FDR calculated in
-the differential expression analysis is lower than the user-specified MaxFDR.
+Selected input gene signature will be compared against other imported gene signatures and sets of
+differentially expressed genes derived in the platform (a gene is categorised as differentially
+expressed if its FDR from the differential expression analysis is lower that the user-specified
+Max FDR input).
 
 Depending on the input different similarity metrics are calculated:
 
-- *Gene signature* is compared to other imported gene signatures and sets of differentially expressed genes obtained with Test Differential Expression Analysis application.
-
-- For *a gene list*, the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
-
-- For *a gene expression signature*, the application compares the Log FC values performing equivalence test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
+- If the input is a **gene list**, Fisher’s hypergeometric test will be performed between the input list against each imported gene signature and against each set of differentially expressed genes. The p-values derived from these tests are then adjusted using the Benjamini-Hochberg correction.
+- If the input is **a gene expression signature**, more quantitative similarity metrics are computed by comparing the Log FCs: equivalence test (also known as Two One-Sided T-tests -- TOST) and Pearson’s correlation.
+- Furthermore, if compound metainfo is available for both the input and target files, similarity based on Tanimoto coefficient is computed. It calculates how many structural features two chemical structures have in common based on their chemical fingerprints. A Tanimoto score of 1.0 indicates that the two structures are very similar. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many structures will have similar fingerprints and very high similarity scores even though they might not be very structurally similar.
 
 Furthermore, the application performs *compound search by similarity of chemical structures*.
 If a Chebi structure of a compound is available in metainfo for both the input and target files,
@@ -407,6 +395,11 @@ are very similar.
 .. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many
 .. structures will have similar fingerprints and very high similarity scores even though they
 .. might not be very structurally similar.
+
+Use **Get genes from file** button to change an input file (Gene list, Gene Expression Signature or
+Differential Expression Statistics) or enter gene names or IDs manually in the search box.
+Then, for a differential expression files, choose the genes that you want to search; for Gene List
+or Gene Expression Signature, the entire list will be used.
 
 The results are represented by an interactive table including the following information:
 
