@@ -360,37 +360,36 @@ To run the application select one of the following inputs:
 
 1. **Gene List** — a file containing list of genes in .grp, .tsv, .txt, .xls formats.
 
-2. **Gene Expression Signature** — a list of genes with expression pattern represented
-by Log FC values that is specific to a phenotype such a cell type or disease according to statistical
-significance (p-value). The gene expression signature files can be used for more accurate similarity
+2. **Gene Expression Signature** — a list of genes with expression pattern specific to a phenotype (cell type or disease) and represented by LogFC values.
+The gene expression signature files can be used for more accurate similarity
 comparisons. The Gene Expression Signatures can be imported in .tsv, .txt or .xls.
 
-Genes in the imported files can be using any standard identifier such as Ensembl or Entrez,
-or using gene names. Make sure that organism is specified in the metadata so that the
-right dictionary for species is used, because the same gene names can be used for different organism species.
+Genes in the imported files can be represented by any standard identifier such as Ensembl or Entrez,
+or by gene names. Make sure that organism is specified in the metadata so that the
+right dictionary for species is applied because the same gene names can be used for different organism species.
 Annotations can be also imported together with Gene list or Gene Expression Signature.
 
 3. **Differential Expression Statistics** — existing differential expression analysis results.
 
 Click **Get genes from file** button to select a file including the list of genes that will
-be used to find match for an input file input file. Gene list, Gene Expression Signature or
+be used to find a match for an input file. Gene list, Gene Expression Signature or
 Differential Expression Statistics file can be used. Then, pick up one or more genes which
 differential expression pattern you are interested in.
 
 The application compares the selected input to the existing transcriptomic patterns obtained
-for chemical compounds in different concentrations based on the genes . For each contrast, it estimates the significance
+for chemical compounds in different concentrations based on the genes. For each contrast, it estimates the significance
 of similarity by calculating a p-value, and adjusted p-value for multiple hypothesis testing
 (FDR, False Discovery Rate). Specify **Max FDR** to filter out insignificant results
 (default value is 0,1). A gene is considered as differentially expressed if its FDR calculated in
-the differential expression analysis is lower that the user-specified Max FDR input.
+the differential expression analysis is lower than the user-specified MaxFDR.
 
 Depending on the input different similarity metrics are calculated:
 
 - *Gene signature* is compared to other imported gene signatures and sets of differentially expressed genes obtained with Test Differential Expression Analysis application.
 
-- For *a gene list* the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
+- For *a gene list*, the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
 
-- For *a gene expression signature* the application compares the Log FC values performing equivalence test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
+- For *a gene expression signature*, the application compares the Log FC values performing equivalence test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
 
 Furthermore, the application performs *compound search by similarity of chemical structures*.
 If a Chebi structure of a compound is available in metainfo for both the input and target files,
@@ -403,7 +402,7 @@ are very similar.
 
 .. _Tanimoto coefficient: https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance
 
-.. Don't understand this statement form the Chebi manual. What is "path depth of eight"?:
+.. Don't understand this statement from the Chebi manual. What is "path depth of eight"?:
 
 .. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many
 .. structures will have similar fingerprints and very high similarity scores even though they
@@ -427,7 +426,7 @@ The results are represented by an interactive table including the following info
 
 - *ChemSim* shows chemical similarity score comparing the chemical structure of the target and query compounds, if applicable (0 means no similarity, and 1 means identical chemical structure);
 
-- *A bar chart*  that represents log-fold change values for the found signatures, where blues colour is used for up-regulation, while red represents down-regulation.
+- *A bar chart*  that represents log-fold change values for the found signatures, where blues colour is used for upregulation, while red represents downregulation.
 
 The results can then be sorted and filtered by **Max FDR** (maximum FDR), **Min Abs Corr**
 (minimum absolute correlation), **Min ChemSim** (minimum chemical similarity), and
