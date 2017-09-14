@@ -485,9 +485,9 @@ dose can be estimated as follows:
 
 .. check ->
 
-**|m(d)-m(0)| = 1.349σ0**,
+**|m(d)-m(0)| = 1.349σ₀**,
 
-where m(d) is the expected gene expression at dose d, σ0 is the standard deviation of the response
+where m(d) is the expected gene expression at dose d, σ₀ is the standard deviation of the response
 at dose 0, which we approximate by the sample standard deviation of the model residuals.
 
 Moreover, for each gene, a differential expression p-value is computed using family-wise F-test
