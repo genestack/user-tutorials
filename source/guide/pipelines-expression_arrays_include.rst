@@ -493,7 +493,7 @@ dose can be estimated as follows:
 
 .. check ->
 
-**|m(B(d)-m(0)| = 1.349σ0** ,
+**|m(d)-m(0)| = 1.349σ0**,
 
 where m(d) is the expected gene expression at dose d, σ0 is the standard deviation of the response
 at dose 0, which we approximate by the sample standard deviation of the model residuals.
