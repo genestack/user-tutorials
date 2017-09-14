@@ -388,7 +388,7 @@ Depending on the input different similarity metrics are calculated:
 
 - *Gene signature* is compared to other imported gene signatures and sets of differentially expressed genes obtained with Test Differential Expression Analysis application.
 
-- For *a a gene list* the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
+- For *a gene list* the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
 
 - For *a gene expression signature* the application compares the Log FC values performing equivalence test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
 
