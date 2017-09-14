@@ -229,9 +229,9 @@ The application is based on the ArrayQualityMetrics_ R package.
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
 
 .. add information about icons:
-On the left panel, you can see which symbols correspond to which QC criteria
-(e.g. the barcode symbol corresponds to distribution of signal intensitities).
-If a sample fails a QC criterion, the corresponding symbol will be attached to it
+.. On the left panel, you can see which symbols correspond to which QC criteria
+.. e.g. the barcode symbol corresponds to distribution of signal intensities.
+.. If a sample fails a QC criterion, the corresponding symbol will be attached to it
 
 Differential gene expression for microarrays
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -386,16 +386,11 @@ the differential expression analysis is lower that the user-specified Max FDR in
 
 Depending on the input different similarity metrics are calculated:
 
-*Gene signature* is compared to other imported gene signatures and sets of
-differentially expressed genes obtained with Test Differential Expression Analysis application.
+- *Gene signature* is compared to other imported gene signatures and sets of differentially expressed genes obtained with Test Differential Expression Analysis application.
 
-For *a a gene list* the application performs **Fisher’s hypergeometric test** between the input
-list against each gene signature and against each set of differentially expressed
-genes available on the platform. The p-values calculated in these tests are then adjusted
-using the Benjamini-Hochberg correction FDR.
+- For *a a gene list* the application performs **Fisher’s hypergeometric test** between the input list against each gene signature and against each set of differentially expressed genes available on the platform. The p-values calculated in these tests are then adjusted using the Benjamini-Hochberg correction FDR.
 
-For *a gene expression signature* the application compares the Log FC values performing equivalence
-test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
+- For *a gene expression signature* the application compares the Log FC values performing equivalence test, namely **Two One-Sided T-tests** (TOST), and **Pearson’s correlation**.
 
 Furthermore, the application performs *compound search by similarity of chemical structures*.
 If a Chebi structure of a compound is available in metainfo for both the input and target files,
@@ -409,10 +404,10 @@ are very similar.
 .. _Tanimoto coefficient: https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance
 
 .. Don't understand this statement form the Chebi manual. What is "path depth of eight"?:
-However, as
-the fingerprints are calculated on a chemical structure path depth of eight it means that many
-structures will have similar fingerprints and very high similarity scores even though they
-might not be very structurally similar.
+
+.. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many
+.. structures will have similar fingerprints and very high similarity scores even though they
+.. might not be very structurally similar.
 
 The results are represented by an interactive table including the following information:
 
