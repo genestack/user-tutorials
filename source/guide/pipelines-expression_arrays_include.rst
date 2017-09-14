@@ -416,7 +416,7 @@ might not be very structurally similar.
 
 The results are represented by an interactive table including the following information:
 
-- *File* links to a gene signature or a dataset. Moreover, it also may include the derived differential expression and dose response results (if available);
+- *File* links to either the imported gene signature or the dataset that the gene signature is derived from. In the latter case, it also includes the derived differential expression report and the dose response report (if available);
 
 - *Compound* shows the compound name and its ChEBI chemical structure (if available);
 
