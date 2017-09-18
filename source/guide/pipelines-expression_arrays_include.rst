@@ -229,9 +229,9 @@ The application is based on the ArrayQualityMetrics_ R package.
 .. _ArrayQualityMetrics: https://www.bioconductor.org/packages/release/bioc/html/arrayQualityMetrics.html
 
 .. add information about icons:
-On the left panel, you can see which symbols correspond to which QC criteria
-(e.g. the barcode symbol corresponds to distribution of signal intensitities).
-If a sample fails a QC criterion, the corresponding symbol will be attached to it
+.. On the left panel, you can see which symbols correspond to which QC criteria
+.. e.g. the barcode symbol corresponds to distribution of signal intensities.
+.. If a sample fails a QC criterion, the corresponding symbol will be attached to it
 
 Differential gene expression for microarrays
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -257,21 +257,26 @@ FDR) and microarray annotation to map probe identifiers to the gene symbols.
 Let's look at the options:
 
 1. **Group samples by** an experimental factor or condition that was specified
-   in the metainfo of the samples. For example, if you have 6 samples -
-   three of them are treated by compound X, and the rest three are untreated - the
+   in the metainfo of the samples. For example, if you have six samples —
+   three of them are treated by compound X, and the rest three are untreated — the
    grouping factor will be the treatment procedure. If no grouping factor is
-   available here, you should open your microarray assays in Metainfo Editor
+   available here, you should open your microarray assays in Metainfo editor
    and specify a grouping factor in a new column.
 2. **Control group** option. If you specify a control group, each group will be
    compared separately to that control group. If you do not specify a control
    group, each group will be compared against the average of all the other groups.
 
+If you specify one or more **confounding factors**, you can identify differentially
+expressed genes between the tested groups of samples, while taking into account potential
+confounders, such as sex, age, laboratory, etc. In this case the detected gene
+expression changes are only caused by the factor of interest, for example treatment,
+while any possible effects of confounding factors are excluded. Specify confounding factors by choosing the corresponding metainfo keys.
+
 Currently, only single-factor comparisons are supported. More complex
-experimental designs (confounding factors, batch effects, multi-factor analysis,
+experimental designs (batch effects, multi-factor analysis,
 etc.) will be supported in later versions of the application.
 
-When the analysis in finished, you can explore the results in **Expression
-Navigator**.
+When the analysis is done, you can explore the results in **Expression navigator**.
 
 .. image:: images/en_microarrays.png
 
@@ -344,17 +349,96 @@ your filtering criteria or clear your selection.
 
 .. image:: images/en_microarrays_search_genes.png
 
+
+Differential expression similarity search
++++++++++++++++++++++++++++++++++++++++++
+
+**Action**: to find existing differential expression results with similar differential expression patterns.
+This is useful, for example, to infer the effects of new experiments (e.g. investigations of
+compound toxicity or drug effectiveness) using existing knowledge of other experiments.
+
+
+The application accepts two kinds of gene signatures as input:
+
+- **A gene list** This can be entered *manually* or by supplying an imported *Gene List* file in .grp, .tsv, .txt, .xls formats.
+- **A gene expression signature**. This can be supplied by selecting genes from a *Differential Expression File* (differential expression analysis results) in the platform or by supplying an imported *Gene Expression Signature* file in .tsv, .txt or .xls formats. Unlike gene lists, gene expression signatures store quantitative data about expression changes specific to a phenotype such as cell type or disease and represented by LogFC values. Gene expression signatures can be used for more accurate similarity comparisons.
+
+If you import source file, note that genes in the imported files can be represented by any standard identifier such as Ensembl or Entrez,
+or by gene names. Make sure that organism is specified in the metadata so that the
+right dictionary for species is applied because the same gene names can be used for different organism species.
+Annotations can be also imported together with Gene list or Gene Expression Signature. Besides, Gene list or Gene Expression Signature may include other annotation columns (in the .tsv/.txt/.xls files) on top of the columns containing the gene names and LogFC values.
+
+Selected input gene signature will be compared against other imported gene signatures and sets of
+differentially expressed genes derived in the platform (a gene is categorised as differentially
+expressed if its FDR from the differential expression analysis is lower that the user-specified
+Max FDR input).
+
+Depending on the input different similarity metrics are calculated:
+
+- If the input is a **gene list**, Fisher’s hypergeometric test will be performed between the input list against each imported gene signature and against each set of differentially expressed genes. The p-values derived from these tests are then adjusted using the Benjamini-Hochberg correction.
+- If the input is **a gene expression signature**, more quantitative similarity metrics are computed by comparing the Log FCs: equivalence test (also known as Two One-Sided T-tests -- TOST) and Pearson’s correlation.
+- Furthermore, if compound metainfo is available for both the input and target files, similarity based on Tanimoto coefficient is computed. It calculates how many structural features two chemical structures have in common based on their chemical fingerprints. A Tanimoto score of 1.0 indicates that the two structures are very similar. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many structures will have similar fingerprints and very high similarity scores even though they might not be very structurally similar.
+
+Furthermore, the application performs *compound search by similarity of chemical structures*.
+If a Chebi structure of a compound is available in metainfo for both the input and target files,
+the `Tanimoto coefficient`_ between the structures is computed.
+This coefficient shows how many common structural features two chemical
+structures have based on their chemical fingerprints. The fingerprint is
+a 2D chemical structure converted so that presence of a particular structural feature is indicated.
+A Tanimoto score ranges from 0 to 1, and the value equal to 1 indicates that the two structures
+are very similar.
+
+.. _Tanimoto coefficient: https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance
+
+.. Don't understand this statement from the Chebi manual. What is "path depth of eight"?:
+
+.. However, as the fingerprints are calculated on a chemical structure path depth of eight it means that many
+.. structures will have similar fingerprints and very high similarity scores even though they
+.. might not be very structurally similar.
+
+Use **Get genes from file** button to change an input file (Gene list, Gene Expression Signature or
+Differential Expression Statistics) or enter gene names or IDs manually in the search box.
+Then, for a differential expression files, choose the genes that you want to search; for Gene List
+or Gene Expression Signature, the entire list will be used.
+
+The results are represented by an interactive table including the following information:
+
+- *File* links to either the imported gene signature or the dataset that the gene signature is derived from. In the latter case, it also includes the derived differential expression report and the dose response report (if available);
+
+- *Compound* shows the compound name and its ChEBI chemical structure (if available);
+
+- *Assays* column shows how many case and control samples participated in the differential expression analysis;
+
+- *Group* provides the name of the differential expression analysis contrast (e.g. dose 30µM vs dose 0µM). Hover over to learn more about each group;
+
+- *Genes* shows the number of genes of the input signature that overlap with the found gene signature. Click the number to explore sortable table with statistics for each found gene, such as LogFC, Log Expr and FDR;
+
+- *FDR(TOST or Fisher)* columns includes adjusted p-values  representing the significance of similarity between contrasts being tested;
+
+- *Corr* columns reflects correlation of the signatures (if log-fold change values are available);
+
+- *ChemSim* shows chemical similarity score comparing the chemical structure of the target and query compounds, if applicable (0 means no similarity, and 1 means identical chemical structure);
+
+- *A bar chart*  that represents log-fold change values for the found signatures, where blues colour is used for upregulation, while red represents downregulation.
+
+The results can then be sorted and filtered by **Max FDR** (maximum FDR), **Min Abs Corr**
+(minimum absolute correlation), **Min ChemSim** (minimum chemical similarity), and
+**Experiment name** or **compound**.
+
+You can export the results using the **Download as .tsv** link at the bottom of the page.
+
+
 Compound dose response analysis
 +++++++++++++++++++++++++++++++
-
-.. TODO Add more info about dose response analysis
 
 Dose response analyser
 **********************
 
-**Action**: to identify differentially expressed genes, fit various dose
-response models (linear, quadratic and Emax), find the optimal model and
-compute benchmark dose and dose response for each gene for this model.
+**Action**: to find compound dosages at which genes start to show significant expression
+changes, i.e. the Benchmark Doses (BMDs). Genes that are differentially
+expressed between different doses are then analysed for pathway enrichment
+analysis; the application reports affected pathways and the average BMD of
+the genes involved in it.
 
 This application takes as input normalised microarray data and performs dose
 response analysis. It requires a microarray annotation file to map probe
@@ -370,16 +454,51 @@ recorded about the fits.
 
 The following options can be configured in the application:
 
-1. The **FDR filter for differentially expressed genes** specifies the false
-   discovery rate above which genes should be discarded from the analysis
-   (default: FDR < 0.1)
-2. **Metainfo key for dose value**. This specifies the metainfo key storing the
-   dose corresponding to each sample, as a numeric value. If no such attribute
-   is present in your data, you need to open your microarray assays in the
-   Metainfo Editor and add it there.
+1. The **FDR filter for differentially expressed genes** specifies the False
+   Discovery Rate threshold above which genes should be discarded from the differential
+   expression analysis (default: FDR < 0.1)
 
-The application is based on the `limma`_ R package. The benchmark dose is estimated
-based on the method described in the `Benchmark Dose Software (BMDS) user manual`_.
+2. **Metainfo key for dose value**. This option specifies the metainfo key storing the
+   dose levels corresponding to each sample, as a numeric value. If no such attribute
+   is present in your data, you need to open your microarray assays in the
+   Metainfo editor and add it there.
+
+
+For each gene, the application fits different regression models (linear, quadratic and Emax)
+to describe the expression profiles of the significant genes as a function of the dose.
+Then, an optimal model is suggested based on the **Akaike Information Criterion (AIC)**, that
+reflects the compromise between the complexity of a model and its “goodness-of-fit”.
+A model with the highest AIC is considered “the best”, however a difference in AIC that is less
+than 2 is not significant enough models with these AIC should also be considered as good.
+
+Mathematically AIC can be defined as:
+
+**AIC = 2(k - ln(L))**,
+
+where k is the number of parameters of the model, and ln(L) is the log-likelihood of the model.
+
+
+Besides, for each gene, based on the optimal model, the **benchmark dose (BMD)** is computed.
+
+Following the method described in the `Benchmark Dose Software (BMDS) user manual`_ the benchmark
+dose can be estimated as follows:
+
+.. check ->
+
+**|m(d)-m(0)| = 1.349σ₀**,
+
+where m(d) is the expected gene expression at dose d, σ₀ is the standard deviation of the response
+at dose 0, which we approximate by the sample standard deviation of the model residuals.
+
+Moreover, for each gene, a differential expression p-value is computed using family-wise F-test
+across all pairs of contrasts of the form "dose[n+1] - dose[n]" for n from 0 to
+<number of doses - 1>. Multiple testing correction is then performed and genes
+that pass the user-defined FDR threshold are categorised as differentially expressed.
+
+Differentially expressed genes are then processed by gene set enrichment analysis. For each
+enriched pathway, the average and standard deviation of the BMDs of its genes are computed.
+
+The application is based on the `limma`_ R package.
 
 .. _limma: https://www.bioconductor.org/packages/3.3/bioc/html/limma.html
 .. _Benchmark Dose Software (BMDS) user manual: https://www.epa.gov/bmds/benchmark-dose-software-bmds-user-manual
