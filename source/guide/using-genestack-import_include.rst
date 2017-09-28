@@ -180,7 +180,7 @@ platform as OWL, OBO or CSV file and attach it to the import template.
 
 You can select which import template to use in two ways: from the Dashboard,
 or during the 3rd step of the import process by right-clicking on the
-import template name ("Default template" is for the public one). You can create a copy of existed
+import template name ("Default template" is for the public one). You can create a copy of existing
 import templates with **Make a copy** option in the context menu.
 
 .. image:: images/copy-import-template.png
@@ -225,17 +225,13 @@ required and what is its metainfo type (e.g. text, yes/no, integer).
 .. image:: images/metainfo_type_editor.png
 
 If you are using a file kind that is not yet listed, you can add a new one by
-clicking on the **Add File Kind** button at the bottom of the page and
-specifying the required metainfo attributes. Keep in mind that file kinds are
+clicking on the **Add file kind** button. Keep in mind that file kinds are
 defined in Genestack — you will not be able to create a template entry for a
 file kind that is not used on the platform.
 
-.. image:: images/template-add-file-kind.png
-
-When you are done, click on the blue **Import data using this template** button.
-This will take you to the **Data import** app import page, where you can go through the three import
-steps described above. You can find all the imported files in the "Imported
-files" folder which can be accessed from the Dashboard and from the File
+When you are done, click on the blue **Import using this template** button.
+This will take you to the **Import Data** app, where you can go through the three import
+steps described above. You can find all the imported files in the "Imported" folder which can be accessed from the Dashboard and from the File
 Manager.
 
 Metadata import
@@ -247,7 +243,7 @@ to the dataset on the platform.
 .. image:: images/import_from_spreadsheet.png
 
 Click **Import data from spreadsheet** button and select a local CSV or
-Excel file containing metadata you would like to associate with the imported assays.
+Excel file containing metadata you would like to associate with the imported files.
 
 .. image:: images/import_metainfo.png
 
@@ -284,26 +280,18 @@ For instance, in this case we added new column
 Attachments
 ~~~~~~~~~~~
 
-While importing a dataset into Genestack (just to remind you, an
-dataset is a special folder that is created when you import sequencing or
-microarray assays) you can choose to attach various files to it. For
-example, you could include a PDF file with the experiment plan, an R script
-that you used to process your data, etc. When you open your newly-imported
+While importing a dataset into Genestack, you can also attach various files to it such as, for
+example, a PDF file with the experiment plan or an R script, etc. When you open your newly-imported
 datasets, all of the attachments will accompany it. They will be safely
 stored on Genestack, so later you can download them from the platform, in case
 they get lost on your computer.
 
-**How to upload an attachment?**
-
-Attachments should be uploaded together with the dataset. In the the Import application, choose
-the attachments from your computer along with your dataset. The platform will
-recognize the raw data, and all additional files that were unrecognised will
-be added to the dataset as attachments.
+You can import an attachment during data importing process in the the Data Import application. To do
+so you should choose the attachments from your computer along with your dataset, and all
+unrecognised uploads will be added to the dataset as attachments.
 
 .. image:: images/attachments.png
 
-All the unrecognised uploads will be stored as attachments to your
-dataset. You can also upload more attachments, or remove attachments at the last step of import — edit
-metainfo.
+Besides, you can upload more attachments, or remove attachments in the Metainfo Editor.
 
 .. image:: images/exp_attachments.png
