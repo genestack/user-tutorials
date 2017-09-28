@@ -146,9 +146,9 @@ to make life a bit simpler for our users. This folder contains:
    have pre-loaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
    ArrayExpress, SRA, and ENA. Currently we have more than 110,000
-   experiments in our database.
+   datasets in our database.
 #. **Tutorials**: the folder contains files we use as examples during
-   various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
+   various tutorials.
 
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
