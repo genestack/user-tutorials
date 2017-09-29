@@ -15,26 +15,27 @@ To prepare these Dictionaries we adopted terms from external ontologies or creat
 You can also use our standardized and unified terminology to describe your own data
 or analysis results.
 
-Our **Edit Metainfo** application enable you to prepare metadata manually. You can edit metadata on
-the last step of data importing process (see Import section for more information) or
-later from any place of the platform with context menu.
-
-Regardless the way we access Edit Metainfo application on its page we can see that
-our files are broken down into groups by file type and their metadata are shown in tables where
-rows represents metainfo fields.
+**Metainfo Editor** application enable you to explore metadata for datasets or standalone
+files. Besides, if you have enough permissions, you can edit metainfo data or import it from
+spreadsheet in .xls, .xlsx, .csv formats. You can access Metainfo Editor from any place of
+the platform with context menu. Moreover, metadata editing is the last step in the data importing
+process (see Import section for more information). Metadata of the files are shown in Excel-like
+tables where rows represent metainfo fields, such as 'Organism', 'Cell line' or 'Platform'.
 
 .. image:: images/metainfo-editor.png
 
-By default a table is based on **Default Import Template** that, however, you
+#. **Edit metadata manually**
+
+By default a metainfo data table is based on **Default Import Template** that, however, you
 can easily replace with a custom one (learn more about templates in the section
 Importing data). To do so click on the template's name, select **Change
-template**, then in the appear pop-up window pick template of interest.
+template**, and in the appear pop-up window pick template of interest.
 
 .. image:: images/change-template.png
 
 When you start typing in the corresponding cell, you will be suggested with
-terms from our controlled dictionaries if possible. Although, you are free to
-enter any values, we encourage you to use our standartized terminology, that
+terms from our controlled dictionaries if possible. You are free to
+enter any values, however we encourage you to use our standartized terminology, that
 helps you to avoid typos and harmonise metadata.
 
 .. image:: images/tissue-dict.png
@@ -57,13 +58,14 @@ Click column name to **sort** metadata or **delete** the selected column if need
 
 .. image:: images/sort.png
 
-Besides filling metadata manually in the application, you can import it from
-your local computer. Click the **Import data from spreadsheet** button and
-select a CSV, XLS or XLSX file with metadata that you would like to attach.
+#. **Import metainfo data from your computer**
+
+To begin, click the **Import data from spreadsheet** button. Then,
+choose a CSV, XLS or XLSX file with metadata that you would like to attach.
 
 .. image:: images/from-spreadsheet-1.png
 
-However, make sure that names of samples in the imported file are the same as
+Make sure that names of samples in the imported file are the same as
 the ones shown in the column "Name" in Metainfo Editor application. Otherwise,
 all not matching information in the imported file will not be imported. It will
 be marked in red, so you could easily fix it by clicking on "Select file" link.
@@ -90,3 +92,9 @@ could share the files with your collaborators and add them to a folder of your
 choice.
 
 .. image:: images/run-df-from-me.png
+
+In case when you want to analyse just some samples from a dataset, you can make a subset.
+There are two ways of making subsets: select samples you want to analyse using checkboxes, and click **Make a subset**;
+or you can open **metainfo summary** and specify metainfo values that will be used as a rule to create
+a subset and filter out all non-matching files.
+
