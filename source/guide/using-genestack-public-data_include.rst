@@ -98,3 +98,4 @@ There are two ways of making subsets: select samples you want to analyse using c
 or you can open **metainfo summary** and specify metainfo values that will be used as a rule to create
 a subset and filter out all non-matching files.
 
+.. image:: images/metainfo-summary.png
