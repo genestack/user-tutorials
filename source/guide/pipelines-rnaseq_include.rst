@@ -135,10 +135,10 @@ Now, let's look through the application parameters:
    (default: unchecked)
 2. **Maximum number of multiple alignments allowed for a read: if exceeded,
    the read is considered unmapped**. This option allows you to set how many
-   mappings you expect for one mappable read if it is mapped in multiple
+   mappings you expect for one mappable read if it is mapped to multiple
    positions of the genome. (default: 10)
 3. The **Minimum overhang for unannotated junctions** option prohibits alignments
-   with very small spilce overhangs for unannotated junctions (overhang is a
+   with very small splice overhangs for unannotated junctions (overhang is a
    piece of the read which is spliced apart). (default: 5)
 4. The **Minimum overhang for annotated junctions** option does the same job as
    "Minimum overhang for unannotated junctions" but for annotated junctions.
@@ -219,8 +219,8 @@ The application is based on the `RSEM`_ program and the `STAR`_ mapper.
 .. _RSEM: http://deweylab.github.io/RSEM/
 .. _STAR: https://github.com/alexdobin/STAR
 
-Gene quantification with HTSeq-count
-++++++++++++++++++++++++++++++++++++
+Quantify raw coverage in genes
+++++++++++++++++++++++++++++++
 
 **Action**: to compute gene counts from mapped reads. The application takes as
 input a mapped reads file, and uses a reference genome to produce a mapped
@@ -319,9 +319,9 @@ Let's inspect the application options:
    average fragment length can be directly estimated from the reads. (default:
    190)
 4. **Estimated standard deviation of fragment length (for single-end reads
-   only)** option. If you do not know standard deviation of the fragment
+   only)** option. If you do not know the standard deviation of the fragment
    library, you can probably assume that the standard deviation is 10% of the
-   average fragment length. For paired-end reads this value will be estimated
+   average fragment length. For paired-end reads, this value will be estimated
    from the input data. (default: 20)
 
 Use the **View report** application in the Explore section to review the
@@ -343,8 +343,8 @@ The application is based on the Kallisto_ tool.
 
 .. _Kallisto: https://pachterlab.github.io/kallisto/
 
-Isoforms quantification with Cuffquant
-++++++++++++++++++++++++++++++++++++++
+Quantify FPKM coverage in isoforms
+++++++++++++++++++++++++++++++++++
 
 Specific genes can produce a range of different transcripts encoding various
 isoforms, i.e. proteins of varying lengths containing different segments of the

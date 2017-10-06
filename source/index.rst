@@ -11,7 +11,7 @@ concepts of the platform, a detailed walkthrough of the user interface
 and of the different bioinformatics pipelines available on Genestack.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    guide/intro-to-bioinformatics
    guide/genestack-features
