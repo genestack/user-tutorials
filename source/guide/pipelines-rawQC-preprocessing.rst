@@ -43,7 +43,6 @@ preprocessing.
 FastQC report
 +++++++++++++
 
-.. TODO this is a tutorial on data flows !!!!!!
 .. TODO tips: depending on the technology (WGS, WES, Microbiome, etc. data) and Organism, you can expect warnings and faiures as well
 
 **Action**: to perform quality control (QC) of raw sequencing reads. According to
@@ -51,41 +50,18 @@ the "garbage in, garbage out" rule, if we begin our analysis with poor quality
 reads, we should not expect great results at the end. This is why QC is the essential
 first step of any analysis.
 
-The **FastQC Report** application is based on
-the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
+The **FastQC Report** application is based on the `FastQC tool`_ developed by
+Simon Andrews at the Babraham Institute.
 
 .. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-.. image:: images/fastqc_report.png
-   :scale: 80 %
 
-One way to start the analysis is to manually run the FastQC Report. To do so you can
-select the dataset to be analysed, then on the Metainfo Editor page pick up raw reads, click
-**Use dataset** button and from the drop-down menu choose **FastQC Report** as shown in the picture below.
+The application generates a separate FastQC Report for each sample from a tested dataset;
+you can find them in the folder "Created files". You can also explore all of them simultaneously
+with Multiple QC Report app. To do so, go to "My datasets" folder, select the created
+"FastQC Report" dataset and open it with
+Multiple QC Report using the context menu.
 
-.. image:: images/run_fastqc.png
-
-Another way to perform quality assessment of your data in Genestack
-is via the public data flow `Raw Reads Quality Control`_.
-
-.. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778184&action=viewFile
-
-Remember you need to initialize the computation. You will have to wait for the results
-(you can track the progress of your tasks in **Task Manager**). Once they are completed,
-you can find your files in "My Datasets" folder.
-
-On the FastQC Report page you can view both the result and the provenance of
-the report file. At the top of the page you will see the file name and the
-version of the fastQC tool used. The **View parameters** button will show you
-source files and the command line options used to generate the report. The
-**Hide parameters** button will hide this technical information. Below that you
-will see the File Dataflow, in this case it should only contain two application entries —
-Experiment Loader and FastQC Report. In other cases, you might see more than
-two applications in this line.
-
-.. image:: images/fastqc_page_source_files.png
-
-Finally, the results can be viewed in the **Reports** section. Here you will find
-various graphs that visualize the quality of your data. We will go through all
+Fast QC Report contains various graphs that visualize the quality of your data. We will go through all
 of them one by one and tell you:
 
 1. How they should look for data of perfect quality; 

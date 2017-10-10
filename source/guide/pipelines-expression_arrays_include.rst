@@ -164,6 +164,8 @@ and include:
   from the failed "CD4 T lymphocytes, blood draw (1)" array.
 
 .. image:: images/microarray_qc_pca.png
+   :scale: 70 %
+   :align: center
 
 - Distances between arrays. The application computes the distances between
   arrays. The distance between two arrays is computed as the mean absolute
@@ -174,6 +176,8 @@ and include:
   distances to all other arrays is extremely large.
 
 .. image:: images/microarrays_qc_distances_between_arrays.png
+   :scale: 70 %
+   :align: center
 
 2. **Array intensity** statistics.
 
@@ -182,6 +186,8 @@ and include:
   and width. If they are different, it may indicate an experimental problem.
 
 .. image:: images/microarray_qc_boxplots_of_signal_intensities.png
+   :scale: 80 %
+   :align: center
 
 - Density plots of signal intensities show density distributions for
   microarrays. In a typical experiment, we expect these distributions to have
@@ -189,6 +195,8 @@ and include:
   indicate the quality related problems.
 
 .. image:: images/microarray_qc_density_plots_of_signal_intensities.png
+   :scale: 70 %
+   :align: center
 
 3. **Variance mean dependence** metric.
 
@@ -202,6 +210,8 @@ and include:
   saturation of the intensities.
 
 .. image:: images/microarray_qc_standard_deviation_vs_mean_rank.png
+   :scale: 85 %
+   :align: center
 
 4. **Individual array quality**.
 
@@ -214,6 +224,8 @@ and include:
   so we expect a MA plot centered on the Y=0 axis from low to high intensities.
 
 .. image:: images/microarray_qc_MA_plot.png
+   :scale: 80 %
+   :align: center
 
 Additional Affymetrix-specific metrics are also computed for Affymetrix
 microarrays.
@@ -223,6 +235,8 @@ detect apparent outlier arrays, suggest you remove them and re-normalise
 your data or continue differential expression or dose response analyses.
 
 .. image:: images/microarray_gc_report_outlier.png
+   :scale: 80 %
+   :align: center
 
 The application is based on the ArrayQualityMetrics_ R package.
 
@@ -279,6 +293,8 @@ etc.) will be supported in later versions of the application.
 When the analysis is done, you can explore the results in **Expression navigator**.
 
 .. image:: images/en_microarrays.png
+   :scale: 80 %
+   :align: center
 
 Expression navigator
 ********************
@@ -299,12 +315,15 @@ The Expression Navigator page contains four sections:
    expressed genes.
 
 .. image:: images/en_microarrays_DE_genes_table.png
+   :scale: 90 %
+   :align: center
 
 You can filter differentially expressed genes by maximum acceptable false discovery rate (FDR), up
 or down regulation, minimum log fold change (LogFC), and minimum log counts
 per million (LogCPM).
 
 .. image:: images/en_microarrays_filtering.png
+   :align: center
 
 Let's look through these statistics:
 
@@ -331,6 +350,7 @@ Moreover, you can sort the differentially expressed genes by these statistics, c
 arrows near the name of the metric in the table.
 
 .. image:: images/en_microarrays_sorting.png
+   :align: center
 
 The buttons at the bottom of the section allow you to refresh the list based on
 your filtering criteria or clear your selection.
@@ -341,6 +361,8 @@ your filtering criteria or clear your selection.
    expression value of a specific gene in a specific sample.
 
 .. image:: images/en_microarrays_boxplots.png
+   :scale: 90 %
+   :align: center
 
 4. The bottom-right section contains a **search box** that allows you to look
    for specific genes of interest. You can look up genes by gene symbol, with
@@ -348,6 +370,8 @@ your filtering criteria or clear your selection.
    with the current filters).
 
 .. image:: images/en_microarrays_search_genes.png
+   :scale: 90 %
+   :align: center
 
 
 Differential expression similarity search
@@ -519,6 +543,8 @@ identified differentially expressed gene to describe its expression profile as a
 dose. These results are presented in an interactive table.
 
 .. image:: images/dose_response_analysis_table.png
+   :scale: 90 %
+   :align: center
 
 The table includes information about:
 
@@ -528,6 +554,7 @@ The table includes information about:
   of associated gene ontology (GO) terms;
 
 .. image:: images/dose_response_analysis_gene_ontology.png
+   :align: center
 
 - *BMD* – the benchmark dose, corresponding to the dose above which the
   corresponding gene shows a significant change in expression, according to the
@@ -557,12 +584,16 @@ Here are examples of dose response curves as they are displayed in the
 application:
 
 .. image:: images/dose_response_analysis_plot.png
+   :scale: 80 %
+   :align: center
 
 In the "Pathways" tab, you can see a list of significantly enriched pathways,
 based on the detected differentially expressed genes and the pathway annotation
 file supplied to the analysis application.
 
 .. image:: images/dose_response_analysis_pathways.png
+   :scale: 90 %
+   :align: center
 
 The table includes:
 

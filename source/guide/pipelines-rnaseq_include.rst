@@ -249,6 +249,8 @@ Let's go through the application parameters:
    with more than one feature, it will not be counted.
 
 .. image:: images/overlap_resolution_modes.png
+   :scale: 80 %
+   :align: center
 
 3. **Strand-specific reads**. The application takes into account the direction
    of the read and the reference, so that a read from the wrong direction,
@@ -505,6 +507,7 @@ Expression navigator
 expression analyses.
 
 .. image:: images/expression_navigator_for_RNA-seq.png
+   :align: center
 
 The Expression Navigator page contains four sections:
 
@@ -513,18 +516,21 @@ The Expression Navigator page contains four sections:
    group.
 
 .. image:: images/expression_navigator_group_information.png
+   :align: center
 
 2. The **Top Differentially Expressed Genes** section allows you to choose which groups
    to compare and how to filter and sort identified differentially expressed
    (DE) genes.
 
 .. image:: images/expression_navigator_top_de_genes.png
+   :align: center
 
 You can filter DE genes by maximum acceptable false discovery rate (FDR), up or
 down regulation, minimum log fold change (LogFC), and minimum log counts per
 million (LogCPM).
 
 .. image:: images/expression_navigator_de_genes_filtering.png
+   :align: center
 
 Let’s look through these statistics:
 
@@ -561,6 +567,7 @@ Moreover, you can sort the DE genes by these statistics by clicking the
 arrows next to the name of the metrics in the table headers.
 
 .. image:: images/expression_navigator_de_genes_sorting.png
+   :align: center
 
 The buttons at the bottom of the section allow you to update the list based on
 your filtering criteria or clear your selection.
@@ -571,6 +578,7 @@ your filtering criteria or clear your selection.
    expression value of a specific gene in a specific sample.
 
 .. image:: images/expression_navigator_de_boxplots.png
+   :align: center
 
 4. The bottom-right section contains **a search box** that allows you to look for
    specific genes of interest. You can look up genes by gene symbol, with
@@ -578,6 +586,7 @@ your filtering criteria or clear your selection.
    with the current filters).
 
 .. image:: images/expression_navigator_de_search_box.png
+   :align: center
 
 You can read more about this application in the corresponding `tutorials`_.
 
@@ -653,7 +662,8 @@ The application shows basic statistics such as the number of identified highly
 variable genes across the analysed samples.
 
 .. image:: images/sc-rna-seq_basic_statistics.png
-   :scale: 50 %
+   :scale: 80 %
+   :align: center
 
 It also provides several quality control (QC) plots allowing to check the
 quality of raw sequencing data, estimate and fit technical noise for the
@@ -661,6 +671,8 @@ Brennecke algorithm, and detect genes with significantly high variability
 in expression.
 
 .. image:: images/qc_plots_in_single_cell_visualizer.png
+   :align: center
+
 
 QC plots are adopted from the original `paper by Brennecke et al`_. In all the
 plots described below, gene expression levels are normalized using the DESeq
@@ -677,11 +689,16 @@ analysis, separate plots will be rendered for spike-in genes and for sample
 genes.
 
 .. image:: images/sc-rna-seq_qc_raw.png
+   :scale: 80 %
+   :align: center
+
 
 The Technical Noise Fit and Highly Variable Genes plots provide a visual
 summary of the gene expression noise profile in your dataset across all cells.
 
 .. image:: images/sc-rna-seq_technical_noise_fit_and_variable_genes.png
+   :scale: 80 %
+   :align: center
 
 They graph the squared coefficient of variation (CV²) against the average
 normalized read counts across samples.  The Gene Expression Variability QC plot
@@ -709,6 +726,8 @@ Expression of the highly variable genes across all cell samples is represented
 by an interactive clustered heatmap.
 
 .. image:: images/heatmap_single_cell_visualizer.png
+   :scale: 80 %
+   :align: center
 
 The interactive heatmap depicts the log normalised read count of each
 significant highly variable gene (rows) in each cell sample (columns).
@@ -727,6 +746,8 @@ detect cell subpopulations and identify novel cell populations based on gene
 expression heterogeneity in the single-cell transcriptomes.
 
 .. image:: images/clustering_single_cell_visualizer.png
+   :scale: 80 %
+   :align: center
 
 The Samples Visualisation section provides interactive plots used to cluster
 cell samples based on expression of highly variable genes. Currently, two

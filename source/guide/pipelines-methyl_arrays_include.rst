@@ -12,6 +12,7 @@ For methylation microarrays, normalisation can be performed with either "subsetQ
 or "quantile" method, and in addition, "genomeStudio" background correction may be applied.
 
 .. image:: images/meth-array-normalization-options.png
+   :align: center
 
 Further, the quality of normalised microarrays can be checked using the **Microarray QC Report**
 application to detect and remove potential outliers. Normalised microarrays that are of good quality
@@ -61,16 +62,22 @@ for each array. In general, samples of good quality cluster together,
 while "bad" samples tend to separate, typically with lower median intensities.
 
 .. image:: images/log-median-intensities.png
+   :scale: 70 %
+   :align: center
 
 **2) Beta-values of the assays are represented by two plots:**
 
 - *Beta density* plot represents the Beta-value densities of samples
 
 .. image:: images/qc-beta-density.png
+   :scale: 75 %
+   :align: center
 
 - *Beta density bean* plot also shows methylation the Beta-values.
 
 .. image:: images/qc-beta-density-bean.png
+   :scale: 75 %
+   :align: center
 
 **3) Control probes plots:**
 
@@ -89,6 +96,8 @@ the of microarray assay preparation and include:
   and extension steps.
 
 .. image:: images/qc-staining.png
+   :scale: 75 %
+   :align: center
 
 - *Extension control strip*, which tests efficiency of single-base extension
   of the probes that incorporates labeled nucleotides. Both red (A and T,
@@ -96,6 +105,8 @@ the of microarray assay preparation and include:
   are considered.
 
 .. image:: images/qc-extension.png
+   :scale: 75 %
+   :align: center
 
 - *Hybridization control strip*, which estimates entire performance of the
   microarray assay.
@@ -105,6 +116,8 @@ Extension of the target provides signal.
 The higher concentration of the target is used, the higher signal intensity will be registered.
 
 .. image:: images/qc-hybridisation.png
+   :scale: 75 %
+   :align: center
 
 - *Target removal control strip*, which tests whether all targets are removed
   after extension step. During extension reaction the sequence on the array is
@@ -113,6 +126,8 @@ The higher concentration of the target is used, the higher signal intensity will
   signal of hybridization control.
 
 .. image:: images/qc-target-removal.png
+   :scale: 75 %
+   :align: center
 
 **Sample-dependent controls**
 
@@ -133,6 +148,8 @@ probes matches the converted DNA, and are extended. If the
 sample has some unconverted DNA, the unconverted probes get extended.
 
 .. image:: images/qc-bis-conversion-I.png
+   :scale: 75 %
+   :align: center
 
 *Bisulphite conversion II control strip*
 
@@ -142,17 +159,23 @@ If there is some unconverted DNA, the guanine base is incorporated, resulting to
 signal in the green channel.
 
 .. image:: images/qc-bis-conversion-II.png
+   :scale: 75 %
+   :align: center
 
 - Specificity controls, which monitor potential non-specific primer extension.
 
 *Specificity I control strip* is used to assess allele-specific extention for the Infinium I chemistry assays.
 
 .. image:: images/qc-specificity-I.png
+   :scale: 75 %
+   :align: center
 
 *Specificity II control strip* allows to estimate specificity of extension for Infinium II assay
 and test whether there is any nonspecific methylation signal detected over unmethylated background.
 
 .. image:: images/qc-specificity-II.png
+   :scale: 75 %
+   :align: center
 
 All the QC-plots shown on the application page may be downloaded in PDF format (see *Minfi PDF Report*).
 
@@ -161,6 +184,8 @@ remove them, and re-normalize the rest of the assays together. To do so, click *
 select those samples that pass QC-check, then click **Remove outliers and re-normalise button**.
 
 .. image:: images/QC-sample-list.png
+   :scale: 75 %
+   :align: center
 
 Then, if you are happy with quality of re-normalized arrays, you can proceed to the following
 step - **Differential Methylation Analysis**.
@@ -207,6 +232,8 @@ the application performs differential methylation analysis for each CpG site in 
 (default: No control group)
 
 .. image:: images/diff-meth-options.png
+   :scale: 80 %
+   :align: center
 
 If you specify one or more confounding factors, you can identify differentially methylated sites
 between tested groups of samples, while taking into account potential confounders, such as sex,
@@ -281,6 +308,8 @@ differentially methylated in the selected group compared to either the average o
 or a control group (if it is set).
 
 .. image:: images/MN-top-sites.png
+   :scale: 80 %
+   :align: center
 
 .. NEED TO FIX A REFERENCE NOTE ON THE APP PAGE [?]: we can also compare EACH individual
 .. group to a set CONTROL one!
@@ -305,10 +334,13 @@ You can reduce the list of DMPs by filtering the data in the table based on the 
 - *Min Average Beta* — only shows sites with average Beta value of at least this threshold.
 
 .. image:: images/MN-sites-filter.png
+   :align: center
 
 Sort the list of probes by clicking the arrows next to the name of the statistical metrics in the table headers.
 
 .. image:: images/MN-sites-sort.png
+   :scale: 80 %
+   :align: center
 
 3. **A boxplot of methylation levels**
 
@@ -317,18 +349,23 @@ the tested group. Each boxplot represents the distribution of a methylation in a
 The y-axis shows Beta values, while the x-axis shows probe IDs.
 
 .. image:: images/MN-sites-boxplot.png
+   :scale: 80 %
+   :align: center
 
 4. The bottom-right section contains **a search box** that allows you to explore the results for a particular
 probe. Start typing a probe ID and select the probe of interest in the appeared drop-down
 list of possible variants.
 
 .. image:: images/MN-sites-search.png
+   :scale: 80 %
+   :align: center
 
 You can further export either the complete table of differential methylation analysis for all the groups
 or the list of values for the specific comparison in TSV format. See **Export Data (for all comparisons, as .tsv)**
 and **Download filtered data for current comparison as .tsv** options, respectively.
 
 .. image:: images/MN-sites-export.png
+   :align: center
 
 
 Methylation navigator for regions

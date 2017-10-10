@@ -10,7 +10,7 @@ and annotation of genetic variants.
 With Genestack you can either use one of the dataflows or build a pipeline
 manually selecting customizable applications supported by the system.
 
-Use Data browser to find a dataset you would like to analyse, click on it.
+Use Data Browser to find a dataset you would like to analyse, click on it.
 Then, on the Metainfo Editor page select the assays you wish to analyse and click
 on the button marked **Use Dataset** to start creating your pipeline.
 
@@ -22,6 +22,8 @@ suggests only applications that can be used to analyse your data, considering
 its type and metadata. Select the first application you wish to see in your pipeline.
 
 .. image:: images/pipeline_building.png
+   :align: center
+   :scale: 80 %
 
 This will take you to the application page where you can:
 
@@ -31,6 +33,8 @@ This will take you to the application page where you can:
 - add further steps to the file data flow (the pipeline).
 
 .. image:: images/cla_page.png
+   :align: center
+   :scale: 80 %
 
 To proceed click on **Add step** button that will show you the list of all the
 matching applications.
