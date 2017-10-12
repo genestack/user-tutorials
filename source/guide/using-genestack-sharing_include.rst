@@ -35,6 +35,7 @@ From there, administrators can add or disable users, and reset passwords.
 
 .. image:: images/pr_manage_users.png
    :scale: 70 %
+   :align: center
 
 Sharing in Genestack is done through groups: every user can create any number
 of groups, and add other users to them. Each file in the system can be shared

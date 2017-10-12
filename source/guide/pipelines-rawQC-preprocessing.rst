@@ -27,6 +27,7 @@ top-left corner of the page, and in the drop-down menu select "About application
 
 .. image:: images/about_app.png
    :scale: 80 %
+   :align: center
 
 
 Sequencing data

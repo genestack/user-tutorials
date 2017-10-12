@@ -13,11 +13,14 @@ your files, and if some of them are not initialized, you will be suggested to
 initialize them prior to export.
 
 .. image:: images/export1.png
+   :align: center
 
 If you change your mind, you can stop exporting process by click on **Cancel**
 button.
 
 .. image:: images/export2.png
+   :align: center
+
 
 The application creates an Export File that contains a special link to download
 the selected assays, that is accessible until the corresponding Export File is
@@ -26,3 +29,4 @@ do not have a Genestack account. All the Export files are stored in the
 “Exports” folder.
 
 .. image:: images/export3.png
+   :align: center
