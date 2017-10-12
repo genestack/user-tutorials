@@ -51,7 +51,7 @@ When you perform any analysis on Genestack, other data types, which cannot be im
   such as fold-changes, p-values, FDR, etc.;
 - **Genome Annotations** — a technical file used for matching GO terms and
   gene symbols to gene coordinates;
-- **Mapped Read Counts** — file is produced Mapped reads and contains the number of reads mapped to each feature of a reference
+- **Mapped Read Counts** — file is produced from Mapped Reads and contains the number of reads mapped to each feature of a reference
   sequence.
 
 .. verify
@@ -64,15 +64,21 @@ There are several ways you can access the **Import** application:
 - using the **Import data** link on the Dashboard;
 
 .. image:: images/WP_import.png
+   :scale: 90 %
+   :align: center
 
 - clicking the **Import** button in the File Manager;
 
 .. image:: images/FM_import.png
+   :scale: 90 %
+   :align: center
 
 - using an **import template**. We will describe what import template is and how to
   use it later in the guide.
 
 .. image:: images/IT_import.png
+   :scale: 90 %
+   :align: center
 
 Import data includes the following steps:
 
@@ -84,12 +90,15 @@ There are two ways to upload data into the platform:
 1. **Use data from your computer** — select or drag-and-drop files.
 
 .. image:: images/import_start.png
+   :scale: 80 %
+   :align: center
 
 2. **Upload from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
    directories.
 
 .. image:: images/URL_import.png
-
+   :scale: 80 %
+   :align: center
 
 The **Use previous uploads** option allows you to avoid uploading the data a
 second time.
@@ -100,12 +109,15 @@ are being uploaded, you can edit their metadata and use them in
 pipelines.
 
 .. image:: images/uploading_step.png
+   :scale: 80 %
+   :align: center
 
 If during uploading you lose your Internet connection, you will be able to
 resume unfinished uploads later.
 
 .. image:: images/resumed_uploads.png
    :scale: 85 %
+   :align: center
 
 Click the **Create files** button to proceed.
 
@@ -118,16 +130,22 @@ reference genomes, etc. Format conversions will be handled internally by
 Genestack. You will not have to worry about formats at all.
 
 .. image:: images/file_recognition.png
+   :scale: 80 %
+   :align: center
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
 them to a specific data type: drag the raw file and move it to the green
 "Choose type" box at the top of the page.
 
 .. image:: images/unrecognized_uploads.png
+   :scale: 80 %
+   :align: center
 
 Choose the data type you find suitable:
 
 .. image:: images/file_types_box.png
+   :scale: 80 %
+   :align: center
 
 Click the **Create files** button to proceed.
 
@@ -184,6 +202,8 @@ import template name ("Default template" is for the public one). You can create 
 import templates with **Make a copy** option in the context menu.
 
 .. image:: images/copy-import-template.png
+   :align: center
+   :scale: 85 %
 
 Genestack will attempt to fill metainfo fields automatically, but you can always
 edit the contents manually during the import process. By using metainfo
@@ -202,6 +222,7 @@ the "Manage" submenu. To create new template on the basis of the default one you
 
 .. image:: images/import_templates.png
    :scale: 45 %
+   :align: center
 
 Now let’s say you wish to create an import template to control
 the metainfo attributes of raw reads (e.g. you always need to know the

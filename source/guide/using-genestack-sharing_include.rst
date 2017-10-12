@@ -18,6 +18,7 @@ accessible via the menu which opens when you click on your email address at the
 top-right corner of any page.
 
 .. image:: images/profile_menu.png
+   :align: center
 
 Managing users
 ~~~~~~~~~~~~~~
@@ -27,6 +28,8 @@ the Genestack logo will also have an additional item, "Manage Users", which take
 the organisation's user management page.
 
 .. image:: images/shortcuts_manage_users.png
+   :scale: 80 %
+   :align: center
 
 From there, administrators can add or disable users, and reset passwords.
 
@@ -97,6 +100,7 @@ next to it, then clicking the **Share** button in the top bar. Alternatively you
 can right-click on the file and select the "Share" option in the context menu.
 
 .. image:: images/sharing_experiment.png
+   :align: center
 
 From there, you will be taken to the file sharing dialog, which asks you to
 select a group to share the file with. By default, files are shared with
@@ -104,12 +108,14 @@ read-only permissions (both for data and metadata). But you have the option of
 giving members the ability to edit the files in addition to just viewing them.
 
 .. image:: images/sharing_dialog.png
+   :align: center
 
 Once you click the blue **Share** button, you will be prompted for your password,
 and then asked whether you would like to link the file into the group's shared
 folder.
 
 .. image:: images/sharing_with_link.png
+   :align: center
 
 If you link the file into that folder, it will be visible to the group's users
 when they open that folder (which can make it easier for them to find it). If
@@ -122,6 +128,7 @@ Each group has an associated group folder which you can access from the File
 Manager under "Shared with me" in the left-hand side panel.
 
 .. image:: images/shared_with_me.png
+   :align: center
 
 All files you share with other people, along with all files shared with you,
 will be located in that folder.
@@ -131,8 +138,11 @@ for example to share FastQC Report with your collaborators you should click the 
 name and select Share option in the drop-down list.
 
 .. image:: images/share-in-bioapp.png
+   :align: center
 
 Besides, you can share your datasets from the Metainfo editor page with the button Share.
 
 .. image:: images/share-in-ME.png
+   :align: center
+
 
