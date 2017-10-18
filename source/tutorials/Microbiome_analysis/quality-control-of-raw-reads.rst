@@ -14,7 +14,7 @@ the data we'll run the `Raw Reads QC`_ data flow:
 
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
-.. _Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3772318&action=viewFile
+.. _Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF969011&action=viewFile
 
 Genestack FastQC application generates basic statistics and many useful data
 diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_ sample:
@@ -29,7 +29,7 @@ type, number of reads, GC content and total sequence length.
 .. image:: images/Microbiome_basic_statistics.png
 .. :scale: 70 %
 
-Our sample contains 470,459 paired-end reads, which all together give us a
+Our sample contains 470,459 paired-end reads, which all together gives us a
 sequence of 236,170,418 bp in length. The GC content is about 49%.
 
 **Sequence length distribution** module gives us information about read length
@@ -64,7 +64,7 @@ plot is shifted to the right, to the maximum quality score.
 
 .. image:: images/Microbiome_per_sequence_quality_scores.png
 
-In our example, first and second mate reads differ by quality score, but still
+In our example, first and second mate reads differ by quality score, but still,
 almost all of them are of good quality (>30). We will improve the reads quality
 by running "Filter by Quality Scores" application.
 
@@ -109,6 +109,6 @@ them in `Multiple QC Report application`_ to analyse results:
 .. _Raw reads QC reports for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3772057&action=viewFile&page=1
 .. _Multiple QC Report application: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF3772056&action=viewFile
 
-You see that total number of sequencing reads for each sample is quite small
+You see that a total number of sequencing reads for each sample is quite small
 and vary in the range of 190,000 to 471,000 reads. Overall, more than 2,5
 million paired-end sequencing reads were generated.

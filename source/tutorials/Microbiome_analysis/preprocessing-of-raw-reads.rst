@@ -17,7 +17,7 @@ Microbiome Data Analysis pipeline:
     <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Our preprocessing procedure will include two steps - adaptor trimming and
-filtering out low quality reads.
+filtering out low-quality reads.
 
 1. **Trim adaptors and contaminants**
 
@@ -43,7 +43,7 @@ considered necessary.
 
 After trimming, the reads are getting shorter. In order to discard trimmed
 reads of length below specific value, indicate this value in the box for
-"Minimum length of the trimmed sequence (bp)" option. We will used the default
+"Minimum length of the trimmed sequence (bp)" option. We will use the default
 length of 15 nucleotides.
 
 To get more information about the application and its parameters, you can click
@@ -69,9 +69,9 @@ bases to be above the minimum quality score".
 
 .. image:: images/Microbiome_filter_by_quality_scores.png
 
-According to the paper_, only reads with at least 75% of read length with
+According to the paper_, only reads with at least 75% of read length with the
 quality score above 30 were kept for the future analysis. Let's use the same
-settings: 30 for minimum quality score and 75% for percentage threshold.
+settings: 30 for the minimum quality score and 75% for percentage threshold.
 
 .. _paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4426690/
 

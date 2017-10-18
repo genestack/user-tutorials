@@ -23,10 +23,10 @@ Hide partially identified OTUs
 
 
 The plot displays the relative abundance of OTUs at a highest taxonomic
-resolution: genus (L6 tab) and species (L7 tab). You can change resolution to
+resolution: genus (L6 tab) and species (L7 tab). You can change the resolution to
 the L2 level to see what phyla are the most abundant across the samples.
 
-For example. our results shows that, at low taxonomic resolution (L2 tab), the
+For example, our results show that, at low taxonomic resolution (L2 tab), the
 composition of microbial communities is similar between samples.
 Bacteroidetes (8,30–86.73%), Firmicutes (1.46–650,49%) and Proteobacteria
 (1,38–64,96%) are the most abundant phyla across most of the samples, followed
@@ -75,14 +75,12 @@ approaches are applied to the data.
           The PCoA takes uses a different approach, the one based on the
           distance between data points. First, the PCoA projects the distances
           into Euclidean space in a larger number of dimensions (we need n-1
-          dimensions for n data points). PCoA puts the fisrt point at the
+          dimensions for n data points). PCoA puts the first point at the
           origin, the second one along the first axis, then adds the third one
           so that the distance to the first two is correct (it means adding the
-          second axis) ans so on, until all the points are added. To get back
+          second axis) and so on, until all the points are added. To get back
           to two dimensions, we apply a PCA on the newly constructed points and
           capture the largest amount of variation from the n-1 dimensional
           space.
-
-!!!
 
 Congratulations! You've just gone through the entire tutorial!

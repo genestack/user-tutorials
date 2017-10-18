@@ -38,12 +38,12 @@ swabs and feces). First, since koalas frequently suffer from ocular diseases
 caused by *Chlamydia* infection, scientists examined the eye microbiome and
 found out that it is very diverse, similar to other mammalian ocular
 microbiomes but has a high representation of bacteria from the Phyllobacteriaceae
-family. Second, authors determined that, despite a highly specialized
+family. Second, authors determined that despite a highly specialized
 diet consisting almost exclusively of *Eucalyptus* leaves, koala oral and gut
 microbial communities are similar in composition to the microbiomes from the
 same body regions of other mammals. Also, it was found that the rectal samples
 contain all of the microbial diversity present in the faecal ones. And finally,
-the researches showed that the faecal communities of the captive koalas are
+the researchers showed that the faecal communities of the captive koalas are
 similar to the ones for wild koalas, suggesting that captivity may not
 influence koala microbial health.
 

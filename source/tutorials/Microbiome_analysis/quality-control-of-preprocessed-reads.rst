@@ -9,10 +9,10 @@ Here is the FastQC report for "Mouth of Pci_SN265" sample before preprocessing:
 
 .. image:: images/Microbiome_mouth_of_pci_sn265_raw.png
 
-The "Per base sequence quality" plots depict low quality bases at the ends of
+The "Per base sequence quality" plots depict low-quality bases at the ends of
 the second mate reads. After trimming and filtering, the overall quality of
 reads
-has improved (see the "Per base sequence quality" and "Per sequence sequence
+has improved (see the "Per base sequence quality" and "Per sequence
 content" modules). We also expect warnings for "Sequence length distribution"
 since the length of the reads has changed during preprocessing.
 
