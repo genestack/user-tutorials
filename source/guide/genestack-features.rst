@@ -104,7 +104,7 @@ However, once you do, any further changes to the files' configuration become imp
 Furthermore, in our system you can also use existing public data flows allowing to assess the data quality
 or perform some comprehensive bioinformatic analysis, such as
 gene expression profiling and analysis across groups of samples, analysis of DNA methylation
-pattern or detection and characterisation of genetic variations etc.
+patterns or detection and characterisation of genetic variations etc.
 
 Public data
 -----------
