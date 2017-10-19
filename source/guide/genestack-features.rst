@@ -99,7 +99,7 @@ options of applications being included in the pipeline (learn more about data fl
 the corresponding sections in **Using Genestack**). Indeed, before the initialization has begun,
 you can change the parameters, replace source files, or add more files to
 the pipeline. Remember – you always need to initialize your files to view your results.
-However, once you do, any further changes become impossible.
+However, once you do, any further changes to the files' configuration become impossible.
 
 Furthermore, in our system you can also use existing public data flows allowing to assess the data quality
 or perform some comprehensive bioinformatic analysis, such as

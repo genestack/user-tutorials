@@ -16,11 +16,11 @@ You can also use our standardized and unified terminology to describe your own d
 or analysis results.
 
 **Metainfo Editor** application enable you to explore metadata for datasets or standalone
-files. Besides, if you have enough permissions, you can edit metainfo data or import it from
-spreadsheet in .xls, .xlsx, .csv formats. You can access Metainfo Editor from any place of
-the platform with context menu. Moreover, metadata editing is the last step in the data importing
+files. Besides, if you have enough permissions, you can edit metadata or import it from
+spreadsheet in .xls, .xlsx, .csv formats. You can access Metainfo Editor from anywhere in
+the platform via the context menu. Moreover, metadata editing is the last step in the data importing
 process (see Import section for more information). Metadata of the files are shown in Excel-like
-tables where rows represent metainfo fields, such as 'Organism', 'Cell line' or 'Platform'.
+tables where columns represent metainfo fields, such as 'Organism', 'Cell line' or 'Platform'.
 
 .. image:: images/metainfo-editor.png
 
@@ -29,7 +29,7 @@ tables where rows represent metainfo fields, such as 'Organism', 'Cell line' or 
 By default a metainfo data table is based on **Default Import Template** that, however, you
 can easily replace with a custom one (learn more about templates in the section
 Importing data). To do so click on the template's name, select **Change
-template**, and in the appear pop-up window pick template of interest.
+template**, and select the template you want in the pop-up window.
 
 .. image:: images/change-template.png
 
@@ -99,7 +99,7 @@ want to use to create names.
 
 4. **Make a subset**
 
-In case when you want to analyse just some samples from a dataset, you can make a subset.
+If you just want to analyse some samples from a dataset, you can make a subset.
 There are two ways of making subsets: select samples you want to analyse using checkboxes, and click **Make a subset**;
 or you can open **metainfo summary** and specify metainfo values that will be used as a rule to create
 a subset and filter out all non-matching files.

@@ -65,7 +65,7 @@ Multiple QC Report using the context menu.
 Fast QC Report contains various graphs that visualize the quality of your data. We will go through all
 of them one by one and tell you:
 
-1. How they should look for data of perfect quality; 
+1. How they should look for good-quality data; 
 2. How they may look if there is something wrong with your data;
 3. What you can do if the quality is unsatisfactory.
 
@@ -286,7 +286,7 @@ This should be evident from the "Sequence duplication levels" and the "Overrepre
 Sequences" modules of the FastQC report. Keep in mind this application should not be used with
 RNA-seq data as it will remove observed differences in expression level.
 
-This tool is based on the Tally_.
+This tool is based on Tally_.
 
 .. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
 
@@ -299,7 +299,7 @@ quality score distribution for each read.
 
 **Command line options**:
 
-1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cutoff
+1. **Minimum quality score (Phred+33 range, 0... 41)** is a quality cutoff
    value. A score of 20 means that there is a 1% chance that the corresponding
    base was called incorrectly by the sequencer. A score of 30 means a 0.1%
    chance of an incorrect base call. (default: 20)

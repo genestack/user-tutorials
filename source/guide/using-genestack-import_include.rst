@@ -307,7 +307,7 @@ datasets, all of the attachments will accompany it. They will be safely
 stored on Genestack, so later you can download them from the platform, in case
 they get lost on your computer.
 
-You can import an attachment during data importing process in the the Data Import application. To do
+You can import an attachment during the data importing process in the the Data Import application. To do
 so you should choose the attachments from your computer along with your dataset, and all
 unrecognised uploads will be added to the dataset as attachments.
 

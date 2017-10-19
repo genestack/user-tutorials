@@ -14,7 +14,7 @@ exact analysis on other data.
 
 View the text description of the pipeline including all the steps.
 Click **View as text** button to see which applications, parameters and tools were used at each
-step of analysis.
+step of the analysis.
 
 .. image:: images/view_as_text.png
     :scale: 60 %
