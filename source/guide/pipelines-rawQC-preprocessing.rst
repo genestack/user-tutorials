@@ -3,33 +3,32 @@
 Pipelines and applications
 ==========================
 
-.. TODO Add links on our youtube videos
-
 Applications available on Genestack are grouped into four categories:
-Preprocess, Analyse, Explore and Manage.
 
-**Preprocess** applications cover tasks such as data prefiltering, subsampling
-or normalisation, which typically need to be performed before getting into the
-"heavy-lifting" part of data analysis.
+- **Preprocess** applications cover tasks such as data prefiltering, subsampling
+  or normalisation, which typically should be performed before getting into the
+  "heavy-lifting" part of data analysis.
 
-**Analyse** applications include key analysis steps like sequence alignment,
-variant calling, expression quantification, etc.
+- **Analyse** applications include key analysis steps like sequence alignment,
+  variant calling, expression quantification, etc.
 
-**Explore** contains all interactive graphical interface applications
-allowing users to view the results of their
-computations. Applications for visualizing QC reports, the Genome Browser,
-applications for exploring  genomic variants, and many more.
+- **Explore** contains all interactive graphical interface applications
+  allowing users to view the results of their computations, such as
+  applications for visualizing QC reports, Genome Browser, Variant Explorer etc. 
 
-**Manage** contains applications used to manage your data: applications dealing
-with data flows, file provenance, export, metadata editing and so on.
+- **Manage** contains applications used to manage your data: applications dealing
+  with data flows, file provenance, export, metadata editing and so on.
 
 An extended version of each application's description can be found in the
 "About application" text for that application.
 
 To view this text for a specific application, click on the application's name at the
-top-left corner of the page, and in the dropdown menu select "About application".
+top-left corner of the page, and in the drop-down menu select "About application".
 
 .. image:: images/about_app.png
+   :scale: 80 %
+   :align: center
+
 
 Sequencing data
 ---------------
@@ -45,7 +44,6 @@ preprocessing.
 FastQC report
 +++++++++++++
 
-.. TODO this is a tutorial on data flows !!!!!!
 .. TODO tips: depending on the technology (WGS, WES, Microbiome, etc. data) and Organism, you can expect warnings and faiures as well
 
 **Action**: to perform quality control (QC) of raw sequencing reads. According to
@@ -53,62 +51,26 @@ the "garbage in, garbage out" rule, if we begin our analysis with poor quality
 reads, we should not expect great results at the end. This is why QC is the essential
 first step of any analysis.
 
-The **FastQC report** application is based on
-the `FastQC tool`_ developed by Simon Andrews at the Babraham Institute.
+The **FastQC Report** application is based on the `FastQC tool`_ developed by
+Simon Andrews at the Babraham Institute.
 
 .. _FastQC tool: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-.. image:: images/fastqc_report.png
 
-One way to start the analysis is to manually run the FastQC Report. To do so you can
-select the dataset to be analysed, then on the Metainfo Editor page pick up raw reads, click
-**Use dataset** button and from the dropdown menu choose **FastQC Report** as shown in the picture below.
+The application generates a separate FastQC Report for each sample from a tested dataset;
+you can find them in the folder "Created files". You can also explore all of them simultaneously
+with Multiple QC Report app. To do so, go to "My datasets" folder, select the created
+"FastQC Report" dataset and open it with
+Multiple QC Report using the context menu.
 
-.. image:: images/run_fastqc.png
-
-Another way to perform quality assessment of your data in Genestack
-is via the public data flow `Raw Reads Quality Control`_.
-
-.. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778184&action=viewFile
-
-Remember you need to initialize the computation.
-
-.. image:: images/fastqc_start_initialization.png
-
-You will have to wait for the results (you can track the progress of your
-tasks in **Task Manager**). Once they are completed, you can find your files in
-"My Datasets" folder.
-
-.. image:: images/my_datasets_FM.png
-
-
-To explore one of these reports, click on its name and select the FastQC Report application from the
-context menu.
-
-On the FastQC Report page you can view both the result and the provenance of
-the report file. At the top of the page you will see the file name and the
-version of the fastQC tool used. The **View parameters** button will show you
-source files and the command line options used to generate the report. The
-**Hide parameters** button will hide this technical information. Below that you
-will see the File Dataflow, in this case it should only contain two application entries —
-Experiment Loader and FastQC Report. In other cases, you might see more than
-two applications in this line.
-
-.. image:: images/fastqc_page_source_files.png
-
-Finally, the results can be viewed in the "Reports" section. Here you will find
-various graphs that visualize the quality of your data. We will go through all
+Fast QC Report contains various graphs that visualize the quality of your data. We will go through all
 of them one by one and tell you:
 
-1. How they should  look for data of perfect quality; 
+1. How they should look for good-quality data; 
 2. How they may look if there is something wrong with your data;
 3. What you can do if the quality is unsatisfactory.
 
 The metrics table gives you quick indicators as to the status of each of
 the quality metrics calculated.
-
-- Yellow triangles — warnings;
-- Red X-es — failures;
-- Green check marks in circles — ok.
 
 1. Basic statistics
 *******************
@@ -187,7 +149,7 @@ sample may be caused by adapter sequences or other contaminations of the
 library.
 
 A bias at the beginning of the reads is common for RNA-seq data. This occurs
-during RNA-seq library preparation, when "random" primers are annealed to the
+during RNA-seq library preparation when "random" primers are annealed to the
 start of sequences. These primers are not truly random, and it leads to a
 variation at the  beginning of the reads.
 
@@ -214,9 +176,9 @@ rates.
 more than 20% of the total.
 
 There are two potential types of duplicates in a library: technical duplicates
-arising from PCR artefacts or biological duplicates which are natural
+arising from PCR artifacts or biological duplicates which are natural
 collisions where different copies of exactly the same sequence are randomly
-selected. From a sequence level there is no way to distinguish between these
+selected. From a sequence level, there is no way to distinguish between these
 two types and both will be reported as duplicates here.
 
 *Improving data quality*: if the observed duplications are due to primer/adaptor
@@ -233,13 +195,13 @@ Shows the highly overrepresented sequences (more than 0.1% of total sequence)
 in the sample.
 
 *Warning*: if any sequence is found to represent more than 0.1% of the total, a
-warning will raised.
+warning will be raised.
 
 There are several possible sources of overrepresented sequences:
 
 - technical biases (one region was sequenced several times; PCR amplification
   biases);
-- feature of library preparation (e.g. for targeted sequencing);
+- a feature of library preparation (e.g. for targeted sequencing);
 - natural reasons (RNA-seq libraries can naturally present high duplication
   rates).
 
@@ -316,17 +278,17 @@ Filter duplicated reads
 a sequence of two paired reads or a single read occurs multiple times in a
 library, the output will include only one copy of that sequence.
 
-The phred quality scores are created by keeping the highest score across all
+The Phred quality scores are created by keeping the highest score across all
 identical reads for each position.
 
-This tool is based on the Tally_.
-
-.. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
-
-If you suspect contamination with primers, or some  other repetitive sequence.
+If you suspect contamination with primers or some other repetitive sequence.
 This should be evident from the "Sequence duplication levels" and the "Overrepresented
 Sequences" modules of the FastQC report. Keep in mind this application should not be used with
 RNA-seq data as it will remove observed differences in expression level.
+
+This tool is based on Tally_.
+
+.. _Tally: http://www.ebi.ac.uk/~stijn/reaper/tally.html
 
 Filter by quality scores
 ++++++++++++++++++++++++
@@ -337,13 +299,13 @@ quality score distribution for each read.
 
 **Command line options**:
 
-1. **Minimum quality score (Phred+33 range, 0... 41)** is quality cuttoff
+1. **Minimum quality score (Phred+33 range, 0... 41)** is a quality cutoff
    value. A score of 20 means that there is a 1% chance that the corresponding
    base was called incorrectly by the sequencer. A score of 30 means a 0.1%
    chance of an incorrect base call. (default: 20)
 2. **Percentage of bases to be above the minimum quality score** is number of
    nucleotides in the reads having quality equal to or higher than the chosen
-   minimum quality score. 100% requiers all bases in the reads to be equal to
+   minimum quality score. 100% requires all bases in the reads to be equal to
    or higher than the quality cut-off value. 50% means requires the median of
    the bases to be at least the quality cut-off value. (default: 80)
 
@@ -380,7 +342,7 @@ raw reads data.
 
 The application uses an internal list of sequences that can be considered as
 contaminants. This list is based on the possible primers and adaptors which the
-most popular sequencing technologies and platforms uses. For instance, it
+most popular sequencing technologies and platforms use. For instance, it
 contains widely used PCR primers and adaptors for Illumina, ABI etc. (see the
 `list of primers and adaptors`_ we remove).
 
@@ -425,10 +387,10 @@ The application will find the fragment of the read where the sum of all
 probability errors will not be more than 0.01 (in our case). In this case, the
 best sequence will be "TAGA" (.001*2 + .0001*2 = .0022) and it will be the
 output read. Other fragments will have the sum of error probabilities more
-than the cuttoff 0.01, so they will be ignored.
+than the cutoff 0.01, so they will be ignored.
 
 This tool is based on the `Seqtk`_ tool and uses the Phred algorithm to pick out
-the regions of highest quality.
+the regions of the highest quality.
 
 .. _Seqtk: https://github.com/lh3/seqtk
 
