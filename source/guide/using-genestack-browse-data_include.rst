@@ -8,7 +8,7 @@ and analysis results.
 Data browser
 ~~~~~~~~~~~~
 
-Genestack Platform provides a rich collection of public datasets from SRA, ENA, GEO
+Genestack Platform provides a rich collection of public datasets from SRA, ENA, GEO,
 and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
 100,000 public datasets indexed in Genestack.
@@ -33,10 +33,18 @@ then you will find both intermediate results and reports in the column **Downstr
 
 .. image:: images/analysis-results.png
 
-If not all the samples meet your searching criteria, feel free to crete a subset of a dataset
-with matching samples and process the separately. To do so, click a link showing the number
+Then, you can merge data from several datasets into a single **combined dataset** or share several
+datasets with your collaborator together. To do so you should select several datasets and choose on
+a "Briefcase bar" that appears at the bottom of the screen **Merge…** button or
+**Share...** button, respectively.
+
+.. image:: images/data-browser-combine.png
+
+If not all the samples meet your searching criteria, feel free to create a subset of a dataset
+with matching samples and process them separately. To do so, click a link showing the number
 of matching files in the Data Browser column *Matched*, then, click
-**Make a subset with a matching files** button to save files matching to the set filters.
+**Make a subset with matching files** button to save files matching to the set filters.
+You can also make a subset on the Metainfo Editor page.
 
 .. image:: images/subset-in-databrowser.png
 
@@ -46,22 +54,21 @@ dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-Besides that, on the Metainfo editor page you can run the assays through a pipeline via the button
-**Use dataset...**. You can either use an existing data flow matching the assays, or build a
+Besides, on the Metainfo Editor page you can run the assays through a pipeline via the button
+**Use dataset...**. You can either use an existing data flow matching the assays or build a
 new pipeline step by step.
 
 .. update img: use GSF802958 as an example
 
 .. image:: images/new-df.png
 
-What's more, you can analyse not only the entire dataset but also a part of it by
-selecting samples and clicking the **make a subset** button of the dataset (by default all subsets
-are created in the folder **My datasets**).
+If you want to analyse some part of your dataset, select samples and click the **Make a subset**
+button (by default all subsets are created in the folder **My datasets**).
 
 .. image:: images/make-subset-ME.png
 
-Click a subset name to open it with Metainfo Editor
-application and edit its metainformation if it is needed.
+Click a subset name to open it with Metainfo Editor application and edit its
+metainformation if it is needed.
 
 .. image:: images/subset-edit-metainfo.png
 
@@ -82,11 +89,19 @@ deleted from the platform without any possibility to restore.
 .. image:: images/dataset-remove-2.png
 
 
+If your dataset is made from subsets of other datasets, use **metainfo filters in File Provenance**.
+Open the dataset in File Provenance to see based on which metadata samples were selected,
+and, therefore, you can be sure that no significant data was omitted.
+
+.. image:: images/metainfo-filter.png
+    :align: center
+
+
 File manager
 ~~~~~~~~~~~~
 
 Like on any operating system, the **File Manager** is where you can easily access
-all of your files, organise them into folders, and open them with various applications.
+all of your files, organise them into folders and open them with various applications.
 
 .. image:: images/file-manager.png
 
@@ -145,14 +160,14 @@ to make life a bit simpler for our users. This folder contains:
 #. **Public experiments**: this is a feature we are particularly proud of
    have pre-loaded the platform with thousands and thousands of publicly
    available experiments, from public repositories such as GEO,
-   ArrayExpress, SRA, and ENA. Currently we have more than 110,000
+   ArrayExpress, SRA, and ENA. Currently, we have more than 110,000
    experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
 
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
-application that was used to generate this file, or the application that should be used
+application that was used to generate this file or the application that should be used
 to view it. The next four entries are submenus for each of the four different
 types of applications that can be used on the file. Further down are options for
 viewing and re-using the pipeline used to generate the file. The final
@@ -162,7 +177,7 @@ The **Add to** and **Move to** action allow you to link or move a file to a chos
 
 .. note:: **This does not perform a copy**
 
-          We use the word "linking" and not "copying" in this context, because in Genestack,
+          We use the word "linking" and not "copying" in this context because in Genestack,
           adding a file to a folder does not physically create a duplicate of
           that file (unlike copy-pasting in your traditional operating system). It just adds a link to
           that file from the folder (similar to symbolic links on UNIX).
@@ -239,7 +254,7 @@ The **Delete** button allows you to remove your files from the system.
 .. image:: images/delete.png
 
 The **View metainfo** button gives you more information about the file: technical
-(file type, its accession and owner, when the file was created and modified,
+(file type, its accession, and owner, when the file was created and modified,
 etc.), biological (e.g. cell line, cell type, organism, etc.), and file
 permissions.
 

@@ -16,6 +16,7 @@ and of the different bioinformatics pipelines available on Genestack.
    guide/intro-to-bioinformatics
    guide/genestack-features
    guide/using-genestack-signup-dashboard
+   tutorials/Getting_started/index
    guide/intro-to-ngs
    guide/pipelines-rawQC-preprocessing
    tutorials/index
