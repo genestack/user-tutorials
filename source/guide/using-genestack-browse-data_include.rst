@@ -13,7 +13,7 @@ and ArrayExpress. Data is synchronized regularly from these databases, keeping
 things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
 100,000 public datasets indexed in Genestack.
 
-The Data browser allows to browse these public datasets, as well as your private
+The Data Browser allows to browse these public datasets, as well as your private
 data and the data shared with you on Genestack. You can access the Data
 Browser either from the **Dashboard** or the **Shortcuts menu** on the left-hand side.
 
@@ -49,12 +49,13 @@ You can also make a subset on the Metainfo Editor page.
 .. image:: images/subset-in-databrowser.png
 
 Clicking on the name of any of the datasets will take you to
-the **Metainfo editor**, where you can view (and possibly edit) the metadata of this
+the **Metainfo Editor**, where you can view (and possibly edit) the metadata of this
 dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-Besides, on the Metainfo Editor page you can run the assays through a pipeline via the button
+
+Besides, on the Metainfo editor page you can run the assays through a pipeline via the button
 **Use dataset...**. You can either use an existing data flow matching the assays or build a
 new pipeline step by step.
 
@@ -163,7 +164,7 @@ to make life a bit simpler for our users. This folder contains:
    ArrayExpress, SRA, and ENA. Currently, we have more than 110,000
    experiments in our database.
 #. **Tutorials**: the folder contains files we use as examples during
-   various tutorials. To read more on particular analysis types, go to https://genestack.com/tutorials/.
+   various tutorials.
 
 To access the **context menu** for a given file, you can either do a right or left click
 on the respective entry in the file browser. The topmost entry is the
@@ -231,7 +232,7 @@ the "Clear all" option.
 .. image:: images/brief-case-1.png
 
 **To add** files to your briefcase, hover over each
-individual file and use the special "briefcase" button that appears or
+individual file and use the special "briefcase" button or
 select several files, right-click on them and choose "Add to
 briefcase...".
 
@@ -254,9 +255,8 @@ The **Delete** button allows you to remove your files from the system.
 .. image:: images/delete.png
 
 The **View metainfo** button gives you more information about the file: technical
-(file type, its accession, and owner, when the file was created and modified,
-etc.), biological (e.g. cell line, cell type, organism, etc.), and file
-permissions.
+(file type, its owner, when the file was created and modified,
+etc.), biological (e.g. cell line, cell type, organism, etc.), and file permissions.
 
 .. image:: images/eye.png
 

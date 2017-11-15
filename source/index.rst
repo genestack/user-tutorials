@@ -9,9 +9,13 @@ with a focus on next-generation sequencing (NGS) and microarray data.
 This guide is intended for end-users of the platform. It covers the key
 concepts of the platform, a detailed walkthrough of the user interface
 and of the different bioinformatics pipelines available on Genestack.
+To go back to the Genestack website, click here_.
+
+.. _here: https://genestack.com/
+
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    guide/intro-to-bioinformatics
    guide/genestack-features

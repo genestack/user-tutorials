@@ -25,20 +25,20 @@ Dashboard
 After you log in, you will see the **Dashboard**. Let’s cover the basics.
 
 .. image:: images/welcome_page.png
+   :align: center
 
 The very top of the page is static and you can always refer to it. Clicking
 on your username (your email address) in the top right corner of the page will
 give you access to your **profile** and allows to log out of the platform.
 
 .. image:: images/WP_profile.png
-
-Clicking on your username in the top-right corner provides
-access to **your profile**.
+   :align: center
 
 In this section you can change your name, password, the name of your
 organisation and your vendor ID. 
 
 .. image:: images/profile.png
+   :align: center
 
 Organizations are a way of enforcing group permissions. There are two
 types of user in an organization – administrators and non-administrators. If you are in
@@ -90,6 +90,8 @@ Manage applications
 ~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/manage_app.png
+   :align: center
+
 
 Here you can view the list of all applications available on the platform
 – both ones you have written as well as public ones.
@@ -99,6 +101,7 @@ an application you want to use.
 
 .. image:: images/developer_button.png
    :scale: 35 %
+   :align: center
 
 The **‘bundled’** and **‘minified’** options optimize
 loading of CSS and JS used in the application. You can find more details on
@@ -118,6 +121,8 @@ Manage groups
 
 .. image:: images/manage_groups.png
    :scale: 35 %
+   :align: center
+
 
 In order to share data, we use **groups**. In the Manage Groups section you
 can change the settings of your current collaboration groups or create
@@ -133,6 +138,8 @@ You can find more about managing users on Genestack from `this video`_.
 
 .. image:: images/manage_users.png
    :scale: 70 %
+   :align: center
+
 
 .. _this video: https://www.youtube.com/watch?v=asMhUjD_i68&list=PLqGSwEO9VFw1e7Z996-gQWE4vgRZMyY3Z&index=1
 
