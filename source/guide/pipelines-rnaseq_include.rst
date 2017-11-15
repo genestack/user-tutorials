@@ -437,7 +437,7 @@ Look at all result tables and plots in Expression Navigator application.
 .. _multiple testing correction: https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Correction
 .. _here: http://www.cbil.upenn.edu/PaGE/fdr.html
 
-This application is based on`DESeq2`_ and `edgeR`_ R packages.
+This application is based on `DESeq2`_ and `edgeR`_ R packages.
 
 .. _DESeq2: http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
 .. _edgeR: http://www.bioconductor.org/packages/2.13/bioc/html/edgeR.html
