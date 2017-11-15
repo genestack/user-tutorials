@@ -38,9 +38,9 @@ This is your main point of entry and the place
 where you can manage and search data using the File Manager, view your
 recent results and share the findings with your colleagues, set up and
 launch analysis pipelines and visit the tutorials section. You can
-always go back to the Welcome Page by clicking the **Genestack icon** in the
-upper left corner.  You can always change the settings of your account
-and instead of the Welcome Page choose the File Manager as the main
+always go back to the Dashboard by clicking the **Genestack icon** in the
+upper left corner. You can always change the settings of your account
+and instead of the Dashboard choose the File Manager as the main
 point of entry to the platform.
 
 Creating users

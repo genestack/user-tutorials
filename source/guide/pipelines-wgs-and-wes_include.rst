@@ -222,7 +222,7 @@ such as mutation type, quality, locus, etc.
 .. image:: images/variant_explorer_annotated_variants.png
 
 This application is based on the open-source SnpEff_ tool and best used in
-`Whole Exome Sequencing`_ and `Whole Genome Sequencing` analyses.
+`Whole Exome Sequencing`_ and `Whole Genome Sequencing`_ analyses.
 
 .. _SnpEff: http://snpeff.sourceforge.net/
 .. _Whole Exome Sequencing: http://genestack-user-tutorials.readthedocs.io/tutorials/WES_data_analysis/index.html

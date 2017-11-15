@@ -6,12 +6,12 @@ Importing data into the Genestack Platform
     <iframe width="640" height="360" src="https://www.youtube.com/embed/eOl1uabctzI" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 We have talked about the core concepts of Genestack and the geography of
-the Platform. Now let's discuss importing data into the platform. On the `welcome page`_ you
+the Platform. Now let's discuss importing data into the platform. On the `dashboard`_ you
 can find an **Import data** option, and an **Import** button can be found in the File Manager.
 
 |import file manager|
 
-Once you click it, this will take you to the `Import data`_ app
+Once you click it, this will take you to the `Import Data`_ app
 page. There are various options of importing your data. You can drag and
 drop or select files from your computer, import data from URL or use
 previous uploads.
@@ -41,7 +41,7 @@ biological data types.
 |File in file manager|
 
 Additional option of importing your data is using import templates. On
-the Welcome page you can find an `Add import template`_
+the Dashboard you can find an `Add import template`_
 option. Import templates allow you to specify required and optional
 metainfo attributes for different file kinds. When you scroll down to
 the bottom of the page, you will see an **Add import template** button.
@@ -54,6 +54,6 @@ the bottom of the page, you will see an **Add import template** button.
 .. |Import_step3| image:: images/Import_step3.png
 .. |File in file manager| image:: images/files_in_FM.png
 .. |import welcome page| image:: images/import-welcome-page1.png
-.. _welcome page: https://platform.genestack.org/endpoint/application/run/genestack/welcome
-.. _Import data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
+.. _dashboard: https://platform.genestack.org/endpoint/application/run/genestack/welcome
+.. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Add import template: https://platform.genestack.org/endpoint/application/run/genestack/metainfotemplateeditorapp?action=openInBrowser
