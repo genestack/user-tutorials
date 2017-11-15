@@ -11,7 +11,7 @@ variants. Now, let’s talk about reproducibility. We will now show you
 how to take any data file in Genestack Platform, and repeat the analysis
 steps that led up to it on different data. Let’s go back to the genetic
 variations file you created called “Variants from Mapped reads from
-Trimmed FS01″. You might use the Welcome Page to find it in Resent
+Trimmed FS01″. You might use the Dashboard to find it in Resent
 Results or go to the "Created files" folder in the File Manager. You can
 also find it in the tutorial folder. Rather than viewing its provenance
 like we did before, let’s see if we can reuse the provenance. To do
@@ -52,12 +52,10 @@ files by clicking on the file name and later selecting **Start initialization**.
 This is the end of
 this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, email us at support@genestack.com or
-visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+If you have any questions and comments, email us at support@genestack.com. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. |create new data flow| image:: images/create-new-data-flow1.png
 .. |run data flow| image:: images/run-data-flow.png
 .. |choose another file| image:: images/choose-another-file.png
 .. |delay initialization until later| image:: images/delay-initialization-until-later1.png
 .. |start initialization| image:: images/start_init.png
-.. _forum: http://forum.genestack.org/

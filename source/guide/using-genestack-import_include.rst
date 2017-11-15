@@ -25,12 +25,12 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 - **Mapped Reads** — reads aligned to a specific reference genome (BAM or CRAM);
 - **Ontology Files** — OWL, OBO or CSV files used to annotate metainfo;
 - **Reference Genomes** — reference genome sequence for a specific organism
-  with annotation; (FASTA and GFF/GTF/GFF3);
+  with annotation (FASTA and GFF/GTF/GFF3);
 - **Variation Files** — Genetic variations files, storing gene sequence
   variations (VCF);
-- **Gene List** — the file includes the list of genes for a specific organism (.gpr, .txt, .tsv);
+- **Gene List** — the file includes the list of genes for a specific organism (.gpr, .txt, .tsv, .xls);
 - **Gene Expression Signature** — the file includes the list of genes with expression pattern
-  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv);
+  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv, .xls);
 - **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
 
 When you import files that are detected as raw sequencing or microarray data,
@@ -105,8 +105,7 @@ second time.
 
 Files are uploaded in multiple streams to increase upload speed. Uploading
 from URLs is done in the background. This means that even while these files
-are being uploaded, you can edit their metadata and use them in
-pipelines.
+are being uploaded, you can edit their metadata and use them in pipelines.
 
 .. image:: images/uploading_step.png
    :scale: 80 %
@@ -307,9 +306,12 @@ datasets, all of the attachments will accompany it. They will be safely
 stored on Genestack, so later you can download them from the platform, in case
 they get lost on your computer.
 
-You can import an attachment during the data importing process in the the Data Import application. To do
-so you should choose the attachments from your computer along with your dataset, and all
-unrecognised uploads will be added to the dataset as attachments.
+**How to upload an attachment?**
+
+Attachments should be uploaded together with the dataset. In the the Data Import application, choose
+the attachments from your computer along with your dataset. The platform will
+recognize the raw data, and all additional files that were unrecognised will
+be added to the dataset as attachments.
 
 .. image:: images/attachments.png
 
