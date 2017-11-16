@@ -30,7 +30,7 @@ and set up a password.
 
 You will quickly receive a confirmation email with a link to click on and then
 you will be able to log in. After you log in, the system will take you to the
-`Welcome Page <wp-blog_>`_.
+`Dashboard <wp-blog_>`_.
 
 |genestack welcome page|
 
@@ -66,8 +66,7 @@ out of the system.
 
 |first user on the platform|
 
-You can also create new
-users.  Let’s create a Second User by clicking the  **Create user** button.
+You can also create new users.  Let’s create a Second User by clicking the  **Create user** button.
 
 |second user creation|
 

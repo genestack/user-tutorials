@@ -19,8 +19,8 @@ To go back to the Genestack website, click here_.
 
    guide/intro-to-bioinformatics
    guide/genestack-features
-   guide/using-genestack-signup-dashboard
    tutorials/Getting_started/index
+   guide/using-genestack-signup-dashboard
    guide/intro-to-ngs
    guide/pipelines-rawQC-preprocessing
    tutorials/index
