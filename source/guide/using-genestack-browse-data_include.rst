@@ -8,10 +8,20 @@ and analysis results.
 Data browser
 ~~~~~~~~~~~~
 
-Genestack Platform provides a rich collection of public datasets from SRA, ENA, GEO,
-and ArrayExpress. Data is synchronized regularly from these databases, keeping
-things up-to-date. There are currently more than 3 million sequencing and microarray assays from over
+Our platform provides you with a rich collection of freely accessible datasets that we
+imported from various well-known repositories, such as GEO NCBI, ENA, SRA and Array Express.
+Data is synchronized regularly from these databases, keeping things up-to-date. There are
+currently more than 3 million sequencing and microarray assays from over
 100,000 public datasets indexed in Genestack.
+All the public datasets and assays are accompanied by original metainformation
+describing biological data. Generally, this information is not standardized that makes operations
+with biological data, like browsing data and combining assays from several datasets or reproducing some
+analysis, difficult or even impossible without human participation.
+To harmonize raw metadata we apply **automated curation** where we map raw entries to
+controlled terms that we store and maintain in special files called **Dictionaries**.
+To prepare these Dictionaries we adopted terms from external ontologies or created them manually.
+You can also use our standardized and unified terminology to describe your own data
+or analysis results.
 
 The Data Browser allows to browse these public datasets, as well as your private
 data and the data shared with you on Genestack. You can access the Data
@@ -88,7 +98,6 @@ the files you are going to exclude from a dataset are not used anywhere, they wi
 deleted from the platform without any possibility to restore.
 
 .. image:: images/dataset-remove-2.png
-
 
 If your dataset is made from subsets of other datasets, use **metainfo filters in File Provenance**.
 Open the dataset in File Provenance to see based on which metadata samples were selected,

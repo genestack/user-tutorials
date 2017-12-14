@@ -33,6 +33,22 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv, .xls);
 - **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
 
+
+.. Two new file types:
+.. Gene List: store a list of genes with possibly additional annotation
+.. Gene Expression Signature: store a list of genes and expression pattern (Log FC) with possibly additional annotation
+
+.. Two formats are accepted:
+.. .grp file of genes in separate lines. This is imported as Gene List.
+.. .tsv file. If the file contains both gene names and log fold changes, it is imported
+.. as Gene Expression Signature. If the file only contains gene names, it is imported
+.. as Gene List. The importer will look at the headers of the .tsv file to try to detect
+.. which columns may correspond to gene names or log fold changes (common variations are
+.. supported such as ‘gene’/ ‘symbol’ for gene names, and ‘logFC’/’log fold change’ for log
+.. fold changes). If it fails to detect them, the user will be asked to manually choose the
+.. file type and specify the file headers corresponding to gene names or log fold changes.
+.. Gene symbols and Ensembl/Entrez gene IDs are currently supported for gene names.
+
 When you import files that are detected as raw sequencing or microarray data,
 Genestack automatically creates a **dataset**, a special type of folder, and adds the assays to it.
 Additional documents in any format (e.g. PDF, Word, text, etc.)
@@ -183,7 +199,10 @@ the ChEBI_ for chemical compounds, and the `Cell Ontology`_ (cell types in anima
 We also created our own controlled vocabularies to cover Sex, Method and Platform fields.
 You can find out more about ontologies in the :ref:`public-experiment-label` section.
 
-Finally, you can also create your own custom dictionary by importing it into the
+Import with templates
+~~~~~~~~~~~~~~~~~~~~~
+
+You can create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
 
 .. note:: **What is an import template?**

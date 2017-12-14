@@ -3,26 +3,28 @@
 Using Genestack
 ===============
 
-.. TODO: Split the file. It's too big!
-
-Registering
------------
+Creating an account
+-------------------
 
 If you have not done so already, you can create an account on Genestack.
-Go to `platform.genestack.org`_, click on "Sign Up", fill in the form and
+Go to `platform.genestack.org`_, click on **Sign Up**, fill in the form and
 wait for a confirmation email.
+
+.. image:: images/sign-up-screen.png
+   :align: center
+   :scale: 80%
 
 .. _platform.genestack.org: https://platform.genestack.org
 
-If you’re just taking Genestack out for a spin, you can also use our platform
-as a guest (by clicking on "Continue as guest" button). However, remember that as a guest,
+If you are just taking Genestack out for a spin, you can also use our platform
+as a guest (by clicking on **Continue as guest** button). However, remember that as a guest,
 you can only create up to 200 files, and your results will disappear after 24h
 of inactivity.
 
 Dashboard
 ---------
 
-After you log in, you will see the **Dashboard**. Let’s cover the basics.
+After you log in, you will see the **Dashboard**.  Let’s cover the basics.
 
 .. image:: images/welcome_page.png
    :align: center
@@ -134,6 +136,31 @@ Manage users
 ~~~~~~~~~~~~
 
 In this section, you can change password of your users or create new users.
+
+.. image:: images/user-management.png
+
+If you click on  **Manage Users** you will go to the user management screen. Every
+user in Genestack Platform belongs to an **organisation**. When you signed
+up to use Genestack via the sign up dialog, we created a new
+organisation for you, and you have automatically become its first user
+and its administrator. As an organisation administrator you can create
+as many  new users for your organisation as you want. For instance, you
+can create accounts for your colleagues. Being in one organisation means
+you can share data without any restrictions. The user management screen
+allows you to get an overview of all users in your organisation. You can
+change a user’s password, make any user an administrator or lock a user
+out of the system.
+
+.. image:: images/first-user.png
+
+You can also create new users. Let’s create a Second User by clicking the  **Create user** button.
+
+.. image:: images/second-user.png
+
+You will need to set the user name,
+email and password. Users added this way are immediately confirmed, and
+can log in right away.
+
 You can find more about managing users on Genestack from `this video`_.
 
 .. image:: images/manage_users.png
@@ -147,7 +174,7 @@ You can find more about managing users on Genestack from `this video`_.
 
 .. include:: using-genestack-import_include.rst
 .. include:: using-genestack-browse-data_include.rst
-.. include:: using-genestack-public-data_include.rst
+.. include:: using-genestack-managing-matadata_include.rst
 .. include:: using-genestack-sharing_include.rst
 .. include:: using-genestack-building-pipelines_include.rst
 .. include:: using-genestack-run-DF_include.rst
