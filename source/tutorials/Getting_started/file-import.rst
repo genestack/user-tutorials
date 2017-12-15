@@ -33,7 +33,7 @@ specific data type by drag and drop.
    :align: center
 
 On the next **Edit metainfo** step, you can describe uploaded data. Using an Excel-like spreadsheet you can
-edit the file metainfo and add new attributes, for example cell type or
+edit the file metainfo and add new attributes, for example, cell type or
 age.
 
 .. image:: images/import_step3.png

@@ -10,8 +10,9 @@ how to take any data file in Genestack Platform, and repeat the analysis
 steps that led up to it on different data.
 
 Let’s go back to the genetic variations file you created called “Variant calling"
-file. You might use the Dashboard to find it in Recent Results or go
-to the "Created files" folder in the File Manager. You can
+file. To find analysis results, you might go to the Recent Results on the Dashbord,
+find a dataset in the Data Browser or go
+to the "My datasets" folder in the File Manager. You can
 also find it in the tutorial folder. Rather than viewing its provenance
 like we did before, let’s see if we can reuse the provenance. To do
 this, select the file, go to **Manage** and **Create new Data Flow**.
@@ -24,7 +25,7 @@ have previously created.
 .. image:: images/run-data-flow.png
 
 The data flow editor has one
-core goal: to help you create more files using this diagram. To do this
+core goal: to help you create more files using this diagram. To do this,
 you will need to make some decisions for boxes in the diagram via
 the **Action** menu. If you want to select different files, go to **Choose another file**. If you want
 to leave the original file simply do not

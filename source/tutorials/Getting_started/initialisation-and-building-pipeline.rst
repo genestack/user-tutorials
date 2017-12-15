@@ -14,7 +14,7 @@ once. Let’s look at an example. Go to the public experiment library and
 choose `“Analysis of the intestinal microbiota of hybrid house mice
 reveals evolutionary divergence in a vertebrate hologenome”`_ dataset by Wang et al.
 Click **Use dataset** button and select **Start new data flow with application**;
-then, in the list of the suggested apps choose **Trim Low quality Bases** app.
+then, in the list of the suggested apps choose **Trim Low Quality Bases** app.
 If you want to analyse some of the files from a given dataset, you can select the files you
 are interested in and **Make a subset** the entire dataset.
 

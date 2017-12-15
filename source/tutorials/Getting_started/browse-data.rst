@@ -10,7 +10,7 @@ no private files, you can access **public data** available on the platform.
 
 Currently, we have a comprehensive collection of **publicly available datasets** imported from
 GEO NCBI, ENA, SRA and ArrayExpress. We also provide other useful data that can
-be used in bioinformatic analysis namely reference genomes or annotations.
+be used in bioinformatic analysis, namely reference genomes or annotations.
 
 .. image:: images/data-browser.png
 
