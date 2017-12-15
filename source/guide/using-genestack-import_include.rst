@@ -134,7 +134,7 @@ resume unfinished uploads later.
    :scale: 85 %
    :align: center
 
-Click the **Create files** button to proceed.
+Click the **Import files** button to proceed.
 
 Step 2: Format recognition
 ++++++++++++++++++++++++++
