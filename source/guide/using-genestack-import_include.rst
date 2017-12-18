@@ -96,31 +96,46 @@ There are several ways you can access the **Import** application:
    :scale: 90 %
    :align: center
 
-Import data includes the following steps:
+Import data consists of 3 steps.
+The first step results in temporary **Upload** files with your data created in the platform.
+On the second step the biological data type is assigned to your imported data.
+On the third step you can fill required metadata or import it from a text file.
 
-Step 1: Uploading files
+Step 1: Getting data into the platform
 +++++++++++++++++++++++
 
-There are two ways to upload data into the platform:
+There are two ways to have your data imported into the platform:
 
-1. **Use data from your computer** — select or drag-and-drop files.
+1. **Upload data from your computer** — select or drag-and-drop files.
 
 .. image:: images/import_start.png
    :scale: 80 %
    :align: center
 
-2. **Upload from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
+2. **Import from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
    directories.
 
 .. image:: images/URL_import.png
    :scale: 80 %
    :align: center
 
-The **Use previous uploads** option allows you to avoid uploading the data a
-second time.
+If you made a mistake during one of the following data import steps, you can
+always reuse your previous **Upload** files: just select previously uploaded
+data with **Use previous uploads** option and add more data if needed.
+This way you will not have to upload your data for the second time
+because everything recently uploaded is available as a temporary **Upload** file.
 
-Files are uploaded in multiple streams to increase upload speed. Uploading
-from URLs is done in the background. This means that even while these files
+.. note:: **What is an Upload file?**
+
+          *Describe the Upload file is a temporary file that stores your imported data
+          and may be removed by the platform when it is no longer used. It's only purpose
+          is to store your data during the Import Data steps and give you ability to ensure
+          your Genestack Files are created and initialized correctly. After Genestack Files are
+          created and initialized successfully, these temporary **Upload**
+          files can be safely removed from the platform and no data will be lost.*
+
+Uploading from you computer is done in multiple streams to increase upload speed.
+Import from URLs is done in the background, which means that even while these files
 are being uploaded, you can edit their metadata and use them in pipelines.
 
 .. image:: images/uploading_step.png
@@ -149,7 +164,7 @@ Genestack. You will not have to worry about formats at all.
    :align: center
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
-them to a specific data type: drag the raw file and move it to the green
+them to a specific data type: drag the **Upload** file and move it to the green
 "Choose type" box at the top of the page.
 
 .. image:: images/unrecognized_uploads.png
