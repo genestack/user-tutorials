@@ -33,7 +33,6 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv, .xls);
 - **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
 
-
 .. Two new file types:
 .. Gene List: store a list of genes with possibly additional annotation
 .. Gene Expression Signature: store a list of genes and expression pattern (Log FC) with possibly additional annotation
@@ -96,31 +95,52 @@ There are several ways you can access the **Import** application:
    :scale: 90 %
    :align: center
 
-Import data includes the following steps:
+Import data consists of three steps: firstly, temporary **Upload** files with your
+data are created in the platform; then, the biological data type is assigned to your
+imported data; finally, you can fill in all required metadata or import it from a text file.
 
-Step 1: Uploading files
-+++++++++++++++++++++++
+Step 1: Getting data into the platform
+++++++++++++++++++++++++++++++++++++++
 
-There are two ways to upload data into the platform:
+There are two ways to have your data imported into the platform:
 
-1. **Use data from your computer** — select or drag-and-drop files.
+1. **Upload data from your computer** — select or drag-and-drop files.
 
 .. image:: images/import_start.png
    :scale: 80 %
    :align: center
 
-2. **Upload from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
+2. **Import from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
    directories.
 
 .. image:: images/URL_import.png
    :scale: 80 %
    :align: center
 
-The **Use previous uploads** option allows you to avoid uploading the data a
-second time.
+Furthermore, if you make a mistake during one of the following data import steps,
+there is no need to upload your data the second time because
+everything recently uploaded is available as a temporary **Upload** file.
+Indeed, you can always reuse your previous **Upload** files instead of uploading new ones:
+just select existing files with **Use previous uploads** option and,
+then, add more data if needed.
 
-Files are uploaded in multiple streams to increase upload speed. Uploading
-from URLs is done in the background. This means that even while these files
+.. image::images/import-add-more.png
+   :scale: 80 %
+   :align: center
+
+
+.. note:: **What is an Upload file?**
+
+
+          The Upload file is a temporary file that is automatically created
+          during the data importing process and may be safely removed by the platform
+          if it is no longer used. In addition to being used to store imported data,
+          the Upload files ensure that your Genestack files are not only created but
+          also initialized correctly. If it is so, **Upload** files
+          could be removed from the platform, however no data will be lost.
+
+Uploading from your computer is done in multiple streams to increase upload speed.
+Import from URLs is done in the background, which means that even while these files
 are being uploaded, you can edit their metadata and use them in pipelines.
 
 .. image:: images/uploading_step.png
@@ -134,14 +154,14 @@ resume unfinished uploads later.
    :scale: 85 %
    :align: center
 
-Click the **Create files** button to proceed.
+Click the **Import files** button to proceed.
 
 Step 2: Format recognition
 ++++++++++++++++++++++++++
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
-reference genomes, etc. Format conversions will be handled internally by
+reference genomes, etc. All format conversions will be handled internally by
 Genestack. You will not have to worry about formats at all.
 
 .. image:: images/file_recognition.png
@@ -149,7 +169,7 @@ Genestack. You will not have to worry about formats at all.
    :align: center
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
-them to a specific data type: drag the raw file and move it to the green
+them to a specific data type: drag the **Upload** file and move it to the green
 "Choose type" box at the top of the page.
 
 .. image:: images/unrecognized_uploads.png
@@ -234,7 +254,7 @@ Reference Genome data:
 
 **Import template editor** application allows to modify existing import templates and create
 new ones with proper metainfo fields, requirements and controlled vocabularies. To access
-the app right-click on a template's name and select the **Import template editor** from
+the application right-click on a template's name and select the **Import template editor** from
 the "Manage" submenu. To create new template on the basis of the default one you can also click
 **Add import template** one the Dashboard.
 
