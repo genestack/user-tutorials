@@ -139,8 +139,8 @@ then, add more data if needed.
           also initialized correctly. If it is so, **Upload** files
           could be removed from the platform, however no data will be lost.
 
-Uploading from your computer is done in multiple streams to increase upload speed.
-Import from URLs is done in the background, which means that even while these files
+Uploading from you computer is done in multiple streams to increase upload speed.
+Import from URLs is performed in the background, which means that even while these files
 are being uploaded, you can edit their metadata and use them in pipelines.
 
 .. image:: images/uploading_step.png
