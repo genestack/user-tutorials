@@ -120,7 +120,7 @@ There are two ways to have your data imported into the platform:
 Furthermore, if you make a mistake during one of the following data import steps,
 there is no need to upload your data the second time because
 everything recently uploaded is available as a temporary **Upload** file.
-Indeed, you can always reuse your previous **Upload** files instead of uploading new ones:
+In other words, you can always reuse your previous **Upload** files instead of uploading new ones:
 just select existing files with **Use previous uploads** option and,
 then, add more data if needed.
 
@@ -131,7 +131,6 @@ then, add more data if needed.
 
 .. note:: **What is an Upload file?**
 
-
           The Upload file is a temporary file that is automatically created
           during the data importing process and may be safely removed by the platform
           if it is no longer used. In addition to being used to store imported data,
@@ -139,7 +138,7 @@ then, add more data if needed.
           also initialized correctly. If it is so, **Upload** files
           could be removed from the platform, however no data will be lost.
 
-Uploading from you computer is done in multiple streams to increase upload speed.
+Data uploading from your computer is carried out in multiple streams to increase upload speed.
 Import from URLs is performed in the background, which means that even while these files
 are being uploaded, you can edit their metadata and use them in pipelines.
 
