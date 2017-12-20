@@ -21,8 +21,11 @@ button.
 .. image:: images/export2.png
    :align: center
 
-The application creates a temporary **Export** file that contains a special link to download
-the selected assays.
+The application creates a temporary Export file that contains a special link to download
+the selected files. All the Export files are stored in the
+“Exports” folder.
+
+.. update image
 
 .. image:: images/export3.png
    :align: center
@@ -30,5 +33,4 @@ the selected assays.
 **Sharing the link** enables your collaborators to download data even if they
 do not have a Genestack account. The created export file can be removed after some time by the platform.
 It means that the corresponding download link will not be accessible any longer, however the
-data itself will not be affected. All the **Export** files are stored in the
-“Exports” folder.
+data itself will not be affected.

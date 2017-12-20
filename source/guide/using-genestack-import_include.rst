@@ -28,18 +28,29 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   with annotation (FASTA and GFF/GTF/GFF3);
 - **Variation Files** — Genetic variations files, storing gene sequence
   variations (VCF);
-- **Gene List** — the file includes the list of genes for a specific organism (.gpr, .txt, .tsv, .xls);
-- **Gene Expression Signature** — the file includes the list of genes with expression pattern
-  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv, .xls);
+- **Gene List** — store a list of genes with possibly additional annotation (.gpr file of genes in separate lines, .txt, .tsv, .xls);
+- **Gene Expression Signature** — the file includes the list of genes with expression pattern (Log FC)
+  specific to an organism phenotype according to statistical significance (filtering based on p-value);
+  additional annotation can be included  (.gpr, .txt, .tsv, .xls);
 - **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
 
-.. Two new file types:
-.. Gene List: store a list of genes with possibly additional annotation
-.. Gene Expression Signature: store a list of genes and expression pattern (Log FC) with possibly additional annotation
+.. note::
 
+         If the file contains both gene names and log fold changes, it is imported as
+         Gene Expression Signature. If the file only contains gene names, it is imported as Gene List.
+         The importer will look at the headers of the .tsv file to try to detect which columns may
+         correspond to gene names or log fold changes (common variations are supported such as
+         ‘gene’/‘symbol’ for gene names, and ‘logFC’/’log fold change’ for log fold changes).
+         If it fails to detect them, the user will be asked to manually choose the file type and
+         specify the file headers corresponding to gene names or log fold changes. Gene symbols and
+         Ensembl/Entrez gene IDs are currently supported for gene names.
+
+.. Gene Expression Signature: store a list of genes and expression pattern (Log FC) with possibly additional annotation
 .. Two formats are accepted:
 .. .grp file of genes in separate lines. This is imported as Gene List.
-.. .tsv file. If the file contains both gene names and log fold changes, it is imported
+.. .tsv file ( (with .tsv, .txt, or .xls extensions)).
+
+.. If the file contains both gene names and log fold changes, it is imported
 .. as Gene Expression Signature. If the file only contains gene names, it is imported
 .. as Gene List. The importer will look at the headers of the .tsv file to try to detect
 .. which columns may correspond to gene names or log fold changes (common variations are
@@ -95,7 +106,7 @@ There are several ways you can access the **Import** application:
    :scale: 90 %
    :align: center
 
-Import data consists of three steps: firstly, temporary **Upload** files with your
+Import data consists of three steps: firstly, temporary Upload files with your
 data are created in the platform; then, the biological data type is assigned to your
 imported data; finally, you can fill in all required metadata or import it from a text file.
 
@@ -117,26 +128,25 @@ There are two ways to have your data imported into the platform:
    :scale: 80 %
    :align: center
 
-Furthermore, if you make a mistake during one of the following data import steps,
-there is no need to upload your data the second time because
-everything recently uploaded is available as a temporary **Upload** file.
-In other words, you can always reuse your previous **Upload** files instead of uploading new ones:
-just select existing files with **Use previous uploads** option and,
-then, add more data if needed.
+Furthermore, you can reuse your previous Upload files instead of uploading
+the same data again: just select existing files with the **Use previous uploads** option and,
+then, add more data if needed. This feature can be useful, for example, when you import a dataset
+with several samples and one of them is corrupted. In this case, you just need to upload a
+single sample to replace the corrupted one and, then, reuse all other previously uploaded samples.
 
 .. image::images/import-add-more.png
    :scale: 80 %
    :align: center
 
-
 .. note:: **What is an Upload file?**
 
           The Upload file is a temporary file that is automatically created
-          during the data importing process and may be safely removed by the platform
-          if it is no longer used. In addition to being used to store imported data,
-          the Upload files ensure that your Genestack files are not only created but
-          also initialized correctly. If it is so, **Upload** files
-          could be removed from the platform, however no data will be lost.
+          during the data importing process.
+          The only purpose of the Upload files is to temporarily store the data
+          until your Genestack files are created and initialized correctly.
+          After that, the Upload files can be safely deleted,
+          and no data will be lost.
+          Upload files will be eventually removed by the platform.
 
 Data uploading from your computer is carried out in multiple streams to increase upload speed.
 Import from URLs is performed in the background, which means that even while these files
@@ -168,7 +178,7 @@ Genestack. You will not have to worry about formats at all.
    :align: center
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
-them to a specific data type: drag the **Upload** file and move it to the green
+them to a specific data type: drag the Upload file and move it to the green
 "Choose type" box at the top of the page.
 
 .. image:: images/unrecognized_uploads.png
