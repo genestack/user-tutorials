@@ -11,32 +11,30 @@ download, indexing, computation. In practice, it means that uninitialised
 files are cheap and quick to create, can be configured, used as inputs
 to applications to create other files, and then, later, computed all at
 once. Let’s look at an example. Go to the public experiment library and
-choose `“Analysis of the intestinal microbiota of hybrid house mice
-reveals evolutionary divergence in a vertebrate hologenome”`_ dataset by Wang et al.
+choose `"Whole genome sequencing of human (russian male)"`_ dataset.
 
-.. image:: images/wang-1.png
+.. image:: images/wgs-russian-male-1.png
    :align: center
 
 Click **Analyse** button and, then, select **Trim Adaptors and Contaminants** in the list of the suggested applications.
 If you want to analyse some of the files from a given dataset, you can select the files you
 are interested in and **Make a subset** the entire dataset.
 
-.. image:: images/wang-2.png
+.. image:: images/wgs-russian-male-2.png
    :align: center
 
 Regardless the input you would like to start with, at this step you do
 not have to start initialisation right away. In fact, you can use the file created
 by the app as an input to applications and continue building the pipeline.
-
-.. image:: images/trim-adaptors-app.png
-   :align: center
-
 Notice that you can **edit the parameters** of analysis on the app page.
 You can change them because the file is not yet
 initialised, i.e. the computation – in this case, trimming – has not yet
 been started. After initialisation has completed, these parameters are
 fixed. Thanks to these parameters are saved in the metainfo, they can be further
 used to identically reproduce your work.
+
+.. image:: images/trim-adaptors-app.png
+   :align: center
 
 To start initialisation of a newly created file, click on the name of the file
 and select **Start initialisation**.
@@ -45,26 +43,27 @@ and select **Start initialisation**.
    :align: center
 
 To use this file as an input for a different application, for example to map the trimmed raw reads
-to a reference genome, you should click on **Add step** and select the "Spliced Mapping with Tophat"
+to a reference genome, you should click on **Add step** and select the "Spliced Mapping with Tophat2"
 application.
 
-.. image:: images/add-step.png
+.. image:: images/cla-add-step.png
    :align: center
 
-With the **edit parameters** option you can check if the system
-suggested a correct reference genome and if not, you can select the correct
-one. As a result, another dataset called "Spliced Mapping with Tophat2 " is created
-and is waiting to be initialised.
+As a result, another dataset called
+"Spliced Mapping with Tophat2 " is created and is waiting to be initialised.
+On the application page you can check if the system suggested a correct
+reference genome and if not, select the correct one.
 
-
+.. image:: images/tophat.png
+   :align: center
 
 This dataset, in turn, can be used as an input for a different application.
 As the last step of the analysis you could, for example, identify genetic variants by adding
-the "Variant Calling" app. In order to see `the entire data flow`_
+the "Variant Calling" app. In order to see the entire data flow
 we have just created, click on the name of the last created file, go to
 “Manage” and **File Provenance**.
 
-.. image:: images/provenance.png
+.. image:: images/provenance1.png
    :align: center
 
 It will show you processes that have been completed, and ones that need to be
@@ -90,7 +89,7 @@ found at the top of the page.
 
 .. .. image:: images/app-page-100-files.png
 
-All the files created in the above example are located in the `tutorial folder`_.
+.. All the files created in the above example are located in the `tutorial folder`_.
 
 .. Now let's talk a bit about different types of files
 .. that can be found on the platform. As we demonstrated, all our files
@@ -144,6 +143,6 @@ All the files created in the above example are located in the `tutorial folder`_
 .. experimentally collected data. They are a handy container for data. 
 .. **Raw reads** are a general category of file types, which store raw sequencing data.
 
-.. _“Analysis of the intestinal microbiota of hybrid house mice reveals evolutionary divergence in a vertebrate hologenome”: https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF317032&action=viewFile
-.. _the entire data flow: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1016183&action=viewFile
+.. _"Whole genome sequencing of human (russian male)": https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF916135&action=viewFile
+.. .. _the entire data flow:
 .. _tutorial folder: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF1016175&action=viewFile&page=1
