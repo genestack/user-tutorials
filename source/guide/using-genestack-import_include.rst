@@ -28,36 +28,24 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   with annotation (FASTA and GFF/GTF/GFF3);
 - **Variation Files** — Genetic variations files, storing gene sequence
   variations (VCF);
-- **Gene List** — store a list of genes with possibly additional annotation (.gpr file of genes in separate lines, .txt, .tsv, .xls);
-- **Gene Expression Signature** — the file includes the list of genes with expression pattern (Log FC)
-  specific to an organism phenotype according to statistical significance (filtering based on p-value);
-  additional annotation can be included  (.gpr, .txt, .tsv, .xls);
-- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
+- **Gene List** — stores a list of genes with possibly additional annotation (.gpr file of genes in
+  separate lines or tab-delimited file (.txt, .tsv, .xls));
+- **Gene Expression Signature** — the file includes the list of genes and expression pattern
+  (Log FC) specific to an organism phenotype with possibly additional annotation (.gpr file of
+  genes in separate lines or tab-delimited file (.txt, .tsv, .xls extensions));
+- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment
+  analysis (.gmt).
 
-.. note::
+.. note:: **Import of Gene Expression Signature and Gene List files**
 
          If the file contains both gene names and log fold changes, it is imported as
-         Gene Expression Signature. If the file only contains gene names, it is imported as Gene List.
+         *Gene Expression Signature*. If the file only contains gene names, it is imported as *Gene List*.
          The importer will look at the headers of the .tsv file to try to detect which columns may
          correspond to gene names or log fold changes (common variations are supported such as
          ‘gene’/‘symbol’ for gene names, and ‘logFC’/’log fold change’ for log fold changes).
          If it fails to detect them, the user will be asked to manually choose the file type and
          specify the file headers corresponding to gene names or log fold changes. Gene symbols and
          Ensembl/Entrez gene IDs are currently supported for gene names.
-
-.. Gene Expression Signature: store a list of genes and expression pattern (Log FC) with possibly additional annotation
-.. Two formats are accepted:
-.. .grp file of genes in separate lines. This is imported as Gene List.
-.. .tsv file ( (with .tsv, .txt, or .xls extensions)).
-
-.. If the file contains both gene names and log fold changes, it is imported
-.. as Gene Expression Signature. If the file only contains gene names, it is imported
-.. as Gene List. The importer will look at the headers of the .tsv file to try to detect
-.. which columns may correspond to gene names or log fold changes (common variations are
-.. supported such as ‘gene’/ ‘symbol’ for gene names, and ‘logFC’/’log fold change’ for log
-.. fold changes). If it fails to detect them, the user will be asked to manually choose the
-.. file type and specify the file headers corresponding to gene names or log fold changes.
-.. Gene symbols and Ensembl/Entrez gene IDs are currently supported for gene names.
 
 When you import files that are detected as raw sequencing or microarray data,
 Genestack automatically creates a **dataset**, a special type of folder, and adds the assays to it.
