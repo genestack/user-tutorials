@@ -13,19 +13,22 @@ to applications to create other files, and then, later, computed all at
 once. Let’s look at an example. Go to the public experiment library and
 choose `“Analysis of the intestinal microbiota of hybrid house mice
 reveals evolutionary divergence in a vertebrate hologenome”`_ dataset by Wang et al.
-Click **Use dataset** button and select **Start new data flow with application**;
-then, in the list of the suggested apps choose **Trim Low Quality Bases** app.
+
+.. image:: images/wang-1.png
+   :align: center
+
+Click **Analyse** button and, then, select **Trim Adaptors and Contaminants** in the list of the suggested applications.
 If you want to analyse some of the files from a given dataset, you can select the files you
 are interested in and **Make a subset** the entire dataset.
 
-.. image:: images/wang.png
+.. image:: images/wang-2.png
    :align: center
 
 Regardless the input you would like to start with, at this step you do
 not have to start initialisation right away. In fact, you can use the file created
 by the app as an input to applications and continue building the pipeline.
 
-.. image:: images/trim-low-quality-bases-app.png
+.. image:: images/trim-adaptors-app.png
    :align: center
 
 Notice that you can **edit the parameters** of analysis on the app page.
@@ -43,13 +46,17 @@ and select **Start initialisation**.
 
 To use this file as an input for a different application, for example to map the trimmed raw reads
 to a reference genome, you should click on **Add step** and select the "Spliced Mapping with Tophat"
-application. With the **edit parameters** option you can check if the system
+application.
+
+.. image:: images/add-step.png
+   :align: center
+
+With the **edit parameters** option you can check if the system
 suggested a correct reference genome and if not, you can select the correct
 one. As a result, another dataset called "Spliced Mapping with Tophat2 " is created
 and is waiting to be initialised.
 
-.. image:: images/add-step.png
-   :align: center
+
 
 This dataset, in turn, can be used as an input for a different application.
 As the last step of the analysis you could, for example, identify genetic variants by adding
