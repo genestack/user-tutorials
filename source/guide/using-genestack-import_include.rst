@@ -28,10 +28,24 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
   with annotation (FASTA and GFF/GTF/GFF3);
 - **Variation Files** — Genetic variations files, storing gene sequence
   variations (VCF);
-- **Gene List** — the file includes the list of genes for a specific organism (.gpr, .txt, .tsv, .xls);
-- **Gene Expression Signature** — the file includes the list of genes with expression pattern
-  specific to an organism phenotype according to statistical significance (filtering based on p-value) (.gpr, .txt, .tsv, .xls);
-- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment analysis (.gmt).
+- **Gene List** — stores a list of genes with possibly additional annotation (.gpr file of genes in
+  separate lines or tab-delimited file (.txt, .tsv, .xls));
+- **Gene Expression Signature** — the file includes the list of genes and expression pattern
+  (Log FC) specific to an organism phenotype with possibly additional annotation (.gpr file of
+  genes in separate lines or tab-delimited file (.txt, .tsv, .xls extensions));
+- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment
+  analysis (.gmt).
+
+.. note:: **Import of Gene Expression Signature and Gene List files**
+
+         If the file contains both gene names and log fold changes, it is imported as
+         *Gene Expression Signature*. If the file only contains gene names, it is imported as *Gene List*.
+         The importer will look at the headers of the .tsv file to try to detect which columns may
+         correspond to gene names or log fold changes (common variations are supported such as
+         ‘gene’/‘symbol’ for gene names, and ‘logFC’/’log fold change’ for log fold changes).
+         If it fails to detect them, the user will be asked to manually choose the file type and
+         specify the file headers corresponding to gene names or log fold changes. Gene symbols and
+         Ensembl/Entrez gene IDs are currently supported for gene names.
 
 When you import files that are detected as raw sequencing or microarray data,
 Genestack automatically creates a **dataset**, a special type of folder, and adds the assays to it.
@@ -80,31 +94,51 @@ There are several ways you can access the **Import** application:
    :scale: 90 %
    :align: center
 
-Import data includes the following steps:
+Import data consists of three steps: firstly, temporary Upload files with your
+data are created in the platform; then, the biological data type is assigned to your
+imported data; finally, you can fill in all required metadata or import it from a text file.
 
-Step 1: Uploading files
-+++++++++++++++++++++++
+Step 1: Getting data into the platform
+++++++++++++++++++++++++++++++++++++++
 
-There are two ways to upload data into the platform:
+There are two ways to have your data imported into the platform:
 
-1. **Use data from your computer** — select or drag-and-drop files.
+1. **Upload data from your computer** — select or drag-and-drop files.
 
 .. image:: images/import_start.png
    :scale: 80 %
    :align: center
 
-2. **Upload from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
+2. **Import from URLs (FTP or HTTP/HTTPS)** — specify URLs for separate files or
    directories.
 
 .. image:: images/URL_import.png
    :scale: 80 %
    :align: center
 
-The **Use previous uploads** option allows you to avoid uploading the data a
-second time.
+Furthermore, you can reuse your previous Upload files instead of uploading
+the same data again: just select existing files with the **Use previous uploads** option and,
+then, add more data if necessary. This feature can be useful, for example, when you import
+a dataset with several samples, one of the files is chosen incorrectly or corrupted,
+so you would like to replace it. In this case, you need to upload again just one sample and
+reuse all other previously uploaded files.
 
-Files are uploaded in multiple streams to increase upload speed. Uploading
-from URLs is done in the background. This means that even while these files
+.. image::images/import-add-more.png
+   :scale: 80 %
+   :align: center
+
+.. note:: **What is an Upload file?**
+
+          The Upload file is a temporary file that is automatically created
+          during the data importing process.
+          The only purpose of the Upload files is to temporarily store the data
+          until the corresponding Genestack files are created and initialized correctly.
+          It is Genestack files that will be further used
+          in bioinformatic data analysis; that is why the platform periodically
+          can remove the Upload files, but no data is lost.
+
+Data uploading from your computer is carried out in multiple streams to increase upload speed.
+Import from URLs is performed in the background, which means that even while these files
 are being uploaded, you can edit their metadata and use them in pipelines.
 
 .. image:: images/uploading_step.png
@@ -118,14 +152,14 @@ resume unfinished uploads later.
    :scale: 85 %
    :align: center
 
-Click the **Create files** button to proceed.
+Click the **Import files** button to proceed.
 
 Step 2: Format recognition
 ++++++++++++++++++++++++++
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
-reference genomes, etc. Format conversions will be handled internally by
+reference genomes, etc. All format conversions will be handled internally by
 Genestack. You will not have to worry about formats at all.
 
 .. image:: images/file_recognition.png
@@ -133,7 +167,7 @@ Genestack. You will not have to worry about formats at all.
    :align: center
 
 If files are unrecognized or recognized incorrectly, you can manually allocate
-them to a specific data type: drag the raw file and move it to the green
+them to a specific data type: drag the Upload file and move it to the green
 "Choose type" box at the top of the page.
 
 .. image:: images/unrecognized_uploads.png
@@ -183,7 +217,10 @@ the ChEBI_ for chemical compounds, and the `Cell Ontology`_ (cell types in anima
 We also created our own controlled vocabularies to cover Sex, Method and Platform fields.
 You can find out more about ontologies in the :ref:`public-experiment-label` section.
 
-Finally, you can also create your own custom dictionary by importing it into the
+Import with templates
+~~~~~~~~~~~~~~~~~~~~~
+
+You can create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
 
 .. note:: **What is an import template?**
@@ -215,7 +252,7 @@ Reference Genome data:
 
 **Import template editor** application allows to modify existing import templates and create
 new ones with proper metainfo fields, requirements and controlled vocabularies. To access
-the app right-click on a template's name and select the **Import template editor** from
+the application right-click on a template's name and select the **Import template editor** from
 the "Manage" submenu. To create new template on the basis of the default one you can also click
 **Add import template** one the Dashboard.
 

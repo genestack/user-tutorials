@@ -1,19 +1,7 @@
 .. _public-experiment-label:
 
-Public experiments, automated data curation and managing metadata
------------------------------------------------------------------
-
-Our platform provides you with a huge collection of freely accessible experiments that we
-imported from various well-known repositories, such as GEO NCBI, ENA, SRA and Array Express.
-All the public experiments and assays are accompanied by original metainformation
-describing biological data. Generally, this information is not standardized that makes operations
-with biological data, like browsing data and combining assays from several experiments or reproducing some
-analysis, difficult or even impossible without human participation.
-To harmonize raw metadata we apply **automated curation** where we map raw entries to
-controlled terms that we store and maintain in special files called **Dictionaries**.
-To prepare these Dictionaries we adopted terms from external ontologies or created them manually.
-You can also use our standardized and unified terminology to describe your own data
-or analysis results.
+Managing metadata
+-----------------
 
 **Metainfo Editor** application enable you to explore metadata for datasets or standalone
 files. Besides, if you have enough permissions, you can edit metadata or import it from
@@ -24,7 +12,8 @@ tables where columns represent metainfo fields, such as 'Organism', 'Cell line' 
 
 .. image:: images/metainfo-editor.png
 
-1. **Edit metadata manually**
+Edit metadata manually
+~~~~~~~~~~~~~~~~~~~~~~
 
 By default a metainfo data table is based on **Default Import Template** that, however, you
 can easily replace with a custom one (learn more about templates in the section
@@ -64,7 +53,8 @@ Click column name to **sort** metadata or **delete** the selected column if need
 .. image:: images/sort.png
    :align: center
 
-2. **Import metainfo data from your computer**
+Import metainfo data from your computer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To begin, click the **Import data from spreadsheet** button. Then,
 choose a CSV, XLS or XLSX file with metadata that you would like to attach.
@@ -87,7 +77,8 @@ associate it with another metadata field by click on the name of the column.
    :scale: 90 %
    :align: center
 
-3. **Compose file names using metainfo keys**
+Compose file names using metainfo keys
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you complete describing your samples, you can use the metadata to name
 them. Click **Apply naming scheme** button and select metainfo fields that you
@@ -97,7 +88,8 @@ want to use to create names.
    :scale: 70 %
    :align: center
 
-4. **Make a subset**
+Make a subset
+~~~~~~~~~~~~~
 
 If you just want to analyse some samples from a dataset, you can make a subset.
 There are two ways of making subsets: select samples you want to analyse using checkboxes, and click **Make a subset**;
