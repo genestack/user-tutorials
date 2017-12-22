@@ -118,9 +118,10 @@ There are two ways to have your data imported into the platform:
 
 Furthermore, you can reuse your previous Upload files instead of uploading
 the same data again: just select existing files with the **Use previous uploads** option and,
-then, add more data if needed. This feature can be useful, for example, when you import a dataset
-with several samples and one of them is corrupted. In this case, you just need to upload a
-single sample to replace the corrupted one and, then, reuse all other previously uploaded samples.
+then, add more data if necessary. This feature can be useful, for example, when you import
+a dataset with several samples, one of the files is chosen incorrectly or corrupted,
+so you would like to replace it. In this case, you need to upload again just one sample and
+reuse all other previously uploaded files.
 
 .. image::images/import-add-more.png
    :scale: 80 %
@@ -131,10 +132,10 @@ single sample to replace the corrupted one and, then, reuse all other previously
           The Upload file is a temporary file that is automatically created
           during the data importing process.
           The only purpose of the Upload files is to temporarily store the data
-          until your Genestack files are created and initialized correctly.
-          After that, the Upload files can be safely deleted,
-          and no data will be lost.
-          Upload files will be eventually removed by the platform.
+          until the corresponding Genestack files are created and initialized correctly.
+          It is Genestack files that will be further used
+          in bioinformatic data analysis; that is why the platform periodically
+          can remove the Upload files, but no data will be lost.
 
 Data uploading from your computer is carried out in multiple streams to increase upload speed.
 Import from URLs is performed in the background, which means that even while these files
