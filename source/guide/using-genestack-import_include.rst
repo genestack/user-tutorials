@@ -135,7 +135,7 @@ reuse all other previously uploaded files.
           until the corresponding Genestack files are created and initialized correctly.
           It is Genestack files that will be further used
           in bioinformatic data analysis; that is why the platform periodically
-          can remove the Upload files, but no data will be lost.
+          can remove the Upload files, but no data is lost.
 
 Data uploading from your computer is carried out in multiple streams to increase upload speed.
 Import from URLs is performed in the background, which means that even while these files
