@@ -17,8 +17,7 @@ There are various options for importing your data. You can drag and
 drop or select files from your computer, import data from URL or use
 previous uploads.
 
-.. image:: images/import_step1.png
-   :scale: 80 %
+.. image:: images/import_1.png
    :align: center
 
 After data is uploaded and imported, the platform automatically recognizes file
@@ -28,16 +27,14 @@ worry about formats at all and this will most likely save you a lot of
 time. If files are unrecognized, you can manually allocate them to a
 specific data type by drag and drop.
 
-.. image:: images/import_step2.png
-   :scale: 80 %
+.. image:: images/import_2.png
    :align: center
 
 On the next **Edit metainfo** step, you can describe uploaded data. Using an Excel-like spreadsheet you can
 edit the file metainfo and add new attributes, for example, cell type or
 age.
 
-.. image:: images/import_step3.png
-   :scale: 80 %
+.. image:: images/import_3.png
    :align: center
 
 Additional option of importing your data is using import templates. On
