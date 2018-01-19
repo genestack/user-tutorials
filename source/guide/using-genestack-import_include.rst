@@ -185,11 +185,8 @@ Click the **Create files** button to proceed.
 Step 3: Editing metainfo
 ++++++++++++++++++++++++
 
-In this step, you can describe uploaded data using an Excel-like spreadsheet.
-Importantly, during this step, the import has already completed — you will
-notice a message at the top of the page with the name of the folder where
-the imported files are located (named "Imported on <date> <time>"), and
-offering to share the data:
+During this step, the import has already completed, and you can describe uploaded data
+using an Excel-like spreadsheet.
 
 .. image:: images/import_edit_metainfo.png
 
@@ -330,8 +327,6 @@ page is filled in with metadata from the Excel-file.
 
 .. image:: images/import_metainfo_complete.png
 
-For instance, in this case we added new column
-"Age" and filled "Organism", "Sex", "Tissue" and "Platform" columns that came from the default template.
 
 
 Attachments
