@@ -81,10 +81,14 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 Wherever you are on the platform, you can also access a **shortcuts menu** by
 clicking on the Genestack logo in the top left corner of any platform page.
 It is an easy way to reach most commonly used applications and folders. Dashboard,
-Manage Applications, Manage Groups, Manage Users,
-Import Data and Import Template Editor,
-Experiment Browser, File Manager as well as the folders
-for created and imported files can all be found here. To access the shortcuts
+Data Browser, File Manager, Import Data, Manage Applications, Manage Groups,
+Manage Users, and Import Template Editor, as well as the folders
+for created and imported files can all be found here.
+
+.. image:: images/shortcuts.png
+   :align: center
+
+To access the shortcuts
 menu, simply click Genestack logo in the upper-left corner of any page.
 Let's look deeper into each of these items.
 
@@ -102,12 +106,11 @@ The **Developer** button will give you the option to choose which version of
 an application you want to use.
 
 .. image:: images/developer_button.png
-   :scale: 35 %
+   :scale: 85 %
    :align: center
 
-The **‘bundled’** and **‘minified’** options optimize
-loading of CSS and JS used in the application. You can find more details on
-bundling and minifying in `blog post by Dino Esposito`_.
+The **‘minified’** options optimizes loading of CSS and JS used in the application. You can find more details on
+minifying in `blog post by Dino Esposito`_.
 
 .. _blog post by Dino Esposito: https://msdn.microsoft.com/en-us/magazine/dn451436.aspx
 

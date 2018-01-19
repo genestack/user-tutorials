@@ -19,10 +19,11 @@ this, select the file, go to **Manage** and **Create new Data Flow**.
 
 .. image:: images/create-new-data-flow1.png
 
-In the next screen you will see the data flow we
-have previously created.
+In the next screen you will see the data flow we have previously created.
 
 .. image:: images/run-data-flow.png
+   :scale: 70 %
+   :align: center
 
 The data flow editor has one
 core goal: to help you create more files using this diagram. To do this,
