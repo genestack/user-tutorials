@@ -247,8 +247,8 @@ specific parameters.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at support@genestack.com or
-visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+If you have any questions and comments, feel free to email us at support@genestack.com.
+Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -282,5 +282,3 @@ References
 .. _Variants with predicted effects: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1
 .. _Variants with predicted effects for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1 
 .. _the detected variants: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1001169&action=viewFile#
-.. _email us: support@genestack.com
-.. _forum: http://forum.genestack.org/
