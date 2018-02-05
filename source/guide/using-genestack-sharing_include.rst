@@ -111,9 +111,8 @@ giving members the ability to edit the files in addition to just viewing them.
 .. image:: images/sharing_dialog.png
    :align: center
 
-Once you click the blue **Share** button, you will be prompted for your password,
-and then asked whether you would like to link the file into the group's shared
-folder.
+Once you click the blue **Share** button, you will be asked whether you would
+like to link the file into the group's shared folder.
 
 .. image:: images/sharing_with_link.png
    :align: center
