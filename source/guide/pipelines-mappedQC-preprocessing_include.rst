@@ -137,9 +137,7 @@ The following enrichment statistics are computed:
 
 You can generate these reports directly by choosing Mapped Reads datasets, right
 clicking on them and selecting the appropriate application (in "Explore" section) or
-using the `Targeted Sequencing Quality Control`_ public data flow.
-
-.. _Targeted Sequencing Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778331&action=viewFile
+using the **Targeted Sequencing Quality Control** public data flow.
 
 You can analyse the output for multiple reports at once using the **Multiple QC Report** application.
 
