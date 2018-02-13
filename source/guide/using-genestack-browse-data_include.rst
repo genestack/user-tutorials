@@ -64,12 +64,8 @@ dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-
-Besides, on the Metainfo editor page you can run the assays through a pipeline via the button
-**Use dataset...**. You can either use an existing data flow matching the assays or build a
-new pipeline step by step.
-
-.. update img: use GSF802958 as an example
+Besides,directly from the Metainfo Editor page you can start building pipeline step by step via the button
+**Analyse**.
 
 .. image:: images/new-df.png
 
@@ -198,7 +194,7 @@ Unlike other metainfo attributes, it will never change for any file.
 
 .. image:: images/parent-containers.png
 
-Above the file manager pane, you can find the **Import** button. Clicking
+Above the File Manager pane, you can find the **Import** button. Clicking
 it takes you to the Import application page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 
