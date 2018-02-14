@@ -147,6 +147,7 @@ to make life a bit simpler for our users. This folder contains:
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
    etc.;
+#. **Default template**: is an import template thai is used by default in data importing process. It provides the list of optional and required metadata fields for each file kind. An ontology or a dictionary can be associated with metadata keys to validate metainfo;
 #. **Dictionaries**: dictionaries include terms from external ontologies and are used to
    curate and harmonize metainfo, e.g. sex, platform, NCBI taxonomy.
 #. **Example results**: so you can play around with our platform and see

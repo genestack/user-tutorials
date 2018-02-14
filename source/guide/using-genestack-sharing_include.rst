@@ -13,7 +13,7 @@ the institution). Organisations have two types of users: regular users and
 administrators, who have the right to add new users, and deactivate existing
 ones.
 
-To check which organisation you belong to, you can go to the "Profile" page,
+To check which organisation you belong to, you can go to the **Profile** page,
 accessible via the menu which opens when you click on your email address at the
 top-right corner of any page.
 
@@ -24,7 +24,7 @@ Managing users
 ~~~~~~~~~~~~~~
 
 **If you are an administrator of your organisation**, the shortcut menu appeared when click on
-the Genestack logo will also have an additional item, "Manage Users", which takes you to
+the Genestack logo will also have an additional item, **Manage Users**, which takes you to
 the organisation's user management page.
 
 .. image:: images/shortcuts_manage_users.png
@@ -80,15 +80,9 @@ group, a user can be:
   group and change users' privileges).
 
 By default, newly added users will be granted the lowest permission level
-(Non-sharing user). You can change that using the dropdown next to their name.
+(Non-sharing user). You can change that using the drop-down next to their name.
 
 .. image:: images/users_permissions.png
-
-.. TODO I don't like the fact that we are linking to tutorials and videos from here
-
-Learn more on how to create and manage groups `in our tutorial`_.
-
-.. _in our tutorial: https://genestack.com/tutorial/managing-and-sharing-data/
 
 Sharing files with a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,9 +90,8 @@ Sharing files with a group
 If you are a sharing user or an administrator of a group, you can share files
 with that group. Any file created on Genestack can be shared.
 
-To share a file, you can select it in the File Manager by ticking the checkbox
-next to it, then clicking the **Share** button in the top bar. Alternatively you
-can right-click on the file and select the "Share" option in the context menu.
+To share a file, you can click the file name and select the **Share** option in the context menu.
+Besides, some apps, such as Data Browser, Metainfo Editor or File Manager, have a special **Share** button.
 
 .. image:: images/sharing_experiment.png
    :align: center
@@ -122,7 +115,7 @@ when they open that folder (which can make it easier for them to find it). If
 you click "No", the file will not be linked into the group folder but the
 group's users will still be able to find the file through the File Search box
 (for instance, if you tell them the accession of the file), in File Provenance
-and through the Experiment Browser.
+and through the Data Browser.
 
 Each group has an associated group folder which you can access from the File
 Manager under "Shared with me" in the left-hand side panel.
@@ -140,7 +133,7 @@ name and select Share option in the drop-down list.
 .. image:: images/share-in-bioapp.png
    :align: center
 
-Besides, you can share your datasets from the Metainfo editor page with the button Share.
+Besides, you can share your datasets from the Metainfo Editor page with the **Share** button.
 
 .. image:: images/share-in-ME.png
    :align: center
