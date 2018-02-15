@@ -4,7 +4,9 @@ Reproducing your work
 For any datasets in the system, you can learn where the data came from and replay the same
 exact analysis on other data.
 
-- **File Provenance** application allows you to explore the history of data, to learn how a given
+- **File Provenance**
+
+  **File Provenance** application allows you to explore the history of data, to learn how a given
   dataset was generated. Click the **New folder with files** button makes a folder where all
   the files used in the pipeline are located.
 
@@ -20,7 +22,9 @@ step of the analysis.
     :scale: 60 %
     :align: center
 
-- If you want to reuse the same pipeline on different data, you can create the data flow
+- **Data Flow Editor**
+
+  If you want to reuse the same pipeline on different data, you can create the data flow
   identical to the pipeline used to create the original file, by selecting the file of interest
   and choosing **Create new Data Flow** from the available "Manage" applications. This will open
   **Data Flow Editor** application that gives a visual representation of the pipeline and allows
@@ -33,11 +37,13 @@ step of the analysis.
     :scale: 70 %
     :align: center
 
-Click **Run Dataflow** button to continue, it will take you to the **Data Flow
+Click **Run dataflow** button to continue, it will take you to the **Data Flow
 Runner** application.
 
 
-- **Data Flow Runner** application allows you to run the pipeline.
+- **Data Flow Runner**
+
+  **Data Flow Runner** application allows you to run the pipeline.
   Click **Run dataflow** button to create all the relevant files in an uninitialized state.
   A separate file is created for each individual input file at every step of analysis.
   You can find them in a separate folder in the "Created files" folder.
