@@ -9,7 +9,7 @@ learn how genes work together to carry out biological processes.
 
 In this tutorial we will use Genestack applications to identify differentially
 expressed (DE) genes and further annotate them according to biological
-process, molecular function and cellular component.
+process, molecular function, and cellular component.
 
 The whole analysis includes the following steps:
 
@@ -39,7 +39,7 @@ on the platform, you can also `upload your own data`_ with the **Import** app.
 .. _Data Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser
 .. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 
-Feel free to find all the data for these tutorial in the folder `Testing Differential Gene
+Feel free to find all the data for this tutorial in the folder `Testing Differential Gene
 Expression on Genestack Platform`_. To find it go to File Manager app and open the "Tutorials"
 folder located in the `Public Data`_.
 
