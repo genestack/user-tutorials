@@ -19,7 +19,7 @@ Changing the group and thresholds criteria in the **Filter Options**, you can se
 what DE genes can be further used for enrichment analysis. Let's run GO Enrichment Analysis app
 twice, analysing down- and up-regulated genes separately.
 
-|DGE_GO_filters|
+.. image:: images/DGE_GO_filters.png
 
 Analysing down-regulated genes we observed significant enrichment for genes
 involved in multiple developmental processes specifically in organ development
@@ -32,7 +32,7 @@ adhesion, cell adhesion, cell-cell adhesion) and to the cadherin signalling
 pathway. Here is the first 8 of 1017 GO terms related to the biological
 processes:
 
-|DGE_down_DGE_genes_GO_terms|
+.. image:: images/DGE_down_DGE_genes_GO_terms.png
 
 Additionally, you can also review molecular functions or cellular components
 that could be affected in Twin-DS-iPSCs. Just change the "Top GO Terms" from
@@ -41,19 +41,19 @@ Biological Process category to the corresponding one.
 By comparison, this is the table from the paper which listed the first 20
 biological processes that might be affected due to trisomy 21:
 
-|DGE_down_paper|
+.. image:: images/DGE_down_paper.png
 
 Our GO analysis of the genes up-regulated in trisomic samples revealed
 enrichment for functions related to different metabolic and biological
 processes, regulation of transcription and DNA-dependent transcription. Here
 is the list of the first 8 of 339 biological process GO terms:
 
-|DGE_up_regulated_genes_GO_terms|
+.. image:: images/DGE_up_regulated_genes_GO_terms.png
 
 Look at the GO terms associated with up-regulated genes and reported in the
 paper:
 
-|DGE_up_paper|
+.. image:: images/DGE_up_paper.png
 
 All these biological processes can be found in our results. The difference
 is in GO counts. But we expected it, because the ontologies are not complete,
@@ -73,8 +73,3 @@ visit our forum_. Also we invite you to follow us on Twitter `@genestack <https
 .. _tutorial data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources
 .. _forum: http://forum.genestack.org/
 
-.. |DGE_GO_filters| image:: images/DGE_GO_filters.png
-.. |DGE_down_DGE_genes_GO_terms| image:: images/DGE_down_DGE_genes_GO_terms.png
-.. |DGE_down_paper| image:: images/DGE_down_paper.png
-.. |DGE_up_regulated_genes_GO_terms| image:: images/DGE_up_regulated_genes_GO_terms.png
-.. |DGE_up_paper| image:: images/DGE_up_paper.png

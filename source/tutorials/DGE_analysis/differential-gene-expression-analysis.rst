@@ -6,7 +6,7 @@ according to different experimental conditions. In this tutorial, we are
 looking for variation in gene expression for trisomic samples compared to the
 control ones.
 
-|DGE_DGE|
+.. image:: images/DGE_DGE.png
 
 Open Expression Navigator file, re-group samples and start the analysis:
 
@@ -31,13 +31,13 @@ description and location.
 
 .. _Differential gene expression analysis for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967842&action=viewFile
 
-|DGE_DGE_table|
+.. image:: images/DGE_DGE_table.png
 
 There are several options to filter/sort the genes displayed on the Top DEG
 Table. You can filter them by p-value, minimum Log FC, minimum CPM and
 regulation type. By default, the genes are ranked by their FDR.
 
-|Filters|
+.. image:: images/Filters.png
 
 Let’s find genes that are most over-expressed in the “Trisomy 21” group by
 lowering the Max P-Value threshold and increasing the Min LogFC and Min LogCPM
@@ -46,14 +46,14 @@ Min LogCPM equal to '2' and apply sorting by LogFC. As consistent with paper
 results, there is a number of zinc finger protein genes that are up-regulated
 in Twin-DS-iPSCs:
 
-|zinc_finger|
+.. image:: images/zinc_finger.png
 
 Interactive counts graph shows gene normalised counts across samples. This
 allows you to observe how a gene’s expression level varies within and across
 groups. Select several genes to compare expression level distributions between
 them:
 
-|zinc_DGE_plot|
+.. image:: images/zinc_DGE_plot.png
 
 If you move cursor to the top right corner of the graph, three icons will appear:
 
@@ -67,8 +67,3 @@ If you move cursor to the top right corner of the graph, three icons will appear
    graph and change its appearance by modifying the parameters on display when
    you right-click the graph area.
 
-.. |DGE_DGE| image:: images/DGE_DGE.png
-.. |DGE_DGE_table| image:: images/DGE_DGE_table.png
-.. |Filters| image:: images/Filters.png
-.. |zinc_finger| image:: images/zinc_finger.png
-.. |zinc_DGE_plot| image:: images/zinc_DGE_plot.png
