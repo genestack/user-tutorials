@@ -70,5 +70,5 @@ To reproduce these results, we will use
 `Differential Gene Expression Analysis`_ data flow. But before let's check
 the quality of raw reads to decide whether we should improve it or not.
 
-.. _Differential Gene Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources
+.. _Differential Gene Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF968176&action=viewFile
 

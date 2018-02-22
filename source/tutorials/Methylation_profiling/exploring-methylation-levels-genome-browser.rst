@@ -57,8 +57,7 @@ into a research `paper`_, and the data sets can be found in our `Public Experim
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at support@genestack.com or
-visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+If you have any questions and comments, feel free to email us at support@genestack.com. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -78,4 +77,3 @@ References
 .. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
 .. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
-.. _forum: http://forum.genestack.org/

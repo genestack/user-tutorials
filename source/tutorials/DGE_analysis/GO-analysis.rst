@@ -65,11 +65,10 @@ analysis for Hibaoui et al (2013)`_.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at support@genestack.com or
-visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+If you have any questions and comments, feel free to email us at support@genestack.com.
+Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 .. _GO enrichment analysis for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967843&action=viewFile
 .. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 .. _tutorial data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968015&action=createFromSources
-.. _forum: http://forum.genestack.org/
 
