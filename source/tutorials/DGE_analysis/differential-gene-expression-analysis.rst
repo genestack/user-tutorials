@@ -39,8 +39,10 @@ regulation type. By default, the genes are ranked by their FDR.
 
 .. image:: images/Filters.png
 
+.. no longer can filter by p-value
+
 Let’s find genes that are most over-expressed in the “Trisomy 21” group by
-lowering the Max P-Value threshold and increasing the Min LogFC and Min LogCPM
+lowering the Max P-value threshold and increasing the Min LogFC and Min LogCPM
 thresholds. Change P-Value to 0.001, Regulation to “Up”, set both Min LogFC and
 Min LogCPM equal to '2' and apply sorting by LogFC. As consistent with paper
 results, there is a number of zinc finger protein genes that are up-regulated
