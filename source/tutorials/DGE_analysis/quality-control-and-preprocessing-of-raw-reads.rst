@@ -5,14 +5,14 @@ Raw sequencing reads can include PCR primers, adaptors, low quality bases,
 duplicates and other contaminants coming from the experimental protocols.
 That is why we recommend you to check the quality of your raw data looking at
 such aspects as GC percentage, per base sequence quality scores, and other
-quality stаtistics. The easiest way to do this is to run `the Raw Reads QC`_
+quality stаtistics. The easiest way to do this is to run the `Raw Reads QC`_
 data flow:
 
 .. raw:: html
 
     <iframe width="640" height="360" src="https://www.youtube.com/embed/cWQa1EET9F4" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
-.. _the Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
+.. _Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 
 After generating reports, you will be able to review various statistics and
 plots for each sample.
@@ -72,9 +72,9 @@ Preprocessing of raw reads
 **************************
 
 Once the quality of raw data has been checked, we can go back to the main
-`Differential Gene Expression Analysis`_ data flow and choose sources:
+`Differential Gene Expression Analysis data flow`_ and choose sources:
 
-.. _Differential Gene Expression Analysis: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources
+.. _Differential Gene Expression Analysis data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources
 
 .. image:: images/DGE_data_flow_first_step.png
 
