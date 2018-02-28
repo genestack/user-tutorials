@@ -17,14 +17,14 @@ Setting up an exome sequencing experiment
 *****************************************
 
 First off, let's choose exome sequencing data. You can `upload your own data`_
-using 'Import' button or search through all `public experiments`__ we have on
+using 'Import' button or search through all `public experiments`_ we have on
 the platform. Our analysis will be based on data coming from `Clark et al.
-2011`_. Let's find this experiment in the platform and open it in `Experiment
-Viewer`_:
+2011`_. Let's find this experiment in the platform and open it in `Metainfo
+Editor`_:
 
-.. __: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
+.. _public experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile
 
-|WES_experiment_viewer copy|
+.. image:: images/wes-metainfo-editor.png
 
 The authors compared the performance of three major commercial exome
 sequencing platforms: Agilent’s SureSelect Human All Exon 50Mb,
@@ -59,7 +59,6 @@ A typical data flow of WES analysis consists of the following steps:
 Let’s look at each step separately to get a better idea of what it
 really means.
 
-.. |WES_experiment_viewer copy| image:: images/WES_experiment_viewer-copy.png
 .. _upload your own data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Clark et al. 2011: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007499
-.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF341288&action=viewFile
+.. _Metainfo Editor: https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF341288&action=viewFile

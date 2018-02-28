@@ -86,9 +86,9 @@ canyon size.
 
 Now let's start reproducing these results with data flows pre-prepared by Genestack.
 
-To learn more just open the experiment in `Experiment Viewer`_:
+To learn more just open the experiment in `Metainfo Editor`_:
 
-.. image:: images/Experiment_Viewer.png
+.. image:: images/wgbs-metainfo-editor.png
 
 .. |Watch all videos here| image:: images/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
    :class: aligncenter wp-image-3563 size-large
@@ -103,4 +103,4 @@ To learn more just open the experiment in `Experiment Viewer`_:
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
 .. _Data Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
 .. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile
+.. _Metainfo Editor: https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF088374&action=viewFile
