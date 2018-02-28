@@ -4,6 +4,8 @@ Exploring the genome methylation levels in Genome browser
 We can explore the distribution of genome methylation levels counted for
 both murine phenotypes in `Genome Browser`_.
 
+.. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
+
 .. raw:: html
 
     <iframe width="640" height="360" src="https://www.youtube.com/embed/juojLSCcrFU" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
@@ -16,17 +18,17 @@ Some Canyons can be exceptionally large, for example one associated with
 the *Pax6* homeobox gene encoding a homeobox-containing protein
 regulating transcription is extended over 25 kb:
 
-|Genome Browser (Pax6; only WTs)|
+.. image:: images/GB-Pax6-only-WTs.png
 
 Let’s compare our methylation ratios distribution in these
 region with author’s results:
 
-|Pax6-paper|
+.. image:: images/Pax6-paper.png
 
 To further examine the impact of Dnmt3a loss on the Canyon size, authors compared low-methylated
 DNA regions in HSCs with conditional inactivation of *Dnmt3a* gene to those in the WT cells:
 
-|Genome Browser (WT vs KO)|
+.. image:: images/GB-WT-vs-KO.png
 
 This investigation revealed that methylation loss in
 *Dnmt3a* KO HSCs leads to the formation of new Canyons. Lack of Dnmt3a
@@ -46,19 +48,22 @@ maintaining methylation in the Canyon boundaries.
 Now, let's take a look at the original track for the same Canyon cluster to compare the
 results:
 
-|Hox-paper2|
+.. image:: images/Hox-paper2.png
 
 This experiment is a part of the large research
 of changes in DNA methylation profile including different methodologies
 such as, for example, whole genome bisulfite sequencing and CMS-seq to
 reveal genome-wide distribution of mCs and hmCs, RNA-Seq to analyse
 expression of Canyon-associated genes. This incredible work was turned
-into a research `paper`_, and the data sets can be found in our `Public Experiments`_!
+into a research `paper`_, and the data sets can be found in our `Public Experiments`_.
+
+.. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
+
+.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
-If you have any questions and comments, feel free to email us at support@genestack.com or
-visit our forum_. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
+If you have any questions and comments, feel free to email us at support@genestack.com. Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
 References
 ----------
@@ -71,11 +76,3 @@ References
 - Kulis M., Esteller M. DNA methylation and cancer. *Adv Genet* 70:27-56 (2010)
 - Ley T.J. et al. DNMT3A mutations in acute myeloid leukemia. *N Engl J Med.* 363:2424–2433 (2010)
 
-.. |Genome Browser (Pax6; only WTs)| image:: images/GB-Pax6-only-WTs.png
-.. |Genome Browser (WT vs KO)| image:: images/GB-WT-vs-KO.png
-.. |Pax6-paper| image:: images/Pax6-paper.png
-.. |Hox-paper2| image:: images/Hox-paper2.png
-.. _Genome Browser: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF969175&action=viewFile
-.. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
-.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
-.. _forum: http://forum.genestack.org/

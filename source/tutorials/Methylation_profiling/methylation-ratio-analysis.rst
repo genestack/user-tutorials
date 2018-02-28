@@ -9,7 +9,7 @@ to do that, go back to the Data Flow Runner page. Click on the
 **Methylation Ratio Analysis** to go to the app page where you can see
 source files and command line options that could be easily changed.
 
-|DF methylation analysis|
+.. image:: images/DF-methylation-analysis.png
 
 Then return to the data flow click on **action**,
 **add files**, chose the remaining merged mapped reads, and start
@@ -30,5 +30,4 @@ technical biases in WGBS data:
 The folder `Methylation Ratios for Rodriguez et al., 2014`_
 contains all the resulting files of methylation ratios estimation.
 
-.. |DF methylation analysis| image:: images/DF-methylation-analysis.png
 .. _Methylation Ratios for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968759&action=viewFile

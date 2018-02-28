@@ -292,9 +292,6 @@ etc.) will be supported in later versions of the application.
 
 When the analysis is done, you can explore the results in **Expression navigator**.
 
-.. image:: images/en_microarrays.png
-   :scale: 80 %
-   :align: center
 
 Expression navigator
 ********************

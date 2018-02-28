@@ -282,3 +282,4 @@ References
 .. _Variants with predicted effects: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1
 .. _Variants with predicted effects for Clark et al (2011): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1 
 .. _the detected variants: https://platform.genestack.org/endpoint/application/run/genestack/vcfviewer?a=GSF1001169&action=viewFile#
+

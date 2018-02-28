@@ -262,12 +262,10 @@ Let's go through the application parameters:
    if the reads were mapped on the opposite strand as the feature. Specify
    "No", if you do not consider strand-specificity. (default: Yes)
 
-This application is based on the HTSeq_ tool and used in `Differential Gene
-Expression Analysis pipeline`_. After calculating read abundance on the gene
+This application is based on the HTSeq_ tool and used in **Differential Gene Expression Analysis pipeline**. After calculating read abundance on the gene
 level, you will be able to run **Test Differential Gene Expression** application.
 
 .. _HTSeq: http://www-huber.embl.de/HTSeq/doc/overview.html
-.. _Differential Gene Expression Analysis pipeline: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3778423&action=viewFile
 
 Isoform quantification with Salmon
 ++++++++++++++++++++++++++++++++++
@@ -590,9 +588,9 @@ your filtering criteria or clear your selection.
 
 You can read more about this application in the corresponding `tutorials`_.
 
-.. _tutorials: http://genestack-user-tutorials.readthedocs.io/index.html
+.. _tutorials: http://genestack-user-tutorials.readthedocs.io/tutorials/index.html
 
-.. TODO: add GO Enrichment Analysis application
+.. TODO: add GO Enrichment Analysis application -- doesn't work. Will not be done.
 .. TODO: add Differential Similarity Search application
 
 Single-cell RNA-seq analysis

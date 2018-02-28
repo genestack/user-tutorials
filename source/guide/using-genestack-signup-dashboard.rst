@@ -139,9 +139,6 @@ Manage users
 ~~~~~~~~~~~~
 
 In this section, you can change password of your users or create new users.
-
-.. image:: images/user-management.png
-
 If you click on  **Manage Users** you will go to the user management screen. Every
 user in Genestack Platform belongs to an **organisation**. When you signed
 up to use Genestack via the sign up dialog, we created a new

@@ -10,16 +10,21 @@ and annotation of genetic variants.
 With Genestack you can either use one of the dataflows or build a pipeline
 manually selecting customizable applications supported by the system.
 
-Use Data Browser to find a dataset you would like to analyse, click on it.
-Then, on the Metainfo Editor page select the assays you wish to analyse and click
-on the button marked **Use Dataset** to start creating your pipeline.
+Use the **Data Browser** to find a dataset you would like to analyse, click on it.
+Then, on the **Metainfo Editor** page click on the button marked **Analyse** to
+start creating a pipeline. If you want to analyse not the entire dataset but
+some part of it, select the assays you wish to analyse and **Make a subset**.
 
-Applications on the platform are divided in several categories
-such as *Preprocess* to prepare the data for actual analysis, *Analyse* perform
-various kinds of analysis, *Explore* to visualise QC check or analysis results
-and *Manage* to operate with your files. For each individual file the system
-suggests only applications that can be used to analyse your data, considering
-its type and metadata. Select the first application you wish to see in your pipeline.
+So, select the first application you wish to see in your pipeline. For each
+individual file the system suggests only applications that can be used to
+analyse your data, considering its type and metadata.
+
+Applications on the platform are divided in several categories:
+
+- *Preprocess* to prepare the data for actual analysis;
+- *Analyse* perform various kinds of analysis;
+- *Explore* to visualise QC check or analysis results;
+- *Manage* to operate with your files.
 
 .. image:: images/pipeline_building.png
    :align: center
@@ -39,7 +44,11 @@ This will take you to the application page where you can:
 To proceed click on **Add step** button that will show you the list of all the
 matching applications.
 
-Continue adding steps until you have completed building your pipeline. When
+.. image:: images/cla-add-step.png
+   :align: center
+   :scale: 80 %
+
+Continue adding steps until you have finished building your pipeline. When
 you add each of the steps, you create new files which end up in the **Created files**
-folder. However, these files are not yet ready to use — they need to be
-initialized first.
+and **My datasets** folders. However, these files are not yet ready to use —
+they need to be initialized first.

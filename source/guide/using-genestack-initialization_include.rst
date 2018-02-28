@@ -3,41 +3,34 @@ Initialising files
 
 You can initialize files in different ways:
 
-1. Using **Start initialization** option in the **context menu**.
+1. Using the **Start initialization** option in the **context menu**.
 
-Click on the name of your last created file at the top of the application page
-and select "start initialization".
+For instance, click on the name of the created dataset at the top of the application page
+and select **Start initialization**.
 
 .. image:: images/start_initialization.png
    :scale: 75 %
    :align: center
 
-2. Clicking **Start initialization now** in **Data flow runner** application.
+2. Clicking **Start initialization now** in the **Data Flow Runner** application.
 
-If you want to save the pipeline and specific parameters you used here
-to re-use again on other files you can create a new data flow. You need
-to do this, before you start initialization. Click on the name of the
-last created file, go to Manage and **Create new Data Flow**.
-
-.. image:: images/create_new_data_flow.png
-   :scale: 75 %
-   :align: center
-
-This will take you to the Data flow editor where you can introduce any last
-changes to your pipeline. Click on **Run dataflow** button once you are done.
+If you want to save the pipeline and specific parameters you used in your pipeline to re-use
+again on other files, you can create a new data flow with the **Data Flow Editor** app.
 
 .. image:: images/data_flow_editor.png
    :scale: 65 %
    :align: center
 
-This will take you to **Data flow runner** page where you can initialize the
-computations (by clicking "Run Data Flow" in the last cell).
+To proceed, сlick on the **Run dataflow** button and create all the relevant files for each
+app in the pipeline. This will take you to the **Data Flow Runner** page where you can check
+or change parameters of the applications by click app name and, then, initialize the
+computations with the **Run Data Flow** button in the last cell.
 
 .. image:: images/run_data_flow.png
    :scale: 65 %
    :align: center
 
-Choose **Start initialization now** option if you would like to run the
+Choose the **Start initialization now** option if you would like to run the
 computations immediately or **Delay initialization till later**.
 
 .. image:: images/start_initialization_now.png
@@ -45,36 +38,36 @@ computations immediately or **Delay initialization till later**.
    :align: center
 
 This data flow, along with all your results (after computations are finished)
-will be stored in the "Created files" folder.
+will be stored in the **Created files** folder.
 
 3. Using **File initializer** application.
 
-Select the created uninitialized files (from data flow or File Manager), right
-click on them, go to "Manage" and choose the "File Initializer" application.
+Select the data you are interested in, right click on them, choose the **File Initializer**
+in the **Manage** section.
 
 .. image:: images/file_initializer_df.png
    :scale: 90 %
    :align: center
 
-File Initializer reports the status of the files and allows you to initialize
-those that need to be by clicking on their respective "Go!" buttons, or
-"Initialize all" to do them all at once. Files do not need to be produced by
+The File Initializer reports the status of the files and allows you to initialize
+those that need to be by clicking on their respective the **Go!** buttons, or
+**Initialize all** to do them all at once. Files do not need to be produced by
 the same applications to be initialized together.
 
 .. image:: images/file_initializer.png
    :align: center
 
-4. Using **Start initialization** button in **File provenance**.
+4. Using the **Start initialization** button in the **File Provenance**.
 
 Alternatively, you can click on the name of the last created file, go to Manage
-and choose File Provenance application. The application displays the pipeline
-and also allows you to run the computation using "Start initialization" button.
-You’ll learn more about this application later in this section.
+and choose the File Provenance application. The application displays the pipeline
+and also allows you to run the computation using the **Start initialization** button.
+Doing this will begin initialization of all the files (including intermediate files) you have
+created whilst building this pipeline.
 
 .. image:: images/file_provenance_init.png
    :scale: 70 %
    :align: center
 
-You can track the progress of this task in **Task manager**. Doing this will begin
-initialization of all the files (including intermediate files) you have
-created whilst building this pipeline.
+Regardless the way you start initialization, you can track the progress of tasks in
+the **Task Manager**.

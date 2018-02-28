@@ -20,14 +20,14 @@ our users. We cover most of the common analysis types:
 - Unspliced Mapping
 - Spliced Mapping
 
-Clicking on the data flow will take you to the Data Flow Runner where you can
+Clicking on the data flow will take you to the **Data Flow Runner** where you can
 add source files and a reference genome. When you have chosen your files,
-click on the button marked as "Run data flow". If you do not want to
-change any settings, you can click "Start initialization now". To tweak the
-parameters and settings of the applications, select "Delay initialization till
-later". To change the settings, click on the name of the application in the
-data flow. This will take you to the application page, where you can select
-"Edit parameters" and introduce your changes. When you are happy with parameters,
-go back to the data flow and start initializion.
+click on the button marked as **Run data flow**. If you do not want to
+change any settings, you can click **Start initialization now**. To tweak the
+parameters and settings of the applications, select **Delay initialization till later**.
+To change the settings, click on the name of the application in the data flow.
+This will take you to the application page, where you can select
+**Edit parameters** and introduce your changes. When you are happy with parameters,
+go back to the data flow and **start initialization**.
 
 .. add pictures/details

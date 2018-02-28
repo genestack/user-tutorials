@@ -6,7 +6,7 @@ Expression Navigator for genes. But first, let’s align RNA-Seq reads to the
 reference genome across splice junctions and then explore mappings in
 Genome Browser.
 
-|DGE_spl_mapping|
+.. image:: images/DGE_spl_mapping.png
 
 Find **Spliced Mapping** step, click on “7 files”. In “Explore” section choose
 **Genome Browser** and start initialization there.
@@ -19,7 +19,7 @@ We run Spliced Mapping app with default parameters. To change them go to the
 app page and choose **Edit parameters** button. If you want to learn more about
 the app and its options, click on the app name and then on **About application**.
 
-|DGE_spl_map|
+.. image:: images/DGE_spl_map.png
 
 Find completed Mapped Reads files in `Mapped reads files for Hibaoui
 et al (2013)`_ folder. Let's open some of them in Genome Browser to analyse
@@ -28,11 +28,11 @@ et al (2013)`_ folder. Let's open some of them in Genome Browser to analyse
 .. _Mapped reads files for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967837&action=viewFile
 .. _reads coverage on chromosome 21: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF968535&action=viewFile&expired
 
-|DGE_coverage_21|
+.. image:: images/DGE_coverage_21.png
 
 Here is a combined track for all trisomic and control samples:
 
-|DGE_GB_combined_track|
+.. image:: images/DGE_GB_combined_track.png
 
 As you see, the majority of chr21 genes are indeed more expressed in the
 trisomic samples than in the euploid ones, which is consistent with the
@@ -69,13 +69,13 @@ Output report includes mapping statistics such as:
 The **Coverage by chromosome** plot shows the percentage of bases covered
 (y-axis) by at least N (x-axis) reads.
 
-|Coverage_by_chromosome|
+.. image:: images/Coverage_by_chromosome.png
 
 For paired reads, you can look at insert size statistics, such as median and
 mean insert sizes, median absolute deviation and standard deviation of insert
 size. The **Insert size distribution** plot is generated:
 
-|Insert_size_distribution|
+.. image:: images/Insert_size_distribution.png
 
 We already prepared all QC reports for mapped reads and put them in `Mapped
 reads QC reports for Hibaoui et al (2013)`_ folder. You can open all of them
@@ -84,7 +84,7 @@ in `Multiple QC Report`_ app to view mapping statistics interactively:
 .. _Mapped reads QC reports for Hibaoui et al (2013): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF967840&action=viewFile
 .. _Multiple QC Report: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF968715&action=viewFile
 
-|DGE_multiple_qc_plotter|
+.. image:: images/DGE_multiple_qc_plotter.png
 
 Overall, more than 80 % of reads are mapped. It includes properly and
 partially mate pairs. Less than 11 % of reads are unmapped among the samples.
@@ -94,10 +94,3 @@ Read more what the app does in our blog post about
 
 .. _interactive sequencing quality control reports: https://genestack.com/blog/2014/12/10/interactive-sequencing-quality-control-reports
 
-.. |DGE_spl_mapping| image:: images/DGE_spl_mapping.png
-.. |DGE_spl_map| image:: images/DGE_spl_map.png
-.. |DGE_coverage_21| image:: images/DGE_coverage_21.png
-.. |DGE_GB_combined_track| image:: images/DGE_GB_combined_track.png
-.. |Coverage_by_chromosome| image:: images/Coverage_by_chromosome.png
-.. |Insert_size_distribution| image:: images/Insert_size_distribution.png
-.. |DGE_multiple_qc_plotter| image:: images/DGE_multiple_qc_plotter.png

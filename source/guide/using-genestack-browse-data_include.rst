@@ -64,12 +64,8 @@ dataset and its assays.
 
 .. image:: images/metainfo-editor.png
 
-
-Besides, on the Metainfo editor page you can run the assays through a pipeline via the button
-**Use dataset...**. You can either use an existing data flow matching the assays or build a
-new pipeline step by step.
-
-.. update img: use GSF802958 as an example
+Besides,directly from the Metainfo Editor page you can start building pipeline step by step via the button
+**Analyse**.
 
 .. image:: images/new-df.png
 
@@ -151,6 +147,7 @@ to make life a bit simpler for our users. This folder contains:
 #. **Codon tables**: currently 18 different tables such as yeast
    mitochondrial, vertebrate mitochondrial, blepharisma macronuclear
    etc.;
+#. **Default template**: is an import template thai is used by default in data importing process. It provides the list of optional and required metadata fields for each file kind. An ontology or a dictionary can be associated with metadata keys to validate metainfo;
 #. **Dictionaries**: dictionaries include terms from external ontologies and are used to
    curate and harmonize metainfo, e.g. sex, platform, NCBI taxonomy.
 #. **Example results**: so you can play around with our platform and see
@@ -198,7 +195,7 @@ Unlike other metainfo attributes, it will never change for any file.
 
 .. image:: images/parent-containers.png
 
-Above the file manager pane, you can find the **Import** button. Clicking
+Above the File Manager pane, you can find the **Import** button. Clicking
 it takes you to the Import application page, where you can upload your files,
 import them into the platform and edit their metainfo. 
 

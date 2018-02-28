@@ -52,12 +52,12 @@ Setting up a WGBS experiment
 ****************************
 
 For this tutorial we picked the data set by `Rodriguez et al., 2014`_ from the Genestack collection
-of `Public Experiments`_.
+of `Public Experiments`_ .
 
-|public experiments|
+.. image:: images/public-experiments.png
 
 Feel free to reproduce the workflow on any other relevant data set with
-`Experiment Browser`_.
+`Data Browser`_.
 If you do not find there needed experiment or you intend to analyse your own data use our
 `Import Data`_ application allowing to upload files from your computer or from URL.
 
@@ -86,22 +86,21 @@ canyon size.
 
 Now let's start reproducing these results with data flows pre-prepared by Genestack.
 
-To learn more just open the experiment in `Experiment Viewer`_:
+To learn more just open the experiment in `Metainfo Editor`_:
 
-|Experiment_Viewer|
+.. image:: images/wgbs-metainfo-editor.png
 
 .. |Watch all videos here| image:: images/Zrzut-ekranu-2015-10-21-o-16.01.36-1024x109.png
    :class: aligncenter wp-image-3563 size-large
    :width: 604px
    :height: 64px
    :target: https://www.youtube.com/playlist?list=PLqGSwEO9VFw3ZfhBit9j2sTwTRiLvkJ6T
-.. |public experiments| image:: images/public-experiments.png
-.. |Experiment_Viewer| image:: images/Experiment_Viewer.png
+
 .. _Tutorials: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1
 .. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
 .. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
 .. _Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF088374&action=viewFile&page=1
-.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
-.. _Experiment Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
+.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
+.. _Data Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
 .. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
-.. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile
+.. _Metainfo Editor: https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF088374&action=viewFile
