@@ -120,4 +120,4 @@ analysis steps we included in the pipeline in greater detail.
 .. |Screenshot 2015-12-24 15.28.14| image:: images/Screenshot-2015-12-24-15.28.14.png
 .. |Edit File List BWA| image:: images/Edit-File-List-BWA.png
 .. |Start initial| image:: images/Start-initial.png
-.. _WGS data analysis for Dogan et al. (2014): https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF3764338&action=viewFile
+.. _WGS data analysis for Dogan et al. (2014): https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF1980101&action=viewFile
