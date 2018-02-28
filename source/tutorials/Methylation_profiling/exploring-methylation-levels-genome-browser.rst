@@ -55,11 +55,11 @@ of changes in DNA methylation profile including different methodologies
 such as, for example, whole genome bisulfite sequencing and CMS-seq to
 reveal genome-wide distribution of mCs and hmCs, RNA-Seq to analyse
 expression of Canyon-associated genes. This incredible work was turned
-into a research `paper`_, and the data sets can be found in our `Public Experiments`_!
+into a research `paper`_, and the data sets can be found in our `Public Experiments`_.
 
 .. _paper: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3920905/
 
-.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
+.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.

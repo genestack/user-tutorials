@@ -52,7 +52,7 @@ Setting up a WGBS experiment
 ****************************
 
 For this tutorial we picked the data set by `Rodriguez et al., 2014`_ from the Genestack collection
-of `Public Experiments`_.
+of `Public Experiments`_ .
 
 .. image:: images/public-experiments.png
 
@@ -100,7 +100,7 @@ To learn more just open the experiment in `Experiment Viewer`_:
 .. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
 .. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
 .. _Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF088374&action=viewFile&page=1
-.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF070886&action=viewFile&page=1
+.. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
 .. _Data Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
 .. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader
 .. _Experiment Viewer: https://platform.genestack.org/endpoint/application/run/genestack/experiment-viewer?a=GSF088374&action=viewFile
