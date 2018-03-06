@@ -166,9 +166,9 @@ to make life a bit simpler for our users. This folder contains:
    tutorial data flows and the ones found on the Dashboard;
 #. **Public experiments**: this is a feature we are particularly proud of
    have pre-loaded the platform with thousands and thousands of publicly
-   available experiments, from public repositories such as GEO,
+   available datasets, from public repositories such as GEO,
    ArrayExpress, SRA, and ENA. Currently, we have more than 110,000
-   experiments in our database.
+   datasets in our database.
 #. **Tutorials**: the folder contains files we use as examples during
    various tutorials.
 

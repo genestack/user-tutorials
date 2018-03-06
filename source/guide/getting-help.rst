@@ -101,10 +101,10 @@ their respective format-free form. If the platform
 cannot recognise the files automatically, you can allocate the files
 manually.
 
-What is the difference between an experiment and a folder?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What is the difference between an Datasets and a folder?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Experiments are a special kind of folder, which can only contain
+Datasets are a special kind of folder, which can only contain
 assays, e.g. "raw" experimental data.
 
 What is the difference between masked and unmasked reference genomes?

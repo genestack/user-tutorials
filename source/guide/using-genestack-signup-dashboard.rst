@@ -67,7 +67,7 @@ Let’s go back to the Dashboard. Here you can find the following sections:
 2. **Recent Results** shows you the files you have recently created with 
    their initialization or completion status.
 3. **Browse data** section allows you to browse through public, private and
-   shared data with Experiment Browser application which allows you to search through
+   shared data with Data Browser application which allows you to search through
    the wealth of your data using complex queries.
    In the Browse Data section, you will also find a link to the File Manager
    (home), as well as often used folders: Uploaded files, Imported files,

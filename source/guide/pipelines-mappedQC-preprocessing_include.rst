@@ -111,7 +111,7 @@ our Multiple QC Report application.
 .. image:: images/multiple_qc_report_mapped_reads_qc.png
 
 This is helpful, because it allows you to see in comparison, how many reads in
-your experiment are unmapped, partially or improperly mapped.
+your dataset are unmapped, partially or improperly mapped.
 
 Targeted sequencing QC report
 +++++++++++++++++++++++++++++
