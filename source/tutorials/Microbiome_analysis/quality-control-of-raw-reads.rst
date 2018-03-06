@@ -1,14 +1,13 @@
 Quality control of raw reads
 ****************************
 
-Garbage in - garbage out. It means that your analysis is only as good as your data.
+Garbage in — garbage out. It means that your analysis is only as good as your data.
 Therefore, the first and very important step in any kind of analysis is quality
 control (QC). It allows to look at some relevant properties of the raw reads,
 such as quality scores, GC content, base distribution, etc, and check
 whether any low-quality reads, PCR primers, adaptors, duplicates and other
 contaminants are present in the samples. In order to assess the quality of
-the data we'll run the `Raw Reads QC`_ data flow:
-
+the data we'll run the `Raw Reads QC`_ data flow.
 .. Video - QC step
 .. .. raw:: html
 

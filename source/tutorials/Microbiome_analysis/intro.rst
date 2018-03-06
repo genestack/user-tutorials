@@ -1,5 +1,5 @@
-Previously, to study microbes - bacteria, archaea, protists, algae, fungi and
-even micro-animals - it was necessary to grow them in a laboratory. But many
+Previously, to study microbes — bacteria, archaea, protists, algae, fungi and
+even micro-animals — it was necessary to grow them in a laboratory. But many
 of the microorganisms that live in complex environments (e.g. gut or saliva),
 have proven difficult or impossible to grow in culture. However, recently
 developed culture-independent methods based on high-throughput sequencing of
@@ -20,7 +20,7 @@ Setting up a microbiome experiment
 **********************************
 
 First, we need a good example of microbiome data. You can `upload your own data`_
-using 'Import' button or search through all the available experiments using 
+using **Import** button or search through all the available experiments using
 `Data Browser`_ application. Our analysis will be based on data coming
 from `Alfano et al. 2015`_. Let's look up this experiment in the platform and
 open it in the `Metainfo Editor`_:
