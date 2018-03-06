@@ -1,4 +1,4 @@
-fImporting data
+Importing data
 --------------
 
 Supported file types
