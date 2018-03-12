@@ -50,7 +50,7 @@ influence koala microbial health.
 Microbiome data analysis pipeline
 *********************************
 
-A typical data flow for Microbiome analysis consists of the following steps:
+A typical data flow for microbiome analysis consists of the following steps:
 
 #. Quality control of raw reads
 #. Preprocessing of raw reads

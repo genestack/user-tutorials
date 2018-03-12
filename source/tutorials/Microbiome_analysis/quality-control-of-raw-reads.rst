@@ -7,7 +7,8 @@ control (QC). It allows to look at some relevant properties of the raw reads,
 such as quality scores, GC content, base distribution, etc, and check
 whether any low-quality reads, PCR primers, adaptors, duplicates and other
 contaminants are present in the samples. In order to assess the quality of
-the data we'll run the `Raw Reads QC`_ data flow.
+the data, we'll run the `Raw Reads QC`_ data flow.
+
 .. Video - QC step
 .. .. raw:: html
 
@@ -16,7 +17,7 @@ the data we'll run the `Raw Reads QC`_ data flow.
 .. _Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/datafloweditor?a=GSF969011&action=viewFile
 
 Genestack FastQC application generates basic statistics and many useful data
-diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_ sample:
+diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_.
 
 .. image:: images/Microbiome_FastQC_report.png
 
@@ -67,6 +68,8 @@ In our example, first and second mate reads differ by quality score, but still,
 almost all of them are of good quality (>30). We will improve the reads quality
 by running "Filter by Quality Scores" application.
 
+.. check why we have such a picture for 16srnaseq
+
 **Per base sequence content** plots show nucleotide frequencies for each base
 position in the reads. In a random library, there could be only a little
 difference between A, T, C, G nucleotides, and the lines representing them
@@ -93,15 +96,15 @@ genes.
 
 .. image:: images/Microbiome_overrepresented_sequences.png
 
-The last two QC metrics - Sequence duplication levels and Overrepresented
-sequences - should not be used to evaluate 16S microbiome samples. Since we are
+The last two QC metrics — Sequence duplication levels and Overrepresented
+sequences — should not be used to evaluate 16S microbiome samples. Since we are
 looking at sequencing data for only a single gene, we are expecting to see an
 excess of highly similar sequences, and in turn, to get failures for these
 modules.
 
 We have run QC on all the data in the experiment and put the reports in `Raw
 reads QC reports for Alfano et al (2015)`_ folder, so that you can open all of
-them in `Multiple QC Report application`_ to analyse results:
+them in `Multiple QC Report application`_ to analyse results.
 
 .. image:: images/Microbiome_multiple_raw_reads.png
 
@@ -109,5 +112,5 @@ them in `Multiple QC Report application`_ to analyse results:
 .. _Multiple QC Report application: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF3772056&action=viewFile
 
 You see that a total number of sequencing reads for each sample is quite small
-and vary in the range of 190,000 to 471,000 reads. Overall, more than 2,5
+and vary in the range of 197,000 to 471,000 paired-end reads. Overall, more than 2,5
 million paired-end sequencing reads were generated.
