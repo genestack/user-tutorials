@@ -29,7 +29,7 @@ type, number of reads, GC content and total sequence length.
 .. image:: images/Microbiome_basic_statistics.png
 .. :scale: 70 %
 
-Our sample contains 470,459 paired-end reads, which all together gives us a
+Our sample contains 470,459 paired-end reads, which all together give us a
 sequence of 236,170,418 bp in length. The GC content is about 49%.
 
 **Sequence length distribution** module gives us information about read length
@@ -96,19 +96,19 @@ genes.
 
 .. image:: images/Microbiome_overrepresented_sequences.png
 
-The last two QC metrics — Sequence duplication levels and Overrepresented
-sequences — should not be used to evaluate 16S microbiome samples. Since we are
+The last two QC metrics — "Sequence duplication levels" and "Overrepresented
+sequences" — should not be used to evaluate 16S microbiome samples. Since we are
 looking at sequencing data for only a single gene, we are expecting to see an
 excess of highly similar sequences, and in turn, to get failures for these
 modules.
 
 We have run QC on all the data in the experiment and put the reports in `Raw
-reads QC reports for Alfano et al (2015)`_ folder, so that you can open all of
+reads QC reports for Alfano et al. (2015)`_ folder, so that you can open all of
 them in `Multiple QC Report application`_ to analyse results.
 
 .. image:: images/Microbiome_multiple_raw_reads.png
 
-.. _Raw reads QC reports for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3772057&action=viewFile&page=1
+.. _Raw reads QC reports for Alfano et al. (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3772057&action=viewFile&page=1
 .. _Multiple QC Report application: https://platform.genestack.org/endpoint/application/run/genestack/multiple-qc-plotter?a=GSF3772056&action=viewFile
 
 You see that a total number of sequencing reads for each sample is quite small

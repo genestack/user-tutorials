@@ -21,7 +21,7 @@ Microbiome Data Analysis pipeline.
 
 ..    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
-Our preprocessing procedure will include two steps - adaptor trimming and
+Our preprocessing procedure will include two steps — adaptor trimming and
 filtering out low-quality reads.
 
 1. **Trim adaptors and contaminants**
