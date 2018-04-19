@@ -1,26 +1,42 @@
-Lets now identify microbial species and their abundances in the microbiome
-samples.
+Microbiome analysis
+*******************
+
+The last step in the microbiome analysis pipeline is identification of microbial species and their
+abundances in the microbiome samples.
+To analyse the taxonomic composition of the microbial
+communities the app requires a reference database containing previously classified sequences.
+For example, Greengenes_ (16S rRNA gene) can be used for bacteria and UNITE_ (ITS region)
+is used for fungi.
+
+.. _Greengenes: http://greengenes.lbl.gov
+.. _UNITE: http://www2.dpes.gu.se/project/unite/UNITE_intro.htm
 
 .. .. Video - Microbiome Analysis step
 .. .. raw:: html
 
 ..    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>↵
 
+Microbiome analysis results in two reports: *Research report* and *Clinical report*.
+Let's explore the research microbiome analysis report generated for all the tested samples
+(`Microbiome report for 8 files`_).
 
+.. _Microbiome report for 8 files: https://platform.genestack.org/endpoint/application/run/genestack/qiime-report?a=GSF3813067&action=viewFile
 
-Sample count: 8
-Reads per sample: 377,823
-Clustered reads per sample: 313,487
+The research report provides abundance plots and microbiological diversity metrics.
 
+.# General statistics
 
-"Group samples by" option lets you change 
+- Sample count: 8
+- Reads per sample: 377,823
+- Clustered reads per sample: 313,487
 
+You can use **Group samples by** option to group samples by metadata keys.
 
-Display absolute OTU counts
-Hide unidentified OTUs
-Hide partially identified OTUs
+Besides, you can apply the following filters:
 
-
+- Display absolute OTU counts;
+- Hide unidentified OTUs;
+- Hide partially identified OTUs.
 
 The plot displays the relative abundance of OTUs at a highest taxonomic
 resolution: genus (L6 tab) and species (L7 tab). You can change the resolution to
@@ -34,7 +50,7 @@ by Actinobacteria (0,02-15,14%) and Fusobacteria (0-10,33%).
 
 .. image:: images/Microbiome_analysis_L2_level_plot.png
 
-You can see these results in the table as well. Click on "Total" header in the
+You can see these results in the table as well. Click on the **Total** header in the
 table to get the most abundant phyla across the samples:
 
 .. image:: images/Microbiome_analysis_L2_level_table.png
@@ -53,7 +69,7 @@ correlation coefficients:
 
 You may change the PCA type in the upper-left corner of the plot and try other
 statistics to quantify the compositional dissimilarity between samples:
-bray_curtis, abund_jaccard, euclidean, binary_pearson, binary_jaccard.
+*bray_curtis*, *abund_jaccard*, *euclidean*, *binary_pearson*, *binary_jaccard*.
 
 However, in comparison to the paper, authors used principal coordinate analysis
 (PCoA) to show the similarity between the koala microbial communities:

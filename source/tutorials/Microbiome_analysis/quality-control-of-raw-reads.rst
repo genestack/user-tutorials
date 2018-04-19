@@ -4,7 +4,7 @@ Quality control of raw reads
 Garbage in — garbage out. It means that your analysis is only as good as your data.
 Therefore, the first and very important step in any kind of analysis is quality
 control (QC). It allows to look at some relevant properties of the raw reads,
-such as quality scores, GC content, base distribution, etc, and check
+such as quality scores, GC content, base distribution, etc., and check
 whether any low-quality reads, PCR primers, adaptors, duplicates and other
 contaminants are present in the samples. In order to assess the quality of
 the data, we'll run the `Raw Reads QC`_ data flow.
@@ -55,8 +55,8 @@ the red cross near the metric).
 
 In our sample, the second mates in paired-end reads have bases of bad quality
 at the end of the sequences. To get rid of these bases and improve the reads
-quality we'll run "Trim Adaptors and Contaminants" and "Filter by Quality
-Scores" applications.
+quality we'll run **Trim Adaptors and Contaminants** and **Filter by Quality
+Scores** applications.
 
 **Per sequence quality scores** report allows you to see frequencies of
 quality values in a sample. The reads are of good quality if the peak on the
@@ -96,8 +96,8 @@ genes.
 
 .. image:: images/Microbiome_overrepresented_sequences.png
 
-The last two QC metrics — "Sequence duplication levels" and "Overrepresented
-sequences" — should not be used to evaluate 16S microbiome samples. Since we are
+The last two QC metrics — **Sequence duplication levels** and **Overrepresented
+sequences** — should not be used to evaluate 16S microbiome samples. Since we are
 looking at sequencing data for only a single gene, we are expecting to see an
 excess of highly similar sequences, and in turn, to get failures for these
 modules.
