@@ -27,7 +27,7 @@ diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_.
 type, number of reads, GC content and total sequence length.
 
 .. image:: images/Microbiome_basic_statistics.png
-.. :scale: 70 %
+   :scale: 70 %
 
 Our sample contains 470,459 paired-end reads, which all together give us a
 sequence of 236,170,418 bp in length. The GC content is about 49%.

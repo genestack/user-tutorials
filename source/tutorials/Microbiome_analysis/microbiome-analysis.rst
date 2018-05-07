@@ -2,11 +2,12 @@ Microbiome analysis
 *******************
 
 The last step in the microbiome analysis pipeline is identification of microbial species and their
-abundances in the microbiome samples.
+abundances in the microbiome samples examined.
 To analyse the taxonomic composition of the microbial
-communities the app requires a reference database containing previously classified sequences.
-For example, Greengenes_ (16S rRNA gene) can be used for bacteria and UNITE_ (ITS region)
-is used for fungi.
+communities the Microbiome analysis app requires a reference database containing previously classified sequences,
+such as Greengenes_ (16S rRNA gene) and UNITE_ (fungal rDNA ITS region sequences) databases.
+The application compares identified OTUs (operational taxonomic units) to the OTUs in
+a reference database.
 
 .. _Greengenes: http://greengenes.lbl.gov
 .. _UNITE: http://www2.dpes.gu.se/project/unite/UNITE_intro.htm
@@ -17,40 +18,37 @@ is used for fungi.
 ..    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>↵
 
 Microbiome analysis results in two reports: *Research report* and *Clinical report*.
-Let's explore the research microbiome analysis report generated for all the tested samples
-(`Microbiome report for 8 files`_).
+In this tutorial we will focus on the research microbiome analysis report generated for
+all the tested samples (`Microbiome report for 8 files`_). To explore the clinical microbiome
+report you should open a research report for an individual sample and click the **View Clinical Report** button.
 
 .. _Microbiome report for 8 files: https://platform.genestack.org/endpoint/application/run/genestack/qiime-report?a=GSF3813067&action=viewFile
 
-The research report provides abundance plots and microbiological diversity metrics.
+The research report provides abundance plots representing microbiota composition and microbiological
+diversity metrics.
 
-.# General statistics
+The app calculates some basic statistics describing the tested samples, such as
+*sample count*, number of *reads per sample* and number of *clustered reads per sample*.
 
-- Sample count: 8
-- Reads per sample: 377,823
-- Clustered reads per sample: 313,487
+.. image:: images/Microbiome_basic_statistics.png
+   :scale: 80 %
 
-You can use **Group samples by** option to group samples by metadata keys.
+You can group samples by relevant metadata keys with **Group samples by** option.
+Besides, you can apply some filters to *display absolute OTU counts*,
+*hide unidentified OTUs* or *hide partially identified OTUs*.
 
-Besides, you can apply the following filters:
-
-- Display absolute OTU counts;
-- Hide unidentified OTUs;
-- Hide partially identified OTUs.
-
-The plot displays the relative abundance of OTUs at a highest taxonomic
+The **plot** displays the relative abundance of OTUs at a highest taxonomic
 resolution: genus (L6 tab) and species (L7 tab). You can change the resolution to
 the L2 level to see what phyla are the most abundant across the samples.
-
 For example, our results show that, at low taxonomic resolution (L2 tab), the
 composition of microbial communities is similar between samples.
-Bacteroidetes (8,30–86.73%), Firmicutes (1.46–650,49%) and Proteobacteria
+Bacteroidetes (8,30–86,73%), Firmicutes (1,46–50,49%) and Proteobacteria
 (1,38–64,96%) are the most abundant phyla across most of the samples, followed
 by Actinobacteria (0,02-15,14%) and Fusobacteria (0-10,33%).
 
 .. image:: images/Microbiome_analysis_L2_level_plot.png
 
-You can see these results in the table as well. Click on the **Total** header in the
+You can see these results in the **table** as well. Click on the **Total** header in the
 table to get the most abundant phyla across the samples:
 
 .. image:: images/Microbiome_analysis_L2_level_table.png
