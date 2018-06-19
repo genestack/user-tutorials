@@ -2,7 +2,7 @@ Microbiome analysis
 *******************
 
 The last step in the microbiome analysis pipeline is identification of microbial species and their
-abundances in the microbiome samples examined.
+abundances in the microbiome samples of the two captive koalas examined.
 To analyse the taxonomic composition of the microbial
 communities the Microbiome analysis app requires a reference database containing previously classified sequences,
 such as Greengenes_ (16S rRNA gene) and UNITE_ (fungal rDNA ITS region sequences) databases.
@@ -27,8 +27,9 @@ report you should open a research report for an individual sample and click the 
 The research report provides abundance plots representing microbiota composition and microbiological
 diversity metrics.
 
-The app calculates some basic statistics describing the tested samples, such as
-*sample count*, number of *reads per sample* and number of *clustered reads per sample*.
+Basic statistics describing the tested samples, such as *sample count*, number of
+*reads per sample* and number of *clustered reads per sample* are calculated during
+the analysis process.
 
 .. image:: images/Microbiome_basic_statistics.png
    :scale: 80 %
@@ -59,7 +60,19 @@ Our findings are consistent with the paper results:
 
 At a higher taxonomic resolution (L7 tab), more than 820 microorganisms were
 identified. The koala eye and the koala gastrointestinal tract are characterized
-by distinct microbial communities. To measure the similarity between the bacterial
+by distinct microbial communities. The eye microbial community was very diverse; despite the
+fact that there is a small number of very abundant phylae, eye microbiome is characterised with a high
+representation of bacteria from the family Phyllobacteriaceae (34.93 %).
+
+.. image:: images/eye-microbiome.png
+
+.. Despite the fact that the eye microbial community is very diverse ..  53.55 %
+
+.. The eye community had the highest biodiversity among our samples as assessed by the number of OTUs:
+
+.. image:: images/microbiome-otu-number.png
+
+To measure the similarity between the bacterial
 communities we used principal component analysis (PCA) based on Pearson
 correlation coefficients:
 

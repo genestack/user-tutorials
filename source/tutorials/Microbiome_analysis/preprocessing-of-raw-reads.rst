@@ -6,15 +6,15 @@ quality of your data by applying trimming, filtering, adaptor clipping and
 other preprocessing steps. Here is the list of Genestack preprocess
 applications available for raw reads:
 
-- Trim Adaptors and Contaminants;
-- Trim Low Quality Bases;
-- Filter by Quality Scores;
-- Trim to Fixed Length;
-- Subsample Reads;
-- Filter Duplicated Reads.
+- Trim adaptors and contaminants;
+- Trim low quality bases;
+- Filter by quality scores;
+- Trim to fixed length;
+- Subsample reads;
+- Filter duplicated reads.
 
 Once we have checked the quality of the raw reads, let's start building the
-Microbiome Data Analysis pipeline.
+Microbiome data analysis pipeline.
 
 .. Video - Preprocessing pipeline
 .. .. raw:: html
@@ -26,15 +26,13 @@ filtering out low-quality reads.
 
 1. **Trim adaptors and contaminants**
 
-For this, click **Analyse** and select **Trim Adaptors and
-Contaminants**:
+For this, click **Analyse** and select **Trim Adaptors and Contaminants**:
 
 .. image:: images/Microbiome_trim_adaptors_and_contaminants.png
 
 This brings you to the application page. On this step, the application will
 scan the reads for adaptors, primers, N bases or any poor quality nucleotides
-at the ends of reads, and, based on a log-scaled threshold, will perform
-clipping.
+at the ends of reads, and, based on a log-scaled threshold, will perform clipping.
 
 .. image:: images/Microbiome_trim_adaptors_and_contaminants_page.png
 
@@ -80,7 +78,7 @@ settings: 30 for the minimum quality score and 75% for percentage threshold.
 
 .. _paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4426690/
 
-Learn more about the application work in "About application" section.
+Learn more about the application work in **About application** section.
 
 All 8 samples after this filtering are collected in `Filtered trimmed raw reads
 for Alfano et al (2015)`_ folder.

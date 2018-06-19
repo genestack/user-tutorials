@@ -24,17 +24,18 @@ diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_.
 .. _Mouth of Pci_SN265: https://platform.genestack.org/endpoint/application/run/genestack/fastqc-report?a=GSF3772052&action=viewFile
 
 **Basic statistics** reports some sample composition metrics such as reads
-type, number of reads, GC content and total sequence length.
-
-.. image:: images/Microbiome_basic_statistics.png
-   :scale: 70 %
-
-Our sample contains 470,459 paired-end reads, which all together give us a
+type, number of reads, GC content and total sequence length. Our sample contains
+470,459 paired-end reads, which all together give us a
 sequence of 236,170,418 bp in length. The GC content is about 49%.
 
+.. image:: images/Microbiome_qc_basic_statistics.png
+   :scale: 90 %
+
 **Sequence length distribution** module gives us information about read length
-in a sample. In our example, all the reads have the same length equal to 251
-bp.
+in a sample. In our example, all the reads have the same length equal to 251 bp.
+
+.. image:: images/Microbiome_qc_seq_length.png
+   :scale: 90 %
 
 **Per sequence GC content** graph shows GC distribution over all reads. A
 roughly normal distribution indicates a normal random library.
@@ -43,7 +44,7 @@ roughly normal distribution indicates a normal random library.
 
 However, as in our case, there are sharp peaks which may usually indicate the
 presence of adapter, primer or rRNA contamination. To remove possible
-contaminants, we'll run "Trim Adaptors and Contaminants" application.
+contaminants, we'll run **Trim Adaptors and Contaminants** application.
 
 **Per base sequence quality** plots show the quality scores across all bases
 at each position in the reads. By default, only low quality zone and mean
@@ -66,7 +67,7 @@ plot is shifted to the right, to the maximum quality score.
 
 In our example, first and second mate reads differ by quality score, but still,
 almost all of them are of good quality (>30). We will improve the reads quality
-by running "Filter by Quality Scores" application.
+by running **Filter by Quality Scores** application.
 
 .. check why we have such a picture for 16srnaseq
 

@@ -1,7 +1,7 @@
 Previously, to study microbes — bacteria, archaea, protists, algae, fungi and
-even micro-animals — it was necessary to grow them in a laboratory. But many
-of the microorganisms that live in complex environments (e.g. gut or saliva),
-have proven difficult or impossible to grow in culture. However, recently
+even micro-animals — it was necessary to grow them in a laboratory. However, many
+of the microorganisms living in complex environments (e.g. gut or saliva),
+have proven difficult or even impossible to grow in culture. Recently
 developed culture-independent methods based on high-throughput sequencing of
 16S/18S ribosomal RNA gene variable regions and internal transcribed spacers
 (ITS) enable researchers to identify all the microbes in their complex
@@ -34,7 +34,8 @@ open it in the `Metainfo Editor`_:
 
 The researchers examined the microbiome composition of different body regions
 of two captive koalas: the eye, the mouth and the gut (through both rectal
-swabs and feces). First, since koalas frequently suffer from ocular diseases
+swabs and feces). Samples were characterized by 16S rRNA high-throughput Illumina sequencing.
+First, since koalas frequently suffer from ocular diseases
 caused by *Chlamydia* infection, scientists examined the eye microbiome and
 found out that it is very diverse, similar to other mammalian ocular
 microbiomes but has a high representation of bacteria from the Phyllobacteriaceae
