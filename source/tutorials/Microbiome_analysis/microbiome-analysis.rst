@@ -4,7 +4,7 @@ Microbiome analysis
 The last step in the microbiome analysis pipeline is identification of microbial species and their
 abundances in the microbiome samples of the two captive koalas examined.
 To analyse the taxonomic composition of the microbial
-communities the Microbiome analysis app requires a reference database containing previously classified sequences,
+communities the **Microbiome analysis** app requires a reference database containing previously classified sequences,
 such as Greengenes_ (16S rRNA gene) and UNITE_ (fungal rDNA ITS region sequences) databases.
 The application compares identified OTUs (operational taxonomic units) to the OTUs in
 a reference database.

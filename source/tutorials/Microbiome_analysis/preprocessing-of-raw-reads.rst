@@ -14,15 +14,13 @@ applications available for raw reads:
 - Filter duplicated reads.
 
 Once we have checked the quality of the raw reads, let's start building the
-Microbiome data analysis pipeline.
+Microbiome data analysis pipeline. Our preprocessing procedure will include two steps —
+adaptor trimming and filtering out low-quality reads.
 
 .. Video - Preprocessing pipeline
 .. .. raw:: html
 
 ..    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
-
-Our preprocessing procedure will include two steps — adaptor trimming and
-filtering out low-quality reads.
 
 1. **Trim adaptors and contaminants**
 

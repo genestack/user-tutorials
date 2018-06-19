@@ -26,7 +26,7 @@ diagnosis plots. Here is some of them for `Mouth of Pci_SN265`_.
 **Basic statistics** reports some sample composition metrics such as reads
 type, number of reads, GC content and total sequence length. Our sample contains
 470,459 paired-end reads, which all together give us a
-sequence of 236,170,418 bp in length. The GC content is about 49%.
+sequence of 236,170,418 bp in length. The GC content is equal to 49%.
 
 .. image:: images/Microbiome_qc_basic_statistics.png
    :scale: 90 %

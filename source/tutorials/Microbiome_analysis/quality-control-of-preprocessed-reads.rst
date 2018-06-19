@@ -17,7 +17,7 @@ since the length of the reads has been changed during preprocessing.
 
 .. image:: images/Microbiome_mouth_of_pci_sn265_preprocessed.png
 
-You can find all FastQC reports for preprocessed reads in `QC reports of
+You can find all FastQC reports for preprocessed reads in the `QC reports of
 preprocessed raw reads for Alfano et al (2015)`_ folder.
 
 .. _QC reports of preprocessed raw reads for Alfano et al (2015): https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF3775110&action=viewFile&page=1
