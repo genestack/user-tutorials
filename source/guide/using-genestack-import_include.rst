@@ -340,7 +340,7 @@ they get lost on your computer.
 
 **How to upload an attachment?**
 
-Attachments should be uploaded together with the dataset. In the the Data Import application, choose
+Attachments should be uploaded together with the dataset. In the Data Import application, choose
 the attachments from your computer along with your dataset. The platform will
 recognize the raw data, and all additional files that were unrecognised will
 be added to the dataset as attachments.

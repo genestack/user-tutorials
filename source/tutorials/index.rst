@@ -8,3 +8,4 @@ Genestack user tutorials
    Methylation_profiling/index
    WES_data_analysis/index
    WGS_data_analysis/index
+   Microbiome_analysis/index

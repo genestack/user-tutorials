@@ -12,7 +12,7 @@ left corner and select **Manage groups** on the shortcuts menu.
 .. image:: images/shortcuts_menu_manage_groups.png
    :align: center
 
-On the nagae Groups page, if you have no groups click so far, click **Create group** button and create the first one.
+On the Manage Groups page, if you have no groups click so far, click **Create group** button and create the first one.
 
 .. image:: images/create-new-group.png
    :align: center
