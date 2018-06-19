@@ -45,7 +45,7 @@ considered necessary.
 .. _internal list: https://s3.amazonaws.com/bio-test-data/Genestack_adapters.txt
 
 After trimming, the reads are getting shorter. In order to discard trimmed
-reads of length below specific value, indicate this value in the box for
+reads of length below a specific value, indicate this value in the box for
 "Minimum length of the trimmed sequence (bp)" option. We will use the default
 length of 15 nucleotides.
 

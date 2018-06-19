@@ -12,7 +12,7 @@ habitats, or in other words, to analyse a microbiome.
 ..
 ..    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
-The purpose of this tutorial is to describe you the steps required to perform
+The purpose of this tutorial is to describe the steps required to perform
 microbiome data analysis, explain how to build your own data flow, and finally,
 discuss the results obtained in such analysis.
 

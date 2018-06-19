@@ -47,7 +47,7 @@ presence of adapter, primer or rRNA contamination. To remove possible
 contaminants, we'll run **Trim Adaptors and Contaminants** application.
 
 **Per base sequence quality** plots show the quality scores across all bases
-at each position in the reads. By default, only low quality zone and mean
+at each position in the reads. By default, only low-quality zone and mean
 quality lines are displayed. If the median (or the middle quartile Q2) is less
 than 20 or the lower quartile (Q1) is less than 5, you'll get failures (you see
 the red cross near the metric).
