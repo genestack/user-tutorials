@@ -5,13 +5,9 @@ Following the preprocessing, our data is of improved quality and we
 can move on to the next step — alignment of trimmed reads onto
 the reference genome.
 
-.. image:: images/df-bisulfte-seq-mapping-.png
-
-We run Bisulfite Sequencing Mapping with default parameters. Click on the app name to
+We run **Bisulfite Sequencing Mapping** with default parameters. Click on the app name to
 move to its page where you can change the parameters of alignment and
-learn more about the app clicking on the **about**.
-
-.. image:: images/BSMAP.png
+learn more about the app clicking on its name.
 
 In the `Mapped reads for Rodriguez et al., 2014`_ folder
 you can find all the Mapped Reads.
@@ -37,17 +33,12 @@ and  *Dnmt3a*-KO HSCs. As authors do not mention using different
 experimental conditions for technical replicates, we can merge them
 before the calculation of methylation ratios. We will not merge
 biological replicates, because significant biological variability may be
-present between two sample growing separately. Here is the data flow to
-merge three technical replicates for the second biological replicate of
-WT HSCs:
+present between two sample growing separately.
 
-.. image:: images/df-merge-mapped-reads.png
-
-Use the same data flow to merge mapped reads for technical replicates of remaining samples. As a result
-you will get 4 merged mapped reads for both analysed murine
-phenotypes. You can also use prepared Merged Mapped Reads files by
-opening the `Merged mapped reads for Rodriguez et al.,
-2014`_ folder.
+For each biological replicate create a subset including technical replicates that will be merged.
+As a result, you will get 4 merged mapped reads for both analysed murine
+phenotypes. You can also use prepared Merged Mapped Reads by
+opening the `Merged mapped reads for Rodriguez et al., 2014`_ folder.
 
 
 .. _Merged mapped reads for Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF968758&action=viewFile

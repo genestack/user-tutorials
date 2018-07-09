@@ -6,8 +6,6 @@ according to different experimental conditions. In this tutorial, we are
 looking for variation in gene expression for trisomic samples compared to the
 control ones.
 
-.. image:: images/DGE_DGE.png
-
 Open Expression Navigator file, re-group samples and start the analysis:
 
 .. raw:: html
@@ -33,17 +31,15 @@ description and location.
 
 .. image:: images/DGE_DGE_table.png
 
-There are several options to filter/sort the genes displayed on the Top DEG
-Table. You can filter them by p-value, minimum Log FC, minimum CPM and
+There are several options to filter/sort the genes displayed on the "Top Differentially Expressed Genes"
+table. You can filter them by minimum Log FC, minimum CPM and
 regulation type. By default, the genes are ranked by their FDR.
 
-.. image:: images/Filters.png
-
-.. no longer can filter by p-value
+.. image:: images/filters.png
 
 Let’s find genes that are most over-expressed in the “Trisomy 21” group by
 lowering the Max P-value threshold and increasing the Min LogFC and Min LogCPM
-thresholds. Change P-Value to 0.001, Regulation to “Up”, set both Min LogFC and
+thresholds. Change Regulation to “Up”, set both Min LogFC and
 Min LogCPM equal to '2' and apply sorting by LogFC. As consistent with paper
 results, there is a number of zinc finger protein genes that are up-regulated
 in Twin-DS-iPSCs:
@@ -69,3 +65,7 @@ If you move cursor to the top right corner of the graph, three icons will appear
    graph and change its appearance by modifying the parameters on display when
    you right-click the graph area.
 
+This is the end of this tutorial. We hope you found it useful and that you are now ready to
+make the most out of our platform.
+If you have any questions and comments, feel free to email us at support@genestack.com.
+Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.

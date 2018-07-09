@@ -13,20 +13,20 @@ on this step and analyse mapping results in Genome Browser:
 
     <iframe width="640" height="360" src="https://www.youtube.com/embed/hCGkOYQfH5g" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
-When mappings are complete, open all 4 files in Genome browser to compare
+When mappings are complete, open all four files in Genome browser to compare
 their `read coverage`_. Let's look for specific gene or region, for example,
 HBA1 and HBA2 genes encoding alpha-globin chains of hemoglobin. With WGS
 technology, you can see coverage in both protein-coding and non-coding
 sequences:
 
-|WES_GB|
+.. image:: images/WES_GB.png
 
 As for WES technology, you are interested only in exome. That's why, you see
 coverage for HBA1 and HBA2 coding regions and do not see it in non-coding
 ones. To compare read coverage between different enrichment platforms, you
 can build a coverage track:
 
-|WES_coverage_1|
+.. image:: images/WES_coverage_1.png
 
 In most cases you'll see a significant coverage for sample enriched by
 Nimblegen. Moreover, each platform targets particular exomic segments based
@@ -59,7 +59,7 @@ Agilent, Nimblegen and Illumina and assessing their overall targeting
 efficiency by measuring base coverage over all targeted bases and on-target
 coverage for each platform:
 
-|WES_target|
+.. image:: images/WES_target.png
 
 A typical target-enrichment WES experiment results in ~90 % of target-bases
 covered at coverage ≥ 1x. This value tends to decrease as the coverage
@@ -74,7 +74,7 @@ at ≥ 50x. With Agilent, 91 % of bases were covered at ≥ 2x, 86 % at ≥ 10x
 at ≥ 2x, 86 % at ≥ 10x and only 50 % at ≥ 50x. These results are very similar
 to the paper results (*Clark M.J. et al, 2011*):
 
-|WES_paper_target_enrichment|
+.. image:: images/WES_paper_target_enrichment.png
 
 Regarding the overall percentage of reads mapped on the target, in a typical
 experiment one may expect ~70 %. Looking at the plot, you see the highest 77 %
@@ -88,7 +88,7 @@ one another across the target exon intervals. Illumina relies on paired-end
 reads to extend outside the bait sequences and fill in the gaps (*Clark M.J.
 et al, 2011*):
 
-|WES_diff_annotations|
+.. image:: images/WES_diff_annotations.png
 
 Target annotations used in this tutorial can be found in Public Data,
 `Genome annotations`_ folder or in `Target Annotations for Clark et al (2011)`_
@@ -98,7 +98,7 @@ Besides the target enrichment statistics, you can assess the percentage of
 exome bases with coverage started from ≥ 2x and the overall proportion of
 reads mapped on exome:
 
-|WES_exome|
+.. image:: images/WES_exome.png
 
 All targeted sequencing QC reports are collected in `Mapped reads enrichment
 reports for Clark et al (2011)`_ folder.
@@ -137,35 +137,26 @@ The **Coverage by chromosome** plot shows a read coverage at each base on
 each chromosome and patch (if it is presented) defined by lines in different
 colours:
 
-|WES_chr_coverage|
+.. image:: images/WES_chr_coverage.png
 
 If your reads are paired, the application additionally calculates insert size
 statistics, such as median and mean insert sizes, median absolute deviation
 and standard deviation of insert size. The **Insert size distribution** plot
 shows the insert size length frequencies:
 
-|WES_ins_dist|
+.. image:: images/WES_ins_dist.png
 
 All complete QC reports for mapped reads are stored in `Mapped reads QC
 reports for Clark et al (2011)`_ folder. You can open all of them at once in
 `Multiple QC Report`_ app to interactively analyse and compare mapping
 statistics between samples:
 
-|WES_mult_mapped_reads_1|
+.. image:: images/WES_mult_mapped_reads_1.png
 
 Speaking of mapping results, for each sample, almost all of the reads is
 mapped properly and there is a small percentage of partially or improperly
 mapped reads.
 
-.. |WES_GB| image:: images/WES_GB.png
-.. |WES_coverage_1| image:: images/WES_coverage_1.png
-.. |WES_target| image:: images/WES_target.png
-.. |WES_paper_target_enrichment| image:: images/WES_paper_target_enrichment.png
-.. |WES_diff_annotations| image:: images/WES_diff_annotations.png
-.. |WES_exome| image:: images/WES_exome.png
-.. |WES_chr_coverage| image:: images/WES_chr_coverage.png
-.. |WES_ins_dist| image:: images/WES_ins_dist.png
-.. |WES_mult_mapped_reads_1| image:: images/WES_mult_mapped_reads_1.png
 .. _Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
 .. _BWA: http://bio-bwa.sourceforge.net/bwa.shtml
 .. _read coverage: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF999244&action=viewFile

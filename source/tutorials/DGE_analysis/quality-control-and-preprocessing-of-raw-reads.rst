@@ -71,28 +71,26 @@ reads QC reports for Hibaoui et al (2013)`_ folder.
 Preprocessing of raw reads
 **************************
 
-Once the quality of raw data has been checked, we can go back to the main
-`Differential Gene Expression Analysis data flow`_ and choose sources:
-
-.. _Differential Gene Expression Analysis data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources
-
-.. image:: images/DGE_data_flow_first_step.png
-
-You can upload your samples directly into the data flow or select them from
-the available datasets. Let's choose sources — 7 sequencing assays from the
-experiment and a human reference genome, - and create resulting files in a
-specific folder.
-
-QC reports can not only provide you with the information on the data
+QC reports not only provide you with the information on the data
 quality but can also help you to decide how to preprocess the data in order
 to improve its quality and get more reliable results in further analysis.
-There are various Genestack applications that allow you to do preprocessing:
+There are various Genestack applications that allow you to do preprocessing, we will use
+**Trim Adaptors and Contaminants** app, as a first procedure of preprocessing.
 
 .. image:: images/DGE_preprocess_apps.png
 
-We will run **Trim Adaptors and Contaminants** app:
+Once the quality of raw data has been checked, we can go back to the main
+`Differential Gene Expression Analysis data flow`_ and choose sources: 7 raw reads from the
+tested dataset and a human reference genome. You can select the input data from
+the existing datasets or upload files directly into the data flow using Import Data.
 
-.. image:: images/DGE_trim_ad.png
+.. image:: images/DGE_data_flow_1.png
+
+After that, we run the data flow to create all the files.
+
+.. _Differential Gene Expression Analysis data flow: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968176&action=createFromSources
+
+.. image:: images/DGE_data_flow_2.png
 
 All resulting files are collected in `Trimmed raw reads for Hibaoui et al
 (2013)`_ folder.

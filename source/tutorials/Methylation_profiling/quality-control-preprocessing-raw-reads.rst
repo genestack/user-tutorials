@@ -20,14 +20,9 @@ distribution, read quality distribution and much more. To start the
 analysis we can use public `Raw Reads Quality Control`_ data
 flow. There is no need to repeat the same steps for each sample —
 the pipelines for all 16 assays from our experiment can easily be
-built simultaneously using this public data flow. In order to run the
-raw reads QC data flow, select all of the files from the experiment,
-right click on them, select **Run data flow on selection** and choose “Raw
-Reads Quality Control”.
+built simultaneously using this public data flow.
 
 .. _Raw Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF972554&action=viewFile
-
-.. image:: images/choose-DF.png
 
 In the Data Flow Runner page you can see 16 raw reads samples from the experiment.
 
@@ -149,11 +144,10 @@ HSCs condition has several technical replicates. Let's select the raw
 reads "m12_b4l1 Bisulfite-Seq", "m12_b4l2 Bisulfite-Seq" and "m12_b3
 Bisulfite-Seq" that are three technical replicates for the second
 biological replicate of WT HSCs from our experiment and right
-click on them. Click on **Run data flow on selection** and choose from the
-list of suggested variants “Data Flow for WGBS data analysis (for
-Rodriguez et al., 2014)”. After that you will find yourself on the Data
-flow Runner page, where all the steps of our pipeline are
-schematically represented. 
+click on them. The "Data Flow for WGBS data analysis (for Rodriguez et al., 2014)” public data flow
+created for this tutorial is freely available on the platform, you can find it in the tutorial folder.
+To explore the data flow in more detail you can use **Data flow runner** app, where all the steps of
+our pipeline are schematically represented. 
 
 .. image:: images/DF_WGBS2.png
 
@@ -173,17 +167,13 @@ you to  **remove adapters and contaminants**, **trim low quality bases** and **
 during Methylation Ratio Analysis, but you can also use a separate
 preprocess application  **Remove Duplicated Reads**. Firstly,
 we can easily remove the found overrepresented sequences from WGBS data
-using  **Trim adapters and contaminants** app:
-
-.. image:: images/DF-trim-adaptors-and-contaminants.png
+using **Trim adapters and contaminants** app.
 
 Later, to avoid mismatches in read mapping, we
 should remove low quality bases from the sequencing
 reads. **Trim low quality bases** application allows you to get rid
 of nucleotide bases with a low phred33 quality which corresponds to an
 error threshold equal to 1 %.
-
-.. image:: images/df-trim-low-quality-bases.png
 
 All preprocessed files are freely accessible in the folders `Trim adaptors
 for Rodriguez et al., 2014`_ and `Trim low quality bases for Rodriguez et al., 2014`_.
