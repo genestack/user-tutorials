@@ -6,8 +6,6 @@ Expression Navigator for genes. But first, let’s align RNA-Seq reads to the
 reference genome across splice junctions and then explore mappings in
 Genome Browser.
 
-.. image:: images/DGE_spl_mapping.png
-
 Find **Spliced Mapping** step, click on “7 files”. In “Explore” section choose
 **Genome Browser** and start initialization there.
 

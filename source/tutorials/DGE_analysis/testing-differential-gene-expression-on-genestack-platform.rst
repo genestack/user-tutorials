@@ -20,14 +20,13 @@ The whole analysis includes the following steps:
 #. Quality control of mapped reads
 #. Calculate read coverage for genes
 #. Differential gene expression analysis
-#. GO-based enrichment analysis
 
 Let’s deal with these steps one by one.
 
 Setting up an RNA-seq experiment
 ********************************
 
-The first step is to choose RNA-Seq dataset. There are more than 100.000 datasets (see the
+The first step is to choose RNA-Seq dataset. There are more than 110.000 datasets (see the
 `Public experiments`_ folder) imported from various
 biological databases and public repositories (e.g. ArrayExpress, GEO, SRA, and ENA).
 All these data are absolutely free to use. The `Data Browser`_ app allows you to explore already

@@ -52,14 +52,10 @@ Setting up a WGBS experiment
 ****************************
 
 For this tutorial we picked the data set by `Rodriguez et al., 2014`_ from the Genestack collection
-of `Public Experiments`_ .
-
-.. image:: images/public-experiments.png
-
-Feel free to reproduce the workflow on any other relevant data set with
-`Data Browser`_.
-If you do not find there needed experiment or you intend to analyse your own data use our
-`Import Data`_ application allowing to upload files from your computer or from URL.
+of `Public Experiments`_ . Feel free to reproduce the workflow on any other relevant data set that
+you can find with  `Data Browser`_. If you do not find there needed experiment or you intend to
+analyse your own data use our `Import Data`_ application allowing to upload files from your computer
+or from URL.
 
 In this experiment authors applied WGBS of genomic DNA to investigate the mechanisms that could
 promote changes in DNA methylation and contribute to cell differentiation and malignant
@@ -99,7 +95,7 @@ To learn more just open the experiment in `Metainfo Editor`_:
 .. _Tutorials: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF000810&action=viewFile&page=1
 .. _Whole-Genome Bisulfite Sequencing Data Analysis on Genestack Platform: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF970554&action=viewFile&page=1
 .. _WGBS data analysis (for Rodriguez et al., 2014) dataflow: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF969172&action=viewFile&page=1
-.. _Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF088374&action=viewFile&page=1
+.. _Rodriguez et al., 2014: https://platform.genestack.org/endpoint/application/run/genestack/metainfo-editor-app?a=GSF088374&action=viewFile
 .. _Public Experiments: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser&search=GSF088374&page=1&type=%7B%22type%22%3Anull%2C%22displayName%22%3A%22All%22%2C%22count%22%3A124393%7D&showOnlyBookmarks=false
 .. _Data Browser: https://platform.genestack.org/endpoint/application/run/genestack/databrowser?action=openInBrowser
 .. _Import Data: https://platform.genestack.org/endpoint/application/run/genestack/uploader

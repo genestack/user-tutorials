@@ -1,7 +1,7 @@
 Effect-annotation
 *****************
 
-After variants are detected, use Effect Annotation application based on
+After variants are detected, use **Effect Annotation** application based on
 SnpEff_ tool. The app annotates variants and predicts the effects they
 produce on genes such as amino acid changes, impact, functional class, etc.
 To review this information, open `Variants with predicted effects`_ in **View report** application:
@@ -18,14 +18,14 @@ effects, change rate, and other information.
 chromosome and patch (if they are presented). Here is the change rate details
 for the first 10 chromosomes:
 
-|WES_change_rate_by_cromosome_|
+.. image:: images/WES_change_rate_by_cromosome_.png
 
 The app calculates total number of variants as well as number of homo/hetero
 single nucleotide polymorphisms (SNPs), multiple nucleotide polymorphisms
 (MNPs), insertions (INS), deletions (DEL), combination of SNPs and indels at a
 single position (MIXED) and records it in **Number of changes by type** table:
 
-|WES_number_changes by_type_1|
+.. image:: images/WES_number_changes-by_type_1.png
 
 SNVs represent the most numerous sequence variations in the human exome.
 TruSeq detected the highest number of SNVs followed by Agilent and Nimblegen.
@@ -38,7 +38,7 @@ were detected (3,8 million of SNPs and about 600,000 indels).
 **Number of effects by impact** table shows count and percentage of variants
 that have high, low, moderate impact or tagged as modifiers:
 
-|WES_number_of_effects_by_impact_1|
+.. image:: images/WES_number_of_effects_by_impact_1.png
 
 As a rule, the mutation has high impact if it causes significant changes such
 as frame shift, stop codon formation, deletion of a large part (over 1 %) of
@@ -56,7 +56,7 @@ same percentage of modifiers in WES and WGS samples.
 Also, the output report contains information about the count and percentage of
 missense, nonsense and silent mutations. Find out this in **Number of effects by functional class** table:
 
-|WES_number_of_affects_by_functional_class_1|
+.. image:: images/WES_number_of_affects_by_functional_class_1.png
 
 For Nimblegen sample, the app detected ~50 % point mutations in which a single
 nucleotide change results in a codon that codes for a different amino acid
@@ -71,12 +71,12 @@ Next **Number of effects by type and region** table outputs how many variants
 for each type (codon deletion, codon insertion, etc) and for each region
 (e.g. exon, intron) exist:
 
-|WES_Number_of_variants_by_effect_1|
+.. image:: images/WES_Number_of_variants_by_effect_1.png
 
 **Variations** histogram additionally illustrates what regions of genome are
 mostly affected:
 
-|WES_variations|
+.. image:: images/WES_variations.png
 
 Most of variants are detected in the introns. That can be explained by the
 fact that platform baits sometimes extend farther outside the exon targets.
@@ -84,7 +84,7 @@ fact that platform baits sometimes extend farther outside the exon targets.
 **Quality** histogram, like this one below, shows you the distribution of
 quality scores for detected variants:
 
-|WES_quality|
+.. image:: images/WES_quality.png
 
 This one is asymmetrical, there are more then 160,000 variants with quality
 of 10 and a lot of small peaks of lower and greater qualities.
@@ -92,14 +92,14 @@ of 10 and a lot of small peaks of lower and greater qualities.
 Also, the application reports a histogram of **Coverage** for detected
 variants:
 
-|WES_coverage|
+.. image:: images/WES_coverage.png
 
 All variants have coverage 2 and more.
 
 Next **Insertions and deletions length** histogram shows size distribution of
 detected indels:
 
-|WES_insertions_and_deletions_length|
+.. image:: images/WES_insertions_and_deletions_length.png
 
 For Nimblegen sample, we identified more than 40,000 indels, of which ~24,000
 were deletions of up to 12 bases and the rest were insertions of up to 12
@@ -107,7 +107,7 @@ bases. There are more indels were identified after Illumina TruSeq enrichment
 (~80,000) followed by Agilent (~57,000) and Nimblegen platforms. These
 findings agree with paper results:
 
-|WES_Indel_size_distribution|
+.. image:: images/WES_Indel_size_distribution.png
 
 Moreover, most insertions and deletions were 1 base in size. Notably, there
 is a slight enrichment at indel sizes of 4 and 8 bases in the total captured
@@ -117,7 +117,7 @@ DNA data, and that is also consistent with paper results (*Clark M.J. et al,
 In **Base change (SNPs)** table, the app records how many and what single
 nucleotide polymorphisms were detected:
 
-|WES_base_changes|
+.. image:: images/WES_base_changes.png
 
 There is a slight increase in G→A/C→T transitions and slight decrease in
 G→C/C→G transversions in both whole exome and whole genome samples.
@@ -130,7 +130,7 @@ pyrimidine-pyrimidine mutations (C↔T) and purine-purine mutations (A↔G).
 Transversions are mutations from a pyrimidine to a purine or vice versa. The
 table represents these values taking into account only SNP variants.
 
-|WES_Ts_Tv|
+.. image:: images/WES_Ts_Tv.png
 
 But below the table, you can find the information for all variants. For WES
 data, the Ts/Tv ratio of total variants ranged from 1.6 to 1.8 and was lower
@@ -142,7 +142,7 @@ introns, for Nimblegen sample). However, for WGS data, the ratio is equal to
 Looking at **Frequency of alleles** histogram, you can evaluate how many
 times an allele appears once (singleton), twice (doubleton), etc:
 
-|WES_alleles_frequencies|
+.. image:: images/WES_alleles_frequencies.png
 
 In all samples, most of the variants are represented as singletons. Some
 variants (less than 400,000 for WES, and about 1,5 million for WGS) have two
@@ -151,7 +151,7 @@ alternate alleles.
 **Codon changes** table outputs what and how many reference codons have been
 replaced. Here is just a fragment of this table:
 
-|WES_codon_changes|
+.. image:: images/WES_codon_changes.png
 
 Reference codons are shown in rows, changed codons — in columns. The most of
 changes happened are indicated in red color. For example, 811 'ACG' reference
@@ -162,7 +162,7 @@ codon changes across WES samples.
 In **Amino acid changes** table, you can see type and number of amino acid
 changes. Row indicates a reference amino acid, column - changed amino acid.
 
-|WES_amino_acid_changes|
+.. image:: images/WES_amino_acid_changes.png
 
 For example, 957 Alanines (A, Ala) have been replaced by Tryptophan (T, Trp)
 in Nimblegen sample. Number and type of amino acid changes look pretty
@@ -173,7 +173,7 @@ throughout the whole chromosome length. Such histogram is generated for each
 chromosome and patch presented in the reference genome. Here is the example
 plot for chromosome 1:
 
-|WES_Changes_by_chromosome_1|
+.. image:: images/WES_Changes_by_chromosome_1.png
 
 Besides above mentioned plots and tables, you can see  **Details by gene** as
 well.
@@ -195,21 +195,21 @@ application:
 Let's select Illumina sample and open it in Variant Explorer to look at
 `the detected variants`_:
 
-|WES_VE_1|
+.. image:: images/WES_VE_1.png
 
 There are 1,350,608 mutations were identified. Imagine that we are interested
 only in high-quality nonsense variants: click 'QUALITY' header to apply
 sorting and set 'NONSENSE' in 'FUNCTIONAL CLASS'. You see that the number of
 mutations is decreased significantly. We have only 104 nonsense variants:
 
-|WES_VE_2|
+.. image:: images/WES_VE_2.png
 
 You can use other filters and sorting criteria and look through the 'Filters
 history' to check how many variants were detected after applying specific
 filter in comparison to the number of mutations we had on the previous
 filtering step:
 
-|WES_filters_history|
+.. image:: images/WES_filters_history.png
 
 When the variants are sorted and filtered, you can share them with your
 colleagues, export them as tsv file clicking on 'Download table' and attach
@@ -258,25 +258,6 @@ References
 - Mills R.E., et al. An initial map of insertion and deletion (INDEL) variation in the human genome. *Genome Research* 2006; 16:1182–1190
 - van Dijk E.L., et al. Ten years of next-generation sequencing technology. *Trends in Genetics* 2014; 30:418-426
 
-.. |WES_change_rate_by_cromosome_| image:: images/WES_change_rate_by_cromosome_.png
-.. |WES_number_changes by_type_1| image:: images/WES_number_changes-by_type_1.png
-.. |WES_number_of_effects_by_impact_1| image:: images/WES_number_of_effects_by_impact_1.png
-.. |WES_number_of_affects_by_functional_class_1| image:: images/WES_number_of_affects_by_functional_class_1.png
-.. |WES_Number_of_variants_by_effect_1| image:: images/WES_Number_of_variants_by_effect_1.png
-.. |WES_variations| image:: images/WES_variations.png
-.. |WES_quality| image:: images/WES_quality.png
-.. |WES_coverage| image:: images/WES_coverage.png
-.. |WES_insertions_and_deletions_length| image:: images/WES_insertions_and_deletions_length.png
-.. |WES_Indel_size_distribution| image:: images/WES_Indel_size_distribution.png
-.. |WES_base_changes| image:: images/WES_base_changes.png
-.. |WES_Ts_Tv| image:: images/WES_Ts_Tv.png
-.. |WES_alleles_frequencies| image:: images/WES_alleles_frequencies.png
-.. |WES_codon_changes| image:: images/WES_codon_changes.png
-.. |WES_amino_acid_changes| image:: images/WES_amino_acid_changes.png
-.. |WES_Changes_by_chromosome_1| image:: images/WES_Changes_by_chromosome_1.png
-.. |WES_VE_1| image:: images/WES_VE_1.png
-.. |WES_VE_2| image:: images/WES_VE_2.png
-.. |WES_filters_history| image:: images/WES_filters_history.png
 .. _SnpEff: http://snpeff.sourceforge.net/
 .. _View report: https://platform.genestack.org/endpoint/application/run/genestack/report-viewer?a=GSF999233&action=viewFile
 .. _Variants with predicted effects: https://platform.genestack.org/endpoint/application/run/genestack/filebrowser?a=GSF999234&action=viewFile&page=1

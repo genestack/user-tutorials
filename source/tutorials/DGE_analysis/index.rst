@@ -6,4 +6,3 @@ Testing differential gene expression
 .. include:: mapping-rna-seq-reads-onto-a-reference-genome-and-quality-control-of-mapped-reads.rst
 .. include:: counting-reads-mapped-to-annotated-features.rst
 .. include:: differential-gene-expression-analysis.rst
-.. include:: GO-analysis.rst
