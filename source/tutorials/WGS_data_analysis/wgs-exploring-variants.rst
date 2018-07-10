@@ -15,7 +15,7 @@ parameters that always could be changed on the Variant Calling app page.
  In the picture below you can see source files (reference genome and
 both filtered mapped reads files) and default command line options.
 
-|VarCalling_options|
+.. image:: images/VarCalling_options.png
 
 Track the progress of your tasks in Task Manager
 and as soon as the computation is finished, explore the results of
@@ -31,13 +31,11 @@ The reference track displaying annotated genes with their coordinates and
 variation track representing  genetic variants, their genomic position,
 average mapping quality and raw read depth.
 
-|GB_variants|
+.. image:: images/GB_variants.png
 
 Zoom in to explore genetic variants in single-base resolution. For example, looking
 at the region 1:725878-725972 (95 bp) we can see several SNPs (red) and
 one deletion 5bp long (blue).
-
-|Screenshot 2016-01-14 13.50.17|
 
 Effect prediction
 *****************
@@ -55,7 +53,7 @@ effects genetic variants have on genes, such as amino acid replacement
 or frame shifts. Remember, if you have some files uninitialized, you can run the
 analysis on the Effect Prediction page or Data Flow Runner page.
 
-|start init|
+.. image:: images/start-init.png
 
 Let's now analyse the annotated variants in the genome of the Turkish individual.
 You can do this with **Report Viewer** application:
@@ -63,12 +61,12 @@ right click the "Variants with predicted effects for Dogan et al. (2014)" file n
 Note that you can also explore annotated variants in Genome Browser and Variant Explorer
 apps.
 
-|Screenshot 2015-11-23 11.14.46|
+.. image:: images/Screenshot-2015-11-23-11.14.46.png
 
 First of all, the report summary contains some basic information about
 the analysed file.
 
-|Summary|
+.. image:: images/Summary.png
 
 In general 4,389,254 mutations were found in our assay with
 one change every 7,014 bases. The most common variants are SNPs that
@@ -79,7 +77,7 @@ the paper, the authors identified 3,642,449 and 4,301,769 SNPs using
 Casava and GATK workflows, respectively. However in the downstream
 analysis they used 3,537,794 variants identified by both methods.
 
-|Screenshot 2016-03-14 12.24.19|
+.. image:: images/Screenshot-2016-03-14-12.24.19.png
 
 **Insertion deletion length histogram** graphically demonstrates the
 distribution of length of all insertions and deletions. The discovered Indels
@@ -87,7 +85,7 @@ ranged from -43 to 28 bp in length with the standard deviation of 5.256. 
 Authors detected 713,640 InDels (341,382 insertions and 372,258 deletions)
 ranging from −52 bp to 34 bp in length.
 
-|Indel length dostributions|
+.. image:: images/Indel-length-dostributions.png
 
 Additionally, we performed filtering by effect to find out InDel distribution throughout
 different genomic locations. From identified InDels 258680 and 263835
@@ -100,17 +98,17 @@ change type of the found mutations, report also contains quality and
 coverage information. **Quality histogram** shows quality distribution
 with minimum value of 3 and maximum value of 486 for the analysed data:
 
-|Quality|
+.. image:: images/Quality.png
 
 The following histogram shows **coverage**. For our data the mean
 coverage is 28.882 while the maximum coverage is 8,026.
 
-|coverage|
+.. image:: images/coverage-.png
 
 For all the identified genetic variants the app also calculates associated
 effects and prioritises them by putative biological impact.
 
-|Effects by impact|
+.. image:: images/Effects-by-impact.png
 
 For example, if a found mutation leads to a protein truncation,
 then it could have a high and disruptive effect on the gene function.
@@ -128,7 +126,7 @@ untranslated regions, splice sites, upstream and downstream regions. As
 we can see from the report most changes in the Turkish individual genome
 are located in intronic regions  (63,351 % of the total).
 
-|Effects by type and region (table)|
+.. image:: images/Effects-by-type-and-region-table.png
 
 As we can see the vast majority of identified
 variations are associated with introns (climbed above 60 %) and there is
@@ -136,12 +134,12 @@ no mutations in splice sites. The changes in intergenic regions
 represent ~17 % of the total, while changes in exons occur in
 approximately 2 % of events.
 
-|Effects by region|
+.. image:: images/Effects-by-region.png
 
 The most frequent base changes is G to A with 651,754, followed by C to T (650,016), T to C
 (621,506) and A to G (620,959) base changes.
 
-|Base changes|
+.. image:: images/Base-changes.png
 
 The quality
 of SNP data could be characterised with transition/transvertion (Ts/Tv)
@@ -149,7 +147,7 @@ ratio that for whole human genome is typically about 2. Note that this
 ratio is not universal and could vary with regions, for example it is
 higher for exons.
 
-|Ts:Tv|
+.. image:: images/TsTv.png
 
 Our results are in line with the original
 paper by Dogan et. al where they have identified 2,383,204 transitions,
@@ -159,7 +157,7 @@ it below). Rows represent reference codons and columns represent changed
 codons. The most common codon change for our data is from GAC to GAT
 (876 events) resulting in a synonymous change.
 
-|Codon changes|
+.. image:: images/Codon-changes.png
 
 The report also contains the amino acid changes table where reference amino
 acids are represented by rows and changed amino acids are represented by
@@ -168,7 +166,7 @@ replaced by Glu. The most common amino acid changes are Ala to Thr, 722
 times, followed by 693 changes from Ile to Val events, and 780 Val to
 Ile events.
 
-|AA chages|
+.. image:: images/AA-chages.png
 
 Apart from the mentioned statistics and plots, report also contains allele
 frequency plots and information on the change rate per chromosome.
@@ -196,19 +194,19 @@ the Variant Explorer: right-click on the resulting file name in the Data
 Flow Runner, Task Manager or File Browser and select **Variant Explorer** in
 the context menu. In total 4,361,389 variants were found.
 
-|Table Viewer|
+.. image:: images/variant-explorer-1.png
 
 Let’s now use the filters to see how many of these are high
 impact variants. Set the filter "Impact" to "high". As we can see out of
 all the identified variants 1007 have a high impact.
 
-|Screenshot 2016-04-24 14.05.22|
+.. image:: images/variant-explorer-2.png
 
 Let’s now see how many of these are nonsense
 mutations by applying "Functional class" filter. And now out of all the
 high impact variants, 154 are nonsense mutations.
 
-|Screenshot 2016-04-24 14.10.20|
+.. image:: images/variant-explorer-3.png
 
 Let’s see how many of those are found on chromosome 10 by
 specifying the chromosome in the "Locus". Turns out on chromosome 10
@@ -216,7 +214,7 @@ there only one variant change that is high impact nonsense mutation.
 This base change is located in CTBP2 gene, and result in a premature
 stop codon.
 
-|Screenshot 2016-03-14 18.25.42|
+.. image:: images/variant-explorer-4.png
 
 These are all of the steps
 of WGS data analysis pipeline. You can use files from our tutorial
@@ -232,35 +230,13 @@ number of identified mutations or InDel length distribution we mentioned
 above. Such variation could be explained by the use of different tools.
 For example, authors identified variants with the vendor-supplied
 Eland-Casava pipeline and `The Genome Analysis Toolkit`_ (GATK v2.2), while
-we used Variant Calling application based on SAMtools_ and BCFtools_.  
-
+we used Variant Calling application based on SAMtools_ and BCFtools_.
 
 This is the end of this tutorial. We hope you found it useful and that you are now ready to
 make the most out of our platform.
 If you have any questions and comments, feel free to email us at support@genestack.com.
 Also we invite you to follow us on Twitter `@genestack <https://twitter.com/genestack>`__.
 
-.. |VarCalling_options| image:: images/VarCalling_options.png
-.. |GB_variants| image:: images/GB_variants.png
-.. |start init| image:: images/start-init.png
-.. |Screenshot 2015-11-23 11.14.46| image:: images/Screenshot-2015-11-23-11.14.46.png
-.. |Screenshot 2016-01-14 13.50.17| image:: images/Screenshot-2015-11-23-11.14.46.png
-.. |Summary| image:: images/Summary.png
-.. |Screenshot 2016-03-14 12.24.19| image:: images/Screenshot-2016-03-14-12.24.19.png
-.. |Indel length dostributions| image:: images/Indel-length-dostributions.png
-.. |Quality| image:: images/Quality.png
-.. |coverage| image:: images/coverage-.png
-.. |Effects by impact| image:: images/Effects-by-impact.png
-.. |Effects by type and region (table)| image:: images/Effects-by-type-and-region-table.png
-.. |Effects by region| image:: images/Effects-by-region.png
-.. |Base changes| image:: images/Base-changes.png
-.. |Ts:Tv| image:: images/TsTv.png
-.. |Codon changes| image:: images/Codon-changes.png
-.. |AA chages| image:: images/AA-chages.png
-.. |Table Viewer| image:: images/Table-Viewer.png
-.. |Screenshot 2016-04-24 14.05.22| image:: images/Screenshot-2016-04-24-14.05.22.png
-.. |Screenshot 2016-04-24 14.10.20| image:: images/Screenshot-2016-04-24-14.10.20.png
-.. |Screenshot 2016-03-14 18.25.42| image:: images/Screenshot-2016-03-14-18.25.42-1024x154.png
 .. _results of variant calling: https://platform.genestack.org/endpoint/application/run/genestack/genomeBrowser?a=GSF3669362&action=viewFile
 .. _report file:
 .. _Variants with predicted effects:
