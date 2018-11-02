@@ -1,7 +1,7 @@
 .. _using-genestack-label:
 
-Using Genestack
-===============
+Genestack Platform Overview
+===========================
 
 Creating an account
 -------------------
@@ -24,7 +24,7 @@ of inactivity.
 Dashboard
 ---------
 
-After you log in, you will see the **Dashboard**.  Let’s cover the basics.
+After you log in, you will see the **Dashboard**. Let’s cover the basics.
 
 .. image:: images/welcome_page.png
    :align: center
@@ -172,13 +172,13 @@ You can find more about managing users on Genestack from `this video`_.
 
 
 
-.. include:: using-genestack-import_include.rst
-.. include:: using-genestack-browse-data_include.rst
-.. include:: using-genestack-managing-matadata_include.rst
-.. include:: using-genestack-sharing_include.rst
-.. include:: using-genestack-building-pipelines_include.rst
-.. include:: using-genestack-run-DF_include.rst
-.. include:: using-genestack-public-DF_include.rst
-.. include:: using-genestack-initialization_include.rst
-.. include:: using-genestack-task-manager_include.rst
-.. include:: using-genestack-export_include.rst
+.. include:: overview-import_include.rst
+.. include:: overview-browse-data_include.rst
+.. include:: overview-managing-matadata_include.rst
+.. include:: overview-sharing_include.rst
+.. include:: overview-building-pipelines_include.rst
+.. include:: overview-run-DF_include.rst
+.. include:: overview-public-DF_include.rst
+.. include:: overview-initialization_include.rst
+.. include:: overview-task-manager_include.rst
+.. include:: overview-export_include.rst

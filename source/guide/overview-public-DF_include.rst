@@ -7,6 +7,7 @@ our users. We cover most of the common analysis types:
 - Whole Genome Methylation Analysis
 - Whole Exome Sequencing Analysis
 - Single-cell Transcriptomic Analysis
+- Prediction of Genetic Variants Effects
 - Isoform Expression Statistics
 - Genetic Variation Analysis
 - Gene Expression Statistics
@@ -29,5 +30,3 @@ To change the settings, click on the name of the application in the data flow.
 This will take you to the application page, where you can select
 **Edit parameters** and introduce your changes. When you are happy with parameters,
 go back to the data flow and **start initialization**.
-
-.. add pictures/details

@@ -7,34 +7,7 @@ Supported file types
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
-- **Microarray Data** — raw microarray data obtained from a microarray
-  experiment (you can import Affymetrix (CEL), Agilent (TXT) or GenePix microarray data (GPR));
-- **Infinium Microarray Data** — raw intensity data files for Illumina Infinium Microarrays (IDAT);
-- **Infinium Methylation Beta Values** — methylation data matrices contained Beta-values
-  (methylation ratios) for Illumina Infinium Microarrays (.tsv, .txt);
-- **Methylation Array Annotation** — methylation chip annotation containing information about
-  association of microarray probes to known genes (.tsv);
-- **Raw Reads** — raw sequencing data (FASTQ, SRA or FASTA+QUAL);
-- **Microarray Annotation** — annotation file containing information about
-  association of microarray probes to biological entities like genes,
-  transcripts and proteins (.txt, .csv);
-- **Continuous Genomic Data** — contains information on continuous genome
-  statistics, e.g. GC% content (WIGGLE, WIG);
-- **Discrete Genomic Data** — information on discrete regions of the genome
-  with an exact start and end position (BED);
-- **Mapped Reads** — reads aligned to a specific reference genome (BAM or CRAM);
-- **Ontology Files** — OWL, OBO or CSV files used to annotate metainfo;
-- **Reference Genomes** — reference genome sequence for a specific organism
-  with annotation (FASTA and GFF/GTF/GFF3);
-- **Variation Files** — Genetic variations files, storing gene sequence
-  variations (VCF);
-- **Gene List** — stores a list of genes with possibly additional annotation (.gpr file of genes in
-  separate lines or tab-delimited file (.txt, .tsv, .xls));
-- **Gene Expression Signature** — the file includes the list of genes and expression pattern
-  (Log FC) specific to an organism phenotype with possibly additional annotation (.gpr file of
-  genes in separate lines or tab-delimited file (.txt, .tsv, .xls extensions));
-- **Gene Signature Database** — a list of annotated gene sets, that can be used in enrichment
-  analysis (.gmt).
+.. image:: images/supported-formats.png
 
 .. note:: **Import of Gene Expression Signature and Gene List files**
 

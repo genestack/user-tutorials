@@ -6,17 +6,8 @@ public data simultaneously and seamlessly, and how to reproduce complex
 analyses with data flows, a built-in mechanism for capturing and
 replaying your research.
 
-In this tutorial we will walk you through:
-
-#. Creating an account
-#. Organising your research
-#. Importing data into the Genestack Platform
-#. Initializing files
-#. Managing and sharing data
-#. Reproducing the analyses with data flows
-
-Creating an account
-*******************
+How to create an account?
+*************************
 
 .. raw:: html
 

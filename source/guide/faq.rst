@@ -1,20 +1,5 @@
-Getting help
-============
-
-Getting in touch with Genestack 
--------------------------------
-
-There are various ways to get in touch with our team.
-
-*Chatra*: a chat window is available at the bottom of every page on the website.
-During our working hours, at least one of us will be always available to help.
-Outside of working hours, you can leave us a message using the chat
-window and we will get back to you as soon as we can.
-
-*Email*: you can email us at support@genestack.com 
-
 FAQ
----
+===
 
 Where do I find data that was shared with me?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,16 +15,6 @@ Open a data flow you would like to run in the "Run Dataflow" application. On the
 application page you can set input files and additional files (e.g. reference genome)
 that are required for analysis.
 
-What is the difference between Data Flow Runner and Data Flow Editor?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Data Flow Editor is used to create data flow templates, e.g. selecting
-source files.
-
-When you want to use the data flow to run your analysis, on the Data
-Flow Editor page you can click on "Run Data Flow" button, which will
-take you to Data Flow Runner. Here you can not only edit source files
-and parameters, but also start initialization of your files.
 
 How can I initialize files?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,6 +102,17 @@ nucleic base.
 
 *Unmasked* genomes contain all repeats and low complexity regions
 without any changes.
+
+What is the difference between Data Flow Runner and Data Flow Editor?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Data Flow Editor is used to create data flow templates, e.g. selecting
+source files.
+
+When you want to use the data flow to run your analysis, on the Data
+Flow Editor page you can click on "Run Data Flow" button, which will
+take you to Data Flow Runner. Here you can not only edit source files
+and parameters, but also start initialization of your files.
 
 How can I rename a file?
 ~~~~~~~~~~~~~~~~~~~~~~~~

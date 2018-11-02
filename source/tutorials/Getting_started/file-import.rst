@@ -1,5 +1,5 @@
-Importing data
-**************
+How to import data?
+*******************
 
 .. .. raw:: html
 

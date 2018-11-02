@@ -1,5 +1,5 @@
-Getting started with Genestack Platform
-=======================================
+Get started with Genestack
+==========================
 
 .. include:: signup.rst
 .. include:: browse-data.rst

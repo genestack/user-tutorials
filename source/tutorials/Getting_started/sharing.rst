@@ -1,5 +1,5 @@
-Managing and sharing data
-*************************
+How to share and manage your data?
+**********************************
 
 .. raw:: html
 
@@ -39,7 +39,7 @@ you create. As the group administrator, you can add or remove other users from
 your group, or change their permissions, i.g. make them administrators, make them “sharing” or
 “non-sharing” users. 
 
-All groups appear as folders under "Shared with me"
+All groups appear as folders under **Shared with me**
 in File Manager, and the moment you add a user to a group they will see
 the group’s folder in their File Manager.
 
@@ -70,13 +70,9 @@ shared but members of the group will
 not see them in the group folder, although they could access the data via search.
 Moreover, you can always add shared files to group folders later.
 
-Sharing with other organisations
---------------------------------
-
 It is very easy to share data with users in the same organisation. You
 simply create a group and share files; all group members see shared data
-immediately.
-What about sharing across organisations? Say, you work in a
+immediately. What about **sharing across organisations?** Say, you work in a
 hospital research group and have imported some valuable pathogenic
 specimen sequence data into Genestack Platform and want to share it with
 your colleagues in a pharma company who work on some novel drugs to kill
