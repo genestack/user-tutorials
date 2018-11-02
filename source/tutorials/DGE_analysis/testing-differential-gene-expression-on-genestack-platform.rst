@@ -3,9 +3,9 @@ gene expression (DGE) analysis. By how gene expression levels change across
 different experimental conditions, we can gain clues about gene function and
 learn how genes work together to carry out biological processes.
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/aLT-FnZMIls" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/aLT-FnZMIls" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 In this tutorial we will use Genestack applications to identify differentially
 expressed (DE) genes and further annotate them according to biological

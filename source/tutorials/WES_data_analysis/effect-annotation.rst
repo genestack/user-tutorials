@@ -6,9 +6,9 @@ SnpEff_ tool. The app annotates variants and predicts the effects they
 produce on genes such as amino acid changes, impact, functional class, etc.
 To review this information, open `Variants with predicted effects`_ in **View report** application:
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/0fm7ZsFeRq0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/0fm7ZsFeRq0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Let's analyse annotated variants for sample enriched by Nimblegen. Output
 report contains **summary** about tool version, number of variants, number of

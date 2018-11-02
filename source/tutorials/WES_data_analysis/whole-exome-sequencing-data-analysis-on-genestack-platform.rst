@@ -5,7 +5,7 @@ up ~1 % of the genome, it contains about 85 % of known disease-related variants
 (*van Dijk E.L. et al, 2014*), making whole-exome sequencing a fast and
 cost-effective alternative to whole genome sequencing (WGS).
 
-.. raw:: html
+.. .. raw:: html
 
     <iframe width="640" height="360" src="https://www.youtube.com/embed/Yf5YsWMy3TA" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 

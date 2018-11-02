@@ -9,9 +9,9 @@ replaying your research.
 How to create an account?
 *************************
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/asMhUjD_i68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..     <iframe width="640" height="360" src="https://www.youtube.com/embed/asMhUjD_i68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 It is easy to register on Genestack_. All you need to do is provide an email
 and set up a password. You will quickly receive a confirmation email with a link to click on and then

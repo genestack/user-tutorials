@@ -8,9 +8,9 @@ understand some relevant properties of raw data, such as quality scores, GC
 content and base distribution, etc. In order to assess the quality of the
 data we'll run the `Raw Reads QC`_ data flow:
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/pBoCPytRf68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/pBoCPytRf68" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Genestack **FastQC** application generates basic statistics and many useful data
 diagnosis plots. Here is some of them for `sample enriched by Aligned SureSelect 50M`_:
