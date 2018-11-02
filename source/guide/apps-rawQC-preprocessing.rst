@@ -1,7 +1,7 @@
 .. _pipelines-and-applications-label:
 
-Pipelines and applications
-==========================
+Applications Review
+===================
 
 Applications available on Genestack are grouped into four categories:
 
@@ -405,8 +405,7 @@ reads in a sample.
 1. The **Keep bases from position** option asks you to specify the first base that
    should be kept. (default: 1)
 2. **Keep bases to position (set to zero for entire read)**. Indicate the
-   position of the last nucleotide that should be kept in the read. (default:
-   0)
+   position of the last nucleotide that should be kept in the read. (default: 0)
 
 For example, if you set 5 as the first base to keep and 30 as the last base to
 keep, it means that the application trims all nucleotides before the 5th
@@ -419,15 +418,15 @@ This tool is based on the **fastx_trimmer**, which is part of the `FASTX-Toolkit
 Trim Reads to Fixed Length application is helpful when you want to obtain
 reads of a specific length (regardless of the quality).
 
-.. TODO Add info about Merge Raw Reads application (the one without UI)
+.. TODO: Add info about Merge Raw Reads application (the one without UI)
 
-.. include:: pipelines-mappedQC-preprocessing_include.rst
-.. include:: pipelines-variants_preprocessing_include.rst
-.. include:: pipelines-rnaseq_include.rst
-.. include:: pipelines-wgs-and-wes_include.rst
-.. include:: pipelines-bisseq_include.rst
-.. include:: pipelines-microbiome_include.rst
-.. include:: pipelines-additional_apps_include.rst
-.. include:: pipelines-ref-genomes_include.rst
-.. include:: pipelines-expression_arrays_include.rst
-.. include:: pipelines-methyl_arrays_include.rst
+.. include:: apps-mappedQC-preprocessing_include.rst
+.. include:: apps-variants_preprocessing_include.rst
+.. include:: apps-rnaseq_include.rst
+.. include:: apps-wgs-and-wes_include.rst
+.. include:: apps-bisseq_include.rst
+.. include:: apps-microbiome_include.rst
+.. include:: apps-additional_apps_include.rst
+.. include:: apps-ref-genomes_include.rst
+.. include:: apps-expression_arrays_include.rst
+.. include:: apps-methyl_arrays_include.rst

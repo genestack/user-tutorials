@@ -1,8 +1,6 @@
 Genome/exome sequencing data analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO: add a few words about WGS and WES technologies
-
 Mapping (also called alignment) refers to the process of aligning sequencing
 reads to a reference sequence, whether the reference is a complete genome,
 transcriptome, or de novo assembly.

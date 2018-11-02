@@ -1,5 +1,5 @@
-Genestack user tutorials
-########################
+Case studies
+############
 
 .. toctree::
    :maxdepth: 2

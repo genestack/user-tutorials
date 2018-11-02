@@ -1,5 +1,5 @@
-Initialising files and building pipeline
-****************************************
+How to build and run a pipeline?
+********************************
 
 .. .. raw:: html
 ..

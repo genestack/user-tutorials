@@ -1,7 +1,5 @@
-Genestack key features
+Genestack key concepts
 ======================
-
-.. TODO: talk about scalability, different deployments and modularity ?
 
 Genestack is a platform to manage, analyse and visualize bioinformatics data, with a
 focus on next-generation sequencing (NGS) and microarray data. Genestack was built around
@@ -23,6 +21,16 @@ used to validate metadata, to ensure harmonisation of metadata and improve the q
 results. Finally, metadata templates can be defined by users to ensure that all the collaborators of a group are using
 consistent metadata conventions.
 
+Public data
+-----------
+
+Genestack is pre-loaded with millions of publicly available
+datasets from major repositories like ArrayExpress_,
+GEO_, SRA_, and ENA_, as well as numerous reference genomes for multiple organisms from
+Ensembl_ and UCSC_. In practice, this means that the platform can serve as
+a data repository, that allows users to work both on private and public
+data seamlessly. Our Data Browser application can help you to easily find not only
+datasets you are interested in but also analysis results performed on these data.
 
 Interactive data analysis and visualisation
 -------------------------------------------
@@ -79,43 +87,6 @@ a graph representing exactly what steps were taken to produce this file, which s
 files and which applications were used to produce it.
 
 Genestack hosts multiple tool versions at any given time in case you want to reproduce past results.
-
-Data flow and delayed initialization
-------------------------------------
-
-.. TODO: I don't like this section
-
-Data flows on Genestack are visual representations of bioinformatics
-pipelines. When you build a bioinformatic pipeline manually, you pick up raw data and, then, you
-sequentially add various preprocess and analyse applications.
-Automatically a separate file is created for each processing step of each individual initial input.
-However, no computations are being started so far. To run the analysis you will have
-to start initialization (for more information, please, see the section **Using Genestack**).
-
-If you intend to reproduce the analysis using different files, there is no need to build the pipeline again.
-What you need to do is to create a data flow with Data Flow Editor application. With data flows, you not only
-be able to re-run the analysis over and over again, you can also modify
-options of applications being included in the pipeline (learn more about data flows from
-the corresponding sections in **Using Genestack**). Indeed, before the initialization has begun,
-you can change the parameters, replace source files, or add more files to
-the pipeline. Remember – you always need to initialize your files to view your results.
-However, once you do, any further changes to the files' configuration become impossible.
-
-Furthermore, in our system you can also use existing public data flows allowing to assess the data quality
-or perform some comprehensive bioinformatic analysis, such as
-gene expression profiling and analysis across groups of samples, analysis of DNA methylation
-patterns or detection and characterisation of genetic variations etc.
-
-Public data
------------
-
-Genestack is pre-loaded with millions of publicly available
-datasets from major repositories like ArrayExpress_,
-GEO_, SRA_, and ENA_, as well as numerous reference genomes for multiple organisms from
-Ensembl_ and UCSC_. In practice, this means that the platform can serve as
-a data repository, that allows users to work both on private and public
-data seamlessly. Our Data Browser application can help you to easily find not only
-datasets you are interested in but also analysis results performed on these data.
 
 .. _ArrayExpress: https://www.ebi.ac.uk/arrayexpress/
 .. _GEO: https://www.ncbi.nlm.nih.gov/geo/

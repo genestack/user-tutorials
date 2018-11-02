@@ -1,8 +1,6 @@
 Additional visualisation applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO think about the proper name for this section
-
 This section includes the applications that can be used in various pipelines
 to view the content of the data (e.g. Sequencing Assay Viewer) or to display
 multiple data types on different steps of analyses (e.g. Genome Browser).

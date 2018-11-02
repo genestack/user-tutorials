@@ -24,11 +24,11 @@ To go back to the Genestack website, click here_.
 .. toctree::
    :maxdepth: 2
 
-   guide/genestack-features
+   guide/key-concepts
    tutorials/Getting_started/index
-   guide/using-genestack-signup-dashboard
-   guide/intro-to-ngs
-   guide/pipelines-rawQC-preprocessing
    tutorials/index
-   guide/getting-help
+   guide/overview-signup-dashboard
+   guide/intro-to-ngs
+   guide/apps-rawQC-preprocessing
+   guide/faq
    guide/references
