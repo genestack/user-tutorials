@@ -1,6 +1,6 @@
 .. _pipelines-and-applications-label:
 
-Applications Review
+Applications review
 ===================
 
 Applications available on Genestack are grouped into four categories:

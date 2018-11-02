@@ -1,6 +1,6 @@
 .. _using-genestack-label:
 
-Genestack Platform Overview
+Genestack Platform overview
 ===========================
 
 Creating an account

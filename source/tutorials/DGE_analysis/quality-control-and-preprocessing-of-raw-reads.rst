@@ -8,9 +8,9 @@ such aspects as GC percentage, per base sequence quality scores, and other
 quality stаtistics. The easiest way to do this is to run the `Raw Reads QC`_
 data flow:
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/cWQa1EET9F4" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/cWQa1EET9F4" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _Raw Reads QC: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF969011&action=createFromSources
 

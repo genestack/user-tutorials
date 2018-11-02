@@ -1,9 +1,9 @@
 Building the genetic variants analysis pipeline
 ***********************************************
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/N0AVWFwfASg" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/N0AVWFwfASg" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 To start the pipeline, open the "Homo sapiens
 Genome sequencing and variation" dataset in the Metainfo Editor, click **Analyse**, and

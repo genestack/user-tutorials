@@ -9,9 +9,9 @@ Genome Browser.
 Find **Spliced Mapping** step, click on “7 files”. In “Explore” section choose
 **Genome Browser** and start initialization there.
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/Uor6cVjjP_A" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/Uor6cVjjP_A" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 We run Spliced Mapping app with default parameters. To change them go to the
 app page and choose **Edit parameters** button. If you want to learn more about
@@ -44,9 +44,9 @@ app. You can "generate reports" for each mapping separately or just run
 `Mapped Reads Quality Control`_ data flow for multiple
 samples:
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/0C2x9Xm-ji8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/0C2x9Xm-ji8" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 .. _Mapped Reads Quality Control: https://platform.genestack.org/endpoint/application/run/genestack/dataflowrunner?a=GSF968216&action=createFromSources
 

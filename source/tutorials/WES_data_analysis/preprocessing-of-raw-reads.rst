@@ -13,9 +13,9 @@ Our preprocessing procedure will include 'Trim Adaptors and Contaminants'
 step. Once the quality of raw data has been checked, let's start planning and
 building our `Whole Exome Sequencing Analysis`_ data flow:
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/5hOGxZWwiWU" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/5hOGxZWwiWU" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 To build any data flow in Genestack, choose one of the samples and start to
 preprocess or analyse it. Each app suggests you to add next analytical step

@@ -1,9 +1,9 @@
 How to reproduce your work?
 ***************************
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/mjazNS0btd0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/mjazNS0btd0" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Now, let’s talk about reproducibility. We will show you
 how to take any data file in Genestack Platform, and repeat the analysis

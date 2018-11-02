@@ -7,9 +7,9 @@ in raw reads quality control check but some issues, such as low
 coverage, homopolymer biases, experimental artifacts, only appears after
 alignment.
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/ZGXOxN5Ue0o" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/ZGXOxN5Ue0o" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Sequencing coverage is an important quality metric, as biases in
 sample preparation, sequencing and read mapping can result in genome

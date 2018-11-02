@@ -44,9 +44,9 @@ folder, containing all the tutorial files we talk about here for your convenienc
 processed files, explore results, and repeat the analysis steps on data of your interest with a
 `WGBS data analysis (for Rodriguez et al., 2014) dataflow`_.
 
-.. raw:: html
+.. .. raw:: html
 
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/o7RkUrCRl4s" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
+..    <iframe width="640" height="360" src="https://www.youtube.com/embed/o7RkUrCRl4s" frameborder="0" allowfullscreen="1">&nbsp;</iframe>
 
 Setting up a WGBS experiment
 ****************************
