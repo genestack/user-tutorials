@@ -7,7 +7,70 @@ Supported file types
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
 
-.. image:: images/supported-formats.png
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+|   Genestack file type      |   Description                          |   Supported file formats                                                               |
++============================+========================================+========================================================================================+
+| | Continuous Genomic Data  | | Contains information on continuous   | | WIGGLE                                                                               |
+|                            | | genome statistics, e.g. GC% content  | | WIG                                                                                  |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Discrete Genomic Data    | | Information on discrete regions of   | | BED                                                                                  |
+|                            | | the genome with an exact start and   |                                                                                        |
+|                            | | end position                         |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Gene Expression          | | The file includes the list of genes  | | GPR file of genes in separate lines                                                  |
+| | Signature                | | and expression pattern (Log FC)      | | `TXT <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.txt>`_   |
+|                            | | specific to an organism phenotype    | | `TSV <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.tsv>`_   |
+|                            | | with possibly additional annotatio   | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.xls>`_   |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Gene List                | | Stores a list of genes with possibly | | GPR file of genes in separate lines                                                  |
+|                            | | additional annotation                | | `TXT <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.txt>`_           |
+|                            | |                                      | | `TSV <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.tsv>`_           |
+|                            | |                                      | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.xls>`_           |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Gene Signature Database  | | A list of annotated gene sets, that  | | GMT                                                                                  |
+|                            | | can be used in enrichment analysis   |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Infinium Methylation     | | Methylation data matrices contained  | | TSV                                                                                  |
+| | Beta Values              | | Beta-values methylation ratios for   | | TXT                                                                                  |
+|                            | | Illumina Infinium Microarrays        |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Infinium Microarray Data | | Raw intensity data files for         | | IDAT                                                                                 |
+|                            | | Illumina Infinium Microarrays        |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Mapped Reads             | | Reads aligned to a specific          | | BAM                                                                                  |
+|                            | | reference genome                     | | CRAM                                                                                 |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| | Methylation Array        | | Methylation chip annotation          | | TSV                                                                                  |
+| | Annotation               | | containing information about         |                                                                                        |
+|                            | | association of microarray probe      |                                                                                        |
+|                            | | to known genes                       |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Microarray Annotation      | | Annotation file containing           | | TXT                                                                                  |
+|                            | | information about association of     | | CSV                                                                                  |
+|                            | | microarray probes to biological      |                                                                                        |
+|                            | | entities like genes, transcripts and |                                                                                        |
+|                            | | proteins                             |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Microarray Data            | | Raw microarray data obtained from    | | CEL (Affymetrix)                                                                     |
+|                            | | a microarray experiment              | | TXT (Agilent)                                                                        |
+|                            | |                                      | | GPR (GenePix microarray data)                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Ontology Files             | | Files used to annotate metadata      | | OWL                                                                                  |
+|                            | |                                      | | OBO                                                                                  |
+|                            | |                                      | | CSV                                                                                  |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Raw Reads                  | | Raw sequencing data                  | | FASTQ                                                                                |
+|                            | |                                      | | SRA                                                                                  |
+|                            | |                                      | | FASTA+QUAL                                                                           |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Reference Genomes          | | Reference genome sequence for a      | | FASTA + GFF                                                                          |
+|                            | | specific organism with annotation    | | FASTA + GTF                                                                          |
+|                            | |                                      | | FASTA + GFF3                                                                         |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+| Variation Files            | | Genetic variations files, storing    | | VCF                                                                                  |
+|                            | | gene sequence variations             |                                                                                        |
++----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
+
 
 .. note:: **Import of Gene Expression Signature and Gene List files**
 
