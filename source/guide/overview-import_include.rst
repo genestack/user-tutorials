@@ -17,15 +17,15 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 |                            | | the genome with an exact start and   |                                                                                        |
 |                            | | end position                         |                                                                                        |
 +----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
-| | Gene Expression          | | The file includes the list of genes  | | GPR file of genes in separate lines                                                  |
+| | Gene Expression          | | The file includes the list of genes  | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.xls>`_   |
 | | Signature                | | and expression pattern (Log FC)      | | `TXT <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.txt>`_   |
 |                            | | specific to an organism phenotype    | | `TSV <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.tsv>`_   |
-|                            | | with possibly additional annotatio   | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/expression_signature.xls>`_   |
+|                            | | with possibly additional annotatio   |                                                                                        |
 +----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
-| | Gene List                | | Stores a list of genes with possibly | | GPR file of genes in separate lines                                                  |
+| | Gene List                | | Stores a list of genes with possibly | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.xls>`_           |
 |                            | | additional annotation                | | `TXT <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.txt>`_           |
 |                            | |                                      | | `TSV <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.tsv>`_           |
-|                            | |                                      | | `XLS <https://s3.amazonaws.com/bio-test-data/tutorials/gene_symbols.xls>`_           |
+|                            | |                                      |                                                                                        |
 +----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
 | | Gene Signature Database  | | A list of annotated gene sets, that  | | GMT                                                                                  |
 |                            | | can be used in enrichment analysis   |                                                                                        |
@@ -53,7 +53,7 @@ Note that gzippped (.gz) and zipped (.zip) files are also supported.
 +----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
 | Microarray Data            | | Raw microarray data obtained from    | | CEL (Affymetrix)                                                                     |
 |                            | | a microarray experiment              | | TXT (Agilent)                                                                        |
-|                            | |                                      | | GPR (GenePix microarray data)                                                        |
+|                            | |                                      | | GPR (GenePix)                                                                        |
 +----------------------------+----------------------------------------+----------------------------------------------------------------------------------------+
 | Ontology Files             | | Files used to annotate metadata      | | OWL                                                                                  |
 |                            | |                                      | | OBO                                                                                  |
