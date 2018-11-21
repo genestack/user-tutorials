@@ -20,6 +20,16 @@ Expression arrays
 Microarrays are useful in a wide variety of studies with a wide variety of
 objectives. In this section we will look at expression microarrays.
 
+Microarray Explorer
++++++++++++++++++++
+
+**Action**: performs the process of collaboratively producing and exploring
+complete Microarray reports: from quality control check, dose response analysis, to differential
+expression analysis.
+
+The application is based on the following Genestack applications that you can also freely use separately:
+
+
 Microarrays normalisation
 +++++++++++++++++++++++++
 
