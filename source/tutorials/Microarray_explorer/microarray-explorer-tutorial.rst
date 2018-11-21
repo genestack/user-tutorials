@@ -34,9 +34,9 @@ Click the name of the experiment and open it in **Metainfo Editor** to learn mor
 Data analysis
 -------------
 
-To start the analysis open the chosen experiment in Microarray Explorer by right-clicking its name and selecting
-Microarray Explorer under Explore, or go to Microarray Explorer directly by left-clicking
-the experiment name.
+You can open the input microarray dataset in the Microarray Explorer not only by right-clicking
+the experiment name and selecting Microarray Explorer under "Explore" but also
+via just one left-click on the experiment name.
 
 There are two tabs on the opening application page:
 
