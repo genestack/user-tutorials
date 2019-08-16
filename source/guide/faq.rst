@@ -114,17 +114,6 @@ Flow Editor page you can click on "Run Data Flow" button, which will
 take you to Data Flow Runner. Here you can not only edit source files
 and parameters, but also start initialization of your files.
 
-How can I rename a file?
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-In the File Browser, click on the file name and select the "Rename" option in the context menu.
-
-I've created a file. Where can I find it?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-All the files that you create within Genestack go to your "Created files" folder.
-Files that you import to Genestack go into your "Imported files" folder.
-Both folders are accessible from the dashboard and the file browser.
 
 .. _tutorial: https://genestack.com/tutorial/reproducing-your-work-with-data-flows/
 .. _Getting Started: https://genestack.com/blog/2016/01/06/getting-started/

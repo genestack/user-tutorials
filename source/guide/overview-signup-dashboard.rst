@@ -3,35 +3,8 @@
 Genestack Platform overview
 ===========================
 
-Creating an account
--------------------
-
-If you have not done so already, you can create an account on Genestack.
-Go to `platform.genestack.org`_, click on **Sign Up**, fill in the form and
-wait for a confirmation email.
-
-.. image:: images/sign-up-screen.png
-   :align: center
-   :scale: 80%
-
-.. _platform.genestack.org: https://platform.genestack.org
-
-If you are just taking Genestack out for a spin, you can also use our platform
-as a guest (by clicking on **Continue as guest** button). However, remember that as a guest,
-you can only create up to 200 files, and your results will disappear after 24h
-of inactivity.
-
-Dashboard
----------
-
-After you log in, you will see the **Dashboard**. Let’s cover the basics.
-
-.. image:: images/welcome_page.png
-   :align: center
-
-The very top of the page is static and you can always refer to it. Clicking
-on your username (your email address) in the top right corner of the page will
-give you access to your **profile** and allows to log out of the platform.
+Clicking on your username (your email address) in the top right corner of the page will
+give you access to your **profile** and allows to sign out of the platform.
 
 .. image:: images/WP_profile.png
    :align: center
@@ -51,45 +24,27 @@ approve adding them to the group. You can learn more about data sharing,
 permissions and groups in the :ref:`sharing-label` section.
 
 Vendor IDs are used for application development. Applications you have created will be
-marked with your vendor ID. Moreover, here you can specify which page you
-would like to see after login: Dashboard or File Manager.
+marked with your vendor ID.
 
 **Tasks** links to the Task Manager application, where you can monitor running and
 previous computations.
 
-In the bottom right corner of the page you can see the Chatra **chat window**.
-You can chat with us at any time if you get stuck or if you find a bug.
 
-Let’s go back to the Dashboard. Here you can find the following sections:
+**Data Browser** allows you to browse through public, private and
+shared data with Data Browser application which allows you to search through
+the wealth of your data using complex queries.
 
-1. **Run Data Flow** includes a collection of *most commonly used data flows*
-   we have prepared for our users.
-2. **Recent Results** shows you the files you have recently created with 
-   their initialization or completion status.
-3. **Browse data** section allows you to browse through public, private and
-   shared data with Data Browser application which allows you to search through
-   the wealth of your data using complex queries.
-   In the Browse Data section, you will also find a link to the File Manager
-   (home), as well as often used folders: Uploaded files, Imported files,
-   Created files and Exports.
-4. **Import data** allows you to import your data using either a
-   custom or the default import template. See the section "Import" for more information.
-5. **Tutorials** explain the most common analysis types in greater detail.
-6. **Search** across the metadata of all your files using the full-text file
-   search text box.
 
 Wherever you are on the platform, you can also access a **shortcuts menu** by
-clicking on the Genestack logo in the top left corner of any platform page.
-It is an easy way to reach most commonly used applications and folders. Dashboard,
-Data Browser, File Manager, Import Data, Manage Applications, Manage Groups,
-Manage Users, and Import Template Editor, as well as the folders
-for created and imported files can all be found here.
+clicking on the button in the top left corner of any platform page.
+It is an easy way to reach most commonly used applications and folders.
+Data Browser, Import Data, Manage Applications, Manage Groups,
+Expression Data Miner, Differential Expression Similarity Search, and Import Template Editor, as well as the folders
+for created and imported files can all be found here. You can also click the **User Guide** to access user documentation.
 
 .. image:: images/shortcuts.png
    :align: center
 
-To access the shortcuts
-menu, simply click Genestack logo in the upper-left corner of any page.
 Let's look deeper into each of these items.
 
 Manage applications
