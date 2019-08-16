@@ -1,8 +1,8 @@
 Importing data
---------------
+==============
 
 Supported file types
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Here is a list of file types that can be imported into Genestack.
 Note that gzippped (.gz) and zipped (.zip) files are also supported.
@@ -107,7 +107,7 @@ When you perform any analysis on Genestack, other data types, which cannot be im
 .. verify
 
 Data import
-~~~~~~~~~~~
+-----------
 
 There are several ways you can access the **Import** application:
 
@@ -135,7 +135,7 @@ data are created in the platform; then, the biological data type is assigned to 
 imported data; finally, you can fill in all required metadata or import it from a text file.
 
 Step 1: Getting data into the platform
-++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are two ways to have your data imported into the platform:
 
@@ -191,7 +191,7 @@ resume unfinished uploads later.
 Click the **Import files** button to proceed.
 
 Step 2: Format recognition
-++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After your data is uploaded, Genestack automatically recognizes file formats
 and transforms them into biological data types: raw reads, mapped reads,
@@ -219,7 +219,7 @@ Choose the data type you find suitable:
 Click the **Create files** button to proceed.
 
 Step 3: Editing metainfo
-++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 During this step, the import has already completed, and you can describe uploaded data
 using an Excel-like spreadsheet.
@@ -251,7 +251,7 @@ We also created our own controlled vocabularies to cover Sex, Method and Platfor
 You can find out more about ontologies in the :ref:`public-experiment-label` section.
 
 Import with templates
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 You can create your own custom dictionary by importing it into the
 platform as OWL, OBO or CSV file and attach it to the import template.
@@ -325,7 +325,7 @@ steps described above. You can find all the imported files in the "Imported" fol
 Manager.
 
 Metadata import
-~~~~~~~~~~~~~~~
+---------------
 
 Apart from editing metainformation manually, you can also import and validate the metainfo attached to the assays and
 to the dataset on the platform.
@@ -366,7 +366,7 @@ page is filled in with metadata from the Excel-file.
 
 
 Attachments
-~~~~~~~~~~~
+-----------
 
 While importing a dataset into Genestack, you can also attach various files to it such as, for
 example, a PDF file with the experiment plan or an R script, etc. When you open your newly-imported
